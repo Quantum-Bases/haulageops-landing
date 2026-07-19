@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>HaulageOps | Cloud-Native Bulk Haulage Transport Management System</title>
+  <meta name="description" content="The cloud-native operating system for bulk haulage, earthworks, and construction logistics. Manage rates, dispatch, subcontractors, clients, and driver compliance in one premium platform.">
+  <meta name="keywords" content="bulk haulage, transport management system, TMS, construction logistics, earthworks dispatch, subcontractor portal, driver app, Australian logistics software">
+  <meta name="author" content="HaulageOps">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://haulageops.com/">
+  <meta property="og:title" content="HaulageOps | Premium Bulk Haulage Operating System">
+  <meta property="og:description" content="Manage the entire bulk logistics lifecycle. Live dispatch, multi-party portals, and robust Australian Chain of Responsibility compliance.">
+  <meta property="og:image" content="https://haulageops.com/og-image.jpg">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://haulageops.com/">
+  <meta property="twitter:title" content="HaulageOps | Premium Bulk Haulage Operating System">
+  <meta property="twitter:description" content="Manage the entire bulk logistics lifecycle. Live dispatch, multi-party portals, and robust Australian Chain of Responsibility compliance.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M20 15h15l10 10v50L35 85H20z' fill='%23000'/%3E%3Cpath d='M80 15H65L55 25v50l10 10h15z' fill='%23000'/%3E%3Crect x='47' y='38' width='6' height='24' rx='3' fill='%23000'/%3E%3Crect x='40' y='43' width='5' height='14' rx='2.5' fill='%23000'/%3E%3Crect x='55' y='43' width='5' height='14' rx='2.5' fill='%23000'/%3E%3C/svg%3E">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="main-header" id="header">
+    <div class="header-container">
+      <a href="#" class="logo-link" id="logo-nav">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="nav-logo-svg">
+          <path d="M 20 15 H 35 L 45 25 V 75 L 35 85 H 20 Z" fill="currentColor" />
+          <path d="M 80 15 H 65 L 55 25 V 75 L 65 85 H 80 Z" fill="currentColor" />
+          <rect x="47" y="38" width="6" height="24" rx="3" fill="currentColor" />
+          <rect x="40" y="43" width="5" height="14" rx="2.5" fill="currentColor" />
+          <rect x="55" y="43" width="5" height="14" rx="2.5" fill="currentColor" />
+        </svg>
+        <span class="logo-text">Haulage<span class="logo-text-bold">Ops</span></span>
+      </a>
+      
+      <nav class="desktop-nav">
+        <a href="#portals" class="nav-link">The 5 Portals</a>
+        <a href="#features" class="nav-link">Features</a>
+        <a href="#integrations" class="nav-link">Integrations</a>
+        <a href="#compliance" class="nav-link">Compliance</a>
+      </nav>
+      
+      <div class="nav-actions">
+        <button class="btn btn-primary trigger-contact">Book a Demo</button>
+        <button class="mobile-menu-toggle" id="mobile-toggle" aria-label="Toggle Menu">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Nav Overlay -->
+  <div class="mobile-nav-overlay" id="mobile-nav">
+    <div class="mobile-nav-content">
+      <a href="#portals" class="mobile-nav-link">The 5 Portals</a>
+      <a href="#features" class="mobile-nav-link">Features</a>
+      <a href="#integrations" class="mobile-nav-link">Integrations</a>
+      <a href="#compliance" class="mobile-nav-link">Compliance</a>
+      <button class="btn btn-primary trigger-contact w-full">Book a Demo</button>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="grid-glow-background"></div>
+    <div class="hero-container">
+      <div class="hero-tag">
+        <span class="pulse-dot"></span>
+        <span>Live in Production across AU & NZ</span>
+      </div>
+      
+      <h1 class="hero-title">
+        The Cloud-Native Operating System for <span class="text-gradient">Bulk Haulage</span>
+      </h1>
+      
+      <p class="hero-subtitle">
+        A single multi-tenant SaaS platform built for bulk haulage, earthworks, and construction logistics. Dispatch owned fleets, delegate to subcontractors, track live compliance, and automate invoicing.
+      </p>
+      
+      <div class="hero-ctas">
+        <button class="btn btn-primary btn-lg trigger-contact">Request a Demo</button>
+        <a href="#portals" class="btn btn-secondary btn-lg">Explore the 5 Portals</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Portals Showcase Section -->
+  <section id="portals" class="portals-section">
+    <div class="section-container">
+      <div class="section-header">
+        <h2 class="section-title">Five Portals. One Ecosystem.</h2>
+        <p class="section-desc">
+          Replace phone calls, paper dockets, and WhatsApp groups. HaulageOps connects every stakeholder through specialized, real-time interfaces.
+        </p>
+      </div>
+      
+      <!-- Tab Selectors -->
+      <div class="portal-tabs" id="portal-tabs-container">
+        <button class="portal-tab-btn active" data-portal="dispatch">
+          <i data-lucide="monitor"></i>
+          <span>Admin Dispatch</span>
+        </button>
+        <button class="portal-tab-btn" data-portal="driver">
+          <i data-lucide="smartphone"></i>
+          <span>Driver App</span>
+        </button>
+        <button class="portal-tab-btn" data-portal="subcontractor">
+          <i data-lucide="users"></i>
+          <span>Subcontractor Portal</span>
+        </button>
+        <button class="portal-tab-btn" data-portal="client">
+          <i data-lucide="building"></i>
+          <span>Client Portal</span>
+        </button>
+        <button class="portal-tab-btn" data-portal="compliance">
+          <i data-lucide="shield-check"></i>
+          <span>Compliance & CRM</span>
+        </button>
+      </div>
+
+      <!-- Live Mockup Panel -->
+      <div class="portal-display-card">
+        <div class="mockup-frame">
+          <div class="mockup-header">
+            <div class="mockup-dots">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div class="mockup-url">app.haulageops.com/dispatch</div>
+            <div class="mockup-badge">
+              <span class="live-dot animate-pulse"></span>
+              <span class="mockup-badge-text">Socket.io Connected</span>
+            </div>
+          </div>
+          
+          <div class="mockup-body-container" id="mockup-body-root">
+            <!-- Content will be dynamically inserted here via script.js -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Differentiators / Features Grid -->
+  <section id="features" class="features-section">
+    <div class="section-container">
+      <div class="section-header">
+        <h2 class="section-title">Engineered for Bulk Logistics</h2>
+        <p class="section-desc">
+          General freight and courier software fail in bulk haulage. Here is how HaulageOps handles the commercial realities of heavy fleet operations.
+        </p>
+      </div>
+      
+      <div class="features-grid">
+        <!-- Feature 1: Rate Engine -->
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">
+            <i data-lucide="dollar-sign"></i>
+          </div>
+          <h3 class="feature-card-title">Bulk Rate Engine</h3>
+          <p class="feature-card-desc">
+            Complete rate card support for per-tonne, per-load, hourly, and fixed pricing. Supports client-specific rate cards with effective dating and automated expiry rules.
+          </p>
+        </div>
+        
+        <!-- Feature 2: Contract Lifecycle -->
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">
+            <i data-lucide="file-text"></i>
+          </div>
+          <h3 class="feature-card-title">Contract Lifecycle</h3>
+          <p class="feature-card-desc">
+            Manage the complex commercial agreements that underpin your rates. Built-in versioning, structured approval workflows, and automated notifications prior to rate expirations.
+          </p>
+        </div>
+
+        <!-- Feature 3: Digital POD -->
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">
+            <i data-lucide="signature"></i>
+          </div>
+          <h3 class="feature-card-title">Digital Proof of Delivery</h3>
+          <p class="feature-card-desc">
+            Drivers capture photos, upload dockets, and record signatures. Securely store all digital assets in Azure Blob Storage alongside licenses, permits, and permits.
+          </p>
+        </div>
+
+        <!-- Feature 4: Live Dispatch -->
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">
+            <i data-lucide="map-pin"></i>
+          </div>
+          <h3 class="feature-card-title">Socket.io Live Dispatch</h3>
+          <p class="feature-card-desc">
+            Dispatchers drag-and-drop jobs and view driver progress in real-time. Google Maps API supplies address autocompletes, dynamic routing, and exact distance calculations.
+          </p>
+        </div>
+
+        <!-- Feature 5: Xero Financial Sync -->
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">
+            <i data-lucide="refresh-cw"></i>
+          </div>
+          <h3 class="feature-card-title">Invoice & Xero Integration</h3>
+          <p class="feature-card-desc">
+            Manage invoice states from draft to sent, paid, and overdue. A 6-hour cron and webhooks sync transactions, payments, and client terms directly into Xero via secure OAuth2.
+          </p>
+        </div>
+
+        <!-- Feature 6: Chain of Responsibility -->
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">
+            <i data-lucide="shield-check"></i>
+          </div>
+          <h3 class="feature-card-title">Chain of Responsibility (CoR)</h3>
+          <p class="feature-card-desc">
+            Comply with AU/NZ regulatory requirements. Track driver fatigue, break schedules, rest periods, and maintain an immutable, detailed audit trail of all operational edits.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Integrations Section -->
+  <section id="integrations" class="integrations-section">
+    <div class="section-container">
+      <div class="section-header">
+        <h2 class="section-title">Built on Infrastructure You Trust</h2>
+        <p class="section-desc">
+          HaulageOps integrates natively with your core systems, ensuring seamless operational and financial workflows.
+        </p>
+      </div>
+      
+      <div class="integrations-grid">
+        <div class="integration-item">
+          <div class="integration-logo">Xero</div>
+          <span class="integration-label">Financial Sync</span>
+        </div>
+        <div class="integration-item">
+          <div class="integration-logo">Google Maps</div>
+          <span class="integration-label">Routing & Address Autocomplete</span>
+        </div>
+        <div class="integration-item">
+          <div class="integration-logo">Mapbox</div>
+          <span class="integration-label">Subcontractor Portal Maps</span>
+        </div>
+        <div class="integration-item">
+          <div class="integration-logo">Firebase FCM</div>
+          <span class="integration-label">Driver Push Notifications</span>
+        </div>
+        <div class="integration-item">
+          <div class="integration-logo">Azure Blob</div>
+          <span class="integration-label">POD & Docket Storage</span>
+        </div>
+      </div>
+      
+      <!-- Tech Stack Info -->
+      <div class="tech-stack-info">
+        <p>
+          <strong>Enterprise Stack:</strong> Powered by Node.js, Express, TypeScript, Prisma ORM, PostgreSQL, and React frontends.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Compliance Highlight / AU-NZ Section -->
+  <section id="compliance" class="compliance-section">
+    <div class="section-container">
+      <div class="compliance-wrapper">
+        <div class="compliance-info">
+          <div class="compliance-tag">AU / NZ Regulatory Ready</div>
+          <h2 class="compliance-title">Audit-Ready Compliance for Heavy Fleets</h2>
+          <p class="compliance-desc">
+            With Chain of Responsibility (CoR) laws, every action you take is a compliance record. HaulageOps provides an immutable, timestamped audit log of every rate change, job allocation, driver check, and POD upload. Keep your business, drivers, and clients protected.
+          </p>
+          <ul class="compliance-list">
+            <li>
+              <i data-lucide="check" class="text-success"></i>
+              <span>Driver fatigue tracking with break timer reminders</span>
+            </li>
+            <li>
+              <i data-lucide="check" class="text-success"></i>
+              <span>Automatic vehicle license and driver induction tracking</span>
+            </li>
+            <li>
+              <i data-lucide="check" class="text-success"></i>
+              <span>Full system logs indicating who, when, and what changed</span>
+            </li>
+          </ul>
+        </div>
+        <div class="compliance-visual">
+          <div class="audit-log-box">
+            <div class="audit-log-header">
+              <i data-lucide="scroll-text"></i>
+              <span>Immutable CoR Audit Log</span>
+            </div>
+            <div class="audit-log-list">
+              <div class="audit-log-item">
+                <span class="audit-time">14:32:01</span>
+                <span class="audit-action"><strong>Job #9012</strong> assigned to Subcontractor (ABC Earthworks)</span>
+              </div>
+              <div class="audit-log-item">
+                <span class="audit-time">14:35:10</span>
+                <span class="audit-action">Driver <strong>John Doe</strong> declared 15-min Rest Break compliance</span>
+              </div>
+              <div class="audit-log-item">
+                <span class="audit-time">14:50:55</span>
+                <span class="audit-action">Docket photo uploaded for <strong>Job #8894</strong> (Azure Blob)</span>
+              </div>
+              <div class="audit-log-item">
+                <span class="audit-time">15:00:00</span>
+                <span class="audit-action">Xero Cron synchronized <strong>12 Invoices</strong> (OAuth2 Sync)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="final-cta-section">
+    <div class="grid-glow-background"></div>
+    <div class="section-container">
+      <h2 class="cta-title">Upgrade Your Haulage Operations</h2>
+      <p class="cta-desc">
+        Take control of your owned and subcontracted fleets, lock in your contract rates, and sync finances automatically.
+      </p>
+      <button class="btn btn-primary btn-lg trigger-contact">Request a Demo</button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="section-container footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="logo-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="nav-logo-svg">
+            <path d="M 20 15 H 35 L 45 25 V 75 L 35 85 H 20 Z" fill="currentColor" />
+            <path d="M 80 15 H 65 L 55 25 V 75 L 65 85 H 80 Z" fill="currentColor" />
+            <rect x="47" y="38" width="6" height="24" rx="3" fill="currentColor" />
+            <rect x="40" y="43" width="5" height="14" rx="2.5" fill="currentColor" />
+            <rect x="55" y="43" width="5" height="14" rx="2.5" fill="currentColor" />
+          </svg>
+          <span class="logo-text">Haulage<span class="logo-text-bold">Ops</span></span>
+        </a>
+        <p class="footer-tagline">
+          The cloud-native operation engine for heavy fleet, bulk haulage, and construction logistics.
+        </p>
+      </div>
+      <div class="footer-links-group">
+        <h4>Product</h4>
+        <a href="#portals">The 5 Portals</a>
+        <a href="#features">Features</a>
+        <a href="#compliance">Compliance</a>
+      </div>
+      <div class="footer-links-group">
+        <h4>Support</h4>
+        <a href="mailto:admin@haulageops.com">admin@haulageops.com</a>
+        <span class="footer-email-desc">Direct line for inquiries & demo booking</span>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 HaulageOps. All rights reserved.</p>
+      <p>Built for the next generation of bulk haulage.</p>
+    </div>
+  </footer>
+
+  <!-- Contact Slider Drawer Overlay -->
+  <div class="contact-drawer-overlay" id="contact-drawer">
+    <div class="contact-drawer">
+      <div class="drawer-header">
+        <h3>Connect with HaulageOps</h3>
+        <button class="drawer-close" id="drawer-close-btn">
+          <i data-lucide="x"></i>
+        </button>
+      </div>
+      
+      <div class="drawer-body">
+        <p class="drawer-desc">
+          Ready to see how HaulageOps can streamline your bulk dispatch, rates, and compliance? Fill in your details, and our logistics specialists will get in touch with you.
+        </p>
+        
+        <form class="drawer-form" id="inquiry-form">
+          <div class="form-group">
+            <label for="client-name">Your Name</label>
+            <input type="text" id="client-name" name="name" required placeholder="e.g. John Smith">
+          </div>
+          
+          <div class="form-group">
+            <label for="client-company">Company Name</label>
+            <input type="text" id="client-company" name="company" required placeholder="e.g. Bulk Transport Logistics">
+          </div>
+          
+          <div class="form-group">
+            <label for="client-email">Email Address</label>
+            <input type="email" id="client-email" name="email" required placeholder="name@company.com">
+          </div>
+
+          <div class="form-group">
+            <label for="fleet-size">Fleet Size (Owned + Subcontracted)</label>
+            <select id="fleet-size" name="fleet_size">
+              <option value="1-10">1 - 10 vehicles</option>
+              <option value="11-50">11 - 50 vehicles</option>
+              <option value="51-100">51 - 100 vehicles</option>
+              <option value="100+">100+ vehicles</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="client-message">How can we help you?</label>
+            <textarea id="client-message" name="message" rows="4" placeholder="Tell us about your operations..."></textarea>
+          </div>
+          
+          <button type="submit" class="btn btn-primary w-full btn-lg">
+            <span>Send Email Request</span>
+            <i data-lucide="send"></i>
+          </button>
+        </form>
+        
+        <div class="drawer-footer-contacts">
+          <span class="label">Or email us directly at:</span>
+          <a href="mailto:admin@haulageops.com" class="direct-email-link">
+            <i data-lucide="mail"></i>
+            <span>admin@haulageops.com</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
