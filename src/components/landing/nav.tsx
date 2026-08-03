@@ -29,22 +29,18 @@ export function Nav() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-white/95 backdrop-blur-md border-b border-border shadow-sm"
-          : "bg-transparent"
+          ? "bg-white/95 backdrop-blur-md border-b border-[#E5E7EB] shadow-sm"
+          : "bg-white/80 backdrop-blur-md"
       }`}
     >
       <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           <a href="#" className="flex items-center gap-2">
             <Truck
-              className={`h-7 w-7 ${scrolled ? "text-foreground" : "text-white"}`}
+              className="h-7 w-7 text-[#0F172A]"
               strokeWidth={2}
             />
-            <span
-              className={`text-lg font-bold tracking-tight ${
-                scrolled ? "text-foreground" : "text-white"
-              }`}
-            >
+            <span className="text-lg font-bold tracking-tight text-[#0F172A]">
               HaulageOps
             </span>
           </a>
@@ -54,9 +50,7 @@ export function Nav() {
               <a
                 key={link.href}
                 href={link.href}
-                className={`px-3 py-2 text-sm font-medium rounded-md transition-colors hover:bg-black/5 ${
-                  scrolled ? "text-muted-foreground hover:text-foreground" : "text-white/80 hover:text-white hover:bg-white/10"
-                }`}
+                className="px-3 py-2 text-sm font-medium text-[#6B7280] rounded-md transition-colors hover:text-[#0F172A] hover:bg-[#F9FAFB]"
               >
                 {link.label}
               </a>
@@ -65,13 +59,9 @@ export function Nav() {
 
           <div className="hidden lg:flex items-center gap-3">
             <Button
-              variant={scrolled ? "outline" : "ghost"}
+              variant="outline"
               size="sm"
-              className={
-                scrolled
-                  ? ""
-                  : "text-white border-white/30 hover:bg-white/10 hover:text-white"
-              }
+              className="border-[#E5E7EB] text-[#374151] hover:bg-[#F9FAFB] hover:text-[#111827]"
             >
               Log in
             </Button>
@@ -84,7 +74,7 @@ export function Nav() {
           </div>
 
           <button
-            className={`lg:hidden p-2 ${scrolled ? "text-foreground" : "text-white"}`}
+            className="lg:hidden p-2 text-[#0F172A]"
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Toggle menu"
           >
@@ -99,7 +89,7 @@ export function Nav() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden bg-white border-b border-border overflow-hidden"
+            className="lg:hidden bg-white border-b border-[#E5E7EB] overflow-hidden"
           >
             <div className="px-4 py-4 space-y-1">
               {navLinks.map((link) => (
@@ -107,12 +97,12 @@ export function Nav() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
-                  className="block px-3 py-2.5 text-sm font-medium text-foreground rounded-md hover:bg-muted transition-colors"
+                  className="block px-3 py-2.5 text-sm font-medium text-[#374151] rounded-md hover:bg-[#F9FAFB] transition-colors"
                 >
                   {link.label}
                 </a>
               ))}
-              <div className="pt-3 border-t border-border flex flex-col gap-2">
+              <div className="pt-3 border-t border-[#E5E7EB] flex flex-col gap-2">
                 <Button variant="outline" size="sm" className="w-full">
                   Log in
                 </Button>
