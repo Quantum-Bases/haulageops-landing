@@ -6,7 +6,8 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --font-sans: var(--font-plus-jakarta), var(--font-geist-sans), system-ui, -apple-system, sans-serif;
+  --font-mori: var(--font-plus-jakarta), var(--font-geist-sans), system-ui, sans-serif;
   --font-mono: var(--font-geist-mono);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
@@ -53,19 +54,20 @@
 :root {
   --radius: 0.625rem;
   --background: oklch(0.985 0.001 247);
-  --foreground: oklch(0.15 0.015 260);
+  --foreground: #202020;
+  --black: #202020;
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.15 0.015 260);
+  --card-foreground: #202020;
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.15 0.015 260);
-  --primary: oklch(0.205 0.015 260);
+  --popover-foreground: #202020;
+  --primary: #202020;
   --primary-foreground: oklch(0.985 0 0);
   --secondary: oklch(0.965 0.003 260);
-  --secondary-foreground: oklch(0.205 0.015 260);
+  --secondary-foreground: #202020;
   --muted: oklch(0.965 0.003 260);
   --muted-foreground: oklch(0.50 0.01 260);
   --accent: oklch(0.965 0.003 260);
-  --accent-foreground: oklch(0.205 0.015 260);
+  --accent-foreground: #202020;
   --destructive: oklch(0.577 0.245 27.325);
   --border: oklch(0.90 0.005 260);
   --input: oklch(0.90 0.005 260);
@@ -83,13 +85,13 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
-  --brand: oklch(0.65 0.18 35);
-  --brand-light: oklch(0.78 0.14 35);
-  --brand-dark: oklch(0.52 0.20 35);
-  --navy: oklch(0.18 0.03 260);
-  --navy-light: oklch(0.25 0.03 260);
-  --surface-dark: oklch(0.13 0.02 260);
-  --surface-darker: oklch(0.10 0.02 260);
+  --brand: #E8652B;
+  --brand-light: #F97316;
+  --brand-dark: #D05520;
+  --navy: #0F172A;
+  --navy-light: #1E293B;
+  --surface-dark: #0F172A;
+  --surface-darker: #0B0F19;
 }
 
 .dark {
@@ -124,13 +126,13 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.65 0.18 35);
-  --brand: oklch(0.65 0.18 35);
-  --brand-light: oklch(0.78 0.14 35);
-  --brand-dark: oklch(0.52 0.20 35);
-  --navy: oklch(0.25 0.03 260);
-  --navy-light: oklch(0.32 0.03 260);
-  --surface-dark: oklch(0.16 0.02 260);
-  --surface-darker: oklch(0.13 0.02 260);
+  --brand: #E8652B;
+  --brand-light: #F97316;
+  --brand-dark: #D05520;
+  --navy: #1E293B;
+  --navy-light: #334155;
+  --surface-dark: #0F172A;
+  --surface-darker: #070A12;
 }
 
 @layer base {
@@ -138,8 +140,101 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    font-family: var(--font-sans);
+    @apply bg-background text-foreground antialiased;
   }
+}
+
+/* Typography styles matching design inspection specs */
+.hero-header_heading,
+.h1-hero-header {
+  font-family: var(--font-mori);
+  font-weight: 700;
+  font-size: clamp(2.5rem, 5.2vw, 75.98px);
+  line-height: 1.2;
+  letter-spacing: -3.04px;
+  color: #202020;
+}
+
+.text-size-large,
+.p-text-large {
+  font-family: var(--font-mori);
+  font-weight: 500;
+  font-size: clamp(1.125rem, 2vw, 22.8px);
+  line-height: 1.5;
+  letter-spacing: -0.31px;
+  color: #202020;
+}
+
+/* Button & Badge Component Utilities */
+.btn-primary {
+  font-family: var(--font-mori);
+  background-color: #E8652B;
+  color: #FFFFFF;
+  font-weight: 600;
+  padding: 0.625rem 1.5rem;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease-in-out;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-primary:hover {
+  background-color: #D05520;
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  font-family: var(--font-mori);
+  background-color: #F1F5F9;
+  color: #0F172A;
+  font-weight: 600;
+  padding: 0.625rem 1.5rem;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease-in-out;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-secondary:hover {
+  background-color: #E2E8F0;
+}
+
+.btn-outline {
+  font-family: var(--font-mori);
+  background-color: transparent;
+  border: 1px solid #E5E7EB;
+  color: #374151;
+  font-weight: 500;
+  padding: 0.5rem 1.25rem;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-outline:hover {
+  background-color: #F9FAFB;
+  color: #111827;
+}
+
+/* Header Announcement Badge (as seen in Genie header design) */
+.badge-announcement {
+  font-family: var(--font-mori);
+  background-color: #F3E8FF;
+  color: #7E22CE;
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 0.375rem 0.875rem;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background-color 0.2s ease;
+}
+
+.badge-announcement:hover {
+  background-color: #E9D5FF;
 }
 
 @layer utilities {
