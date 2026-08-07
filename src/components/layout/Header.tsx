@@ -54,13 +54,11 @@ export function Header({ onDemoClick, onLoginClick }: HeaderProps) {
         <div className="flex h-16 items-center justify-between">
           {/* Brand Logo */}
           <Link href="/" className="flex items-center gap-2.5 shrink-0">
-            <Image
+            <img
               src={brandInfo.logoUrl}
               alt={`${brandInfo.name} Logo`}
-              width={130}
-              height={130}
-              className="w-auto object-contain"
-              priority
+              style={{ width: "130px" }}
+              className="h-auto object-contain"
             />
           </Link>
 

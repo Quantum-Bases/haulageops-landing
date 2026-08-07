@@ -17,12 +17,11 @@ export function Footer({ groups = footerLinkGroups }: FooterProps) {
           {/* Brand column */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-2 mb-4">
-              <Image
+              <img
                 src={brandInfo.logoUrl}
                 alt={`${brandInfo.name} Logo`}
-                width={120}
-                height={120}
-                className="w-auto object-contain brightness-0 invert"
+                style={{ width: "130px" }}
+                className="h-auto object-contain brightness-0 invert"
               />
             </div>
             <p className="text-sm text-white/40 leading-relaxed">
