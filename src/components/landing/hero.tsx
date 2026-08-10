@@ -21,7 +21,7 @@ function DashboardMockup() {
       {/* Screen snapshot content scaled strictly to natural 16:10 aspect ratio */}
       <div className="relative w-full h-auto bg-[#0D1525] overflow-hidden">
         <img
-          src="/Screenshot 2026-08-03 at 7.47.45 PM.png"
+          src="/dash1.png"
           alt="HaulageOps Dashboard"
           className="w-full h-auto block"
         />
@@ -122,7 +122,7 @@ function Card({
       className="max-w-7xl xl:max-w-[80rem] 2xl:max-w-[105rem] -mt-4 sm:-mt-6 mx-auto h-auto w-full border-[6px] md:border-[10px] border-[#18181B] rounded-[24px] md:rounded-[36px] relative overflow-hidden bg-cover bg-center"
     >
       {/* Internal background image */}
-      <div 
+      <div
         className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: "url('/ios-11-3840x2160-4k-5k-beach-ocean-13655.jpg')" }}
       />
@@ -130,7 +130,7 @@ function Card({
       <div className="absolute inset-0 bg-black/20 backdrop-blur-[2px]" />
 
       {/* Inner application content box */}
-      <div className="relative h-auto w-full overflow-hidden rounded-[14px] md:rounded-[20px] shadow-2xl border border-white/10" style={{padding: "clamp(1rem, 3vw, 1.5rem)"}}>
+      <div className="relative h-auto w-full overflow-hidden rounded-[14px] md:rounded-[20px] shadow-2xl border border-white/10" style={{ padding: "clamp(1rem, 3vw, 1.5rem)" }}>
         {children}
       </div>
     </motion.div>
@@ -181,7 +181,7 @@ export function Hero() {
     <section className="relative bg-white overflow-hidden flex flex-col pt-12 md:pt-16">
       {/* Subtle top background gradient light */}
       <div className="absolute top-0 inset-x-0 h-[500px] bg-gradient-to-b from-[#FFF5EE]/60 via-[#FFF9F5]/20 to-transparent pointer-events-none" />
-      
+
       <ContainerScroll titleComponent={titleComponent}>
         <DashboardMockup />
       </ContainerScroll>
