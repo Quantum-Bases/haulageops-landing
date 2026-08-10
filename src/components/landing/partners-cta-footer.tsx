@@ -48,16 +48,22 @@ export function FinalCTA() {
             See your operation on HaulageOps.
           </h2>
           <p className="mt-6 text-lg text-white/70 leading-relaxed">
-            20 minutes, on your workflows — dispatch, delegation, client view,
+            20 minutes, on your workflows - dispatch, delegation, client view,
             invoice. No obligation.
           </p>
-          <Button
-            size="lg"
-            className="mt-10 bg-[#E8652B] hover:bg-[#D05520] text-white font-semibold text-base px-8 py-6 h-auto"
+          <a
+            href="https://calendly.com/admin-haulageops/30min"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            Book a 20-minute demo
-            <ArrowRight className="ml-2 h-4 w-4" />
-          </Button>
+            <Button
+              size="lg"
+              className="mt-10 bg-[#E8652B] hover:bg-[#D05520] text-white font-semibold text-base px-8 py-6 h-auto"
+            >
+              Book a 20-minute demo
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Button>
+          </a>
         </motion.div>
       </div>
     </section>

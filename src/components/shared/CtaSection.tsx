@@ -16,6 +16,14 @@ export function CtaSection({
   variant = "main",
   onButtonClick,
 }: CtaSectionProps) {
+  const handleClick = () => {
+    if (onButtonClick) {
+      onButtonClick();
+    } else {
+      window.open("https://calendly.com/admin-haulageops/30min", "_blank", "noopener,noreferrer");
+    }
+  };
+
   if (variant === "teaser") {
     const teaserConfig = config === mainFinalCta ? partnerTeaserCta : config;
     return (
@@ -37,7 +45,7 @@ export function CtaSection({
             <Button
               variant="outline"
               size="lg"
-              onClick={onButtonClick}
+              onClick={handleClick}
               className="mt-8 border-[#E5E7EB] text-[#374151] hover:bg-[#F9FAFB]"
             >
               {teaserConfig.buttonText}
@@ -67,7 +75,7 @@ export function CtaSection({
           </p>
           <Button
             size="lg"
-            onClick={onButtonClick}
+            onClick={handleClick}
             className="mt-10 bg-[#E8652B] hover:bg-[#D05520] text-white font-semibold text-base px-8 py-6 h-auto"
           >
             {config.buttonText}

@@ -107,7 +107,11 @@ export function Header({ onDemoClick, onLoginClick }: HeaderProps) {
 
           {/* Header Action Buttons */}
           <div className="hidden lg:flex items-center gap-3">
-            <Link href="/demo">
+            <a
+              href="https://calendly.com/admin-haulageops/30min"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Button
                 variant="outline"
                 size="sm"
@@ -115,15 +119,19 @@ export function Header({ onDemoClick, onLoginClick }: HeaderProps) {
               >
                 See how it works
               </Button>
-            </Link>
-            <Link href="/demo">
+            </a>
+            <a
+              href="https://calendly.com/admin-haulageops/30min"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Button
                 size="sm"
                 className="bg-[#E8652B] hover:bg-[#D05520] text-white font-medium shadow-xs"
               >
                 Book a Demo
               </Button>
-            </Link>
+            </a>
           </div>
 
           {/* Mobile Menu Toggle Button */}
@@ -285,19 +293,29 @@ export function Header({ onDemoClick, onLoginClick }: HeaderProps) {
               })}
 
               <div className="pt-4 border-t border-[#E5E7EB] flex flex-col gap-2.5">
-                <Link href="/demo" onClick={() => setMobileOpen(false)}>
+                <a
+                  href="https://calendly.com/admin-haulageops/30min"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setMobileOpen(false)}
+                >
                   <Button variant="outline" size="sm" className="w-full">
                     See how it works
                   </Button>
-                </Link>
-                <Link href="/demo" onClick={() => setMobileOpen(false)}>
+                </a>
+                <a
+                  href="https://calendly.com/admin-haulageops/30min"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setMobileOpen(false)}
+                >
                   <Button
                     size="sm"
                     className="w-full bg-[#E8652B] hover:bg-[#D05520] text-white font-medium"
                   >
                     Book a Demo
                   </Button>
-                </Link>
+                </a>
               </div>
             </div>
           </motion.div>

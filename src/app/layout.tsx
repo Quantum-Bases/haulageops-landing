@@ -20,9 +20,14 @@ const plusJakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "HaulageOps — The TMS for Bulk Haulage Operators",
+  title: "HaulageOps - The TMS for Bulk Haulage Operators",
   description:
     "HaulageOps is the transport management system built for bulk haulage and construction logistics: live job tracking, digital POD, a native subcontractor portal, client visibility, rate cards, invoicing, and audit-ready records on one platform.",
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/icon.png",
+    apple: "/icon.png",
+  },
   keywords: [
     "TMS",
     "transport management system",

@@ -270,47 +270,65 @@ export default function DemoPage() {
             </div>
             <div>
               <div className="bg-white rounded-2xl p-8 border border-[#E2E8F0]">
-                <h3 className="text-xl font-bold text-[#0F172A] mb-6">Book your 20-minute demo</h3>
-                <form action="#" method="post">
-                  <div className="mb-4">
-                    <label htmlFor="name" className="block text-sm font-semibold text-[#0F172A] mb-1.5">Full name *</label>
-                    <input id="name" type="text" name="name" required placeholder="Your name" className="w-full px-3.5 py-2.5 border border-[#CBD5E1] rounded-lg text-sm text-[#0F172A] focus:outline-none focus:ring-2 focus:ring-[#E8652B]/40" />
+                <h3 className="text-xl font-bold text-[#0F172A] mb-2">Book your 30-minute demo</h3>
+                <p className="text-sm text-[#475569] mb-6">Select a convenient time directly on Calendly or request a custom slot.</p>
+                <div className="space-y-4">
+                  <a
+                    href="https://calendly.com/admin-haulageops/30min"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block"
+                  >
+                    <Button size="lg" className="w-full bg-[#E8652B] hover:bg-[#D05520] text-white font-semibold py-6 shadow-md text-base">
+                      Book Now via Calendly →
+                    </Button>
+                  </a>
+                  <div className="relative flex py-2 items-center">
+                    <div className="flex-grow border-t border-gray-200"></div>
+                    <span className="flex-shrink mx-4 text-xs font-semibold text-gray-400 uppercase">Or fill in details</span>
+                    <div className="flex-grow border-t border-gray-200"></div>
                   </div>
-                  <div className="mb-4">
-                    <label htmlFor="company" className="block text-sm font-semibold text-[#0F172A] mb-1.5">Company name *</label>
-                    <input id="company" type="text" name="company" required placeholder="Your company" className="w-full px-3.5 py-2.5 border border-[#CBD5E1] rounded-lg text-sm text-[#0F172A] focus:outline-none focus:ring-2 focus:ring-[#E8652B]/40" />
-                  </div>
-                  <div className="mb-4">
-                    <label htmlFor="email" className="block text-sm font-semibold text-[#0F172A] mb-1.5">Work email *</label>
-                    <input id="email" type="email" name="email" required placeholder="you@company.com" className="w-full px-3.5 py-2.5 border border-[#CBD5E1] rounded-lg text-sm text-[#0F172A] focus:outline-none focus:ring-2 focus:ring-[#E8652B]/40" />
-                  </div>
-                  <div className="mb-4">
-                    <label htmlFor="phone" className="block text-sm font-semibold text-[#0F172A] mb-1.5">Phone number</label>
-                    <input id="phone" type="tel" name="phone" placeholder="+61 or +44 etc." className="w-full px-3.5 py-2.5 border border-[#CBD5E1] rounded-lg text-sm text-[#0F172A] focus:outline-none focus:ring-2 focus:ring-[#E8652B]/40" />
-                  </div>
-                  <div className="mb-4">
-                    <label htmlFor="fleet_size" className="block text-sm font-semibold text-[#0F172A] mb-1.5">Approximate fleet size *</label>
-                    <select id="fleet_size" name="fleet_size" required defaultValue="" className="w-full px-3.5 py-2.5 border border-[#CBD5E1] rounded-lg text-sm text-[#0F172A] bg-white focus:outline-none focus:ring-2 focus:ring-[#E8652B]/40">
-                      <option value="" disabled>Select fleet size</option>
-                      {fleetSizeOptions.map((option) => (
-                        <option key={option} value={option}>{option}</option>
-                      ))}
-                    </select>
-                  </div>
-                  <div className="mb-6">
-                    <label htmlFor="current_system" className="block text-sm font-semibold text-[#0F172A] mb-1.5">Current system</label>
-                    <select id="current_system" name="current_system" defaultValue="" className="w-full px-3.5 py-2.5 border border-[#CBD5E1] rounded-lg text-sm text-[#0F172A] bg-white focus:outline-none focus:ring-2 focus:ring-[#E8652B]/40">
-                      <option value="" disabled>What are you using now?</option>
-                      {currentSystemOptions.map((option) => (
-                        <option key={option} value={option}>{option}</option>
-                      ))}
-                    </select>
-                  </div>
-                  <Button type="submit" size="lg" className="w-full bg-[#E8652B] hover:bg-[#D05520] text-white font-semibold">
-                    Request demo
-                  </Button>
-                  <p className="mt-3 text-xs text-[#64748B] text-center">We confirm a time within 1 business day. No commitment required.</p>
-                </form>
+                  <form action="https://calendly.com/admin-haulageops/30min" target="_blank" method="get">
+                    <div className="mb-4">
+                      <label htmlFor="name" className="block text-sm font-semibold text-[#0F172A] mb-1.5">Full name *</label>
+                      <input id="name" type="text" name="name" required placeholder="Your name" className="w-full px-3.5 py-2.5 border border-[#CBD5E1] rounded-lg text-sm text-[#0F172A] focus:outline-none focus:ring-2 focus:ring-[#E8652B]/40" />
+                    </div>
+                    <div className="mb-4">
+                      <label htmlFor="company" className="block text-sm font-semibold text-[#0F172A] mb-1.5">Company name *</label>
+                      <input id="company" type="text" name="company" required placeholder="Your company" className="w-full px-3.5 py-2.5 border border-[#CBD5E1] rounded-lg text-sm text-[#0F172A] focus:outline-none focus:ring-2 focus:ring-[#E8652B]/40" />
+                    </div>
+                    <div className="mb-4">
+                      <label htmlFor="email" className="block text-sm font-semibold text-[#0F172A] mb-1.5">Work email *</label>
+                      <input id="email" type="email" name="email" required placeholder="you@company.com" className="w-full px-3.5 py-2.5 border border-[#CBD5E1] rounded-lg text-sm text-[#0F172A] focus:outline-none focus:ring-2 focus:ring-[#E8652B]/40" />
+                    </div>
+                    <div className="mb-4">
+                      <label htmlFor="phone" className="block text-sm font-semibold text-[#0F172A] mb-1.5">Phone number</label>
+                      <input id="phone" type="tel" name="phone" placeholder="+61 or +44 etc." className="w-full px-3.5 py-2.5 border border-[#CBD5E1] rounded-lg text-sm text-[#0F172A] focus:outline-none focus:ring-2 focus:ring-[#E8652B]/40" />
+                    </div>
+                    <div className="mb-4">
+                      <label htmlFor="fleet_size" className="block text-sm font-semibold text-[#0F172A] mb-1.5">Approximate fleet size *</label>
+                      <select id="fleet_size" name="fleet_size" required defaultValue="" className="w-full px-3.5 py-2.5 border border-[#CBD5E1] rounded-lg text-sm text-[#0F172A] bg-white focus:outline-none focus:ring-2 focus:ring-[#E8652B]/40">
+                        <option value="" disabled>Select fleet size</option>
+                        {fleetSizeOptions.map((option) => (
+                          <option key={option} value={option}>{option}</option>
+                        ))}
+                      </select>
+                    </div>
+                    <div className="mb-6">
+                      <label htmlFor="current_system" className="block text-sm font-semibold text-[#0F172A] mb-1.5">Current system</label>
+                      <select id="current_system" name="current_system" defaultValue="" className="w-full px-3.5 py-2.5 border border-[#CBD5E1] rounded-lg text-sm text-[#0F172A] bg-white focus:outline-none focus:ring-2 focus:ring-[#E8652B]/40">
+                        <option value="" disabled>What are you using now?</option>
+                        {currentSystemOptions.map((option) => (
+                          <option key={option} value={option}>{option}</option>
+                        ))}
+                      </select>
+                    </div>
+                    <Button type="submit" size="lg" className="w-full bg-[#0F172A] hover:bg-[#1E293B] text-white font-semibold">
+                      Continue to Calendly
+                    </Button>
+                    <p className="mt-3 text-xs text-[#64748B] text-center">No commitment required.</p>
+                  </form>
+                </div>
               </div>
             </div>
           </div>

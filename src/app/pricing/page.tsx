@@ -1,16 +1,16 @@
 import Link from "next/link";
 import { MainLayout } from "@/components/layout/MainLayout";
 import { Button } from "@/components/ui/button";
-import { ChevronRight, Check, ArrowRight } from "lucide-react";
+import { ChevronRight, Check, ArrowRight, Calendar } from "lucide-react";
 
 export const metadata = {
-  title: "HaulageOps Pricing — Haulage Operations Platform",
+  title: "HaulageOps Pricing - Custom Haulage Operations Platform",
   description:
-    "HaulageOps pricing includes a one-time setup fee and SaaS subscription. External portals for subcontractors and clients are free for portal users.",
+    "HaulageOps pricing is customized based on your fleet size and operational requirements. Book a demo to get a tailored quote for your business.",
 };
 
 const proofItems = [
-  { value: "$1,500", label: "Standard setup fee" },
+  { value: "Custom Quote", label: "Tailored to your fleet" },
   { value: "2–4 weeks", label: "Typical go-live" },
   { value: "Free", label: "Subcontractor portal access" },
   { value: "Free", label: "Client portal access" },
@@ -18,6 +18,7 @@ const proofItems = [
   { value: "No per-user fees", label: "Unlimited internal users" },
 ];
 
+/* 
 const plans = [
   {
     name: "Starter",
@@ -31,8 +32,8 @@ const plans = [
     features: [
       "Job management and dispatch board",
       "Driver mobile app (iOS + Android)",
-      "Subcontractor portal — free for subs",
-      "Client portal — free for clients",
+      "Subcontractor portal - free for subs",
+      "Client portal - free for clients",
       "Digital POD and docket capture",
       "Xero integration",
       "Google Maps address and routing",
@@ -53,7 +54,7 @@ const plans = [
       "Everything in Starter",
       "Multi-rate and effective-dated rate cards",
       "Subcontractor pay rates (separate from client charge)",
-      "Contract management — full lifecycle",
+      "Contract management - full lifecycle",
       "Driver availability scheduling",
       "Break and rest period recording",
       "Fleet document expiry alerts",
@@ -83,18 +84,19 @@ const plans = [
     cta: "Discuss enterprise scope",
   },
 ];
+*/
 
 const portalPoints = [
-  "Add 40 subcontractors to the subcontractor portal — no additional cost",
-  "Give 20 clients their own client portal logins — no additional cost",
-  "Add internal dispatchers and admin users — no per-seat charge",
-  "One subscription covers the entire network",
+  "Add subcontractors to the portal at no extra per-seat cost",
+  "Give clients their own portal logins for instant visibility",
+  "Add internal dispatchers and admin users with no per-user fees",
+  "One subscription covers your entire operational network",
 ];
 
 const setupCards = [
   {
     title: "Platform configuration",
-    p: "We configure the platform to match your operation — not a generic demo environment. This includes your fleet structure, driver records, user accounts with correct role-based permissions, and your client list.",
+    p: "We configure the platform to match your operation - not a generic demo environment. This includes your fleet structure, driver records, user accounts with correct role-based permissions, and your client list.",
     points: [
       "User accounts and RBAC roles configured",
       "Fleet and vehicle records loaded",
@@ -105,7 +107,7 @@ const setupCards = [
   },
   {
     title: "Rate card setup",
-    p: "Rate cards in HaulageOps support per-tonne, per-load, hourly and fixed-fee structures, with separate client charge rates and subcontractor pay rates, and effective dating for rate changes. We load your existing rate cards.",
+    p: "Rate cards in HaulageOps support per-tonne, per-load, hourly and fixed-fee structures, with separate client charge rates and subcontractor pay rates. We help load your existing rate cards.",
     points: [
       "Client charge rates loaded per rate type",
       "Subcontractor pay rates configured separately",
@@ -115,19 +117,19 @@ const setupCards = [
   },
   {
     title: "Xero connection",
-    p: "The Xero integration uses OAuth2 — no password sharing, no manual exports. Once connected, invoices created in HaulageOps sync to Xero. Payment webhooks from Xero update invoice status in real time.",
+    p: "The Xero integration uses OAuth2 - no password sharing, no manual exports. Once connected, invoices created in HaulageOps sync to Xero smoothly.",
     href: "/platform/integrations/xero",
     linkText: "Xero integration",
     points: [
       "OAuth2 connection established during setup",
       "Invoice sync tested and confirmed",
       "Payment webhook configured",
-      "6-hourly cron sync active from day one",
+      "Automatic sync active from day one",
     ],
   },
   {
     title: "Training",
-    p: "We run training sessions for each role type in your operation — admin, dispatch, and driver app. Training is structured around real tasks in your configured environment, not a generic walkthrough.",
+    p: "We run training sessions for each role type in your operation - admin, dispatch, and driver app. Training is structured around real tasks in your configured environment.",
     points: [
       "Admin and billing training session",
       "Dispatch board and job assignment training",
@@ -147,13 +149,13 @@ const subscriptionCards = [
   },
   {
     title: "All integrations",
-    p: "Xero sync, Google Maps address autocomplete and routing, Mapbox interactive maps in the subcontractor portal, and Firebase FCM push notifications are included. MYOB is available subject to scope on request.",
+    p: "Xero sync, Google Maps address autocomplete and routing, Mapbox interactive maps in the subcontractor portal, and push notifications are included.",
     href: "/platform/integrations/xero",
     linkText: "Xero integration details",
   },
   {
     title: "Ongoing support",
-    p: "Support is included in your subscription — not a paid add-on. The support team knows the platform and the workflows. Response within one business day for most queries.",
+    p: "Support is included in your subscription - not a paid add-on. The support team knows the platform and the workflows.",
     href: "/support",
     linkText: "Support details",
   },
@@ -161,38 +163,24 @@ const subscriptionCards = [
 
 const faqs = [
   {
+    q: "How is pricing calculated?",
+    a: "We haven't fixed rigid one-size-fits-all pricing tiers because every operation is different. Pricing is custom-tailored based on your fleet size, subcontractor ratio, rate structures, and specific workflow needs. Book a 30-minute call with us to get a personalized quote.",
+  },
+  {
     q: "Is there a per-user fee?",
-    a: "No. HaulageOps does not charge per internal user. Your admin team, dispatchers, and management can all have accounts at no additional cost. External users — subcontractors accessing the subcontractor portal and clients accessing the client portal — do not pay and are not counted in any per-seat fee. One subscription covers all users on all portals.",
+    a: "No. HaulageOps does not charge per internal user. Your admin team, dispatchers, and management can all have accounts at no additional cost. External users - subcontractors accessing the portal and clients accessing the client portal - do not pay and are not counted in any per-seat fee.",
   },
   {
     q: "Is there a per-vehicle fee?",
-    a: "No. There is no per-vehicle or per-truck charge. HaulageOps pricing is not usage-based in that way. Fleet size affects which plan tier is appropriate, but once you're on a plan, adding vehicles to your fleet record doesn't change your monthly cost. This matters when you're scaling subcontractor capacity — adding sub trucks doesn't add to your bill.",
-  },
-  {
-    q: "What exactly does the setup fee cover?",
-    a: "The $1,500 standard setup fee covers: platform configuration (users, roles, fleet, clients, subcontractors), rate card loading, Xero OAuth2 connection, and training for admin, dispatch and drivers. For Enterprise scope, the setup fee starts from $6,500 and covers extended configuration, historical data migration, and a longer implementation timeline. The setup fee is a one-time charge — it is not recurring.",
+    a: "No. There is no per-vehicle or per-truck charge. HaulageOps pricing is not usage-based in that way.",
   },
   {
     q: "Can I add subcontractors to the portal at no extra cost?",
-    a: "Yes. The subcontractor portal is included in your subscription and there is no per-subcontractor charge. You can give access to your entire subcontractor network — each subcontractor gets a dedicated authenticated login, sees their assigned jobs, can accept or decline via the portal, and has access to Mapbox job maps and their job history. None of that changes your subscription cost.",
-  },
-  {
-    q: "Is there a free trial?",
-    a: (
-      <>
-        We don't offer a self-serve free trial. The reason is practical: HaulageOps needs to be configured with your rate cards, your client list, your fleet and your dispatch workflow before it's meaningful to evaluate. A generic demo environment doesn't show you how it will work for your operation. What we do offer is a{" "}
-        <Link href="/demo" className="text-[#E8652B] hover:underline font-medium">20-minute demo</Link>{" "}
-        of the platform running through a real job workflow — create, assign, track, POD, invoice, Xero sync — followed by a scoped proposal within 24 hours.
-      </>
-    ),
-  },
-  {
-    q: "How does pricing work for the Xero integration?",
-    a: "Xero integration is included in your subscription at no extra cost. The connection uses OAuth2 — no licence fees, no connector middleware charges. Invoice sync runs on a 6-hourly cron, and Xero payment webhooks update invoice status in HaulageOps in real time. You need an active Xero subscription — HaulageOps does not cover your Xero licence cost.",
+    a: "Yes. The subcontractor portal is included in your platform access and there is no per-subcontractor charge.",
   },
   {
     q: "Do my subcontractors need to pay for anything?",
-    a: "No. Subcontractors access the HaulageOps subcontractor portal through a dedicated login provided by you. They do not need a HaulageOps account of their own, and there is no charge for subcontractor portal access. This is different from platforms where subcontractors need to be paying customers of the same software to receive job assignments. In HaulageOps, subcontractor portal access is part of what you pay for.",
+    a: "No. Subcontractors access the HaulageOps subcontractor portal through a dedicated login provided by you. They do not need a HaulageOps account of their own, and there is no charge for subcontractor portal access.",
   },
 ];
 
@@ -200,27 +188,31 @@ export default function PricingPage() {
   return (
     <MainLayout showCta={false}>
       <section className="pt-24 pb-16 bg-gradient-to-b from-[#FFF9F5] to-white">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <nav className="flex items-center gap-2 text-xs text-[#64748B] mb-6">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center sm:text-left">
+          <nav className="flex items-center gap-2 text-xs text-[#64748B] mb-6 justify-center sm:justify-start">
             <Link href="/" className="hover:text-[#E8652B]">Home</Link>
             <ChevronRight className="h-3 w-3" />
             <span className="text-[#0F172A] font-medium">Pricing</span>
           </nav>
           <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-[#E8652B] bg-[#FFF0E6] mb-4">
-            Pricing
+            Custom Pricing
           </span>
           <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-[#0F172A] max-w-4xl leading-[1.1]">
-            Simple pricing built for how haulage businesses actually work.
+            Tailored pricing built for how your haulage business actually operates.
           </h1>
           <p className="mt-6 text-lg text-[#475569] max-w-3xl leading-relaxed">
-            One setup fee. One subscription. All portals included. Your subcontractors and clients access their portals at no extra cost — only you pay.
+            We haven't fixed a rigid one-size-fits-all price because every fleet, subcontractor network, and rate structure is unique. Book a call with our team to discuss your operation and receive a custom proposal.
           </p>
-          <div className="mt-8 flex flex-wrap gap-3">
-            <Link href="/demo">
-              <Button size="lg" className="bg-[#E8652B] hover:bg-[#D05520] text-white font-semibold">
-                Get a pricing proposal
+          <div className="mt-8 flex flex-wrap gap-3 justify-center sm:justify-start">
+            <a
+              href="https://calendly.com/admin-haulageops/30min"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button size="lg" className="bg-[#E8652B] hover:bg-[#D05520] text-white font-semibold flex items-center gap-2 shadow-md">
+                <Calendar className="h-4 w-4" /> Book Now - Discuss Pricing
               </Button>
-            </Link>
+            </a>
             <Link href="/implementation">
               <Button size="lg" variant="outline" className="text-[#0F172A] font-semibold">
                 See what's included in setup
@@ -241,12 +233,44 @@ export default function PricingPage() {
         </div>
       </section>
 
+      {/* Prominent Custom Pricing & Book Now Section */}
       <section className="py-16 bg-white">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
+          <div className="bg-[#FFF9F5] border-2 border-[#E8652B]/30 rounded-3xl p-8 sm:p-12 shadow-sm">
+            <span className="inline-block px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider text-[#E8652B] bg-[#FFF0E6] mb-4">
+              Book a Call
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#0F172A]">
+              We customize pricing for your fleet
+            </h2>
+            <p className="mt-4 text-base sm:text-lg text-[#475569] leading-relaxed max-w-2xl mx-auto">
+              We haven't finalized set pricing plans yet as we tailor solutions specifically around your vehicle count, subcontractor volume, and workflow complexity.
+            </p>
+            <p className="mt-3 text-base text-[#0F172A] font-semibold">
+              Schedule a 30-minute walkthrough to review your setup and receive an exact customized quote.
+            </p>
+            <div className="mt-8 flex justify-center">
+              <a
+                href="https://calendly.com/admin-haulageops/30min"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button size="lg" className="bg-[#E8652B] hover:bg-[#D05520] text-white font-bold px-8 py-6 text-base shadow-md flex items-center gap-2">
+                  <Calendar className="h-5 w-5" /> Book Now - Schedule 30-Min Call
+                </Button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/*
+      <section className="py-16 bg-white border-t border-[#E2E8F0]">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Plans</span>
           <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">Three tiers. Exact pricing confirmed after a 20-minute demo.</h2>
           <p className="mt-4 text-[#475569] leading-relaxed max-w-2xl">
-            Every business runs differently — fleet size, subcontractor network, rate complexity, and integration needs all shape the final quote. The ranges below give you a starting point. We'll confirm exact figures after we've looked at your operation together.
+            Every business runs differently - fleet size, subcontractor network, rate complexity, and integration needs all shape the final quote.
           </p>
           <div className="mt-10 overflow-x-auto -mx-4 px-4">
             <table className="w-full min-w-[920px] border-collapse text-left">
@@ -318,11 +342,15 @@ export default function PricingPage() {
                   <td className="py-4 pr-6" />
                   {plans.map((plan) => (
                     <td key={plan.name} className="px-3 pt-5 pb-2 align-top">
-                      <Link href="/demo">
+                      <a
+                        href="https://calendly.com/admin-haulageops/30min"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <Button className="w-full bg-[#E8652B] hover:bg-[#D05520] text-white font-semibold">
                           {plan.cta}
                         </Button>
-                      </Link>
+                      </a>
                     </td>
                   ))}
                 </tr>
@@ -331,6 +359,7 @@ export default function PricingPage() {
           </div>
         </div>
       </section>
+      */}
 
       <section className="py-16 bg-[#F8FAFC]">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -339,33 +368,17 @@ export default function PricingPage() {
               <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">The portal pricing model</span>
               <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">Your subcontractors and clients don't pay. You do.</h2>
               <p className="mt-4 text-sm text-[#475569] leading-relaxed">
-                Most TMS platforms charge per-seat or per-user — which means every subcontractor and client you give access to becomes a line on your bill. HaulageOps works differently.
+                Most TMS platforms charge per-seat or per-user - which means every subcontractor and client you give access to becomes a line on your bill. HaulageOps works differently.
               </p>
               <p className="mt-4 text-sm text-[#475569] leading-relaxed">
-                The <Link href="/platform/subcontractor-portal" className="text-[#E8652B] hover:underline font-medium">subcontractor portal</Link> is a dedicated, authenticated login environment where your external subcontractors accept and decline job assignments, view Mapbox maps, track their job history, and communicate job status — all in real time. They don't pay for that access. You do, as part of your subscription.
+                The <Link href="/platform/subcontractor-portal" className="text-[#E8652B] hover:underline font-medium">subcontractor portal</Link> is a dedicated, authenticated login environment where your external subcontractors accept and decline job assignments, view Mapbox maps, track their job history, and communicate job status - all in real time. They don't pay for that access.
               </p>
               <p className="mt-4 text-sm text-[#475569] leading-relaxed">
-                The <Link href="/platform/client-portal" className="text-[#E8652B] hover:underline font-medium">client portal</Link> gives your clients live job status, access to their dockets and proof of delivery, invoice history, their rate cards, and client-specific reports. You can give every client in your network their own portal login. No per-client licence. No per-seat add-on.
-              </p>
-              <p className="mt-4 text-sm text-[#475569] leading-relaxed">
-                This matters operationally: when portal access is free for external users, you actually give it to them. When it costs per seat, you find workarounds — which usually means more WhatsApp, more email, and more manual updates for your dispatch team.
+                The <Link href="/platform/client-portal" className="text-[#E8652B] hover:underline font-medium">client portal</Link> gives your clients live job status, access to their dockets and proof of delivery, invoice history, their rate cards, and client-specific reports.
               </p>
             </div>
             <div>
-              <div className="rounded-2xl bg-[#0D1525] border border-[#1E293B] overflow-hidden">
-                <div className="flex items-center gap-2 px-5 py-3 bg-[#1E293B]">
-                  <span className="h-2.5 w-2.5 rounded-full bg-[#E8652B]" />
-                  <span className="h-2.5 w-2.5 rounded-full bg-[#94A3B8]" />
-                  <span className="h-2.5 w-2.5 rounded-full bg-[#475569]" />
-                  <span className="ml-3 text-xs font-semibold text-[#CBD5E1]">Portal access model — pricing illustration</span>
-                </div>
-                <div className="p-6">
-                  <p className="text-sm text-[#94A3B8] leading-relaxed">
-                    {"Diagram: operating company at centre, subscription fee arrow going left; subcontractor portal logins (multiple subs, each marked \"free\") radiating right; client portal logins (multiple clients, each marked \"free\") radiating below. Legend: \"You pay once. Everyone else accesses for free.\""}
-                  </p>
-                </div>
-              </div>
-              <div className="rounded-2xl border border-[#BBF7D0] bg-[#F0FDF4] p-6 mt-6">
+              <div className="rounded-2xl border border-[#BBF7D0] bg-[#F0FDF4] p-6">
                 <p className="font-bold text-[#166534]">What this means in practice</p>
                 <ul className="mt-3 space-y-2.5">
                   {portalPoints.map((item) => (
@@ -384,10 +397,7 @@ export default function PricingPage() {
       <section className="py-16 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">What's included</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">Setup fee covers everything you need to go live.</h2>
-          <p className="mt-4 text-[#475569] leading-relaxed max-w-2xl">
-            The setup fee is not a licence fee. It covers the configuration work, data loading, integration setup and training required to get your operation live on HaulageOps. Here's exactly what that means.
-          </p>
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">Setup covers everything you need to go live.</h2>
           <div className="mt-10 grid md:grid-cols-2 gap-6">
             {setupCards.map((card) => (
               <div key={card.title} className="bg-white rounded-2xl p-6 border border-[#E2E8F0]">
@@ -416,9 +426,6 @@ export default function PricingPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Subscription includes</span>
           <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">Everything in the subscription. No feature add-ons.</h2>
-          <p className="mt-4 text-[#475569] leading-relaxed max-w-2xl">
-            Once you're live, your subscription covers the full platform. There are no optional module fees or feature gates — the rate card module, the subcontractor portal, the client portal, Xero integration, Firebase push notifications and Google Maps are all included.
-          </p>
           <div className="mt-10 grid md:grid-cols-3 gap-6">
             {subscriptionCards.map((card) => (
               <div key={card.title} className="bg-white rounded-2xl p-6 border border-[#E2E8F0]">
@@ -454,31 +461,23 @@ export default function PricingPage() {
       </section>
 
       <section className="py-16 bg-[#0F172A]">
-        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-lg sm:text-xl text-[#CBD5E1] italic leading-relaxed">
-            "Pricing makes a lot more sense after you've seen it running through a real job. The 20-minute demo is where we work through your specific fleet size and rate structure."
-          </p>
-          <p className="mt-4 font-bold text-[#E8652B]">HaulageOps Implementation Team</p>
-        </div>
-      </section>
-
-      <section className="py-16 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
           <div>
-            <h2 className="text-2xl sm:text-3xl font-bold text-[#0F172A]">Pricing works best after a 20-minute demo.</h2>
-            <p className="mt-2 text-[#475569] text-sm leading-relaxed max-w-xl">
-              We scope your fleet size, rate card complexity, and integration needs — then provide an exact proposal within 24 hours. No commitment required.
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#FFFFFF]">Ready to discuss pricing for your fleet?</h2>
+            <p className="mt-2 text-[#94A3B8] text-sm leading-relaxed max-w-xl">
+              Schedule a 30-minute call to review your operational requirements and get a customized quote.
             </p>
           </div>
           <div className="flex flex-col items-start gap-3 shrink-0">
-            <Link href="/demo">
+            <a
+              href="https://calendly.com/admin-haulageops/30min"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Button size="lg" className="bg-[#E8652B] hover:bg-[#D05520] text-white font-semibold">
-                Book a 20-minute demo
+                Book Now - Schedule Call
               </Button>
-            </Link>
-            <Link href="/implementation" className="text-[#E8652B] hover:underline text-sm font-semibold">
-              See what implementation covers →
-            </Link>
+            </a>
           </div>
         </div>
       </section>
