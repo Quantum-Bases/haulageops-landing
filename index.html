@@ -45,7 +45,7 @@
   <!-- Navigation Bar -->
   <header class="main-header" id="header">
     <div class="header-container">
-      <a href="#" class="logo-link" id="logo-nav">
+      <a href="#" class="logo-link" id="logo-nav" data-track-click="logo-nav">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="nav-logo-svg">
           <path d="M 20 15 H 35 L 45 25 V 75 L 35 85 H 20 Z" fill="currentColor" />
           <path d="M 80 15 H 65 L 55 25 V 75 L 65 85 H 80 Z" fill="currentColor" />
@@ -57,15 +57,15 @@
       </a>
       
       <nav class="desktop-nav">
-        <a href="#portals" class="nav-link">The 5 Portals</a>
-        <a href="#features" class="nav-link">Features</a>
-        <a href="#integrations" class="nav-link">Integrations</a>
-        <a href="#compliance" class="nav-link">Compliance</a>
+        <a href="#portals" class="nav-link" data-track-click="nav-portals">The 5 Portals</a>
+        <a href="#features" class="nav-link" data-track-click="nav-features">Features</a>
+        <a href="#integrations" class="nav-link" data-track-click="nav-integrations">Integrations</a>
+        <a href="#compliance" class="nav-link" data-track-click="nav-compliance">Compliance</a>
       </nav>
       
       <div class="nav-actions">
-        <button class="btn btn-primary trigger-contact">Book a Demo</button>
-        <button class="mobile-menu-toggle" id="mobile-toggle" aria-label="Toggle Menu">
+        <button class="btn btn-primary trigger-contact" data-track-click="nav-book-demo">Book a Demo</button>
+        <button class="mobile-menu-toggle" id="mobile-toggle" aria-label="Toggle Menu" data-track-click="mobile-toggle">
           <i data-lucide="menu"></i>
         </button>
       </div>
@@ -75,16 +75,16 @@
   <!-- Mobile Nav Overlay -->
   <div class="mobile-nav-overlay" id="mobile-nav">
     <div class="mobile-nav-content">
-      <a href="#portals" class="mobile-nav-link">The 5 Portals</a>
-      <a href="#features" class="mobile-nav-link">Features</a>
-      <a href="#integrations" class="mobile-nav-link">Integrations</a>
-      <a href="#compliance" class="mobile-nav-link">Compliance</a>
-      <button class="btn btn-primary trigger-contact w-full">Book a Demo</button>
+      <a href="#portals" class="mobile-nav-link" data-track-click="mobile-nav-portals">The 5 Portals</a>
+      <a href="#features" class="mobile-nav-link" data-track-click="mobile-nav-features">Features</a>
+      <a href="#integrations" class="mobile-nav-link" data-track-click="mobile-nav-integrations">Integrations</a>
+      <a href="#compliance" class="mobile-nav-link" data-track-click="mobile-nav-compliance">Compliance</a>
+      <button class="btn btn-primary trigger-contact w-full" data-track-click="mobile-book-demo">Book a Demo</button>
     </div>
   </div>
 
   <!-- Hero Section -->
-  <section class="hero-section">
+  <section class="hero-section" data-track="hero">
     <div class="grid-glow-background"></div>
     <div class="hero-container">
       <div class="hero-tag">
@@ -101,14 +101,14 @@
       </p>
       
       <div class="hero-ctas">
-        <button class="btn btn-primary btn-lg trigger-contact">Request a Demo</button>
-        <a href="#portals" class="btn btn-secondary btn-lg">Explore the 5 Portals</a>
+        <button class="btn btn-primary btn-lg trigger-contact" data-track-click="hero-request-demo">Request a Demo</button>
+        <a href="#portals" class="btn btn-secondary btn-lg" data-track-click="hero-explore-portals">Explore the 5 Portals</a>
       </div>
     </div>
   </section>
 
   <!-- Interactive Portals Showcase Section -->
-  <section id="portals" class="portals-section">
+  <section id="portals" class="portals-section" data-track="portals">
     <div class="section-container">
       <div class="section-header">
         <h2 class="section-title">Five Portals. One Ecosystem.</h2>
@@ -119,23 +119,23 @@
       
       <!-- Tab Selectors -->
       <div class="portal-tabs" id="portal-tabs-container">
-        <button class="portal-tab-btn active" data-portal="dispatch">
+        <button class="portal-tab-btn active" data-portal="dispatch" data-track-click="tab-admin-dispatch">
           <i data-lucide="monitor"></i>
           <span>Admin Dispatch</span>
         </button>
-        <button class="portal-tab-btn" data-portal="driver">
+        <button class="portal-tab-btn" data-portal="driver" data-track-click="tab-driver-app">
           <i data-lucide="smartphone"></i>
           <span>Driver App</span>
         </button>
-        <button class="portal-tab-btn" data-portal="subcontractor">
+        <button class="portal-tab-btn" data-portal="subcontractor" data-track-click="tab-subcontractor-portal">
           <i data-lucide="users"></i>
           <span>Subcontractor Portal</span>
         </button>
-        <button class="portal-tab-btn" data-portal="client">
+        <button class="portal-tab-btn" data-portal="client" data-track-click="tab-client-portal">
           <i data-lucide="building"></i>
           <span>Client Portal</span>
         </button>
-        <button class="portal-tab-btn" data-portal="compliance">
+        <button class="portal-tab-btn" data-portal="compliance" data-track-click="tab-compliance-crm">
           <i data-lucide="shield-check"></i>
           <span>Compliance & CRM</span>
         </button>
@@ -166,7 +166,7 @@
   </section>
 
   <!-- Key Differentiators / Features Grid -->
-  <section id="features" class="features-section">
+  <section id="features" class="features-section" data-track="features">
     <div class="section-container">
       <div class="section-header">
         <h2 class="section-title">Engineered for Bulk Logistics</h2>
@@ -246,7 +246,7 @@
   </section>
 
   <!-- Integrations Section -->
-  <section id="integrations" class="integrations-section">
+  <section id="integrations" class="integrations-section" data-track="integrations">
     <div class="section-container">
       <div class="section-header">
         <h2 class="section-title">Built on Infrastructure You Trust</h2>
@@ -288,7 +288,7 @@
   </section>
 
   <!-- Compliance Highlight / AU-NZ Section -->
-  <section id="compliance" class="compliance-section">
+  <section id="compliance" class="compliance-section" data-track="compliance">
     <div class="section-container">
       <div class="compliance-wrapper">
         <div class="compliance-info">
@@ -343,22 +343,22 @@
   </section>
 
   <!-- CTA Section -->
-  <section class="final-cta-section">
+  <section class="final-cta-section" data-track="final-cta">
     <div class="grid-glow-background"></div>
     <div class="section-container">
       <h2 class="cta-title">Upgrade Your Haulage Operations</h2>
       <p class="cta-desc">
         Take control of your owned and subcontracted fleets, lock in your contract rates, and sync finances automatically.
       </p>
-      <button class="btn btn-primary btn-lg trigger-contact">Request a Demo</button>
+      <button class="btn btn-primary btn-lg trigger-contact" data-track-click="cta-request-demo">Request a Demo</button>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="main-footer">
+  <footer class="main-footer" data-track="footer">
     <div class="section-container footer-grid">
       <div class="footer-brand">
-        <a href="#" class="logo-link">
+        <a href="#" class="logo-link" data-track-click="footer-logo">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="nav-logo-svg">
             <path d="M 20 15 H 35 L 45 25 V 75 L 35 85 H 20 Z" fill="currentColor" />
             <path d="M 80 15 H 65 L 55 25 V 75 L 65 85 H 80 Z" fill="currentColor" />
@@ -374,13 +374,13 @@
       </div>
       <div class="footer-links-group">
         <h4>Product</h4>
-        <a href="#portals">The 5 Portals</a>
-        <a href="#features">Features</a>
-        <a href="#compliance">Compliance</a>
+        <a href="#portals" data-track-click="footer-portals">The 5 Portals</a>
+        <a href="#features" data-track-click="footer-features">Features</a>
+        <a href="#compliance" data-track-click="footer-compliance">Compliance</a>
       </div>
       <div class="footer-links-group">
         <h4>Support</h4>
-        <a href="mailto:admin@haulageops.com">admin@haulageops.com</a>
+        <a href="mailto:admin@haulageops.com" data-track-click="footer-email">admin@haulageops.com</a>
         <span class="footer-email-desc">Direct line for inquiries & demo booking</span>
       </div>
     </div>
@@ -436,7 +436,7 @@
             <textarea id="client-message" name="message" rows="4" placeholder="Tell us about your operations..."></textarea>
           </div>
           
-          <button type="submit" class="btn btn-primary w-full btn-lg">
+          <button type="submit" class="btn btn-primary w-full btn-lg" data-track-click="submit-contact-inquiry">
             <span>Send Email Request</span>
             <i data-lucide="send"></i>
           </button>
@@ -444,7 +444,7 @@
         
         <div class="drawer-footer-contacts">
           <span class="label">Or email us directly at:</span>
-          <a href="mailto:admin@haulageops.com" class="direct-email-link">
+          <a href="mailto:admin@haulageops.com" class="direct-email-link" data-track-click="drawer-email-direct">
             <i data-lucide="mail"></i>
             <span>admin@haulageops.com</span>
           </a>
@@ -454,5 +454,6 @@
   </div>
 
   <script src="script.js"></script>
+  <script src="tracker.js"></script>
 </body>
 </html>

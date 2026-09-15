@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Geist, Geist_Mono, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
@@ -61,6 +62,7 @@ export default function RootLayout({
       >
         {children}
         <Toaster />
+        <Script src="/tracker.js" strategy="afterInteractive" />
       </body>
     </html>
   );
