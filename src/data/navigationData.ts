@@ -274,7 +274,10 @@ export const footerLinkGroups: FooterLinkGroup[] = [
 
 export const brandInfo = {
   name: "HaulageOps",
-  logoUrl: "/HaulageOps Logo-3.png",
+  logoUrl: "/HaulageOps_Wordmark_Black.png",
+  wordmarkUrl: "/HaulageOps_Wordmark_Black.png",
+  iconUrl: "/HaulageOps_Icon_Black.png",
+  iconOrangeUrl: "/HaulageOps_Icon_Orange.png",
   description: "The TMS for bulk haulage operators who run subcontractors and demanding clients.",
   regionNotice: "Built in Australia for bulk haulage operators.",
 };

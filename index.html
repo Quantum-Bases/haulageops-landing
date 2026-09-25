@@ -472,6 +472,53 @@
     </div>
   </div>
 
+  <!-- ── Sticky Video Widget ── -->
+  <div id="video-widget" class="video-widget" data-track="video-widget">
+
+    <!-- Collapsed bubble -->
+    <div id="video-bubble" class="video-bubble" onclick="videoWidgetOpen()" title="Watch 90-sec Demo">
+      <div class="video-bubble-thumb">
+        <video id="video-preview" src="/HaulageOpsDemo_compressed.mp4" muted loop playsinline preload="none"></video>
+        <div class="video-bubble-overlay">
+          <div class="video-bubble-play">
+            <svg viewBox="0 0 24 24" fill="white" width="22" height="22"><polygon points="5,3 19,12 5,21"/></svg>
+          </div>
+          <span class="video-bubble-label">Watch Demo</span>
+        </div>
+      </div>
+      <div class="video-bubble-badge">90s</div>
+    </div>
+
+    <!-- Expanded player -->
+    <div id="video-player-panel" class="video-player-panel">
+      <div class="video-panel-header">
+        <div class="video-panel-title">
+          <div class="video-panel-dot"></div>
+          <span>HaulageOps — Product Demo</span>
+        </div>
+        <div class="video-panel-controls">
+          <button class="video-ctrl-btn" onclick="videoWidgetMinimize()" title="Minimise">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="15" height="15"><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </button>
+          <button class="video-ctrl-btn" onclick="videoWidgetExpand()" title="Full screen" id="video-expand-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="15" height="15"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg>
+          </button>
+          <button class="video-ctrl-btn video-ctrl-close" onclick="videoWidgetClose()" title="Close">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="15" height="15"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          </button>
+        </div>
+      </div>
+      <div class="video-panel-body">
+        <video id="video-main" class="video-main" src="/HaulageOpsDemo_compressed.mp4" controls preload="metadata" playsinline></video>
+      </div>
+      <div class="video-panel-footer">
+        <span>Full platform walkthrough &nbsp;·&nbsp; 1 min 30 sec</span>
+        <button class="btn btn-primary btn-sm trigger-contact" data-track-click="video-widget-request-demo">Request Demo</button>
+      </div>
+    </div>
+
+  </div>
+
   <script src="script.js"></script>
   <script src="tracker.js"></script>
 </body>

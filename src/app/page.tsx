@@ -1,5 +1,6 @@
 import { Nav } from "@/components/landing/nav";
 import { Hero } from "@/components/landing/hero";
+import { VideoWidget } from "@/components/landing/video-widget";
 import { PainSection } from "@/components/landing/pain-section";
 import { ValuePillars } from "@/components/landing/value-pillars";
 import { PlatformArchitecture } from "@/components/landing/platform-architecture";
@@ -67,6 +68,7 @@ export default function Home() {
         <FinalCTA />
       </main>
       <Footer />
+      <VideoWidget />
     </div>
   );
 }

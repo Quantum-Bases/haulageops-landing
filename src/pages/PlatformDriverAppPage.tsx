@@ -211,41 +211,74 @@ export function PlatformDriverAppPage() {
       {/* BUILT FOR BULK HAULAGE */}
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Built for Bulk Haulage</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
-            Most driver apps are built for parcel fleets. This one is built for bulk haulage.
-          </h2>
-          <p className="mt-4 text-[#475569] max-w-3xl leading-relaxed">
-            Parcel delivery apps are built around address lists, barcode scans and route optimisation for metro areas. Bulk haulage looks nothing like that. Your drivers operate between quarries, earthworks sites, construction yards and rural locations — often without reliable mobile signal. The material being moved, the loading instructions, the site contact and the POD expectations are different from a courier run.
-          </p>
-          <p className="mt-3 text-[#475569] max-w-3xl leading-relaxed">
-            The HaulageOps driver app is built around the bulk haulage job lifecycle: receive the job, navigate to the pickup, confirm loading, transit to the delivery site, capture proof of delivery with photo and customer signature, and record breaks. Every step is designed for a driver sitting in a cab, often on rough ground, with a phone rather than a purpose-built device.
-          </p>
-          <div className="mt-10 grid md:grid-cols-2 gap-8 items-start">
-            <div className="bg-[#F8FAFC] rounded-2xl p-8 border border-[#E2E8F0]">
-              <h3 className="text-xl font-bold text-[#0F172A] mb-5">What the driver app does</h3>
-              <ul className="space-y-3">
-                {[
-                  "Receives job assignments with push notification via Firebase FCM",
-                  "Displays full job details: material, pickup site, delivery site, instructions, scheduled time",
-                  "Six-stage status update workflow driven by the driver",
-                  "Transmits live GPS position to the dispatch board",
-                  "POD capture: photograph, document upload, customer signature",
-                  "Break and rest period recording for fatigue management compliance",
-                  "Driver availability scheduling — set available hours for the week",
-                  "Works offline — queues updates and syncs on reconnect",
-                  "Multiple jobs visible — driver can see their full day's work",
-                ].map((item) => (
-                  <li key={item} className="flex items-start gap-2 text-sm text-[#334155]">
-                    <CheckCircle className="h-4 w-4 text-[#E8652B] shrink-0 mt-0.5" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
+          {/* Row 1: Centered title */}
+          <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+            <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-[#E8652B] bg-[#FFF0E6] mb-3">
+              Built for Bulk Haulage
+            </span>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0F172A] leading-tight">
+              Most driver apps are built for parcel fleets. This one is built for bulk haulage.
+            </h2>
+          </div>
+
+          {/* Row 2: 2 Columns */}
+          <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
+            {/* Column 1: Intro + Lifecycle paragraph + What the driver app does card */}
+            <div className="flex flex-col gap-6">
+              <p className="text-[#475569] leading-relaxed">
+                Parcel delivery apps are built around address lists, barcode scans and route optimisation for metro areas. Bulk haulage looks nothing like that. Your drivers operate between quarries, earthworks sites, construction yards and rural locations — often without reliable mobile signal. The material being moved, the loading instructions, the site contact and the POD expectations are different from a courier run.
+              </p>
+              <p className="text-[#475569] leading-relaxed">
+                The HaulageOps driver app is built around the bulk haulage job lifecycle: receive the job, navigate to the pickup, confirm loading, transit to the delivery site, capture proof of delivery with photo and customer signature, and record breaks. Every step is designed for a driver sitting in a cab, often on rough ground, with a phone rather than a purpose-built device.
+              </p>
+              <div className="bg-[#F8FAFC] rounded-2xl p-8 border border-[#E2E8F0]">
+                <h3 className="text-xl font-bold text-[#0F172A] mb-5">What the driver app does</h3>
+                <ul className="space-y-3">
+                  {[
+                    "Receives job assignments with push notification via Firebase FCM",
+                    "Displays full job details: material, pickup site, delivery site, instructions, scheduled time",
+                    "Six-stage status update workflow driven by the driver",
+                    "Transmits live GPS position to the dispatch board",
+                    "POD capture: photograph, document upload, customer signature",
+                    "Break and rest period recording for fatigue management compliance",
+                    "Driver availability scheduling — set available hours for the week",
+                    "Works offline — queues updates and syncs on reconnect",
+                    "Multiple jobs visible — driver can see their full day's work",
+                  ].map((item) => (
+                    <li key={item} className="flex items-start gap-2 text-sm text-[#334155]">
+                      <CheckCircle className="h-4 w-4 text-[#E8652B] shrink-0 mt-0.5" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
-            <div className="rounded-2xl border border-[#E2E8F0] bg-[#0D1525] p-8 text-[#94A3B8] text-sm font-mono leading-relaxed">
-              <div className="text-[#E8652B] font-bold mb-2 text-xs uppercase tracking-widest">HaulageOps Driver App — Job View</div>
-              <p>HaulageOps driver app on iPhone showing a job detail screen. Top section shows job ID, material type (Type 1 Crushed Limestone), pickup site (Hanson Quarry – Gate 3), delivery site (A14 Project Site – Bay 7), and scheduled time. Middle section shows the six status buttons: En Route (currently active, highlighted orange), At Pickup, Loading, In Transit, At Delivery, Complete. Below is a break recording section showing "Start Break" button and previous break entries with duration. Bottom section shows a "Capture POD" button leading to camera, document upload, and signature pad. The interface uses large tap targets suitable for gloved hands.</p>
+
+            {/* Column 2: Mobile Mockup without any outer div border or bg */}
+            <div className="flex items-center justify-center">
+              <div className="relative w-full max-w-[290px]">
+                {/* Phone Frame */}
+                <div
+                  className="relative rounded-[2.5rem] overflow-hidden shadow-2xl border-[7px] border-[#1A1A1A] bg-[#1A1A1A]"
+                  style={{
+                    boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.25)",
+                  }}
+                >
+                  {/* Notch / Speaker bar */}
+                  <div
+                    className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-4 rounded-b-xl z-20"
+                    style={{ background: "#1A1A1A" }}
+                  />
+
+                  {/* Real screenshot */}
+                  <img
+                    src="/driver-app-job-view.png"
+                    alt="HaulageOps Driver App — Job View"
+                    className="w-full block"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>

@@ -626,3 +626,76 @@ document.addEventListener('DOMContentLoaded', () => {
   // Initial load view
   renderPortalView('dispatch');
 });
+
+/* ==========================================================================
+   Sticky Video Widget
+   ========================================================================== */
+
+(function () {
+  const widget   = document.getElementById('video-widget');
+  const panel    = document.getElementById('video-player-panel');
+  const bubble   = document.getElementById('video-bubble');
+  const mainVid  = document.getElementById('video-main');
+  const prevVid  = document.getElementById('video-preview');
+
+  if (!widget || !panel || !mainVid) return;
+
+  let isExpanded = false;
+
+  /* Hover on bubble — play silent preview */
+  if (bubble && prevVid) {
+    bubble.addEventListener('mouseenter', () => {
+      prevVid.play().catch(() => {});
+    });
+    bubble.addEventListener('mouseleave', () => {
+      prevVid.pause();
+      prevVid.currentTime = 0;
+    });
+  }
+
+  window.videoWidgetOpen = function () {
+    widget.classList.add('vw-open');
+    panel.classList.add('vw-visible');
+    mainVid.play().catch(() => {});
+  };
+
+  window.videoWidgetClose = function () {
+    mainVid.pause();
+    mainVid.currentTime = 0;
+    panel.classList.remove('vw-visible', 'vw-expanded');
+    widget.classList.remove('vw-open');
+    isExpanded = false;
+  };
+
+  window.videoWidgetMinimize = function () {
+    mainVid.pause();
+    panel.classList.remove('vw-visible', 'vw-expanded');
+    widget.classList.remove('vw-open');
+    isExpanded = false;
+  };
+
+  window.videoWidgetExpand = function () {
+    isExpanded = !isExpanded;
+    panel.classList.toggle('vw-expanded', isExpanded);
+    const btn = document.getElementById('video-expand-btn');
+    if (btn) {
+      btn.title = isExpanded ? 'Compact' : 'Full screen';
+      btn.style.color = isExpanded ? '#ffffff' : '';
+    }
+  };
+
+  /* Close panel when clicking outside */
+  document.addEventListener('click', (e) => {
+    if (
+      widget.classList.contains('vw-open') &&
+      !widget.contains(e.target)
+    ) {
+      videoWidgetMinimize();
+    }
+  });
+
+  /* Pause video when tab is hidden */
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) mainVid.pause();
+  });
+})();

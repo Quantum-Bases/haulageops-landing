@@ -1,24 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
-import {
-  LayoutDashboard,
-  Eye,
-  FileCheck,
-  ArrowRight,
-  Users,
-  MapPin,
-  Bell,
-  Smartphone,
-  FileText,
-  DollarSign,
-  ShieldCheck,
-} from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 const pillars = [
   {
     number: "01",
-    icon: LayoutDashboard,
     title: "Control every job across drivers, subcontractors, and clients",
     wedgeLine: "Delegate the job, keep the visibility.",
     description:
@@ -35,7 +22,6 @@ const pillars = [
   },
   {
     number: "02",
-    icon: Eye,
     title: "Every party sees it live, dispatch to POD",
     wedgeLine: "They log in. They don't ring in.",
     description:
@@ -51,7 +37,6 @@ const pillars = [
   },
   {
     number: "03",
-    icon: FileCheck,
     title: "Turn haulage workflows into auditable, billable, compliance-ready operations",
     wedgeLine: "The docket is already there when you invoice.",
     description:
@@ -70,21 +55,42 @@ const pillars = [
 
 export function ValuePillars() {
   return (
-    <section className="py-20 sm:py-28 bg-white">
+    <section className="pb-20 sm:pb-28" style={{ background: "#FEFBF9" }}>
       <div className="mx-auto max-w-7xl xl:max-w-[80rem] 2xl:max-w-[105rem] px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.5 }}
-          className="max-w-3xl mx-auto text-center mb-20"
+          className="text-center max-w-3xl mx-auto mb-14 sm:mb-16"
         >
-          <p className="text-sm font-semibold text-[#E8652B] uppercase tracking-wider mb-3">
-            The solution
-          </p>
-          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-foreground">
+          <div
+            className="inline-flex items-center justify-center gap-2 px-3.5 py-1.5 rounded-full mb-4 border"
+            style={{ background: "#FAEDE7", borderColor: "#E8D5C4" }}
+          >
+            <span
+              className="w-2 h-2 rounded-full"
+              style={{ background: "#D86D3C" }}
+            />
+            <p
+              className="text-xs font-bold uppercase tracking-widest"
+              style={{ color: "#D86D3C" }}
+            >
+              The solution
+            </p>
+          </div>
+          <h2
+            className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight"
+            style={{ color: "#202020" }}
+          >
             One platform. Every party on the job.
           </h2>
+          <p
+            className="mt-5 text-base sm:text-lg leading-relaxed"
+            style={{ color: "#5C5047" }}
+          >
+            Connect dispatchers, owned drivers, subcontractors, and clients on a single shared operational record with real-time tracking, digital dockets, and automated billing.
+          </p>
         </motion.div>
 
         <div className="space-y-20">
@@ -97,51 +103,96 @@ export function ValuePillars() {
               transition={{ duration: 0.5 }}
             >
               <div
-                className={`grid lg:grid-cols-2 gap-12 lg:gap-16 items-start ${
-                  idx % 2 === 1 ? "lg:direction-rtl" : ""
-                }`}
+                className={`grid lg:grid-cols-2 gap-10 lg:gap-16 items-start`}
               >
+                {/* Text side */}
                 <div className={idx % 2 === 1 ? "lg:order-2" : ""}>
-                  <div className="flex items-center gap-3 mb-4">
-                    <span className="text-4xl font-bold text-[#E8652B]/20">
+                  <div className="mb-5">
+                    <span
+                      className="text-7xl font-black tabular-nums leading-none select-none"
+                      style={{ color: "#F2E8E0" }}
+                    >
                       {pillar.number}
                     </span>
                   </div>
-                  <h3 className="text-2xl sm:text-3xl font-bold tracking-tight text-foreground leading-tight">
+                  <h3
+                    className="text-2xl sm:text-3xl font-bold tracking-tight leading-tight"
+                    style={{ color: "#202020" }}
+                  >
                     {pillar.title}
                   </h3>
-                  <p className="mt-4 text-muted-foreground leading-relaxed text-lg">
+                  <p
+                    className="mt-4 leading-relaxed text-base"
+                    style={{ color: "#5C5047" }}
+                  >
                     {pillar.description}
                   </p>
-                  <div className="mt-6 flex items-center gap-2 bg-[#E8652B]/5 border border-[#E8652B]/15 rounded-lg px-4 py-3">
-                    <ArrowRight className="h-4 w-4 text-[#E8652B] shrink-0" />
-                    <span className="text-sm font-semibold text-[#E8652B]">
+                  <div
+                    className="mt-5 flex items-center gap-2.5 rounded-xl px-4 py-3 border"
+                    style={{
+                      background: "#FAEDE7",
+                      borderColor: "#E8BEAA",
+                    }}
+                  >
+                    <ArrowRight
+                      className="h-4 w-4 shrink-0"
+                      style={{ color: "#D86D3C" }}
+                    />
+                    <span
+                      className="text-sm font-bold"
+                      style={{ color: "#A8552E" }}
+                    >
                       {pillar.wedgeLine}
                     </span>
                   </div>
                 </div>
 
+                {/* Feature panel */}
                 <div className={idx % 2 === 1 ? "lg:order-1" : ""}>
-                  <div className="bg-muted/40 rounded-xl border border-border p-6 sm:p-8">
-                    <h4 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-5">
+                  <div
+                    className="rounded-2xl border p-6 sm:p-8"
+                    style={{
+                      background: "#F7F2EE",
+                      borderColor: "#E8D5C4",
+                    }}
+                  >
+                    <h4
+                      className="text-xs font-bold uppercase tracking-widest mb-5"
+                      style={{ color: "#8A7060" }}
+                    >
                       What this looks like
                     </h4>
                     <ul className="space-y-3.5">
                       {pillar.features.map((feature) => (
                         <li key={feature} className="flex items-start gap-3">
-                          <div className="shrink-0 mt-1 w-5 h-5 rounded-full bg-[#E8652B]/10 flex items-center justify-center">
-                            <div className="w-2 h-2 rounded-full bg-[#E8652B]" />
+                          <div
+                            className="shrink-0 mt-1.5 w-5 h-5 rounded-full flex items-center justify-center"
+                            style={{ background: "#FAEDE7" }}
+                          >
+                            <div
+                              className="w-2 h-2 rounded-full"
+                              style={{ background: "#D86D3C" }}
+                            />
                           </div>
-                          <span className="text-foreground leading-relaxed">
+                          <span
+                            className="text-sm leading-relaxed"
+                            style={{ color: "#202020" }}
+                          >
                             {feature}
                           </span>
                         </li>
                       ))}
                     </ul>
-                    <div className="mt-6 pt-5 border-t border-border">
-                      <p className="text-sm text-muted-foreground">
-                        <span className="font-semibold text-foreground">
-                          Demo moment: 
+                    <div
+                      className="mt-6 pt-5 border-t"
+                      style={{ borderColor: "#E8D5C4" }}
+                    >
+                      <p className="text-sm" style={{ color: "#5C5047" }}>
+                        <span
+                          className="font-bold"
+                          style={{ color: "#202020" }}
+                        >
+                          Demo moment:{" "}
                         </span>
                         {pillar.demoMoment}
                       </p>

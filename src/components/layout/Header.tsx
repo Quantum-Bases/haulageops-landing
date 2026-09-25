@@ -107,11 +107,7 @@ export function Header({ onDemoClick, onLoginClick }: HeaderProps) {
 
           {/* Header Action Buttons */}
           <div className="hidden lg:flex items-center gap-3">
-            <a
-              href="https://calendly.com/admin-haulageops/30min"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <Link href="/how-it-works">
               <Button
                 variant="outline"
                 size="sm"
@@ -119,7 +115,7 @@ export function Header({ onDemoClick, onLoginClick }: HeaderProps) {
               >
                 See how it works
               </Button>
-            </a>
+            </Link>
             <a
               href="https://calendly.com/admin-haulageops/30min"
               target="_blank"
@@ -293,16 +289,14 @@ export function Header({ onDemoClick, onLoginClick }: HeaderProps) {
               })}
 
               <div className="pt-4 border-t border-[#E5E7EB] flex flex-col gap-2.5">
-                <a
-                  href="https://calendly.com/admin-haulageops/30min"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  href="/how-it-works"
                   onClick={() => setMobileOpen(false)}
                 >
                   <Button variant="outline" size="sm" className="w-full">
                     See how it works
                   </Button>
-                </a>
+                </Link>
                 <a
                   href="https://calendly.com/admin-haulageops/30min"
                   target="_blank"

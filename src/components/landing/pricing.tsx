@@ -2,8 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { CheckCircle2, ArrowRight, Lock, Truck } from "lucide-react";
+import { CheckCircle2, ArrowRight, Lock } from "lucide-react";
 
 const plans = [
   {
@@ -21,7 +20,7 @@ const plans = [
       "Email support",
     ],
     cta: "Book a demo",
-    primary: false,
+    highlight: true,
   },
   {
     name: "Setup",
@@ -36,13 +35,13 @@ const plans = [
       "Team training",
     ],
     cta: "Included with signup",
-    primary: false,
-    isSetup: true,
+    highlight: false,
   },
   {
     name: "Enterprise",
     price: "From ~$6,500",
-    description: "Scoped to your operation. Multi-depot, complex migration, custom integrations.",
+    description:
+      "Scoped to your operation. Multi-depot, complex migration, custom integrations.",
     features: [
       "Everything in Standard",
       "Multi-depot support",
@@ -52,75 +51,135 @@ const plans = [
       "Priority support",
     ],
     cta: "Contact us",
-    primary: false,
+    highlight: false,
   },
 ];
 
 export function Pricing() {
   return (
-    <section id="pricing" className="py-20 sm:py-28 bg-muted/40">
+    <section id="pricing" className="py-20 sm:py-28" style={{ background: "#F7F2EE" }}>
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.5 }}
-          className="max-w-3xl mx-auto text-center mb-16"
+          className="text-center max-w-3xl mx-auto mb-14 sm:mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-foreground">
+          <div
+            className="inline-flex items-center justify-center gap-2 px-3.5 py-1.5 rounded-full mb-4 border"
+            style={{ background: "#FAEDE7", borderColor: "#E8D5C4" }}
+          >
+            <span
+              className="w-2 h-2 rounded-full"
+              style={{ background: "#D86D3C" }}
+            />
+            <p
+              className="text-xs font-bold uppercase tracking-widest"
+              style={{ color: "#D86D3C" }}
+            >
+              Pricing
+            </p>
+          </div>
+          <h2
+            className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight"
+            style={{ color: "#202020" }}
+          >
             Priced per truck. Free for every subbie and client you invite.
           </h2>
-          <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
+          <p
+            className="mt-5 text-base sm:text-lg leading-relaxed"
+            style={{ color: "#5C5047" }}
+          >
             External parties — subcontractors and clients — pay nothing. This
             is a deliberate differentiation, not just a pricing mechanic.
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-          {plans.map((plan) => (
+        <div className="grid md:grid-cols-3 gap-5 max-w-5xl">
+          {plans.map((plan, idx) => (
             <motion.div
               key={plan.name}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.5 }}
-              className={`rounded-xl border p-6 sm:p-8 flex flex-col ${
-                plan.isSetup
-                  ? "bg-white border-border"
-                  : "bg-white border-border hover:shadow-lg transition-shadow duration-300"
+              transition={{ duration: 0.5, delay: idx * 0.08 }}
+              className={`rounded-2xl border-2 p-6 sm:p-8 flex flex-col transition-all duration-300 hover:shadow-lg ${
+                plan.highlight ? "" : ""
               }`}
+              style={{
+                background: "#FEFBF9",
+                borderColor: plan.highlight ? "#D86D3C" : "#E8D5C4",
+              }}
             >
-              {plan.name === "Standard" && (
-                <Badge className="self-start mb-4 bg-[#E8652B]/10 text-[#E8652B] border-[#E8652B]/20 hover:bg-[#E8652B]/15">
+              {plan.highlight && (
+                <span
+                  className="self-start mb-4 text-xs font-bold uppercase tracking-widest rounded-full px-3 py-1 border"
+                  style={{
+                    background: "#FAEDE7",
+                    borderColor: "#E8BEAA",
+                    color: "#D86D3C",
+                  }}
+                >
                   Core plan
-                </Badge>
+                </span>
               )}
-              <h3 className="text-xl font-bold text-foreground">{plan.name}</h3>
-              <p className="mt-1 text-2xl font-bold text-foreground">{plan.price}</p>
-              <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
+              <h3
+                className="text-lg font-bold"
+                style={{ color: "#202020" }}
+              >
+                {plan.name}
+              </h3>
+              <p
+                className="mt-1 text-2xl font-black"
+                style={{ color: "#202020" }}
+              >
+                {plan.price}
+              </p>
+              <p
+                className="mt-3 text-sm leading-relaxed"
+                style={{ color: "#5C5047" }}
+              >
                 {plan.description}
               </p>
               <ul className="mt-6 space-y-3 flex-1">
                 {plan.features.map((feature) => (
                   <li key={feature} className="flex items-start gap-2.5">
-                    <CheckCircle2 className="h-4 w-4 text-[#E8652B] shrink-0 mt-0.5" />
-                    <span className="text-sm text-foreground">{feature}</span>
+                    <CheckCircle2
+                      className="h-4 w-4 shrink-0 mt-0.5"
+                      style={{ color: "#D86D3C" }}
+                    />
+                    <span className="text-sm" style={{ color: "#202020" }}>
+                      {feature}
+                    </span>
                   </li>
                 ))}
               </ul>
-              <Button
-                className={`mt-8 w-full ${
-                  plan.name === "Standard"
-                    ? "bg-[#E8652B] hover:bg-[#D05520] text-white font-semibold"
-                    : "bg-foreground hover:bg-foreground/90 text-background font-medium"
+              <button
+                className={`mt-8 w-full py-2.5 px-4 rounded-xl text-sm font-bold transition-all duration-200 flex items-center justify-center gap-2 ${
+                  plan.highlight
+                    ? "text-white"
+                    : "border"
                 }`}
-                variant={plan.name === "Standard" ? "default" : "default"}
+                style={
+                  plan.highlight
+                    ? { background: "#D86D3C" }
+                    : { borderColor: "#D86D3C", color: "#D86D3C", background: "transparent" }
+                }
+                onMouseEnter={(e) => {
+                  if (plan.highlight) {
+                    (e.currentTarget as HTMLButtonElement).style.background = "#A8552E";
+                  }
+                }}
+                onMouseLeave={(e) => {
+                  if (plan.highlight) {
+                    (e.currentTarget as HTMLButtonElement).style.background = "#D86D3C";
+                  }
+                }}
               >
-                {plan.name === "Standard" && (
-                  <ArrowRight className="mr-2 h-4 w-4" />
-                )}
+                {plan.highlight && <ArrowRight className="h-4 w-4" />}
                 {plan.cta}
-              </Button>
+              </button>
             </motion.div>
           ))}
         </div>
@@ -131,21 +190,39 @@ export function Pricing() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="mt-12 max-w-2xl mx-auto"
+          className="mt-10 max-w-2xl"
         >
-          <div className="bg-[#0B1120] rounded-xl p-6 sm:p-8 text-white text-center">
-            <Badge className="mb-4 bg-[#E8652B]/20 text-[#E8652B] border-[#E8652B]/30 hover:bg-[#E8652B]/25">
-              <Lock className="h-3 w-3 mr-1.5" />
-              Founding customer tier
-            </Badge>
-            <h3 className="text-xl font-bold mb-2">
-              A$5,000/year or A$500/month
-            </h3>
-            <p className="text-sm text-white/60 leading-relaxed">
-              Up to 50 vehicles, 24-month price lock, three requested
-              improvements assessed for priority each quarter. Available to
-              early adopters.
-            </p>
+          <div
+            className="rounded-2xl border-2 p-6 sm:p-8 relative overflow-hidden"
+            style={{ background: "#FAEDE7", borderColor: "#D86D3C" }}
+          >
+            {/* Decorative */}
+            <div
+              className="absolute -right-6 -top-6 w-28 h-28 rounded-full opacity-20"
+              style={{ background: "#D86D3C" }}
+            />
+            <div className="relative">
+              <div className="flex items-center gap-2 mb-3">
+                <Lock className="h-4 w-4" style={{ color: "#D86D3C" }} />
+                <span
+                  className="text-xs font-bold uppercase tracking-widest"
+                  style={{ color: "#D86D3C" }}
+                >
+                  Founding customer tier
+                </span>
+              </div>
+              <h3
+                className="text-xl font-black mb-2"
+                style={{ color: "#202020" }}
+              >
+                A$5,000/year or A$500/month
+              </h3>
+              <p className="text-sm leading-relaxed" style={{ color: "#5C5047" }}>
+                Up to 50 vehicles, 24-month price lock, three requested
+                improvements assessed for priority each quarter. Available to
+                early adopters.
+              </p>
+            </div>
           </div>
         </motion.div>
       </div>
