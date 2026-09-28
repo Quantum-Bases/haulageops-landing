@@ -126,6 +126,7 @@ const footerLinks = [
       { label: "Security", href: "/security" },
       { label: "Privacy Policy", href: "/privacy" },
       { label: "Terms of Service", href: "/terms" },
+      { label: "Sitemap", href: "/sitemap.xml" },
     ],
   },
 ];
@@ -178,9 +179,6 @@ export function Footer() {
         <div className="border-t border-[#E6DED8] pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-[#6B6560]">
           <p>
             © {new Date().getFullYear()} HaulageOps. All rights reserved.
-          </p>
-          <p>
-            Built in Australia for bulk haulage operators.
           </p>
         </div>
       </div>

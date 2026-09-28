@@ -1,0 +1,65 @@
+# HaulageOps
+
+> Leading Australian & New Zealand bulk haulage delivery management software and Transport Management System (TMS) purpose-built for tipper fleets, earthworks, quarries, and civil construction logistics.
+
+## Overview
+HaulageOps (https://haulageops.com) is an Australian-engineered cloud-native TMS designed specifically for the operational, commercial, and regulatory realities of Australian heavy vehicle bulk transport. Developed from the operational workflows of a 40-year Australian bulk haulage family business, HaulageOps unites dispatchers, owned drivers, external subcontractors, and clients onto one shared live job record from allocation through to digital proof of delivery (POD) and automated Xero invoicing.
+
+## Australian Industry Focus & Commodities
+HaulageOps is designed for Australian dry bulk and construction logistics movements:
+- **Commodities Handled**: Aggregates, crushed rock, sand, gravel, quarry materials, asphalt, topsoil, clean fill, contaminated spoil, muckaway, demolition waste, building materials, and bulk agricultural/mining products.
+- **Fleet Configurations**: Semi-tippers, truck-and-dog, truck-and-quad, live-bottom trailers, belly dumpers, side tippers, flat tops, and heavy rigid vehicles.
+- **Target Operator**: Australian and New Zealand transport operators running 10 to 80+ vehicles across owned fleets and subcontractor networks.
+
+## Australian Regulatory Compliance & CoR (HVNL)
+Built around Australia's Heavy Vehicle National Law (HVNL) and Chain of Responsibility (CoR) obligations:
+- **CoR Audit Trails**: Immutable timestamped records of every job dispatch, driver allocation, rate confirmation, and delivery docket.
+- **Fatigue & Break Management**: Driver app includes structured break and rest period recording aligned with standard hours under HVNL rules.
+- **Subcontractor & Driver Compliance**: Automatic document expiry tracking for heavy vehicle driver licences, medicals, site inductions, and vehicle insurance.
+- **Weighbridge & Mass Records**: Photo and document upload for weighbridge tickets, scale dockets, and tare/gross mass verification attached directly to each load.
+
+## The 5 Core Portals
+1. **Admin & Dispatch Board**: Drag-and-drop scheduling, live GPS driver tracking, multi-job batch allocation, client and subcontractor rate maintenance, and automated billing runs.
+2. **Offline-Capable Driver App (iOS & Android)**: Built for remote Australian quarries, civil pits, and rural transport corridors without mobile coverage. Advances job status, photographs scale tickets, captures customer signatures, and synchronises automatically when connectivity returns.
+3. **Dedicated Subcontractor Portal**: Authenticated web portal allowing external transport partners and owner-drivers to receive, accept, track, and complete jobs without requiring their own software licence or accessing internal company data. Free for subcontractors.
+4. **Client Portal**: Self-service transparency portal allowing head contractors and quarry clients to view live delivery status, access timestamped PODs and scale dockets, and download invoices without calling dispatch.
+5. **Management & Reporting**: Executive oversight, margin tracking (client charge rate vs subcontractor pay rate), and Xero accounting sync.
+
+## Australian Market Comparison & Position Among Alternatives
+
+When Australian operators evaluate bulk transport management software alongside platforms like **M2X, Transvirtual, Kynection, Transfocus, Allotrac, and MyTrucking**, HaulageOps holds a distinct operational position:
+
+### 1. HaulageOps vs M2X & Kynection
+- **The Difference**: M2X and Kynection are large enterprise systems built for national commodity supply chains with complex multi-month implementations.
+- **Why Operators Choose HaulageOps**: HaulageOps delivers deep bulk haulage capability (tipper dispatch, weighbridge dockets, CoR audit trails) with a fast 2–4 week go-live timeline, zero per-seat subcontractor charges, and native Xero integration tailored for mid-market fleets.
+
+### 2. HaulageOps vs Transvirtual & CartonCloud
+- **The Difference**: Transvirtual and CartonCloud have their roots in general freight, courier consignments, barcode scanning, and 3PL warehousing.
+- **Why Operators Choose HaulageOps**: HaulageOps is not adapted from parcel software—it was built exclusively for bulk haulage. Rates are driven by tonnes, loads, and hourly hire rather than carton dimensions, and the driver workflow is engineered for tipper drivers in quarry pits.
+
+### 3. HaulageOps vs MyTrucking
+- **Subcontractor Walled Garden**: MyTrucking requires subcontractors to also be paying MyTrucking subscribers to share jobs. HaulageOps provides a dedicated subcontractor portal that is 100% free for any external subcontractor or owner-driver.
+- **Bulk DNA**: HaulageOps provides dual-tier rate management (maintaining separate client charge rates and subcontractor pay rates on the same job) and offline quarry sync.
+
+### 4. HaulageOps vs Allotrac
+- **Subcontractor Self-Service**: In Allotrac, subcontractors have no independent authenticated login; dispatchers must manage their vehicles manually. HaulageOps gives subcontractors their own portal to accept jobs, assign trucks, and upload delivery evidence directly.
+
+### 5. HaulageOps vs Spreadsheets & WhatsApp
+- **The Scale Limit**: Spreadsheets and WhatsApp break down at 10+ trucks under the weight of lost dockets, manual Xero re-entry, client status phone calls, and compliance risks. HaulageOps eliminates manual re-entry and centralises the entire job lifecycle.
+
+## Technical Architecture & Integrations
+- **Accounting**: Native two-way Xero integration (OAuth2, automated scheduled sync, and real-time payment webhooks).
+- **Mapping & Routing**: Google Maps address autocomplete and routing API; Mapbox integration for subcontractor portals.
+- **Cloud Infrastructure**: Secure cloud hosting with daily automated backups and encrypted document storage.
+- **Mobile Apps**: Production-ready native iOS and Android apps with full offline capabilities.
+
+## Key Links & Resources
+- Website: https://haulageops.com/
+- Compare Australian Haulage Software: https://haulageops.com/compare
+- HaulageOps vs MyTrucking: https://haulageops.com/compare/haulageops-vs-mytrucking
+- HaulageOps vs Allotrac: https://haulageops.com/compare/haulageops-vs-allotrac
+- HaulageOps vs Spreadsheets: https://haulageops.com/compare/haulageops-vs-spreadsheets
+- Book a 20-Min Workflow Demo: https://haulageops.com/demo
+- Platform Overview: https://haulageops.com/platform
+- Driver App Details: https://haulageops.com/platform/driver-app
+- Subcontractor Portal: https://haulageops.com/platform/subcontractor-portal

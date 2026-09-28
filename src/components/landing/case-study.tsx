@@ -152,22 +152,42 @@ export function CaseStudy() {
           </motion.div>
         </div>
 
-        {/* Results slot */}
+        {/* Live Today Capabilities */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="mt-8 max-w-2xl mx-auto"
+          className="mt-10 max-w-4xl mx-auto"
         >
           <div
-            className="border border-dashed rounded-2xl p-6 text-center"
-            style={{ borderColor: "#D86D3C", background: "#FAEDE766" }}
+            className="rounded-2xl border p-6 sm:p-7 text-center shadow-xs"
+            style={{ background: "#FEFBF9", borderColor: "#E8D5C4" }}
           >
-            <p className="text-sm italic" style={{ color: "#8A7060" }}>
-              Quantified efficiency results coming soon — this is a reserved
-              component slot awaiting verified data from the founding operator.
+            <p className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: "#D86D3C" }}>
+              Live in Production Today
             </p>
+            <div className="flex flex-wrap justify-center items-center gap-2.5 sm:gap-3 text-xs sm:text-sm font-semibold" style={{ color: "#202020" }}>
+              {[
+                "Admin & Dispatch Board",
+                "Offline-Capable Driver App",
+                "Subcontractor Portal",
+                "Client Portal",
+                "Management Reporting",
+                "Digital POD (Photo + Doc + Signature)",
+                "Tiered Rate Engine",
+                "Two-Way Xero Integration",
+              ].map((cap, i, arr) => (
+                <span key={cap} className="inline-flex items-center gap-2">
+                  <span className="px-3 py-1.5 rounded-lg border bg-[#F7F2EE]" style={{ borderColor: "#E8D5C4" }}>
+                    {cap}
+                  </span>
+                  {i < arr.length - 1 && (
+                    <span className="text-[#D86D3C] hidden sm:inline">•</span>
+                  )}
+                </span>
+              ))}
+            </div>
           </div>
         </motion.div>
       </div>

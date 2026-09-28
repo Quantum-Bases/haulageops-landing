@@ -192,7 +192,7 @@ export function ValuePillars() {
                           className="font-bold"
                           style={{ color: "#202020" }}
                         >
-                          Demo moment:{" "}
+                          In practice:{" "}
                         </span>
                         {pillar.demoMoment}
                       </p>
