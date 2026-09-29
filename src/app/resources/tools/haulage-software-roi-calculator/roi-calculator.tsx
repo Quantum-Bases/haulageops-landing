@@ -53,7 +53,7 @@ export function RoiCalculator() {
     });
   };
 
-  const field = "w-full rounded-lg border-[1.5px] border-[#D0D8DD] bg-white px-3.5 py-2.5 text-[15px] text-[#0F172A] focus:border-[#E8652B] outline-none";
+  const field = "w-full rounded-lg border-[1.5px] border-[#D0D8DD] bg-white px-3.5 py-2.5 text-[15px] text-neutral-900 focus:border-[#E8652B] outline-none";
   const hint = "mt-1 text-xs text-[#7A8A94]";
   const label = "block text-[13px] font-bold text-[#2D4250] mb-1.5";
 
@@ -61,7 +61,7 @@ export function RoiCalculator() {
     <div className="grid lg:grid-cols-2 gap-10 items-start">
       {/* FORM */}
       <div className="bg-white border border-[#E4E9EC] rounded-2xl p-8">
-        <h2 className="text-[22px] font-extrabold text-[#0F172A] mb-6">Your Operation</h2>
+        <h2 className="text-[22px] font-extrabold text-neutral-900 mb-6">Your Operation</h2>
 
         <div className="mb-5">
           <label className={label} htmlFor="trucks">Number of trucks (owned + subcontracted)</label>
@@ -98,7 +98,7 @@ export function RoiCalculator() {
       </div>
 
       {/* RESULTS */}
-      <div className="bg-[#0D1525] rounded-2xl p-8 text-white">
+      <div className="bg-neutral-900 border-y border-neutral-800 rounded-2xl p-8 text-white">
         <h2 className="text-[22px] font-extrabold text-[#E8652B] mb-6">Estimated Annual Value</h2>
 
         <div className="flex items-center justify-between py-3.5 border-b border-white/10">

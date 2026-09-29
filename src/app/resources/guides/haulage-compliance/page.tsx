@@ -74,22 +74,22 @@ export default function HaulageComplianceGuidePage() {
   return (
     <MainLayout showCta={false}>
       {/* Breadcrumb + Hero */}
-      <section className="pt-24 pb-16 bg-gradient-to-b from-[#FFF9F5] to-white">
+      <section className="pt-24 pb-16 bg-gradient-to-b from-neutral-50/80 via-white to-white border-b border-neutral-200">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <nav className="flex items-center gap-2 text-xs text-[#64748B] mb-6">
+          <nav className="flex items-center gap-2 text-xs text-neutral-500 mb-6">
             <Link href="/" className="hover:text-[#E8652B]">Home</Link>
             <ChevronRight className="h-3 w-3" />
             <Link href="/resources" className="hover:text-[#E8652B]">Resources</Link>
             <ChevronRight className="h-3 w-3" />
-            <span className="text-[#0F172A] font-medium">Haulage Compliance Guide</span>
+            <span className="text-neutral-900 font-medium">Haulage Compliance Guide</span>
           </nav>
-          <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-[#E8652B] bg-[#FFF0E6] mb-4 animate-in fade-in slide-in-from-bottom-4 animation-duration-700 fill-mode-both">
+          <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-[#E8652B] bg-orange-50 border border-orange-200 mb-4 animate-in fade-in slide-in-from-bottom-4 animation-duration-700 fill-mode-both">
             Guide · Compliance
           </span>
-          <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-[#0F172A] max-w-4xl leading-[1.1] animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-100 fill-mode-both">
+          <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-neutral-900 max-w-4xl leading-[1.1] animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-100 fill-mode-both">
             Haulage Compliance: A Practical Guide for Bulk Transport Operators
           </h1>
-          <p className="mt-6 text-lg text-[#475569] max-w-3xl leading-relaxed animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-150 fill-mode-both">
+          <p className="mt-6 text-lg text-neutral-600 max-w-3xl leading-relaxed animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-150 fill-mode-both">
             Compliance in bulk haulage isn't a single thing — it's driver fatigue records, vehicle maintenance logs, document retention, load management, and Chain of Responsibility. This guide covers the key areas and what records you need to maintain.
           </p>
         </div>
@@ -105,12 +105,12 @@ export default function HaulageComplianceGuidePage() {
       {/* CORE COMPLIANCE AREAS */}
       <section className="py-16 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">The Core Compliance Areas for Bulk Haulage Operators</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">The Core Compliance Areas for Bulk Haulage Operators</h2>
           <div className="mt-10 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {complianceAreas.map((card) => (
-              <div key={card.title} className="bg-white rounded-2xl p-6 border border-[#E2E8F0]">
-                <h3 className="font-bold text-[#0F172A]">{card.title}</h3>
-                <p className="mt-3 text-sm text-[#475569] leading-relaxed">{card.p}</p>
+              <div key={card.title} className="bg-white rounded-2xl p-6 border border-neutral-200">
+                <h3 className="font-bold text-neutral-900">{card.title}</h3>
+                <p className="mt-3 text-sm text-neutral-600 leading-relaxed">{card.p}</p>
                 <Link href={card.link.href} className="mt-3 inline-flex items-center gap-1 text-sm text-[#E8652B] hover:underline font-medium">
                   {card.link.label} <ArrowRight className="h-3.5 w-3.5" />
                 </Link>
@@ -121,13 +121,13 @@ export default function HaulageComplianceGuidePage() {
       </section>
 
       {/* COR + RECORDS */}
-      <section className="py-16 bg-[#F8FAFC]">
+      <section className="py-16 bg-neutral-50/50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12">
             <div>
               <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Chain of Responsibility (AU)</span>
-              <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A]">CoR: What Every Operator Needs to Understand</h2>
-              <div className="mt-4 space-y-4 text-sm text-[#475569] leading-relaxed">
+              <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900">CoR: What Every Operator Needs to Understand</h2>
+              <div className="mt-4 space-y-4 text-sm text-neutral-600 leading-relaxed">
                 <p>The Heavy Vehicle National Law Chain of Responsibility provisions extend safety obligations to every party in the supply chain that influences a heavy vehicle driver's safety. This includes operators who set schedules, clients who set delivery deadlines, and loaders who manage mass.</p>
                 <p>As an operator, CoR means you can be held responsible for safety outcomes even if you weren't driving. The standard is whether you took all reasonable steps to ensure compliance.</p>
                 <p>The records that demonstrate "reasonable steps" include: documented safety policies, driver training records, break and rest logs, maintenance records, and evidence that schedules were achievable within legal limits.</p>
@@ -138,12 +138,12 @@ export default function HaulageComplianceGuidePage() {
             </div>
             <div>
               <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Record-Keeping Essentials</span>
-              <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A]">What Records to Maintain and For How Long</h2>
+              <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900">What Records to Maintain and For How Long</h2>
               <ul className="mt-6 space-y-3">
                 {retentionRecords.map((item) => (
-                  <li key={item.strong} className="flex items-start gap-2 text-sm text-[#334155]">
+                  <li key={item.strong} className="flex items-start gap-2 text-sm text-neutral-700">
                     <CheckCircle className="h-4 w-4 text-[#E8652B] shrink-0 mt-0.5" />
-                    <span><strong className="text-[#0F172A]">{item.strong}:</strong> {item.desc}</span>
+                    <span><strong className="text-neutral-900">{item.strong}:</strong> {item.desc}</span>
                   </li>
                 ))}
               </ul>
@@ -158,15 +158,15 @@ export default function HaulageComplianceGuidePage() {
       {/* FAQ */}
       <section className="py-16 bg-white">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#0F172A]">Compliance FAQs</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold text-neutral-900">Compliance FAQs</h2>
           <div className="mt-8 space-y-3">
             {faqs.map((faq) => (
-              <details key={faq.q} className="group border border-[#E2E8F0] bg-white rounded-xl overflow-hidden">
-                <summary className="flex items-center justify-between gap-4 px-6 py-4 cursor-pointer font-semibold text-[#0F172A] text-sm list-none hover:bg-[#F8FAFC]">
+              <details key={faq.q} className="group border border-neutral-200 bg-white rounded-xl overflow-hidden">
+                <summary className="flex items-center justify-between gap-4 px-6 py-4 cursor-pointer font-semibold text-neutral-900 text-sm list-none hover:bg-neutral-50/50">
                   {faq.q}
-                  <ChevronRight className="h-4 w-4 text-[#94A3B8] shrink-0 group-open:rotate-90 transition-transform" />
+                  <ChevronRight className="h-4 w-4 text-neutral-400 shrink-0 group-open:rotate-90 transition-transform" />
                 </summary>
-                <div className="px-6 pb-5 text-sm text-[#475569] leading-relaxed border-t border-[#F1F5F9]">
+                <div className="px-6 pb-5 text-sm text-neutral-600 leading-relaxed border-t border-neutral-100">
                   <p className="pt-4">{faq.a}</p>
                 </div>
               </details>
@@ -176,11 +176,11 @@ export default function HaulageComplianceGuidePage() {
       </section>
 
       {/* CTA BAND */}
-      <section className="py-16 bg-[#0F172A]">
+      <section className="py-16 bg-neutral-900">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
           <div>
             <h2 className="text-2xl sm:text-3xl font-bold text-white">Want to see HaulageOps compliance tools?</h2>
-            <p className="mt-2 text-[#94A3B8] text-sm leading-relaxed max-w-xl">
+            <p className="mt-2 text-neutral-400 text-sm leading-relaxed max-w-xl">
               Book a demo and we'll walk through audit trail, document management and fatigue records.
             </p>
           </div>

@@ -13,11 +13,8 @@ import { CaseStudy } from "@/components/landing/case-study";
 import { CompetitiveComparison } from "@/components/landing/competitive-comparison";
 // import { Pricing } from "@/components/landing/pricing";
 import { FAQ } from "@/components/landing/faq";
-import {
-  // PartnersTeaser,
-  FinalCTA,
-  Footer,
-} from "@/components/landing/partners-cta-footer";
+import { FinalCTA } from "@/components/landing/partners-cta-footer";
+import { Footer } from "@/components/layout/Footer";
 
 export default function Home() {
   return (

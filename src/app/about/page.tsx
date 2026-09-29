@@ -106,31 +106,31 @@ const faqs = [
 export default function AboutPage() {
   return (
     <MainLayout showCta={false}>
-      <section className="pt-24 pb-16 bg-gradient-to-b from-[#FFF9F5] to-white">
+      <section className="pt-24 pb-16 bg-gradient-to-b from-neutral-50/80 via-white to-white border-b border-neutral-200">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <nav className="flex items-center gap-2 text-xs text-[#64748B] mb-6">
+          <nav className="flex items-center gap-2 text-xs text-neutral-500 mb-6">
             <Link href="/" className="hover:text-[#E8652B]">Home</Link>
             <ChevronRight className="h-3 w-3" />
-            <span className="text-[#0F172A] font-medium">About</span>
+            <span className="text-neutral-900 font-medium">About</span>
           </nav>
-          <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-[#E8652B] bg-[#FFF0E6] mb-4">
+          <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-[#E8652B] bg-orange-50 border border-orange-200 text-[#E8652B] mb-4">
             About HaulageOps
           </span>
-          <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-[#0F172A] max-w-4xl leading-[1.1]">
+          <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-neutral-900 max-w-4xl leading-[1.1]">
             Built on 40 years of bulk haulage experience. Built for operators, not investors.
           </h1>
-          <p className="mt-6 text-lg text-[#475569] max-w-2xl leading-relaxed">
+          <p className="mt-6 text-lg text-neutral-600 max-w-2xl leading-relaxed">
             HaulageOps reflects what bulk haulage and construction logistics operations actually look like from the inside — not how a horizontal software company imagines they might work.
           </p>
         </div>
       </section>
 
-      <section className="bg-[#0D1525] py-6">
+      <section className="bg-neutral-900 py-6">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {proofItems.map((item) => (
             <div key={item.strong} className="flex flex-col gap-1">
               <strong className="text-2xl text-[#E8652B]">{item.strong}</strong>
-              <span className="text-sm text-[#CBD5E1]">{item.text}</span>
+              <span className="text-sm text-neutral-300">{item.text}</span>
             </div>
           ))}
         </div>
@@ -141,8 +141,8 @@ export default function AboutPage() {
           <div className="grid lg:grid-cols-2 gap-12">
             <div>
               <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Our origin</span>
-              <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">The platform that a 40-year bulk haulage operator actually needed.</h2>
-              <div className="mt-6 space-y-4 text-sm text-[#475569] leading-relaxed">
+              <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">The platform that a 40-year bulk haulage operator actually needed.</h2>
+              <div className="mt-6 space-y-4 text-sm text-neutral-600 leading-relaxed">
                 <p>
                   HaulageOps was built from the ground up with a bulk haulage operator as the foundation — not as a case study or an advisory input, but as the operational reality that shaped every feature decision. That operator had been running bulk haulage and construction logistics for 40 years. The problems weren't hypothetical.
                 </p>
@@ -158,19 +158,19 @@ export default function AboutPage() {
               </div>
             </div>
             <div>
-              <div className="rounded-2xl bg-[#F8FAFC] p-8 border border-[#E2E8F0]">
-                <h3 className="text-base font-bold text-[#334155] mb-5">What HaulageOps is built for</h3>
+              <div className="rounded-2xl bg-neutral-50/50 p-8 border border-neutral-200">
+                <h3 className="text-base font-bold text-neutral-700 mb-5">What HaulageOps is built for</h3>
                 <ul className="space-y-3">
                   {builtForItems.map((item) => (
-                    <li key={item} className="flex items-start gap-2 text-sm text-[#334155]">
+                    <li key={item} className="flex items-start gap-2 text-sm text-neutral-700">
                       <Check className="h-4 w-4 text-[#E8652B] shrink-0 mt-0.5" />
                       <span>{item}</span>
                     </li>
                   ))}
                 </ul>
-                <div className="mt-6 pt-5 border-t border-[#E2E8F0]">
-                  <h3 className="text-base font-bold text-[#334155] mb-3">What HaulageOps is not for</h3>
-                  <p className="text-sm text-[#64748B] leading-relaxed">
+                <div className="mt-6 pt-5 border-t border-neutral-200">
+                  <h3 className="text-base font-bold text-neutral-700 mb-3">What HaulageOps is not for</h3>
+                  <p className="text-sm text-neutral-500 leading-relaxed">
                     Parcel delivery. 3PL warehousing. Freight forwarding. Long-haul general freight. Narrowing the target market is not a weakness — it's why the platform fits when it fits.
                   </p>
                 </div>
@@ -180,18 +180,18 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="py-16 bg-[#F8FAFC]">
+      <section className="py-16 bg-neutral-50/50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">What makes us different</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A]">Purpose-built for one operator type. Not adapted from something else.</h2>
-          <p className="mt-4 text-[#475569] leading-relaxed max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900">Purpose-built for one operator type. Not adapted from something else.</h2>
+          <p className="mt-4 text-neutral-600 leading-relaxed max-w-3xl">
             Most TMS platforms started in parcel delivery, freight forwarding, or general trucking, then added features to serve adjacent markets. HaulageOps started with bulk haulage and construction logistics — and has stayed there.
           </p>
           <div className="mt-10 grid md:grid-cols-2 gap-6">
             {differenceCards.map((card) => (
-              <div key={card.title} className="bg-white rounded-2xl p-6 border border-[#E2E8F0] flex flex-col">
-                <h3 className="text-lg font-bold text-[#0F172A]">{card.title}</h3>
-                <p className="mt-3 text-sm text-[#475569] leading-relaxed flex-1">{card.p}</p>
+              <div key={card.title} className="bg-white rounded-2xl p-6 border border-neutral-200 flex flex-col">
+                <h3 className="text-lg font-bold text-neutral-900">{card.title}</h3>
+                <p className="mt-3 text-sm text-neutral-600 leading-relaxed flex-1">{card.p}</p>
                 <Link href={card.linkHref} className="mt-4 inline-flex items-center gap-1 text-sm text-[#E8652B] hover:underline font-bold">
                   {card.linkText} <ArrowRight className="h-3.5 w-3.5" />
                 </Link>
@@ -206,23 +206,23 @@ export default function AboutPage() {
           <div className="grid lg:grid-cols-2 gap-12">
             <div>
               <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Honesty about roadmap</span>
-              <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A]">What's built. What isn't. What's next.</h2>
-              <p className="mt-4 text-sm text-[#475569] leading-relaxed">
+              <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900">What's built. What isn't. What's next.</h2>
+              <p className="mt-4 text-sm text-neutral-600 leading-relaxed">
                 We'd rather be honest about what isn't built yet than claim capabilities that would require customisation to deliver. Here's the current state of the roadmap items we get asked about most:
               </p>
-              <div className="mt-6 overflow-x-auto rounded-2xl border border-[#E2E8F0]">
+              <div className="mt-6 overflow-x-auto rounded-2xl border border-neutral-200">
                 <table className="w-full text-sm">
                   <thead>
-                    <tr className="bg-[#F8FAFC] border-b border-[#E2E8F0]">
-                      <th className="text-left px-5 py-3 font-semibold text-[#0F172A]">Feature</th>
-                      <th className="text-left px-5 py-3 font-semibold text-[#0F172A]">Status</th>
+                    <tr className="bg-neutral-50/50 border-b border-neutral-200">
+                      <th className="text-left px-5 py-3 font-semibold text-neutral-900">Feature</th>
+                      <th className="text-left px-5 py-3 font-semibold text-neutral-900">Status</th>
                     </tr>
                   </thead>
                   <tbody>
                     {roadmapRows.map((row) => (
-                      <tr key={row.feature} className="border-b border-[#F1F5F9] last:border-0">
-                        <td className="px-5 py-3 text-[#334155] align-top">{row.feature}</td>
-                        <td className="px-5 py-3 text-[#475569] align-top">{row.status}</td>
+                      <tr key={row.feature} className="border-b border-neutral-100 last:border-0">
+                        <td className="px-5 py-3 text-neutral-700 align-top">{row.feature}</td>
+                        <td className="px-5 py-3 text-neutral-600 align-top">{row.status}</td>
                       </tr>
                     ))}
                   </tbody>
@@ -231,21 +231,21 @@ export default function AboutPage() {
             </div>
             <div>
               <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Markets and vision</span>
-              <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A]">Built in Australia. Positioned for global operators.</h2>
-              <div className="mt-4 space-y-4 text-sm text-[#475569] leading-relaxed">
+              <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900">Built in Australia. Positioned for global operators.</h2>
+              <div className="mt-4 space-y-4 text-sm text-neutral-600 leading-relaxed">
                 <p>
                   HaulageOps is live and deployed in the Australian market. The platform is built to serve bulk haulage and construction logistics operators globally — not because we've added languages and called it done, but because the operational problems are the same in New Zealand, the UK, and North America.
                 </p>
                 <p>
                   Compliance-specific features (Chain of Responsibility fatigue management records, CoR audit trail) are documented on the <Link href="/au" className="text-[#E8652B] hover:underline font-medium">Australian region pages</Link>. The core platform — five portals, Xero integration, rate management, subcontractor coordination, digital POD — is market-agnostic.
                 </p>
-                <p><strong className="text-[#0F172A]">Current market:</strong> Australia (live)</p>
-                <p><strong className="text-[#0F172A]">Planned expansion:</strong> New Zealand, United Kingdom, Canada, United States</p>
+                <p><strong className="text-neutral-900">Current market:</strong> Australia (live)</p>
+                <p><strong className="text-neutral-900">Planned expansion:</strong> New Zealand, United Kingdom, Canada, United States</p>
               </div>
-              <div className="mt-6 rounded-xl bg-[#FFF0E6] border border-[#FED7AA] p-5">
-                <p className="font-bold text-[#92400E] mb-2">Operating in NZ, UK or North America?</p>
-                <p className="text-sm text-[#78350F] leading-relaxed">
-                  We work with operators outside Australia on a case-by-case basis during expansion. <Link href="/contact" className="font-semibold text-[#92400E] hover:underline">Contact us</Link> to discuss your market and timing.
+              <div className="mt-6 rounded-xl bg-orange-50 border border-orange-200 text-[#E8652B] border border-orange-200 p-5">
+                <p className="font-bold text-neutral-900 mb-2">Operating in NZ, UK or North America?</p>
+                <p className="text-sm text-neutral-600 leading-relaxed">
+                  We work with operators outside Australia on a case-by-case basis during expansion. <Link href="/contact" className="font-semibold text-neutral-900 hover:underline">Contact us</Link> to discuss your market and timing.
                 </p>
               </div>
             </div>
@@ -253,15 +253,15 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="py-16 bg-[#F8FAFC]">
+      <section className="py-16 bg-neutral-50/50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Our values</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A]">Operator-first. Specific over generic. Honest about limits.</h2>
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900">Operator-first. Specific over generic. Honest about limits.</h2>
           <div className="mt-10 grid md:grid-cols-3 gap-6">
             {valueCards.map((card) => (
-              <div key={card.title} className="bg-white rounded-2xl p-6 border border-[#E2E8F0]">
-                <h3 className="text-lg font-bold text-[#0F172A]">{card.title}</h3>
-                <p className="mt-3 text-sm text-[#475569] leading-relaxed">{card.p}</p>
+              <div key={card.title} className="bg-white rounded-2xl p-6 border border-neutral-200">
+                <h3 className="text-lg font-bold text-neutral-900">{card.title}</h3>
+                <p className="mt-3 text-sm text-neutral-600 leading-relaxed">{card.p}</p>
               </div>
             ))}
           </div>
@@ -271,15 +271,15 @@ export default function AboutPage() {
       <section className="py-16 bg-white">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Frequently asked questions</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A]">About HaulageOps as a company.</h2>
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900">About HaulageOps as a company.</h2>
           <div className="mt-8 space-y-3">
             {faqs.map((faq) => (
-              <details key={faq.q} className="group border border-[#E2E8F0] bg-white rounded-xl overflow-hidden">
-                <summary className="flex items-center justify-between gap-4 px-6 py-4 cursor-pointer font-semibold text-[#0F172A] text-sm list-none hover:bg-[#F8FAFC]">
+              <details key={faq.q} className="group border border-neutral-200 bg-white rounded-xl overflow-hidden">
+                <summary className="flex items-center justify-between gap-4 px-6 py-4 cursor-pointer font-semibold text-neutral-900 text-sm list-none hover:bg-neutral-50/50">
                   {faq.q}
-                  <ChevronRight className="h-4 w-4 text-[#94A3B8] shrink-0 group-open:rotate-90 transition-transform" />
+                  <ChevronRight className="h-4 w-4 text-neutral-400 shrink-0 group-open:rotate-90 transition-transform" />
                 </summary>
-                <div className="px-6 pb-5 text-sm text-[#475569] leading-relaxed border-t border-[#F1F5F9]">
+                <div className="px-6 pb-5 text-sm text-neutral-600 leading-relaxed border-t border-neutral-100">
                   <p className="pt-4">{faq.a}</p>
                 </div>
               </details>
@@ -288,11 +288,11 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="py-16 bg-[#0F172A]">
+      <section className="py-16 bg-neutral-900">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
           <div>
             <h2 className="text-2xl sm:text-3xl font-bold text-white">See the platform that 40 years of bulk haulage experience built.</h2>
-            <p className="mt-2 text-[#94A3B8] text-sm leading-relaxed max-w-xl">
+            <p className="mt-2 text-neutral-400 text-sm leading-relaxed max-w-xl">
               A 20-minute demo shows you the full job workflow — dispatch, driver app, subcontractor portal, client portal, Xero invoice sync.
             </p>
           </div>

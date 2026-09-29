@@ -61,12 +61,12 @@ const solutionPillars = [
 export function SolutionsPage() {
   return (
     <MainLayout>
-      <section className="pt-32 pb-20 bg-gradient-to-b from-[#FFF5EE]/60 via-[#FFF9F5]/30 to-white text-[#0F172A]">
+      <section className="pt-32 pb-20 bg-gradient-to-b from-neutral-50/80 via-white to-white text-neutral-900 border-b border-neutral-200">
         <div className="mx-auto max-w-7xl xl:max-w-[80rem] 2xl:max-w-[105rem] px-4 sm:px-6 lg:px-8 text-center">
           <motion.span
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            className="inline-block px-3.5 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider text-[#E8652B] bg-[#FFF0E6] mb-4"
+            className="inline-block px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider text-[#E8652B] bg-orange-50 border border-orange-200 mb-4"
           >
             Operational Solutions
           </motion.span>
@@ -74,7 +74,7 @@ export function SolutionsPage() {
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.05 }}
-            className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#0F172A] max-w-4xl mx-auto"
+            className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-neutral-900 max-w-4xl mx-auto"
           >
             Built for how bulk haulage operators actually operate.
           </motion.h1>
@@ -82,7 +82,7 @@ export function SolutionsPage() {
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="mt-6 text-lg sm:text-xl text-[#475569] max-w-2xl mx-auto leading-relaxed"
+            className="mt-6 text-lg sm:text-xl text-neutral-600 max-w-2xl mx-auto leading-relaxed"
           >
             Replace spreadsheets, lost paper dockets, and invoice delays with an operator-proven platform built specifically for bulk haulage.
           </motion.p>
@@ -93,7 +93,7 @@ export function SolutionsPage() {
             className="mt-8 flex justify-center"
           >
             <Link href="/demo">
-              <Button size="lg" className="bg-[#E8652B] hover:bg-[#D05520] text-white font-semibold">
+              <Button size="lg" className="bg-[#E8652B] hover:bg-[#D05520] text-white font-bold cursor-pointer shadow-xs">
                 Book a 20-minute demo
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
@@ -102,27 +102,27 @@ export function SolutionsPage() {
         </div>
       </section>
 
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-neutral-50/50 border-b border-neutral-200">
         <div className="mx-auto max-w-7xl xl:max-w-[80rem] 2xl:max-w-[105rem] px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-10">
+          <div className="grid md:grid-cols-2 gap-8 lg:gap-10">
             {solutionPillars.map((sol) => {
               const IconComp = sol.icon;
               return (
-                <div key={sol.title} className="bg-white border border-[#E2E8F0] rounded-2xl p-8 shadow-sm">
-                  <div className="w-12 h-12 rounded-xl bg-[#FFF0E6] flex items-center justify-center text-[#E8652B] mb-6">
+                <div key={sol.title} className="bg-white border border-neutral-200 rounded-2xl p-8 shadow-xs hover:border-[#E8652B] hover:shadow-sm transition-all duration-200">
+                  <div className="w-12 h-12 rounded-xl bg-orange-50 border border-orange-200 flex items-center justify-center text-[#E8652B] mb-6">
                     <IconComp className="h-6 w-6" />
                   </div>
-                  <h3 className="text-2xl font-bold text-[#0F172A]">{sol.title}</h3>
-                  <p className="text-sm text-[#64748B] mt-2 leading-relaxed">{sol.desc}</p>
+                  <h3 className="text-2xl font-black text-neutral-900">{sol.title}</h3>
+                  <p className="text-sm text-neutral-600 mt-2 leading-relaxed">{sol.desc}</p>
                   <ul className="mt-6 space-y-3">
                     {sol.points.map((pt) => (
-                      <li key={pt} className="flex items-start gap-2.5 text-sm text-[#334155]">
+                      <li key={pt} className="flex items-start gap-2.5 text-sm text-neutral-700">
                         <CheckCircle className="h-4 w-4 text-[#E8652B] shrink-0 mt-0.5" />
                         <span>{pt}</span>
                       </li>
                     ))}
                   </ul>
-                  <Link href={sol.href} className="mt-8 inline-flex items-center gap-1.5 text-sm font-semibold text-[#E8652B] hover:text-[#D05520]">
+                  <Link href={sol.href} className="mt-8 inline-flex items-center gap-1.5 text-sm font-bold text-[#E8652B] hover:text-[#D05520]">
                     Learn more about {sol.title.split("&")[0]} →
                   </Link>
                 </div>

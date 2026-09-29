@@ -85,25 +85,25 @@ export function PlatformJobSchedulingPage() {
   return (
     <MainLayout showCta={false}>
       {/* Breadcrumb */}
-      <div className="pt-24 pb-0 bg-[#FFF9F5]">
+      <div className="pt-24 pb-0 bg-neutral-50/70">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <nav className="flex items-center gap-2 text-xs text-[#64748B]">
+          <nav className="flex items-center gap-2 text-xs text-neutral-500">
             <Link href="/" className="hover:text-[#E8652B]">Home</Link>
             <ChevronRight className="h-3 w-3" />
             <Link href="/platform" className="hover:text-[#E8652B]">Platform</Link>
             <ChevronRight className="h-3 w-3" />
-            <span className="text-[#0F172A] font-medium">Job Scheduling</span>
+            <span className="text-neutral-900 font-medium">Job Scheduling</span>
           </nav>
         </div>
       </div>
 
       {/* HERO */}
-      <section className="pt-10 pb-20 bg-gradient-to-b from-[#FFF9F5] via-[#FFF5EE]/40 to-white">
+      <section className="pt-10 pb-20 bg-gradient-to-b from-neutral-50/80 via-white to-white border-b border-neutral-200">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <motion.span
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
-            className="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-[#E8652B] bg-[#FFF0E6] mb-4"
+            className="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-[#E8652B] bg-orange-50 border border-orange-200 mb-4"
           >
             Core Operations
           </motion.span>
@@ -111,7 +111,7 @@ export function PlatformJobSchedulingPage() {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.05 }}
-            className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#0F172A] max-w-4xl leading-[1.1]"
+            className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-neutral-900 max-w-4xl leading-[1.1]"
           >
             Stop creating the same job every morning. Schedule it once.
           </motion.h1>
@@ -119,7 +119,7 @@ export function PlatformJobSchedulingPage() {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="mt-6 text-lg sm:text-xl text-[#475569] max-w-3xl leading-relaxed"
+            className="mt-6 text-lg sm:text-xl text-neutral-600 max-w-3xl leading-relaxed"
           >
             Job templates, recurring job creation and a forward scheduling calendar let your dispatchers plan the week ahead rather than react to this morning. Driver and subcontractor availability visible before you assign. No double-booking.
           </motion.p>
@@ -135,7 +135,7 @@ export function PlatformJobSchedulingPage() {
               </Button>
             </Link>
             <Link href="/platform/job-management">
-              <Button size="lg" variant="outline" className="border-[#E2E8F0] text-[#334155] hover:bg-[#F8FAFC]">
+              <Button size="lg" variant="outline" className="border-neutral-200 text-neutral-700 hover:bg-neutral-50/50">
                 Job Management
               </Button>
             </Link>
@@ -148,8 +148,8 @@ export function PlatformJobSchedulingPage() {
               "Driver availability visible",
               "No double-booking",
             ].map((pill) => (
-              <span key={pill} className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#F1F5F9] text-xs font-medium text-[#334155]">
-                <CheckCircle className="h-3.5 w-3.5 text-[#16A34A] shrink-0" />
+              <span key={pill} className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-neutral-100 text-xs font-medium text-neutral-700">
+                <CheckCircle className="h-3.5 w-3.5 text-[#E8652B] shrink-0" />
                 {pill}
               </span>
             ))}
@@ -158,7 +158,7 @@ export function PlatformJobSchedulingPage() {
       </section>
 
       {/* PROOF STRIP */}
-      <div className="bg-[#0F172A] py-5">
+      <div className="bg-neutral-900 py-5">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 text-center">
             {[
@@ -170,7 +170,7 @@ export function PlatformJobSchedulingPage() {
             ].map((item) => (
               <div key={item.strong} className="flex flex-col gap-0.5">
                 <span className="text-white font-bold text-sm">{item.strong}</span>
-                <span className="text-[#94A3B8] text-xs">{item.sub}</span>
+                <span className="text-neutral-400 text-xs">{item.sub}</span>
               </div>
             ))}
           </div>
@@ -181,18 +181,18 @@ export function PlatformJobSchedulingPage() {
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">The Scheduling Problem</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             Most haulage dispatch is reactive. It does not need to be.
           </h2>
-          <p className="mt-4 text-[#475569] max-w-3xl leading-relaxed">
+          <p className="mt-4 text-neutral-600 max-w-3xl leading-relaxed">
             In many bulk haulage operations, the dispatcher arrives in the morning and starts creating jobs for the day — the same jobs, going to the same sites, for the same clients, that were created yesterday. If a driver rings in sick or a vehicle is unavailable, the scramble begins. Work that could have been planned the day before gets sorted in the first 30 minutes of the working day under pressure.
           </p>
-          <p className="mt-3 text-[#475569] max-w-3xl leading-relaxed">
+          <p className="mt-3 text-neutral-600 max-w-3xl leading-relaxed">
             HaulageOps is built for operations that want to move from reactive to proactive dispatch. Job scheduling tools — templates, recurring job creation and a forward calendar — let the planning happen the day before, or at the start of the week, rather than under morning pressure. When the drivers start, their jobs are already there.
           </p>
           <div className="mt-10 grid md:grid-cols-2 gap-8">
-            <div className="bg-[#F8FAFC] rounded-2xl p-8 border border-[#E2E8F0]">
-              <h3 className="text-xl font-bold text-[#0F172A] mb-5">Reactive dispatch (current state for many operators)</h3>
+            <div className="bg-neutral-50/50 rounded-2xl p-8 border border-neutral-200">
+              <h3 className="text-xl font-bold text-neutral-900 mb-5">Reactive dispatch (current state for many operators)</h3>
               <ul className="space-y-3">
                 {[
                   "Dispatcher arrives early to create the day's jobs from scratch",
@@ -202,15 +202,15 @@ export function PlatformJobSchedulingPage() {
                   "Schedule changes require calling every affected driver",
                   "Week-ahead planning done mentally or on a whiteboard",
                 ].map((item) => (
-                  <li key={item} className="flex items-start gap-2 text-sm text-[#475569]">
+                  <li key={item} className="flex items-start gap-2 text-sm text-neutral-600">
                     <span className="text-[#EF4444] font-bold shrink-0">✕</span>
                     <span>{item}</span>
                   </li>
                 ))}
               </ul>
             </div>
-            <div className="bg-[#F8FAFC] rounded-2xl p-8 border border-[#E2E8F0]">
-              <h3 className="text-xl font-bold text-[#0F172A] mb-5">Proactive dispatch with HaulageOps</h3>
+            <div className="bg-neutral-50/50 rounded-2xl p-8 border border-neutral-200">
+              <h3 className="text-xl font-bold text-neutral-900 mb-5">Proactive dispatch with HaulageOps</h3>
               <ul className="space-y-3">
                 {[
                   "Recurring jobs scheduled once — they appear on the calendar for each recurrence",
@@ -220,8 +220,8 @@ export function PlatformJobSchedulingPage() {
                   "Week's work planned in advance — drivers receive jobs before the day starts",
                   "Schedule changes updated in the system — all affected parties notified",
                 ].map((item) => (
-                  <li key={item} className="flex items-start gap-2 text-sm text-[#334155]">
-                    <CheckCircle className="h-4 w-4 text-[#16A34A] shrink-0 mt-0.5" />
+                  <li key={item} className="flex items-start gap-2 text-sm text-neutral-700">
+                    <CheckCircle className="h-4 w-4 text-[#E8652B] shrink-0 mt-0.5" />
                     <span>{item}</span>
                   </li>
                 ))}
@@ -232,24 +232,24 @@ export function PlatformJobSchedulingPage() {
       </section>
 
       {/* JOB TEMPLATES */}
-      <section className="py-20 bg-[#F8FAFC]">
+      <section className="py-20 bg-neutral-50/50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Job Templates</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             Save a job once. Create it again in seconds.
           </h2>
-          <p className="mt-4 text-[#475569] max-w-3xl leading-relaxed">
+          <p className="mt-4 text-neutral-600 max-w-3xl leading-relaxed">
             Any job created in HaulageOps can be saved as a template. The template stores the origin, destination, material type, quantity unit, rate type, rate value and any standing instructions for the run. When the same work needs to happen again — tomorrow, next week, or next month — the dispatcher loads the template, confirms the date and makes the assignment. The form is already filled.
           </p>
-          <div className="mt-8 rounded-2xl border border-[#E2E8F0] bg-[#0D1525] p-8 text-[#94A3B8] text-sm font-mono leading-relaxed">
+          <div className="mt-8 rounded-2xl border border-neutral-200 bg-neutral-900 border-y border-neutral-800 p-8 text-neutral-400 text-sm font-mono leading-relaxed">
             <div className="text-[#E8652B] font-bold mb-2 text-xs uppercase tracking-widest">HaulageOps — Job Creation from Template</div>
             <p>Job creation form with "Load from template" dropdown expanded. Template list shows: "Quarry A to Site 14 — Aggregate — Per Tonne", "Tip run — Spoil — Muckaway North", "Daily gravel supply — Client XYZ". Selected template has pre-filled fields: Origin (Quarry Address), Destination (Construction Site), Material (Crushed Aggregate), Rate Type (Per Tonne), Rate ($28.50/t). Only Date and Driver fields remain blank for the dispatcher to complete. Save as New Template button visible at the bottom.</p>
           </div>
           <div className="mt-10 grid md:grid-cols-3 gap-6">
             {templateCards.map((card) => (
-              <div key={card.title} className="bg-white rounded-2xl p-6 border border-[#E2E8F0] shadow-sm">
-                <h3 className="font-bold text-[#0F172A] mb-2">{card.title}</h3>
-                <p className="text-sm text-[#475569] leading-relaxed">{card.desc}</p>
+              <div key={card.title} className="bg-white rounded-2xl p-6 border border-neutral-200 shadow-sm">
+                <h3 className="font-bold text-neutral-900 mb-2">{card.title}</h3>
+                <p className="text-sm text-neutral-600 leading-relaxed">{card.desc}</p>
               </div>
             ))}
           </div>
@@ -260,19 +260,19 @@ export function PlatformJobSchedulingPage() {
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Forward Scheduling</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             Plan the week on a calendar. See who is available before you assign.
           </h2>
-          <p className="mt-4 text-[#475569] max-w-3xl leading-relaxed">
+          <p className="mt-4 text-neutral-600 max-w-3xl leading-relaxed">
             The scheduling calendar in HaulageOps gives dispatchers a forward view of planned work. Jobs scheduled for future dates appear on the calendar by day. Driver and subcontractor availability is visible in the same view, so you can see who is free before assigning a job — not discover a conflict after the fact.
           </p>
           <div className="mt-10 grid md:grid-cols-2 gap-8">
             <div>
-              <h3 className="text-xl font-bold text-[#0F172A]">Driver availability in scheduling</h3>
-              <p className="mt-3 text-sm text-[#475569] leading-relaxed">
+              <h3 className="text-xl font-bold text-neutral-900">Driver availability in scheduling</h3>
+              <p className="mt-3 text-sm text-neutral-600 leading-relaxed">
                 Drivers can update their availability through the driver app — marking shifts they are available, days off, or periods when they are unavailable. Dispatchers see this availability when looking at the scheduling calendar. Assigning a job to a driver who has marked themselves unavailable on that day triggers a conflict flag before the job is saved.
               </p>
-              <p className="mt-3 text-sm text-[#475569] leading-relaxed">
+              <p className="mt-3 text-sm text-neutral-600 leading-relaxed">
                 Availability scheduling is particularly useful for operators who run mixed shift patterns or who have part-time drivers. Rather than maintaining a separate shift schedule in a spreadsheet and cross-referencing it with the job board, both are visible in the same system.
               </p>
               <ul className="mt-4 space-y-2">
@@ -283,19 +283,19 @@ export function PlatformJobSchedulingPage() {
                   "Schedule by shift, day or week",
                   "Availability history retained for payroll and review",
                 ].map((item) => (
-                  <li key={item} className="flex items-start gap-2 text-sm text-[#334155]">
-                    <CheckCircle className="h-4 w-4 text-[#16A34A] shrink-0 mt-0.5" />
+                  <li key={item} className="flex items-start gap-2 text-sm text-neutral-700">
+                    <CheckCircle className="h-4 w-4 text-[#E8652B] shrink-0 mt-0.5" />
                     {item}
                   </li>
                 ))}
               </ul>
             </div>
             <div>
-              <h3 className="text-xl font-bold text-[#0F172A]">Subcontractor capacity in scheduling</h3>
-              <p className="mt-3 text-sm text-[#475569] leading-relaxed">
+              <h3 className="text-xl font-bold text-neutral-900">Subcontractor capacity in scheduling</h3>
+              <p className="mt-3 text-sm text-neutral-600 leading-relaxed">
                 When planning work that will be delegated to subcontractors, their current job load is visible alongside your own fleet. A subcontractor who already has multiple active jobs on a given day may not have capacity for an additional delegation. Seeing this in the scheduling view before you delegate avoids the situation where a subcontractor accepts a job but cannot execute it at the required time.
               </p>
-              <p className="mt-3 text-sm text-[#475569] leading-relaxed">
+              <p className="mt-3 text-sm text-neutral-600 leading-relaxed">
                 Subcontractor capacity visibility is based on the jobs already delegated to them in HaulageOps. It does not pull in work they may be doing for other operators. Use it as a guide for managing your own delegations — do not treat it as a complete picture of their total workload.
               </p>
               <ul className="mt-4 space-y-2">
@@ -306,8 +306,8 @@ export function PlatformJobSchedulingPage() {
                   "Declined jobs surface on the dispatch board for reassignment",
                   "Subcontractor job history used for performance review",
                 ].map((item) => (
-                  <li key={item} className="flex items-start gap-2 text-sm text-[#334155]">
-                    <CheckCircle className="h-4 w-4 text-[#16A34A] shrink-0 mt-0.5" />
+                  <li key={item} className="flex items-start gap-2 text-sm text-neutral-700">
+                    <CheckCircle className="h-4 w-4 text-[#E8652B] shrink-0 mt-0.5" />
                     {item}
                   </li>
                 ))}
@@ -318,23 +318,23 @@ export function PlatformJobSchedulingPage() {
       </section>
 
       {/* RECURRING WORK */}
-      <section className="py-20 bg-[#F8FAFC]">
+      <section className="py-20 bg-neutral-50/50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Recurring Work</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             For work that repeats on a schedule — create the pattern, not the job.
           </h2>
-          <p className="mt-4 text-[#475569] max-w-3xl leading-relaxed">
+          <p className="mt-4 text-neutral-600 max-w-3xl leading-relaxed">
             Operators supplying materials to an active construction site often run the same job five days a week for months. Creating that job individually each morning is low-value repetition. HaulageOps supports recurring job creation — define the job, set the recurrence pattern (daily, weekly, specific days of the week), and the system creates the job instances on the calendar for the period you specify.
           </p>
-          <p className="mt-3 text-[#475569] max-w-3xl leading-relaxed">
+          <p className="mt-3 text-neutral-600 max-w-3xl leading-relaxed">
             Each instance is an independent job record. If you need to modify one instance — a date change, a different driver on a specific day — you edit that instance without affecting the others in the series. If the whole series needs to change, update the recurrence settings and the remaining unstarted instances update accordingly.
           </p>
           <div className="mt-10 grid md:grid-cols-3 gap-6">
             {recurringCards.map((rc) => (
-              <div key={rc.title} className="bg-white rounded-2xl p-6 border border-[#E2E8F0] shadow-sm">
-                <h3 className="font-bold text-[#0F172A] mb-2">{rc.title}</h3>
-                <p className="text-sm text-[#475569] leading-relaxed">{rc.desc}</p>
+              <div key={rc.title} className="bg-white rounded-2xl p-6 border border-neutral-200 shadow-sm">
+                <h3 className="font-bold text-neutral-900 mb-2">{rc.title}</h3>
+                <p className="text-sm text-neutral-600 leading-relaxed">{rc.desc}</p>
               </div>
             ))}
           </div>
@@ -345,22 +345,22 @@ export function PlatformJobSchedulingPage() {
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Connected Platform</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             Scheduling connects to job management, dispatch and fleet.
           </h2>
           <div className="mt-10 grid md:grid-cols-3 gap-6">
             {connectedModules.map((mod) => (
-              <div key={mod.title} className="bg-[#F8FAFC] rounded-2xl p-6 border border-[#E2E8F0]">
-                <h3 className="font-bold text-[#0F172A] mb-2">
+              <div key={mod.title} className="bg-neutral-50/50 rounded-2xl p-6 border border-neutral-200">
+                <h3 className="font-bold text-neutral-900 mb-2">
                   <Link href={mod.href} className="hover:text-[#E8652B] transition-colors">
                     {mod.title}
                   </Link>
                 </h3>
-                <p className="text-sm text-[#475569] leading-relaxed">{mod.desc}</p>
+                <p className="text-sm text-neutral-600 leading-relaxed">{mod.desc}</p>
               </div>
             ))}
           </div>
-          <p className="mt-6 text-sm text-[#475569]">
+          <p className="mt-6 text-sm text-neutral-600">
             Also see:{" "}
             <Link href="/platform/fleet-management" className="text-[#E8652B] hover:underline font-medium">Fleet Management</Link>
             {" | "}
@@ -372,20 +372,20 @@ export function PlatformJobSchedulingPage() {
       </section>
 
       {/* FAQ */}
-      <section className="py-20 bg-[#F8FAFC]">
+      <section className="py-20 bg-neutral-50/50">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Common Questions</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A]">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900">
             Job Scheduling — frequently asked questions
           </h2>
           <div className="mt-8 space-y-3">
             {faqs.map((faq) => (
-              <details key={faq.q} className="group border border-[#E2E8F0] bg-white rounded-xl overflow-hidden">
-                <summary className="flex items-center justify-between gap-4 px-6 py-4 cursor-pointer font-semibold text-[#0F172A] text-sm list-none hover:bg-[#F8FAFC]">
+              <details key={faq.q} className="group border border-neutral-200 bg-white rounded-xl overflow-hidden">
+                <summary className="flex items-center justify-between gap-4 px-6 py-4 cursor-pointer font-semibold text-neutral-900 text-sm list-none hover:bg-neutral-50/50">
                   {faq.q}
-                  <ChevronRight className="h-4 w-4 text-[#94A3B8] shrink-0 group-open:rotate-90 transition-transform" />
+                  <ChevronRight className="h-4 w-4 text-neutral-400 shrink-0 group-open:rotate-90 transition-transform" />
                 </summary>
-                <div className="px-6 pb-5 text-sm text-[#475569] leading-relaxed border-t border-[#F1F5F9]">
+                <div className="px-6 pb-5 text-sm text-neutral-600 leading-relaxed border-t border-neutral-100">
                   <p className="pt-4">{faq.a}</p>
                 </div>
               </details>
@@ -395,11 +395,11 @@ export function PlatformJobSchedulingPage() {
       </section>
 
       {/* CTA BAND */}
-      <section className="py-16 bg-[#0F172A]">
+      <section className="py-16 bg-neutral-900">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
           <div>
             <h2 className="text-2xl sm:text-3xl font-bold text-white">See scheduling working before you commit to anything.</h2>
-            <p className="mt-2 text-[#94A3B8] text-sm leading-relaxed max-w-xl">
+            <p className="mt-2 text-neutral-400 text-sm leading-relaxed max-w-xl">
               We'll walk through creating a recurring job template, scheduling a week of work on the calendar and showing driver availability — in a live 20-minute demo.
             </p>
           </div>

@@ -12,14 +12,14 @@ export default function PrivacyPage() {
   return (
     <MainLayout showCta={false}>
       {/* Header */}
-      <div className="pt-24 pb-8 bg-[#FFF9F5] border-b border-[#E2E8F0]">
+      <div className="pt-24 pb-8 bg-neutral-50/70 border-b border-neutral-200">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
-          <nav className="flex items-center gap-2 text-xs text-[#64748B] mb-4">
+          <nav className="flex items-center gap-2 text-xs text-neutral-500 mb-4">
             <Link href="/" className="hover:text-[#E8652B]">Home</Link>
             <ChevronRight className="h-3 w-3" />
-            <span className="text-[#0F172A] font-medium">Privacy Policy</span>
+            <span className="text-neutral-900 font-medium">Privacy Policy</span>
           </nav>
-          <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-[#0F172A]">Privacy Policy</h1>
+          <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-neutral-900">Privacy Policy</h1>
           <p className="mt-2 text-sm text-[#556671]">Last updated: January 2025</p>
         </div>
       </div>
@@ -34,7 +34,7 @@ export default function PrivacyPage() {
             This policy applies to all users of HaulageOps and is governed by the <strong>Australian Privacy Act 1988 (Cth)</strong> and the Australian Privacy Principles (APPs).
           </p>
 
-          <h2 className="text-xl font-bold text-[#0F172A] pt-4">1. What Information We Collect</h2>
+          <h2 className="text-xl font-bold text-neutral-900 pt-4">1. What Information We Collect</h2>
           <p className="text-[15px] text-[#3D505C] leading-relaxed">We collect personal information necessary to provide the HaulageOps platform. This includes:</p>
           <ul className="list-disc pl-5 text-[15px] text-[#3D505C] leading-relaxed space-y-1.5">
             <li><strong>Operator/admin users:</strong> Name, email address, phone number, business name and ABN, billing information</li>
@@ -44,7 +44,7 @@ export default function PrivacyPage() {
             <li><strong>Website visitors:</strong> Standard web analytics (page views, session duration, referral source), IP address, browser type</li>
           </ul>
 
-          <h2 className="text-xl font-bold text-[#0F172A] pt-4">2. How We Use Your Information</h2>
+          <h2 className="text-xl font-bold text-neutral-900 pt-4">2. How We Use Your Information</h2>
           <ul className="list-disc pl-5 text-[15px] text-[#3D505C] leading-relaxed space-y-1.5">
             <li>To provide and operate the HaulageOps platform</li>
             <li>To process job assignments, billing and invoicing</li>
@@ -54,37 +54,37 @@ export default function PrivacyPage() {
             <li>To comply with legal obligations, including under the Heavy Vehicle National Law (HVNL) where applicable</li>
           </ul>
 
-          <h2 className="text-xl font-bold text-[#0F172A] pt-4">3. Data Storage and Security</h2>
+          <h2 className="text-xl font-bold text-neutral-900 pt-4">3. Data Storage and Security</h2>
           <p className="text-[15px] text-[#3D505C] leading-relaxed">
             Your data is stored on enterprise cloud infrastructure located in Australia. We implement AES-256 encryption at rest and TLS 1.3 in transit. Access to your data is restricted by role-based permissions and full audit logging. See our <Link href="/security" className="text-[#0F5FAE] hover:underline">Security page</Link> for full details.
           </p>
 
-          <h2 className="text-xl font-bold text-[#0F172A] pt-4">4. Third-Party Services</h2>
+          <h2 className="text-xl font-bold text-neutral-900 pt-4">4. Third-Party Services</h2>
           <p className="text-[15px] text-[#3D505C] leading-relaxed">
             HaulageOps integrates with Xero via OAuth 2.0. When you connect your Xero account, Xero handles authentication and we receive only the access token required to push invoice data. We do not store your Xero credentials. We use standard analytics and infrastructure services, all selected for compliance with Australian privacy requirements.
           </p>
 
-          <h2 className="text-xl font-bold text-[#0F172A] pt-4">5. Data Retention</h2>
+          <h2 className="text-xl font-bold text-neutral-900 pt-4">5. Data Retention</h2>
           <p className="text-[15px] text-[#3D505C] leading-relaxed">
             We retain your data for as long as your account is active and for a period thereafter as required by law or as specified in your subscription agreement. Job records, compliance documents and invoice data may be subject to retention requirements under applicable legislation. You may request deletion of your personal information by contacting us, subject to these legal obligations.
           </p>
 
-          <h2 className="text-xl font-bold text-[#0F172A] pt-4">6. Your Rights</h2>
+          <h2 className="text-xl font-bold text-neutral-900 pt-4">6. Your Rights</h2>
           <p className="text-[15px] text-[#3D505C] leading-relaxed">
             Under the Australian Privacy Act, you have the right to access personal information we hold about you, request corrections, and complain if you believe your privacy has been breached. To exercise these rights, contact us at our <Link href="/contact" className="text-[#0F5FAE] hover:underline">contact page</Link>.
           </p>
 
-          <h2 className="text-xl font-bold text-[#0F172A] pt-4">7. Changes to This Policy</h2>
+          <h2 className="text-xl font-bold text-neutral-900 pt-4">7. Changes to This Policy</h2>
           <p className="text-[15px] text-[#3D505C] leading-relaxed">
             We may update this Privacy Policy from time to time. We will notify active account holders of material changes via email. The current version is always available at haulageops.com/privacy/.
           </p>
 
-          <h2 className="text-xl font-bold text-[#0F172A] pt-4">8. Contact</h2>
+          <h2 className="text-xl font-bold text-neutral-900 pt-4">8. Contact</h2>
           <p className="text-[15px] text-[#3D505C] leading-relaxed">
             For privacy enquiries, please use our <Link href="/contact" className="text-[#0F5FAE] hover:underline">contact form</Link> or write to our Privacy Officer at the address registered with the platform.
           </p>
 
-          <p className="pt-6 mt-4 border-t border-[#E2E8F0] text-[13px] text-[#7A8A94]">
+          <p className="pt-6 mt-4 border-t border-neutral-200 text-[13px] text-[#7A8A94]">
             Also see: <Link href="/terms" className="text-[#0F5FAE] hover:underline">Terms of Service</Link> · <Link href="/cookies" className="text-[#0F5FAE] hover:underline">Cookie Policy</Link> · <Link href="/security" className="text-[#0F5FAE] hover:underline">Security</Link>
           </p>
         </div>

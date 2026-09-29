@@ -88,10 +88,10 @@
   --brand: #E8652B;
   --brand-light: #F97316;
   --brand-dark: #D05520;
-  --navy: #0F172A;
-  --navy-light: #1E293B;
-  --surface-dark: #0F172A;
-  --surface-darker: #0B0F19;
+  --navy: #0A0A0A;
+  --navy-light: #171717;
+  --surface-dark: #0A0A0A;
+  --surface-darker: #050505;
 }
 
 .dark {
@@ -218,13 +218,14 @@
   color: #111827;
 }
 
-/* Header Announcement Badge (as seen in Genie header design) */
+/* Header Announcement Badge */
 .badge-announcement {
   font-family: var(--font-mori);
-  background-color: #F3E8FF;
-  color: #7E22CE;
+  background-color: #FFF7ED;
+  color: #E8652B;
+  border: 1px solid #FFEDD5;
   font-size: 0.875rem;
-  font-weight: 500;
+  font-weight: 600;
   padding: 0.375rem 0.875rem;
   border-radius: 9999px;
   display: inline-flex;
@@ -234,7 +235,7 @@
 }
 
 .badge-announcement:hover {
-  background-color: #E9D5FF;
+  background-color: #FFEDD5;
 }
 
 @layer utilities {

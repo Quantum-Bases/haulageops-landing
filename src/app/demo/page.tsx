@@ -138,25 +138,25 @@ const faqs = [
 export default function DemoPage() {
   return (
     <MainLayout showCta={false}>
-      <section className="pt-24 pb-16 bg-gradient-to-b from-[#FFF9F5] to-white">
+      <section className="pt-24 pb-16 bg-gradient-to-b from-neutral-50/80 via-white to-white border-b border-neutral-200">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <nav className="flex items-center gap-2 text-xs text-[#64748B] mb-6">
+          <nav className="flex items-center gap-2 text-xs text-neutral-500 mb-6">
             <Link href="/" className="hover:text-[#E8652B]">Home</Link>
             <ChevronRight className="h-3 w-3" />
-            <span className="text-[#0F172A] font-medium">Book a Demo</span>
+            <span className="text-neutral-900 font-medium">Book a Demo</span>
           </nav>
-          <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-[#E8652B] bg-[#FFF0E6] mb-4">
+          <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-[#E8652B] bg-orange-50 border border-orange-200 mb-4">
             20-Minute Demo
           </span>
-          <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-[#0F172A] max-w-4xl leading-[1.1]">
+          <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-neutral-900 max-w-4xl leading-[1.1]">
             See your real operating workflow on HaulageOps.
           </h1>
-          <p className="mt-6 text-lg text-[#475569] max-w-3xl leading-relaxed">
+          <p className="mt-6 text-lg text-neutral-600 max-w-3xl leading-relaxed">
             Not a generic walkthrough. We run through a job the way your operation actually works — from creation through to driver assignment, POD, client portal view, invoice, and Xero sync.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             {kickerPills.map((pill) => (
-              <span key={pill} className="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-[#E8652B] bg-[#FFF0E6]">
+              <span key={pill} className="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-[#E8652B] bg-orange-50 border border-orange-200">
                 {pill}
               </span>
             ))}
@@ -169,16 +169,16 @@ export default function DemoPage() {
           <div className="grid lg:grid-cols-2 gap-12">
             <div>
               <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">What the demo covers</span>
-              <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">One end-to-end job. Every step of the workflow.</h2>
-              <p className="mt-4 text-sm text-[#475569] leading-relaxed">
+              <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">One end-to-end job. Every step of the workflow.</h2>
+              <p className="mt-4 text-sm text-neutral-600 leading-relaxed">
                 The demo follows a single job from creation through to Xero-synced invoice — the same path your dispatchers, drivers, subcontractors and clients travel every day. We move through each stage so you can see how the pieces connect, then slow down on the parts most relevant to your operation.
               </p>
               <div className="mt-8 grid sm:grid-cols-2 gap-6">
                 {lifecycleSteps.map((step) => (
-                  <div key={step.num} className="bg-white rounded-2xl p-6 border border-[#E2E8F0]">
+                  <div key={step.num} className="bg-white rounded-2xl p-6 border border-neutral-200">
                     <span className="text-xs font-bold tracking-widest text-[#E8652B]">{step.num}</span>
-                    <h3 className="mt-2 font-bold text-[#0F172A]">{step.title}</h3>
-                    <p className="mt-2 text-sm text-[#475569] leading-relaxed">
+                    <h3 className="mt-2 font-bold text-neutral-900">{step.title}</h3>
+                    <p className="mt-2 text-sm text-neutral-600 leading-relaxed">
                       {step.before}
                       {step.href && (
                         <Link href={step.href} className="text-[#E8652B] hover:underline font-medium">{step.linkText}</Link>
@@ -190,51 +190,51 @@ export default function DemoPage() {
               </div>
             </div>
             <div>
-              <div className="rounded-2xl bg-[#0D1525] border border-[#1E293B] overflow-hidden">
-                <div className="flex items-center gap-2 px-5 py-3 bg-[#1E293B]">
+              <div className="rounded-2xl bg-neutral-900 border-y border-neutral-800 border border-neutral-800 overflow-hidden">
+                <div className="flex items-center gap-2 px-5 py-3 bg-neutral-800">
                   <span className="h-2.5 w-2.5 rounded-full bg-[#E8652B]" />
                   <span className="h-2.5 w-2.5 rounded-full bg-[#94A3B8]" />
                   <span className="h-2.5 w-2.5 rounded-full bg-[#475569]" />
-                  <span className="ml-3 text-xs font-semibold text-[#CBD5E1]">Demo walkthrough — job lifecycle view</span>
+                  <span className="ml-3 text-xs font-semibold text-neutral-300">Demo walkthrough — job lifecycle view</span>
                 </div>
                 <div className="p-6">
-                  <p className="text-sm text-[#94A3B8] leading-relaxed">
+                  <p className="text-sm text-neutral-400 leading-relaxed">
                     Screenshot sequence: left panel shows dispatch board with one active job highlighted in orange; centre shows driver app POD capture screen with photo field, docket upload, and signature pad; right panel shows client portal invoice view with Paid status badge synced from Xero. Arrows connecting the three views left to right, labelled: Dispatch — Driver — Client.
                   </p>
                 </div>
               </div>
-              <div className="rounded-2xl border border-[#FED7AA] bg-[#FFF8F0] p-6 mt-6">
-                <h3 className="font-bold text-[#92400E]">Who should attend the demo</h3>
-                <p className="mt-2 text-sm text-[#78350F] leading-relaxed">
+              <div className="rounded-2xl border border-orange-200 bg-[#FFF8F0] p-6 mt-6">
+                <h3 className="font-bold text-neutral-900">Who should attend the demo</h3>
+                <p className="mt-2 text-sm text-neutral-600 leading-relaxed">
                   The demo works best when the people who actually run the operation are in the room — not just the person evaluating software.
                 </p>
                 <ul className="mt-4 space-y-2.5">
                   {attendPoints.map((item) => (
-                    <li key={item} className="flex items-start gap-2 text-sm text-[#78350F]">
+                    <li key={item} className="flex items-start gap-2 text-sm text-neutral-600">
                       <Check className="h-4 w-4 text-[#D97706] shrink-0 mt-0.5" />
                       <span>{item}</span>
                     </li>
                   ))}
                 </ul>
-                <p className="mt-4 text-sm text-[#92400E]">30 minutes of your team's time is enough to know whether this fits your operation.</p>
+                <p className="mt-4 text-sm text-neutral-900">30 minutes of your team's time is enough to know whether this fits your operation.</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="py-16 bg-[#F8FAFC]">
+      <section className="py-16 bg-neutral-50/50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Before the demo</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A]">What to have ready — and what we'll ask.</h2>
-          <p className="mt-4 text-[#475569] leading-relaxed max-w-2xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900">What to have ready — and what we'll ask.</h2>
+          <p className="mt-4 text-neutral-600 leading-relaxed max-w-2xl">
             You don't need a detailed brief. But having a few specifics in mind means we can make the demo relevant to your situation rather than generic.
           </p>
           <div className="mt-10 grid md:grid-cols-3 gap-6">
             {prepCards.map((card) => (
-              <div key={card.title} className="bg-white rounded-2xl p-6 border border-[#E2E8F0]">
-                <h3 className="text-lg font-bold text-[#0F172A]">{card.title}</h3>
-                <p className="mt-3 text-sm text-[#475569] leading-relaxed">{card.p}</p>
+              <div key={card.title} className="bg-white rounded-2xl p-6 border border-neutral-200">
+                <h3 className="text-lg font-bold text-neutral-900">{card.title}</h3>
+                <p className="mt-3 text-sm text-neutral-600 leading-relaxed">{card.p}</p>
               </div>
             ))}
           </div>
@@ -246,32 +246,32 @@ export default function DemoPage() {
           <div className="grid lg:grid-cols-2 gap-12">
             <div>
               <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Request your demo</span>
-              <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">20 minutes on a video call. Recorded if that's useful.</h2>
-              <p className="mt-4 text-sm text-[#475569] leading-relaxed">
+              <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">20 minutes on a video call. Recorded if that's useful.</h2>
+              <p className="mt-4 text-sm text-neutral-600 leading-relaxed">
                 Fill in the form and we'll confirm a time within one business day. The demo runs on video call — Zoom, Teams, Google Meet, whatever works for your team. We can record it if you want to share it internally or revisit specific segments.
               </p>
-              <p className="mt-4 text-sm text-[#475569] leading-relaxed">
+              <p className="mt-4 text-sm text-neutral-600 leading-relaxed">
                 After the demo we'll send a written proposal within 24 hours — covering the plan recommendation, setup fee, monthly subscription, and a 2–4 week implementation timeline. No pressure to decide immediately.
               </p>
-              <div className="rounded-2xl border border-[#BBF7D0] bg-[#F0FDF4] p-6 mt-6">
-                <p className="font-bold text-[#166534]">What happens after the demo</p>
+              <div className="rounded-2xl border border-neutral-200 bg-white p-6 mt-6">
+                <p className="font-bold text-neutral-900">What happens after the demo</p>
                 <ul className="mt-3 space-y-2.5">
                   {afterDemoPoints.map((item) => (
-                    <li key={item} className="flex items-start gap-2 text-sm text-[#166534]">
-                      <Check className="h-4 w-4 text-[#16A34A] shrink-0 mt-0.5" />
+                    <li key={item} className="flex items-start gap-2 text-sm text-neutral-900">
+                      <Check className="h-4 w-4 text-[#E8652B] shrink-0 mt-0.5" />
                       <span>{item}</span>
                     </li>
                   ))}
                 </ul>
               </div>
-              <p className="mt-6 text-sm text-[#64748B]">
+              <p className="mt-6 text-sm text-neutral-500">
                 See the <Link href="/implementation" className="text-[#E8652B] hover:underline font-medium">implementation page</Link> for the full onboarding timeline, or review <Link href="/pricing" className="text-[#E8652B] hover:underline font-medium">pricing</Link> before the call.
               </p>
             </div>
             <div>
-              <div className="bg-white rounded-2xl p-8 border border-[#E2E8F0]">
-                <h3 className="text-xl font-bold text-[#0F172A] mb-2">Book your 30-minute demo</h3>
-                <p className="text-sm text-[#475569] mb-6">Select a convenient time directly on Calendly or request a custom slot.</p>
+              <div className="bg-white rounded-2xl p-8 border border-neutral-200">
+                <h3 className="text-xl font-bold text-neutral-900 mb-2">Book your 30-minute demo</h3>
+                <p className="text-sm text-neutral-600 mb-6">Select a convenient time directly on Calendly or request a custom slot.</p>
                 <div className="space-y-4">
                   <a
                     href="https://calendly.com/admin-haulageops/30min"
@@ -290,24 +290,24 @@ export default function DemoPage() {
                   </div>
                   <form action="https://calendly.com/admin-haulageops/30min" target="_blank" method="get">
                     <div className="mb-4">
-                      <label htmlFor="name" className="block text-sm font-semibold text-[#0F172A] mb-1.5">Full name *</label>
-                      <input id="name" type="text" name="name" required placeholder="Your name" className="w-full px-3.5 py-2.5 border border-[#CBD5E1] rounded-lg text-sm text-[#0F172A] focus:outline-none focus:ring-2 focus:ring-[#E8652B]/40" />
+                      <label htmlFor="name" className="block text-sm font-semibold text-neutral-900 mb-1.5">Full name *</label>
+                      <input id="name" type="text" name="name" required placeholder="Your name" className="w-full px-3.5 py-2.5 border border-neutral-300 rounded-lg text-sm text-neutral-900 focus:outline-none focus:ring-2 focus:ring-[#E8652B]/40" />
                     </div>
                     <div className="mb-4">
-                      <label htmlFor="company" className="block text-sm font-semibold text-[#0F172A] mb-1.5">Company name *</label>
-                      <input id="company" type="text" name="company" required placeholder="Your company" className="w-full px-3.5 py-2.5 border border-[#CBD5E1] rounded-lg text-sm text-[#0F172A] focus:outline-none focus:ring-2 focus:ring-[#E8652B]/40" />
+                      <label htmlFor="company" className="block text-sm font-semibold text-neutral-900 mb-1.5">Company name *</label>
+                      <input id="company" type="text" name="company" required placeholder="Your company" className="w-full px-3.5 py-2.5 border border-neutral-300 rounded-lg text-sm text-neutral-900 focus:outline-none focus:ring-2 focus:ring-[#E8652B]/40" />
                     </div>
                     <div className="mb-4">
-                      <label htmlFor="email" className="block text-sm font-semibold text-[#0F172A] mb-1.5">Work email *</label>
-                      <input id="email" type="email" name="email" required placeholder="you@company.com" className="w-full px-3.5 py-2.5 border border-[#CBD5E1] rounded-lg text-sm text-[#0F172A] focus:outline-none focus:ring-2 focus:ring-[#E8652B]/40" />
+                      <label htmlFor="email" className="block text-sm font-semibold text-neutral-900 mb-1.5">Work email *</label>
+                      <input id="email" type="email" name="email" required placeholder="you@company.com" className="w-full px-3.5 py-2.5 border border-neutral-300 rounded-lg text-sm text-neutral-900 focus:outline-none focus:ring-2 focus:ring-[#E8652B]/40" />
                     </div>
                     <div className="mb-4">
-                      <label htmlFor="phone" className="block text-sm font-semibold text-[#0F172A] mb-1.5">Phone number</label>
-                      <input id="phone" type="tel" name="phone" placeholder="+61 or +44 etc." className="w-full px-3.5 py-2.5 border border-[#CBD5E1] rounded-lg text-sm text-[#0F172A] focus:outline-none focus:ring-2 focus:ring-[#E8652B]/40" />
+                      <label htmlFor="phone" className="block text-sm font-semibold text-neutral-900 mb-1.5">Phone number</label>
+                      <input id="phone" type="tel" name="phone" placeholder="+61 or +44 etc." className="w-full px-3.5 py-2.5 border border-neutral-300 rounded-lg text-sm text-neutral-900 focus:outline-none focus:ring-2 focus:ring-[#E8652B]/40" />
                     </div>
                     <div className="mb-4">
-                      <label htmlFor="fleet_size" className="block text-sm font-semibold text-[#0F172A] mb-1.5">Approximate fleet size *</label>
-                      <select id="fleet_size" name="fleet_size" required defaultValue="" className="w-full px-3.5 py-2.5 border border-[#CBD5E1] rounded-lg text-sm text-[#0F172A] bg-white focus:outline-none focus:ring-2 focus:ring-[#E8652B]/40">
+                      <label htmlFor="fleet_size" className="block text-sm font-semibold text-neutral-900 mb-1.5">Approximate fleet size *</label>
+                      <select id="fleet_size" name="fleet_size" required defaultValue="" className="w-full px-3.5 py-2.5 border border-neutral-300 rounded-lg text-sm text-neutral-900 bg-white focus:outline-none focus:ring-2 focus:ring-[#E8652B]/40">
                         <option value="" disabled>Select fleet size</option>
                         {fleetSizeOptions.map((option) => (
                           <option key={option} value={option}>{option}</option>
@@ -315,18 +315,18 @@ export default function DemoPage() {
                       </select>
                     </div>
                     <div className="mb-6">
-                      <label htmlFor="current_system" className="block text-sm font-semibold text-[#0F172A] mb-1.5">Current system</label>
-                      <select id="current_system" name="current_system" defaultValue="" className="w-full px-3.5 py-2.5 border border-[#CBD5E1] rounded-lg text-sm text-[#0F172A] bg-white focus:outline-none focus:ring-2 focus:ring-[#E8652B]/40">
+                      <label htmlFor="current_system" className="block text-sm font-semibold text-neutral-900 mb-1.5">Current system</label>
+                      <select id="current_system" name="current_system" defaultValue="" className="w-full px-3.5 py-2.5 border border-neutral-300 rounded-lg text-sm text-neutral-900 bg-white focus:outline-none focus:ring-2 focus:ring-[#E8652B]/40">
                         <option value="" disabled>What are you using now?</option>
                         {currentSystemOptions.map((option) => (
                           <option key={option} value={option}>{option}</option>
                         ))}
                       </select>
                     </div>
-                    <Button type="submit" size="lg" className="w-full bg-[#0F172A] hover:bg-[#1E293B] text-white font-semibold">
+                    <Button type="submit" size="lg" className="w-full bg-neutral-900 hover:bg-neutral-800 text-white font-semibold">
                       Continue to Calendly
                     </Button>
-                    <p className="mt-3 text-xs text-[#64748B] text-center">No commitment required.</p>
+                    <p className="mt-3 text-xs text-neutral-500 text-center">No commitment required.</p>
                   </form>
                 </div>
               </div>
@@ -335,18 +335,18 @@ export default function DemoPage() {
         </div>
       </section>
 
-      <section className="py-16 bg-[#F8FAFC]">
+      <section className="py-16 bg-neutral-50/50">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Frequently asked questions</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A]">Demo questions answered.</h2>
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900">Demo questions answered.</h2>
           <div className="mt-8 space-y-3">
             {faqs.map((faq) => (
-              <details key={faq.q} className="group border border-[#E2E8F0] bg-white rounded-xl overflow-hidden">
-                <summary className="flex items-center justify-between gap-4 px-6 py-4 cursor-pointer font-semibold text-[#0F172A] text-sm list-none hover:bg-[#F8FAFC]">
+              <details key={faq.q} className="group border border-neutral-200 bg-white rounded-xl overflow-hidden">
+                <summary className="flex items-center justify-between gap-4 px-6 py-4 cursor-pointer font-semibold text-neutral-900 text-sm list-none hover:bg-neutral-50/50">
                   {faq.q}
-                  <ChevronRight className="h-4 w-4 text-[#94A3B8] shrink-0 group-open:rotate-90 transition-transform" />
+                  <ChevronRight className="h-4 w-4 text-neutral-400 shrink-0 group-open:rotate-90 transition-transform" />
                 </summary>
-                <div className="px-6 pb-5 text-sm text-[#475569] leading-relaxed border-t border-[#F1F5F9]">
+                <div className="px-6 pb-5 text-sm text-neutral-600 leading-relaxed border-t border-neutral-100">
                   <p className="pt-4">{faq.a}</p>
                 </div>
               </details>
@@ -355,11 +355,11 @@ export default function DemoPage() {
         </div>
       </section>
 
-      <section className="py-16 bg-[#0F172A]">
+      <section className="py-16 bg-neutral-900">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
           <div>
             <h2 className="text-2xl sm:text-3xl font-bold text-white">Ready to see HaulageOps on your workflow?</h2>
-            <p className="mt-2 text-[#94A3B8] text-sm leading-relaxed max-w-xl">
+            <p className="mt-2 text-neutral-400 text-sm leading-relaxed max-w-xl">
               Fill in the form above or explore the platform first. Either way, we'll work around your schedule.
             </p>
           </div>
@@ -369,7 +369,7 @@ export default function DemoPage() {
                 Explore the platform
               </Button>
             </Link>
-            <Link href="/pricing" className="text-[#94A3B8] hover:text-white underline text-sm font-semibold">
+            <Link href="/pricing" className="text-neutral-400 hover:text-white underline text-sm font-semibold">
               See pricing →
             </Link>
           </div>

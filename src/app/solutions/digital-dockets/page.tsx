@@ -184,28 +184,28 @@ export default function DigitalDocketsPage() {
   return (
     <MainLayout showCta={false}>
       {/* Breadcrumb */}
-      <div className="pt-24 pb-0 bg-[#FFF9F5]">
+      <div className="pt-24 pb-0 bg-neutral-50/70">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <nav className="flex items-center gap-2 text-xs text-[#64748B]">
+          <nav className="flex items-center gap-2 text-xs text-neutral-500">
             <Link href="/" className="hover:text-[#E8652B]">Home</Link>
             <ChevronRight className="h-3 w-3" />
             <Link href="/solutions" className="hover:text-[#E8652B]">Solutions</Link>
             <ChevronRight className="h-3 w-3" />
-            <span className="text-[#0F172A] font-medium">Digital Dockets</span>
+            <span className="text-neutral-900 font-medium">Digital Dockets</span>
           </nav>
         </div>
       </div>
 
       {/* HERO */}
-      <section className="pt-10 pb-20 bg-gradient-to-b from-[#FFF9F5] via-[#FFF5EE]/40 to-white">
+      <section className="pt-10 pb-20 bg-gradient-to-b from-neutral-50/80 via-white to-white border-b border-neutral-200">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-[#E8652B] bg-[#FFF0E6] mb-4 animate-in fade-in slide-in-from-bottom-4 animation-duration-700 fill-mode-both">
+          <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-[#E8652B] bg-orange-50 border border-orange-200 mb-4 animate-in fade-in slide-in-from-bottom-4 animation-duration-700 fill-mode-both">
             Digital Dockets for Haulage
           </span>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#0F172A] max-w-4xl leading-[1.1] animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-100 fill-mode-both">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-neutral-900 max-w-4xl leading-[1.1] animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-100 fill-mode-both">
             No more paper dockets. No more missing delivery records.
           </h1>
-          <p className="mt-6 text-lg sm:text-xl text-[#475569] max-w-3xl leading-relaxed animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-150 fill-mode-both">
+          <p className="mt-6 text-lg sm:text-xl text-neutral-600 max-w-3xl leading-relaxed animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-150 fill-mode-both">
             The HaulageOps driver app captures delivery photographs, customer signatures, and supporting documents at the delivery site. Each record is stored in Azure and attached to the job immediately — available for invoicing before the truck leaves the site.
           </p>
           <div className="mt-8 flex flex-wrap gap-3 animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-200 fill-mode-both">
@@ -215,15 +215,15 @@ export default function DigitalDocketsPage() {
               </Button>
             </Link>
             <Link href="/platform/driver-app">
-              <Button size="lg" variant="outline" className="border-[#E2E8F0] text-[#334155] hover:bg-[#F8FAFC]">
+              <Button size="lg" variant="outline" className="border-neutral-200 text-neutral-700 hover:bg-neutral-50/50">
                 Driver App Detail
               </Button>
             </Link>
           </div>
           <div className="mt-8 flex flex-wrap gap-2 animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-300 fill-mode-both">
             {heroKickers.map((pill) => (
-              <span key={pill} className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#F1F5F9] text-xs font-medium text-[#334155]">
-                <CheckCircle className="h-3.5 w-3.5 text-[#16A34A] shrink-0" />
+              <span key={pill} className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-neutral-100 text-xs font-medium text-neutral-700">
+                <CheckCircle className="h-3.5 w-3.5 text-[#E8652B] shrink-0" />
                 {pill}
               </span>
             ))}
@@ -232,13 +232,13 @@ export default function DigitalDocketsPage() {
       </section>
 
       {/* PROOF STRIP */}
-      <div className="bg-[#0F172A] py-5">
+      <div className="bg-neutral-900 py-5">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-center">
             {proofStrip.map((item) => (
               <div key={item.strong} className="flex flex-col items-center justify-center gap-1">
                 <span className="text-white font-bold text-sm">{item.strong}</span>
-                <span className="text-[#94A3B8] text-xs">{item.sub}</span>
+                <span className="text-neutral-400 text-xs">{item.sub}</span>
               </div>
             ))}
           </div>
@@ -249,30 +249,30 @@ export default function DigitalDocketsPage() {
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">What a Docket Is</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             The delivery record that connects the job to the invoice
           </h2>
           <div className="mt-8 grid lg:grid-cols-2 gap-10 items-start">
             <div>
-              <p className="text-[#475569] leading-relaxed">
+              <p className="text-neutral-600 leading-relaxed">
                 In haulage, a docket is the delivery record that confirms a job was completed — what was delivered, where, when, and who received it. In bulk haulage, it is often a scale ticket showing the weight of material delivered, a site sign-off from the receiving party, or a combination of both. The docket is the evidence that the work was done and the basis on which the invoice is issued.
               </p>
-              <p className="mt-4 text-[#475569] leading-relaxed">
+              <p className="mt-4 text-neutral-600 leading-relaxed">
                 Without a docket, you have a driver&apos;s word that the delivery happened. That is often good enough for the invoice, until a client disputes a charge. At that point, the paper docket — if it can be found — is the only evidence you have. If it is lost, the dispute is harder. If it is illegible, it may as well be lost. If it was for the wrong job, it actively makes things worse.
               </p>
-              <p className="mt-4 text-[#475569] leading-relaxed">
+              <p className="mt-4 text-neutral-600 leading-relaxed">
                 Digital dockets in HaulageOps are the direct replacement: the same information, captured on the driver&apos;s mobile device at the delivery site, stored in Azure, attached to the job record, and visible in the client portal — without any of the delays or risks that come with paper.
               </p>
             </div>
             {/* Paper vs digital visual spec */}
-            <div className="rounded-2xl border border-[#E2E8F0] bg-[#0D1525] overflow-hidden">
-              <div className="px-5 py-3 bg-[#1E293B] text-[#E8652B] text-xs font-bold uppercase tracking-widest">
+            <div className="rounded-2xl border border-neutral-200 bg-neutral-900 border-y border-neutral-800 overflow-hidden">
+              <div className="px-5 py-3 bg-neutral-800 text-[#E8652B] text-xs font-bold uppercase tracking-widest">
                 Paper Docket vs Digital Docket
               </div>
               <div className="p-4 sm:p-5 grid sm:grid-cols-2 gap-3">
-                <div className="bg-[#1E293B] border border-[#334155] rounded-lg p-3">
+                <div className="bg-neutral-800 border border-[#334155] rounded-lg p-3">
                   <p className="text-[#F87171] text-[10px] uppercase tracking-wider font-bold mb-2">Paper workflow</p>
-                  <p className="text-[10px] text-[#94A3B8] leading-relaxed">Handwritten at site → stored in cab → arrives at depot days later → admin files it.</p>
+                  <p className="text-[10px] text-neutral-400 leading-relaxed">Handwritten at site → stored in cab → arrives at depot days later → admin files it.</p>
                   <ul className="mt-2 space-y-1 text-[9px] text-[#F87171]">
                     <li>Lost in cab</li>
                     <li>Arrives three days late</li>
@@ -280,9 +280,9 @@ export default function DigitalDocketsPage() {
                     <li>Wrong job reference</li>
                   </ul>
                 </div>
-                <div className="bg-[#1E293B] border border-[#334155] rounded-lg p-3">
+                <div className="bg-neutral-800 border border-[#334155] rounded-lg p-3">
                   <p className="text-[#4ADE80] text-[10px] uppercase tracking-wider font-bold mb-2">Digital workflow</p>
-                  <p className="text-[10px] text-[#94A3B8] leading-relaxed">Photo + signature captured in app at site → instant upload to Azure → attached to job record.</p>
+                  <p className="text-[10px] text-neutral-400 leading-relaxed">Photo + signature captured in app at site → instant upload to Azure → attached to job record.</p>
                   <ul className="mt-2 space-y-1 text-[9px] text-[#4ADE80]">
                     <li>Zero handling time</li>
                     <li>Available in admin panel immediately</li>
@@ -297,17 +297,17 @@ export default function DigitalDocketsPage() {
       </section>
 
       {/* THE PAPER DOCKET PROBLEM */}
-      <section className="py-20 bg-[#F8FAFC]">
+      <section className="py-20 bg-neutral-50/50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">The Paper Docket Problem</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             Why paper dockets cause invoice delays even when the job runs perfectly
           </h2>
           <div className="mt-10 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {paperProblems.map((card) => (
-              <div key={card.title} className="bg-white rounded-2xl p-6 border border-[#E2E8F0]">
-                <h3 className="font-bold text-[#0F172A] mb-2">{card.title}</h3>
-                <p className="text-sm text-[#475569] leading-relaxed">{card.desc}</p>
+              <div key={card.title} className="bg-white rounded-2xl p-6 border border-neutral-200">
+                <h3 className="font-bold text-neutral-900 mb-2">{card.title}</h3>
+                <p className="text-sm text-neutral-600 leading-relaxed">{card.desc}</p>
               </div>
             ))}
           </div>
@@ -318,12 +318,12 @@ export default function DigitalDocketsPage() {
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">How Digital Dockets Work</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             Captured at the site. Stored in Azure. Attached to the job before the truck moves.
           </h2>
           <div className="mt-8 grid lg:grid-cols-2 gap-10 items-start">
             <div>
-              <p className="text-[#475569] leading-relaxed">
+              <p className="text-neutral-600 leading-relaxed">
                 When a driver completes a delivery in the HaulageOps driver app, the POD capture workflow begins automatically. The driver does not need to navigate to a separate section or look up a job reference — they are already in the correct job in the app.
               </p>
               <div className="mt-6 space-y-5">
@@ -331,12 +331,12 @@ export default function DigitalDocketsPage() {
                   const Icon = step.icon;
                   return (
                     <div key={step.label} className="flex items-start gap-3">
-                      <span className="inline-flex items-center justify-center h-9 w-9 rounded-lg bg-[#FFF0E6] shrink-0">
+                      <span className="inline-flex items-center justify-center h-9 w-9 rounded-lg bg-orange-50 border border-orange-200 text-[#E8652B] shrink-0">
                         <Icon className="h-5 w-5 text-[#E8652B]" />
                       </span>
                       <div>
-                        <h3 className="font-semibold text-[#0F172A] text-sm">{step.label}</h3>
-                        <p className="mt-1 text-sm text-[#475569] leading-relaxed">{step.detail}</p>
+                        <h3 className="font-semibold text-neutral-900 text-sm">{step.label}</h3>
+                        <p className="mt-1 text-sm text-neutral-600 leading-relaxed">{step.detail}</p>
                       </div>
                     </div>
                   );
@@ -344,25 +344,25 @@ export default function DigitalDocketsPage() {
               </div>
             </div>
             {/* Driver app capture visual spec */}
-            <div className="rounded-2xl border border-[#E2E8F0] bg-[#0D1525] overflow-hidden">
-              <div className="px-5 py-3 bg-[#1E293B] text-[#E8652B] text-xs font-bold uppercase tracking-widest">
+            <div className="rounded-2xl border border-neutral-200 bg-neutral-900 border-y border-neutral-800 overflow-hidden">
+              <div className="px-5 py-3 bg-neutral-800 text-[#E8652B] text-xs font-bold uppercase tracking-widest">
                 Driver App — Digital Docket Capture
               </div>
               <div className="p-4 sm:p-5 space-y-3">
                 {appScreens.map((screen, i) => {
                   const Icon = screen.icon;
                   return (
-                    <div key={screen.title} className="bg-[#1E293B] border border-[#334155] rounded-lg p-3">
+                    <div key={screen.title} className="bg-neutral-800 border border-[#334155] rounded-lg p-3">
                       <div className="flex items-center gap-2">
-                        <span className="text-[9px] text-[#64748B] font-mono">Screen {i + 1}</span>
+                        <span className="text-[9px] text-neutral-500 font-mono">Screen {i + 1}</span>
                         <Icon className="h-3.5 w-3.5 text-[#E8652B]" />
                         <span className="text-white text-[11px] font-semibold">{screen.title}</span>
                       </div>
-                      <p className="text-[#94A3B8] text-[10px] mt-1 leading-relaxed">{screen.body}</p>
+                      <p className="text-neutral-400 text-[10px] mt-1 leading-relaxed">{screen.body}</p>
                     </div>
                   );
                 })}
-                <p className="text-[10px] text-[#475569]">
+                <p className="text-[10px] text-neutral-600">
                   Offline mode indicator visible when signal is unavailable — captures queue and upload automatically.
                 </p>
               </div>
@@ -372,35 +372,35 @@ export default function DigitalDocketsPage() {
       </section>
 
       {/* WHERE DIGITAL DOCKETS ARE VISIBLE */}
-      <section className="py-20 bg-[#F8FAFC]">
+      <section className="py-20 bg-neutral-50/50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Where Digital Dockets Are Visible</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             The docket is already there when you need it — in every portal that needs it
           </h2>
           <div className="mt-10 grid md:grid-cols-2 gap-6">
-            <div className="bg-white rounded-2xl p-7 border border-[#E2E8F0]">
-              <h3 className="font-bold text-[#0F172A] text-lg">Admin &amp; Dispatch Panel</h3>
-              <p className="mt-3 text-sm text-[#475569] leading-relaxed">
+            <div className="bg-white rounded-2xl p-7 border border-neutral-200">
+              <h3 className="font-bold text-neutral-900 text-lg">Admin &amp; Dispatch Panel</h3>
+              <p className="mt-3 text-sm text-neutral-600 leading-relaxed">
                 The moment a docket is captured and synced, it is visible in the admin panel against the job record. Dispatchers and billing admin can see the POD status on every job without asking the driver. When it is time to generate an invoice, the docket is already attached — there is no chase, no wait, no manual filing step between delivery and billing.
               </p>
               <ul className="mt-5 space-y-3">
                 {["POD status visible on the job record immediately after sync", "All three capture types — photo, signature, document — accessible from the job", "Download or view in browser — no separate file access required", "Available for invoice generation without any manual step"].map((item) => (
-                  <li key={item} className="flex items-start gap-2 text-sm text-[#334155]">
+                  <li key={item} className="flex items-start gap-2 text-sm text-neutral-700">
                     <CheckCircle className="h-4 w-4 text-[#E8652B] shrink-0 mt-0.5" />
                     <span>{item}</span>
                   </li>
                 ))}
               </ul>
             </div>
-            <div className="bg-white rounded-2xl p-7 border border-[#E2E8F0]">
-              <h3 className="font-bold text-[#0F172A] text-lg">Client Portal</h3>
-              <p className="mt-3 text-sm text-[#475569] leading-relaxed">
+            <div className="bg-white rounded-2xl p-7 border border-neutral-200">
+              <h3 className="font-bold text-neutral-900 text-lg">Client Portal</h3>
+              <p className="mt-3 text-sm text-neutral-600 leading-relaxed">
                 Your clients have access to their own delivery records through the client portal. When a docket is captured against one of their jobs, it becomes visible in their portal alongside the job detail and — once generated — the invoice. Clients do not need to call your office for a copy of the docket. They see it the same day the delivery was made.
               </p>
               <ul className="mt-5 space-y-3">
                 {["Client sees their own dockets in self-service portal", "POD linked to the job record and the invoice", "Delivery photograph, signature, and any uploaded documents all accessible", "Reduces inbound queries from clients requesting POD copies"].map((item) => (
-                  <li key={item} className="flex items-start gap-2 text-sm text-[#334155]">
+                  <li key={item} className="flex items-start gap-2 text-sm text-neutral-700">
                     <CheckCircle className="h-4 w-4 text-[#E8652B] shrink-0 mt-0.5" />
                     <span>{item}</span>
                   </li>
@@ -409,38 +409,38 @@ export default function DigitalDocketsPage() {
             </div>
           </div>
           {/* Admin panel job record with POD */}
-          <div className="mt-10 rounded-2xl border border-[#E2E8F0] bg-[#0D1525] overflow-hidden">
-            <div className="px-5 py-3 bg-[#1E293B] text-[#E8652B] text-xs font-bold uppercase tracking-widest">
+          <div className="mt-10 rounded-2xl border border-neutral-200 bg-neutral-900 border-y border-neutral-800 overflow-hidden">
+            <div className="px-5 py-3 bg-neutral-800 text-[#E8652B] text-xs font-bold uppercase tracking-widest">
               Admin Panel — Job Record with POD Attached
             </div>
             <div className="p-4 sm:p-5 space-y-4">
               <div className="flex flex-wrap items-center justify-between gap-3">
                 <div>
                   <p className="text-white text-sm font-semibold">JOB-1844 — Apex Civil</p>
-                  <p className="text-[#94A3B8] text-[10px]">Driver: L. Chen · Status: Delivered · Completed 14:35</p>
+                  <p className="text-neutral-400 text-[10px]">Driver: L. Chen · Status: Delivered · Completed 14:35</p>
                 </div>
                 <span className="px-2.5 py-1 rounded bg-[#E8652B] text-white text-[10px] font-semibold">Generate Invoice — active</span>
               </div>
               <div>
-                <p className="text-[#94A3B8] text-[10px] uppercase tracking-wider mb-2">POD — 3 items attached</p>
+                <p className="text-neutral-400 text-[10px] uppercase tracking-wider mb-2">POD — 3 items attached</p>
                 <div className="grid sm:grid-cols-3 gap-3">
                   {adminPods.map((pod) => {
                     const Icon = pod.icon;
                     return (
-                      <div key={pod.label} className="bg-[#1E293B] border border-[#334155] rounded-lg p-3">
+                      <div key={pod.label} className="bg-neutral-800 border border-[#334155] rounded-lg p-3">
                         <div className="flex items-center gap-2">
-                          <Icon className="h-3.5 w-3.5 text-[#64748B]" />
+                          <Icon className="h-3.5 w-3.5 text-neutral-500" />
                           <span className={`px-1.5 py-0.5 rounded text-[9px] font-semibold ${pod.cls}`}>Attached</span>
                         </div>
                         <p className="text-white text-[10px] font-semibold mt-2">{pod.label}</p>
-                        <p className="text-[#64748B] text-[9px] mt-0.5">{pod.meta}</p>
-                        <Download className="h-3 w-3 text-[#64748B] mt-2" />
+                        <p className="text-neutral-500 text-[9px] mt-0.5">{pod.meta}</p>
+                        <Download className="h-3 w-3 text-neutral-500 mt-2" />
                       </div>
                     );
                   })}
                 </div>
               </div>
-              <p className="text-[10px] text-[#475569]">
+              <p className="text-[10px] text-neutral-600">
                 POD present and complete — invoice can be generated directly from the job record, no manual step between delivery and billing.
               </p>
             </div>
@@ -452,13 +452,13 @@ export default function DigitalDocketsPage() {
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Paper vs Digital</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             What changes when you stop relying on paper dockets
           </h2>
           <div className="mt-10 overflow-x-auto">
             <table className="w-full text-sm border-collapse">
               <thead>
-                <tr className="bg-[#0F172A] text-white">
+                <tr className="bg-neutral-900 text-white">
                   <th className="text-left px-5 py-3 font-semibold rounded-tl-xl">Scenario</th>
                   <th className="text-left px-5 py-3 font-semibold">Paper Docket</th>
                   <th className="text-left px-5 py-3 font-semibold rounded-tr-xl text-[#E8652B]">HaulageOps Digital Docket</th>
@@ -466,10 +466,10 @@ export default function DigitalDocketsPage() {
               </thead>
               <tbody>
                 {comparisonRows.map((row, i) => (
-                  <tr key={row.scenario} className={i % 2 === 0 ? "bg-white" : "bg-[#F8FAFC]"}>
-                    <td className="px-5 py-3 text-[#0F172A] font-medium border-b border-[#E2E8F0]">{row.scenario}</td>
-                    <td className="px-5 py-3 text-[#64748B] border-b border-[#E2E8F0]">{row.paper}</td>
-                    <td className="px-5 py-3 text-[#16A34A] font-semibold border-b border-[#E2E8F0]">{row.digital}</td>
+                  <tr key={row.scenario} className={i % 2 === 0 ? "bg-white" : "bg-neutral-50/50"}>
+                    <td className="px-5 py-3 text-neutral-900 font-medium border-b border-neutral-200">{row.scenario}</td>
+                    <td className="px-5 py-3 text-neutral-500 border-b border-neutral-200">{row.paper}</td>
+                    <td className="px-5 py-3 text-[#E8652B] font-semibold border-b border-neutral-200">{row.digital}</td>
                   </tr>
                 ))}
               </tbody>
@@ -479,20 +479,20 @@ export default function DigitalDocketsPage() {
       </section>
 
       {/* FAQ */}
-      <section className="py-20 bg-[#F8FAFC]">
+      <section className="py-20 bg-neutral-50/50">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Frequently Asked Questions</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A]">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900">
             Digital dockets — common questions.
           </h2>
           <div className="mt-8 space-y-3">
             {faqs.map((faq) => (
-              <details key={faq.q} className="group border border-[#E2E8F0] bg-white rounded-xl overflow-hidden">
-                <summary className="flex items-center justify-between gap-4 px-6 py-4 cursor-pointer font-semibold text-[#0F172A] text-sm list-none hover:bg-[#F8FAFC]">
+              <details key={faq.q} className="group border border-neutral-200 bg-white rounded-xl overflow-hidden">
+                <summary className="flex items-center justify-between gap-4 px-6 py-4 cursor-pointer font-semibold text-neutral-900 text-sm list-none hover:bg-neutral-50/50">
                   {faq.q}
-                  <ChevronRight className="h-4 w-4 text-[#94A3B8] shrink-0 group-open:rotate-90 transition-transform" />
+                  <ChevronRight className="h-4 w-4 text-neutral-400 shrink-0 group-open:rotate-90 transition-transform" />
                 </summary>
-                <div className="px-6 pb-5 text-sm text-[#475569] leading-relaxed border-t border-[#F1F5F9]">
+                <div className="px-6 pb-5 text-sm text-neutral-600 leading-relaxed border-t border-neutral-100">
                   <p className="pt-4">{faq.a}</p>
                 </div>
               </details>
@@ -505,18 +505,18 @@ export default function DigitalDocketsPage() {
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Related Pages</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             Digital dockets connect to these features and solutions
           </h2>
           <div className="mt-10 grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {relatedCards.map((card) => (
-              <div key={card.title} className="bg-[#F8FAFC] rounded-2xl p-6 border border-[#E2E8F0]">
-                <h3 className="font-bold text-[#0F172A] mb-2">
+              <div key={card.title} className="bg-neutral-50/50 rounded-2xl p-6 border border-neutral-200">
+                <h3 className="font-bold text-neutral-900 mb-2">
                   <Link href={card.href} className="hover:text-[#E8652B] transition-colors">
                     {card.title}
                   </Link>
                 </h3>
-                <p className="text-sm text-[#475569] leading-relaxed">{card.desc}</p>
+                <p className="text-sm text-neutral-600 leading-relaxed">{card.desc}</p>
                 <Link href={card.href} className="mt-3 inline-flex items-center gap-1 text-sm text-[#E8652B] hover:underline font-medium">
                   {card.linkLabel} <ArrowRight className="h-3.5 w-3.5" />
                 </Link>
@@ -527,11 +527,11 @@ export default function DigitalDocketsPage() {
       </section>
 
       {/* CTA BAND */}
-      <section className="py-16 bg-[#0F172A]">
+      <section className="py-16 bg-neutral-900">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
           <div>
             <h2 className="text-2xl sm:text-3xl font-bold text-white">See digital docket capture in a 20-minute demo</h2>
-            <p className="mt-2 text-[#94A3B8] text-sm leading-relaxed max-w-xl">
+            <p className="mt-2 text-neutral-400 text-sm leading-relaxed max-w-xl">
               We will show you the driver app POD capture workflow and how a docket moves from the delivery site into the job record and invoice — in real time.
             </p>
           </div>

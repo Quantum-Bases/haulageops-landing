@@ -114,25 +114,25 @@ export function PlatformDriverAppPage() {
   return (
     <MainLayout showCta={false}>
       {/* Breadcrumb */}
-      <div className="pt-24 pb-0 bg-[#FFF9F5]">
+      <div className="pt-24 pb-0 bg-neutral-50/70">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <nav className="flex items-center gap-2 text-xs text-[#64748B]">
+          <nav className="flex items-center gap-2 text-xs text-neutral-500">
             <Link href="/" className="hover:text-[#E8652B]">Home</Link>
             <ChevronRight className="h-3 w-3" />
             <Link href="/platform" className="hover:text-[#E8652B]">Platform</Link>
             <ChevronRight className="h-3 w-3" />
-            <span className="text-[#0F172A] font-medium">Driver App</span>
+            <span className="text-neutral-900 font-medium">Driver App</span>
           </nav>
         </div>
       </div>
 
       {/* HERO */}
-      <section className="pt-10 pb-20 bg-gradient-to-b from-[#FFF9F5] via-[#FFF5EE]/40 to-white">
+      <section className="pt-10 pb-20 bg-gradient-to-b from-neutral-50/80 via-white to-white border-b border-neutral-200">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <motion.span
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
-            className="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-[#E8652B] bg-[#FFF0E6] mb-4"
+            className="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-[#E8652B] bg-orange-50 border border-orange-200 mb-4"
           >
             Driver App
           </motion.span>
@@ -140,7 +140,7 @@ export function PlatformDriverAppPage() {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.05 }}
-            className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#0F172A] max-w-4xl leading-[1.1]"
+            className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-neutral-900 max-w-4xl leading-[1.1]"
           >
             The driver app that works where your trucks work — including offline.
           </motion.h1>
@@ -148,7 +148,7 @@ export function PlatformDriverAppPage() {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="mt-6 text-lg sm:text-xl text-[#475569] max-w-3xl leading-relaxed"
+            className="mt-6 text-lg sm:text-xl text-neutral-600 max-w-3xl leading-relaxed"
           >
             iOS and Android. Production-ready for bulk haulage. Job assignments, status updates, proof of delivery capture and break records — all in a single mobile workflow that synchronises when connectivity returns.
           </motion.p>
@@ -164,7 +164,7 @@ export function PlatformDriverAppPage() {
               </Button>
             </Link>
             <Link href="/solutions/proof-of-delivery">
-              <Button size="lg" variant="outline" className="border-[#E2E8F0] text-[#334155] hover:bg-[#F8FAFC]">
+              <Button size="lg" variant="outline" className="border-neutral-200 text-neutral-700 hover:bg-neutral-50/50">
                 Proof of Delivery
               </Button>
             </Link>
@@ -178,8 +178,8 @@ export function PlatformDriverAppPage() {
               "Photo + signature POD",
               "Break & rest recording",
             ].map((pill) => (
-              <span key={pill} className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#F1F5F9] text-xs font-medium text-[#334155]">
-                <CheckCircle className="h-3.5 w-3.5 text-[#16A34A] shrink-0" />
+              <span key={pill} className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-neutral-100 text-xs font-medium text-neutral-700">
+                <CheckCircle className="h-3.5 w-3.5 text-[#E8652B] shrink-0" />
                 {pill}
               </span>
             ))}
@@ -188,7 +188,7 @@ export function PlatformDriverAppPage() {
       </section>
 
       {/* PROOF STRIP */}
-      <div className="bg-[#0F172A] py-5">
+      <div className="bg-neutral-900 py-5">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 text-center">
             {[
@@ -201,7 +201,7 @@ export function PlatformDriverAppPage() {
             ].map((item) => (
               <div key={item.strong} className="flex flex-col gap-0.5">
                 <span className="text-white font-bold text-sm">{item.strong}</span>
-                <span className="text-[#94A3B8] text-xs">{item.sub}</span>
+                <span className="text-neutral-400 text-xs">{item.sub}</span>
               </div>
             ))}
           </div>
@@ -213,10 +213,10 @@ export function PlatformDriverAppPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           {/* Row 1: Centered title */}
           <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-            <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-[#E8652B] bg-[#FFF0E6] mb-3">
+            <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-[#E8652B] bg-orange-50 border border-orange-200 mb-3">
               Built for Bulk Haulage
             </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0F172A] leading-tight">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-neutral-900 leading-tight">
               Most driver apps are built for parcel fleets. This one is built for bulk haulage.
             </h2>
           </div>
@@ -225,14 +225,14 @@ export function PlatformDriverAppPage() {
           <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
             {/* Column 1: Intro + Lifecycle paragraph + What the driver app does card */}
             <div className="flex flex-col gap-6">
-              <p className="text-[#475569] leading-relaxed">
+              <p className="text-neutral-600 leading-relaxed">
                 Parcel delivery apps are built around address lists, barcode scans and route optimisation for metro areas. Bulk haulage looks nothing like that. Your drivers operate between quarries, earthworks sites, construction yards and rural locations — often without reliable mobile signal. The material being moved, the loading instructions, the site contact and the POD expectations are different from a courier run.
               </p>
-              <p className="text-[#475569] leading-relaxed">
+              <p className="text-neutral-600 leading-relaxed">
                 The HaulageOps driver app is built around the bulk haulage job lifecycle: receive the job, navigate to the pickup, confirm loading, transit to the delivery site, capture proof of delivery with photo and customer signature, and record breaks. Every step is designed for a driver sitting in a cab, often on rough ground, with a phone rather than a purpose-built device.
               </p>
-              <div className="bg-[#F8FAFC] rounded-2xl p-8 border border-[#E2E8F0]">
-                <h3 className="text-xl font-bold text-[#0F172A] mb-5">What the driver app does</h3>
+              <div className="bg-neutral-50/50 rounded-2xl p-8 border border-neutral-200">
+                <h3 className="text-xl font-bold text-neutral-900 mb-5">What the driver app does</h3>
                 <ul className="space-y-3">
                   {[
                     "Receives job assignments with push notification via Firebase FCM",
@@ -245,7 +245,7 @@ export function PlatformDriverAppPage() {
                     "Works offline — queues updates and syncs on reconnect",
                     "Multiple jobs visible — driver can see their full day's work",
                   ].map((item) => (
-                    <li key={item} className="flex items-start gap-2 text-sm text-[#334155]">
+                    <li key={item} className="flex items-start gap-2 text-sm text-neutral-700">
                       <CheckCircle className="h-4 w-4 text-[#E8652B] shrink-0 mt-0.5" />
                       <span>{item}</span>
                     </li>
@@ -285,21 +285,21 @@ export function PlatformDriverAppPage() {
       </section>
 
       {/* JOB STATUS WORKFLOW */}
-      <section className="py-20 bg-[#F8FAFC]">
+      <section className="py-20 bg-neutral-50/50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Job Status Workflow</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             Six status stages. Driver-initiated. Real-time on the dispatch board.
           </h2>
-          <p className="mt-4 text-[#475569] max-w-3xl leading-relaxed">
+          <p className="mt-4 text-neutral-600 max-w-3xl leading-relaxed">
             Every status update the driver makes appears on the dispatcher's board within seconds via the Socket.io real-time connection. No one needs to call the driver to find out where they are or what stage the job is at.
           </p>
           <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {statusSteps.map((step) => (
-              <div key={step.num} className="bg-white rounded-2xl p-6 border border-[#E2E8F0] shadow-sm">
+              <div key={step.num} className="bg-white rounded-2xl p-6 border border-neutral-200 shadow-sm">
                 <span className="text-3xl font-black text-[#E8652B]/20 leading-none">{step.num}</span>
-                <h3 className="mt-2 text-lg font-bold text-[#0F172A]">{step.title}</h3>
-                <p className="mt-2 text-sm text-[#475569] leading-relaxed">{step.desc}</p>
+                <h3 className="mt-2 text-lg font-bold text-neutral-900">{step.title}</h3>
+                <p className="mt-2 text-sm text-neutral-600 leading-relaxed">{step.desc}</p>
               </div>
             ))}
           </div>
@@ -310,15 +310,15 @@ export function PlatformDriverAppPage() {
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Offline Capability</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             Works without signal. Synchronises when connectivity returns.
           </h2>
-          <p className="mt-4 text-[#475569] max-w-3xl leading-relaxed">
+          <p className="mt-4 text-neutral-600 max-w-3xl leading-relaxed">
             Quarries, rural depots, earthworks sites and construction yards frequently have limited or no mobile coverage. A driver app that requires a constant connection is not a viable tool for bulk haulage. The HaulageOps driver app is built with offline capability confirmed in production.
           </p>
           <div className="mt-10 grid md:grid-cols-2 gap-8">
-            <div className="bg-[#F8FAFC] rounded-2xl p-8 border border-[#E2E8F0]">
-              <h3 className="text-xl font-bold text-[#0F172A] mb-3">What works without signal</h3>
+            <div className="bg-neutral-50/50 rounded-2xl p-8 border border-neutral-200">
+              <h3 className="text-xl font-bold text-neutral-900 mb-3">What works without signal</h3>
               <ul className="space-y-2.5">
                 {[
                   "View all assigned job details already loaded before losing signal",
@@ -327,18 +327,18 @@ export function PlatformDriverAppPage() {
                   "Record break and rest periods with timestamps",
                   "View site instructions and job notes already cached",
                 ].map((item) => (
-                  <li key={item} className="flex items-start gap-2 text-sm text-[#334155]">
-                    <CheckCircle className="h-4 w-4 text-[#16A34A] shrink-0 mt-0.5" />
+                  <li key={item} className="flex items-start gap-2 text-sm text-neutral-700">
+                    <CheckCircle className="h-4 w-4 text-[#E8652B] shrink-0 mt-0.5" />
                     <span>{item}</span>
                   </li>
                 ))}
               </ul>
-              <p className="mt-4 text-xs text-[#475569] leading-relaxed">
+              <p className="mt-4 text-xs text-neutral-600 leading-relaxed">
                 When the device reconnects, all queued status updates, captured photos, signatures and break records synchronise to the HaulageOps server in the order they were made.
               </p>
             </div>
-            <div className="bg-[#F8FAFC] rounded-2xl p-8 border border-[#E2E8F0]">
-              <h3 className="text-xl font-bold text-[#0F172A] mb-3">What requires connectivity</h3>
+            <div className="bg-neutral-50/50 rounded-2xl p-8 border border-neutral-200">
+              <h3 className="text-xl font-bold text-neutral-900 mb-3">What requires connectivity</h3>
               <ul className="space-y-2.5">
                 {[
                   "Receiving new job assignments — push notifications require a connection",
@@ -346,13 +346,13 @@ export function PlatformDriverAppPage() {
                   "Uploading documents captured during a job (queued until reconnected)",
                   "Accessing job details for jobs assigned while offline",
                 ].map((item) => (
-                  <li key={item} className="flex items-start gap-2 text-sm text-[#475569]">
+                  <li key={item} className="flex items-start gap-2 text-sm text-neutral-600">
                     <span className="text-[#E8652B] font-bold shrink-0">•</span>
                     <span>{item}</span>
                   </li>
                 ))}
               </ul>
-              <p className="mt-4 text-xs text-[#475569] leading-relaxed">
+              <p className="mt-4 text-xs text-neutral-600 leading-relaxed">
                 For jobs assigned before going offline, the driver has everything they need. The system does not fail mid-job because a quarry has poor signal.
               </p>
             </div>
@@ -361,24 +361,24 @@ export function PlatformDriverAppPage() {
       </section>
 
       {/* PROOF OF DELIVERY */}
-      <section className="py-20 bg-[#F8FAFC]">
+      <section className="py-20 bg-neutral-50/50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Proof of Delivery</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             Photo, document upload, customer signature — captured at delivery and attached to the job record.
           </h2>
-          <p className="mt-4 text-[#475569] max-w-3xl leading-relaxed">
+          <p className="mt-4 text-neutral-600 max-w-3xl leading-relaxed">
             Paper dockets get lost, damaged, delayed, or never returned to the office. When they are missing, invoicing stops. The HaulageOps driver app replaces the paper docket with a digital POD workflow captured at the moment of delivery. The evidence is attached to the job record instantly — no scanning, no chasing, no delay.
           </p>
           <div className="mt-10 grid md:grid-cols-3 gap-6">
             {podCards.map((card) => (
-              <div key={card.title} className="bg-white rounded-2xl p-6 border border-[#E2E8F0] shadow-sm">
-                <h3 className="font-bold text-[#0F172A] mb-2">{card.title}</h3>
-                <p className="text-sm text-[#475569] leading-relaxed">{card.desc}</p>
+              <div key={card.title} className="bg-white rounded-2xl p-6 border border-neutral-200 shadow-sm">
+                <h3 className="font-bold text-neutral-900 mb-2">{card.title}</h3>
+                <p className="text-sm text-neutral-600 leading-relaxed">{card.desc}</p>
               </div>
             ))}
           </div>
-          <p className="mt-6 text-sm text-[#475569]">
+          <p className="mt-6 text-sm text-neutral-600">
             See:{" "}
             <Link href="/solutions/proof-of-delivery" className="text-[#E8652B] hover:underline font-medium">Proof of Delivery</Link>
             {" and "}
@@ -392,24 +392,24 @@ export function PlatformDriverAppPage() {
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Paper Docket vs Driver App</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             What changes when drivers use the app instead of paper dockets.
           </h2>
           <div className="mt-8 overflow-x-auto">
             <table className="w-full text-left border-collapse min-w-[600px]">
               <thead>
-                <tr className="border-b border-[#E2E8F0] text-sm text-[#0F172A]">
+                <tr className="border-b border-neutral-200 text-sm text-neutral-900">
                   <th className="py-4 px-4 font-bold">Driver activity</th>
-                  <th className="py-4 px-4 font-bold text-[#64748B]">Paper docket workflow</th>
-                  <th className="py-4 px-4 font-bold text-[#E8652B] bg-[#FFF0E6]/50 rounded-t-lg">HaulageOps driver app</th>
+                  <th className="py-4 px-4 font-bold text-neutral-500">Paper docket workflow</th>
+                  <th className="py-4 px-4 font-bold text-[#E8652B] bg-orange-50 border border-orange-200/50 rounded-t-lg">HaulageOps driver app</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-[#F1F5F9] text-sm">
                 {paperVsAppTable.map((row) => (
-                  <tr key={row.activity} className="hover:bg-[#F8FAFC]">
-                    <td className="py-4 px-4 font-medium text-[#0F172A]">{row.activity}</td>
-                    <td className="py-4 px-4 text-[#64748B]">{row.paper}</td>
-                    <td className="py-4 px-4 font-semibold text-[#334155] bg-[#FFF0E6]/30">{row.app}</td>
+                  <tr key={row.activity} className="hover:bg-neutral-50/50">
+                    <td className="py-4 px-4 font-medium text-neutral-900">{row.activity}</td>
+                    <td className="py-4 px-4 text-neutral-500">{row.paper}</td>
+                    <td className="py-4 px-4 font-semibold text-neutral-700 bg-orange-50 border border-orange-200 text-[#E8652B]/30">{row.app}</td>
                   </tr>
                 ))}
               </tbody>
@@ -419,25 +419,25 @@ export function PlatformDriverAppPage() {
       </section>
 
       {/* CONNECTED PLATFORM */}
-      <section className="py-20 bg-[#F8FAFC]">
+      <section className="py-20 bg-neutral-50/50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Related Platform Features</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             The driver app connects to these platform areas.
           </h2>
           <div className="mt-10 grid md:grid-cols-3 gap-6">
             {connectedModules.map((mod) => (
-              <div key={mod.title} className="bg-white rounded-2xl p-6 border border-[#E2E8F0] shadow-sm">
-                <h3 className="font-bold text-[#0F172A] mb-2">
+              <div key={mod.title} className="bg-white rounded-2xl p-6 border border-neutral-200 shadow-sm">
+                <h3 className="font-bold text-neutral-900 mb-2">
                   <Link href={mod.href} className="hover:text-[#E8652B] transition-colors">
                     {mod.title}
                   </Link>
                 </h3>
-                <p className="text-sm text-[#475569] leading-relaxed">{mod.desc}</p>
+                <p className="text-sm text-neutral-600 leading-relaxed">{mod.desc}</p>
               </div>
             ))}
           </div>
-          <p className="mt-6 text-sm text-[#475569]">
+          <p className="mt-6 text-sm text-neutral-600">
             Also see:{" "}
             <Link href="/solutions/digital-dockets" className="text-[#E8652B] hover:underline font-medium">
               Digital Dockets
@@ -451,17 +451,17 @@ export function PlatformDriverAppPage() {
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Common Questions</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A]">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900">
             Frequently asked about the HaulageOps driver app.
           </h2>
           <div className="mt-8 space-y-3">
             {faqs.map((faq) => (
-              <details key={faq.q} className="group border border-[#E2E8F0] bg-white rounded-xl overflow-hidden">
-                <summary className="flex items-center justify-between gap-4 px-6 py-4 cursor-pointer font-semibold text-[#0F172A] text-sm list-none hover:bg-[#F8FAFC]">
+              <details key={faq.q} className="group border border-neutral-200 bg-white rounded-xl overflow-hidden">
+                <summary className="flex items-center justify-between gap-4 px-6 py-4 cursor-pointer font-semibold text-neutral-900 text-sm list-none hover:bg-neutral-50/50">
                   {faq.q}
-                  <ChevronRight className="h-4 w-4 text-[#94A3B8] shrink-0 group-open:rotate-90 transition-transform" />
+                  <ChevronRight className="h-4 w-4 text-neutral-400 shrink-0 group-open:rotate-90 transition-transform" />
                 </summary>
-                <div className="px-6 pb-5 text-sm text-[#475569] leading-relaxed border-t border-[#F1F5F9]">
+                <div className="px-6 pb-5 text-sm text-neutral-600 leading-relaxed border-t border-neutral-100">
                   <p className="pt-4">{faq.a}</p>
                 </div>
               </details>
@@ -471,11 +471,11 @@ export function PlatformDriverAppPage() {
       </section>
 
       {/* CTA BAND */}
-      <section className="py-16 bg-[#0F172A]">
+      <section className="py-16 bg-neutral-900">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
           <div>
             <h2 className="text-2xl sm:text-3xl font-bold text-white">See the driver app in a live demo.</h2>
-            <p className="mt-2 text-[#94A3B8] text-sm leading-relaxed max-w-xl">
+            <p className="mt-2 text-neutral-400 text-sm leading-relaxed max-w-xl">
               Book a 20-minute session and walk through the full driver workflow — job assignment, status updates, offline use, POD capture and sync — with a real demonstration of the production app.
             </p>
           </div>

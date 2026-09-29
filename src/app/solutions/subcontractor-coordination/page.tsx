@@ -187,28 +187,28 @@ export default function SubcontractorCoordinationPage() {
   return (
     <MainLayout showCta={false}>
       {/* Breadcrumb */}
-      <div className="pt-24 pb-0 bg-[#FFF9F5]">
+      <div className="pt-24 pb-0 bg-neutral-50/70">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <nav className="flex items-center gap-2 text-xs text-[#64748B]">
+          <nav className="flex items-center gap-2 text-xs text-neutral-500">
             <Link href="/" className="hover:text-[#E8652B]">Home</Link>
             <ChevronRight className="h-3 w-3" />
             <Link href="/solutions" className="hover:text-[#E8652B]">Solutions</Link>
             <ChevronRight className="h-3 w-3" />
-            <span className="text-[#0F172A] font-medium">Subcontractor Coordination</span>
+            <span className="text-neutral-900 font-medium">Subcontractor Coordination</span>
           </nav>
         </div>
       </div>
 
       {/* HERO */}
-      <section className="pt-10 pb-20 bg-gradient-to-b from-[#FFF9F5] via-[#FFF5EE]/40 to-white">
+      <section className="pt-10 pb-20 bg-gradient-to-b from-neutral-50/80 via-white to-white border-b border-neutral-200">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-[#E8652B] bg-[#FFF0E6] mb-4 animate-in fade-in slide-in-from-bottom-4 animation-duration-700 fill-mode-both">
+          <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-[#E8652B] bg-orange-50 border border-orange-200 mb-4 animate-in fade-in slide-in-from-bottom-4 animation-duration-700 fill-mode-both">
             Subcontractor Coordination
           </span>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#0F172A] max-w-4xl leading-[1.1] animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-100 fill-mode-both">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-neutral-900 max-w-4xl leading-[1.1] animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-100 fill-mode-both">
             Delegate to subcontractors without losing visibility or control.
           </h1>
-          <p className="mt-6 text-lg sm:text-xl text-[#475569] max-w-3xl leading-relaxed animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-150 fill-mode-both">
+          <p className="mt-6 text-lg sm:text-xl text-neutral-600 max-w-3xl leading-relaxed animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-150 fill-mode-both">
             When you delegate a job to a subcontractor in HaulageOps, they receive it in their own dedicated portal. They accept or decline. Their status flows back to your dispatch board. Their driver captures POD. Your client sees the delivery. You see all of it — without one phone call to chase an update.
           </p>
           <div className="mt-8 flex flex-wrap gap-3 animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-200 fill-mode-both">
@@ -218,7 +218,7 @@ export default function SubcontractorCoordinationPage() {
               </Button>
             </Link>
             <Link href="/platform/subcontractor-portal">
-              <Button size="lg" variant="outline" className="border-[#E2E8F0] text-[#334155] hover:bg-[#F8FAFC]">
+              <Button size="lg" variant="outline" className="border-neutral-200 text-neutral-700 hover:bg-neutral-50/50">
                 Subcontractor Portal Detail
               </Button>
             </Link>
@@ -226,8 +226,8 @@ export default function SubcontractorCoordinationPage() {
           {/* Kicker pills */}
           <div className="mt-8 flex flex-wrap gap-2 animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-300 fill-mode-both">
             {heroKickers.map((pill) => (
-              <span key={pill} className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#F1F5F9] text-xs font-medium text-[#334155]">
-                <CheckCircle className="h-3.5 w-3.5 text-[#16A34A] shrink-0" />
+              <span key={pill} className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-neutral-100 text-xs font-medium text-neutral-700">
+                <CheckCircle className="h-3.5 w-3.5 text-[#E8652B] shrink-0" />
                 {pill}
               </span>
             ))}
@@ -236,13 +236,13 @@ export default function SubcontractorCoordinationPage() {
       </section>
 
       {/* PROOF STRIP */}
-      <div className="bg-[#0F172A] py-5">
+      <div className="bg-neutral-900 py-5">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-center">
             {proofStrip.map((item) => (
               <div key={item.strong} className="flex flex-col items-center justify-center gap-1">
                 <span className="text-white font-bold text-sm">{item.strong}</span>
-                <span className="text-[#94A3B8] text-xs">{item.sub}</span>
+                <span className="text-neutral-400 text-xs">{item.sub}</span>
               </div>
             ))}
           </div>
@@ -253,23 +253,23 @@ export default function SubcontractorCoordinationPage() {
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">The Subcontractor Problem</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             The moment a job goes to a subcontractor by phone, you lose the thread
           </h2>
           <div className="mt-8 grid lg:grid-cols-2 gap-10 items-start">
             <div>
-              <p className="text-[#475569] leading-relaxed">
+              <p className="text-neutral-600 leading-relaxed">
                 Using subcontracted capacity is a normal part of running a bulk haulage operation — particularly for operators managing overflow volumes, specialist equipment requirements, or geographic coverage beyond their owned fleet. The commercial relationship with subs is well understood. The operational coordination is where it gets difficult.
               </p>
-              <p className="mt-4 text-[#475569] leading-relaxed">
+              <p className="mt-4 text-neutral-600 leading-relaxed">
                 When you send a job to a subcontractor by phone or WhatsApp, you have transferred the job and lost the thread at the same time. The sub might confirm verbally. They might reply &ldquo;on it&rdquo; in a WhatsApp message. They start the job. At some point during the day, your client calls to ask where their delivery is. You call the sub. The sub says they will check with their driver. You wait. You call the client back with second-hand information that is already twenty minutes old.
               </p>
-              <p className="mt-4 text-[#475569] leading-relaxed">
+              <p className="mt-4 text-neutral-600 leading-relaxed">
                 This is not a problem of subcontractors being unreliable. It is a problem of structure: the job left your system when it left your control. There is no mechanism by which status can flow back to you without a phone call. HaulageOps creates that mechanism — a dedicated portal for the subcontractor that is connected to your dispatch board, so delegation and visibility exist at the same time.
               </p>
               <ul className="mt-6 space-y-3">
                 {problemBullets.map((item) => (
-                  <li key={item} className="flex items-start gap-2 text-sm text-[#334155]">
+                  <li key={item} className="flex items-start gap-2 text-sm text-neutral-700">
                     <CheckCircle className="h-4 w-4 text-[#E8652B] shrink-0 mt-0.5" />
                     <span>{item}</span>
                   </li>
@@ -277,32 +277,32 @@ export default function SubcontractorCoordinationPage() {
               </ul>
             </div>
             {/* Broken phone chain visual spec */}
-            <div className="rounded-2xl border border-[#E2E8F0] bg-[#0D1525] overflow-hidden">
-              <div className="px-5 py-3 bg-[#1E293B] text-[#E8652B] text-xs font-bold uppercase tracking-widest">
+            <div className="rounded-2xl border border-neutral-200 bg-neutral-900 border-y border-neutral-800 overflow-hidden">
+              <div className="px-5 py-3 bg-neutral-800 text-[#E8652B] text-xs font-bold uppercase tracking-widest">
                 Subcontractor Coordination — Current State
               </div>
               <div className="p-4 sm:p-5 space-y-3">
-                <div className="bg-[#1E293B] border border-[#334155] rounded-lg p-3">
+                <div className="bg-neutral-800 border border-[#334155] rounded-lg p-3">
                   <p className="text-white text-[11px] font-semibold">Your dispatch board</p>
-                  <p className="text-[#94A3B8] text-[10px] mt-1">Shows owned trucks only. Sub jobs sent by phone/WhatsApp disappear from the board.</p>
+                  <p className="text-neutral-400 text-[10px] mt-1">Shows owned trucks only. Sub jobs sent by phone/WhatsApp disappear from the board.</p>
                 </div>
                 <div className="flex flex-col gap-2">
-                  <div className="flex items-center gap-2 bg-[#1E293B] border border-[#334155] rounded-lg p-2.5">
+                  <div className="flex items-center gap-2 bg-neutral-800 border border-[#334155] rounded-lg p-2.5">
                     <Phone className="h-3.5 w-3.5 text-[#F87171] shrink-0" />
-                    <span className="text-[10px] text-[#94A3B8]">You call the sub — voicemail</span>
+                    <span className="text-[10px] text-neutral-400">You call the sub — voicemail</span>
                   </div>
-                  <div className="flex items-center gap-2 bg-[#1E293B] border border-[#334155] rounded-lg p-2.5">
+                  <div className="flex items-center gap-2 bg-neutral-800 border border-[#334155] rounded-lg p-2.5">
                     <PhoneOff className="h-3.5 w-3.5 text-[#F87171] shrink-0" />
-                    <span className="text-[10px] text-[#94A3B8]">Sub calls their driver — no answer</span>
+                    <span className="text-[10px] text-neutral-400">Sub calls their driver — no answer</span>
                   </div>
-                  <div className="flex items-center gap-2 bg-[#1E293B] border border-[#334155] rounded-lg p-2.5">
+                  <div className="flex items-center gap-2 bg-neutral-800 border border-[#334155] rounded-lg p-2.5">
                     <Phone className="h-3.5 w-3.5 text-[#FBBF24] shrink-0" />
-                    <span className="text-[10px] text-[#94A3B8]">Sub calls back 20 min later — estimated status</span>
+                    <span className="text-[10px] text-neutral-400">Sub calls back 20 min later — estimated status</span>
                   </div>
                 </div>
-                <div className="bg-[#1E293B] border border-[#334155] rounded-lg p-3">
+                <div className="bg-neutral-800 border border-[#334155] rounded-lg p-3">
                   <p className="text-[#F87171] text-[11px] font-semibold">Client receives stale information</p>
-                  <p className="text-[#94A3B8] text-[10px] mt-1">No audit trail. No delivery record until the docket arrives by post.</p>
+                  <p className="text-neutral-400 text-[10px] mt-1">No audit trail. No delivery record until the docket arrives by post.</p>
                 </div>
               </div>
             </div>
@@ -311,21 +311,21 @@ export default function SubcontractorCoordinationPage() {
       </section>
 
       {/* THE HAULAGEOPS MODEL */}
-      <section className="py-20 bg-[#F8FAFC]">
+      <section className="py-20 bg-neutral-50/50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">The HaulageOps Model</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             How subcontractor coordination works when the sub has their own portal
           </h2>
-          <p className="mt-6 text-[#475569] max-w-3xl leading-relaxed">
+          <p className="mt-6 text-neutral-600 max-w-3xl leading-relaxed">
             The structural fix is a dedicated portal for the subcontractor — connected to your dispatch board, showing only their jobs, receiving delegated work from your dispatch workflow and sending status back in the same channel. That is what the HaulageOps subcontractor portal provides.
           </p>
           <div className="mt-10 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {lifecycleSteps.map((step) => (
-              <div key={step.num} className="bg-white rounded-2xl p-6 border border-[#E2E8F0] shadow-sm">
+              <div key={step.num} className="bg-white rounded-2xl p-6 border border-neutral-200 shadow-sm">
                 <span className="text-3xl font-black text-[#E8652B]/20 leading-none">{step.num}</span>
-                <h3 className="mt-2 font-bold text-[#0F172A] text-base">{step.title}</h3>
-                <p className="mt-2 text-sm text-[#475569] leading-relaxed">{step.desc}</p>
+                <h3 className="mt-2 font-bold text-neutral-900 text-base">{step.title}</h3>
+                <p className="mt-2 text-sm text-neutral-600 leading-relaxed">{step.desc}</p>
               </div>
             ))}
           </div>
@@ -336,71 +336,71 @@ export default function SubcontractorCoordinationPage() {
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Portal Data Separation</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             Your client sees their portal. Your sub sees their portal. They never overlap.
           </h2>
           <div className="mt-8 grid lg:grid-cols-2 gap-10 items-start">
             <div>
-              <p className="text-[#475569] leading-relaxed">
+              <p className="text-neutral-600 leading-relaxed">
                 One of the operational risks of connecting external parties to a shared system is data leakage — a subcontractor seeing your client&apos;s full rate card, or a client seeing your subcontractor relationships. HaulageOps uses role-based access control (RBAC) and multi-tenant architecture to prevent this by design.
               </p>
-              <h3 className="mt-6 font-bold text-[#0F172A]">What the subcontractor sees in their portal</h3>
+              <h3 className="mt-6 font-bold text-neutral-900">What the subcontractor sees in their portal</h3>
               <ul className="mt-3 space-y-3">
                 {subSees.map((item) => (
-                  <li key={item} className="flex items-start gap-2 text-sm text-[#334155]">
-                    <LockOpen className="h-4 w-4 text-[#16A34A] shrink-0 mt-0.5" />
+                  <li key={item} className="flex items-start gap-2 text-sm text-neutral-700">
+                    <LockOpen className="h-4 w-4 text-[#E8652B] shrink-0 mt-0.5" />
                     <span>{item}</span>
                   </li>
                 ))}
               </ul>
-              <h3 className="mt-6 font-bold text-[#0F172A]">What the subcontractor does NOT see</h3>
+              <h3 className="mt-6 font-bold text-neutral-900">What the subcontractor does NOT see</h3>
               <ul className="mt-3 space-y-3">
                 {subDoesNotSee.map((item) => (
-                  <li key={item} className="flex items-start gap-2 text-sm text-[#334155]">
+                  <li key={item} className="flex items-start gap-2 text-sm text-neutral-700">
                     <Lock className="h-4 w-4 text-[#F87171] shrink-0 mt-0.5" />
                     <span>{item}</span>
                   </li>
                 ))}
               </ul>
-              <p className="mt-6 text-[#475569] leading-relaxed">
+              <p className="mt-6 text-neutral-600 leading-relaxed">
                 Your client&apos;s portal is equally scoped. They see their own jobs, their own POD, their own invoices, and their own rate cards. They do not see your subcontractor relationships or the fact that a particular job was fulfilled by a sub rather than your own fleet — unless your operational arrangement requires that disclosure.
               </p>
             </div>
             {/* Three portals — zero overlap visual spec */}
-            <div className="rounded-2xl border border-[#E2E8F0] bg-[#0D1525] overflow-hidden">
-              <div className="px-5 py-3 bg-[#1E293B] text-[#E8652B] text-xs font-bold uppercase tracking-widest">
+            <div className="rounded-2xl border border-neutral-200 bg-neutral-900 border-y border-neutral-800 overflow-hidden">
+              <div className="px-5 py-3 bg-neutral-800 text-[#E8652B] text-xs font-bold uppercase tracking-widest">
                 Three Portals — Zero Overlap
               </div>
               <div className="p-4 sm:p-5 space-y-4">
-                <div className="bg-[#1E293B] border border-[#E8652B]/40 rounded-lg p-3">
+                <div className="bg-neutral-800 border border-[#E8652B]/40 rounded-lg p-3">
                   <p className="text-white text-[11px] font-semibold">Your Admin Panel</p>
-                  <p className="text-[#94A3B8] text-[10px] mt-1">Full view of all jobs, clients, subcontractors, both rates, full audit trail, management reports.</p>
+                  <p className="text-neutral-400 text-[10px] mt-1">Full view of all jobs, clients, subcontractors, both rates, full audit trail, management reports.</p>
                 </div>
                 <div className="flex items-center justify-center gap-1 text-[9px] text-[#FBBF24]">
                   <ArrowRight className="h-3 w-3" /> Delegates job to
                 </div>
                 <div className="grid grid-cols-2 gap-3">
-                  <div className="bg-[#1E293B] border border-[#334155] rounded-lg p-3">
+                  <div className="bg-neutral-800 border border-[#334155] rounded-lg p-3">
                     <div className="flex items-center gap-1.5">
                       <Building2 className="h-3.5 w-3.5 text-[#FBBF24] shrink-0" />
                       <p className="text-white text-[10px] font-semibold">Subcontractor Portal</p>
                     </div>
-                    <p className="text-[#94A3B8] text-[9px] mt-1 leading-relaxed">Scoped to their jobs only — queue, accept/decline, history, their pay rate.</p>
+                    <p className="text-neutral-400 text-[9px] mt-1 leading-relaxed">Scoped to their jobs only — queue, accept/decline, history, their pay rate.</p>
                   </div>
-                  <div className="bg-[#1E293B] border border-[#334155] rounded-lg p-3">
+                  <div className="bg-neutral-800 border border-[#334155] rounded-lg p-3">
                     <div className="flex items-center gap-1.5">
                       <ShieldCheck className="h-3.5 w-3.5 text-[#4ADE80] shrink-0" />
                       <p className="text-white text-[10px] font-semibold">Client Portal</p>
                     </div>
-                    <p className="text-[#94A3B8] text-[9px] mt-1 leading-relaxed">Scoped to their jobs only — status, POD, invoices, their rate card.</p>
+                    <p className="text-neutral-400 text-[9px] mt-1 leading-relaxed">Scoped to their jobs only — status, POD, invoices, their rate card.</p>
                   </div>
                 </div>
                 <div className="flex items-center justify-center gap-1 text-[9px] text-[#FBBF24]">
                   <ArrowRight className="h-3 w-3" /> Status and POD flow back
                 </div>
-                <div className="bg-[#1E293B] border border-[#334155] rounded-lg p-3 flex items-center gap-2">
+                <div className="bg-neutral-800 border border-[#334155] rounded-lg p-3 flex items-center gap-2">
                   <Lock className="h-3.5 w-3.5 text-[#4ADE80] shrink-0" />
-                  <p className="text-[#94A3B8] text-[10px] leading-relaxed">Data separation enforced at the architecture level — no settings to accidentally change.</p>
+                  <p className="text-neutral-400 text-[10px] leading-relaxed">Data separation enforced at the architecture level — no settings to accidentally change.</p>
                 </div>
               </div>
             </div>
@@ -409,20 +409,20 @@ export default function SubcontractorCoordinationPage() {
       </section>
 
       {/* HOW THIS COMPARES */}
-      <section className="py-20 bg-[#F8FAFC]">
+      <section className="py-20 bg-neutral-50/50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">How This Compares</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             Why most haulage software handles subcontractors poorly
           </h2>
           <div className="mt-10 grid md:grid-cols-2 gap-6">
             {compareCards.map((card) => (
-              <div key={card.title} className="bg-white rounded-2xl p-7 border border-[#E2E8F0]">
-                <h3 className="font-bold text-[#0F172A] text-xl">{card.title}</h3>
-                <p className="mt-3 text-sm text-[#475569] leading-relaxed">{card.desc}</p>
+              <div key={card.title} className="bg-white rounded-2xl p-7 border border-neutral-200">
+                <h3 className="font-bold text-neutral-900 text-xl">{card.title}</h3>
+                <p className="mt-3 text-sm text-neutral-600 leading-relaxed">{card.desc}</p>
                 <ul className="mt-5 space-y-3">
                   {card.points.map((item) => (
-                    <li key={item} className="flex items-start gap-2 text-sm text-[#334155]">
+                    <li key={item} className="flex items-start gap-2 text-sm text-neutral-700">
                       <CheckCircle className="h-4 w-4 text-[#E8652B] shrink-0 mt-0.5" />
                       <span>{item}</span>
                     </li>
@@ -433,8 +433,8 @@ export default function SubcontractorCoordinationPage() {
             ))}
           </div>
           <div className="mt-10 p-6 sm:p-7 bg-[#EFFAF2] border border-[#3AAA60] rounded-2xl">
-            <strong className="block mb-2 text-[#0F172A]">The HaulageOps subcontractor model:</strong>
-            <p className="text-sm text-[#334155] leading-relaxed">
+            <strong className="block mb-2 text-neutral-900">The HaulageOps subcontractor model:</strong>
+            <p className="text-sm text-neutral-700 leading-relaxed">
               Your subscription includes subcontractor portal access for as many external subs as you work with. The sub does not pay HaulageOps. The sub does not need their own subscription. They log in, see their jobs, accept or decline, update status, and capture POD — and all of that flows back to your dispatch board and your client&apos;s portal as part of your operation.
             </p>
           </div>
@@ -445,21 +445,21 @@ export default function SubcontractorCoordinationPage() {
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">The Commercial Layer</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             Client charge rate and subcontractor pay rate — tracked separately, margin visible at job level
           </h2>
           <div className="mt-8 grid lg:grid-cols-2 gap-10 items-start">
             <div>
-              <p className="text-[#475569] leading-relaxed">
+              <p className="text-neutral-600 leading-relaxed">
                 When you use a subcontractor, you are managing two commercial relationships simultaneously: the rate you charge your client for the job, and the rate you pay the sub to execute it. The difference is your margin on that job. In most haulage operations, these two numbers live in different places — the client rate in one spreadsheet, the sub invoice in another — and the margin calculation happens once a month, by hand, after the fact.
               </p>
-              <p className="mt-4 text-[#475569] leading-relaxed">
+              <p className="mt-4 text-neutral-600 leading-relaxed">
                 In HaulageOps, both rates are attached to the job at dispatch. The client charge rate comes from the client&apos;s rate card — the same rate card that drives the invoice. The subcontractor pay rate is configured against the sub&apos;s record and applies when the job is delegated. Both rates sit on the same job record.
               </p>
-              <p className="mt-4 text-[#475569] leading-relaxed">This means:</p>
+              <p className="mt-4 text-neutral-600 leading-relaxed">This means:</p>
               <ul className="mt-4 space-y-3">
                 {commercialBullets.map((item) => (
-                  <li key={item} className="flex items-start gap-2 text-sm text-[#334155]">
+                  <li key={item} className="flex items-start gap-2 text-sm text-neutral-700">
                     <CheckCircle className="h-4 w-4 text-[#E8652B] shrink-0 mt-0.5" />
                     <span>{item}</span>
                   </li>
@@ -467,44 +467,44 @@ export default function SubcontractorCoordinationPage() {
               </ul>
             </div>
             {/* Dual rate view visual spec */}
-            <div className="rounded-2xl border border-[#E2E8F0] bg-[#0D1525] overflow-hidden">
-              <div className="px-5 py-3 bg-[#1E293B] text-[#E8652B] text-xs font-bold uppercase tracking-widest">
+            <div className="rounded-2xl border border-neutral-200 bg-neutral-900 border-y border-neutral-800 overflow-hidden">
+              <div className="px-5 py-3 bg-neutral-800 text-[#E8652B] text-xs font-bold uppercase tracking-widest">
                 Job Record — Dual Rate View (Admin Only)
               </div>
               <div className="p-4 sm:p-5 space-y-3">
-                <div className="bg-[#1E293B] border border-[#334155] rounded-lg p-3">
+                <div className="bg-neutral-800 border border-[#334155] rounded-lg p-3">
                   <div className="flex items-center justify-between gap-3">
                     <span className="text-white text-[11px] font-semibold">JOB-1843 — Balfour Beatty</span>
                     <span className="px-1.5 py-0.5 rounded bg-[#3B82F6]/15 text-[#60A5FA] text-[9px] font-semibold">Subcontracted</span>
                   </div>
                   <div className="mt-3 space-y-2">
                     <div className="flex items-center justify-between gap-3 text-[10px]">
-                      <span className="text-[#94A3B8]">Client Charge Rate</span>
+                      <span className="text-neutral-400">Client Charge Rate</span>
                       <span className="text-[#FBBF24] font-semibold">$24 / tonne</span>
                     </div>
                     <div className="flex items-center justify-between gap-3 text-[10px]">
-                      <span className="text-[#94A3B8]">Subcontractor Pay Rate</span>
-                      <span className="text-[#94A3B8] font-semibold">$18 / tonne</span>
+                      <span className="text-neutral-400">Subcontractor Pay Rate</span>
+                      <span className="text-neutral-400 font-semibold">$18 / tonne</span>
                     </div>
                     <div className="flex items-center justify-between gap-3 text-[10px] border-t border-[#334155] pt-2">
-                      <span className="text-[#94A3B8]">Margin</span>
+                      <span className="text-neutral-400">Margin</span>
                       <span className="text-[#4ADE80] font-semibold">$6 / tonne</span>
                     </div>
                   </div>
                 </div>
                 <div className="grid grid-cols-2 gap-3">
-                  <div className="bg-[#1E293B] border border-[#334155] rounded-lg p-3">
-                    <p className="text-[#94A3B8] text-[9px] uppercase tracking-wider mb-1.5">Sub portal view</p>
+                  <div className="bg-neutral-800 border border-[#334155] rounded-lg p-3">
+                    <p className="text-neutral-400 text-[9px] uppercase tracking-wider mb-1.5">Sub portal view</p>
                     <p className="text-[10px] text-white">Pay Rate: $18 / tonne</p>
-                    <p className="text-[9px] text-[#64748B] mt-1">Client charge rate not visible.</p>
+                    <p className="text-[9px] text-neutral-500 mt-1">Client charge rate not visible.</p>
                   </div>
-                  <div className="bg-[#1E293B] border border-[#334155] rounded-lg p-3">
-                    <p className="text-[#94A3B8] text-[9px] uppercase tracking-wider mb-1.5">Client portal view</p>
+                  <div className="bg-neutral-800 border border-[#334155] rounded-lg p-3">
+                    <p className="text-neutral-400 text-[9px] uppercase tracking-wider mb-1.5">Client portal view</p>
                     <p className="text-[10px] text-white">Invoice: $2,640</p>
-                    <p className="text-[9px] text-[#64748B] mt-1">No rate breakdown visible.</p>
+                    <p className="text-[9px] text-neutral-500 mt-1">No rate breakdown visible.</p>
                   </div>
                 </div>
-                <p className="text-[10px] text-[#475569]">
+                <p className="text-[10px] text-neutral-600">
                   <FileCheck className="h-3 w-3 inline text-[#4ADE80]" /> Margin sits at the job level — no manual reconciliation at month end.
                 </p>
               </div>
@@ -514,20 +514,20 @@ export default function SubcontractorCoordinationPage() {
       </section>
 
       {/* FAQ */}
-      <section className="py-20 bg-[#F8FAFC]">
+      <section className="py-20 bg-neutral-50/50">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Frequently Asked Questions</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A]">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900">
             Subcontractor coordination — common questions.
           </h2>
           <div className="mt-8 space-y-3">
             {faqs.map((faq) => (
-              <details key={faq.q} className="group border border-[#E2E8F0] bg-white rounded-xl overflow-hidden">
-                <summary className="flex items-center justify-between gap-4 px-6 py-4 cursor-pointer font-semibold text-[#0F172A] text-sm list-none hover:bg-[#F8FAFC]">
+              <details key={faq.q} className="group border border-neutral-200 bg-white rounded-xl overflow-hidden">
+                <summary className="flex items-center justify-between gap-4 px-6 py-4 cursor-pointer font-semibold text-neutral-900 text-sm list-none hover:bg-neutral-50/50">
                   {faq.q}
-                  <ChevronRight className="h-4 w-4 text-[#94A3B8] shrink-0 group-open:rotate-90 transition-transform" />
+                  <ChevronRight className="h-4 w-4 text-neutral-400 shrink-0 group-open:rotate-90 transition-transform" />
                 </summary>
-                <div className="px-6 pb-5 text-sm text-[#475569] leading-relaxed border-t border-[#F1F5F9]">
+                <div className="px-6 pb-5 text-sm text-neutral-600 leading-relaxed border-t border-neutral-100">
                   <p className="pt-4">{faq.a}</p>
                 </div>
               </details>
@@ -540,18 +540,18 @@ export default function SubcontractorCoordinationPage() {
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Related Pages</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             Subcontractor coordination connects to these features and solutions
           </h2>
           <div className="mt-10 grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {relatedCards.map((card) => (
-              <div key={card.title} className="bg-[#F8FAFC] rounded-2xl p-6 border border-[#E2E8F0]">
-                <h3 className="font-bold text-[#0F172A] mb-2">
+              <div key={card.title} className="bg-neutral-50/50 rounded-2xl p-6 border border-neutral-200">
+                <h3 className="font-bold text-neutral-900 mb-2">
                   <Link href={card.href} className="hover:text-[#E8652B] transition-colors">
                     {card.title}
                   </Link>
                 </h3>
-                <p className="text-sm text-[#475569] leading-relaxed">{card.desc}</p>
+                <p className="text-sm text-neutral-600 leading-relaxed">{card.desc}</p>
                 <Link href={card.href} className="mt-3 inline-flex items-center gap-1 text-sm text-[#E8652B] hover:underline font-medium">
                   {card.linkLabel} <ArrowRight className="h-3.5 w-3.5" />
                 </Link>
@@ -562,11 +562,11 @@ export default function SubcontractorCoordinationPage() {
       </section>
 
       {/* CTA BAND */}
-      <section className="py-16 bg-[#0F172A]">
+      <section className="py-16 bg-neutral-900">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
           <div>
             <h2 className="text-2xl sm:text-3xl font-bold text-white">See the subcontractor portal in a 20-minute demo</h2>
-            <p className="mt-2 text-[#94A3B8] text-sm leading-relaxed max-w-xl">
+            <p className="mt-2 text-neutral-400 text-sm leading-relaxed max-w-xl">
               We will show you delegation from the dispatch board, the sub&apos;s portal acceptance view, and how status flows back — using your type of operation as the example.
             </p>
           </div>

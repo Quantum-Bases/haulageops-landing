@@ -187,34 +187,34 @@ const faqs = [
 export default function PricingPage() {
   return (
     <MainLayout showCta={false}>
-      <section className="pt-24 pb-16 bg-gradient-to-b from-[#FFF9F5] to-white">
+      <section className="pt-28 pb-16 bg-gradient-to-b from-neutral-50/80 via-white to-white text-neutral-900 border-b border-neutral-200">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center sm:text-left">
-          <nav className="flex items-center gap-2 text-xs text-[#64748B] mb-6 justify-center sm:justify-start">
+          <nav className="flex items-center gap-2 text-xs text-neutral-500 mb-6 justify-center sm:justify-start">
             <Link href="/" className="hover:text-[#E8652B]">Home</Link>
             <ChevronRight className="h-3 w-3" />
-            <span className="text-[#0F172A] font-medium">Pricing</span>
+            <span className="text-neutral-900 font-bold">Pricing</span>
           </nav>
-          <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-[#E8652B] bg-[#FFF0E6] mb-4">
+          <span className="inline-block px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider text-[#E8652B] bg-orange-50 border border-orange-200 mb-4">
             Custom Pricing
           </span>
-          <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-[#0F172A] max-w-4xl leading-[1.1]">
+          <h1 className="text-4xl sm:text-5xl font-black tracking-tight text-neutral-900 max-w-4xl leading-[1.1]">
             Tailored pricing built for how your haulage business actually operates.
           </h1>
-          <p className="mt-6 text-lg text-[#475569] max-w-3xl leading-relaxed">
+          <p className="mt-6 text-lg text-neutral-600 max-w-3xl leading-relaxed">
             Every bulk haulage operation has unique fleet dynamics, subcontractor ratios, and rate card structures. We provide custom, transparent proposals designed specifically around your operational scale.
           </p>
-          <div className="mt-8 flex flex-wrap gap-3 justify-center sm:justify-start">
+          <div className="mt-8 flex flex-wrap gap-3.5 justify-center sm:justify-start">
             <a
               href="https://calendly.com/admin-haulageops/30min"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Button size="lg" className="bg-[#E8652B] hover:bg-[#D05520] text-white font-semibold flex items-center gap-2 shadow-md">
+              <Button size="lg" className="bg-[#E8652B] hover:bg-[#D05520] text-white font-bold flex items-center gap-2 shadow-xs cursor-pointer">
                 <Calendar className="h-4 w-4" /> Book a 30-Minute Walkthrough
               </Button>
             </a>
             <Link href="/implementation">
-              <Button size="lg" variant="outline" className="text-[#0F172A] font-semibold">
+              <Button size="lg" variant="outline" className="text-neutral-900 border-neutral-300 hover:bg-neutral-100 font-bold cursor-pointer">
                 See what's included in setup
               </Button>
             </Link>
@@ -222,31 +222,31 @@ export default function PricingPage() {
         </div>
       </section>
 
-      <section className="bg-[#0D1525] py-6">
+      <section className="bg-neutral-900 border-y border-neutral-800 py-6">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-wrap items-center justify-center gap-x-10 gap-y-4">
           {proofItems.map((item) => (
             <div key={item.label} className="text-center">
               <p className="text-sm font-bold text-white">{item.value}</p>
-              <p className="text-xs text-[#94A3B8] mt-0.5">{item.label}</p>
+              <p className="text-xs text-neutral-400 mt-0.5">{item.label}</p>
             </div>
           ))}
         </div>
       </section>
 
       {/* Prominent Custom Pricing & Book Now Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-white border-b border-neutral-200">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
-          <div className="bg-[#FFF9F5] border-2 border-[#E8652B]/30 rounded-3xl p-8 sm:p-12 shadow-sm">
-            <span className="inline-block px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider text-[#E8652B] bg-[#FFF0E6] mb-4">
+          <div className="bg-neutral-50/70 border border-neutral-200 rounded-3xl p-8 sm:p-12 shadow-xs">
+            <span className="inline-block px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider text-[#E8652B] bg-orange-50 border border-orange-200 mb-4">
               Tailored Proposals
             </span>
-            <h2 className="text-3xl sm:text-4xl font-bold text-[#0F172A]">
+            <h2 className="text-3xl sm:text-4xl font-black text-neutral-900">
               Enterprise Pricing Built Around Your Operation
             </h2>
-            <p className="mt-4 text-base sm:text-lg text-[#475569] leading-relaxed max-w-2xl mx-auto">
+            <p className="mt-4 text-base sm:text-lg text-neutral-600 leading-relaxed max-w-2xl mx-auto">
               Because fleet sizes, subcontractor networks, and integration requirements vary across bulk logistics operators, we provide tailored proposals to ensure you get exact pricing for your specific setup.
             </p>
-            <p className="mt-3 text-base text-[#0F172A] font-semibold">
+            <p className="mt-3 text-base text-neutral-900 font-bold">
               Schedule a 30-minute operational walkthrough with our team to review your workflow and receive a customized quote within 24 hours.
             </p>
             <div className="mt-8 flex justify-center">
@@ -255,7 +255,7 @@ export default function PricingPage() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Button size="lg" className="bg-[#E8652B] hover:bg-[#D05520] text-white font-bold px-8 py-6 text-base shadow-md flex items-center gap-2">
+                <Button size="lg" className="bg-[#E8652B] hover:bg-[#D05520] text-white font-bold px-8 py-6 text-base shadow-xs flex items-center gap-2 cursor-pointer">
                   <Calendar className="h-5 w-5" /> Book a Demo & Get Quote
                 </Button>
               </a>
@@ -265,11 +265,11 @@ export default function PricingPage() {
       </section>
 
       {/*
-      <section className="py-16 bg-white border-t border-[#E2E8F0]">
+      <section className="py-16 bg-white border-t border-neutral-200">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Plans</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">Three tiers. Exact pricing confirmed after a 20-minute demo.</h2>
-          <p className="mt-4 text-[#475569] leading-relaxed max-w-2xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">Three tiers. Exact pricing confirmed after a 20-minute demo.</h2>
+          <p className="mt-4 text-neutral-600 leading-relaxed max-w-2xl">
             Every business runs differently - fleet size, subcontractor network, rate complexity, and integration needs all shape the final quote.
           </p>
           <div className="mt-10 overflow-x-auto -mx-4 px-4">
@@ -281,9 +281,9 @@ export default function PricingPage() {
                   </th>
                   {plans.map((plan) => (
                     <th key={plan.name} className="px-3 pb-6 align-top">
-                      <div className={`bg-white border-t-4 ${plan.topBorder} border-x border-b border-[#E2E8F0] rounded-t-2xl p-6`}>
+                      <div className={`bg-white border-t-4 ${plan.topBorder} border-x border-b border-neutral-200 rounded-t-2xl p-6`}>
                         <div className="flex items-center justify-between gap-3">
-                          <span className="text-xl font-bold text-[#0F172A]">{plan.name}</span>
+                          <span className="text-xl font-bold text-neutral-900">{plan.name}</span>
                           {plan.tag && (
                             <span className="inline-block bg-[#E8652B] text-white text-[10px] font-bold px-2.5 py-1 rounded-full tracking-widest whitespace-nowrap uppercase">
                               {plan.tag}
@@ -297,39 +297,39 @@ export default function PricingPage() {
               </thead>
               <tbody>
                 <tr>
-                  <td className="py-4 pr-6 text-xs font-semibold text-[#64748B] uppercase tracking-wider">Best for</td>
+                  <td className="py-4 pr-6 text-xs font-semibold text-neutral-500 uppercase tracking-wider">Best for</td>
                   {plans.map((plan) => (
-                    <td key={plan.name} className="px-3 py-4 align-top text-sm font-semibold text-[#0F172A]">{plan.title}</td>
+                    <td key={plan.name} className="px-3 py-4 align-top text-sm font-semibold text-neutral-900">{plan.title}</td>
                   ))}
                 </tr>
                 <tr>
-                  <td className="py-4 pr-6 text-xs font-semibold text-[#64748B] uppercase tracking-wider">Typical profile</td>
+                  <td className="py-4 pr-6 text-xs font-semibold text-neutral-500 uppercase tracking-wider">Typical profile</td>
                   {plans.map((plan) => (
-                    <td key={plan.name} className="px-3 py-4 align-top text-sm text-[#475569] leading-relaxed">{plan.fit}</td>
+                    <td key={plan.name} className="px-3 py-4 align-top text-sm text-neutral-600 leading-relaxed">{plan.fit}</td>
                   ))}
                 </tr>
                 <tr>
-                  <td className="py-4 pr-6 text-xs font-semibold text-[#64748B] uppercase tracking-wider">Setup fee</td>
+                  <td className="py-4 pr-6 text-xs font-semibold text-neutral-500 uppercase tracking-wider">Setup fee</td>
                   {plans.map((plan) => (
                     <td key={plan.name} className="px-3 py-4 align-top">
-                      <p className="text-2xl font-bold text-[#0F172A]">{plan.setupFee}</p>
-                      <p className="mt-1 text-xs text-[#64748B] leading-relaxed">{plan.setupDesc}</p>
+                      <p className="text-2xl font-bold text-neutral-900">{plan.setupFee}</p>
+                      <p className="mt-1 text-xs text-neutral-500 leading-relaxed">{plan.setupDesc}</p>
                     </td>
                   ))}
                 </tr>
                 <tr>
-                  <td className="py-4 pr-6 text-xs font-semibold text-[#64748B] uppercase tracking-wider">Monthly subscription</td>
+                  <td className="py-4 pr-6 text-xs font-semibold text-neutral-500 uppercase tracking-wider">Monthly subscription</td>
                   {plans.map((plan) => (
-                    <td key={plan.name} className="px-3 py-4 align-top text-lg font-bold text-[#0F172A]">{plan.subscription}</td>
+                    <td key={plan.name} className="px-3 py-4 align-top text-lg font-bold text-neutral-900">{plan.subscription}</td>
                   ))}
                 </tr>
                 <tr>
-                  <td className="py-4 pr-6 text-xs font-semibold text-[#64748B] uppercase tracking-wider">What's included</td>
+                  <td className="py-4 pr-6 text-xs font-semibold text-neutral-500 uppercase tracking-wider">What's included</td>
                   {plans.map((plan) => (
                     <td key={plan.name} className="px-3 py-4 align-top">
                       <ul className="space-y-2.5">
                         {plan.features.map((feature) => (
-                          <li key={feature} className="flex items-start gap-2 text-sm text-[#334155]">
+                          <li key={feature} className="flex items-start gap-2 text-sm text-neutral-700">
                             <Check className="h-4 w-4 text-[#E8652B] shrink-0 mt-0.5" />
                             <span>{feature}</span>
                           </li>
@@ -361,29 +361,32 @@ export default function PricingPage() {
       </section>
       */}
 
-      <section className="py-16 bg-[#F8FAFC]">
+      <section className="py-16 bg-neutral-50/50 border-b border-neutral-200">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">The portal pricing model</span>
-              <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">Your subcontractors and clients don't pay. You do.</h2>
-              <p className="mt-4 text-sm text-[#475569] leading-relaxed">
+              <span className="text-xs font-bold uppercase tracking-wider text-[#E8652B]">The portal pricing model</span>
+              <h2 className="mt-2 text-3xl sm:text-4xl font-black text-neutral-900 max-w-3xl leading-tight">Your subcontractors and clients don't pay. You do.</h2>
+              <p className="mt-4 text-sm text-neutral-600 leading-relaxed">
                 Most TMS platforms charge per-seat or per-user - which means every subcontractor and client you give access to becomes a line on your bill. HaulageOps works differently.
               </p>
-              <p className="mt-4 text-sm text-[#475569] leading-relaxed">
-                The <Link href="/platform/subcontractor-portal" className="text-[#E8652B] hover:underline font-medium">subcontractor portal</Link> is a dedicated, authenticated login environment where your external subcontractors accept and decline job assignments, view Mapbox maps, track their job history, and communicate job status - all in real time. They don't pay for that access.
+              <p className="mt-4 text-sm text-neutral-600 leading-relaxed">
+                The <Link href="/platform/subcontractor-portal" className="text-[#E8652B] hover:underline font-bold">subcontractor portal</Link> is a dedicated, authenticated login environment where your external subcontractors accept and decline job assignments, view Mapbox maps, track their job history, and communicate job status - all in real time. They don't pay for that access.
               </p>
-              <p className="mt-4 text-sm text-[#475569] leading-relaxed">
-                The <Link href="/platform/client-portal" className="text-[#E8652B] hover:underline font-medium">client portal</Link> gives your clients live job status, access to their dockets and proof of delivery, invoice history, their rate cards, and client-specific reports.
+              <p className="mt-4 text-sm text-neutral-600 leading-relaxed">
+                The <Link href="/platform/client-portal" className="text-[#E8652B] hover:underline font-bold">client portal</Link> gives your clients live job status, access to their dockets and proof of delivery, invoice history, their rate cards, and client-specific reports.
               </p>
             </div>
             <div>
-              <div className="rounded-2xl border border-[#BBF7D0] bg-[#F0FDF4] p-6">
-                <p className="font-bold text-[#166534]">What this means in practice</p>
-                <ul className="mt-3 space-y-2.5">
+              <div className="rounded-2xl border border-neutral-200 bg-white p-6 shadow-xs">
+                <div className="flex items-center gap-2 mb-3">
+                  <span className="w-2 h-2 rounded-full bg-[#E8652B]" />
+                  <p className="font-bold text-neutral-900 text-sm">What this means in practice</p>
+                </div>
+                <ul className="space-y-3">
                   {portalPoints.map((item) => (
-                    <li key={item} className="flex items-start gap-2 text-sm text-[#166534]">
-                      <Check className="h-4 w-4 text-[#16A34A] shrink-0 mt-0.5" />
+                    <li key={item} className="flex items-start gap-2.5 text-sm text-neutral-700">
+                      <Check className="h-4 w-4 text-[#E8652B] shrink-0 mt-0.5" />
                       <span>{item}</span>
                     </li>
                   ))}
@@ -394,23 +397,23 @@ export default function PricingPage() {
         </div>
       </section>
 
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-white border-b border-neutral-200">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">What's included</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">Setup covers everything you need to go live.</h2>
+          <span className="text-xs font-bold uppercase tracking-wider text-[#E8652B]">What's included</span>
+          <h2 className="mt-2 text-3xl sm:text-4xl font-black text-neutral-900 max-w-3xl leading-tight">Setup covers everything you need to go live.</h2>
           <div className="mt-10 grid md:grid-cols-2 gap-6">
             {setupCards.map((card) => (
-              <div key={card.title} className="bg-white rounded-2xl p-6 border border-[#E2E8F0]">
-                <h3 className="text-lg font-bold text-[#0F172A]">{card.title}</h3>
-                <p className="mt-3 text-sm text-[#475569] leading-relaxed">
+              <div key={card.title} className="bg-white rounded-2xl p-6 border border-neutral-200 shadow-xs hover:border-[#E8652B] transition-all">
+                <h3 className="text-lg font-bold text-neutral-900">{card.title}</h3>
+                <p className="mt-3 text-sm text-neutral-600 leading-relaxed">
                   {card.p}{" "}
                   {card.href && (
-                    <Link href={card.href} className="text-[#E8652B] hover:underline font-medium">{card.linkText}</Link>
+                    <Link href={card.href} className="text-[#E8652B] hover:underline font-bold">{card.linkText}</Link>
                   )}
                 </p>
                 <ul className="mt-4 space-y-2.5">
                   {card.points.map((item) => (
-                    <li key={item} className="flex items-start gap-2 text-sm text-[#334155]">
+                    <li key={item} className="flex items-start gap-2 text-sm text-neutral-700">
                       <Check className="h-4 w-4 text-[#E8652B] shrink-0 mt-0.5" />
                       <span>{item}</span>
                     </li>
@@ -422,16 +425,16 @@ export default function PricingPage() {
         </div>
       </section>
 
-      <section className="py-16 bg-[#F8FAFC]">
+      <section className="py-16 bg-neutral-50/50 border-b border-neutral-200">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Subscription includes</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">Everything in the subscription. No feature add-ons.</h2>
+          <span className="text-xs font-bold uppercase tracking-wider text-[#E8652B]">Subscription includes</span>
+          <h2 className="mt-2 text-3xl sm:text-4xl font-black text-neutral-900 max-w-3xl leading-tight">Everything in the subscription. No feature add-ons.</h2>
           <div className="mt-10 grid md:grid-cols-3 gap-6">
             {subscriptionCards.map((card) => (
-              <div key={card.title} className="bg-white rounded-2xl p-6 border border-[#E2E8F0]">
-                <h3 className="text-lg font-bold text-[#0F172A]">{card.title}</h3>
-                <p className="mt-3 text-sm text-[#475569] leading-relaxed">{card.p}</p>
-                <Link href={card.href} className="mt-4 inline-flex items-center gap-1 text-sm text-[#E8652B] hover:underline font-bold">
+              <div key={card.title} className="bg-white rounded-2xl p-6 border border-neutral-200 shadow-xs hover:border-[#E8652B] transition-all">
+                <h3 className="text-lg font-bold text-neutral-900">{card.title}</h3>
+                <p className="mt-3 text-sm text-neutral-600 leading-relaxed">{card.p}</p>
+                <Link href={card.href} className="mt-4 inline-flex items-center gap-1 text-sm text-[#E8652B] hover:text-[#D05520] font-bold">
                   <ArrowRight className="h-3.5 w-3.5" /> {card.linkText}
                 </Link>
               </div>
@@ -440,18 +443,20 @@ export default function PricingPage() {
         </div>
       </section>
 
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-white border-b border-neutral-200">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Frequently asked questions</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A]">Pricing questions answered directly.</h2>
-          <div className="mt-8 space-y-3">
+          <div className="text-center sm:text-left mb-8">
+            <span className="text-xs font-bold uppercase tracking-wider text-[#E8652B]">Frequently asked questions</span>
+            <h2 className="mt-2 text-3xl sm:text-4xl font-black text-neutral-900 leading-tight">Pricing questions answered directly.</h2>
+          </div>
+          <div className="space-y-3">
             {faqs.map((faq) => (
-              <details key={faq.q} className="group border border-[#E2E8F0] bg-white rounded-xl overflow-hidden">
-                <summary className="flex items-center justify-between gap-4 px-6 py-4 cursor-pointer font-semibold text-[#0F172A] text-sm list-none hover:bg-[#F8FAFC]">
+              <details key={faq.q} className="group border border-neutral-200 bg-white rounded-xl overflow-hidden shadow-2xs">
+                <summary className="flex items-center justify-between gap-4 px-6 py-4 cursor-pointer font-bold text-neutral-900 text-sm list-none hover:bg-neutral-50 transition-colors">
                   {faq.q}
-                  <ChevronRight className="h-4 w-4 text-[#94A3B8] shrink-0 group-open:rotate-90 transition-transform" />
+                  <ChevronRight className="h-4 w-4 text-neutral-400 shrink-0 group-open:rotate-90 transition-transform" />
                 </summary>
-                <div className="px-6 pb-5 text-sm text-[#475569] leading-relaxed border-t border-[#F1F5F9]">
+                <div className="px-6 pb-5 text-sm text-neutral-600 leading-relaxed border-t border-neutral-100">
                   <p className="pt-4">{faq.a}</p>
                 </div>
               </details>
@@ -460,11 +465,11 @@ export default function PricingPage() {
         </div>
       </section>
 
-      <section className="py-16 bg-[#0F172A]">
+      <section className="py-16 bg-neutral-900">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
           <div>
-            <h2 className="text-2xl sm:text-3xl font-bold text-[#FFFFFF]">Ready to discuss pricing for your fleet?</h2>
-            <p className="mt-2 text-[#94A3B8] text-sm leading-relaxed max-w-xl">
+            <h2 className="text-2xl sm:text-3xl font-black text-white">Ready to discuss pricing for your fleet?</h2>
+            <p className="mt-2 text-neutral-400 text-sm leading-relaxed max-w-xl">
               Schedule a 30-minute call to review your operational requirements and get a customized quote.
             </p>
           </div>
@@ -474,7 +479,7 @@ export default function PricingPage() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Button size="lg" className="bg-[#E8652B] hover:bg-[#D05520] text-white font-semibold">
+              <Button size="lg" className="bg-[#E8652B] hover:bg-[#D05520] text-white font-bold cursor-pointer shadow-xs">
                 Book Now - Schedule Call
               </Button>
             </a>

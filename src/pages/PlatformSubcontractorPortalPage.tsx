@@ -148,25 +148,25 @@ export function PlatformSubcontractorPortalPage() {
   return (
     <MainLayout showCta={false}>
       {/* Breadcrumb */}
-      <div className="pt-24 pb-0 bg-[#FFF9F5]">
+      <div className="pt-24 pb-0 bg-neutral-50/70">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <nav className="flex items-center gap-2 text-xs text-[#64748B]">
+          <nav className="flex items-center gap-2 text-xs text-neutral-500">
             <Link href="/" className="hover:text-[#E8652B]">Home</Link>
             <ChevronRight className="h-3 w-3" />
             <Link href="/platform" className="hover:text-[#E8652B]">Platform</Link>
             <ChevronRight className="h-3 w-3" />
-            <span className="text-[#0F172A] font-medium">Subcontractor Portal</span>
+            <span className="text-neutral-900 font-medium">Subcontractor Portal</span>
           </nav>
         </div>
       </div>
 
       {/* HERO */}
-      <section className="pt-10 pb-20 bg-gradient-to-b from-[#FFF9F5] via-[#FFF5EE]/40 to-white">
+      <section className="pt-10 pb-20 bg-gradient-to-b from-neutral-50/80 via-white to-white border-b border-neutral-200">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <motion.span
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
-            className="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-[#E8652B] bg-[#FFF0E6] mb-4"
+            className="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-[#E8652B] bg-orange-50 border border-orange-200 mb-4"
           >
             External Partners
           </motion.span>
@@ -174,7 +174,7 @@ export function PlatformSubcontractorPortalPage() {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.05 }}
-            className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#0F172A] max-w-4xl leading-[1.1]"
+            className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-neutral-900 max-w-4xl leading-[1.1]"
           >
             Your subcontractors get their own portal. You keep full operational control.
           </motion.h1>
@@ -182,7 +182,7 @@ export function PlatformSubcontractorPortalPage() {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="mt-6 text-lg sm:text-xl text-[#475569] max-w-3xl leading-relaxed"
+            className="mt-6 text-lg sm:text-xl text-neutral-600 max-w-3xl leading-relaxed"
           >
             Every subcontractor gets a dedicated, credentialed login. Jobs flow from your dispatch board to their portal — no WhatsApp, no phone calls, no shared passwords, and no need for your subcontractors to pay for their own software.
           </motion.p>
@@ -198,7 +198,7 @@ export function PlatformSubcontractorPortalPage() {
               </Button>
             </Link>
             <Link href="/solutions/subcontractor-coordination">
-              <Button size="lg" variant="outline" className="border-[#E2E8F0] text-[#334155] hover:bg-[#F8FAFC]">
+              <Button size="lg" variant="outline" className="border-neutral-200 text-neutral-700 hover:bg-neutral-50/50">
                 Subcontractor Coordination
               </Button>
             </Link>
@@ -212,8 +212,8 @@ export function PlatformSubcontractorPortalPage() {
               "Real-time status back to your board",
               "Margin stays private",
             ].map((pill) => (
-              <span key={pill} className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#F1F5F9] text-xs font-medium text-[#334155]">
-                <CheckCircle className="h-3.5 w-3.5 text-[#16A34A] shrink-0" />
+              <span key={pill} className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-neutral-100 text-xs font-medium text-neutral-700">
+                <CheckCircle className="h-3.5 w-3.5 text-[#E8652B] shrink-0" />
                 {pill}
               </span>
             ))}
@@ -222,7 +222,7 @@ export function PlatformSubcontractorPortalPage() {
       </section>
 
       {/* PROOF STRIP */}
-      <div className="bg-[#0F172A] py-5">
+      <div className="bg-neutral-900 py-5">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 text-center">
             {[
@@ -235,7 +235,7 @@ export function PlatformSubcontractorPortalPage() {
             ].map((item) => (
               <div key={item.strong} className="flex flex-col gap-0.5">
                 <span className="text-white font-bold text-sm">{item.strong}</span>
-                <span className="text-[#94A3B8] text-xs">{item.sub}</span>
+                <span className="text-neutral-400 text-xs">{item.sub}</span>
               </div>
             ))}
           </div>
@@ -246,20 +246,20 @@ export function PlatformSubcontractorPortalPage() {
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Why This Matters</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             Most haulage software treats subcontractor dispatch as an afterthought. We built it as a core portal.
           </h2>
-          <p className="mt-6 text-[#475569] max-w-3xl leading-relaxed">
+          <p className="mt-6 text-neutral-600 max-w-3xl leading-relaxed">
             Operators managing a mixed fleet — some owned trucks, some subcontracted capacity — face a specific problem: how do you get jobs to subcontractors in a structured, auditable way without forcing them onto your internal system? The standard answer is WhatsApp, email, or a phone call. That means no confirmation record, no status tracking, no automated POD flow, and no way to audit what was delegated to whom.
           </p>
-          <p className="mt-4 text-[#475569] max-w-3xl leading-relaxed">
+          <p className="mt-4 text-neutral-600 max-w-3xl leading-relaxed">
             HaulageOps&apos; subcontractor portal is a purpose-built, dedicated web application — not a workaround or a shared view of your admin panel. Each subcontractor company gets their own credentialed login. Your dispatcher delegates a job, it appears in the subcontractor&apos;s queue, they accept or decline, and every status update flows back to your dispatch board in real time.
           </p>
 
           <div className="mt-12 grid md:grid-cols-2 gap-8">
             {/* What it provides list */}
-            <div className="bg-[#F8FAFC] rounded-2xl p-8 border border-[#E2E8F0]">
-              <h3 className="text-xl font-bold text-[#0F172A] mb-5">What the subcontractor portal provides</h3>
+            <div className="bg-neutral-50/50 rounded-2xl p-8 border border-neutral-200">
+              <h3 className="text-xl font-bold text-neutral-900 mb-5">What the subcontractor portal provides</h3>
               <ul className="space-y-3">
                 {[
                   "Unique login credentials for each subcontractor company",
@@ -271,7 +271,7 @@ export function PlatformSubcontractorPortalPage() {
                   "Job history and document access for completed deliveries",
                   "No need for the subcontractor to subscribe to HaulageOps themselves",
                 ].map((item) => (
-                  <li key={item} className="flex items-start gap-2 text-sm text-[#334155]">
+                  <li key={item} className="flex items-start gap-2 text-sm text-neutral-700">
                     <CheckCircle className="h-4 w-4 text-[#E8652B] shrink-0 mt-0.5" />
                     <span>{item}</span>
                   </li>
@@ -280,11 +280,11 @@ export function PlatformSubcontractorPortalPage() {
             </div>
 
             {/* Visual spec mockup */}
-            <div className="rounded-2xl border border-[#E2E8F0] bg-[#0D1525] overflow-hidden flex flex-col">
-              <div className="px-5 py-3 bg-[#1E293B] text-[#E8652B] text-xs font-bold uppercase tracking-widest">
+            <div className="rounded-2xl border border-neutral-200 bg-neutral-900 border-y border-neutral-800 overflow-hidden flex flex-col">
+              <div className="px-5 py-3 bg-neutral-800 text-[#E8652B] text-xs font-bold uppercase tracking-widest">
                 HaulageOps — Subcontractor Portal View
               </div>
-              <div className="flex-1 p-6 text-[#94A3B8] text-sm font-mono leading-relaxed">
+              <div className="flex-1 p-6 text-neutral-400 text-sm font-mono leading-relaxed">
                 <p>Portal logged in as <span className="text-white font-semibold">&quot;Redlands Haulage Pty Ltd&quot;</span></p>
                 <div className="mt-4 space-y-3">
                   {[
@@ -292,22 +292,22 @@ export function PlatformSubcontractorPortalPage() {
                     { id: "#7842", material: "Sand", pickup: "Hanson Quarry, Stapylton", delivery: "Pacific Motorway – Lot 6", time: "07:30 Tomorrow" },
                     { id: "#7843", material: "Gravel", pickup: "Boral Quarry, Ormeau", delivery: "Pacific Motorway – Lot 5", time: "09:00 Tomorrow" },
                   ].map((job) => (
-                    <div key={job.id} className="bg-[#1E293B] rounded-lg p-3 border border-[#334155]">
+                    <div key={job.id} className="bg-neutral-800 rounded-lg p-3 border border-[#334155]">
                       <div className="flex items-center justify-between mb-1">
                         <span className="text-[#E8652B] font-semibold text-xs">{job.id}</span>
-                        <span className="text-[#64748B] text-xs">{job.time}</span>
+                        <span className="text-neutral-500 text-xs">{job.time}</span>
                       </div>
                       <p className="text-white text-xs font-medium">{job.material}</p>
-                      <p className="text-[#64748B] text-xs">↑ {job.pickup}</p>
-                      <p className="text-[#64748B] text-xs">↓ {job.delivery}</p>
+                      <p className="text-neutral-500 text-xs">↑ {job.pickup}</p>
+                      <p className="text-neutral-500 text-xs">↓ {job.delivery}</p>
                       <div className="flex gap-2 mt-2">
                         <span className="px-2 py-0.5 rounded bg-[#16A34A]/20 text-[#4ADE80] text-xs font-semibold">Accept</span>
-                        <span className="px-2 py-0.5 rounded bg-[#334155] text-[#94A3B8] text-xs font-semibold">Decline</span>
+                        <span className="px-2 py-0.5 rounded bg-[#334155] text-neutral-400 text-xs font-semibold">Decline</span>
                       </div>
                     </div>
                   ))}
                 </div>
-                <p className="mt-4 text-[#475569] text-xs">↳ Mapbox route map below — no internal rates visible</p>
+                <p className="mt-4 text-neutral-600 text-xs">↳ Mapbox route map below — no internal rates visible</p>
               </div>
             </div>
           </div>
@@ -315,18 +315,18 @@ export function PlatformSubcontractorPortalPage() {
       </section>
 
       {/* HOW THE FLOW WORKS */}
-      <section className="py-20 bg-[#F8FAFC]">
+      <section className="py-20 bg-neutral-50/50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">How the Flow Works</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             From your dispatch board to your subcontractor&apos;s job queue — in real time.
           </h2>
           <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {lifecycleSteps.map((step) => (
-              <div key={step.num} className="bg-white rounded-2xl p-6 border border-[#E2E8F0] shadow-sm">
+              <div key={step.num} className="bg-white rounded-2xl p-6 border border-neutral-200 shadow-sm">
                 <span className="text-3xl font-black text-[#E8652B]/20 leading-none">{step.num}</span>
-                <h3 className="mt-2 font-bold text-[#0F172A] text-base">{step.title}</h3>
-                <p className="mt-2 text-sm text-[#475569] leading-relaxed">{step.desc}</p>
+                <h3 className="mt-2 font-bold text-neutral-900 text-base">{step.title}</h3>
+                <p className="mt-2 text-sm text-neutral-600 leading-relaxed">{step.desc}</p>
               </div>
             ))}
           </div>
@@ -337,21 +337,21 @@ export function PlatformSubcontractorPortalPage() {
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Rate Privacy</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             Your subcontractor sees their pay rate. Not your client charge rate. Not your margin.
           </h2>
-          <p className="mt-6 text-[#475569] max-w-3xl leading-relaxed">
+          <p className="mt-6 text-neutral-600 max-w-3xl leading-relaxed">
             When you delegate a job to a subcontractor, HaulageOps stores two separate rates on the same job record: the rate you charge the client, and the rate you pay the subcontractor. The subcontractor portal shows only the subcontractor pay rate — the client charge rate and the margin between them are never visible to the subcontractor, regardless of what they can access in their portal.
           </p>
           <div className="mt-10 grid md:grid-cols-3 gap-6">
             {rateCards.map((card) => (
-              <div key={card.title} className="bg-[#F8FAFC] rounded-2xl p-6 border border-[#E2E8F0]">
-                <h3 className="font-bold text-[#0F172A] mb-2">{card.title}</h3>
-                <p className="text-sm text-[#475569] leading-relaxed">{card.desc}</p>
+              <div key={card.title} className="bg-neutral-50/50 rounded-2xl p-6 border border-neutral-200">
+                <h3 className="font-bold text-neutral-900 mb-2">{card.title}</h3>
+                <p className="text-sm text-neutral-600 leading-relaxed">{card.desc}</p>
               </div>
             ))}
           </div>
-          <p className="mt-6 text-sm text-[#475569]">
+          <p className="mt-6 text-sm text-neutral-600">
             See how rates work across the platform:{" "}
             <Link href="/platform/rate-management" className="text-[#E8652B] hover:underline font-medium">
               Rate Management
@@ -361,19 +361,19 @@ export function PlatformSubcontractorPortalPage() {
       </section>
 
       {/* COMPARISON TABLE */}
-      <section className="py-20 bg-[#F8FAFC]">
+      <section className="py-20 bg-neutral-50/50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">How We Compare</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             Native subcontractor portal vs the workarounds competitors use.
           </h2>
-          <p className="mt-4 text-[#475569] max-w-3xl leading-relaxed">
+          <p className="mt-4 text-neutral-600 max-w-3xl leading-relaxed">
             When evaluating haulage TMS options, the subcontractor question reveals a sharp divide. Some platforms have no sub-facing feature at all. Others require your subcontractors to also pay for a licence. HaulageOps is the only platform in this category with a native, free-for-the-sub dedicated portal.
           </p>
           <div className="mt-10 overflow-x-auto">
             <table className="w-full text-sm border-collapse">
               <thead>
-                <tr className="bg-[#0F172A] text-white">
+                <tr className="bg-neutral-900 text-white">
                   <th className="text-left px-5 py-3 font-semibold rounded-tl-xl">Subcontractor capability</th>
                   <th className="text-left px-5 py-3 font-semibold">Allotrac</th>
                   <th className="text-left px-5 py-3 font-semibold">MyTrucking</th>
@@ -382,11 +382,11 @@ export function PlatformSubcontractorPortalPage() {
               </thead>
               <tbody>
                 {compareRows.map((row, i) => (
-                  <tr key={row.cap} className={i % 2 === 0 ? "bg-white" : "bg-[#F8FAFC]"}>
-                    <td className="px-5 py-3 text-[#0F172A] font-medium border-b border-[#E2E8F0]">{row.cap}</td>
-                    <td className="px-5 py-3 text-[#64748B] border-b border-[#E2E8F0]">{row.allotrac}</td>
-                    <td className="px-5 py-3 text-[#64748B] border-b border-[#E2E8F0]">{row.mytrucking}</td>
-                    <td className="px-5 py-3 text-[#16A34A] font-semibold border-b border-[#E2E8F0]">{row.haulageops}</td>
+                  <tr key={row.cap} className={i % 2 === 0 ? "bg-white" : "bg-neutral-50/50"}>
+                    <td className="px-5 py-3 text-neutral-900 font-medium border-b border-neutral-200">{row.cap}</td>
+                    <td className="px-5 py-3 text-neutral-500 border-b border-neutral-200">{row.allotrac}</td>
+                    <td className="px-5 py-3 text-neutral-500 border-b border-neutral-200">{row.mytrucking}</td>
+                    <td className="px-5 py-3 text-[#E8652B] font-semibold border-b border-neutral-200">{row.haulageops}</td>
                   </tr>
                 ))}
               </tbody>
@@ -399,22 +399,22 @@ export function PlatformSubcontractorPortalPage() {
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Related Platform Features</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             The subcontractor portal connects to these platform areas.
           </h2>
           <div className="mt-10 grid md:grid-cols-3 gap-6">
             {connectedModules.map((mod) => (
-              <div key={mod.title} className="bg-[#F8FAFC] rounded-2xl p-6 border border-[#E2E8F0]">
-                <h3 className="font-bold text-[#0F172A] mb-2">
+              <div key={mod.title} className="bg-neutral-50/50 rounded-2xl p-6 border border-neutral-200">
+                <h3 className="font-bold text-neutral-900 mb-2">
                   <Link href={mod.href} className="hover:text-[#E8652B] transition-colors">
                     {mod.title}
                   </Link>
                 </h3>
-                <p className="text-sm text-[#475569] leading-relaxed">{mod.desc}</p>
+                <p className="text-sm text-neutral-600 leading-relaxed">{mod.desc}</p>
               </div>
             ))}
           </div>
-          <p className="mt-6 text-sm text-[#475569]">
+          <p className="mt-6 text-sm text-neutral-600">
             Also see:{" "}
             <Link href="/solutions/subcontractor-coordination" className="text-[#E8652B] hover:underline font-medium">
               Subcontractor Coordination
@@ -425,20 +425,20 @@ export function PlatformSubcontractorPortalPage() {
       </section>
 
       {/* FAQ */}
-      <section className="py-20 bg-[#F8FAFC]">
+      <section className="py-20 bg-neutral-50/50">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Common Questions</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A]">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900">
             Frequently asked about the HaulageOps subcontractor portal.
           </h2>
           <div className="mt-8 space-y-3">
             {faqs.map((faq) => (
-              <details key={faq.q} className="group border border-[#E2E8F0] bg-white rounded-xl overflow-hidden">
-                <summary className="flex items-center justify-between gap-4 px-6 py-4 cursor-pointer font-semibold text-[#0F172A] text-sm list-none hover:bg-[#F8FAFC]">
+              <details key={faq.q} className="group border border-neutral-200 bg-white rounded-xl overflow-hidden">
+                <summary className="flex items-center justify-between gap-4 px-6 py-4 cursor-pointer font-semibold text-neutral-900 text-sm list-none hover:bg-neutral-50/50">
                   {faq.q}
-                  <ChevronRight className="h-4 w-4 text-[#94A3B8] shrink-0 group-open:rotate-90 transition-transform" />
+                  <ChevronRight className="h-4 w-4 text-neutral-400 shrink-0 group-open:rotate-90 transition-transform" />
                 </summary>
-                <div className="px-6 pb-5 text-sm text-[#475569] leading-relaxed border-t border-[#F1F5F9]">
+                <div className="px-6 pb-5 text-sm text-neutral-600 leading-relaxed border-t border-neutral-100">
                   <p className="pt-4">{faq.a}</p>
                 </div>
               </details>
@@ -448,11 +448,11 @@ export function PlatformSubcontractorPortalPage() {
       </section>
 
       {/* CTA BAND */}
-      <section className="py-16 bg-[#0F172A]">
+      <section className="py-16 bg-neutral-900">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
           <div>
             <h2 className="text-2xl sm:text-3xl font-bold text-white">See the subcontractor portal in a live demo.</h2>
-            <p className="mt-2 text-[#94A3B8] text-sm leading-relaxed max-w-xl">
+            <p className="mt-2 text-neutral-400 text-sm leading-relaxed max-w-xl">
               Watch how job delegation, accept/decline, real-time status and rate privacy work across your dispatch board and the subcontractor&apos;s portal in 20 minutes.
             </p>
           </div>

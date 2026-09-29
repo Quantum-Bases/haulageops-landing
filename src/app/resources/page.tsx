@@ -116,20 +116,20 @@ export default function ResourcesPage() {
   return (
     <MainLayout showCta={false}>
       {/* Breadcrumb + Hero */}
-      <section className="pt-24 pb-16 bg-gradient-to-b from-[#FFF9F5] to-white">
+      <section className="pt-24 pb-16 bg-gradient-to-b from-neutral-50/80 via-white to-white border-b border-neutral-200">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <nav className="flex items-center gap-2 text-xs text-[#64748B] mb-6">
+          <nav className="flex items-center gap-2 text-xs text-neutral-500 mb-6">
             <Link href="/" className="hover:text-[#E8652B]">Home</Link>
             <ChevronRight className="h-3 w-3" />
-            <span className="text-[#0F172A] font-medium">Resources</span>
+            <span className="text-neutral-900 font-medium">Resources</span>
           </nav>
-          <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-[#E8652B] bg-[#FFF0E6] mb-4 animate-in fade-in slide-in-from-bottom-4 animation-duration-700 fill-mode-both">
+          <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-[#E8652B] bg-orange-50 border border-orange-200 mb-4 animate-in fade-in slide-in-from-bottom-4 animation-duration-700 fill-mode-both">
             Resource Centre
           </span>
-          <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-[#0F172A] max-w-4xl leading-[1.1] animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-100 fill-mode-both">
+          <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-neutral-900 max-w-4xl leading-[1.1] animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-100 fill-mode-both">
             Resources for operators who run haulage and construction logistics.
           </h1>
-          <p className="mt-6 text-lg text-[#475569] max-w-3xl leading-relaxed animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-150 fill-mode-both">
+          <p className="mt-6 text-lg text-neutral-600 max-w-3xl leading-relaxed animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-150 fill-mode-both">
             These resources are designed for operators actively managing the problems — not generic supply chain theory. Each guide, checklist and tool covers a specific operational or commercial challenge that haulage operators face day to day.
           </p>
         </div>
@@ -139,20 +139,20 @@ export default function ResourcesPage() {
       <section className="py-16 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Guides</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A]">In-depth operational guides</h2>
-          <p className="mt-4 text-[#475569] leading-relaxed max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900">In-depth operational guides</h2>
+          <p className="mt-4 text-neutral-600 leading-relaxed max-w-3xl">
             Structured guides covering the full haulage operation — from how a job moves from creation to invoice, to managing subcontractor networks and staying audit-ready.
           </p>
           <div className="mt-10 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {guides.map((card) => (
-              <div key={card.title} className="bg-white rounded-2xl p-6 border border-[#E2E8F0] flex flex-col">
-                <h3 className="text-lg font-bold text-[#0F172A]">
+              <div key={card.title} className="bg-white rounded-2xl p-6 border border-neutral-200 flex flex-col">
+                <h3 className="text-lg font-bold text-neutral-900">
                   <Link href={card.href} className="hover:text-[#E8652B] transition-colors">{card.title}</Link>
                 </h3>
-                <p className="mt-3 text-sm text-[#475569] leading-relaxed">{card.desc}</p>
+                <p className="mt-3 text-sm text-neutral-600 leading-relaxed">{card.desc}</p>
                 <ul className="mt-4 space-y-2.5 flex-1">
                   {card.points.map((item) => (
-                    <li key={item} className="flex items-start gap-2 text-sm text-[#334155]">
+                    <li key={item} className="flex items-start gap-2 text-sm text-neutral-700">
                       <CheckCircle2 className="h-4 w-4 text-[#E8652B] shrink-0 mt-0.5" />
                       <span>{item}</span>
                     </li>
@@ -168,21 +168,21 @@ export default function ResourcesPage() {
       </section>
 
       {/* CHECKLISTS */}
-      <section className="py-16 bg-[#F8FAFC]">
+      <section className="py-16 bg-neutral-50/50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Checklists</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A]">Operational checklists</h2>
-          <p className="mt-4 text-[#475569] leading-relaxed max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900">Operational checklists</h2>
+          <p className="mt-4 text-neutral-600 leading-relaxed max-w-3xl">
             Structured checklists for the decisions and processes that most operators handle informally — and pay for in rework, confusion or wasted time when something goes wrong.
           </p>
           <div className="mt-10 grid md:grid-cols-3 gap-6">
             {checklists.map((card) => (
-              <div key={card.title} className="bg-white rounded-2xl p-6 border border-[#E2E8F0] flex flex-col">
-                <h3 className="text-lg font-bold text-[#0F172A]">
+              <div key={card.title} className="bg-white rounded-2xl p-6 border border-neutral-200 flex flex-col">
+                <h3 className="text-lg font-bold text-neutral-900">
                   <Link href={card.href} className="hover:text-[#E8652B] transition-colors">{card.title}</Link>
                 </h3>
-                <p className="mt-3 text-sm text-[#475569] leading-relaxed">{card.desc}</p>
-                <p className="mt-4 text-sm text-[#334155]"><strong className="text-[#0F172A]">Best for:</strong> {card.best}</p>
+                <p className="mt-3 text-sm text-neutral-600 leading-relaxed">{card.desc}</p>
+                <p className="mt-4 text-sm text-neutral-700"><strong className="text-neutral-900">Best for:</strong> {card.best}</p>
                 <Link href={card.href} className="mt-5 inline-flex items-center gap-1 text-sm text-[#E8652B] hover:underline font-medium">
                   Use the checklist <ArrowRight className="h-3.5 w-3.5" />
                 </Link>
@@ -196,18 +196,18 @@ export default function ResourcesPage() {
       <section className="py-16 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Tools</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A]">Calculators and templates</h2>
-          <p className="mt-4 text-[#475569] leading-relaxed max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900">Calculators and templates</h2>
+          <p className="mt-4 text-neutral-600 leading-relaxed max-w-3xl">
             Practical tools for estimating cost and structuring the commercial fundamentals of a haulage operation — rate cards, ROI and admin cost analysis.
           </p>
           <div className="mt-10 grid md:grid-cols-3 gap-6">
             {tools.map((card) => (
-              <div key={card.title} className="bg-white rounded-2xl p-6 border border-[#E2E8F0] flex flex-col">
-                <h3 className="text-lg font-bold text-[#0F172A]">
+              <div key={card.title} className="bg-white rounded-2xl p-6 border border-neutral-200 flex flex-col">
+                <h3 className="text-lg font-bold text-neutral-900">
                   <Link href={card.href} className="hover:text-[#E8652B] transition-colors">{card.title}</Link>
                 </h3>
-                <p className="mt-3 text-sm text-[#475569] leading-relaxed">{card.desc}</p>
-                <p className="mt-4 text-xs text-[#94A3B8] italic">{card.note}</p>
+                <p className="mt-3 text-sm text-neutral-600 leading-relaxed">{card.desc}</p>
+                <p className="mt-4 text-xs text-neutral-400 italic">{card.note}</p>
                 <Link href={card.href} className="mt-5 inline-flex items-center gap-1 text-sm text-[#E8652B] hover:underline font-medium">
                   {card.cta} <ArrowRight className="h-3.5 w-3.5" />
                 </Link>
@@ -218,11 +218,11 @@ export default function ResourcesPage() {
       </section>
 
       {/* CTA BAND */}
-      <section className="py-16 bg-[#0F172A]">
+      <section className="py-16 bg-neutral-900">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
           <div>
             <h2 className="text-2xl sm:text-3xl font-bold text-white">See the platform in action.</h2>
-            <p className="mt-2 text-[#94A3B8] text-sm leading-relaxed max-w-xl">
+            <p className="mt-2 text-neutral-400 text-sm leading-relaxed max-w-xl">
               A 20-minute demo covers one full job end-to-end — create, dispatch, subcontract, POD, invoice, Xero sync. No feature slides.
             </p>
           </div>

@@ -47,7 +47,7 @@ const mixedBoardJobs = [
   { id: "JOB-1842", client: "Midland Civils", fleet: "Owned — Truck 07", status: "Loaded", statusCls: "bg-[#A855F7]/15 text-[#C084FC]", clientRate: "$24 / t", payRate: "—", pod: "—" },
   { id: "JOB-1843", client: "Balfour Beatty", fleet: "Sub — D. Okafor", status: "En Route", statusCls: "bg-[#3B82F6]/15 text-[#60A5FA]", clientRate: "$22 / t", payRate: "$18 / t", pod: "—" },
   { id: "JOB-1844", client: "Apex Civil", fleet: "Owned — Truck 03", status: "Delivered", statusCls: "bg-[#16A34A]/15 text-[#4ADE80]", clientRate: "$19 / load", payRate: "—", pod: "✓ POD" },
-  { id: "JOB-1845", client: "Redlands Council", fleet: "Sub — G. Patel", status: "Assigned", statusCls: "bg-[#64748B]/20 text-[#94A3B8]", clientRate: "$30 / hr", payRate: "$26 / hr", pod: "—" },
+  { id: "JOB-1845", client: "Redlands Council", fleet: "Sub — G. Patel", status: "Assigned", statusCls: "bg-[#64748B]/20 text-neutral-400", clientRate: "$30 / hr", payRate: "$26 / hr", pod: "—" },
 ];
 
 const changeCards = [
@@ -138,28 +138,28 @@ export default function OwnedAndSubcontractedFleetsPage() {
   return (
     <MainLayout showCta={false}>
       {/* Breadcrumb */}
-      <div className="pt-24 pb-0 bg-[#FFF9F5]">
+      <div className="pt-24 pb-0 bg-neutral-50/70">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <nav className="flex items-center gap-2 text-xs text-[#64748B]">
+          <nav className="flex items-center gap-2 text-xs text-neutral-500">
             <Link href="/" className="hover:text-[#E8652B]">Home</Link>
             <ChevronRight className="h-3 w-3" />
             <Link href="/solutions" className="hover:text-[#E8652B]">Solutions</Link>
             <ChevronRight className="h-3 w-3" />
-            <span className="text-[#0F172A] font-medium">Owned &amp; Subcontracted Fleets</span>
+            <span className="text-neutral-900 font-medium">Owned &amp; Subcontracted Fleets</span>
           </nav>
         </div>
       </div>
 
       {/* HERO */}
-      <section className="pt-10 pb-20 bg-gradient-to-b from-[#FFF9F5] via-[#FFF5EE]/40 to-white">
+      <section className="pt-10 pb-20 bg-gradient-to-b from-neutral-50/80 via-white to-white border-b border-neutral-200">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-[#E8652B] bg-[#FFF0E6] mb-4 animate-in fade-in slide-in-from-bottom-4 animation-duration-700 fill-mode-both">
+          <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-[#E8652B] bg-orange-50 border border-orange-200 mb-4 animate-in fade-in slide-in-from-bottom-4 animation-duration-700 fill-mode-both">
             Coordinate Operations
           </span>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#0F172A] max-w-4xl leading-[1.1] animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-100 fill-mode-both">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-neutral-900 max-w-4xl leading-[1.1] animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-100 fill-mode-both">
             Run owned trucks and subcontractors from the same dispatch workflow.
           </h1>
-          <p className="mt-6 text-lg sm:text-xl text-[#475569] max-w-3xl leading-relaxed animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-150 fill-mode-both">
+          <p className="mt-6 text-lg sm:text-xl text-neutral-600 max-w-3xl leading-relaxed animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-150 fill-mode-both">
             Most bulk haulage operators use a mix of owned vehicles and subcontracted capacity. HaulageOps puts both on the same dispatch board, with separate rates, one job record and POD from both flowing into the same place.
           </p>
           <div className="mt-8 flex flex-wrap gap-3 animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-200 fill-mode-both">
@@ -169,7 +169,7 @@ export default function OwnedAndSubcontractedFleetsPage() {
               </Button>
             </Link>
             <Link href="/platform/dispatch-management">
-              <Button size="lg" variant="outline" className="border-[#E2E8F0] text-[#334155] hover:bg-[#F8FAFC]">
+              <Button size="lg" variant="outline" className="border-neutral-200 text-neutral-700 hover:bg-neutral-50/50">
                 Dispatch Management
               </Button>
             </Link>
@@ -177,8 +177,8 @@ export default function OwnedAndSubcontractedFleetsPage() {
           {/* Kicker pills */}
           <div className="mt-8 flex flex-wrap gap-2 animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-300 fill-mode-both">
             {heroKickers.map((pill) => (
-              <span key={pill} className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#F1F5F9] text-xs font-medium text-[#334155]">
-                <CheckCircle className="h-3.5 w-3.5 text-[#16A34A] shrink-0" />
+              <span key={pill} className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-neutral-100 text-xs font-medium text-neutral-700">
+                <CheckCircle className="h-3.5 w-3.5 text-[#E8652B] shrink-0" />
                 {pill}
               </span>
             ))}
@@ -187,7 +187,7 @@ export default function OwnedAndSubcontractedFleetsPage() {
       </section>
 
       {/* PROOF STRIP */}
-      <div className="bg-[#0F172A] py-5">
+      <div className="bg-neutral-900 py-5">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-center">
             {heroKickers.map((item) => (
@@ -204,29 +204,29 @@ export default function OwnedAndSubcontractedFleetsPage() {
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">The problem</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             Managing two fleets in two systems means two of everything.
           </h2>
           <div className="mt-8 grid lg:grid-cols-2 gap-10 items-start">
             <div>
-              <p className="text-[#475569] leading-relaxed">
+              <p className="text-neutral-600 leading-relaxed">
                 Most bulk haulage operators don&apos;t run a pure owned fleet. They have a core of owned trucks and use subcontracted capacity to cover peaks, specialised equipment requirements, or geographic reach beyond their own vehicles. That&apos;s standard practice.
               </p>
-              <p className="mt-4 text-[#475569] leading-relaxed">
+              <p className="mt-4 text-neutral-600 leading-relaxed">
                 The problem is what happens when those two capacity types are managed separately. Owned drivers get jobs through the dispatch system. Subcontractors get a forwarded message, a phone call or a WhatsApp. Status for owned trucks comes through the driver app. Status for subs comes through a second call. Dockets from owned drivers go into one folder. Dockets from subs — if they arrive at all — go somewhere else.
               </p>
-              <p className="mt-4 text-[#475569] leading-relaxed">
+              <p className="mt-4 text-neutral-600 leading-relaxed">
                 By the time a job is complete and an invoice needs to go out, there are two sets of records to reconcile, two sources of confirmation, and often a gap where the subcontractor&apos;s paperwork hasn&apos;t yet arrived. The more subcontracted capacity you run, the bigger that reconciliation problem becomes.
               </p>
             </div>
             <div>
-              <p className="text-[#475569] leading-relaxed">
+              <p className="text-neutral-600 leading-relaxed">
                 The same problem shows up when a client asks for a status update. The dispatcher knows where the owned trucks are. They need to call or message to find out where the subcontracted vehicle has got to. The client is waiting. The answer takes longer than it should.
               </p>
-              <p className="mt-4 text-[#475569] leading-relaxed">
+              <p className="mt-4 text-neutral-600 leading-relaxed">
                 And at invoice time: the rate for the owned driver&apos;s run is in one spreadsheet. The pay rate for the subcontractor is in another agreement or someone&apos;s memory. The client rate is somewhere else again. Pulling together one invoice from a job that crossed both fleet types takes longer than it should, and introduces the opportunity for errors.
               </p>
-              <p className="mt-4 text-[#475569] leading-relaxed">
+              <p className="mt-4 text-neutral-600 leading-relaxed">
                 None of these are unusual problems. They&apos;re the standard consequence of running a mixed fleet without a system that handles both capacity types natively.
               </p>
             </div>
@@ -235,44 +235,44 @@ export default function OwnedAndSubcontractedFleetsPage() {
       </section>
 
       {/* HOW HAULAGEOPS WORKS */}
-      <section className="py-20 bg-[#F8FAFC]">
+      <section className="py-20 bg-neutral-50/50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">How HaulageOps works</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             One job creation process. One dispatch board. Both capacity types.
           </h2>
-          <p className="mt-6 text-[#475569] max-w-3xl leading-relaxed">
+          <p className="mt-6 text-neutral-600 max-w-3xl leading-relaxed">
             When a job is created in HaulageOps, the dispatcher assigns it to either an owned driver or delegates it to a subcontractor. The process is the same either way. The job record, the status tracking and the POD collection all work through the same system — what changes is which portal receives the assignment.
           </p>
           <div className="mt-10 grid md:grid-cols-3 gap-6">
             {lifecycleSteps.map((step) => (
-              <div key={step.num} className="bg-white rounded-2xl p-6 border border-[#E2E8F0] shadow-sm">
+              <div key={step.num} className="bg-white rounded-2xl p-6 border border-neutral-200 shadow-sm">
                 <span className="text-3xl font-black text-[#E8652B]/20 leading-none">{step.num}</span>
-                <h3 className="mt-2 font-bold text-[#0F172A] text-base">{step.title}</h3>
-                <p className="mt-2 text-sm text-[#475569] leading-relaxed">{step.desc}</p>
+                <h3 className="mt-2 font-bold text-neutral-900 text-base">{step.title}</h3>
+                <p className="mt-2 text-sm text-neutral-600 leading-relaxed">{step.desc}</p>
               </div>
             ))}
           </div>
 
           {/* Rate separation */}
           <div className="mt-16">
-            <h3 className="text-2xl font-bold text-[#0F172A]">Rate separation without rate confusion</h3>
+            <h3 className="text-2xl font-bold text-neutral-900">Rate separation without rate confusion</h3>
             <div className="mt-8 grid lg:grid-cols-2 gap-10 items-start">
               <div>
-                <p className="text-[#475569] leading-relaxed">
+                <p className="text-neutral-600 leading-relaxed">
                   Every job in HaulageOps carries two rate dimensions: the client charge rate and, where a subcontractor is involved, the subcontractor pay rate. These are stored separately and both flow from the relevant rate cards and agreements already in the system.
                 </p>
-                <p className="mt-4 text-[#475569] leading-relaxed">
+                <p className="mt-4 text-neutral-600 leading-relaxed">
                   The client sees the rate they were quoted. The dispatcher sees margin. The subcontractor sees their pay rate. No one sees what they shouldn&apos;t. No manual calculation needed at invoice time because the rates were stored when the agreements were made, not entered fresh each job.
                 </p>
               </div>
               {/* Dispatch board visual spec */}
-              <div className="rounded-2xl border border-[#E2E8F0] bg-[#0D1525] overflow-hidden">
-                <div className="px-5 py-3 bg-[#1E293B] text-[#E8652B] text-xs font-bold uppercase tracking-widest">
+              <div className="rounded-2xl border border-neutral-200 bg-neutral-900 border-y border-neutral-800 overflow-hidden">
+                <div className="px-5 py-3 bg-neutral-800 text-[#E8652B] text-xs font-bold uppercase tracking-widest">
                   HaulageOps Dispatch Board — Mixed Fleet
                 </div>
                 <div className="p-4 sm:p-5 space-y-3">
-                  <div className="grid grid-cols-12 gap-2 px-2 pb-1 text-[9px] uppercase tracking-wider text-[#64748B]">
+                  <div className="grid grid-cols-12 gap-2 px-2 pb-1 text-[9px] uppercase tracking-wider text-neutral-500">
                     <span className="col-span-3">Job</span>
                     <span className="col-span-2">Fleet</span>
                     <span className="col-span-2">Status</span>
@@ -281,13 +281,13 @@ export default function OwnedAndSubcontractedFleetsPage() {
                     <span className="col-span-1">POD</span>
                   </div>
                   {mixedBoardJobs.map((job) => (
-                    <div key={job.id} className="grid grid-cols-12 gap-2 px-2 py-1.5 rounded bg-[#1E293B] border border-[#334155] items-center">
+                    <div key={job.id} className="grid grid-cols-12 gap-2 px-2 py-1.5 rounded bg-neutral-800 border border-[#334155] items-center">
                       <span className="col-span-3 text-white text-[10px] font-semibold">{job.id}</span>
-                      <span className="col-span-2 flex items-center gap-1 text-[#94A3B8] text-[10px]">
+                      <span className="col-span-2 flex items-center gap-1 text-neutral-400 text-[10px]">
                         {job.fleet.startsWith("Owned") ? (
-                          <Truck className="h-3 w-3 text-[#64748B] shrink-0" />
+                          <Truck className="h-3 w-3 text-neutral-500 shrink-0" />
                         ) : (
-                          <Building2 className="h-3 w-3 text-[#64748B] shrink-0" />
+                          <Building2 className="h-3 w-3 text-neutral-500 shrink-0" />
                         )}
                         <span className="truncate">{job.fleet}</span>
                       </span>
@@ -295,17 +295,17 @@ export default function OwnedAndSubcontractedFleetsPage() {
                         <span className={`px-1.5 py-0.5 rounded text-[9px] font-semibold ${job.statusCls}`}>{job.status}</span>
                       </span>
                       <span className="col-span-2 text-[#FBBF24] text-[10px]">{job.clientRate}</span>
-                      <span className="col-span-2 text-[#94A3B8] text-[10px]">{job.payRate}</span>
+                      <span className="col-span-2 text-neutral-400 text-[10px]">{job.payRate}</span>
                       <span className="col-span-1 flex justify-end">
                         {job.pod !== "—" ? (
                           <FileCheck className="h-3 w-3 text-[#4ADE80]" />
                         ) : (
-                          <span className="text-[#475569] text-[10px]">—</span>
+                          <span className="text-neutral-600 text-[10px]">—</span>
                         )}
                       </span>
                     </div>
                   ))}
-                  <p className="text-[10px] text-[#475569]">
+                  <p className="text-[10px] text-neutral-600">
                     Owned and subcontracted jobs on the same board — client charge rate and subcontractor pay rate stored separately per job.
                   </p>
                 </div>
@@ -319,17 +319,17 @@ export default function OwnedAndSubcontractedFleetsPage() {
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">What this changes</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             What the client sees. What management sees. What doesn&apos;t need to happen.
           </h2>
           <div className="mt-10 grid md:grid-cols-2 gap-6">
             {changeCards.map((card) => (
-              <div key={card.title} className="bg-[#F8FAFC] rounded-2xl p-7 border border-[#E2E8F0]">
-                <h3 className="font-bold text-[#0F172A] text-lg">{card.title}</h3>
-                <p className="mt-3 text-sm text-[#475569] leading-relaxed">{card.intro}</p>
+              <div key={card.title} className="bg-neutral-50/50 rounded-2xl p-7 border border-neutral-200">
+                <h3 className="font-bold text-neutral-900 text-lg">{card.title}</h3>
+                <p className="mt-3 text-sm text-neutral-600 leading-relaxed">{card.intro}</p>
                 <ul className="mt-5 space-y-3">
                   {card.points.map((item) => (
-                    <li key={item} className="flex items-start gap-2 text-sm text-[#334155]">
+                    <li key={item} className="flex items-start gap-2 text-sm text-neutral-700">
                       <CheckCircle className="h-4 w-4 text-[#E8652B] shrink-0 mt-0.5" />
                       <span>{item}</span>
                     </li>
@@ -342,25 +342,25 @@ export default function OwnedAndSubcontractedFleetsPage() {
       </section>
 
       {/* RELATED PLATFORM FEATURES */}
-      <section className="py-20 bg-[#F8FAFC]">
+      <section className="py-20 bg-neutral-50/50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Related platform features</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             The features behind this solution
           </h2>
           <div className="mt-10 grid md:grid-cols-3 gap-6">
             {relatedCards.map((card) => (
-              <div key={card.title} className="bg-white rounded-2xl p-6 border border-[#E2E8F0]">
-                <h3 className="font-bold text-[#0F172A] mb-2">
+              <div key={card.title} className="bg-white rounded-2xl p-6 border border-neutral-200">
+                <h3 className="font-bold text-neutral-900 mb-2">
                   <Link href={card.href} className="hover:text-[#E8652B] transition-colors">
                     {card.title}
                   </Link>
                 </h3>
-                <p className="text-sm text-[#475569] leading-relaxed">{card.desc}</p>
+                <p className="text-sm text-neutral-600 leading-relaxed">{card.desc}</p>
               </div>
             ))}
           </div>
-          <p className="mt-6 text-sm text-[#475569]">
+          <p className="mt-6 text-sm text-neutral-600">
             Also relevant:{" "}
             <Link href="/solutions/subcontractor-coordination" className="text-[#E8652B] hover:underline font-medium">
               Subcontractor Coordination
@@ -377,17 +377,17 @@ export default function OwnedAndSubcontractedFleetsPage() {
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Frequently Asked Questions</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A]">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900">
             Owned and subcontracted fleets — common questions.
           </h2>
           <div className="mt-8 space-y-3">
             {faqs.map((faq) => (
-              <details key={faq.q} className="group border border-[#E2E8F0] bg-white rounded-xl overflow-hidden">
-                <summary className="flex items-center justify-between gap-4 px-6 py-4 cursor-pointer font-semibold text-[#0F172A] text-sm list-none hover:bg-[#F8FAFC]">
+              <details key={faq.q} className="group border border-neutral-200 bg-white rounded-xl overflow-hidden">
+                <summary className="flex items-center justify-between gap-4 px-6 py-4 cursor-pointer font-semibold text-neutral-900 text-sm list-none hover:bg-neutral-50/50">
                   {faq.q}
-                  <ChevronRight className="h-4 w-4 text-[#94A3B8] shrink-0 group-open:rotate-90 transition-transform" />
+                  <ChevronRight className="h-4 w-4 text-neutral-400 shrink-0 group-open:rotate-90 transition-transform" />
                 </summary>
-                <div className="px-6 pb-5 text-sm text-[#475569] leading-relaxed border-t border-[#F1F5F9]">
+                <div className="px-6 pb-5 text-sm text-neutral-600 leading-relaxed border-t border-neutral-100">
                   <p className="pt-4">{faq.a}</p>
                 </div>
               </details>
@@ -397,11 +397,11 @@ export default function OwnedAndSubcontractedFleetsPage() {
       </section>
 
       {/* CTA BAND */}
-      <section className="py-16 bg-[#0F172A]">
+      <section className="py-16 bg-neutral-900">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
           <div>
             <h2 className="text-2xl sm:text-3xl font-bold text-white">See how your mixed fleet would work in HaulageOps.</h2>
-            <p className="mt-2 text-[#94A3B8] text-sm leading-relaxed max-w-xl">
+            <p className="mt-2 text-neutral-400 text-sm leading-relaxed max-w-xl">
               A demo covers owned driver dispatch, subcontractor portal delegation and how rates and POD connect across both — in 20 minutes.
             </p>
           </div>
@@ -412,7 +412,7 @@ export default function OwnedAndSubcontractedFleetsPage() {
               </Button>
             </Link>
             <Link href="/solutions">
-              <Button size="lg" variant="outline" className="border-[#334155] text-white hover:bg-[#1E293B] w-full sm:w-auto">
+              <Button size="lg" variant="outline" className="border-[#334155] text-white hover:bg-neutral-800 w-full sm:w-auto">
                 All Solutions
               </Button>
             </Link>

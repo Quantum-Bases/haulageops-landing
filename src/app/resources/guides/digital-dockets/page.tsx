@@ -90,22 +90,22 @@ export default function DigitalDocketsGuidePage() {
   return (
     <MainLayout showCta={false}>
       {/* Breadcrumb + Hero */}
-      <section className="pt-24 pb-16 bg-gradient-to-b from-[#FFF9F5] to-white">
+      <section className="pt-24 pb-16 bg-gradient-to-b from-neutral-50/80 via-white to-white border-b border-neutral-200">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <nav className="flex items-center gap-2 text-xs text-[#64748B] mb-6">
+          <nav className="flex items-center gap-2 text-xs text-neutral-500 mb-6">
             <Link href="/" className="hover:text-[#E8652B]">Home</Link>
             <ChevronRight className="h-3 w-3" />
             <Link href="/resources" className="hover:text-[#E8652B]">Resources</Link>
             <ChevronRight className="h-3 w-3" />
-            <span className="text-[#0F172A] font-medium">Digital Dockets Guide</span>
+            <span className="text-neutral-900 font-medium">Digital Dockets Guide</span>
           </nav>
-          <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-[#E8652B] bg-[#FFF0E6] mb-4 animate-in fade-in slide-in-from-bottom-4 animation-duration-700 fill-mode-both">
+          <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-[#E8652B] bg-orange-50 border border-orange-200 mb-4 animate-in fade-in slide-in-from-bottom-4 animation-duration-700 fill-mode-both">
             Guide · Proof of Delivery
           </span>
-          <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-[#0F172A] max-w-4xl leading-[1.1] animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-100 fill-mode-both">
+          <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-neutral-900 max-w-4xl leading-[1.1] animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-100 fill-mode-both">
             Digital Dockets: Moving from Paper to Electronic Proof of Delivery
           </h1>
-          <p className="mt-6 text-lg text-[#475569] max-w-3xl leading-relaxed animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-150 fill-mode-both">
+          <p className="mt-6 text-lg text-neutral-600 max-w-3xl leading-relaxed animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-150 fill-mode-both">
             Paper dockets go missing. Digital dockets don't. This guide explains what a digital docket captures, how the workflow changes for drivers, and how electronic POD connects directly to faster invoicing.
           </p>
         </div>
@@ -117,30 +117,30 @@ export default function DigitalDocketsGuidePage() {
           <div className="grid lg:grid-cols-2 gap-12">
             <div>
               <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">The Problem with Paper</span>
-              <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A]">Why Paper Dockets Cost Operators Money</h2>
-              <p className="mt-4 text-sm text-[#475569] leading-relaxed">
+              <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900">Why Paper Dockets Cost Operators Money</h2>
+              <p className="mt-4 text-sm text-neutral-600 leading-relaxed">
                 In bulk haulage, the docket is the evidence. It's proof that a load was delivered, the weight that was carried, and the basis for the invoice. When that evidence is a piece of paper in a driver's cab, a lot can go wrong.
               </p>
               <ul className="mt-5 space-y-3">
                 {paperProblems.map((item) => (
-                  <li key={item.strong} className="flex items-start gap-2 text-sm text-[#334155]">
+                  <li key={item.strong} className="flex items-start gap-2 text-sm text-neutral-700">
                     <CheckCircle className="h-4 w-4 text-[#E8652B] shrink-0 mt-0.5" />
-                    <span><strong className="text-[#0F172A]">{item.strong}:</strong> {item.desc}</span>
+                    <span><strong className="text-neutral-900">{item.strong}:</strong> {item.desc}</span>
                   </li>
                 ))}
               </ul>
             </div>
             <div>
               <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">The Digital Alternative</span>
-              <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A]">What a Digital Docket Captures</h2>
-              <p className="mt-4 text-sm text-[#475569] leading-relaxed">
+              <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900">What a Digital Docket Captures</h2>
+              <p className="mt-4 text-sm text-neutral-600 leading-relaxed">
                 A digital docket replaces the paper record with a structured electronic entry created at the point of delivery. At minimum, a useful digital docket for bulk haulage captures:
               </p>
               <ul className="mt-5 space-y-3">
                 {digitalCaptures.map((item) => (
-                  <li key={item.strong} className="flex items-start gap-2 text-sm text-[#334155]">
+                  <li key={item.strong} className="flex items-start gap-2 text-sm text-neutral-700">
                     <CheckCircle className="h-4 w-4 text-[#E8652B] shrink-0 mt-0.5" />
-                    <span><strong className="text-[#0F172A]">{item.strong}:</strong> {item.desc}</span>
+                    <span><strong className="text-neutral-900">{item.strong}:</strong> {item.desc}</span>
                   </li>
                 ))}
               </ul>
@@ -150,18 +150,18 @@ export default function DigitalDocketsGuidePage() {
       </section>
 
       {/* THE DIGITAL DOCKET WORKFLOW */}
-      <section className="py-16 bg-[#F8FAFC]">
+      <section className="py-16 bg-neutral-50/50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">The Digital Docket Workflow</h2>
-          <p className="mt-3 text-[#475569] leading-relaxed max-w-3xl">
+          <h2 className="text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">The Digital Docket Workflow</h2>
+          <p className="mt-3 text-neutral-600 leading-relaxed max-w-3xl">
             How a load moves from dispatch to docket to invoice in a digital system.
           </p>
           <div className="mt-10 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {workflow.map((step) => (
-              <div key={step.num} className="bg-white rounded-2xl p-6 border border-[#E2E8F0]">
+              <div key={step.num} className="bg-white rounded-2xl p-6 border border-neutral-200">
                 <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">{step.num}</span>
-                <h3 className="mt-3 font-bold text-[#0F172A]">{step.title}</h3>
-                <p className="mt-3 text-sm text-[#475569] leading-relaxed">{step.p}</p>
+                <h3 className="mt-3 font-bold text-neutral-900">{step.title}</h3>
+                <p className="mt-3 text-sm text-neutral-600 leading-relaxed">{step.p}</p>
               </div>
             ))}
           </div>
@@ -171,15 +171,15 @@ export default function DigitalDocketsGuidePage() {
       {/* FAQ */}
       <section className="py-16 bg-white">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#0F172A]">Digital Dockets FAQs</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold text-neutral-900">Digital Dockets FAQs</h2>
           <div className="mt-8 space-y-3">
             {faqs.map((faq) => (
-              <details key={faq.q} className="group border border-[#E2E8F0] bg-white rounded-xl overflow-hidden">
-                <summary className="flex items-center justify-between gap-4 px-6 py-4 cursor-pointer font-semibold text-[#0F172A] text-sm list-none hover:bg-[#F8FAFC]">
+              <details key={faq.q} className="group border border-neutral-200 bg-white rounded-xl overflow-hidden">
+                <summary className="flex items-center justify-between gap-4 px-6 py-4 cursor-pointer font-semibold text-neutral-900 text-sm list-none hover:bg-neutral-50/50">
                   {faq.q}
-                  <ChevronRight className="h-4 w-4 text-[#94A3B8] shrink-0 group-open:rotate-90 transition-transform" />
+                  <ChevronRight className="h-4 w-4 text-neutral-400 shrink-0 group-open:rotate-90 transition-transform" />
                 </summary>
-                <div className="px-6 pb-5 text-sm text-[#475569] leading-relaxed border-t border-[#F1F5F9]">
+                <div className="px-6 pb-5 text-sm text-neutral-600 leading-relaxed border-t border-neutral-100">
                   <p className="pt-4">{faq.a}</p>
                 </div>
               </details>
@@ -189,11 +189,11 @@ export default function DigitalDocketsGuidePage() {
       </section>
 
       {/* CTA BAND */}
-      <section className="py-16 bg-[#0F172A]">
+      <section className="py-16 bg-neutral-900">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
           <div>
             <h2 className="text-2xl sm:text-3xl font-bold text-white">Still running on paper dockets?</h2>
-            <p className="mt-2 text-[#94A3B8] text-sm leading-relaxed max-w-xl">
+            <p className="mt-2 text-neutral-400 text-sm leading-relaxed max-w-xl">
               See how digital dockets work in a 20-minute HaulageOps demo.
             </p>
           </div>

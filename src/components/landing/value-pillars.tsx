@@ -1,199 +1,140 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Check } from "lucide-react";
 
 const pillars = [
   {
     number: "01",
     title: "Control every job across drivers, subcontractors, and clients",
-    wedgeLine: "Delegate the job, keep the visibility.",
+    wedgeLine: "Delegate the job, keep 100% live visibility.",
     description:
       "Delegate work to subcontractors and assign drivers without losing control of the job — because everyone works on the same live job record, in their own portal.",
     features: [
-      "Subcontractor portal with own login, live job queue, and Mapbox maps",
-      "Admin and dispatch panel with full fleet oversight",
-      "Driver availability scheduling",
-      "Role-based access control (RBAC)",
-      "Push notifications for status changes",
+      "Subcontractor portal with dedicated login, live job queue, and Mapbox maps",
+      "Admin and dispatch panel with full Australian fleet oversight",
+      "Driver availability scheduling and fatigue pre-checks",
+      "Role-based access control (RBAC) across allocators and accounting",
+      "Instant push notifications for truck allocation & status changes",
     ],
     demoMoment:
       "Create job, delegate to subcontractor, sub accepts in their own portal, live status flows back. Under 3 minutes.",
   },
   {
     number: "02",
-    title: "Every party sees it live, dispatch to POD",
-    wedgeLine: "They log in. They don't ring in.",
+    title: "Every party sees it live, from dispatch to digital POD",
+    wedgeLine: "They log in. They don't ring your dispatch desk.",
     description:
-      "Stop being the human status API. Clients and management see live job status, tracking, and delivery proof the moment it happens.",
+      "Stop being the human telephone exchange. Clients and site foremen see live truck tracking, ETA, and delivery proof the moment the tipper empties its load.",
     features: [
-      "Real-time tracking via WebSocket (Socket.io)",
-      "Client portal: job tracking, invoices, rate cards, reporting",
-      "Offline-capable driver app (iOS and Android)",
-      "POD capture: photo, document, and signature, Azure-stored",
+      "Real-time GPS vehicle tracking via high-speed WebSockets",
+      "Client portal: live job tracking, weighbridge tickets, rate cards, and reporting",
+      "Offline-capable driver app (iOS and Android) for remote quarries",
+      "Digital POD capture: weighbridge docket photo, e-signature, and time-stamped location",
     ],
     demoMoment:
-      "Driver completes delivery offline at a quarry, app syncs, POD appears on the job, client portal shows it instantly.",
+      "Driver completes delivery offline at a quarry pit, app syncs upon signal, POD appears instantly in client portal.",
   },
   {
     number: "03",
-    title: "Turn haulage workflows into auditable, billable, compliance-ready operations",
-    wedgeLine: "The docket is already there when you invoice.",
+    title: "Turn haulage workflows into auditable, billable operations",
+    wedgeLine: "The weighbridge docket is already attached when you invoice.",
     description:
-      "Every job produces its own paper trail — rates applied, documents stored, actions logged, invoice generated — so audits, disputes, and billing stop being projects.",
+      "Every job produces its own verified paper trail — agreed rates applied, weighbridge tickets attached, actions logged, invoice generated — so billing stops being a weekend chore.",
     features: [
-      "Rate management: per tonne, load, hour, or fixed — client-specific, effective-dated",
-      "Invoice lifecycle with Xero sync (OAuth2, 6-hr cron plus webhooks)",
-      "Contract lifecycle: versioning, approvals, auto-expiry",
-      "All-actions audit trail with document management (Azure)",
-      "Break and fatigue management",
+      "Flexible rate management: per tonne, m³, load, hour, or fixed matrix",
+      "Automated invoice lifecycle with native Xero & MYOB sync (OAuth2)",
+      "Automated Subcontractor RCTIs generated directly from approved dockets",
+      "NHVR Chain of Responsibility audit trail with immutable document storage",
+      "Automatic break, waiting time, and demurrage capture",
     ],
     demoMoment:
-      "Show a rate card with effective dating, job billed at the correct historical rate, invoice generated, Xero sync.",
+      "Show a client rate card, job billed at the correct historical rate, weighbridge photo attached, invoice synced to Xero in seconds.",
   },
 ];
 
 export function ValuePillars() {
   return (
-    <section className="pb-20 sm:pb-28" style={{ background: "#FEFBF9" }}>
+    <section className="py-20 sm:py-28 bg-white border-b border-neutral-200">
       <div className="mx-auto max-w-7xl xl:max-w-[80rem] 2xl:max-w-[105rem] px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.5 }}
-          className="text-center max-w-3xl mx-auto mb-14 sm:mb-16"
+          className="text-center max-w-3xl mx-auto mb-16 sm:mb-20"
         >
-          <div
-            className="inline-flex items-center justify-center gap-2 px-3.5 py-1.5 rounded-full mb-4 border"
-            style={{ background: "#FAEDE7", borderColor: "#E8D5C4" }}
-          >
-            <span
-              className="w-2 h-2 rounded-full"
-              style={{ background: "#D86D3C" }}
-            />
-            <p
-              className="text-xs font-bold uppercase tracking-widest"
-              style={{ color: "#D86D3C" }}
-            >
-              The solution
+          <div className="inline-flex items-center justify-center gap-2 px-3.5 py-1.5 rounded-full mb-4 bg-white border border-neutral-300 shadow-xs">
+            <span className="w-2 h-2 rounded-full bg-[#E8652B]" />
+            <p className="text-xs font-bold uppercase tracking-wider text-neutral-900">
+              The Architecture
             </p>
           </div>
-          <h2
-            className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight"
-            style={{ color: "#202020" }}
-          >
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-neutral-900 leading-tight">
             One platform. Every party on the job.
           </h2>
-          <p
-            className="mt-5 text-base sm:text-lg leading-relaxed"
-            style={{ color: "#5C5047" }}
-          >
-            Connect dispatchers, owned drivers, subcontractors, and clients on a single shared operational record with real-time tracking, digital dockets, and automated billing.
+          <p className="mt-5 text-base sm:text-lg leading-relaxed text-neutral-600">
+            Connect dispatchers, company drivers, subbies, and quarry clients on a single shared operational record with real-time GPS, digital dockets, and automated billing.
           </p>
         </motion.div>
 
-        <div className="space-y-20">
+        <div className="space-y-16 sm:space-y-20">
           {pillars.map((pillar, idx) => (
             <motion.div
               key={pillar.number}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-80px" }}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: 0.45 }}
             >
-              <div
-                className={`grid lg:grid-cols-2 gap-10 lg:gap-16 items-start`}
-              >
+              <div className="grid lg:grid-cols-2 gap-8 lg:gap-14 items-center">
                 {/* Text side */}
                 <div className={idx % 2 === 1 ? "lg:order-2" : ""}>
-                  <div className="mb-5">
-                    <span
-                      className="text-7xl font-black tabular-nums leading-none select-none"
-                      style={{ color: "#F2E8E0" }}
-                    >
+                  <div className="mb-4">
+                    <span className="text-6xl sm:text-7xl font-black tabular-nums leading-none select-none text-neutral-300">
                       {pillar.number}
                     </span>
                   </div>
-                  <h3
-                    className="text-2xl sm:text-3xl font-bold tracking-tight leading-tight"
-                    style={{ color: "#202020" }}
-                  >
+                  <h3 className="text-2xl sm:text-3xl font-black tracking-tight text-neutral-900 leading-tight">
                     {pillar.title}
                   </h3>
-                  <p
-                    className="mt-4 leading-relaxed text-base"
-                    style={{ color: "#5C5047" }}
-                  >
+                  <p className="mt-4 leading-relaxed text-base text-neutral-600 font-normal">
                     {pillar.description}
                   </p>
-                  <div
-                    className="mt-5 flex items-center gap-2.5 rounded-xl px-4 py-3 border"
-                    style={{
-                      background: "#FAEDE7",
-                      borderColor: "#E8BEAA",
-                    }}
-                  >
-                    <ArrowRight
-                      className="h-4 w-4 shrink-0"
-                      style={{ color: "#D86D3C" }}
-                    />
-                    <span
-                      className="text-sm font-bold"
-                      style={{ color: "#A8552E" }}
-                    >
-                      {pillar.wedgeLine}
-                    </span>
+                  
+                  {/* Refined wedge line */}
+                  <div className="mt-6 inline-flex items-center gap-2.5 rounded-lg px-4 py-2.5 bg-orange-50/90 text-neutral-900 border border-orange-200/80 text-xs sm:text-sm font-bold shadow-2xs">
+                    <ArrowRight className="h-4 w-4 shrink-0 text-[#E8652B]" />
+                    <span>{pillar.wedgeLine}</span>
                   </div>
                 </div>
 
                 {/* Feature panel */}
                 <div className={idx % 2 === 1 ? "lg:order-1" : ""}>
-                  <div
-                    className="rounded-2xl border p-6 sm:p-8"
-                    style={{
-                      background: "#F7F2EE",
-                      borderColor: "#E8D5C4",
-                    }}
-                  >
-                    <h4
-                      className="text-xs font-bold uppercase tracking-widest mb-5"
-                      style={{ color: "#8A7060" }}
-                    >
-                      What this looks like
-                    </h4>
+                  <div className="rounded-xl border border-neutral-200 bg-neutral-50/70 p-6 sm:p-8 shadow-xs">
+                    <div className="flex items-center justify-between mb-5 pb-3 border-b border-neutral-200/80">
+                      <h4 className="text-xs font-bold uppercase tracking-wider text-neutral-500">
+                        Operational Capabilities
+                      </h4>
+                      <span className="text-[11px] font-mono font-semibold text-neutral-900 bg-white border border-neutral-200 px-2 py-0.5 rounded shadow-2xs">
+                        Standard in Core
+                      </span>
+                    </div>
+
                     <ul className="space-y-3.5">
                       {pillar.features.map((feature) => (
-                        <li key={feature} className="flex items-start gap-3">
-                          <div
-                            className="shrink-0 mt-1.5 w-5 h-5 rounded-full flex items-center justify-center"
-                            style={{ background: "#FAEDE7" }}
-                          >
-                            <div
-                              className="w-2 h-2 rounded-full"
-                              style={{ background: "#D86D3C" }}
-                            />
+                        <li key={feature} className="flex items-start gap-3 text-sm text-neutral-800">
+                          <div className="shrink-0 mt-0.5 w-4 h-4 rounded-full bg-orange-50 text-[#E8652B] flex items-center justify-center border border-orange-200">
+                            <Check className="w-2.5 h-2.5 stroke-[3]" />
                           </div>
-                          <span
-                            className="text-sm leading-relaxed"
-                            style={{ color: "#202020" }}
-                          >
-                            {feature}
-                          </span>
+                          <span className="leading-snug">{feature}</span>
                         </li>
                       ))}
                     </ul>
-                    <div
-                      className="mt-6 pt-5 border-t"
-                      style={{ borderColor: "#E8D5C4" }}
-                    >
-                      <p className="text-sm" style={{ color: "#5C5047" }}>
-                        <span
-                          className="font-bold"
-                          style={{ color: "#202020" }}
-                        >
-                          In practice:{" "}
-                        </span>
+
+                    <div className="mt-6 pt-5 border-t border-neutral-200/80">
+                      <p className="text-xs sm:text-sm text-neutral-600">
+                        <span className="font-extrabold text-neutral-900">In practice: </span>
                         {pillar.demoMoment}
                       </p>
                     </div>

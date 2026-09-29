@@ -1,11 +1,12 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { CheckCircle2, XCircle } from "lucide-react";
+import { CheckCircle2, XCircle, ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 const comparisonFeatures = [
   {
-    feature: "Dedicated subcontractor login",
+    feature: "Dedicated subcontractor login & self-serve portal",
     spreadsheets: false,
     allotrac: false,
     mytrucking: false,
@@ -13,7 +14,7 @@ const comparisonFeatures = [
     haultech: false,
   },
   {
-    feature: "Client portal (not just tracking link)",
+    feature: "Branded Client Portal (live GPS map + digital dockets)",
     spreadsheets: false,
     allotrac: true,
     mytrucking: false,
@@ -21,7 +22,7 @@ const comparisonFeatures = [
     haultech: true,
   },
   {
-    feature: "Offline-capable driver app",
+    feature: "Offline-capable driver app (quarry pit ready)",
     spreadsheets: false,
     allotrac: true,
     mytrucking: true,
@@ -29,7 +30,7 @@ const comparisonFeatures = [
     haultech: true,
   },
   {
-    feature: "Effective-dated rate management",
+    feature: "Effective-dated rate matrices (tonne, m³, hour)",
     spreadsheets: false,
     allotrac: false,
     mytrucking: false,
@@ -37,7 +38,7 @@ const comparisonFeatures = [
     haultech: false,
   },
   {
-    feature: "Built for bulk haulage",
+    feature: "Purpose-built for Australian heavy bulk & tippers",
     spreadsheets: false,
     allotrac: false,
     mytrucking: false,
@@ -45,7 +46,7 @@ const comparisonFeatures = [
     haultech: false,
   },
   {
-    feature: "Subbies and clients pay nothing",
+    feature: "Subbies & clients pay $0 (unlimited external users)",
     spreadsheets: false,
     allotrac: false,
     mytrucking: false,
@@ -56,22 +57,19 @@ const comparisonFeatures = [
 
 function CellIcon({ value }: { value: boolean | null }) {
   if (value === true)
-    return <CheckCircle2 className="h-4 w-4 text-emerald-500 mx-auto" />;
+    return <CheckCircle2 className="h-4 w-4 text-neutral-500 mx-auto" />;
   if (value === false)
     return (
-      <XCircle className="h-4 w-4 mx-auto" style={{ color: "#D8C4B8" }} />
+      <XCircle className="h-4 w-4 text-neutral-300 mx-auto" />
     );
   return (
-    <span
-      className="block w-3 h-0.5 rounded-full mx-auto"
-      style={{ background: "#D8C4B8" }}
-    />
+    <span className="block w-3 h-0.5 rounded-full mx-auto bg-neutral-300" />
   );
 }
 
 export function CompetitiveComparison() {
   return (
-    <section id="compare" className="pb-20 sm:pb-28" style={{ background: "#FEFBF9" }}>
+    <section id="compare" className="py-20 sm:py-28 bg-white border-b border-neutral-200">
       <div className="mx-auto max-w-7xl xl:max-w-[80rem] 2xl:max-w-[105rem] px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -80,33 +78,17 @@ export function CompetitiveComparison() {
           transition={{ duration: 0.5 }}
           className="text-center max-w-3xl mx-auto mb-14 sm:mb-16"
         >
-          <div
-            className="inline-flex items-center justify-center gap-2 px-3.5 py-1.5 rounded-full mb-4 border"
-            style={{ background: "#FAEDE7", borderColor: "#E8D5C4" }}
-          >
-            <span
-              className="w-2 h-2 rounded-full"
-              style={{ background: "#D86D3C" }}
-            />
-            <p
-              className="text-xs font-bold uppercase tracking-widest"
-              style={{ color: "#D86D3C" }}
-            >
-              How we compare
+          <div className="inline-flex items-center justify-center gap-2 px-3.5 py-1.5 rounded-full mb-4 bg-white border border-neutral-300 shadow-xs">
+            <span className="w-2 h-2 rounded-full bg-[#E8652B]" />
+            <p className="text-xs font-bold uppercase tracking-wider text-neutral-900">
+              Direct Benchmark
             </p>
           </div>
-          <h2
-            className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight"
-            style={{ color: "#202020" }}
-          >
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-neutral-900 leading-tight">
             Comparing platforms? Ask three questions.
           </h2>
-          <p
-            className="mt-5 text-base sm:text-lg leading-relaxed"
-            style={{ color: "#5C5047" }}
-          >
-            Does my subcontractor get their own login? Does my client get more
-            than a tracking link? Can I prove which rate applied last March?
+          <p className="mt-5 text-base sm:text-lg leading-relaxed text-neutral-600">
+            Does my subcontractor get their own login? Does my client get real-time tracking? Can I verify which rate applied to last month's quarry deliveries?
           </p>
         </motion.div>
 
@@ -119,19 +101,15 @@ export function CompetitiveComparison() {
           className="grid sm:grid-cols-3 gap-4 mb-12"
         >
           {[
-            { q: "Does my subcontractor get their own login?" },
-            { q: "Does my client get more than a tracking link?" },
-            { q: "Can I prove which rate applied last March?" },
+            { q: "Does my subcontractor get their own free portal login?" },
+            { q: "Does my client get live GPS tracking + signed dockets?" },
+            { q: "Can I automatically match weighbridge tickets into Xero?" },
           ].map((item) => (
             <div
               key={item.q}
-              className="rounded-xl border px-5 py-4"
-              style={{ background: "#FAEDE7", borderColor: "#E8BEAA" }}
+              className="rounded-xl border border-neutral-200 bg-neutral-50/70 px-5 py-4 shadow-xs"
             >
-              <p
-                className="text-sm font-semibold leading-relaxed"
-                style={{ color: "#A8552E" }}
-              >
+              <p className="text-sm font-bold text-neutral-900 leading-relaxed">
                 {item.q}
               </p>
             </div>
@@ -144,27 +122,19 @@ export function CompetitiveComparison() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.5, delay: 0.15 }}
-          className="overflow-x-auto rounded-2xl border"
-          style={{ borderColor: "#E8D5C4" }}
+          className="overflow-x-auto rounded-xl border border-neutral-200 shadow-xs bg-white"
         >
-          <table className="w-full min-w-[660px]">
+          <table className="w-full min-w-[680px]">
             <thead>
-              <tr style={{ background: "#F7F2EE" }}>
-                <th
-                  className="text-left text-xs font-bold uppercase tracking-widest py-4 px-5 w-52"
-                  style={{ color: "#8A7060" }}
-                >
-                  Feature
+              <tr className="bg-neutral-100/70 border-b border-neutral-200">
+                <th className="text-left text-xs font-bold uppercase tracking-wider py-4 px-5 w-60 text-neutral-600">
+                  Feature & Capability
                 </th>
-                <th
-                  className="text-center text-sm font-bold py-4 px-4 border-x"
-                  style={{
-                    color: "#D86D3C",
-                    borderColor: "#E8D5C4",
-                    background: "#FAEDE7",
-                  }}
-                >
-                  HaulageOps
+                <th className="text-center text-sm font-extrabold py-4 px-4 border-x border-neutral-300 bg-neutral-900 text-white">
+                  <span className="flex items-center justify-center gap-1.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#E8652B]" />
+                    HaulageOps
+                  </span>
                 </th>
                 {[
                   "Spreadsheets",
@@ -175,38 +145,21 @@ export function CompetitiveComparison() {
                 ].map((name) => (
                   <th
                     key={name}
-                    className="text-center text-xs font-medium py-4 px-3"
-                    style={{ color: "#8A7060" }}
+                    className="text-center text-xs font-semibold py-4 px-3 text-neutral-600"
                   >
                     {name}
                   </th>
                 ))}
               </tr>
             </thead>
-            <tbody style={{ background: "#FEFBF9" }}>
-              {comparisonFeatures.map((row, idx) => (
-                <tr
-                  key={row.feature}
-                  className={
-                    idx < comparisonFeatures.length - 1
-                      ? "border-b"
-                      : ""
-                  }
-                  style={{ borderColor: "#E8D5C4" }}
-                >
-                  <td
-                    className="py-3.5 px-5 text-sm font-medium"
-                    style={{ color: "#202020" }}
-                  >
+            <tbody className="divide-y divide-neutral-200">
+              {comparisonFeatures.map((row) => (
+                <tr key={row.feature} className="hover:bg-neutral-50/50 transition-colors">
+                  <td className="py-3.5 px-5 text-sm font-semibold text-neutral-900">
                     {row.feature}
                   </td>
-                  <td
-                    className="py-3.5 px-4 text-center border-x"
-                    style={{ borderColor: "#E8D5C4", background: "#FFFAF7" }}
-                  >
-                    <CheckCircle2
-                      className="h-4 w-4 text-emerald-500 mx-auto"
-                    />
+                  <td className="py-3.5 px-4 text-center border-x border-neutral-300 bg-neutral-50">
+                    <CheckCircle2 className="h-4 w-4 text-[#E8652B] mx-auto" />
                   </td>
                   <td className="py-3.5 px-3 text-center">
                     <CellIcon value={row.spreadsheets} />
@@ -229,20 +182,19 @@ export function CompetitiveComparison() {
           </table>
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.25 }}
-          className="mt-6 max-w-2xl"
-        >
-          <p className="text-xs leading-relaxed" style={{ color: "#8A7060" }}>
-            Competitor strengths acknowledged: Allotrac offers an AI assistant,
-            MyTrucking has strong reviews and a lower price point, Mandata holds
-            UK fleet management certifications. We focus on what HaulageOps
-            does that they do not.
+        {/* Action Link & Honest Note */}
+        <div className="mt-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <p className="text-xs leading-relaxed text-neutral-500 max-w-xl">
+            Competitor strengths acknowledged. We focus specifically on what Australian tipper and bulk haulage operators need: multi-portal collaboration, weighbridge tickets, and instant Xero reconciliations.
           </p>
-        </motion.div>
+          <Link
+            href="/compare"
+            className="inline-flex items-center gap-1.5 text-xs font-bold text-neutral-900 hover:text-[#E8652B] transition-colors"
+          >
+            View Full Head-to-Head Comparison Matrix
+            <ArrowRight className="w-3.5 h-3.5 text-[#E8652B]" />
+          </Link>
+        </div>
       </div>
     </section>
   );

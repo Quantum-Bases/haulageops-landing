@@ -209,22 +209,22 @@ export default function BulkHaulageOperationsGuidePage() {
   return (
     <MainLayout showCta={false}>
       {/* Breadcrumb + Hero */}
-      <section className="pt-24 pb-16 bg-gradient-to-b from-[#FFF9F5] to-white">
+      <section className="pt-24 pb-16 bg-gradient-to-b from-neutral-50/80 via-white to-white border-b border-neutral-200">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <nav className="flex items-center gap-2 text-xs text-[#64748B] mb-6">
+          <nav className="flex items-center gap-2 text-xs text-neutral-500 mb-6">
             <Link href="/" className="hover:text-[#E8652B]">Home</Link>
             <ChevronRight className="h-3 w-3" />
             <Link href="/resources" className="hover:text-[#E8652B]">Resources</Link>
             <ChevronRight className="h-3 w-3" />
-            <span className="text-[#0F172A] font-medium">Guides</span>
+            <span className="text-neutral-900 font-medium">Guides</span>
           </nav>
-          <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-[#E8652B] bg-[#FFF0E6] mb-4 animate-in fade-in slide-in-from-bottom-4 animation-duration-700 fill-mode-both">
+          <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-[#E8652B] bg-orange-50 border border-orange-200 mb-4 animate-in fade-in slide-in-from-bottom-4 animation-duration-700 fill-mode-both">
             Operations Guide
           </span>
-          <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-[#0F172A] max-w-4xl leading-[1.1] animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-100 fill-mode-both">
+          <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-neutral-900 max-w-4xl leading-[1.1] animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-100 fill-mode-both">
             Bulk haulage operations: what actually happens from job creation to invoice.
           </h1>
-          <p className="mt-6 text-lg text-[#475569] max-w-3xl leading-relaxed animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-150 fill-mode-both">
+          <p className="mt-6 text-lg text-neutral-600 max-w-3xl leading-relaxed animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-150 fill-mode-both">
             A practical guide for operators managing 15–80 vehicles across owned and subcontracted capacity — covering the full job lifecycle, rate structures, subcontractor coordination and the software that connects it all.
           </p>
         </div>
@@ -233,9 +233,9 @@ export default function BulkHaulageOperationsGuidePage() {
       {/* WHAT IS BULK HAULAGE */}
       <section className="py-16 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#0F172A]">What is bulk haulage?</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold text-neutral-900">What is bulk haulage?</h2>
           <div className="mt-8 grid lg:grid-cols-2 gap-12">
-            <div className="space-y-4 text-[#475569] leading-relaxed text-sm">
+            <div className="space-y-4 text-neutral-600 leading-relaxed text-sm">
               <p>
                 Bulk haulage is the transport of loose, unpackaged materials in large quantities — typically by tipper truck, semi-tipper, walking floor or similar purpose-built vehicle. Unlike parcel delivery or general freight forwarding, bulk haulage deals in materials that are measured by weight (tonnes) or volume (cubic metres), not by item count or pallet.
               </p>
@@ -247,19 +247,19 @@ export default function BulkHaulageOperationsGuidePage() {
               </p>
             </div>
             <div>
-              <h3 className="text-lg font-bold text-[#0F172A] mb-4">Industries that run on bulk haulage</h3>
+              <h3 className="text-lg font-bold text-neutral-900 mb-4">Industries that run on bulk haulage</h3>
               <ul className="space-y-3">
                 {industriesList.map((item) => (
-                  <li key={item.label} className="flex items-start gap-2 text-sm text-[#334155]">
+                  <li key={item.label} className="flex items-start gap-2 text-sm text-neutral-700">
                     <CheckCircle className="h-4 w-4 text-[#E8652B] shrink-0 mt-0.5" />
                     <span>
-                      <Link href={item.href} className="font-semibold text-[#0F172A] hover:text-[#E8652B]">{item.label}</Link>
+                      <Link href={item.href} className="font-semibold text-neutral-900 hover:text-[#E8652B]">{item.label}</Link>
                       {" — "}{item.desc}
                     </span>
                   </li>
                 ))}
               </ul>
-              <p className="mt-4 text-sm text-[#475569] leading-relaxed">
+              <p className="mt-4 text-sm text-neutral-600 leading-relaxed">
                 What these operations share: volume-based pricing, subcontracted capacity, multiple active jobs simultaneously, and a job-to-invoice process that depends on accurate delivery records.
               </p>
             </div>
@@ -268,20 +268,20 @@ export default function BulkHaulageOperationsGuidePage() {
       </section>
 
       {/* THE JOB LIFECYCLE */}
-      <section className="py-16 bg-[#F8FAFC]">
+      <section className="py-16 bg-neutral-50/50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">The Job Lifecycle</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">How a haulage job moves through operations</h2>
-          <p className="mt-4 text-[#475569] leading-relaxed max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">How a haulage job moves through operations</h2>
+          <p className="mt-4 text-neutral-600 leading-relaxed max-w-3xl">
             Every haulage job passes through a sequence of states from creation to invoice. Understanding this lifecycle is what separates operators who can invoice quickly from those who spend weeks chasing paperwork.
           </p>
           <div className="mt-10 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {lifecycle.map((step) => (
-              <div key={step.num} className="bg-white rounded-2xl p-6 border border-[#E2E8F0]">
+              <div key={step.num} className="bg-white rounded-2xl p-6 border border-neutral-200">
                 <span className="text-[#E8652B] font-bold text-2xl">{step.num}</span>
-                <h3 className="mt-3 font-bold text-[#0F172A]">{step.title}</h3>
-                <p className="mt-3 text-sm text-[#475569] leading-relaxed">{step.p1}</p>
-                <p className="mt-3 text-sm text-[#475569] leading-relaxed">{step.p2}</p>
+                <h3 className="mt-3 font-bold text-neutral-900">{step.title}</h3>
+                <p className="mt-3 text-sm text-neutral-600 leading-relaxed">{step.p1}</p>
+                <p className="mt-3 text-sm text-neutral-600 leading-relaxed">{step.p2}</p>
               </div>
             ))}
           </div>
@@ -292,21 +292,21 @@ export default function BulkHaulageOperationsGuidePage() {
       <section className="py-16 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Commercial Fundamentals</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">Rate structures in bulk haulage</h2>
-          <p className="mt-4 text-[#475569] leading-relaxed max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">Rate structures in bulk haulage</h2>
+          <p className="mt-4 text-neutral-600 leading-relaxed max-w-3xl">
             Haulage rates are not one-size-fits-all. Most operations use different rate types for different job types, and managing this correctly across multiple clients and subcontractors is one of the areas where spreadsheets break down first.
           </p>
           <div className="mt-10 grid md:grid-cols-2 gap-6">
             {rateCards.map((card) => (
-              <div key={card.title} className="bg-white rounded-2xl p-6 border border-[#E2E8F0]">
-                <h3 className="font-bold text-[#0F172A]">{card.title}</h3>
-                <p className="mt-3 text-sm text-[#475569] leading-relaxed">{card.p1}</p>
-                <p className="mt-3 text-sm text-[#475569] leading-relaxed">{card.p2}</p>
-                <p className="mt-3 text-sm text-[#475569] leading-relaxed">{card.p3}</p>
+              <div key={card.title} className="bg-white rounded-2xl p-6 border border-neutral-200">
+                <h3 className="font-bold text-neutral-900">{card.title}</h3>
+                <p className="mt-3 text-sm text-neutral-600 leading-relaxed">{card.p1}</p>
+                <p className="mt-3 text-sm text-neutral-600 leading-relaxed">{card.p2}</p>
+                <p className="mt-3 text-sm text-neutral-600 leading-relaxed">{card.p3}</p>
               </div>
             ))}
           </div>
-          <p className="mt-6 text-sm text-[#475569] leading-relaxed">
+          <p className="mt-6 text-sm text-neutral-600 leading-relaxed">
             For more on rate card structure and subcontractor pay rates, see the{" "}
             <Link href="/resources/tools/rate-card-template" className="text-[#E8652B] hover:underline font-medium">Rate Card Template</Link> and{" "}
             <Link href="/platform/rate-management" className="text-[#E8652B] hover:underline font-medium">Rate Management platform page</Link>.
@@ -315,38 +315,38 @@ export default function BulkHaulageOperationsGuidePage() {
       </section>
 
       {/* SUBCONTRACTORS VS OWNED FLEET */}
-      <section className="py-16 bg-[#F8FAFC]">
+      <section className="py-16 bg-neutral-50/50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Fleet Coordination</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">Managing subcontractors vs owned fleet</h2>
-          <p className="mt-4 text-[#475569] leading-relaxed max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">Managing subcontractors vs owned fleet</h2>
+          <p className="mt-4 text-neutral-600 leading-relaxed max-w-3xl">
             Most haulage operators with 15+ vehicles run a mix of owned trucks and subcontracted capacity. The coordination challenge — and where most operational pain lives — is managing both cohorts as if they were one operation.
           </p>
           <div className="mt-10 grid lg:grid-cols-2 gap-12">
-            <div className="space-y-4 text-sm text-[#475569] leading-relaxed">
-              <h3 className="text-lg font-bold text-[#0F172A]">Why subcontractor coordination is hard</h3>
+            <div className="space-y-4 text-sm text-neutral-600 leading-relaxed">
+              <h3 className="text-lg font-bold text-neutral-900">Why subcontractor coordination is hard</h3>
               <p>Owned fleet drivers receive their jobs directly from the dispatcher. The operator controls their schedule, their route, and has visibility of where they are. Subcontractors are different — they are independent businesses, often working for multiple operators simultaneously, with their own schedules and their own administrative systems.</p>
               <p>Without a dedicated subcontractor portal, the coordination chain typically looks like this: phone call or WhatsApp to confirm availability, job details sent via text, confirmation received informally, driver goes to site, calls or texts when done, sends a paper docket or photo at the end of the day. The operator re-enters all of this manually to track what was delivered and to build the invoice.</p>
               <p>At 5 subcontractor jobs per week, this is manageable. At 50 per week across 10–15 subcontractors, it becomes the bottleneck that slows invoicing, causes disputes and prevents the operator from scaling further.</p>
-              <h3 className="text-lg font-bold text-[#0F172A] pt-2">What makes it easier</h3>
+              <h3 className="text-lg font-bold text-neutral-900 pt-2">What makes it easier</h3>
               <p>A dedicated subcontractor portal gives each subcontractor their own login — completely separate from the operator's admin panel. They see only their jobs: assigned loads, pickup and delivery addresses, material, rate. They accept or decline jobs in the portal. When complete, they capture POD the same way an owned fleet driver would. The record flows back into the operator's job system automatically.</p>
               <p>Critically: the subcontractor does not need to be a HaulageOps customer. They access the subcontractor portal as an invited user at no cost to them. The operator pays one subscription; the subcontractor gets access to their job queue and nothing else.</p>
             </div>
             <div>
-              <div className="rounded-2xl bg-[#0D1525] border border-[#1E293B] overflow-hidden">
-                <div className="flex items-center gap-2 px-5 py-3 bg-[#1E293B]">
+              <div className="rounded-2xl bg-neutral-900 border-y border-neutral-800 border border-neutral-800 overflow-hidden">
+                <div className="flex items-center gap-2 px-5 py-3 bg-neutral-800">
                   <span className="h-2.5 w-2.5 rounded-full bg-[#E8652B]" />
                   <span className="h-2.5 w-2.5 rounded-full bg-[#94A3B8]" />
                   <span className="h-2.5 w-2.5 rounded-full bg-[#475569]" />
-                  <span className="ml-3 text-xs font-semibold text-[#CBD5E1]">HaulageOps — Dispatch Board</span>
+                  <span className="ml-3 text-xs font-semibold text-neutral-300">HaulageOps — Dispatch Board</span>
                 </div>
                 <div className="p-6">
-                  <p className="text-sm text-[#94A3B8] leading-relaxed">
+                  <p className="text-sm text-neutral-400 leading-relaxed">
                     Dispatch board visual: two columns showing owned fleet drivers (left) and subcontractor companies (right), both assigned to jobs on the same live board. Subcontractor jobs show accept/decline status. Owned fleet jobs show GPS position. All jobs share the same status indicators: unassigned, assigned, in progress, POD pending, complete.
                   </p>
                 </div>
               </div>
-              <p className="mt-4 text-sm text-[#475569] leading-relaxed">
+              <p className="mt-4 text-sm text-neutral-600 leading-relaxed">
                 <Link href="/resources/guides/subcontractor-management" className="text-[#E8652B] hover:underline font-medium">Read the Subcontractor Management Guide</Link> for a full breakdown of onboarding, rate management and compliance records.
               </p>
               <p className="mt-2 text-sm">
@@ -363,28 +363,28 @@ export default function BulkHaulageOperationsGuidePage() {
       <section className="py-16 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Delivery Evidence</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">Digital vs paper dockets</h2>
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">Digital vs paper dockets</h2>
           <div className="mt-10 grid lg:grid-cols-2 gap-12">
             <div>
-              <h3 className="text-lg font-bold text-[#0F172A] mb-4">Why paper breaks at volume</h3>
-              <p className="text-sm text-[#475569] leading-relaxed">
+              <h3 className="text-lg font-bold text-neutral-900 mb-4">Why paper breaks at volume</h3>
+              <p className="text-sm text-neutral-600 leading-relaxed">
                 A paper docket is a physical delivery record — typically a carbonless pad filled in by the driver or site contact. The driver keeps one copy, the client or site gets another, the office gets a third. In theory, this creates a complete paper trail. In practice, at any meaningful volume, paper dockets fail in predictable ways:
               </p>
               <ul className="mt-5 space-y-3">
                 {paperFailures.map((item) => (
-                  <li key={item} className="flex items-start gap-2 text-sm text-[#334155]">
+                  <li key={item} className="flex items-start gap-2 text-sm text-neutral-700">
                     <CheckCircle className="h-4 w-4 text-[#E8652B] shrink-0 mt-0.5" />
                     <span>{item}</span>
                   </li>
                 ))}
               </ul>
-              <p className="mt-5 text-sm text-[#475569] leading-relaxed">
+              <p className="mt-5 text-sm text-neutral-600 leading-relaxed">
                 Each of these failures has a direct cash flow cost. If 50 jobs complete on a Friday and dockets arrive Monday or Tuesday, invoicing for those jobs cannot start until Tuesday. If the billing cycle runs weekly, those jobs slip to the following week's invoice run. For an operation turning over $500k/month, a consistent 7–10 day invoice delay represents significant working capital pressure.
               </p>
             </div>
             <div>
-              <h3 className="text-lg font-bold text-[#0F172A] mb-4">What digital docket capture looks like</h3>
-              <div className="space-y-4 text-sm text-[#475569] leading-relaxed">
+              <h3 className="text-lg font-bold text-neutral-900 mb-4">What digital docket capture looks like</h3>
+              <div className="space-y-4 text-sm text-neutral-600 leading-relaxed">
                 <p>Digital docket capture replaces the paper trail with a structured digital record captured on the driver's phone at the point of delivery. The driver opens their mobile app, marks the job complete, and is prompted to capture: a photo of the delivery site or scale ticket, a customer signature (if required), and any additional documents such as a scale slip or site delivery docket.</p>
                 <p>The captured record is attached to the job immediately — visible to the ops manager, available to the client through their portal, and ready to include in the invoice the moment the job is complete. There is no waiting for paper to arrive.</p>
                 <p>For sites with poor mobile connectivity, the driver app works offline: the driver captures the POD without signal, and the record synchronises when connectivity returns. The job is not blocked waiting for a network connection.</p>
@@ -399,22 +399,22 @@ export default function BulkHaulageOperationsGuidePage() {
       </section>
 
       {/* THE JOB-TO-INVOICE PROBLEM */}
-      <section className="py-16 bg-[#F8FAFC]">
+      <section className="py-16 bg-neutral-50/50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Commercial Impact</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">The job-to-invoice problem</h2>
-          <p className="mt-4 text-[#475569] leading-relaxed max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">The job-to-invoice problem</h2>
+          <p className="mt-4 text-neutral-600 leading-relaxed max-w-3xl">
             The gap between job completion and invoice payment is the single most common cash flow problem in bulk haulage. Understanding what causes it is the first step to closing it.
           </p>
           <div className="mt-10 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {invoiceProblems.map((card) => (
-              <div key={card.title} className="bg-white rounded-2xl p-6 border border-[#E2E8F0]">
-                <h3 className="font-bold text-[#0F172A]">{card.title}</h3>
-                <p className="mt-3 text-sm text-[#475569] leading-relaxed">{card.p}</p>
+              <div key={card.title} className="bg-white rounded-2xl p-6 border border-neutral-200">
+                <h3 className="font-bold text-neutral-900">{card.title}</h3>
+                <p className="mt-3 text-sm text-neutral-600 leading-relaxed">{card.p}</p>
               </div>
             ))}
           </div>
-          <p className="mt-6 text-sm text-[#475569] leading-relaxed max-w-3xl">
+          <p className="mt-6 text-sm text-neutral-600 leading-relaxed max-w-3xl">
             When job records, rate cards, POD and invoicing sit on one platform — and the invoice is built from the job record automatically — the gap between completion and invoice shrinks from days to hours. See{" "}
             <Link href="/solutions/job-to-invoice" className="text-[#E8652B] hover:underline font-medium">Job to Invoice</Link> and{" "}
             <Link href="/solutions/reducing-invoice-delays" className="text-[#E8652B] hover:underline font-medium">Reduce Invoice Delays</Link> for more detail.
@@ -426,42 +426,42 @@ export default function BulkHaulageOperationsGuidePage() {
       <section className="py-16 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Compliance</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">Chain of Responsibility in the bulk haulage context</h2>
-          <p className="mt-4 text-[#475569] leading-relaxed max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">Chain of Responsibility in the bulk haulage context</h2>
+          <p className="mt-4 text-neutral-600 leading-relaxed max-w-3xl">
             Chain of Responsibility (CoR) legislation — particularly relevant in the Australian operating context — establishes that responsibility for road safety compliance in the transport chain is shared across all parties who have influence or control over transport activities. This includes not just drivers, but operators, schedulers, loaders and clients.
           </p>
           <div className="mt-10 grid lg:grid-cols-2 gap-12">
             <div>
-              <h3 className="text-lg font-bold text-[#0F172A] mb-4">What operators are responsible for</h3>
-              <p className="text-sm text-[#475569] leading-relaxed">
+              <h3 className="text-lg font-bold text-neutral-900 mb-4">What operators are responsible for</h3>
+              <p className="text-sm text-neutral-600 leading-relaxed">
                 Under CoR, operators are expected to demonstrate that they have systems in place to manage compliance — not simply that no incident occurred. The obligation covers:
               </p>
               <ul className="mt-5 space-y-3">
                 {corObligations.map((item) => (
-                  <li key={item} className="flex items-start gap-2 text-sm text-[#334155]">
+                  <li key={item} className="flex items-start gap-2 text-sm text-neutral-700">
                     <CheckCircle className="h-4 w-4 text-[#E8652B] shrink-0 mt-0.5" />
                     <span>{item}</span>
                   </li>
                 ))}
               </ul>
-              <p className="mt-5 text-sm text-[#475569] leading-relaxed">
+              <p className="mt-5 text-sm text-neutral-600 leading-relaxed">
                 The practical implication for operators managing subcontractors: you cannot simply delegate compliance responsibility to the sub. You have an obligation to ensure that the subcontractors you engage are operating appropriately, and to maintain records that demonstrate you have done so.
               </p>
             </div>
             <div>
-              <h3 className="text-lg font-bold text-[#0F172A] mb-4">What records matter</h3>
-              <p className="text-sm text-[#475569] leading-relaxed">
+              <h3 className="text-lg font-bold text-neutral-900 mb-4">What records matter</h3>
+              <p className="text-sm text-neutral-600 leading-relaxed">
                 The records that matter in a CoR context are those that show the operator had a system in place and was using it. This means:
               </p>
               <ul className="mt-5 space-y-3">
                 {corRecords.map((item) => (
-                  <li key={item} className="flex items-start gap-2 text-sm text-[#334155]">
+                  <li key={item} className="flex items-start gap-2 text-sm text-neutral-700">
                     <CheckCircle className="h-4 w-4 text-[#E8652B] shrink-0 mt-0.5" />
                     <span>{item}</span>
                   </li>
                 ))}
               </ul>
-              <p className="mt-5 text-sm text-[#475569] leading-relaxed">
+              <p className="mt-5 text-sm text-neutral-600 leading-relaxed">
                 HaulageOps stores driver documents, vehicle records and break/rest records, and maintains a comprehensive audit trail of all actions. This supports compliance record-keeping — it does not guarantee compliance outcomes and does not constitute legal advice. See{" "}
                 <Link href="/resources/guides/haulage-compliance" className="text-[#E8652B] hover:underline font-medium">Haulage Compliance Guide</Link>.
               </p>
@@ -471,31 +471,31 @@ export default function BulkHaulageOperationsGuidePage() {
       </section>
 
       {/* WHAT TO LOOK FOR IN SOFTWARE */}
-      <section className="py-16 bg-[#F8FAFC]">
+      <section className="py-16 bg-neutral-50/50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Software Selection</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">What to look for in haulage software</h2>
-          <p className="mt-4 text-[#475569] leading-relaxed max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">What to look for in haulage software</h2>
+          <p className="mt-4 text-neutral-600 leading-relaxed max-w-3xl">
             Most haulage software evaluations go wrong because operators evaluate what vendors demo, not what they actually need. Here is a short buyer checklist — the full version is at{" "}
             <Link href="/resources/checklists/haulage-software-requirements" className="text-[#E8652B] hover:underline font-medium">Software Requirements Checklist</Link>.
           </p>
           <div className="mt-10 grid md:grid-cols-2 gap-6">
-            <div className="bg-white rounded-2xl p-6 border border-[#E2E8F0]">
-              <h3 className="font-bold text-[#0F172A]">Core operational requirements</h3>
+            <div className="bg-white rounded-2xl p-6 border border-neutral-200">
+              <h3 className="font-bold text-neutral-900">Core operational requirements</h3>
               <ul className="mt-5 space-y-3">
                 {softwareCore.map((item) => (
-                  <li key={item} className="flex items-start gap-2 text-sm text-[#334155]">
+                  <li key={item} className="flex items-start gap-2 text-sm text-neutral-700">
                     <CheckCircle className="h-4 w-4 text-[#E8652B] shrink-0 mt-0.5" />
                     <span>{item}</span>
                   </li>
                 ))}
               </ul>
             </div>
-            <div className="bg-white rounded-2xl p-6 border border-[#E2E8F0]">
-              <h3 className="font-bold text-[#0F172A]">Implementation and total cost</h3>
+            <div className="bg-white rounded-2xl p-6 border border-neutral-200">
+              <h3 className="font-bold text-neutral-900">Implementation and total cost</h3>
               <ul className="mt-5 space-y-3">
                 {softwareCost.map((item) => (
-                  <li key={item} className="flex items-start gap-2 text-sm text-[#334155]">
+                  <li key={item} className="flex items-start gap-2 text-sm text-neutral-700">
                     <CheckCircle className="h-4 w-4 text-[#E8652B] shrink-0 mt-0.5" />
                     <span>{item}</span>
                   </li>
@@ -503,7 +503,7 @@ export default function BulkHaulageOperationsGuidePage() {
               </ul>
             </div>
           </div>
-          <p className="mt-6 text-sm text-[#475569] leading-relaxed">
+          <p className="mt-6 text-sm text-neutral-600 leading-relaxed">
             For the complete 40-question checklist:{" "}
             <Link href="/resources/checklists/haulage-software-requirements" className="text-[#E8652B] hover:underline font-medium">Haulage Software Requirements Checklist</Link>. For a guide on running vendor evaluations:{" "}
             <Link href="/resources/guides/haulage-software-buyers-guide" className="text-[#E8652B] hover:underline font-medium">Haulage Software Buyer's Guide</Link>.
@@ -515,34 +515,34 @@ export default function BulkHaulageOperationsGuidePage() {
       <section className="py-16 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">How HaulageOps Works</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">The HaulageOps workflow in brief</h2>
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">The HaulageOps workflow in brief</h2>
           <div className="mt-10 grid lg:grid-cols-2 gap-12">
             <div>
-              <p className="text-sm text-[#475569] leading-relaxed">
+              <p className="text-sm text-neutral-600 leading-relaxed">
                 HaulageOps is a transport management system built specifically for bulk haulage and construction logistics operators managing a mix of owned and subcontracted capacity. The platform connects five role-specific portals around one live job record:
               </p>
               <ul className="mt-5 space-y-3">
                 {portals.map((item) => (
-                  <li key={item.strong} className="flex items-start gap-2 text-sm text-[#334155]">
+                  <li key={item.strong} className="flex items-start gap-2 text-sm text-neutral-700">
                     <CheckCircle className="h-4 w-4 text-[#E8652B] shrink-0 mt-0.5" />
-                    <span><strong className="text-[#0F172A]">{item.strong}</strong> — {item.desc}</span>
+                    <span><strong className="text-neutral-900">{item.strong}</strong> — {item.desc}</span>
                   </li>
                 ))}
               </ul>
-              <p className="mt-5 text-sm text-[#475569] leading-relaxed">
+              <p className="mt-5 text-sm text-neutral-600 leading-relaxed">
                 Standard setup is $1,500 and typically takes 2–4 weeks. Subcontractor and client portals are included — the portals are free for portal users. Only the operating company pays the subscription.
               </p>
             </div>
             <div>
-              <div className="rounded-2xl bg-[#0D1525] border border-[#1E293B] overflow-hidden">
-                <div className="flex items-center gap-2 px-5 py-3 bg-[#1E293B]">
+              <div className="rounded-2xl bg-neutral-900 border-y border-neutral-800 border border-neutral-800 overflow-hidden">
+                <div className="flex items-center gap-2 px-5 py-3 bg-neutral-800">
                   <span className="h-2.5 w-2.5 rounded-full bg-[#E8652B]" />
                   <span className="h-2.5 w-2.5 rounded-full bg-[#94A3B8]" />
                   <span className="h-2.5 w-2.5 rounded-full bg-[#475569]" />
-                  <span className="ml-3 text-xs font-semibold text-[#CBD5E1]">HaulageOps — Platform Overview</span>
+                  <span className="ml-3 text-xs font-semibold text-neutral-300">HaulageOps — Platform Overview</span>
                 </div>
                 <div className="p-6">
-                  <p className="text-sm text-[#94A3B8] leading-relaxed">
+                  <p className="text-sm text-neutral-400 leading-relaxed">
                     Platform overview diagram: five connected portals (Admin Panel, Driver App, Subcontractor Portal, Client Portal, Management Reporting) arranged around a central job record. Arrows show: dispatcher creates job, driver receives on app, subcontractor receives in portal, client sees status in portal, reporting aggregates across all jobs.
                   </p>
                 </div>
@@ -558,18 +558,18 @@ export default function BulkHaulageOperationsGuidePage() {
       </section>
 
       {/* FAQ */}
-      <section className="py-16 bg-[#F8FAFC]">
+      <section className="py-16 bg-neutral-50/50">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">FAQ</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A]">Common questions about bulk haulage operations</h2>
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900">Common questions about bulk haulage operations</h2>
           <div className="mt-8 space-y-3">
             {faqs.map((faq) => (
-              <details key={faq.q} className="group border border-[#E2E8F0] bg-white rounded-xl overflow-hidden">
-                <summary className="flex items-center justify-between gap-4 px-6 py-4 cursor-pointer font-semibold text-[#0F172A] text-sm list-none hover:bg-[#F8FAFC]">
+              <details key={faq.q} className="group border border-neutral-200 bg-white rounded-xl overflow-hidden">
+                <summary className="flex items-center justify-between gap-4 px-6 py-4 cursor-pointer font-semibold text-neutral-900 text-sm list-none hover:bg-neutral-50/50">
                   {faq.q}
-                  <ChevronRight className="h-4 w-4 text-[#94A3B8] shrink-0 group-open:rotate-90 transition-transform" />
+                  <ChevronRight className="h-4 w-4 text-neutral-400 shrink-0 group-open:rotate-90 transition-transform" />
                 </summary>
-                <div className="px-6 pb-5 text-sm text-[#475569] leading-relaxed border-t border-[#F1F5F9]">
+                <div className="px-6 pb-5 text-sm text-neutral-600 leading-relaxed border-t border-neutral-100">
                   <p className="pt-4">{faq.a}</p>
                 </div>
               </details>
@@ -582,37 +582,37 @@ export default function BulkHaulageOperationsGuidePage() {
       <section className="py-16 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Related Resources</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">Continue reading</h2>
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">Continue reading</h2>
           <div className="mt-10 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {relatedGuides.map((card) => (
-              <div key={card.title} className="bg-white rounded-2xl p-6 border border-[#E2E8F0]">
-                <h3 className="font-bold text-[#0F172A] mb-2">
+              <div key={card.title} className="bg-white rounded-2xl p-6 border border-neutral-200">
+                <h3 className="font-bold text-neutral-900 mb-2">
                   <Link href={card.href} className="hover:text-[#E8652B] transition-colors">{card.title}</Link>
                 </h3>
-                <p className="text-sm text-[#475569] leading-relaxed">{card.p}</p>
+                <p className="text-sm text-neutral-600 leading-relaxed">{card.p}</p>
                 <Link href={card.href} className="mt-3 inline-flex items-center gap-1 text-sm text-[#E8652B] hover:underline font-medium">
                   Read guide <ArrowRight className="h-3.5 w-3.5" />
                 </Link>
               </div>
             ))}
           </div>
-          <p className="mt-6 text-sm text-[#475569] leading-relaxed">
+          <p className="mt-6 text-sm text-neutral-600 leading-relaxed">
             Also see:{" "}
             <Link href="/resources/checklists/haulage-software-requirements" className="text-[#E8652B] hover:underline font-medium">Software Requirements Checklist</Link>{" "}
-            <span className="text-[#CBD5E1]">—</span>{" "}
+            <span className="text-neutral-300">—</span>{" "}
             <Link href="/solutions/job-to-invoice" className="text-[#E8652B] hover:underline font-medium">Job to Invoice solution page</Link>{" "}
-            <span className="text-[#CBD5E1]">—</span>{" "}
+            <span className="text-neutral-300">—</span>{" "}
             <Link href="/solutions/digital-dockets" className="text-[#E8652B] hover:underline font-medium">Digital Dockets solution page</Link>
           </p>
         </div>
       </section>
 
       {/* CTA BAND */}
-      <section className="py-16 bg-[#0F172A]">
+      <section className="py-16 bg-neutral-900">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
           <div>
             <h2 className="text-2xl sm:text-3xl font-bold text-white">See the full job lifecycle in a live demo.</h2>
-            <p className="mt-2 text-[#94A3B8] text-sm leading-relaxed max-w-xl">
+            <p className="mt-2 text-neutral-400 text-sm leading-relaxed max-w-xl">
               We walk through one complete job — create, dispatch, subcontract, POD, invoice, Xero sync — in 20 minutes. No slides.
             </p>
           </div>

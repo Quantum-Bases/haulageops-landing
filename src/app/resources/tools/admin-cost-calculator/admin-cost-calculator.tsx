@@ -39,7 +39,7 @@ export function AdminCostCalculator() {
     <div className="grid lg:grid-cols-2 gap-10 items-start">
       {/* INPUT CARD */}
       <div className="bg-white border border-[#E4E9EC] rounded-2xl p-8">
-        <h2 className="text-xl font-extrabold text-[#0F172A] mb-5">Weekly Admin Tasks</h2>
+        <h2 className="text-xl font-extrabold text-neutral-900 mb-5">Weekly Admin Tasks</h2>
         <p className="text-[13px] text-[#7A8A94] mb-5">
           Enter hours per week spent on each task by your office team (dispatcher, admin, owner).
         </p>
@@ -56,7 +56,7 @@ export function AdminCostCalculator() {
         ].map((task) => (
           <div key={task.id} className="flex items-center gap-3 py-2.5 border-b border-[#F0F3F5] last:border-b-0">
             <div className="flex-1 text-[13px] text-[#2D4250]">
-              <strong className="block font-bold text-[#0F172A] mb-0.5">{task.strong}</strong>
+              <strong className="block font-bold text-neutral-900 mb-0.5">{task.strong}</strong>
               {task.desc}
             </div>
             <input
@@ -89,14 +89,14 @@ export function AdminCostCalculator() {
 
         <button
           onClick={calculate}
-          className="w-full rounded-lg bg-[#0F172A] px-4 py-3 text-[15px] font-extrabold text-white hover:bg-[#1E293B] transition-colors"
+          className="w-full rounded-lg bg-neutral-900 px-4 py-3 text-[15px] font-extrabold text-white hover:bg-neutral-800 transition-colors"
         >
           Calculate My Admin Cost →
         </button>
       </div>
 
       {/* OUTPUT CARD */}
-      <div className="bg-[#0D1525] rounded-2xl p-8 text-white">
+      <div className="bg-neutral-900 border-y border-neutral-800 rounded-2xl p-8 text-white">
         <h2 className="text-xl font-extrabold text-[#E8652B] mb-5">Your Admin Cost Breakdown</h2>
 
         <div className="flex items-center justify-between py-3 border-b border-white/10">

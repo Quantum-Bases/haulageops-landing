@@ -110,22 +110,22 @@ export default function HaulageSoftwareBuyersGuidePage() {
   return (
     <MainLayout showCta={false}>
       {/* Breadcrumb + Hero */}
-      <section className="pt-24 pb-16 bg-gradient-to-b from-[#FFF9F5] to-white">
+      <section className="pt-24 pb-16 bg-gradient-to-b from-neutral-50/80 via-white to-white border-b border-neutral-200">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <nav className="flex items-center gap-2 text-xs text-[#64748B] mb-6">
+          <nav className="flex items-center gap-2 text-xs text-neutral-500 mb-6">
             <Link href="/" className="hover:text-[#E8652B]">Home</Link>
             <ChevronRight className="h-3 w-3" />
             <Link href="/resources" className="hover:text-[#E8652B]">Resources</Link>
             <ChevronRight className="h-3 w-3" />
-            <span className="text-[#0F172A] font-medium">Haulage Software Buyer's Guide</span>
+            <span className="text-neutral-900 font-medium">Haulage Software Buyer's Guide</span>
           </nav>
-          <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-[#E8652B] bg-[#FFF0E6] mb-4 animate-in fade-in slide-in-from-bottom-4 animation-duration-700 fill-mode-both">
+          <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-[#E8652B] bg-orange-50 border border-orange-200 mb-4 animate-in fade-in slide-in-from-bottom-4 animation-duration-700 fill-mode-both">
             Guide · Software Evaluation
           </span>
-          <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-[#0F172A] max-w-4xl leading-[1.1] animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-100 fill-mode-both">
+          <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-neutral-900 max-w-4xl leading-[1.1] animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-100 fill-mode-both">
             Haulage Software Buyer's Guide: Choosing the Right Platform for Your Operation
           </h1>
-          <p className="mt-6 text-lg text-[#475569] max-w-3xl leading-relaxed animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-150 fill-mode-both">
+          <p className="mt-6 text-lg text-neutral-600 max-w-3xl leading-relaxed animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-150 fill-mode-both">
             Most haulage software decisions go wrong in the same two ways: buying a generic platform that doesn't fit the way you dispatch, or buying more system than you need. This guide helps you define your requirements and ask the right questions.
           </p>
         </div>
@@ -134,15 +134,15 @@ export default function HaulageSoftwareBuyersGuidePage() {
       {/* STEP 1: REQUIREMENTS */}
       <section className="py-16 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#0F172A]">Step 1: Define Your Core Requirements</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold text-neutral-900">Step 1: Define Your Core Requirements</h2>
           <p className="mt-3 text-[#556671] text-sm leading-relaxed max-w-2xl">
             Before you talk to any vendor, be clear on what your operation actually needs. Not what sounds impressive — what you'll use every day.
           </p>
           <div className="mt-10 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {requirements.map((card) => (
-              <div key={card.title} className="bg-white rounded-2xl p-6 border border-[#E2E8F0]">
-                <h3 className="font-bold text-[#0F172A]">{card.title}</h3>
-                <p className="mt-3 text-sm text-[#475569] leading-relaxed">{card.p}</p>
+              <div key={card.title} className="bg-white rounded-2xl p-6 border border-neutral-200">
+                <h3 className="font-bold text-neutral-900">{card.title}</h3>
+                <p className="mt-3 text-sm text-neutral-600 leading-relaxed">{card.p}</p>
                 <p className="mt-4 text-xs font-bold text-[#1F8F5F]">{card.callout}</p>
               </div>
             ))}
@@ -151,19 +151,19 @@ export default function HaulageSoftwareBuyersGuidePage() {
       </section>
 
       {/* QUESTIONS FOR VENDORS */}
-      <section className="py-16 bg-[#0D1525]">
+      <section className="py-16 bg-neutral-900 border-y border-neutral-800">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl sm:text-4xl font-bold text-white">The Questions to Ask Every Vendor</h2>
-          <p className="mt-3 text-sm text-[#94A3B8] leading-relaxed max-w-2xl">
+          <p className="mt-3 text-sm text-neutral-400 leading-relaxed max-w-2xl">
             Test these in a demo — not from a spec sheet. What you see the software actually do is the only thing that counts.
           </p>
           <div className="mt-10 grid md:grid-cols-2 gap-6">
             {vendorQuestions.map((group) => (
-              <div key={group.title} className="bg-[#0F172A]/60 border border-[#1E293B] rounded-2xl p-6">
+              <div key={group.title} className="bg-neutral-900/60 border border-neutral-800 rounded-2xl p-6">
                 <h3 className="font-bold text-white">{group.title}</h3>
                 <ul className="mt-3 space-y-2.5">
                   {group.items.map((item) => (
-                    <li key={item} className="flex items-start gap-2 text-sm text-[#CBD5E1] leading-relaxed">
+                    <li key={item} className="flex items-start gap-2 text-sm text-neutral-300 leading-relaxed">
                       <CheckCircle2 className="h-4 w-4 text-[#E8652B] shrink-0 mt-0.5" />
                       <span>{item}</span>
                     </li>
@@ -182,16 +182,16 @@ export default function HaulageSoftwareBuyersGuidePage() {
             <div>
               <div className="flex items-center gap-2">
                 <BadgeDollarSign className="h-6 w-6 text-[#E8652B]" />
-                <h2 className="text-3xl sm:text-4xl font-bold text-[#0F172A]">Total Cost of Ownership: What to Calculate</h2>
+                <h2 className="text-3xl sm:text-4xl font-bold text-neutral-900">Total Cost of Ownership: What to Calculate</h2>
               </div>
               <p className="mt-3 text-sm text-[#556671] leading-relaxed">
                 The sticker price of haulage software is rarely the full cost. Before committing, calculate:
               </p>
               <ul className="mt-5 space-y-3">
                 {tcoItems.map((item) => (
-                  <li key={item.strong} className="flex items-start gap-2 text-sm text-[#334155]">
+                  <li key={item.strong} className="flex items-start gap-2 text-sm text-neutral-700">
                     <CheckCircle2 className="h-4 w-4 text-[#E8652B] shrink-0 mt-0.5" />
-                    <span><strong className="text-[#0F172A]">{item.strong}:</strong> {item.desc}</span>
+                    <span><strong className="text-neutral-900">{item.strong}:</strong> {item.desc}</span>
                   </li>
                 ))}
               </ul>
@@ -203,11 +203,11 @@ export default function HaulageSoftwareBuyersGuidePage() {
             <div>
               <div className="flex items-center gap-2">
                 <AlertTriangle className="h-6 w-6 text-[#E8652B]" />
-                <h2 className="text-3xl sm:text-4xl font-bold text-[#0F172A]">Red Flags During the Evaluation</h2>
+                <h2 className="text-3xl sm:text-4xl font-bold text-neutral-900">Red Flags During the Evaluation</h2>
               </div>
               <ul className="mt-5 space-y-3">
                 {redFlags.map((flag) => (
-                  <li key={flag} className="flex items-start gap-2 text-sm text-[#334155]">
+                  <li key={flag} className="flex items-start gap-2 text-sm text-neutral-700">
                     <AlertTriangle className="h-4 w-4 text-[#B45309] shrink-0 mt-0.5" />
                     <span>{flag}</span>
                   </li>
@@ -219,11 +219,11 @@ export default function HaulageSoftwareBuyersGuidePage() {
       </section>
 
       {/* CTA BAND */}
-      <section className="py-16 bg-[#0F172A]">
+      <section className="py-16 bg-neutral-900">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
           <div>
             <h2 className="text-2xl sm:text-3xl font-bold text-white">Ready to evaluate HaulageOps?</h2>
-            <p className="mt-2 text-[#94A3B8] text-sm leading-relaxed max-w-xl">
+            <p className="mt-2 text-neutral-400 text-sm leading-relaxed max-w-xl">
               Book a 20-minute demo and we'll answer every question in this guide live — with your operation in mind.
             </p>
           </div>

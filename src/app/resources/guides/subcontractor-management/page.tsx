@@ -123,29 +123,29 @@ export default function SubcontractorManagementGuidePage() {
   return (
     <MainLayout showCta={false}>
       {/* Breadcrumb + Hero */}
-      <section className="pt-24 pb-16 bg-gradient-to-b from-[#FFF9F5] to-white">
+      <section className="pt-24 pb-16 bg-gradient-to-b from-neutral-50/80 via-white to-white border-b border-neutral-200">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <nav className="flex items-center gap-2 text-xs text-[#64748B] mb-6">
+          <nav className="flex items-center gap-2 text-xs text-neutral-500 mb-6">
             <Link href="/" className="hover:text-[#E8652B]">Home</Link>
             <ChevronRight className="h-3 w-3" />
             <Link href="/resources" className="hover:text-[#E8652B]">Resources</Link>
             <ChevronRight className="h-3 w-3" />
-            <span className="text-[#0F172A] font-medium">Subcontractor Management Guide</span>
+            <span className="text-neutral-900 font-medium">Subcontractor Management Guide</span>
           </nav>
-          <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-[#E8652B] bg-[#FFF0E6] mb-4 animate-in fade-in slide-in-from-bottom-4 animation-duration-700 fill-mode-both">
+          <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-[#E8652B] bg-orange-50 border border-orange-200 mb-4 animate-in fade-in slide-in-from-bottom-4 animation-duration-700 fill-mode-both">
             Guide · Subcontractor Operations
           </span>
-          <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-[#0F172A] max-w-4xl leading-[1.1] animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-100 fill-mode-both">
+          <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-neutral-900 max-w-4xl leading-[1.1] animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-100 fill-mode-both">
             Subcontractor Management for Bulk Haulage Operators
           </h1>
-          <p className="mt-6 text-lg text-[#475569] max-w-3xl leading-relaxed animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-150 fill-mode-both">
+          <p className="mt-6 text-lg text-neutral-600 max-w-3xl leading-relaxed animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-150 fill-mode-both">
             Managing subcontractors well is the difference between a flexible, scalable fleet and an operation constantly chasing dockets, reconciling disputed loads, and paying invoices you can't verify. This guide covers the fundamentals.
           </p>
         </div>
       </section>
 
       {/* PROOF STRIP */}
-      <div className="bg-[#0F172A] py-6">
+      <div className="bg-neutral-900 py-6">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 lg:grid-cols-6 gap-6 text-center">
             {proofStrip.map((item) => (
@@ -163,31 +163,31 @@ export default function SubcontractorManagementGuidePage() {
           <div className="grid lg:grid-cols-2 gap-12">
             <div>
               <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">The Problem</span>
-              <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A]">Why Subcontractor Management Breaks Down</h2>
-              <p className="mt-4 text-[#475569] leading-relaxed text-sm">
+              <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900">Why Subcontractor Management Breaks Down</h2>
+              <p className="mt-4 text-neutral-600 leading-relaxed text-sm">
                 Most operators start managing subcontractors the way they managed their first owned driver: WhatsApp message, verbal rate agreement, paper docket at the end of the job. This works with two subcontractors. It breaks at ten.
               </p>
-              <p className="mt-3 text-[#475569] leading-relaxed text-sm">The common failure points:</p>
+              <p className="mt-3 text-neutral-600 leading-relaxed text-sm">The common failure points:</p>
               <ul className="mt-4 space-y-3">
                 {failurePoints.map((item) => (
-                  <li key={item.strong} className="flex items-start gap-2 text-sm text-[#334155]">
+                  <li key={item.strong} className="flex items-start gap-2 text-sm text-neutral-700">
                     <CheckCircle className="h-4 w-4 text-[#E8652B] shrink-0 mt-0.5" />
-                    <span><strong className="text-[#0F172A]">{item.strong}</strong> — {item.desc}</span>
+                    <span><strong className="text-neutral-900">{item.strong}</strong> — {item.desc}</span>
                   </li>
                 ))}
               </ul>
             </div>
             <div>
               <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">The Framework</span>
-              <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A]">Five Pillars of Effective Subcontractor Management</h2>
+              <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900">Five Pillars of Effective Subcontractor Management</h2>
               <ol className="mt-6 space-y-3 list-none">
                 {pillars.map((item, idx) => (
                   <li key={item.strong} className="flex items-start gap-3">
-                    <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#FFF0E6] text-xs font-bold text-[#E8652B]">
+                    <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-orange-50 border border-orange-200 text-[#E8652B] text-xs font-bold text-[#E8652B]">
                       {idx + 1}
                     </span>
-                    <span className="text-sm text-[#334155] leading-relaxed">
-                      <strong className="text-[#0F172A]">{item.strong}:</strong> {item.desc}
+                    <span className="text-sm text-neutral-700 leading-relaxed">
+                      <strong className="text-neutral-900">{item.strong}:</strong> {item.desc}
                     </span>
                   </li>
                 ))}
@@ -198,19 +198,19 @@ export default function SubcontractorManagementGuidePage() {
       </section>
 
       {/* ONBOARDING */}
-      <section className="py-16 bg-[#F8FAFC]">
+      <section className="py-16 bg-neutral-50/50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">Subcontractor Onboarding: What to Capture</h2>
-          <p className="mt-3 text-[#475569] leading-relaxed max-w-3xl">
+          <h2 className="text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">Subcontractor Onboarding: What to Capture</h2>
+          <p className="mt-3 text-neutral-600 leading-relaxed max-w-3xl">
             Before a subcontractor runs their first load, you need a complete record on file.
           </p>
           <div className="mt-10 grid md:grid-cols-3 gap-6">
             {onboardingCards.map((card) => (
-              <div key={card.title} className="bg-white rounded-2xl p-6 border border-[#E2E8F0]">
-                <h3 className="font-bold text-[#0F172A]">{card.title}</h3>
+              <div key={card.title} className="bg-white rounded-2xl p-6 border border-neutral-200">
+                <h3 className="font-bold text-neutral-900">{card.title}</h3>
                 <ul className="mt-5 space-y-3">
                   {card.items.map((item) => (
-                    <li key={item} className="flex items-start gap-2 text-sm text-[#334155]">
+                    <li key={item} className="flex items-start gap-2 text-sm text-neutral-700">
                       <CheckCircle className="h-4 w-4 text-[#E8652B] shrink-0 mt-0.5" />
                       <span>{item}</span>
                     </li>
@@ -219,7 +219,7 @@ export default function SubcontractorManagementGuidePage() {
               </div>
             ))}
           </div>
-          <p className="mt-6 text-sm text-[#475569] leading-relaxed">
+          <p className="mt-6 text-sm text-neutral-600 leading-relaxed">
             In HaulageOps, all of this is stored against the subcontractor profile with expiry alerts for insurance and registration documents. See{" "}
             <Link href="/resources/checklists/subcontractor-onboarding" className="text-[#E8652B] hover:underline font-medium">Subcontractor Onboarding Checklist</Link>.
           </p>
@@ -229,22 +229,22 @@ export default function SubcontractorManagementGuidePage() {
       {/* JOB ALLOCATION */}
       <section className="py-16 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">Job Allocation: Making the Dispatch Process Work</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">Job Allocation: Making the Dispatch Process Work</h2>
           <div className="mt-10 grid lg:grid-cols-2 gap-12">
             <div>
-              <h3 className="text-lg font-bold text-[#0F172A] mb-4">The Wrong Way (Common)</h3>
-              <p className="text-sm text-[#475569] leading-relaxed">
+              <h3 className="text-lg font-bold text-neutral-900 mb-4">The Wrong Way (Common)</h3>
+              <p className="text-sm text-neutral-600 leading-relaxed">
                 A dispatcher calls or messages a subcontractor, they verbally agree to take a load, run it, and send a photo of the docket via WhatsApp. The photo is blurry. Three days later, no one can remember if it was 22 tonnes or 24 tonnes, or which client it was for.
               </p>
-              <p className="mt-3 text-sm text-[#475569] leading-relaxed">
+              <p className="mt-3 text-sm text-neutral-600 leading-relaxed">
                 This works until you scale. At 6 subcontractors running 4 loads a day, it becomes unmanageable.
               </p>
             </div>
             <div>
-              <h3 className="text-lg font-bold text-[#0F172A] mb-4">The Right Way (System-Supported)</h3>
+              <h3 className="text-lg font-bold text-neutral-900 mb-4">The Right Way (System-Supported)</h3>
               <ul className="space-y-3">
                 {rightWaySteps.map((item) => (
-                  <li key={item} className="flex items-start gap-2 text-sm text-[#334155]">
+                  <li key={item} className="flex items-start gap-2 text-sm text-neutral-700">
                     <CheckCircle className="h-4 w-4 text-[#E8652B] shrink-0 mt-0.5" />
                     <span>{item}</span>
                   </li>
@@ -256,17 +256,17 @@ export default function SubcontractorManagementGuidePage() {
       </section>
 
       {/* BILLING SUBCONTRACTORS */}
-      <section className="py-16 bg-[#F8FAFC]">
+      <section className="py-16 bg-neutral-50/50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">Billing Subcontractors: How to Reduce Disputes</h2>
-          <p className="mt-3 text-[#475569] leading-relaxed max-w-3xl">
+          <h2 className="text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">Billing Subcontractors: How to Reduce Disputes</h2>
+          <p className="mt-3 text-neutral-600 leading-relaxed max-w-3xl">
             Most subcontractor billing disputes come from the same source: nobody has a single authoritative record of what was actually delivered.
           </p>
           <div className="mt-10 grid md:grid-cols-3 gap-6">
             {billingCards.map((card) => (
-              <div key={card.title} className="bg-white rounded-2xl p-6 border border-[#E2E8F0]">
-                <h3 className="font-bold text-[#0F172A]">{card.title}</h3>
-                <p className="mt-3 text-sm text-[#475569] leading-relaxed">{card.p1}</p>
+              <div key={card.title} className="bg-white rounded-2xl p-6 border border-neutral-200">
+                <h3 className="font-bold text-neutral-900">{card.title}</h3>
+                <p className="mt-3 text-sm text-neutral-600 leading-relaxed">{card.p1}</p>
                 <p className="mt-4 text-sm font-bold text-[#0F7673] leading-relaxed">{card.better}</p>
               </div>
             ))}
@@ -277,14 +277,14 @@ export default function SubcontractorManagementGuidePage() {
       {/* RELATED PLATFORM FEATURES */}
       <section className="py-16 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">Related Platform Features</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">Related Platform Features</h2>
           <div className="mt-10 grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {relatedFeatures.map((card) => (
-              <div key={card.title} className="bg-white rounded-2xl p-6 border border-[#E2E8F0]">
-                <h3 className="font-bold text-[#0F172A] mb-2">
+              <div key={card.title} className="bg-white rounded-2xl p-6 border border-neutral-200">
+                <h3 className="font-bold text-neutral-900 mb-2">
                   <Link href={card.href} className="hover:text-[#E8652B] transition-colors">{card.title}</Link>
                 </h3>
-                <p className="text-sm text-[#475569] leading-relaxed">{card.p}</p>
+                <p className="text-sm text-neutral-600 leading-relaxed">{card.p}</p>
                 <Link href={card.href} className="mt-3 inline-flex items-center gap-1 text-sm text-[#E8652B] hover:underline font-medium">
                   View details <ArrowRight className="h-3.5 w-3.5" />
                 </Link>
@@ -295,11 +295,11 @@ export default function SubcontractorManagementGuidePage() {
       </section>
 
       {/* CTA BAND */}
-      <section className="py-16 bg-[#0F172A]">
+      <section className="py-16 bg-neutral-900">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
           <div>
             <h2 className="text-2xl sm:text-3xl font-bold text-white">Managing subcontractors the hard way?</h2>
-            <p className="mt-2 text-[#94A3B8] text-sm leading-relaxed max-w-xl">
+            <p className="mt-2 text-neutral-400 text-sm leading-relaxed max-w-xl">
               Book a demo and we'll show you how HaulageOps handles the full subcontractor workflow.
             </p>
           </div>

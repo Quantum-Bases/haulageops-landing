@@ -55,25 +55,25 @@ export function PlatformBreakAndRestPage() {
   return (
     <MainLayout showCta={false}>
       {/* Breadcrumb */}
-      <div className="pt-24 pb-0 bg-[#FFF9F5]">
+      <div className="pt-24 pb-0 bg-neutral-50/70">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <nav className="flex items-center gap-2 text-xs text-[#64748B]">
+          <nav className="flex items-center gap-2 text-xs text-neutral-500">
             <Link href="/" className="hover:text-[#E8652B]">Home</Link>
             <ChevronRight className="h-3 w-3" />
             <Link href="/platform" className="hover:text-[#E8652B]">Platform</Link>
             <ChevronRight className="h-3 w-3" />
-            <span className="text-[#0F172A] font-medium">Break & Rest Management</span>
+            <span className="text-neutral-900 font-medium">Break & Rest Management</span>
           </nav>
         </div>
       </div>
 
       {/* HERO */}
-      <section className="pt-10 pb-20 bg-gradient-to-b from-[#FFF9F5] via-[#FFF5EE]/40 to-white">
+      <section className="pt-10 pb-20 bg-gradient-to-b from-neutral-50/80 via-white to-white border-b border-neutral-200">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <motion.span
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
-            className="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-[#E8652B] bg-[#FFF0E6] mb-4"
+            className="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-[#E8652B] bg-orange-50 border border-orange-200 mb-4"
           >
             Mobile & Fleet
           </motion.span>
@@ -81,7 +81,7 @@ export function PlatformBreakAndRestPage() {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.05 }}
-            className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#0F172A] max-w-4xl leading-[1.1]"
+            className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-neutral-900 max-w-4xl leading-[1.1]"
           >
             Break records in the driver app. Evidence in the platform.
           </motion.h1>
@@ -89,7 +89,7 @@ export function PlatformBreakAndRestPage() {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="mt-6 text-lg sm:text-xl text-[#475569] max-w-3xl leading-relaxed"
+            className="mt-6 text-lg sm:text-xl text-neutral-600 max-w-3xl leading-relaxed"
           >
             Drivers record break start and end through the mobile app. Records are stored with timestamp and job context. Management can review break records per driver. Relevant for Chain of Responsibility fatigue management — not an Electronic Work Diary.
           </motion.p>
@@ -105,7 +105,7 @@ export function PlatformBreakAndRestPage() {
               </Button>
             </Link>
             <Link href="/platform/driver-management">
-              <Button size="lg" variant="outline" className="border-[#E2E8F0] text-[#334155] hover:bg-[#F8FAFC]">
+              <Button size="lg" variant="outline" className="border-neutral-200 text-neutral-700 hover:bg-neutral-50/50">
                 Driver Management
               </Button>
             </Link>
@@ -118,8 +118,8 @@ export function PlatformBreakAndRestPage() {
               "CoR due-diligence evidence",
               "Not an EWD — clearly stated",
             ].map((pill) => (
-              <span key={pill} className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#F1F5F9] text-xs font-medium text-[#334155]">
-                <CheckCircle className="h-3.5 w-3.5 text-[#16A34A] shrink-0" />
+              <span key={pill} className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-neutral-100 text-xs font-medium text-neutral-700">
+                <CheckCircle className="h-3.5 w-3.5 text-[#E8652B] shrink-0" />
                 {pill}
               </span>
             ))}
@@ -128,7 +128,7 @@ export function PlatformBreakAndRestPage() {
       </section>
 
       {/* PROOF STRIP */}
-      <div className="bg-[#0F172A] py-5">
+      <div className="bg-neutral-900 py-5">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 text-center">
             {[
@@ -140,7 +140,7 @@ export function PlatformBreakAndRestPage() {
             ].map((item) => (
               <div key={item.strong} className="flex flex-col gap-0.5">
                 <span className="text-white font-bold text-sm">{item.strong}</span>
-                <span className="text-[#94A3B8] text-xs">{item.sub}</span>
+                <span className="text-neutral-400 text-xs">{item.sub}</span>
               </div>
             ))}
           </div>
@@ -151,32 +151,32 @@ export function PlatformBreakAndRestPage() {
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           {/* Disclaimer */}
-          <div className="p-6 rounded-2xl bg-[#FFF9F5] border border-[#FFE4D6] mb-12">
+          <div className="p-6 rounded-2xl bg-neutral-50/70 border border-[#FFE4D6] mb-12">
             <div className="flex items-center gap-2 text-[#E8652B] font-bold text-lg mb-2">
               <AlertTriangle className="h-5 w-5" />
               What HaulageOps break recording is — and is not
             </div>
-            <p className="text-sm text-[#334155] leading-relaxed">
+            <p className="text-sm text-neutral-700 leading-relaxed">
               <strong>HaulageOps records break and rest periods entered by drivers through the mobile app.</strong> Records are timestamped and stored against the driver's job history. Management can review and export these records.
             </p>
-            <p className="mt-2 text-sm text-[#334155] leading-relaxed">
+            <p className="mt-2 text-sm text-neutral-700 leading-relaxed">
               <strong>HaulageOps is NOT an Electronic Work Diary (EWD) and does NOT replace the requirement for a certified EWD under NHVR regulations.</strong> If your operation requires an EWD under the Heavy Vehicle National Law, you must use a certified EWD system. HaulageOps break records are a supplementary record-keeping tool — useful for internal fatigue management and due-diligence evidence, not a substitute for a certified EWD where one is required.
             </p>
           </div>
 
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">How It Works</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             Drivers record breaks through the app. You have a timestamped record.
           </h2>
-          <p className="mt-4 text-[#475569] max-w-3xl leading-relaxed">
+          <p className="mt-4 text-neutral-600 max-w-3xl leading-relaxed">
             The break recording function in HaulageOps is a practical field tool. A driver who stops for a rest break during their shift opens the driver app and taps to start a break record. When they resume work, they tap to end the break. The record is stored with the start time, end time, duration, the driver's identity, and the job context at the time of the break.
           </p>
-          <p className="mt-3 text-[#475569] max-w-3xl leading-relaxed">
+          <p className="mt-3 text-neutral-600 max-w-3xl leading-relaxed">
             This creates a documented record of break behaviour that exists in the platform — accessible to management for review, downloadable for audit purposes, and associated with specific jobs and dates. It is not a complex fatigue management system. It is a straightforward record of when breaks were taken.
           </p>
           <div className="mt-10 grid md:grid-cols-2 gap-8">
-            <div className="bg-[#F8FAFC] rounded-2xl p-8 border border-[#E2E8F0]">
-              <h3 className="text-xl font-bold text-[#0F172A] mb-5">What the driver does</h3>
+            <div className="bg-neutral-50/50 rounded-2xl p-8 border border-neutral-200">
+              <h3 className="text-xl font-bold text-neutral-900 mb-5">What the driver does</h3>
               <ul className="space-y-3">
                 {[
                   "Opens the HaulageOps driver app on their phone",
@@ -187,15 +187,15 @@ export function PlatformBreakAndRestPage() {
                   "No manual time entry required — the app captures the times",
                   "Break can be categorised if required (meal break, short rest, etc.)",
                 ].map((item) => (
-                  <li key={item} className="flex items-start gap-2 text-sm text-[#334155]">
+                  <li key={item} className="flex items-start gap-2 text-sm text-neutral-700">
                     <CheckCircle className="h-4 w-4 text-[#E8652B] shrink-0 mt-0.5" />
                     <span>{item}</span>
                   </li>
                 ))}
               </ul>
             </div>
-            <div className="bg-[#F8FAFC] rounded-2xl p-8 border border-[#E2E8F0]">
-              <h3 className="text-xl font-bold text-[#0F172A] mb-5">What management sees</h3>
+            <div className="bg-neutral-50/50 rounded-2xl p-8 border border-neutral-200">
+              <h3 className="text-xl font-bold text-neutral-900 mb-5">What management sees</h3>
               <ul className="space-y-3">
                 {[
                   "Break records per driver, per day, linked to job context",
@@ -206,7 +206,7 @@ export function PlatformBreakAndRestPage() {
                   "Gaps or anomalies in break patterns visible on review",
                   "Records cannot be retroactively edited by drivers",
                 ].map((item) => (
-                  <li key={item} className="flex items-start gap-2 text-sm text-[#334155]">
+                  <li key={item} className="flex items-start gap-2 text-sm text-neutral-700">
                     <CheckCircle className="h-4 w-4 text-[#E8652B] shrink-0 mt-0.5" />
                     <span>{item}</span>
                   </li>
@@ -218,13 +218,13 @@ export function PlatformBreakAndRestPage() {
       </section>
 
       {/* PLATFORM VIEW VISUAL SPEC */}
-      <section className="py-20 bg-[#F8FAFC]">
+      <section className="py-20 bg-neutral-50/50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Platform View</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             Break records — driver view in the app, management view in the panel.
           </h2>
-          <div className="mt-8 rounded-2xl border border-[#E2E8F0] bg-[#0D1525] p-8 text-[#94A3B8] text-sm font-mono leading-relaxed">
+          <div className="mt-8 rounded-2xl border border-neutral-200 bg-neutral-900 border-y border-neutral-800 p-8 text-neutral-400 text-sm font-mono leading-relaxed">
             <div className="text-[#E8652B] font-bold mb-2 text-xs uppercase tracking-widest">HaulageOps — Break Records (Management View)</div>
             <p>Break records table in the management panel. Columns: Driver Name, Date, Job Reference, Break Start, Break End, Duration, Break Type. Filter bar: date range, driver name, minimum duration. Example rows show: Driver A — 02/08/2026 — Job #4421 — 10:32 — 10:52 — 20 min — Short Rest; Driver A — 02/08/2026 — Job #4421 — 12:45 — 13:15 — 30 min — Meal Break. Export to CSV button in top right. Total break time summary shown at bottom of filtered view.</p>
           </div>
@@ -235,29 +235,29 @@ export function PlatformBreakAndRestPage() {
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Chain of Responsibility Context</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             Fatigue management and why break records matter for operators.
           </h2>
-          <p className="mt-4 text-[#475569] max-w-3xl leading-relaxed">
+          <p className="mt-4 text-neutral-600 max-w-3xl leading-relaxed">
             Chain of Responsibility legislation in Australia places shared responsibility for road safety across all parties in the transport supply chain — not only the driver. For operators, this includes an obligation to take reasonable steps to ensure that schedules, pay structures and operational demands do not pressure drivers to exceed fatigue management limits.
           </p>
           <div className="mt-10 grid md:grid-cols-2 gap-8">
-            <div className="bg-[#F8FAFC] rounded-2xl p-8 border border-[#E2E8F0]">
-              <h3 className="text-xl font-bold text-[#0F172A]">What CoR fatigue management obligations involve</h3>
-              <p className="mt-3 text-sm text-[#475569] leading-relaxed">
+            <div className="bg-neutral-50/50 rounded-2xl p-8 border border-neutral-200">
+              <h3 className="text-xl font-bold text-neutral-900">What CoR fatigue management obligations involve</h3>
+              <p className="mt-3 text-sm text-neutral-600 leading-relaxed">
                 Under the Heavy Vehicle National Law (HVNL) in Australia, operators have obligations to ensure drivers are not fatigued. This includes not scheduling work in a way that makes it impossible to take required rest breaks, not paying in a way that incentivises skipping rest, and ensuring that drivers who report fatigue are not pressured to continue. These are management and culture obligations — not just record-keeping obligations.
               </p>
             </div>
-            <div className="bg-[#F8FAFC] rounded-2xl p-8 border border-[#E2E8F0]">
-              <h3 className="text-xl font-bold text-[#0F172A]">How break records support due diligence</h3>
-              <p className="mt-3 text-sm text-[#475569] leading-relaxed">
+            <div className="bg-neutral-50/50 rounded-2xl p-8 border border-neutral-200">
+              <h3 className="text-xl font-bold text-neutral-900">How break records support due diligence</h3>
+              <p className="mt-3 text-sm text-neutral-600 leading-relaxed">
                 If an incident occurs involving driver fatigue, regulators will look at what records the operating company maintained. Break records stored in HaulageOps provide timestamped, tamper-resistant evidence of when breaks were taken — or not taken. This evidence is available for the period covered by the platform's records, which are retained indefinitely.
               </p>
             </div>
           </div>
-          <div className="mt-8 p-6 rounded-2xl bg-[#F8FAFC] border border-[#E2E8F0]">
-            <h3 className="font-bold text-[#0F172A]">More on Chain of Responsibility</h3>
-            <p className="mt-2 text-sm text-[#475569] leading-relaxed">
+          <div className="mt-8 p-6 rounded-2xl bg-neutral-50/50 border border-neutral-200">
+            <h3 className="font-bold text-neutral-900">More on Chain of Responsibility</h3>
+            <p className="mt-2 text-sm text-neutral-600 leading-relaxed">
               For a detailed explanation of CoR obligations, how they apply to operators, and what a reasonable compliance approach looks like, see our{" "}
               <Link href="/au/chain-of-responsibility" className="text-[#E8652B] font-semibold hover:underline">
                 Chain of Responsibility page
@@ -268,31 +268,31 @@ export function PlatformBreakAndRestPage() {
       </section>
 
       {/* HONEST ABOUT LIMITS — NOT AN EWD */}
-      <section className="py-20 bg-[#F8FAFC]">
+      <section className="py-20 bg-neutral-50/50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Honest About Limits</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             HaulageOps is not an Electronic Work Diary. Here is what that means.
           </h2>
-          <p className="mt-4 text-[#475569] max-w-3xl leading-relaxed">
+          <p className="mt-4 text-neutral-600 max-w-3xl leading-relaxed">
             An Electronic Work Diary (EWD) is a certified system approved under the NHVR's regulatory framework for recording work and rest time for heavy vehicle drivers. <strong>HaulageOps does not meet these requirements and is not an EWD.</strong>
           </p>
           <div className="mt-10 grid md:grid-cols-3 gap-6">
-            <div className="bg-white rounded-2xl p-6 border border-[#E2E8F0] shadow-sm">
-              <h3 className="font-bold text-[#0F172A] mb-2">What HaulageOps break records ARE</h3>
-              <p className="text-sm text-[#475569] leading-relaxed">
+            <div className="bg-white rounded-2xl p-6 border border-neutral-200 shadow-sm">
+              <h3 className="font-bold text-neutral-900 mb-2">What HaulageOps break records ARE</h3>
+              <p className="text-sm text-neutral-600 leading-relaxed">
                 A timestamped, driver-entered record of breaks taken during a work shift, stored in the platform against the driver's job history. Useful for internal fatigue management review, due-diligence evidence, management oversight, and supplementary documentation.
               </p>
             </div>
-            <div className="bg-white rounded-2xl p-6 border border-[#E2E8F0] shadow-sm">
-              <h3 className="font-bold text-[#0F172A] mb-2">What HaulageOps break records are NOT</h3>
-              <p className="text-sm text-[#475569] leading-relaxed">
+            <div className="bg-white rounded-2xl p-6 border border-neutral-200 shadow-sm">
+              <h3 className="font-bold text-neutral-900 mb-2">What HaulageOps break records are NOT</h3>
+              <p className="text-sm text-neutral-600 leading-relaxed">
                 Not an EWD. Not a certified fatigue management system. Not a substitute for a work diary where one is required by law. Not a real-time fatigue alert system.
               </p>
             </div>
-            <div className="bg-white rounded-2xl p-6 border border-[#E2E8F0] shadow-sm">
-              <h3 className="font-bold text-[#0F172A] mb-2">What to use for EWD requirements</h3>
-              <p className="text-sm text-[#475569] leading-relaxed">
+            <div className="bg-white rounded-2xl p-6 border border-neutral-200 shadow-sm">
+              <h3 className="font-bold text-neutral-900 mb-2">What to use for EWD requirements</h3>
+              <p className="text-sm text-neutral-600 leading-relaxed">
                 If your operation requires EWD compliance, use an NHVR-certified EWD product for that purpose. HaulageOps does not compete with or replicate certified EWD systems.
               </p>
             </div>
@@ -304,22 +304,22 @@ export function PlatformBreakAndRestPage() {
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Connected Platform</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             Break records connect to driver management, compliance and the driver app.
           </h2>
           <div className="mt-10 grid md:grid-cols-3 gap-6">
             {connectedModules.map((mod) => (
-              <div key={mod.title} className="bg-[#F8FAFC] rounded-2xl p-6 border border-[#E2E8F0]">
-                <h3 className="font-bold text-[#0F172A] mb-2">
+              <div key={mod.title} className="bg-neutral-50/50 rounded-2xl p-6 border border-neutral-200">
+                <h3 className="font-bold text-neutral-900 mb-2">
                   <Link href={mod.href} className="hover:text-[#E8652B] transition-colors">
                     {mod.title}
                   </Link>
                 </h3>
-                <p className="text-sm text-[#475569] leading-relaxed">{mod.desc}</p>
+                <p className="text-sm text-neutral-600 leading-relaxed">{mod.desc}</p>
               </div>
             ))}
           </div>
-          <p className="mt-6 text-sm text-[#475569]">
+          <p className="mt-6 text-sm text-neutral-600">
             Also see:{" "}
             <Link href="/au/chain-of-responsibility" className="text-[#E8652B] hover:underline font-medium">Chain of Responsibility (AU)</Link>
             {" | "}
@@ -331,20 +331,20 @@ export function PlatformBreakAndRestPage() {
       </section>
 
       {/* FAQ */}
-      <section className="py-20 bg-[#F8FAFC]">
+      <section className="py-20 bg-neutral-50/50">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Common Questions</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A]">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900">
             Break & Rest Management — frequently asked questions
           </h2>
           <div className="mt-8 space-y-3">
             {faqs.map((faq) => (
-              <details key={faq.q} className="group border border-[#E2E8F0] bg-white rounded-xl overflow-hidden">
-                <summary className="flex items-center justify-between gap-4 px-6 py-4 cursor-pointer font-semibold text-[#0F172A] text-sm list-none hover:bg-[#F8FAFC]">
+              <details key={faq.q} className="group border border-neutral-200 bg-white rounded-xl overflow-hidden">
+                <summary className="flex items-center justify-between gap-4 px-6 py-4 cursor-pointer font-semibold text-neutral-900 text-sm list-none hover:bg-neutral-50/50">
                   {faq.q}
-                  <ChevronRight className="h-4 w-4 text-[#94A3B8] shrink-0 group-open:rotate-90 transition-transform" />
+                  <ChevronRight className="h-4 w-4 text-neutral-400 shrink-0 group-open:rotate-90 transition-transform" />
                 </summary>
-                <div className="px-6 pb-5 text-sm text-[#475569] leading-relaxed border-t border-[#F1F5F9]">
+                <div className="px-6 pb-5 text-sm text-neutral-600 leading-relaxed border-t border-neutral-100">
                   <p className="pt-4">{faq.a}</p>
                 </div>
               </details>
@@ -354,11 +354,11 @@ export function PlatformBreakAndRestPage() {
       </section>
 
       {/* CTA BAND */}
-      <section className="py-16 bg-[#0F172A]">
+      <section className="py-16 bg-neutral-900">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
           <div>
             <h2 className="text-2xl sm:text-3xl font-bold text-white">See break recording and driver management working together.</h2>
-            <p className="mt-2 text-[#94A3B8] text-sm leading-relaxed max-w-xl">
+            <p className="mt-2 text-neutral-400 text-sm leading-relaxed max-w-xl">
               In a 20-minute demo we'll walk through the driver app, break recording, and how records appear in the management panel — including what gets exported for audit.
             </p>
           </div>

@@ -117,22 +117,22 @@ export default function HaulageOpsVsMyTruckingPage() {
   return (
     <MainLayout showCta={false}>
       {/* Breadcrumb + Hero */}
-      <section className="pt-24 pb-16 bg-gradient-to-b from-[#FFF9F5] to-white">
+      <section className="pt-24 pb-16 bg-gradient-to-b from-neutral-50/80 via-white to-white border-b border-neutral-200">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <nav className="flex items-center gap-2 text-xs text-[#64748B] mb-6">
+          <nav className="flex items-center gap-2 text-xs text-neutral-500 mb-6">
             <Link href="/" className="hover:text-[#E8652B]">Home</Link>
             <ChevronRight className="h-3 w-3" />
             <Link href="/compare" className="hover:text-[#E8652B]">Compare</Link>
             <ChevronRight className="h-3 w-3" />
-            <span className="text-[#0F172A] font-medium">HaulageOps vs MyTrucking</span>
+            <span className="text-neutral-900 font-medium">HaulageOps vs MyTrucking</span>
           </nav>
-          <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-[#E8652B] bg-[#FFF0E6] mb-4 animate-in fade-in slide-in-from-bottom-4 animation-duration-700 fill-mode-both">
+          <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-[#E8652B] bg-orange-50 border border-orange-200 mb-4 animate-in fade-in slide-in-from-bottom-4 animation-duration-700 fill-mode-both">
             Platform Comparison
           </span>
-          <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-[#0F172A] max-w-4xl leading-[1.1] animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-100 fill-mode-both">
+          <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-neutral-900 max-w-4xl leading-[1.1] animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-100 fill-mode-both">
             HaulageOps vs MyTrucking
           </h1>
-          <p className="mt-6 text-lg text-[#475569] max-w-3xl leading-relaxed animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-150 fill-mode-both">
+          <p className="mt-6 text-lg text-neutral-600 max-w-3xl leading-relaxed animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-150 fill-mode-both">
             MyTrucking is a popular platform for small to mid-size freight operators. HaulageOps is purpose-built for bulk haulage — particularly operators managing both owned trucks and subcontractors on construction, earthworks and material transport work.
           </p>
         </div>
@@ -142,25 +142,25 @@ export default function HaulageOpsVsMyTruckingPage() {
       <section className="py-16 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Feature comparison</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">Feature Comparison</h2>
-          <p className="mt-4 text-[#475569] leading-relaxed max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">Feature Comparison</h2>
+          <p className="mt-4 text-neutral-600 leading-relaxed max-w-3xl">
             Based on publicly available information. Verify current feature availability with each vendor before making a decision.
           </p>
           <div className="mt-8 overflow-x-auto">
             <table className="w-full border-collapse">
               <thead>
                 <tr>
-                  <th className="px-5 py-4 text-left text-xs font-bold uppercase tracking-wider text-[#0F172A] bg-[#F8FAFC] border border-[#E2E8F0]">Feature Area</th>
-                  <th className="px-5 py-4 text-left text-xs font-bold uppercase tracking-wider text-white bg-[#0F172A] border border-[#0F172A]">HaulageOps</th>
-                  <th className="px-5 py-4 text-left text-xs font-bold uppercase tracking-wider text-[#0F172A] bg-[#F1F5F9] border border-[#E2E8F0]">MyTrucking</th>
+                  <th className="px-5 py-4 text-left text-xs font-bold uppercase tracking-wider text-neutral-900 bg-neutral-50/50 border border-neutral-200">Feature Area</th>
+                  <th className="px-5 py-4 text-left text-xs font-bold uppercase tracking-wider text-white bg-neutral-900 border border-neutral-900">HaulageOps</th>
+                  <th className="px-5 py-4 text-left text-xs font-bold uppercase tracking-wider text-neutral-900 bg-neutral-100 border border-neutral-200">MyTrucking</th>
                 </tr>
               </thead>
               <tbody>
                 {comparisonRows.map((row) => (
                   <tr key={row.feature} className="bg-white">
-                    <td className="px-5 py-4 text-sm font-semibold text-[#0F172A] bg-[#F8FAFC] border border-[#E2E8F0] align-top">{row.feature}</td>
-                    <td className="px-5 py-4 text-sm text-[#475569] border border-[#E2E8F0] align-top"><Mark type={row.ho.type} text={row.ho.text} /></td>
-                    <td className="px-5 py-4 text-sm text-[#475569] border border-[#E2E8F0] align-top"><Mark type={row.alt.type} text={row.alt.text} /></td>
+                    <td className="px-5 py-4 text-sm font-semibold text-neutral-900 bg-neutral-50/50 border border-neutral-200 align-top">{row.feature}</td>
+                    <td className="px-5 py-4 text-sm text-neutral-600 border border-neutral-200 align-top"><Mark type={row.ho.type} text={row.ho.text} /></td>
+                    <td className="px-5 py-4 text-sm text-neutral-600 border border-neutral-200 align-top"><Mark type={row.alt.type} text={row.alt.text} /></td>
                   </tr>
                 ))}
               </tbody>
@@ -173,18 +173,18 @@ export default function HaulageOpsVsMyTruckingPage() {
       </section>
 
       {/* WHERE HAULAGEOPS DIFFERS */}
-      <section className="py-16 bg-[#F8FAFC]">
+      <section className="py-16 bg-neutral-50/50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12">
             <div>
               <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Where HaulageOps Differs</span>
-              <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">Built Around the Bulk Haulage Workflow</h2>
-              <p className="mt-4 text-[#475569] leading-relaxed text-sm">
+              <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">Built Around the Bulk Haulage Workflow</h2>
+              <p className="mt-4 text-neutral-600 leading-relaxed text-sm">
                 The core difference is operational focus. MyTrucking serves a broad range of freight operators — general freight, courier, tautliner, flatbed. HaulageOps is built specifically around bulk haulage: loading from a quarry or supplier, delivering to a construction or civil site, capturing load weights, and billing per tonne or per load.
               </p>
               <ul className="mt-5 space-y-3">
                 {haulageopsDiffers.map((item) => (
-                  <li key={item} className="flex items-start gap-2 text-sm text-[#334155]">
+                  <li key={item} className="flex items-start gap-2 text-sm text-neutral-700">
                     <CheckCircle2 className="h-4 w-4 text-[#E8652B] shrink-0 mt-0.5" />
                     <span>{item}</span>
                   </li>
@@ -200,10 +200,10 @@ export default function HaulageOpsVsMyTruckingPage() {
             </div>
             <div>
               <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">The Right Questions</span>
-              <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">What to Test in Any Demo</h2>
+              <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">What to Test in Any Demo</h2>
               <ul className="mt-5 space-y-3">
                 {rightQuestions.map((item) => (
-                  <li key={item} className="flex items-start gap-2 text-sm text-[#334155]">
+                  <li key={item} className="flex items-start gap-2 text-sm text-neutral-700">
                     <CheckCircle2 className="h-4 w-4 text-[#E8652B] shrink-0 mt-0.5" />
                     <span>{item}</span>
                   </li>
@@ -218,15 +218,15 @@ export default function HaulageOpsVsMyTruckingPage() {
       <section className="py-16 bg-white">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Common questions</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A]">Frequently Asked Questions</h2>
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900">Frequently Asked Questions</h2>
           <div className="mt-8 space-y-3">
             {faqs.map((faq) => (
-              <details key={faq.q} open={faq.open} className="group border border-[#E2E8F0] bg-white rounded-xl overflow-hidden">
-                <summary className="flex items-center justify-between gap-4 px-6 py-4 cursor-pointer font-semibold text-[#0F172A] text-sm list-none hover:bg-[#F8FAFC]">
+              <details key={faq.q} open={faq.open} className="group border border-neutral-200 bg-white rounded-xl overflow-hidden">
+                <summary className="flex items-center justify-between gap-4 px-6 py-4 cursor-pointer font-semibold text-neutral-900 text-sm list-none hover:bg-neutral-50/50">
                   {faq.q}
-                  <ChevronRight className="h-4 w-4 text-[#94A3B8] shrink-0 group-open:rotate-90 transition-transform" />
+                  <ChevronRight className="h-4 w-4 text-neutral-400 shrink-0 group-open:rotate-90 transition-transform" />
                 </summary>
-                <div className="px-6 pb-5 text-sm text-[#475569] leading-relaxed border-t border-[#F1F5F9]">
+                <div className="px-6 pb-5 text-sm text-neutral-600 leading-relaxed border-t border-neutral-100">
                   <p className="pt-4">{faq.a}</p>
                 </div>
               </details>
@@ -236,11 +236,11 @@ export default function HaulageOpsVsMyTruckingPage() {
       </section>
 
       {/* CTA BAND */}
-      <section className="py-16 bg-[#0F172A]">
+      <section className="py-16 bg-neutral-900">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
           <div>
             <h2 className="text-2xl sm:text-3xl font-bold text-white">See HaulageOps for yourself</h2>
-            <p className="mt-2 text-[#94A3B8] text-sm leading-relaxed max-w-xl">
+            <p className="mt-2 text-neutral-400 text-sm leading-relaxed max-w-xl">
               Book a 20-minute demo tailored to your fleet size and operation type.
             </p>
           </div>

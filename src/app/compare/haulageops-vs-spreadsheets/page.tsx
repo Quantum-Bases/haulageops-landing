@@ -221,22 +221,22 @@ export default function HaulageOpsVsSpreadsheetsPage() {
   return (
     <MainLayout showCta={false}>
       {/* Breadcrumb + Hero */}
-      <section className="pt-24 pb-16 bg-gradient-to-b from-[#FFF9F5] to-white">
+      <section className="pt-24 pb-16 bg-gradient-to-b from-neutral-50/80 via-white to-white border-b border-neutral-200">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <nav className="flex items-center gap-2 text-xs text-[#64748B] mb-6">
+          <nav className="flex items-center gap-2 text-xs text-neutral-500 mb-6">
             <Link href="/" className="hover:text-[#E8652B]">Home</Link>
             <ChevronRight className="h-3 w-3" />
             <Link href="/compare" className="hover:text-[#E8652B]">Compare</Link>
             <ChevronRight className="h-3 w-3" />
-            <span className="text-[#0F172A] font-medium">HaulageOps vs Spreadsheets</span>
+            <span className="text-neutral-900 font-medium">HaulageOps vs Spreadsheets</span>
           </nav>
-          <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-[#E8652B] bg-[#FFF0E6] mb-4 animate-in fade-in slide-in-from-bottom-4 animation-duration-700 fill-mode-both">
+          <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-[#E8652B] bg-orange-50 border border-orange-200 mb-4 animate-in fade-in slide-in-from-bottom-4 animation-duration-700 fill-mode-both">
             Comparison — Spreadsheets vs HaulageOps
           </span>
-          <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-[#0F172A] max-w-4xl leading-[1.1] animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-100 fill-mode-both">
+          <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-neutral-900 max-w-4xl leading-[1.1] animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-100 fill-mode-both">
             Spreadsheets work until they don't. Here's exactly where they break.
           </h1>
-          <p className="mt-6 text-lg text-[#475569] max-w-3xl leading-relaxed animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-150 fill-mode-both">
+          <p className="mt-6 text-lg text-neutral-600 max-w-3xl leading-relaxed animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-150 fill-mode-both">
             Spreadsheets are free, familiar and good enough for simple haulage operations. This page is an honest account of the specific points where they stop being good enough — and when moving to a TMS actually makes economic sense.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
@@ -246,14 +246,14 @@ export default function HaulageOpsVsSpreadsheetsPage() {
               </Button>
             </Link>
             <Link href="/solutions/replacing-spreadsheets">
-              <Button size="lg" variant="outline" className="text-[#0F172A] font-semibold">
+              <Button size="lg" variant="outline" className="text-neutral-900 font-semibold">
                 Replacing spreadsheets →
               </Button>
             </Link>
           </div>
           <div className="mt-8 flex flex-wrap gap-3">
             {heroPills.map((pill) => (
-              <span key={pill} className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold text-[#0F172A] bg-[#FFF0E6] border border-[#FED7AA]">
+              <span key={pill} className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold text-neutral-900 bg-orange-50 border border-orange-200 text-[#E8652B] border border-orange-200">
                 {pill}
               </span>
             ))}
@@ -265,9 +265,9 @@ export default function HaulageOpsVsSpreadsheetsPage() {
       <section className="py-16 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Honest starting point</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">What spreadsheets do well</h2>
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">What spreadsheets do well</h2>
           <div className="mt-8 grid lg:grid-cols-2 gap-12">
-            <div className="space-y-4 text-[#475569] leading-relaxed text-sm">
+            <div className="space-y-4 text-neutral-600 leading-relaxed text-sm">
               <p>
                 Spreadsheets deserve credit. For a haulage operator running 3–5 owned trucks on consistent routes with a small number of direct clients, a well-maintained spreadsheet can cover job scheduling, basic rate tracking and a billing summary. The cost is zero beyond the time invested in building it. Everyone on your team already knows how to use Excel or Google Sheets. There's no vendor, no subscription, no implementation project.
               </p>
@@ -276,10 +276,10 @@ export default function HaulageOpsVsSpreadsheetsPage() {
               </p>
             </div>
             <div>
-              <h3 className="text-lg font-bold text-[#0F172A] mb-4">Where spreadsheets hold up</h3>
+              <h3 className="text-lg font-bold text-neutral-900 mb-4">Where spreadsheets hold up</h3>
               <ul className="space-y-3">
                 {strengths.map((item) => (
-                  <li key={item} className="flex items-start gap-2 text-sm text-[#334155]">
+                  <li key={item} className="flex items-start gap-2 text-sm text-neutral-700">
                     <CheckCircle2 className="h-4 w-4 text-[#E8652B] shrink-0 mt-0.5" />
                     <span>{item}</span>
                   </li>
@@ -291,19 +291,19 @@ export default function HaulageOpsVsSpreadsheetsPage() {
       </section>
 
       {/* SEVEN PLACES SPREADSHEETS BREAK */}
-      <section className="py-16 bg-[#F8FAFC]">
+      <section className="py-16 bg-neutral-50/50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Where the limits appear</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">Seven places spreadsheets break for haulage operations</h2>
-          <p className="mt-4 text-[#475569] leading-relaxed max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">Seven places spreadsheets break for haulage operations</h2>
+          <p className="mt-4 text-neutral-600 leading-relaxed max-w-3xl">
             These aren't theoretical weaknesses — they're the specific operational problems that operators describe when they explain why they started looking at software.
           </p>
           <div className="mt-10 grid md:grid-cols-2 gap-6">
             {breakCards.map((card) => (
-              <div key={card.num} className="bg-white rounded-2xl p-6 border border-[#E2E8F0]">
-                <h3 className="font-bold text-[#0F172A]">{card.num}. {card.title}</h3>
-                <p className="mt-3 text-sm text-[#475569] leading-relaxed">{card.p1}</p>
-                <p className="mt-4 text-sm text-[#475569] leading-relaxed">{card.p2}</p>
+              <div key={card.num} className="bg-white rounded-2xl p-6 border border-neutral-200">
+                <h3 className="font-bold text-neutral-900">{card.num}. {card.title}</h3>
+                <p className="mt-3 text-sm text-neutral-600 leading-relaxed">{card.p1}</p>
+                <p className="mt-4 text-sm text-neutral-600 leading-relaxed">{card.p2}</p>
               </div>
             ))}
           </div>
@@ -314,22 +314,22 @@ export default function HaulageOpsVsSpreadsheetsPage() {
       <section className="py-16 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Feature comparison</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">Spreadsheets vs HaulageOps — dimension by dimension</h2>
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">Spreadsheets vs HaulageOps — dimension by dimension</h2>
           <div className="mt-8 overflow-x-auto">
             <table className="w-full border-collapse">
               <thead>
                 <tr>
-                  <th className="px-5 py-4 text-left text-xs font-bold uppercase tracking-wider text-[#0F172A] bg-[#F8FAFC] border border-[#E2E8F0]">Capability</th>
-                  <th className="px-5 py-4 text-left text-xs font-bold uppercase tracking-wider text-[#0F172A] bg-[#FFF0E6] border border-[#E2E8F0]">Spreadsheets</th>
-                  <th className="px-5 py-4 text-left text-xs font-bold uppercase tracking-wider text-white bg-[#0F172A] border border-[#0F172A]">HaulageOps</th>
+                  <th className="px-5 py-4 text-left text-xs font-bold uppercase tracking-wider text-neutral-900 bg-neutral-50/50 border border-neutral-200">Capability</th>
+                  <th className="px-5 py-4 text-left text-xs font-bold uppercase tracking-wider text-neutral-900 bg-orange-50 border border-orange-200 text-[#E8652B] border border-neutral-200">Spreadsheets</th>
+                  <th className="px-5 py-4 text-left text-xs font-bold uppercase tracking-wider text-white bg-neutral-900 border border-neutral-900">HaulageOps</th>
                 </tr>
               </thead>
               <tbody>
                 {comparisonRows.map((row) => (
                   <tr key={row.capability} className="bg-white">
-                    <td className="px-5 py-4 text-sm font-semibold text-[#0F172A] bg-[#F8FAFC] border border-[#E2E8F0] align-top">{row.capability}</td>
-                    <td className="px-5 py-4 text-sm text-[#475569] border border-[#E2E8F0] align-top">{row.spreadsheet}</td>
-                    <td className="px-5 py-4 text-sm text-[#475569] border border-[#E2E8F0] align-top">{row.haulageops}</td>
+                    <td className="px-5 py-4 text-sm font-semibold text-neutral-900 bg-neutral-50/50 border border-neutral-200 align-top">{row.capability}</td>
+                    <td className="px-5 py-4 text-sm text-neutral-600 border border-neutral-200 align-top">{row.spreadsheet}</td>
+                    <td className="px-5 py-4 text-sm text-neutral-600 border border-neutral-200 align-top">{row.haulageops}</td>
                   </tr>
                 ))}
               </tbody>
@@ -339,16 +339,16 @@ export default function HaulageOpsVsSpreadsheetsPage() {
       </section>
 
       {/* WHEN TO MOVE */}
-      <section className="py-16 bg-[#F8FAFC]">
+      <section className="py-16 bg-neutral-50/50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">When to move</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">When does the switch actually make sense?</h2>
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">When does the switch actually make sense?</h2>
           <div className="mt-8 grid lg:grid-cols-2 gap-12">
             <div>
-              <h3 className="text-lg font-bold text-[#0F172A] mb-4">Signs it's time to move off spreadsheets</h3>
+              <h3 className="text-lg font-bold text-neutral-900 mb-4">Signs it's time to move off spreadsheets</h3>
               <ul className="space-y-3">
                 {timeToMoveSigns.map((item) => (
-                  <li key={item} className="flex items-start gap-2 text-sm text-[#334155]">
+                  <li key={item} className="flex items-start gap-2 text-sm text-neutral-700">
                     <CheckCircle2 className="h-4 w-4 text-[#E8652B] shrink-0 mt-0.5" />
                     <span>{item}</span>
                   </li>
@@ -356,16 +356,16 @@ export default function HaulageOpsVsSpreadsheetsPage() {
               </ul>
             </div>
             <div>
-              <h3 className="text-lg font-bold text-[#0F172A] mb-4">When to stay on spreadsheets (honest answer)</h3>
+              <h3 className="text-lg font-bold text-neutral-900 mb-4">When to stay on spreadsheets (honest answer)</h3>
               <ul className="space-y-3">
                 {stayOnSpreadsheets.map((item) => (
-                  <li key={item} className="flex items-start gap-2 text-sm text-[#334155]">
+                  <li key={item} className="flex items-start gap-2 text-sm text-neutral-700">
                     <CheckCircle2 className="h-4 w-4 text-[#E8652B] shrink-0 mt-0.5" />
                     <span>{item}</span>
                   </li>
                 ))}
               </ul>
-              <p className="mt-5 text-sm text-[#475569] leading-relaxed">
+              <p className="mt-5 text-sm text-neutral-600 leading-relaxed">
                 If the above describes you, HaulageOps is probably more system than you need right now. We'd tell you that in a demo rather than have you pay for a setup that doesn't move the needle.
               </p>
             </div>
@@ -377,25 +377,25 @@ export default function HaulageOpsVsSpreadsheetsPage() {
       <section className="py-16 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Implementation</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">What moving from spreadsheets to HaulageOps actually involves</h2>
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">What moving from spreadsheets to HaulageOps actually involves</h2>
           <div className="mt-10 grid md:grid-cols-3 gap-6">
             {lifecycleCards.map((card) => (
-              <div key={card.week} className="bg-white rounded-2xl p-6 border border-[#E2E8F0]">
-                <span className="inline-block px-3 py-1 rounded-full text-xs font-bold text-[#E8652B] bg-[#FFF0E6]">{card.week}</span>
-                <h3 className="mt-4 font-bold text-[#0F172A]">{card.title}</h3>
-                <p className="mt-3 text-sm text-[#475569] leading-relaxed">{card.p}</p>
+              <div key={card.week} className="bg-white rounded-2xl p-6 border border-neutral-200">
+                <span className="inline-block px-3 py-1 rounded-full text-xs font-bold text-[#E8652B] bg-orange-50 border border-orange-200">{card.week}</span>
+                <h3 className="mt-4 font-bold text-neutral-900">{card.title}</h3>
+                <p className="mt-3 text-sm text-neutral-600 leading-relaxed">{card.p}</p>
               </div>
             ))}
           </div>
-          <div className="mt-10 rounded-2xl bg-[#0D1525] border border-[#1E293B] overflow-hidden">
-            <div className="flex items-center gap-2 px-5 py-3 bg-[#1E293B]">
+          <div className="mt-10 rounded-2xl bg-neutral-900 border-y border-neutral-800 border border-neutral-800 overflow-hidden">
+            <div className="flex items-center gap-2 px-5 py-3 bg-neutral-800">
               <span className="h-2.5 w-2.5 rounded-full bg-[#E8652B]" />
               <span className="h-2.5 w-2.5 rounded-full bg-[#94A3B8]" />
               <span className="h-2.5 w-2.5 rounded-full bg-[#475569]" />
-              <span className="ml-3 text-xs font-semibold text-[#CBD5E1]">Implementation timeline — spreadsheet to live on HaulageOps</span>
+              <span className="ml-3 text-xs font-semibold text-neutral-300">Implementation timeline — spreadsheet to live on HaulageOps</span>
             </div>
             <div className="p-6">
-              <p className="text-sm text-[#94A3B8] leading-relaxed">
+              <p className="text-sm text-neutral-400 leading-relaxed">
                 Screenshot or diagram showing a 3-week implementation timeline: Week 1 (setup, data migration, Xero connection), Week 2 (dispatch training, rate card configuration, subcontractor portal invites), Week 3 (driver app rollout, first live jobs in system, parallel running). Shows the transition from spreadsheet-as-primary to HaulageOps-as-primary.
               </p>
             </div>
@@ -404,18 +404,18 @@ export default function HaulageOpsVsSpreadsheetsPage() {
       </section>
 
       {/* FAQ */}
-      <section className="py-16 bg-[#F8FAFC]">
+      <section className="py-16 bg-neutral-50/50">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Common questions</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A]">Questions about moving from spreadsheets to HaulageOps</h2>
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900">Questions about moving from spreadsheets to HaulageOps</h2>
           <div className="mt-8 space-y-3">
             {faqs.map((faq) => (
-              <details key={faq.q} className="group border border-[#E2E8F0] bg-white rounded-xl overflow-hidden">
-                <summary className="flex items-center justify-between gap-4 px-6 py-4 cursor-pointer font-semibold text-[#0F172A] text-sm list-none hover:bg-[#F8FAFC]">
+              <details key={faq.q} className="group border border-neutral-200 bg-white rounded-xl overflow-hidden">
+                <summary className="flex items-center justify-between gap-4 px-6 py-4 cursor-pointer font-semibold text-neutral-900 text-sm list-none hover:bg-neutral-50/50">
                   {faq.q}
-                  <ChevronRight className="h-4 w-4 text-[#94A3B8] shrink-0 group-open:rotate-90 transition-transform" />
+                  <ChevronRight className="h-4 w-4 text-neutral-400 shrink-0 group-open:rotate-90 transition-transform" />
                 </summary>
-                <div className="px-6 pb-5 text-sm text-[#475569] leading-relaxed border-t border-[#F1F5F9]">
+                <div className="px-6 pb-5 text-sm text-neutral-600 leading-relaxed border-t border-neutral-100">
                   <p className="pt-4">{faq.a}</p>
                 </div>
               </details>
@@ -428,14 +428,14 @@ export default function HaulageOpsVsSpreadsheetsPage() {
       <section className="py-16 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Related pages</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A]">More useful reading</h2>
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900">More useful reading</h2>
           <div className="mt-10 grid md:grid-cols-3 gap-6">
             {relatedCards.map((card) => (
-              <div key={card.title} className="bg-white rounded-2xl p-6 border border-[#E2E8F0] flex flex-col">
-                <h3 className="text-lg font-bold text-[#0F172A]">
+              <div key={card.title} className="bg-white rounded-2xl p-6 border border-neutral-200 flex flex-col">
+                <h3 className="text-lg font-bold text-neutral-900">
                   <Link href={card.href} className="hover:text-[#E8652B] transition-colors">{card.title}</Link>
                 </h3>
-                <p className="mt-3 text-sm text-[#475569] leading-relaxed flex-1">{card.p}</p>
+                <p className="mt-3 text-sm text-neutral-600 leading-relaxed flex-1">{card.p}</p>
                 <Link href={card.href} className="mt-4 inline-flex items-center gap-1 text-sm text-[#E8652B] hover:underline font-bold">
                   {card.cta} <ArrowRight className="h-3.5 w-3.5" />
                 </Link>
@@ -446,11 +446,11 @@ export default function HaulageOpsVsSpreadsheetsPage() {
       </section>
 
       {/* CTA BAND */}
-      <section className="py-16 bg-[#0F172A]">
+      <section className="py-16 bg-neutral-900">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
           <div>
             <h2 className="text-2xl sm:text-3xl font-bold text-white">Ready to see exactly what changes from spreadsheets to HaulageOps?</h2>
-            <p className="mt-2 text-[#94A3B8] text-sm leading-relaxed max-w-xl">
+            <p className="mt-2 text-neutral-400 text-sm leading-relaxed max-w-xl">
               A 20-minute demo walks through your specific operation — dispatch, subcontractors, billing — and shows you what would actually be different.
             </p>
           </div>

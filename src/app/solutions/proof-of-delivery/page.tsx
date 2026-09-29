@@ -210,28 +210,28 @@ export default function ProofOfDeliveryPage() {
   return (
     <MainLayout showCta={false}>
       {/* Breadcrumb */}
-      <div className="pt-24 pb-0 bg-[#FFF9F5]">
+      <div className="pt-24 pb-0 bg-neutral-50/70">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <nav className="flex items-center gap-2 text-xs text-[#64748B]">
+          <nav className="flex items-center gap-2 text-xs text-neutral-500">
             <Link href="/" className="hover:text-[#E8652B]">Home</Link>
             <ChevronRight className="h-3 w-3" />
             <Link href="/solutions" className="hover:text-[#E8652B]">Solutions</Link>
             <ChevronRight className="h-3 w-3" />
-            <span className="text-[#0F172A] font-medium">Proof of Delivery</span>
+            <span className="text-neutral-900 font-medium">Proof of Delivery</span>
           </nav>
         </div>
       </div>
 
       {/* HERO */}
-      <section className="pt-10 pb-20 bg-gradient-to-b from-[#FFF9F5] via-[#FFF5EE]/40 to-white">
+      <section className="pt-10 pb-20 bg-gradient-to-b from-neutral-50/80 via-white to-white border-b border-neutral-200">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-[#E8652B] bg-[#FFF0E6] mb-4 animate-in fade-in slide-in-from-bottom-4 animation-duration-700 fill-mode-both">
+          <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-[#E8652B] bg-orange-50 border border-orange-200 mb-4 animate-in fade-in slide-in-from-bottom-4 animation-duration-700 fill-mode-both">
             Proof of Delivery for Haulage
           </span>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#0F172A] max-w-4xl leading-[1.1] animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-100 fill-mode-both">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-neutral-900 max-w-4xl leading-[1.1] animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-100 fill-mode-both">
             Signed, photographed and stored before the driver leaves the site.
           </h1>
-          <p className="mt-6 text-lg sm:text-xl text-[#475569] max-w-3xl leading-relaxed animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-150 fill-mode-both">
+          <p className="mt-6 text-lg sm:text-xl text-neutral-600 max-w-3xl leading-relaxed animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-150 fill-mode-both">
             HaulageOps captures delivery photographs, customer signatures, and supporting documents at the point of delivery — on the driver&apos;s mobile device, offline-capable. All three are stored in Azure and immediately attached to the job record.
           </p>
           <div className="mt-8 flex flex-wrap gap-3 animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-200 fill-mode-both">
@@ -241,15 +241,15 @@ export default function ProofOfDeliveryPage() {
               </Button>
             </Link>
             <Link href="/platform/driver-app">
-              <Button size="lg" variant="outline" className="border-[#E2E8F0] text-[#334155] hover:bg-[#F8FAFC]">
+              <Button size="lg" variant="outline" className="border-neutral-200 text-neutral-700 hover:bg-neutral-50/50">
                 Driver App Detail
               </Button>
             </Link>
           </div>
           <div className="mt-8 flex flex-wrap gap-2 animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-300 fill-mode-both">
             {heroKickers.map((pill) => (
-              <span key={pill} className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#F1F5F9] text-xs font-medium text-[#334155]">
-                <CheckCircle className="h-3.5 w-3.5 text-[#16A34A] shrink-0" />
+              <span key={pill} className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-neutral-100 text-xs font-medium text-neutral-700">
+                <CheckCircle className="h-3.5 w-3.5 text-[#E8652B] shrink-0" />
                 {pill}
               </span>
             ))}
@@ -258,13 +258,13 @@ export default function ProofOfDeliveryPage() {
       </section>
 
       {/* PROOF STRIP */}
-      <div className="bg-[#0F172A] py-5">
+      <div className="bg-neutral-900 py-5">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-center">
             {proofStrip.map((item) => (
               <div key={item.strong} className="flex flex-col items-center justify-center gap-1">
                 <span className="text-white font-bold text-sm">{item.strong}</span>
-                <span className="text-[#94A3B8] text-xs">{item.sub}</span>
+                <span className="text-neutral-400 text-xs">{item.sub}</span>
               </div>
             ))}
           </div>
@@ -275,43 +275,43 @@ export default function ProofOfDeliveryPage() {
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Why POD Matters</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             Proof of delivery is the evidence that connects the job to the invoice — and protects you in a dispute
           </h2>
           <div className="mt-8 grid lg:grid-cols-2 gap-10 items-start">
             <div>
-              <p className="text-[#475569] leading-relaxed">
+              <p className="text-neutral-600 leading-relaxed">
                 In bulk haulage, proof of delivery serves four distinct purposes. Understanding each one clarifies why a timestamped digital record is meaningfully better than a paper signature on a docket that ends up in a filing cabinet.
               </p>
-              <h3 className="mt-6 font-bold text-[#0F172A]">Dispute resolution</h3>
-              <p className="mt-2 text-[#475569] leading-relaxed">
+              <h3 className="mt-6 font-bold text-neutral-900">Dispute resolution</h3>
+              <p className="mt-2 text-neutral-600 leading-relaxed">
                 When a client claims a delivery did not happen, was short, or was at the wrong location, the POD is your primary evidence. A photograph of the delivered material at the correct address, timestamped and geotagged, is a substantially stronger record than a paper docket that you are relying on someone to have kept. A customer signature captured digitally is harder to dispute than a handwritten mark on a form that may have been processed days later.
               </p>
-              <h3 className="mt-6 font-bold text-[#0F172A]">Invoice evidence</h3>
-              <p className="mt-2 text-[#475569] leading-relaxed">
+              <h3 className="mt-6 font-bold text-neutral-900">Invoice evidence</h3>
+              <p className="mt-2 text-neutral-600 leading-relaxed">
                 Before you send an invoice for a delivery, you need confidence that the delivery was completed as specified. Digital POD gives your billing team that confidence without requiring them to call the driver or locate a paper docket. The invoice follows immediately from the completed job record because the evidence is already attached.
               </p>
-              <h3 className="mt-6 font-bold text-[#0F172A]">Client satisfaction</h3>
-              <p className="mt-2 text-[#475569] leading-relaxed">
+              <h3 className="mt-6 font-bold text-neutral-900">Client satisfaction</h3>
+              <p className="mt-2 text-neutral-600 leading-relaxed">
                 Large clients managing multiple sites and multiple haulage suppliers will ask for delivery records. Being able to give a client self-service access to their POD — through the client portal, without a phone call or email — is a material operational advantage over operators who have to dig through a filing cabinet for a copy.
               </p>
-              <h3 className="mt-6 font-bold text-[#0F172A]">Compliance and audit readiness</h3>
-              <p className="mt-2 text-[#475569] leading-relaxed">
+              <h3 className="mt-6 font-bold text-neutral-900">Compliance and audit readiness</h3>
+              <p className="mt-2 text-neutral-600 leading-relaxed">
                 An audit trail of delivery records — what was delivered, when, where, and who confirmed receipt — is relevant to Chain of Responsibility compliance and to any contractual obligation to demonstrate delivery performance. A complete, timestamped digital record supports audit readiness in a way that paper filing cannot.
               </p>
             </div>
             <div>
               {/* POD in job record visual spec */}
-              <div className="rounded-2xl border border-[#E2E8F0] bg-[#0D1525] overflow-hidden">
-                <div className="px-5 py-3 bg-[#1E293B] text-[#E8652B] text-xs font-bold uppercase tracking-widest">
+              <div className="rounded-2xl border border-neutral-200 bg-neutral-900 border-y border-neutral-800 overflow-hidden">
+                <div className="px-5 py-3 bg-neutral-800 text-[#E8652B] text-xs font-bold uppercase tracking-widest">
                   POD in the Job Record
                 </div>
                 <div className="p-4 sm:p-5 space-y-3">
-                  <div className="bg-[#1E293B] border border-[#334155] rounded-lg p-3">
+                  <div className="bg-neutral-800 border border-[#334155] rounded-lg p-3">
                     <div className="flex flex-wrap items-center justify-between gap-2">
                       <div>
                         <p className="text-white text-[11px] font-semibold">JOB-1844 — Apex Civil</p>
-                        <p className="text-[#64748B] text-[10px]">Driver: L. Chen · Status: Delivered · Completed 14:23</p>
+                        <p className="text-neutral-500 text-[10px]">Driver: L. Chen · Status: Delivered · Completed 14:23</p>
                       </div>
                       <span className="px-1.5 py-0.5 rounded bg-[#16A34A]/15 text-[#4ADE80] text-[9px] font-semibold">POD — Complete</span>
                     </div>
@@ -320,26 +320,26 @@ export default function ProofOfDeliveryPage() {
                     {podItems.map((pod) => {
                       const Icon = pod.icon;
                       return (
-                        <div key={pod.label} className="bg-[#1E293B] border border-[#334155] rounded-lg p-3">
-                          <Icon className="h-4 w-4 text-[#64748B]" />
+                        <div key={pod.label} className="bg-neutral-800 border border-[#334155] rounded-lg p-3">
+                          <Icon className="h-4 w-4 text-neutral-500" />
                           <p className="text-white text-[10px] font-semibold mt-2">{pod.label}</p>
-                          <p className="text-[#64748B] text-[9px] mt-0.5 leading-relaxed">{pod.meta}</p>
+                          <p className="text-neutral-500 text-[9px] mt-0.5 leading-relaxed">{pod.meta}</p>
                           <span className={`inline-block mt-2 px-1.5 py-0.5 rounded text-[8px] font-semibold ${pod.cls}`}>Attached</span>
                         </div>
                       );
                     })}
                   </div>
-                  <p className="text-[10px] text-[#475569]">
+                  <p className="text-[10px] text-neutral-600">
                     Finance team sees this view before generating the invoice — POD present, rate confirmed, ready to bill.
                   </p>
                 </div>
               </div>
               {/* Callout */}
-              <div className="mt-4 p-5 bg-[#F5F7FA] border border-[#E2E8F0] rounded-2xl">
-                <p className="font-semibold text-[#0F172A] mb-3">POD is captured before the truck moves:</p>
+              <div className="mt-4 p-5 bg-[#F5F7FA] border border-neutral-200 rounded-2xl">
+                <p className="font-semibold text-neutral-900 mb-3">POD is captured before the truck moves:</p>
                 <ul className="space-y-3">
                   {["Photograph taken at the delivery point", "Signature collected from the receiving party", "Any document uploaded while still on site", "All three attached to the job record immediately"].map((item) => (
-                    <li key={item} className="flex items-start gap-2 text-sm text-[#334155]">
+                    <li key={item} className="flex items-start gap-2 text-sm text-neutral-700">
                       <CheckCircle className="h-4 w-4 text-[#E8652B] shrink-0 mt-0.5" />
                       <span>{item}</span>
                     </li>
@@ -352,22 +352,22 @@ export default function ProofOfDeliveryPage() {
       </section>
 
       {/* WHAT GETS CAPTURED */}
-      <section className="py-20 bg-[#F8FAFC]">
+      <section className="py-20 bg-neutral-50/50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">What Gets Captured</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             Three capture types — all on the driver&apos;s phone, all attached to the job
           </h2>
           <div className="mt-10 grid md:grid-cols-3 gap-6">
             {captureCards.map((card, i) => {
               const Icon = [Camera, PenLine, FileUp][i];
               return (
-                <div key={card.title} className="bg-white rounded-2xl p-6 border border-[#E2E8F0]">
-                  <span className="inline-flex items-center justify-center h-10 w-10 rounded-lg bg-[#FFF0E6]">
+                <div key={card.title} className="bg-white rounded-2xl p-6 border border-neutral-200">
+                  <span className="inline-flex items-center justify-center h-10 w-10 rounded-lg bg-orange-50 border border-orange-200 text-[#E8652B]">
                     <Icon className="h-5 w-5 text-[#E8652B]" />
                   </span>
-                  <h3 className="mt-4 font-bold text-[#0F172A]">{card.title}</h3>
-                  <p className="mt-2 text-sm text-[#475569] leading-relaxed">{card.desc}</p>
+                  <h3 className="mt-4 font-bold text-neutral-900">{card.title}</h3>
+                  <p className="mt-2 text-sm text-neutral-600 leading-relaxed">{card.desc}</p>
                 </div>
               );
             })}
@@ -379,15 +379,15 @@ export default function ProofOfDeliveryPage() {
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">The Capture Workflow</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             How POD flows from delivery site to admin panel to client portal
           </h2>
           <div className="mt-10 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {workflowSteps.map((step) => (
-              <div key={step.num} className="bg-[#F8FAFC] rounded-2xl p-6 border border-[#E2E8F0] shadow-sm">
+              <div key={step.num} className="bg-neutral-50/50 rounded-2xl p-6 border border-neutral-200 shadow-sm">
                 <span className="text-3xl font-black text-[#E8652B]/20 leading-none">{step.num}</span>
-                <h3 className="mt-2 font-bold text-[#0F172A] text-base">{step.title}</h3>
-                <p className="mt-2 text-sm text-[#475569] leading-relaxed">{step.desc}</p>
+                <h3 className="mt-2 font-bold text-neutral-900 text-base">{step.title}</h3>
+                <p className="mt-2 text-sm text-neutral-600 leading-relaxed">{step.desc}</p>
               </div>
             ))}
           </div>
@@ -395,32 +395,32 @@ export default function ProofOfDeliveryPage() {
       </section>
 
       {/* FROM POD TO INVOICE TO XERO */}
-      <section className="py-20 bg-[#F8FAFC]">
+      <section className="py-20 bg-neutral-50/50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">From POD to Invoice to Xero</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             The complete chain — job, POD, invoice, payment
           </h2>
           <div className="mt-8 grid lg:grid-cols-2 gap-10 items-start">
             <div>
-              <p className="text-[#475569] leading-relaxed">
+              <p className="text-neutral-600 leading-relaxed">
                 POD is not a standalone feature — it is the link between the completed job and the invoice that can be issued without dispute. In HaulageOps, the chain is connected throughout:
               </p>
               <ul className="mt-5 space-y-3">
                 {podChain.map((item) => (
-                  <li key={item} className="flex items-start gap-2 text-sm text-[#334155]">
+                  <li key={item} className="flex items-start gap-2 text-sm text-neutral-700">
                     <CheckCircle className="h-4 w-4 text-[#E8652B] shrink-0 mt-0.5" />
                     <span>{item}</span>
                   </li>
                 ))}
               </ul>
-              <p className="mt-6 text-[#475569] leading-relaxed">
+              <p className="mt-6 text-neutral-600 leading-relaxed">
                 At no step in this chain does someone need to retrieve a paper document, call a driver, or cross-reference a separate spreadsheet. The POD is the piece that connects the operational record to the billing record — and in HaulageOps, it is captured at the point where it actually happens.
               </p>
             </div>
             {/* Connected chain visual spec */}
-            <div className="rounded-2xl border border-[#E2E8F0] bg-[#0D1525] overflow-hidden">
-              <div className="px-5 py-3 bg-[#1E293B] text-[#E8652B] text-xs font-bold uppercase tracking-widest">
+            <div className="rounded-2xl border border-neutral-200 bg-neutral-900 border-y border-neutral-800 overflow-hidden">
+              <div className="px-5 py-3 bg-neutral-800 text-[#E8652B] text-xs font-bold uppercase tracking-widest">
                 Job to Payment — Connected Chain
               </div>
               <div className="p-4 sm:p-5 flex flex-col gap-2">
@@ -428,12 +428,12 @@ export default function ProofOfDeliveryPage() {
                   const Icon = card.icon;
                   return (
                     <div key={card.label}>
-                      <div className="bg-[#1E293B] border border-[#334155] rounded-lg p-3">
+                      <div className="bg-neutral-800 border border-[#334155] rounded-lg p-3">
                         <div className="flex items-center gap-2">
                           <Icon className="h-3.5 w-3.5 text-[#E8652B]" />
                           <span className="text-white text-[11px] font-semibold">{card.label}</span>
                         </div>
-                        <p className="text-[#94A3B8] text-[10px] mt-0.5">{card.detail}</p>
+                        <p className="text-neutral-400 text-[10px] mt-0.5">{card.detail}</p>
                       </div>
                       {i < chainCards.length - 1 && (
                         <div className="flex justify-center py-0.5">
@@ -443,7 +443,7 @@ export default function ProofOfDeliveryPage() {
                     </div>
                   );
                 })}
-                <p className="text-[10px] text-[#475569]">
+                <p className="text-[10px] text-neutral-600">
                   One record links all five — no broken links, no separate systems, no manual re-entry.
                 </p>
               </div>
@@ -456,13 +456,13 @@ export default function ProofOfDeliveryPage() {
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Paper Signature vs Digital POD</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             What the comparison actually looks like in practice
           </h2>
           <div className="mt-10 overflow-x-auto">
             <table className="w-full text-sm border-collapse">
               <thead>
-                <tr className="bg-[#0F172A] text-white">
+                <tr className="bg-neutral-900 text-white">
                   <th className="text-left px-5 py-3 font-semibold rounded-tl-xl">Situation</th>
                   <th className="text-left px-5 py-3 font-semibold">Paper signature / manual process</th>
                   <th className="text-left px-5 py-3 font-semibold rounded-tr-xl text-[#E8652B]">HaulageOps digital POD</th>
@@ -470,10 +470,10 @@ export default function ProofOfDeliveryPage() {
               </thead>
               <tbody>
                 {comparisonRows.map((row, i) => (
-                  <tr key={row.situation} className={i % 2 === 0 ? "bg-white" : "bg-[#F8FAFC]"}>
-                    <td className="px-5 py-3 text-[#0F172A] font-medium border-b border-[#E2E8F0]">{row.situation}</td>
-                    <td className="px-5 py-3 text-[#64748B] border-b border-[#E2E8F0]">{row.paper}</td>
-                    <td className="px-5 py-3 text-[#16A34A] font-semibold border-b border-[#E2E8F0]">{row.digital}</td>
+                  <tr key={row.situation} className={i % 2 === 0 ? "bg-white" : "bg-neutral-50/50"}>
+                    <td className="px-5 py-3 text-neutral-900 font-medium border-b border-neutral-200">{row.situation}</td>
+                    <td className="px-5 py-3 text-neutral-500 border-b border-neutral-200">{row.paper}</td>
+                    <td className="px-5 py-3 text-[#E8652B] font-semibold border-b border-neutral-200">{row.digital}</td>
                   </tr>
                 ))}
               </tbody>
@@ -483,20 +483,20 @@ export default function ProofOfDeliveryPage() {
       </section>
 
       {/* FAQ */}
-      <section className="py-20 bg-[#F8FAFC]">
+      <section className="py-20 bg-neutral-50/50">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Frequently Asked Questions</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A]">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900">
             Proof of delivery — common questions.
           </h2>
           <div className="mt-8 space-y-3">
             {faqs.map((faq) => (
-              <details key={faq.q} className="group border border-[#E2E8F0] bg-white rounded-xl overflow-hidden">
-                <summary className="flex items-center justify-between gap-4 px-6 py-4 cursor-pointer font-semibold text-[#0F172A] text-sm list-none hover:bg-[#F8FAFC]">
+              <details key={faq.q} className="group border border-neutral-200 bg-white rounded-xl overflow-hidden">
+                <summary className="flex items-center justify-between gap-4 px-6 py-4 cursor-pointer font-semibold text-neutral-900 text-sm list-none hover:bg-neutral-50/50">
                   {faq.q}
-                  <ChevronRight className="h-4 w-4 text-[#94A3B8] shrink-0 group-open:rotate-90 transition-transform" />
+                  <ChevronRight className="h-4 w-4 text-neutral-400 shrink-0 group-open:rotate-90 transition-transform" />
                 </summary>
-                <div className="px-6 pb-5 text-sm text-[#475569] leading-relaxed border-t border-[#F1F5F9]">
+                <div className="px-6 pb-5 text-sm text-neutral-600 leading-relaxed border-t border-neutral-100">
                   <p className="pt-4">{faq.a}</p>
                 </div>
               </details>
@@ -509,18 +509,18 @@ export default function ProofOfDeliveryPage() {
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Related Pages</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             POD connects to these features and solutions
           </h2>
           <div className="mt-10 grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {relatedCards.map((card) => (
-              <div key={card.title} className="bg-[#F8FAFC] rounded-2xl p-6 border border-[#E2E8F0]">
-                <h3 className="font-bold text-[#0F172A] mb-2">
+              <div key={card.title} className="bg-neutral-50/50 rounded-2xl p-6 border border-neutral-200">
+                <h3 className="font-bold text-neutral-900 mb-2">
                   <Link href={card.href} className="hover:text-[#E8652B] transition-colors">
                     {card.title}
                   </Link>
                 </h3>
-                <p className="text-sm text-[#475569] leading-relaxed">{card.desc}</p>
+                <p className="text-sm text-neutral-600 leading-relaxed">{card.desc}</p>
                 <Link href={card.href} className="mt-3 inline-flex items-center gap-1 text-sm text-[#E8652B] hover:underline font-medium">
                   {card.linkLabel} <ArrowRight className="h-3.5 w-3.5" />
                 </Link>
@@ -531,11 +531,11 @@ export default function ProofOfDeliveryPage() {
       </section>
 
       {/* CTA BAND */}
-      <section className="py-16 bg-[#0F172A]">
+      <section className="py-16 bg-neutral-900">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
           <div>
             <h2 className="text-2xl sm:text-3xl font-bold text-white">See POD capture in action — live demo in 20 minutes</h2>
-            <p className="mt-2 text-[#94A3B8] text-sm leading-relaxed max-w-xl">
+            <p className="mt-2 text-neutral-400 text-sm leading-relaxed max-w-xl">
               We will walk through the driver app, POD capture, and how the delivery record flows into the invoice and client portal.
             </p>
           </div>

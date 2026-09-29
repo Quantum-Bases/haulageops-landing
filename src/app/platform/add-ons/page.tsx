@@ -155,28 +155,28 @@ export default function AddOnsPage() {
   return (
     <MainLayout showCta={false}>
       {/* Breadcrumb */}
-      <div className="pt-24 pb-0 bg-[#FFF9F5]">
+      <div className="pt-24 pb-0 bg-neutral-50/70">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <nav className="flex items-center gap-2 text-xs text-[#64748B]">
+          <nav className="flex items-center gap-2 text-xs text-neutral-500">
             <Link href="/" className="hover:text-[#E8652B]">Home</Link>
             <ChevronRight className="h-3 w-3" />
             <Link href="/platform" className="hover:text-[#E8652B]">Platform</Link>
             <ChevronRight className="h-3 w-3" />
-            <span className="text-[#0F172A] font-medium">Add-ons &amp; Integrations</span>
+            <span className="text-neutral-900 font-medium">Add-ons &amp; Integrations</span>
           </nav>
         </div>
       </div>
 
       {/* HERO */}
-      <section className="pt-10 pb-20 bg-gradient-to-b from-[#FFF9F5] via-[#FFF5EE]/40 to-white">
+      <section className="pt-10 pb-20 bg-gradient-to-b from-neutral-50/80 via-white to-white border-b border-neutral-200">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-[#E8652B] bg-[#FFF0E6] mb-4 animate-in fade-in slide-in-from-bottom-4 animation-duration-700 fill-mode-both">
+          <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-[#E8652B] bg-orange-50 border border-orange-200 mb-4 animate-in fade-in slide-in-from-bottom-4 animation-duration-700 fill-mode-both">
             Platform — Integrations
           </span>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#0F172A] max-w-4xl leading-[1.1] animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-100 fill-mode-both">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-neutral-900 max-w-4xl leading-[1.1] animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-100 fill-mode-both">
             Standard integrations, and what&apos;s available by arrangement.
           </h1>
-          <p className="mt-6 text-lg sm:text-xl text-[#475569] max-w-3xl leading-relaxed animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-150 fill-mode-both">
+          <p className="mt-6 text-lg sm:text-xl text-neutral-600 max-w-3xl leading-relaxed animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-150 fill-mode-both">
             Some integrations are live and included by default. Some are available subject to scoping your specific provider and workflow. Some are on the roadmap but not built yet. This page tells you exactly which is which — so you can evaluate without surprises.
           </p>
           <div className="mt-8 flex flex-wrap gap-3 animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-200 fill-mode-both">
@@ -186,7 +186,7 @@ export default function AddOnsPage() {
               </Button>
             </Link>
             <Link href="/platform">
-              <Button size="lg" variant="outline" className="border-[#E2E8F0] text-[#334155] hover:bg-[#F8FAFC]">
+              <Button size="lg" variant="outline" className="border-neutral-200 text-neutral-700 hover:bg-neutral-50/50">
                 Platform Overview
               </Button>
             </Link>
@@ -194,8 +194,8 @@ export default function AddOnsPage() {
           {/* Kicker pills */}
           <div className="mt-8 flex flex-wrap gap-2 animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-300 fill-mode-both">
             {heroKickers.map((pill) => (
-              <span key={pill} className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#F1F5F9] text-xs font-medium text-[#334155]">
-                <CheckCircle className="h-3.5 w-3.5 text-[#16A34A] shrink-0" />
+              <span key={pill} className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-neutral-100 text-xs font-medium text-neutral-700">
+                <CheckCircle className="h-3.5 w-3.5 text-[#E8652B] shrink-0" />
                 {pill}
               </span>
             ))}
@@ -204,7 +204,7 @@ export default function AddOnsPage() {
       </section>
 
       {/* PROOF STRIP */}
-      <div className="bg-[#0F172A] py-5">
+      <div className="bg-neutral-900 py-5">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-center">
             {proofStrip.map((item) => (
@@ -221,20 +221,20 @@ export default function AddOnsPage() {
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Standard — live and included</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             These integrations are active in HaulageOps today. No additional scoping required.
           </h2>
-          <p className="mt-6 text-[#475569] max-w-3xl leading-relaxed">
+          <p className="mt-6 text-neutral-600 max-w-3xl leading-relaxed">
             The integrations below are built, tested, and running as part of the standard HaulageOps platform. When you set up HaulageOps, these are available to configure as part of your onboarding — not feature requests, not roadmap items, not optional add-ons at extra cost.
           </p>
           <div className="mt-10 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {liveIntegrations.map((integration) => (
-              <div key={integration.name} className="bg-[#F8FAFC] rounded-2xl p-6 border border-[#E2E8F0]">
+              <div key={integration.name} className="bg-neutral-50/50 rounded-2xl p-6 border border-neutral-200">
                 <span className="inline-block px-2.5 py-1 rounded-full bg-[#E6F4EA] text-[#1A7F37] text-[11px] font-semibold">
                   Live — Standard
                 </span>
-                <h3 className="mt-3 font-bold text-[#0F172A]">{integration.name}</h3>
-                <p className="mt-2 text-sm text-[#475569] leading-relaxed">{integration.desc}</p>
+                <h3 className="mt-3 font-bold text-neutral-900">{integration.name}</h3>
+                <p className="mt-2 text-sm text-neutral-600 leading-relaxed">{integration.desc}</p>
                 {integration.href && (
                   <Link href={integration.href} className="mt-3 inline-flex items-center gap-1 text-sm text-[#F39A2D] hover:underline font-semibold">
                     {integration.linkLabel} <ArrowRight className="h-3.5 w-3.5" />
@@ -247,31 +247,31 @@ export default function AddOnsPage() {
       </section>
 
       {/* MYOB — AVAILABLE SUBJECT TO SCOPE */}
-      <section className="py-20 bg-[#F8FAFC]">
+      <section className="py-20 bg-neutral-50/50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Available subject to scope</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             MYOB is not a standard live integration — but it may be achievable for your setup.
           </h2>
           <div className="mt-8 max-w-3xl">
-            <p className="text-[#475569] leading-relaxed">
+            <p className="text-neutral-600 leading-relaxed">
               MYOB is not a standard built-in integration in HaulageOps the way Xero is. MYOB exists across a range of product versions — MYOB Business, MYOB AccountRight, MYOB Essentials, and others — each with different API capabilities, configuration requirements, and limitations. A connection that works cleanly for one MYOB setup may not be practical for another.
             </p>
-            <p className="mt-4 text-[#475569] leading-relaxed">
+            <p className="mt-4 text-neutral-600 leading-relaxed">
               If you use MYOB, we can explore what is technically achievable for your specific situation. The starting point is understanding:
             </p>
             <ul className="mt-6 space-y-3">
               {myobPoints.map((item) => (
-                <li key={item} className="flex items-start gap-2 text-sm text-[#334155]">
+                <li key={item} className="flex items-start gap-2 text-sm text-neutral-700">
                   <CheckCircle className="h-4 w-4 text-[#E8652B] shrink-0 mt-0.5" />
                   <span>{item}</span>
                 </li>
               ))}
             </ul>
-            <p className="mt-6 text-[#475569] leading-relaxed">
+            <p className="mt-6 text-neutral-600 leading-relaxed">
               From that starting point, we can give you an honest answer about whether a connection is practical for your situation, what it would involve to build, and whether the scope is something we can commit to. We will not tell you MYOB is supported and then scope it to something different after you sign.
             </p>
-            <p className="mt-4 text-[#475569] leading-relaxed">
+            <p className="mt-4 text-neutral-600 leading-relaxed">
               If MYOB is a firm requirement during your evaluation, raise it at the demo stage. That conversation is the right place to get a direct answer.
             </p>
             <div className="mt-8">
@@ -289,10 +289,10 @@ export default function AddOnsPage() {
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">On the roadmap — not built today</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             These are planned. They are not available in the current product.
           </h2>
-          <p className="mt-6 text-[#475569] max-w-3xl leading-relaxed">
+          <p className="mt-6 text-neutral-600 max-w-3xl leading-relaxed">
             The items below are on the HaulageOps development roadmap. They are not live features, not in beta, and not available to configure. We list them here because operators ask about them — and being clear that they are future items, not current capabilities, is more useful than a vague &ldquo;coming soon&rdquo; buried in a features list.
           </p>
           <div className="mt-10 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -301,14 +301,14 @@ export default function AddOnsPage() {
                 <span className="inline-block px-2.5 py-1 rounded-full bg-[#FFF3CD] text-[#856404] text-[11px] font-semibold">
                   Roadmap — not built
                 </span>
-                <h3 className="mt-3 font-bold text-[#0F172A]">{integration.name}</h3>
-                <p className="mt-2 text-sm text-[#475569] leading-relaxed">{integration.desc}</p>
+                <h3 className="mt-3 font-bold text-neutral-900">{integration.name}</h3>
+                <p className="mt-2 text-sm text-neutral-600 leading-relaxed">{integration.desc}</p>
               </div>
             ))}
           </div>
           {/* Highlighted callout */}
           <div className="mt-10 p-6 sm:p-7 bg-[#F7F8FA] border-l-4 border-[#F39A2D] rounded-r-lg">
-            <p className="text-sm sm:text-base text-[#334155] leading-relaxed">
+            <p className="text-sm sm:text-base text-neutral-700 leading-relaxed">
               <strong>If a roadmap item is a hard requirement for your evaluation:</strong> tell us at the demo. We will give you a direct answer about realistic timelines rather than letting it become a surprise after you have committed. Some roadmap items have clearer paths and shorter horizons than others — the conversation is the right place to find out which applies to what you need.
             </p>
           </div>
@@ -316,25 +316,25 @@ export default function AddOnsPage() {
       </section>
 
       {/* WHAT HAULAGEOPS DOES NOT DO */}
-      <section className="py-20 bg-[#F8FAFC]">
+      <section className="py-20 bg-neutral-50/50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">What HaulageOps does not do</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             Some integrations are outside scope — not a gap, a deliberate boundary.
           </h2>
-          <p className="mt-6 text-[#475569] max-w-3xl leading-relaxed">
+          <p className="mt-6 text-neutral-600 max-w-3xl leading-relaxed">
             HaulageOps is purpose-built for bulk haulage, earthworks, and construction logistics. The platform is not a horizontal TMS trying to serve every transport model. That focus is why the features that do exist are well-suited to operators in those sectors — and it means some integration requests are genuinely outside scope, not just not yet built.
           </p>
           <div className="mt-10 grid md:grid-cols-3 gap-6">
             {scopeCards.map((card) => (
-              <div key={card.title} className="bg-white rounded-2xl p-6 border border-[#E2E8F0]">
-                <h3 className="font-bold text-[#0F172A] mb-2">{card.title}</h3>
-                <p className="text-sm text-[#475569] leading-relaxed">{card.desc}</p>
+              <div key={card.title} className="bg-white rounded-2xl p-6 border border-neutral-200">
+                <h3 className="font-bold text-neutral-900 mb-2">{card.title}</h3>
+                <p className="text-sm text-neutral-600 leading-relaxed">{card.desc}</p>
               </div>
             ))}
           </div>
-          <div className="mt-10 p-6 sm:p-7 bg-white border border-[#E2E8F0] rounded-2xl">
-            <p className="text-sm sm:text-base text-[#334155] leading-relaxed">
+          <div className="mt-10 p-6 sm:p-7 bg-white border border-neutral-200 rounded-2xl">
+            <p className="text-sm sm:text-base text-neutral-700 leading-relaxed">
               The narrowness of HaulageOps is intentional. Operators managing 15 to 80 vehicles across bulk haulage, earthworks, quarries, and civil construction logistics get a platform that is built for their exact operation — not a generic TMS with features that do not apply to them and gaps in the ones that do. If your operation is in that bracket, <Link href="/demo" className="text-[#E8652B] hover:underline font-semibold">book a demo</Link> and see how the features map to your actual workflow.
             </p>
           </div>
@@ -345,18 +345,18 @@ export default function AddOnsPage() {
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Related platform features</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             The integration picture connects to the core platform.
           </h2>
           <div className="mt-10 grid md:grid-cols-3 gap-6">
             {relatedCards.map((card) => (
-              <div key={card.title} className="bg-[#F8FAFC] rounded-2xl p-6 border border-[#E2E8F0]">
-                <h3 className="font-bold text-[#0F172A] mb-2">
+              <div key={card.title} className="bg-neutral-50/50 rounded-2xl p-6 border border-neutral-200">
+                <h3 className="font-bold text-neutral-900 mb-2">
                   <Link href={card.href} className="hover:text-[#E8652B] transition-colors">
                     {card.title}
                   </Link>
                 </h3>
-                <p className="text-sm text-[#475569] leading-relaxed">{card.desc}</p>
+                <p className="text-sm text-neutral-600 leading-relaxed">{card.desc}</p>
                 <Link href={card.href} className="mt-3 inline-flex items-center gap-1 text-sm text-[#E8652B] hover:underline font-medium">
                   {card.linkLabel} <ArrowRight className="h-3.5 w-3.5" />
                 </Link>
@@ -367,20 +367,20 @@ export default function AddOnsPage() {
       </section>
 
       {/* FAQ */}
-      <section className="py-20 bg-[#F8FAFC]">
+      <section className="py-20 bg-neutral-50/50">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Frequently asked questions</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A]">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900">
             Add-ons and integrations — common questions.
           </h2>
           <div className="mt-8 space-y-3">
             {faqs.map((faq) => (
-              <details key={faq.q} className="group border border-[#E2E8F0] bg-white rounded-xl overflow-hidden">
-                <summary className="flex items-center justify-between gap-4 px-6 py-4 cursor-pointer font-semibold text-[#0F172A] text-sm list-none hover:bg-[#F8FAFC]">
+              <details key={faq.q} className="group border border-neutral-200 bg-white rounded-xl overflow-hidden">
+                <summary className="flex items-center justify-between gap-4 px-6 py-4 cursor-pointer font-semibold text-neutral-900 text-sm list-none hover:bg-neutral-50/50">
                   {faq.q}
-                  <ChevronRight className="h-4 w-4 text-[#94A3B8] shrink-0 group-open:rotate-90 transition-transform" />
+                  <ChevronRight className="h-4 w-4 text-neutral-400 shrink-0 group-open:rotate-90 transition-transform" />
                 </summary>
-                <div className="px-6 pb-5 text-sm text-[#475569] leading-relaxed border-t border-[#F1F5F9]">
+                <div className="px-6 pb-5 text-sm text-neutral-600 leading-relaxed border-t border-neutral-100">
                   <p className="pt-4">{faq.a}</p>
                 </div>
               </details>
@@ -390,11 +390,11 @@ export default function AddOnsPage() {
       </section>
 
       {/* CTA BAND */}
-      <section className="py-16 bg-[#0F172A]">
+      <section className="py-16 bg-neutral-900">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
           <div>
             <h2 className="text-2xl sm:text-3xl font-bold text-white">Have a specific integration requirement? Let&apos;s talk about it honestly.</h2>
-            <p className="mt-2 text-[#94A3B8] text-sm leading-relaxed max-w-xl">
+            <p className="mt-2 text-neutral-400 text-sm leading-relaxed max-w-xl">
               Whether it&apos;s Xero, MYOB, a weighbridge, or something else — book a demo and we will tell you exactly where it sits: live, scopeable, or on the roadmap.
             </p>
           </div>

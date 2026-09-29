@@ -170,28 +170,28 @@ export default function BillingAndInvoicingPage() {
   return (
     <MainLayout showCta={false}>
       {/* Breadcrumb */}
-      <div className="pt-24 pb-0 bg-[#FFF9F5]">
+      <div className="pt-24 pb-0 bg-neutral-50/70">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <nav className="flex items-center gap-2 text-xs text-[#64748B]">
+          <nav className="flex items-center gap-2 text-xs text-neutral-500">
             <Link href="/" className="hover:text-[#E8652B]">Home</Link>
             <ChevronRight className="h-3 w-3" />
             <Link href="/platform" className="hover:text-[#E8652B]">Platform</Link>
             <ChevronRight className="h-3 w-3" />
-            <span className="text-[#0F172A] font-medium">Billing &amp; Invoicing</span>
+            <span className="text-neutral-900 font-medium">Billing &amp; Invoicing</span>
           </nav>
         </div>
       </div>
 
       {/* HERO */}
-      <section className="pt-10 pb-20 bg-gradient-to-b from-[#FFF9F5] via-[#FFF5EE]/40 to-white">
+      <section className="pt-10 pb-20 bg-gradient-to-b from-neutral-50/80 via-white to-white border-b border-neutral-200">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-[#E8652B] bg-[#FFF0E6] mb-4 animate-in fade-in slide-in-from-bottom-4 animation-duration-700 fill-mode-both">
+          <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-[#E8652B] bg-orange-50 border border-orange-200 mb-4 animate-in fade-in slide-in-from-bottom-4 animation-duration-700 fill-mode-both">
             Billing &amp; Invoicing
           </span>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#0F172A] max-w-4xl leading-[1.1] animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-100 fill-mode-both">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-neutral-900 max-w-4xl leading-[1.1] animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-100 fill-mode-both">
             The job is complete. The invoice is already built.
           </h1>
-          <p className="mt-6 text-lg sm:text-xl text-[#475569] max-w-3xl leading-relaxed animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-150 fill-mode-both">
+          <p className="mt-6 text-lg sm:text-xl text-neutral-600 max-w-3xl leading-relaxed animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-150 fill-mode-both">
             Invoice generated from the completed job record — rate, POD and job detail already attached. Full invoice lifecycle in HaulageOps. Xero sync via OAuth2. Client sees invoice status in their portal. No re-entering data. No chasing dockets.
           </p>
           <div className="mt-8 flex flex-wrap gap-3 animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-200 fill-mode-both">
@@ -201,7 +201,7 @@ export default function BillingAndInvoicingPage() {
               </Button>
             </Link>
             <Link href="/solutions/job-to-invoice">
-              <Button size="lg" variant="outline" className="border-[#E2E8F0] text-[#334155] hover:bg-[#F8FAFC]">
+              <Button size="lg" variant="outline" className="border-neutral-200 text-neutral-700 hover:bg-neutral-50/50">
                 Job to Invoice Workflow
               </Button>
             </Link>
@@ -209,8 +209,8 @@ export default function BillingAndInvoicingPage() {
           {/* Kicker pills */}
           <div className="mt-8 flex flex-wrap gap-2 animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-300 fill-mode-both">
             {heroKickers.map((pill) => (
-              <span key={pill} className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#F1F5F9] text-xs font-medium text-[#334155]">
-                <CheckCircle className="h-3.5 w-3.5 text-[#16A34A] shrink-0" />
+              <span key={pill} className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-neutral-100 text-xs font-medium text-neutral-700">
+                <CheckCircle className="h-3.5 w-3.5 text-[#E8652B] shrink-0" />
                 {pill}
               </span>
             ))}
@@ -219,13 +219,13 @@ export default function BillingAndInvoicingPage() {
       </section>
 
       {/* PROOF STRIP */}
-      <div className="bg-[#0F172A] py-5">
+      <div className="bg-neutral-900 py-5">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 text-center">
             {proofStrip.map((item) => (
               <div key={item.strong} className="flex flex-col gap-0.5">
                 <span className="text-white font-bold text-sm">{item.strong}</span>
-                <span className="text-[#94A3B8] text-xs">{item.sub}</span>
+                <span className="text-neutral-400 text-xs">{item.sub}</span>
               </div>
             ))}
           </div>
@@ -236,36 +236,36 @@ export default function BillingAndInvoicingPage() {
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Where Invoices Come From</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             Manual invoice processes fail because they start with a blank page. HaulageOps starts from the job.
           </h2>
-          <p className="mt-6 text-[#475569] max-w-3xl leading-relaxed">
+          <p className="mt-6 text-neutral-600 max-w-3xl leading-relaxed">
             The typical haulage invoicing process goes like this: wait for the docket to return from the driver, find the rate for that client and job type, re-enter the job details into your accounting software, attach the docket manually, send it, then follow up for payment. Each step introduces delay. Dockets get lost. Rates get applied incorrectly. Data gets re-entered with errors.
           </p>
-          <p className="mt-4 text-[#475569] max-w-3xl leading-relaxed">
+          <p className="mt-4 text-neutral-600 max-w-3xl leading-relaxed">
             In HaulageOps, the invoice does not start from a blank page. It starts from the completed job record — which already contains the client, the service, the rate, the date, the quantity, and the proof of delivery captured by the driver at the moment of completion. Finance teams do not reconstruct a job from paper; they review a job record and generate an invoice from it.
           </p>
           <div className="mt-10 grid md:grid-cols-2 gap-8">
-            <div className="bg-[#F8FAFC] rounded-2xl p-8 border border-[#E2E8F0]">
-              <h3 className="text-xl font-bold text-[#0F172A] mb-5">What is already on the invoice when a job completes</h3>
+            <div className="bg-neutral-50/50 rounded-2xl p-8 border border-neutral-200">
+              <h3 className="text-xl font-bold text-neutral-900 mb-5">What is already on the invoice when a job completes</h3>
               <ul className="space-y-3">
                 {invoiceContent.map((item) => (
-                  <li key={item} className="flex items-start gap-2 text-sm text-[#334155]">
+                  <li key={item} className="flex items-start gap-2 text-sm text-neutral-700">
                     <CheckCircle className="h-4 w-4 text-[#E8652B] shrink-0 mt-0.5" />
                     <span>{item}</span>
                   </li>
                 ))}
               </ul>
-              <p className="mt-5 text-sm text-[#475569] leading-relaxed">
+              <p className="mt-5 text-sm text-neutral-600 leading-relaxed">
                 Finance reviews the record, confirms the details, and the invoice is generated. No data entry. No rate lookup. No docket hunting.
               </p>
             </div>
             {/* Invoice visual spec */}
-            <div className="rounded-2xl border border-[#E2E8F0] bg-[#0D1525] overflow-hidden flex flex-col">
-              <div className="px-5 py-3 bg-[#1E293B] text-[#E8652B] text-xs font-bold uppercase tracking-widest">
+            <div className="rounded-2xl border border-neutral-200 bg-neutral-900 border-y border-neutral-800 overflow-hidden flex flex-col">
+              <div className="px-5 py-3 bg-neutral-800 text-[#E8652B] text-xs font-bold uppercase tracking-widest">
                 HaulageOps — Invoice Generated from Job
               </div>
-              <div className="flex-1 p-6 text-[#94A3B8] text-sm font-mono leading-relaxed">
+              <div className="flex-1 p-6 text-neutral-400 text-sm font-mono leading-relaxed">
                 <div className="flex items-center justify-between mb-4">
                   <span className="text-white font-semibold">INV-2026-0847</span>
                   <span className="px-2 py-0.5 rounded bg-[#3B82F6]/20 text-[#60A5FA] text-[10px] font-semibold">Sent</span>
@@ -281,10 +281,10 @@ export default function BillingAndInvoicingPage() {
                   <p className="text-[#FBBF24] font-semibold">Total: $414.40</p>
                 </div>
                 <div className="mt-4 flex items-center gap-2">
-                  <span className="flex items-center gap-1.5 px-2 py-0.5 rounded bg-[#1E293B] border border-[#334155] text-[10px] text-[#94A3B8]">
+                  <span className="flex items-center gap-1.5 px-2 py-0.5 rounded bg-neutral-800 border border-[#334155] text-[10px] text-neutral-400">
                     <Camera className="h-3 w-3 text-[#4ADE80]" /> POD Photo
                   </span>
-                  <span className="flex items-center gap-1.5 px-2 py-0.5 rounded bg-[#1E293B] border border-[#334155] text-[10px] text-[#94A3B8]">
+                  <span className="flex items-center gap-1.5 px-2 py-0.5 rounded bg-neutral-800 border border-[#334155] text-[10px] text-neutral-400">
                     <FileText className="h-3 w-3 text-[#4ADE80]" /> Scale Docket – 28 Jul
                   </span>
                 </div>
@@ -293,8 +293,8 @@ export default function BillingAndInvoicingPage() {
                 </p>
                 <div className="mt-4 flex flex-wrap gap-2 text-[10px]">
                   <span className="px-2 py-1 rounded bg-[#E8652B] text-white font-semibold">Send to Client</span>
-                  <span className="px-2 py-1 rounded bg-[#334155] text-[#94A3B8] font-semibold">Mark Paid</span>
-                  <span className="px-2 py-1 rounded bg-[#334155] text-[#94A3B8] font-semibold">Void</span>
+                  <span className="px-2 py-1 rounded bg-[#334155] text-neutral-400 font-semibold">Mark Paid</span>
+                  <span className="px-2 py-1 rounded bg-[#334155] text-neutral-400 font-semibold">Void</span>
                 </div>
               </div>
             </div>
@@ -303,18 +303,18 @@ export default function BillingAndInvoicingPage() {
       </section>
 
       {/* INVOICE LIFECYCLE */}
-      <section className="py-20 bg-[#F8FAFC]">
+      <section className="py-20 bg-neutral-50/50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Invoice Lifecycle</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             From completed job to paid invoice — five stages, all tracked.
           </h2>
           <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {lifecycleSteps.map((step) => (
-              <div key={step.num} className="bg-white rounded-2xl p-6 border border-[#E2E8F0] shadow-sm">
+              <div key={step.num} className="bg-white rounded-2xl p-6 border border-neutral-200 shadow-sm">
                 <span className="text-3xl font-black text-[#E8652B]/20 leading-none">{step.num}</span>
-                <h3 className="mt-2 font-bold text-[#0F172A] text-base">{step.title}</h3>
-                <p className="mt-2 text-sm text-[#475569] leading-relaxed">{step.desc}</p>
+                <h3 className="mt-2 font-bold text-neutral-900 text-base">{step.title}</h3>
+                <p className="mt-2 text-sm text-neutral-600 leading-relaxed">{step.desc}</p>
               </div>
             ))}
           </div>
@@ -325,43 +325,43 @@ export default function BillingAndInvoicingPage() {
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Xero Integration</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             OAuth2 connection. Invoices push to Xero. Payments come back via webhook.
           </h2>
-          <p className="mt-6 text-[#475569] max-w-3xl leading-relaxed">
+          <p className="mt-6 text-neutral-600 max-w-3xl leading-relaxed">
             HaulageOps connects to Xero via a secure OAuth2 integration. You authorise the connection once from your HaulageOps account settings — no API keys to manage, no manual exports. From that point, the invoice data flows between the two systems automatically.
           </p>
           <div className="mt-10 grid md:grid-cols-2 gap-8">
-            <div className="bg-[#F8FAFC] rounded-2xl p-8 border border-[#E2E8F0]">
-              <h3 className="text-xl font-bold text-[#0F172A] mb-5">What flows from HaulageOps to Xero</h3>
+            <div className="bg-neutral-50/50 rounded-2xl p-8 border border-neutral-200">
+              <h3 className="text-xl font-bold text-neutral-900 mb-5">What flows from HaulageOps to Xero</h3>
               <ul className="space-y-3">
                 {xeroToXero.map((item) => (
-                  <li key={item} className="flex items-start gap-2 text-sm text-[#334155]">
+                  <li key={item} className="flex items-start gap-2 text-sm text-neutral-700">
                     <CheckCircle className="h-4 w-4 text-[#E8652B] shrink-0 mt-0.5" />
                     <span>{item}</span>
                   </li>
                 ))}
               </ul>
-              <p className="mt-5 text-sm text-[#475569] leading-relaxed">
+              <p className="mt-5 text-sm text-neutral-600 leading-relaxed">
                 Invoices appear in Xero as approved invoices under the correct client contact. Your Xero chart of accounts and tax codes can be mapped during implementation to ensure invoices land in the correct categories.
               </p>
             </div>
-            <div className="bg-[#F8FAFC] rounded-2xl p-8 border border-[#E2E8F0]">
-              <h3 className="text-xl font-bold text-[#0F172A] mb-5">What flows from Xero back to HaulageOps</h3>
+            <div className="bg-neutral-50/50 rounded-2xl p-8 border border-neutral-200">
+              <h3 className="text-xl font-bold text-neutral-900 mb-5">What flows from Xero back to HaulageOps</h3>
               <ul className="space-y-3">
                 {xeroFromXero.map((item) => (
-                  <li key={item} className="flex items-start gap-2 text-sm text-[#334155]">
+                  <li key={item} className="flex items-start gap-2 text-sm text-neutral-700">
                     <CheckCircle className="h-4 w-4 text-[#E8652B] shrink-0 mt-0.5" />
                     <span>{item}</span>
                   </li>
                 ))}
               </ul>
-              <p className="mt-5 text-sm text-[#475569] leading-relaxed">
+              <p className="mt-5 text-sm text-neutral-600 leading-relaxed">
                 This bidirectional flow means HaulageOps and Xero stay in sync without anyone manually updating both systems. Payment confirmation is automatic when Xero receives the payment — whether recorded by your accounts team in Xero directly or received through a connected bank feed.
               </p>
             </div>
           </div>
-          <p className="mt-6 text-sm text-[#475569]">
+          <p className="mt-6 text-sm text-neutral-600">
             Full details:{" "}
             <Link href="/platform/integrations/xero" className="text-[#E8652B] hover:underline font-medium">
               Xero Integration
@@ -372,16 +372,16 @@ export default function BillingAndInvoicingPage() {
       </section>
 
       {/* WHAT THIS REPLACES */}
-      <section className="py-20 bg-[#F8FAFC]">
+      <section className="py-20 bg-neutral-50/50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">What This Replaces</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             The manual invoice process has at least six failure points. This removes them.
           </h2>
           <div className="mt-10 overflow-x-auto">
             <table className="w-full text-sm border-collapse">
               <thead>
-                <tr className="bg-[#0F172A] text-white">
+                <tr className="bg-neutral-900 text-white">
                   <th className="text-left px-5 py-3 font-semibold rounded-tl-xl">Invoice step</th>
                   <th className="text-left px-5 py-3 font-semibold">Manual process</th>
                   <th className="text-left px-5 py-3 font-semibold rounded-tr-xl text-[#E8652B]">HaulageOps workflow</th>
@@ -389,10 +389,10 @@ export default function BillingAndInvoicingPage() {
               </thead>
               <tbody>
                 {comparisonRows.map((row, i) => (
-                  <tr key={row.step} className={i % 2 === 0 ? "bg-white" : "bg-[#F8FAFC]"}>
-                    <td className="px-5 py-3 text-[#0F172A] font-medium border-b border-[#E2E8F0]">{row.step}</td>
-                    <td className="px-5 py-3 text-[#64748B] border-b border-[#E2E8F0]">{row.manual}</td>
-                    <td className="px-5 py-3 text-[#16A34A] font-semibold border-b border-[#E2E8F0]">{row.haulageops}</td>
+                  <tr key={row.step} className={i % 2 === 0 ? "bg-white" : "bg-neutral-50/50"}>
+                    <td className="px-5 py-3 text-neutral-900 font-medium border-b border-neutral-200">{row.step}</td>
+                    <td className="px-5 py-3 text-neutral-500 border-b border-neutral-200">{row.manual}</td>
+                    <td className="px-5 py-3 text-[#E8652B] font-semibold border-b border-neutral-200">{row.haulageops}</td>
                   </tr>
                 ))}
               </tbody>
@@ -405,22 +405,22 @@ export default function BillingAndInvoicingPage() {
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Related Platform Features</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             Billing and invoicing connects to these platform areas.
           </h2>
           <div className="mt-10 grid md:grid-cols-3 gap-6">
             {connectedModules.map((mod) => (
-              <div key={mod.title} className="bg-[#F8FAFC] rounded-2xl p-6 border border-[#E2E8F0]">
-                <h3 className="font-bold text-[#0F172A] mb-2">
+              <div key={mod.title} className="bg-neutral-50/50 rounded-2xl p-6 border border-neutral-200">
+                <h3 className="font-bold text-neutral-900 mb-2">
                   <Link href={mod.href} className="hover:text-[#E8652B] transition-colors">
                     {mod.title}
                   </Link>
                 </h3>
-                <p className="text-sm text-[#475569] leading-relaxed">{mod.desc}</p>
+                <p className="text-sm text-neutral-600 leading-relaxed">{mod.desc}</p>
               </div>
             ))}
           </div>
-          <p className="mt-6 text-sm text-[#475569]">
+          <p className="mt-6 text-sm text-neutral-600">
             Also see:{" "}
             <Link href="/solutions/job-to-invoice" className="text-[#E8652B] hover:underline font-medium">
               Job to Invoice
@@ -431,20 +431,20 @@ export default function BillingAndInvoicingPage() {
       </section>
 
       {/* FAQ */}
-      <section className="py-20 bg-[#F8FAFC]">
+      <section className="py-20 bg-neutral-50/50">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Common Questions</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A]">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900">
             Frequently asked about HaulageOps billing and invoicing.
           </h2>
           <div className="mt-8 space-y-3">
             {faqs.map((faq) => (
-              <details key={faq.q} className="group border border-[#E2E8F0] bg-white rounded-xl overflow-hidden">
-                <summary className="flex items-center justify-between gap-4 px-6 py-4 cursor-pointer font-semibold text-[#0F172A] text-sm list-none hover:bg-[#F8FAFC]">
+              <details key={faq.q} className="group border border-neutral-200 bg-white rounded-xl overflow-hidden">
+                <summary className="flex items-center justify-between gap-4 px-6 py-4 cursor-pointer font-semibold text-neutral-900 text-sm list-none hover:bg-neutral-50/50">
                   {faq.q}
-                  <ChevronRight className="h-4 w-4 text-[#94A3B8] shrink-0 group-open:rotate-90 transition-transform" />
+                  <ChevronRight className="h-4 w-4 text-neutral-400 shrink-0 group-open:rotate-90 transition-transform" />
                 </summary>
-                <div className="px-6 pb-5 text-sm text-[#475569] leading-relaxed border-t border-[#F1F5F9]">
+                <div className="px-6 pb-5 text-sm text-neutral-600 leading-relaxed border-t border-neutral-100">
                   <p className="pt-4">{faq.a}</p>
                 </div>
               </details>
@@ -454,11 +454,11 @@ export default function BillingAndInvoicingPage() {
       </section>
 
       {/* CTA BAND */}
-      <section className="py-16 bg-[#0F172A]">
+      <section className="py-16 bg-neutral-900">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
           <div>
             <h2 className="text-2xl sm:text-3xl font-bold text-white">See the job-to-invoice workflow in a live demo.</h2>
-            <p className="mt-2 text-[#94A3B8] text-sm leading-relaxed max-w-xl">
+            <p className="mt-2 text-neutral-400 text-sm leading-relaxed max-w-xl">
               Book a 20-minute session and walk through how a completed job becomes a Xero-synced invoice — with the docket already attached and the rate already applied.
             </p>
           </div>

@@ -279,6 +279,9 @@ export const brandInfo = {
   wordmarkUrl: "/HaulageOps_Wordmark_Black.png",
   iconUrl: "/HaulageOps_Icon_Black.png",
   iconOrangeUrl: "/HaulageOps_Icon_Orange.png",
-  description: "The TMS for bulk haulage operators who run subcontractors and demanding clients.",
-  regionNotice: "Built in Australia for bulk haulage operators.",
+  description: "Australia & New Zealand's dedicated Transport Management System for bulk haulage, tippers, earthworks, and quarries.",
+  regionNotice: "Built for Heavy Vehicle National Law (HVNL) & Chain of Responsibility (CoR) compliance.",
+  address: "2 Harris street, Guildford, 2161, NSW",
+  phone: "+61 426 887 862",
+  phoneHref: "tel:+61426887862",
 };

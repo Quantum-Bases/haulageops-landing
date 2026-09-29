@@ -20,7 +20,7 @@ const rateTypes = [
   },
   {
     badge: "Per Load",
-    badgeClass: "bg-[#DCFCE7] text-[#166534]",
+    badgeClass: "bg-[#DCFCE7] text-neutral-900",
     strong: "Flat rate per truck trip regardless of weight",
     desc: "Simpler, but requires trust in load size",
     best: "Muckaway, spoil removal, waste — where loads are roughly consistent and weighing isn't practical",
@@ -28,7 +28,7 @@ const rateTypes = [
   },
   {
     badge: "Per Hour",
-    badgeClass: "bg-[#FEF3C7] text-[#92400E]",
+    badgeClass: "bg-[#FEF3C7] text-neutral-900",
     strong: "Charge for time on site or in transit",
     desc: "Usually with a minimum charge (e.g. 4 hour minimum)",
     best: "Standby, waiting time, plant hire components, or variable work where loads vary significantly",
@@ -53,9 +53,9 @@ const clientARows = [
 ];
 
 const clientBRows = [
-  { material: "Spoil removal (tipper)", badge: "Per Load", badgeClass: "bg-[#DCFCE7] text-[#166534]", rate: "$195/load", notes: "8–10m³ tipper assumed" },
-  { material: "Spoil removal (semi)", badge: "Per Load", badgeClass: "bg-[#DCFCE7] text-[#166534]", rate: "$295/load", notes: "Semi tipper" },
-  { material: "Plant placement (tipper)", badge: "Per Hour", badgeClass: "bg-[#FEF3C7] text-[#92400E]", rate: "$130/hr", notes: "4hr minimum" },
+  { material: "Spoil removal (tipper)", badge: "Per Load", badgeClass: "bg-[#DCFCE7] text-neutral-900", rate: "$195/load", notes: "8–10m³ tipper assumed" },
+  { material: "Spoil removal (semi)", badge: "Per Load", badgeClass: "bg-[#DCFCE7] text-neutral-900", rate: "$295/load", notes: "Semi tipper" },
+  { material: "Plant placement (tipper)", badge: "Per Hour", badgeClass: "bg-[#FEF3C7] text-neutral-900", rate: "$130/hr", notes: "4hr minimum" },
   { material: "Fill placement (aggregate)", badge: "Per Tonne", badgeClass: "bg-[#DBEAFE] text-[#1E40AF]", rate: "$10.50/t", notes: "Includes delivery" },
 ];
 
@@ -86,7 +86,7 @@ const haulageOpsPoints = [
 ];
 
 const badgeClass = "inline-block rounded-full px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide";
-const thClass = "px-4 py-3 text-left text-xs font-extrabold uppercase tracking-wider text-[#E8652B] bg-[#0D1525]";
+const thClass = "px-4 py-3 text-left text-xs font-extrabold uppercase tracking-wider text-[#E8652B] bg-neutral-900 border-y border-neutral-800";
 const tdClass = "px-4 py-3 border-b border-[#EEF1F3] align-top text-sm text-[#2D4250]";
 const rateValClass = "font-mono text-[15px] font-bold text-[#0F5FAE]";
 
@@ -94,22 +94,22 @@ export default function RateCardTemplatePage() {
   return (
     <MainLayout showCta={false}>
       {/* Breadcrumb + Hero */}
-      <section className="pt-24 pb-16 bg-gradient-to-b from-[#FFF9F5] to-white">
+      <section className="pt-24 pb-16 bg-gradient-to-b from-neutral-50/80 via-white to-white border-b border-neutral-200">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <nav className="flex items-center gap-2 text-xs text-[#64748B] mb-6">
+          <nav className="flex items-center gap-2 text-xs text-neutral-500 mb-6">
             <Link href="/" className="hover:text-[#E8652B]">Home</Link>
             <ChevronRight className="h-3 w-3" />
             <Link href="/resources" className="hover:text-[#E8652B]">Resources</Link>
             <ChevronRight className="h-3 w-3" />
-            <span className="text-[#0F172A] font-medium">Rate Card Template</span>
+            <span className="text-neutral-900 font-medium">Rate Card Template</span>
           </nav>
-          <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-[#E8652B] bg-[#FFF0E6] mb-4 animate-in fade-in slide-in-from-bottom-4 animation-duration-700 fill-mode-both">
+          <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-[#E8652B] bg-orange-50 border border-orange-200 mb-4 animate-in fade-in slide-in-from-bottom-4 animation-duration-700 fill-mode-both">
             Tool · Rate Management
           </span>
-          <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-[#0F172A] max-w-4xl leading-[1.1] animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-100 fill-mode-both">
+          <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-neutral-900 max-w-4xl leading-[1.1] animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-100 fill-mode-both">
             Haulage Rate Card Template
           </h1>
-          <p className="mt-6 text-lg text-[#475569] max-w-3xl leading-relaxed animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-150 fill-mode-both">
+          <p className="mt-6 text-lg text-neutral-600 max-w-3xl leading-relaxed animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-150 fill-mode-both">
             How to structure client rates, what line items to include, and how to build rate cards that connect directly to invoicing without manual calculation.
           </p>
         </div>
@@ -118,11 +118,11 @@ export default function RateCardTemplatePage() {
       {/* RATE TYPES TABLE */}
       <section className="py-16 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#0F172A]">Rate Card Basics: The Four Rate Types</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold text-neutral-900">Rate Card Basics: The Four Rate Types</h2>
           <p className="mt-3 text-[#556671] text-sm leading-relaxed max-w-2xl">
             Bulk haulage operators typically use one or more of these rate types depending on the client and job type. A good rate card specifies which type applies to each material and service.
           </p>
-          <div className="mt-10 overflow-x-auto rounded-2xl border border-[#E2E8F0]">
+          <div className="mt-10 overflow-x-auto rounded-2xl border border-neutral-200">
             <table className="w-full text-sm">
               <thead>
                 <tr>
@@ -136,7 +136,7 @@ export default function RateCardTemplatePage() {
                 {rateTypes.map((rt) => (
                   <tr key={rt.badge} className="even:bg-[#F9FAFB]">
                     <td className={tdClass}><span className={`${badgeClass} ${rt.badgeClass}`}>{rt.badge}</span></td>
-                    <td className={tdClass}><strong className="block mb-1 text-[#0F172A]">{rt.strong}</strong>{rt.desc}</td>
+                    <td className={tdClass}><strong className="block mb-1 text-neutral-900">{rt.strong}</strong>{rt.desc}</td>
                     <td className={tdClass}>{rt.best}</td>
                     <td className={`${tdClass} ${rateValClass}`}>{rt.example}</td>
                   </tr>
@@ -148,18 +148,18 @@ export default function RateCardTemplatePage() {
       </section>
 
       {/* EXAMPLE RATE CARDS */}
-      <section className="py-16 bg-[#F8FAFC]">
+      <section className="py-16 bg-neutral-50/50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#0F172A]">Example Rate Cards</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold text-neutral-900">Example Rate Cards</h2>
           <p className="mt-3 text-[#556671] text-sm leading-relaxed max-w-2xl">
             These are illustrative structures. Fill in your own rates for each client based on your agreed terms.
           </p>
 
           {/* CLIENT A */}
           <div className="mt-10 bg-white border border-[#E4E9EC] rounded-2xl p-6">
-            <h3 className="text-base font-extrabold text-[#0F172A]">Client A — Civil Construction (Aggregate Supply)</h3>
+            <h3 className="text-base font-extrabold text-neutral-900">Client A — Civil Construction (Aggregate Supply)</h3>
             <p className="text-xs text-[#7A8A94] mt-1 mb-4">Rate type: Per Tonne · Billing: Weekly · Xero contact: Client A Pty Ltd</p>
-            <div className="overflow-x-auto rounded-xl border border-[#E2E8F0]">
+            <div className="overflow-x-auto rounded-xl border border-neutral-200">
               <table className="w-full text-sm">
                 <thead>
                   <tr><th className={thClass}>Material</th><th className={thClass}>Site/Zone</th><th className={thClass}>Rate</th><th className={thClass}>Notes</th></tr>
@@ -180,9 +180,9 @@ export default function RateCardTemplatePage() {
 
           {/* CLIENT B */}
           <div className="mt-6 bg-white border border-[#E4E9EC] rounded-2xl p-6">
-            <h3 className="text-base font-extrabold text-[#0F172A]">Client B — Earthworks Contractor (Mixed Materials)</h3>
+            <h3 className="text-base font-extrabold text-neutral-900">Client B — Earthworks Contractor (Mixed Materials)</h3>
             <p className="text-xs text-[#7A8A94] mt-1 mb-4">Rate type: Mixed (per load + per hour) · Billing: Fortnightly · Xero contact: Client B Ltd</p>
-            <div className="overflow-x-auto rounded-xl border border-[#E2E8F0]">
+            <div className="overflow-x-auto rounded-xl border border-neutral-200">
               <table className="w-full text-sm">
                 <thead>
                   <tr><th className={thClass}>Service</th><th className={thClass}>Rate Type</th><th className={thClass}>Rate</th><th className={thClass}>Notes</th></tr>
@@ -203,9 +203,9 @@ export default function RateCardTemplatePage() {
 
           {/* CLIENT C */}
           <div className="mt-6 bg-white border border-[#E4E9EC] rounded-2xl p-6">
-            <h3 className="text-base font-extrabold text-[#0F172A]">Client C — Long-Term Project (Dedicated Fleet)</h3>
+            <h3 className="text-base font-extrabold text-neutral-900">Client C — Long-Term Project (Dedicated Fleet)</h3>
             <p className="text-xs text-[#7A8A94] mt-1 mb-4">Rate type: Day rate + per tonne overflow · Billing: Monthly · Xero contact: Client C Group</p>
-            <div className="overflow-x-auto rounded-xl border border-[#E2E8F0]">
+            <div className="overflow-x-auto rounded-xl border border-neutral-200">
               <table className="w-full text-sm">
                 <thead>
                   <tr><th className={thClass}>Item</th><th className={thClass}>Rate</th><th className={thClass}>Notes</th></tr>
@@ -230,10 +230,10 @@ export default function RateCardTemplatePage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12">
             <div>
-              <h2 className="text-3xl sm:text-4xl font-bold text-[#0F172A]">What to Include in Every Rate Card</h2>
+              <h2 className="text-3xl sm:text-4xl font-bold text-neutral-900">What to Include in Every Rate Card</h2>
               <ul className="mt-6 space-y-3">
                 {includeItems.map((item) => (
-                  <li key={item} className="flex items-start gap-2 text-sm text-[#334155]">
+                  <li key={item} className="flex items-start gap-2 text-sm text-neutral-700">
                     <CheckCircle2 className="h-4 w-4 text-[#E8652B] shrink-0 mt-0.5" />
                     <span>{item}</span>
                   </li>
@@ -241,20 +241,20 @@ export default function RateCardTemplatePage() {
               </ul>
             </div>
             <div>
-              <h2 className="text-3xl sm:text-4xl font-bold text-[#0F172A]">Rate Cards in HaulageOps</h2>
+              <h2 className="text-3xl sm:text-4xl font-bold text-neutral-900">Rate Cards in HaulageOps</h2>
               <p className="mt-4 text-sm text-[#556671] leading-relaxed">
                 In HaulageOps, each client has a rate card configured against their account. When a job is created:
               </p>
               <ul className="mt-4 space-y-3">
                 {haulageOpsPoints.map((item) => (
-                  <li key={item} className="flex items-start gap-2 text-sm text-[#334155]">
+                  <li key={item} className="flex items-start gap-2 text-sm text-neutral-700">
                     <CheckCircle2 className="h-4 w-4 text-[#E8652B] shrink-0 mt-0.5" />
                     <span>{item}</span>
                   </li>
                 ))}
               </ul>
               <Link href="/platform/rate-management" className="mt-6 inline-flex">
-                <Button size="lg" className="bg-[#0F172A] text-white font-semibold hover:bg-[#1E293B]">
+                <Button size="lg" className="bg-neutral-900 text-white font-semibold hover:bg-neutral-800">
                   See Rate Management
                 </Button>
               </Link>
@@ -264,11 +264,11 @@ export default function RateCardTemplatePage() {
       </section>
 
       {/* CTA BAND */}
-      <section className="py-16 bg-[#0F172A]">
+      <section className="py-16 bg-neutral-900">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
           <div>
             <h2 className="text-2xl sm:text-3xl font-bold text-white">Stop calculating rates manually</h2>
-            <p className="mt-2 text-[#94A3B8] text-sm leading-relaxed max-w-xl">
+            <p className="mt-2 text-neutral-400 text-sm leading-relaxed max-w-xl">
               Book a demo and see how HaulageOps turns your rate cards into automatic invoices.
             </p>
           </div>

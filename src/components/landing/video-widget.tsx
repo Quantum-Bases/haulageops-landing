@@ -185,8 +185,8 @@ export function VideoWidget() {
       width: 8,
       height: 8,
       borderRadius: "50%",
-      background: "#22c55e",
-      boxShadow: "0 0 6px rgba(34,197,94,0.7)",
+      background: "#E8652B",
+      boxShadow: "0 0 6px rgba(232,101,43,0.7)",
     },
     controls: { display: "flex", alignItems: "center", gap: 4 },
     ctrlBtn: (danger?: boolean) => ({
@@ -231,8 +231,8 @@ export function VideoWidget() {
       padding: "6px 14px",
       fontSize: 12,
       borderRadius: 8,
-      background: "#fff",
-      color: "#000",
+      background: "#E8652B",
+      color: "#fff",
       border: "none",
       fontWeight: 700,
       cursor: "pointer",
@@ -308,8 +308,8 @@ export function VideoWidget() {
         .vw-pill-top { display: flex; align-items: center; gap: 6px; }
         .vw-pill-live-dot {
           width: 6px; height: 6px; border-radius: 50%;
-          background: #22c55e;
-          box-shadow: 0 0 6px rgba(34,197,94,0.8);
+          background: #E8652B;
+          box-shadow: 0 0 6px rgba(232,101,43,0.8);
           animation: vw-dot-blink 1.8s ease-in-out infinite;
           flex-shrink: 0;
         }

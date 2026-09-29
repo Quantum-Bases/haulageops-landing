@@ -11,7 +11,7 @@ interface MainLayoutProps {
 
 export function MainLayout({ children, showCta = true }: MainLayoutProps) {
   return (
-    <div className="min-h-screen flex flex-col bg-white text-[#0F172A]">
+    <div className="min-h-screen flex flex-col bg-white text-neutral-900">
       <Header />
       <main className="flex-1">{children}</main>
       {showCta && <CtaSection variant="main" />}

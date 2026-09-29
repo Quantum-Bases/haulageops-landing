@@ -169,20 +169,20 @@ export default function ComparePage() {
   return (
     <MainLayout showCta={false}>
       {/* Breadcrumb + Hero */}
-      <section className="pt-24 pb-16 bg-gradient-to-b from-[#FFF9F5] to-white">
+      <section className="pt-24 pb-16 bg-gradient-to-b from-neutral-50/80 via-white to-white border-b border-neutral-200">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <nav className="flex items-center gap-2 text-xs text-[#64748B] mb-6">
+          <nav className="flex items-center gap-2 text-xs text-neutral-500 mb-6">
             <Link href="/" className="hover:text-[#E8652B]">Home</Link>
             <ChevronRight className="h-3 w-3" />
-            <span className="text-[#0F172A] font-medium">Compare Haulage Software</span>
+            <span className="text-neutral-900 font-medium">Compare Haulage Software</span>
           </nav>
-          <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-[#E8652B] bg-[#FFF0E6] mb-4 animate-in fade-in slide-in-from-bottom-4 animation-duration-700 fill-mode-both">
+          <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-[#E8652B] bg-orange-50 border border-orange-200 text-[#E8652B] mb-4 animate-in fade-in slide-in-from-bottom-4 animation-duration-700 fill-mode-both">
             Haulage Software Comparisons
           </span>
-          <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-[#0F172A] max-w-4xl leading-[1.1] animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-100 fill-mode-both">
+          <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-neutral-900 max-w-4xl leading-[1.1] animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-100 fill-mode-both">
             Choosing haulage software? Start with an honest comparison.
           </h1>
-          <p className="mt-6 text-lg text-[#475569] max-w-3xl leading-relaxed animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-150 fill-mode-both">
+          <p className="mt-6 text-lg text-neutral-600 max-w-3xl leading-relaxed animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-150 fill-mode-both">
             Most comparison pages are written by the vendor doing the comparing. We try to do something different: name what each system genuinely does well, name where it falls short, and let you decide if HaulageOps fits your operation.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
@@ -192,7 +192,7 @@ export default function ComparePage() {
               </Button>
             </Link>
             <Link href="/resources/guides/haulage-software-buyers-guide">
-              <Button size="lg" variant="outline" className="text-[#0F172A] font-semibold">
+              <Button size="lg" variant="outline" className="text-neutral-900 font-semibold">
                 Buyer's guide →
               </Button>
             </Link>
@@ -201,10 +201,10 @@ export default function ComparePage() {
       </section>
 
       {/* Proof strip */}
-      <section className="bg-[#0D1525] py-6">
+      <section className="bg-neutral-900 py-6">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-wrap items-center justify-center gap-x-10 gap-y-3">
           {proofItems.map((item) => (
-            <span key={item} className="text-sm text-[#CBD5E1] font-medium">{item}</span>
+            <span key={item} className="text-sm text-neutral-300 font-medium">{item}</span>
           ))}
         </div>
       </section>
@@ -213,9 +213,9 @@ export default function ComparePage() {
       <section className="py-16 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Our approach</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">What a fair software comparison looks like</h2>
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">What a fair software comparison looks like</h2>
           <div className="mt-8 grid lg:grid-cols-2 gap-12">
-            <div className="space-y-4 text-[#475569] leading-relaxed text-sm">
+            <div className="space-y-4 text-neutral-600 leading-relaxed text-sm">
               <p>
                 The typical vendor comparison page scores every dimension in its own favour and buries caveats in footnotes. That approach doesn't help operators make a good decision — and a bad TMS choice affects how your whole operation runs for years.
               </p>
@@ -227,16 +227,16 @@ export default function ComparePage() {
               </p>
             </div>
             <div>
-              <h3 className="text-lg font-bold text-[#0F172A] mb-4">What we compare on each page</h3>
+              <h3 className="text-lg font-bold text-neutral-900 mb-4">What we compare on each page</h3>
               <ul className="space-y-3">
                 {approachPoints.map((item) => (
-                  <li key={item} className="flex items-start gap-2 text-sm text-[#334155]">
+                  <li key={item} className="flex items-start gap-2 text-sm text-neutral-700">
                     <CheckCircle2 className="h-4 w-4 text-[#E8652B] shrink-0 mt-0.5" />
                     <span>{item}</span>
                   </li>
                 ))}
               </ul>
-              <p className="mt-5 text-sm text-[#64748B] leading-relaxed">
+              <p className="mt-5 text-sm text-neutral-500 leading-relaxed">
                 If you spot something that looks out of date or wrong, <Link href="/contact" className="text-[#E8652B] hover:underline font-medium">let us know</Link>. We'd rather be accurate than win a comparison on a point that's no longer true.
               </p>
             </div>
@@ -245,21 +245,21 @@ export default function ComparePage() {
       </section>
 
       {/* COMPARISON CARDS */}
-      <section className="py-16 bg-[#F8FAFC]">
+      <section className="py-16 bg-neutral-50/50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Comparison pages</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A]">Choose a comparison</h2>
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900">Choose a comparison</h2>
           <div className="mt-10 grid md:grid-cols-2 gap-6">
             {comparisons.map((card) => (
-              <div key={card.title} className="bg-white rounded-2xl p-6 border border-[#E2E8F0] flex flex-col">
+              <div key={card.title} className="bg-white rounded-2xl p-6 border border-neutral-200 flex flex-col">
                 <p className="text-[10px] font-bold uppercase tracking-widest text-[#E8652B]">{card.tag}</p>
-                <h3 className="mt-3 text-xl font-bold text-[#0F172A]">
+                <h3 className="mt-3 text-xl font-bold text-neutral-900">
                   <Link href={card.href} className="hover:text-[#E8652B] transition-colors">{card.title}</Link>
                 </h3>
-                <p className="mt-3 text-sm text-[#475569] leading-relaxed">{card.desc}</p>
+                <p className="mt-3 text-sm text-neutral-600 leading-relaxed">{card.desc}</p>
                 <ul className="mt-4 space-y-2.5 flex-1">
                   {card.points.map((item) => (
-                    <li key={item} className="flex items-start gap-2 text-sm text-[#334155]">
+                    <li key={item} className="flex items-start gap-2 text-sm text-neutral-700">
                       <CheckCircle2 className="h-4 w-4 text-[#E8652B] shrink-0 mt-0.5" />
                       <span>{item}</span>
                     </li>
@@ -280,14 +280,14 @@ export default function ComparePage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Our commitment</span>
-              <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">If HaulageOps isn't the right fit, we'll say so in the demo</h2>
-              <p className="mt-4 text-[#475569] leading-relaxed text-sm">
+              <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">If HaulageOps isn't the right fit, we'll say so in the demo</h2>
+              <p className="mt-4 text-neutral-600 leading-relaxed text-sm">
                 Some operators find during a demo conversation that their situation — small fleet, no subcontractor network, single client with simple billing — means they're better served staying on spreadsheets or trying a simpler tool first. We'd rather have that conversation upfront than have you invest in an implementation that doesn't match your situation.
               </p>
-              <p className="mt-4 text-[#475569] leading-relaxed text-sm">
+              <p className="mt-4 text-neutral-600 leading-relaxed text-sm">
                 HaulageOps is built specifically for operators managing owned trucks alongside a subcontractor network, with clients who expect visibility and a finance team that needs clean invoicing. If that's not your current situation, we'll tell you.
               </p>
-              <p className="mt-4 text-[#475569] leading-relaxed text-sm">
+              <p className="mt-4 text-neutral-600 leading-relaxed text-sm">
                 When you book a demo, the first 10 minutes covers your operation: fleet size, subcontractor count, current tools, biggest operational problems. We map what you need to what we actually do before showing you a single screen.
               </p>
               <div className="mt-6">
@@ -299,15 +299,15 @@ export default function ComparePage() {
               </div>
             </div>
             <div>
-              <div className="rounded-2xl bg-[#0D1525] border border-[#1E293B] overflow-hidden">
-                <div className="flex items-center gap-2 px-5 py-3 bg-[#1E293B]">
+              <div className="rounded-2xl bg-neutral-900 border border-neutral-800 overflow-hidden">
+                <div className="flex items-center gap-2 px-5 py-3 bg-neutral-800">
                   <span className="h-2.5 w-2.5 rounded-full bg-[#E8652B]" />
                   <span className="h-2.5 w-2.5 rounded-full bg-[#94A3B8]" />
                   <span className="h-2.5 w-2.5 rounded-full bg-[#475569]" />
-                  <span className="ml-3 text-xs font-semibold text-[#CBD5E1]">Demo intake framework — what we ask first</span>
+                  <span className="ml-3 text-xs font-semibold text-neutral-300">Demo intake framework — what we ask first</span>
                 </div>
                 <div className="p-6">
-                  <p className="text-sm text-[#94A3B8] leading-relaxed">
+                  <p className="text-sm text-neutral-400 leading-relaxed">
                     Screenshot of a demo intake or qualification checklist — showing the questions asked before any product demo: number of owned trucks, number of regular subcontractors, current tools (spreadsheet/WhatsApp/existing TMS), primary pain points (dispatch visibility, subcontractor coordination, billing delays, client calls). Reinforces that the conversation starts with the operator's situation.
                   </p>
                 </div>
@@ -318,21 +318,21 @@ export default function ComparePage() {
       </section>
 
       {/* EVALUATION FRAMEWORK */}
-      <section className="py-16 bg-[#F8FAFC]">
+      <section className="py-16 bg-neutral-50/50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Evaluation framework</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">What to look for in any haulage TMS — regardless of which one you choose</h2>
-          <p className="mt-4 text-[#475569] leading-relaxed max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">What to look for in any haulage TMS — regardless of which one you choose</h2>
+          <p className="mt-4 text-neutral-600 leading-relaxed max-w-3xl">
             Before reading any vendor comparison (including ours), these are the questions that matter most for bulk haulage and construction logistics operations.
           </p>
           <div className="mt-10 grid md:grid-cols-2 gap-6">
             {frameworkCards.map((card) => (
-              <div key={card.title} className="bg-white rounded-2xl p-6 border border-[#E2E8F0]">
-                <h3 className="font-bold text-[#0F172A]">{card.title}</h3>
-                <p className="mt-3 text-sm text-[#475569] leading-relaxed">{card.p}</p>
+              <div key={card.title} className="bg-white rounded-2xl p-6 border border-neutral-200">
+                <h3 className="font-bold text-neutral-900">{card.title}</h3>
+                <p className="mt-3 text-sm text-neutral-600 leading-relaxed">{card.p}</p>
                 <ul className="mt-4 space-y-2.5">
                   {card.points.map((item) => (
-                    <li key={item} className="flex items-start gap-2 text-sm text-[#334155]">
+                    <li key={item} className="flex items-start gap-2 text-sm text-neutral-700">
                       <CheckCircle2 className="h-4 w-4 text-[#E8652B] shrink-0 mt-0.5" />
                       <span>{item}</span>
                     </li>
@@ -341,7 +341,7 @@ export default function ComparePage() {
               </div>
             ))}
           </div>
-          <p className="mt-6 text-sm text-[#475569] leading-relaxed">
+          <p className="mt-6 text-sm text-neutral-600 leading-relaxed">
             For a complete framework, read the{" "}
             <Link href="/resources/guides/haulage-software-buyers-guide" className="text-[#E8652B] hover:underline font-medium">Haulage Software Buyer's Guide</Link>{" "}
             — it covers all these dimensions with a requirements checklist you can use across any vendor evaluation.
@@ -353,14 +353,14 @@ export default function ComparePage() {
       <section className="py-16 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Related resources</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A]">More tools for your evaluation</h2>
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900">More tools for your evaluation</h2>
           <div className="mt-10 grid md:grid-cols-3 gap-6">
             {relatedCards.map((card) => (
-              <div key={card.title} className="bg-white rounded-2xl p-6 border border-[#E2E8F0] flex flex-col">
-                <h3 className="text-lg font-bold text-[#0F172A]">
+              <div key={card.title} className="bg-white rounded-2xl p-6 border border-neutral-200 flex flex-col">
+                <h3 className="text-lg font-bold text-neutral-900">
                   <Link href={card.href} className="hover:text-[#E8652B] transition-colors">{card.title}</Link>
                 </h3>
-                <p className="mt-3 text-sm text-[#475569] leading-relaxed flex-1">{card.p}</p>
+                <p className="mt-3 text-sm text-neutral-600 leading-relaxed flex-1">{card.p}</p>
                 <Link href={card.href} className="mt-4 inline-flex items-center gap-1 text-sm text-[#E8652B] hover:underline font-bold">
                   {card.cta} <ArrowRight className="h-3.5 w-3.5" />
                 </Link>
@@ -371,18 +371,18 @@ export default function ComparePage() {
       </section>
 
       {/* FAQ */}
-      <section className="py-16 bg-[#F8FAFC]">
+      <section className="py-16 bg-neutral-50/50">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Common questions</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A]">Questions about choosing haulage software</h2>
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900">Questions about choosing haulage software</h2>
           <div className="mt-8 space-y-3">
             {faqs.map((faq) => (
-              <details key={faq.q} className="group border border-[#E2E8F0] bg-white rounded-xl overflow-hidden">
-                <summary className="flex items-center justify-between gap-4 px-6 py-4 cursor-pointer font-semibold text-[#0F172A] text-sm list-none hover:bg-[#F8FAFC]">
+              <details key={faq.q} className="group border border-neutral-200 bg-white rounded-xl overflow-hidden">
+                <summary className="flex items-center justify-between gap-4 px-6 py-4 cursor-pointer font-semibold text-neutral-900 text-sm list-none hover:bg-neutral-50/50">
                   {faq.q}
-                  <ChevronRight className="h-4 w-4 text-[#94A3B8] shrink-0 group-open:rotate-90 transition-transform" />
+                  <ChevronRight className="h-4 w-4 text-neutral-400 shrink-0 group-open:rotate-90 transition-transform" />
                 </summary>
-                <div className="px-6 pb-5 text-sm text-[#475569] leading-relaxed border-t border-[#F1F5F9]">
+                <div className="px-6 pb-5 text-sm text-neutral-600 leading-relaxed border-t border-neutral-100">
                   <p className="pt-4">{faq.a}</p>
                 </div>
               </details>
@@ -392,11 +392,11 @@ export default function ComparePage() {
       </section>
 
       {/* CTA BAND */}
-      <section className="py-16 bg-[#0F172A]">
+      <section className="py-16 bg-neutral-900">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
           <div>
             <h2 className="text-2xl sm:text-3xl font-bold text-white">Still evaluating? Talk to us before you decide.</h2>
-            <p className="mt-2 text-[#94A3B8] text-sm leading-relaxed max-w-xl">
+            <p className="mt-2 text-neutral-400 text-sm leading-relaxed max-w-xl">
               A 20-minute demo starts with your operation, not our product pitch. We'll tell you honestly if HaulageOps fits.
             </p>
           </div>

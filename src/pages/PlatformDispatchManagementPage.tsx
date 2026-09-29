@@ -118,25 +118,25 @@ export function PlatformDispatchManagementPage() {
   return (
     <MainLayout showCta={false}>
       {/* Breadcrumb Nav */}
-      <div className="pt-24 pb-0 bg-[#FFF9F5]">
+      <div className="pt-24 pb-0 bg-neutral-50/70">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <nav className="flex items-center gap-2 text-xs text-[#64748B]">
+          <nav className="flex items-center gap-2 text-xs text-neutral-500">
             <Link href="/" className="hover:text-[#E8652B]">Home</Link>
             <ChevronRight className="h-3 w-3" />
             <Link href="/platform" className="hover:text-[#E8652B]">Platform</Link>
             <ChevronRight className="h-3 w-3" />
-            <span className="text-[#0F172A] font-medium">Dispatch Management</span>
+            <span className="text-neutral-900 font-medium">Dispatch Management</span>
           </nav>
         </div>
       </div>
 
       {/* HERO */}
-      <section className="pt-10 pb-20 bg-gradient-to-b from-[#FFF9F5] via-[#FFF5EE]/40 to-white">
+      <section className="pt-10 pb-20 bg-gradient-to-b from-neutral-50/80 via-white to-white border-b border-neutral-200">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <motion.span
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
-            className="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-[#E8652B] bg-[#FFF0E6] mb-4"
+            className="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-[#E8652B] bg-orange-50 border border-orange-200 mb-4"
           >
             Dispatch Management
           </motion.span>
@@ -144,7 +144,7 @@ export function PlatformDispatchManagementPage() {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.05 }}
-            className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#0F172A] max-w-4xl leading-[1.1]"
+            className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-neutral-900 max-w-4xl leading-[1.1]"
           >
             One dispatch board for every driver, truck and subcontractor you manage.
           </motion.h1>
@@ -152,7 +152,7 @@ export function PlatformDispatchManagementPage() {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="mt-6 text-lg sm:text-xl text-[#475569] max-w-3xl leading-relaxed"
+            className="mt-6 text-lg sm:text-xl text-neutral-600 max-w-3xl leading-relaxed"
           >
             Real-time job assignment, live GPS positions and status updates — owned fleet and subcontractors on the same board, no phone calls required.
           </motion.p>
@@ -168,7 +168,7 @@ export function PlatformDispatchManagementPage() {
               </Button>
             </Link>
             <Link href="/platform/live-job-tracking">
-              <Button size="lg" variant="outline" className="border-[#E2E8F0] text-[#334155] hover:bg-[#F8FAFC]">
+              <Button size="lg" variant="outline" className="border-neutral-200 text-neutral-700 hover:bg-neutral-50/50">
                 See Live Tracking
               </Button>
             </Link>
@@ -182,8 +182,8 @@ export function PlatformDispatchManagementPage() {
               "Role-specific views",
               "No extra hardware",
             ].map((pill) => (
-              <span key={pill} className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#F1F5F9] text-xs font-medium text-[#334155]">
-                <CheckCircle className="h-3.5 w-3.5 text-[#16A34A] shrink-0" />
+              <span key={pill} className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-neutral-100 text-xs font-medium text-neutral-700">
+                <CheckCircle className="h-3.5 w-3.5 text-[#E8652B] shrink-0" />
                 {pill}
               </span>
             ))}
@@ -192,7 +192,7 @@ export function PlatformDispatchManagementPage() {
       </section>
 
       {/* PROOF STRIP */}
-      <div className="bg-[#0F172A] py-5">
+      <div className="bg-neutral-900 py-5">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 text-center">
             {[
@@ -205,7 +205,7 @@ export function PlatformDispatchManagementPage() {
             ].map((item) => (
               <div key={item.strong} className="flex flex-col gap-0.5">
                 <span className="text-white font-bold text-sm">{item.strong}</span>
-                <span className="text-[#94A3B8] text-xs">{item.sub}</span>
+                <span className="text-neutral-400 text-xs">{item.sub}</span>
               </div>
             ))}
           </div>
@@ -216,15 +216,15 @@ export function PlatformDispatchManagementPage() {
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">The Dispatch Board</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             Every job, every driver, every subcontractor — one live view.
           </h2>
-          <p className="mt-4 text-[#475569] max-w-3xl leading-relaxed">
+          <p className="mt-4 text-neutral-600 max-w-3xl leading-relaxed">
             Most haulage dispatch runs on a combination of WhatsApp messages, phone calls, and a spreadsheet that's always one version behind. HaulageOps replaces that with a single real-time dispatch board that shows every live job, every driver assignment, and every subcontractor delegation — updated the moment anything changes.
           </p>
           <div className="mt-10 grid md:grid-cols-2 gap-8 items-start">
-            <div className="bg-[#F8FAFC] rounded-2xl p-8 border border-[#E2E8F0]">
-              <h3 className="text-xl font-bold text-[#0F172A] mb-5">What the dispatch board shows</h3>
+            <div className="bg-neutral-50/50 rounded-2xl p-8 border border-neutral-200">
+              <h3 className="text-xl font-bold text-neutral-900 mb-5">What the dispatch board shows</h3>
               <ul className="space-y-3">
                 {[
                   "All jobs for the current day and forward schedule in a single scrollable board",
@@ -236,14 +236,14 @@ export function PlatformDispatchManagementPage() {
                   "Day and week views to manage forward scheduling alongside live operations",
                   "Filter by driver, truck, client, subcontractor or job status",
                 ].map((item) => (
-                  <li key={item} className="flex items-start gap-2 text-sm text-[#334155]">
+                  <li key={item} className="flex items-start gap-2 text-sm text-neutral-700">
                     <CheckCircle className="h-4 w-4 text-[#E8652B] shrink-0 mt-0.5" />
                     <span>{item}</span>
                   </li>
                 ))}
               </ul>
             </div>
-            <div className="rounded-2xl border border-[#E2E8F0] bg-[#0D1525] p-8 text-[#94A3B8] text-sm font-mono leading-relaxed">
+            <div className="rounded-2xl border border-neutral-200 bg-neutral-900 border-y border-neutral-800 p-8 text-neutral-400 text-sm font-mono leading-relaxed">
               <div className="text-[#E8652B] font-bold mb-2 text-xs uppercase tracking-widest">HaulageOps — Dispatch Board</div>
               <p>Real-time dispatch board showing a day view with 12 jobs across owned drivers and subcontractors. Each row shows job ID, client name, material, pickup and delivery sites, assigned driver or sub name, current status pill (colour-coded: grey=created, blue=dispatched, orange=in progress, green=completed), and a map pin icon linking to live GPS. Status updates animate as drivers move through the job. Overdue jobs have a red time indicator. A filter bar at the top allows filtering by driver, fleet or status.</p>
             </div>
@@ -252,21 +252,21 @@ export function PlatformDispatchManagementPage() {
       </section>
 
       {/* JOB ASSIGNMENT FLOW */}
-      <section className="py-20 bg-[#F8FAFC]">
+      <section className="py-20 bg-neutral-50/50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Job Assignment Flow</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             Assign to a driver. Delegate to a subcontractor. Both from the same board.
           </h2>
-          <p className="mt-4 text-[#475569] max-w-3xl leading-relaxed">
+          <p className="mt-4 text-neutral-600 max-w-3xl leading-relaxed">
             Owned drivers and subcontractors operate differently, so HaulageOps handles them differently — but a dispatcher sees both in one place. Assigning a job to an owned driver sends a push notification to their mobile app. Delegating to a subcontractor pushes the job directly into their dedicated subcontractor portal.
           </p>
           <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {assignmentSteps.map((step) => (
-              <div key={step.num} className="bg-white rounded-2xl p-6 border border-[#E2E8F0] shadow-sm">
+              <div key={step.num} className="bg-white rounded-2xl p-6 border border-neutral-200 shadow-sm">
                 <span className="text-3xl font-black text-[#E8652B]/20 leading-none">{step.num}</span>
-                <h3 className="mt-2 text-lg font-bold text-[#0F172A]">{step.title}</h3>
-                <p className="mt-2 text-sm text-[#475569] leading-relaxed">{step.desc}</p>
+                <h3 className="mt-2 text-lg font-bold text-neutral-900">{step.title}</h3>
+                <p className="mt-2 text-sm text-neutral-600 leading-relaxed">{step.desc}</p>
               </div>
             ))}
           </div>
@@ -277,18 +277,18 @@ export function PlatformDispatchManagementPage() {
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Owned Fleet vs Subcontractors</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             Different assignment paths. One board to manage both.
           </h2>
-          <p className="mt-4 text-[#475569] max-w-3xl leading-relaxed">
+          <p className="mt-4 text-neutral-600 max-w-3xl leading-relaxed">
             Operators managing a mix of owned trucks and subcontracted capacity face a specific problem: owned drivers get jobs through one channel, subs get them through another, and both need to feed status back to the same dispatch picture. HaulageOps is built for exactly this operating model.
           </p>
           <div className="mt-10 grid md:grid-cols-2 gap-8">
             {/* Owned fleet */}
-            <div className="bg-[#F8FAFC] rounded-2xl p-8 border border-[#E2E8F0] flex flex-col justify-between">
+            <div className="bg-neutral-50/50 rounded-2xl p-8 border border-neutral-200 flex flex-col justify-between">
               <div>
-                <h3 className="text-xl font-bold text-[#0F172A]">Owned fleet dispatch</h3>
-                <p className="mt-2 text-sm text-[#475569] leading-relaxed">
+                <h3 className="text-xl font-bold text-neutral-900">Owned fleet dispatch</h3>
+                <p className="mt-2 text-sm text-neutral-600 leading-relaxed">
                   Jobs go directly to your employed drivers through the HaulageOps mobile app. The driver receives a push notification, sees full job details including origin, destination, material and any site instructions, and updates their status as they progress through the job. Their phone's GPS feeds live position back to the dispatch board.
                 </p>
                 <ul className="mt-6 space-y-2.5">
@@ -300,8 +300,8 @@ export function PlatformDispatchManagementPage() {
                     "POD capture at delivery: photo, documents, customer signature",
                     "Break and rest period recording for fatigue compliance",
                   ].map((item) => (
-                    <li key={item} className="flex items-start gap-2 text-sm text-[#334155]">
-                      <CheckCircle className="h-4 w-4 text-[#16A34A] shrink-0 mt-0.5" />
+                    <li key={item} className="flex items-start gap-2 text-sm text-neutral-700">
+                      <CheckCircle className="h-4 w-4 text-[#E8652B] shrink-0 mt-0.5" />
                       <span>{item}</span>
                     </li>
                   ))}
@@ -312,10 +312,10 @@ export function PlatformDispatchManagementPage() {
               </Link>
             </div>
             {/* Subcontractor dispatch */}
-            <div className="bg-[#F8FAFC] rounded-2xl p-8 border border-[#E2E8F0] flex flex-col justify-between">
+            <div className="bg-neutral-50/50 rounded-2xl p-8 border border-neutral-200 flex flex-col justify-between">
               <div>
-                <h3 className="text-xl font-bold text-[#0F172A]">Subcontractor dispatch</h3>
-                <p className="mt-2 text-sm text-[#475569] leading-relaxed">
+                <h3 className="text-xl font-bold text-neutral-900">Subcontractor dispatch</h3>
+                <p className="mt-2 text-sm text-neutral-600 leading-relaxed">
                   Delegated jobs go directly to each subcontractor's dedicated portal — no shared logins, no WhatsApp forwards, no phone calls. The subcontractor logs into their own HaulageOps portal, sees their job queue, accepts or declines, and updates job status through the same lifecycle. Status feeds back to your dispatch board in real time.
                 </p>
                 <ul className="mt-6 space-y-2.5">
@@ -327,8 +327,8 @@ export function PlatformDispatchManagementPage() {
                     "Status updates feed back to your dispatch board in real time",
                     "Subcontractor does not need to be a HaulageOps customer",
                   ].map((item) => (
-                    <li key={item} className="flex items-start gap-2 text-sm text-[#334155]">
-                      <CheckCircle className="h-4 w-4 text-[#16A34A] shrink-0 mt-0.5" />
+                    <li key={item} className="flex items-start gap-2 text-sm text-neutral-700">
+                      <CheckCircle className="h-4 w-4 text-[#E8652B] shrink-0 mt-0.5" />
                       <span>{item}</span>
                     </li>
                   ))}
@@ -343,20 +343,20 @@ export function PlatformDispatchManagementPage() {
       </section>
 
       {/* ROLE-BASED VIEWS */}
-      <section className="py-20 bg-[#F8FAFC]">
+      <section className="py-20 bg-neutral-50/50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Role-Based Views</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             Dispatchers see dispatch. Management sees operations. Drivers see their jobs.
           </h2>
-          <p className="mt-4 text-[#475569] max-w-3xl leading-relaxed">
+          <p className="mt-4 text-neutral-600 max-w-3xl leading-relaxed">
             Showing every user everything creates noise, mistakes and security gaps. HaulageOps uses role-based access control (RBAC) to give each person a view appropriate to their function. A dispatcher gets the live board. A driver gets their job queue. A manager gets the operational overview. A client gets their jobs and invoices — nothing else.
           </p>
           <div className="mt-10 grid md:grid-cols-3 gap-6">
             {roleViews.map((rv) => (
-              <div key={rv.title} className="bg-white rounded-2xl p-6 border border-[#E2E8F0] shadow-sm">
-                <h3 className="font-bold text-[#0F172A] mb-2">{rv.title}</h3>
-                <p className="text-sm text-[#475569] leading-relaxed">{rv.desc}</p>
+              <div key={rv.title} className="bg-white rounded-2xl p-6 border border-neutral-200 shadow-sm">
+                <h3 className="font-bold text-neutral-900 mb-2">{rv.title}</h3>
+                <p className="text-sm text-neutral-600 leading-relaxed">{rv.desc}</p>
               </div>
             ))}
           </div>
@@ -367,24 +367,24 @@ export function PlatformDispatchManagementPage() {
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Manual Dispatch vs HaulageOps</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             What gets replaced when you move from WhatsApp dispatch.
           </h2>
           <div className="mt-8 overflow-x-auto">
             <table className="w-full text-left border-collapse min-w-[600px]">
               <thead>
-                <tr className="border-b border-[#E2E8F0] text-sm text-[#0F172A]">
+                <tr className="border-b border-neutral-200 text-sm text-neutral-900">
                   <th className="py-4 px-4 font-bold">Dispatch activity</th>
-                  <th className="py-4 px-4 font-bold text-[#64748B]">WhatsApp + spreadsheet</th>
-                  <th className="py-4 px-4 font-bold text-[#E8652B] bg-[#FFF0E6]/50 rounded-t-lg">HaulageOps</th>
+                  <th className="py-4 px-4 font-bold text-neutral-500">WhatsApp + spreadsheet</th>
+                  <th className="py-4 px-4 font-bold text-[#E8652B] bg-orange-50 border border-orange-200/50 rounded-t-lg">HaulageOps</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-[#F1F5F9] text-sm">
                 {comparisonTable.map((row) => (
-                  <tr key={row.activity} className="hover:bg-[#F8FAFC]">
-                    <td className="py-4 px-4 font-medium text-[#0F172A]">{row.activity}</td>
-                    <td className="py-4 px-4 text-[#64748B]">{row.manual}</td>
-                    <td className="py-4 px-4 font-semibold text-[#334155] bg-[#FFF0E6]/30">{row.haulageOps}</td>
+                  <tr key={row.activity} className="hover:bg-neutral-50/50">
+                    <td className="py-4 px-4 font-medium text-neutral-900">{row.activity}</td>
+                    <td className="py-4 px-4 text-neutral-500">{row.manual}</td>
+                    <td className="py-4 px-4 font-semibold text-neutral-700 bg-orange-50 border border-orange-200 text-[#E8652B]/30">{row.haulageOps}</td>
                   </tr>
                 ))}
               </tbody>
@@ -394,25 +394,25 @@ export function PlatformDispatchManagementPage() {
       </section>
 
       {/* RELATED PLATFORM FEATURES */}
-      <section className="py-20 bg-[#F8FAFC]">
+      <section className="py-20 bg-neutral-50/50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Related Platform Features</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             Dispatch connects to the rest of the platform.
           </h2>
           <div className="mt-10 grid md:grid-cols-3 gap-6">
             {relatedModules.map((mod) => (
-              <div key={mod.title} className="bg-white rounded-2xl p-6 border border-[#E2E8F0] shadow-sm">
-                <h3 className="font-bold text-[#0F172A] mb-2">
+              <div key={mod.title} className="bg-white rounded-2xl p-6 border border-neutral-200 shadow-sm">
+                <h3 className="font-bold text-neutral-900 mb-2">
                   <Link href={mod.href} className="hover:text-[#E8652B] transition-colors">
                     {mod.title}
                   </Link>
                 </h3>
-                <p className="text-sm text-[#475569] leading-relaxed">{mod.desc}</p>
+                <p className="text-sm text-neutral-600 leading-relaxed">{mod.desc}</p>
               </div>
             ))}
           </div>
-          <p className="mt-6 text-sm text-[#475569]">
+          <p className="mt-6 text-sm text-neutral-600">
             Also connected:{" "}
             <Link href="/solutions/haulage-dispatch" className="text-[#E8652B] hover:underline font-medium">
               Haulage Dispatch solution
@@ -426,17 +426,17 @@ export function PlatformDispatchManagementPage() {
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Common Questions</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A]">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900">
             Frequently asked about HaulageOps dispatch management.
           </h2>
           <div className="mt-8 space-y-3">
             {faqs.map((faq) => (
-              <details key={faq.q} className="group border border-[#E2E8F0] rounded-xl overflow-hidden">
-                <summary className="flex items-center justify-between gap-4 px-6 py-4 cursor-pointer font-semibold text-[#0F172A] text-sm list-none hover:bg-[#F8FAFC]">
+              <details key={faq.q} className="group border border-neutral-200 rounded-xl overflow-hidden">
+                <summary className="flex items-center justify-between gap-4 px-6 py-4 cursor-pointer font-semibold text-neutral-900 text-sm list-none hover:bg-neutral-50/50">
                   {faq.q}
-                  <ChevronRight className="h-4 w-4 text-[#94A3B8] shrink-0 group-open:rotate-90 transition-transform" />
+                  <ChevronRight className="h-4 w-4 text-neutral-400 shrink-0 group-open:rotate-90 transition-transform" />
                 </summary>
-                <div className="px-6 pb-5 text-sm text-[#475569] leading-relaxed border-t border-[#F1F5F9]">
+                <div className="px-6 pb-5 text-sm text-neutral-600 leading-relaxed border-t border-neutral-100">
                   <p className="pt-4">{faq.a}</p>
                 </div>
               </details>
@@ -446,11 +446,11 @@ export function PlatformDispatchManagementPage() {
       </section>
 
       {/* CTA BAND */}
-      <section className="py-16 bg-[#0F172A]">
+      <section className="py-16 bg-neutral-900">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
           <div>
             <h2 className="text-2xl sm:text-3xl font-bold text-white">See the dispatch board in action.</h2>
-            <p className="mt-2 text-[#94A3B8] text-sm leading-relaxed max-w-xl">
+            <p className="mt-2 text-neutral-400 text-sm leading-relaxed max-w-xl">
               Book a 20-minute demo and see how owned driver assignment, subcontractor delegation and live GPS tracking work together on one board.
             </p>
           </div>

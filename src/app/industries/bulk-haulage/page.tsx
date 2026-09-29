@@ -203,28 +203,28 @@ export default function BulkHaulagePage() {
   return (
     <MainLayout showCta={false}>
       {/* Breadcrumb */}
-      <div className="pt-24 pb-0 bg-[#FFF9F5]">
+      <div className="pt-24 pb-0 bg-neutral-50/70">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <nav className="flex items-center gap-2 text-xs text-[#64748B]">
+          <nav className="flex items-center gap-2 text-xs text-neutral-500">
             <Link href="/" className="hover:text-[#E8652B]">Home</Link>
             <ChevronRight className="h-3 w-3" />
             <Link href="/industries" className="hover:text-[#E8652B]">Industries</Link>
             <ChevronRight className="h-3 w-3" />
-            <span className="text-[#0F172A] font-medium">Bulk Haulage</span>
+            <span className="text-neutral-900 font-medium">Bulk Haulage</span>
           </nav>
         </div>
       </div>
 
       {/* HERO */}
-      <section className="pt-10 pb-20 bg-gradient-to-b from-[#FFF9F5] via-[#FFF5EE]/40 to-white">
+      <section className="pt-10 pb-20 bg-gradient-to-b from-neutral-50/80 via-white to-white border-b border-neutral-200">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-[#E8652B] bg-[#FFF0E6] mb-4 animate-in fade-in slide-in-from-bottom-4 animation-duration-700 fill-mode-both">
+          <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-[#E8652B] bg-orange-50 border border-orange-200 mb-4 animate-in fade-in slide-in-from-bottom-4 animation-duration-700 fill-mode-both">
             Bulk Haulage
           </span>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#0F172A] max-w-4xl leading-[1.1] animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-100 fill-mode-both">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-neutral-900 max-w-4xl leading-[1.1] animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-100 fill-mode-both">
             Built for bulk haulage operators. Not adapted from something else.
           </h1>
-          <p className="mt-6 text-lg sm:text-xl text-[#475569] max-w-3xl leading-relaxed animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-150 fill-mode-both">
+          <p className="mt-6 text-lg sm:text-xl text-neutral-600 max-w-3xl leading-relaxed animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-150 fill-mode-both">
             Bulk haulage runs on high frequency, tight margins and paper trails that disappear. HaulageOps handles per-tonne billing, owned and subcontracted dispatch, digital dockets and client visibility — in the workflow bulk haulage actually uses.
           </p>
           <div className="mt-8 flex flex-wrap gap-3 animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-200 fill-mode-both">
@@ -234,14 +234,14 @@ export default function BulkHaulagePage() {
               </Button>
             </Link>
             <Link href="/platform">
-              <Button size="lg" variant="outline" className="border-[#E2E8F0] text-[#334155] hover:bg-[#F8FAFC]">
+              <Button size="lg" variant="outline" className="border-neutral-200 text-neutral-700 hover:bg-neutral-50/50">
                 See the Platform
               </Button>
             </Link>
           </div>
           <div className="mt-10 flex flex-wrap gap-2 animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-300 fill-mode-both">
             {["Per-tonne & per-load rates", "Digital dockets & POD", "Subcontractor portal included", "Xero invoicing"].map((pill) => (
-              <span key={pill} className="inline-block px-3 py-1 rounded-full text-xs font-semibold text-[#334155] bg-[#F1F5F9] border border-[#E2E8F0]">
+              <span key={pill} className="inline-block px-3 py-1 rounded-full text-xs font-semibold text-neutral-700 bg-neutral-100 border border-neutral-200">
                 {pill}
               </span>
             ))}
@@ -250,13 +250,13 @@ export default function BulkHaulagePage() {
       </section>
 
       {/* PROOF STRIP */}
-      <div className="bg-[#0F172A] py-6">
+      <div className="bg-neutral-900 py-6">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 lg:grid-cols-6 gap-6 text-center">
             {proofStrip.map((item) => (
               <div key={item.strong} className="flex flex-col items-center justify-center gap-1">
                 <strong className="text-white text-2xl font-bold">{item.strong}</strong>
-                <span className="text-[#94A3B8] text-xs uppercase tracking-wide">{item.label}</span>
+                <span className="text-neutral-400 text-xs uppercase tracking-wide">{item.label}</span>
               </div>
             ))}
           </div>
@@ -267,24 +267,24 @@ export default function BulkHaulagePage() {
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">What Bulk Haulage Actually Involves</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             High volume, short cycles, demanding clients — and a paper trail that doesn&apos;t keep up
           </h2>
           <div className="mt-8 grid lg:grid-cols-2 gap-10 items-start">
             <div>
-              <p className="text-[#475569] leading-relaxed">
+              <p className="text-neutral-600 leading-relaxed">
                 Bulk haulage is not route freight. The same truck might run eight loads in a day — quarry to site, back again, different material, same client or a different one. Each load generates a docket. Each docket needs to be captured, attached to the right job, and eventually turned into an invoice line. At volume, this process breaks with paper and spreadsheets.
               </p>
-              <p className="mt-4 text-[#475569] leading-relaxed">
+              <p className="mt-4 text-neutral-600 leading-relaxed">
                 Common job types include quarry-to-site aggregate delivery, spoil removal from excavation sites, fill placement for earthworks contractors, road base supply to construction projects, and bulk material transport between stockpile and processing. The work is high-frequency, often short-cycle, and billing usually tracks quantity rather than distance.
               </p>
-              <p className="mt-4 text-[#475569] leading-relaxed">
+              <p className="mt-4 text-neutral-600 leading-relaxed">
                 Most bulk haulage operators use a mix of owned trucks and subcontractors. Own trucks are the core capacity; subs fill demand when excavation accelerates or when multiple clients want trucks on the same day. Managing that mix — dispatching to both, getting visibility from both, and billing correctly from both — is where WhatsApp and spreadsheets start failing.
               </p>
             </div>
             <div>
-              <h3 className="font-bold text-[#0F172A] mb-4">Typical operational parties in a bulk haulage job</h3>
-              <ul className="space-y-3 text-[#475569] text-sm leading-relaxed">
+              <h3 className="font-bold text-neutral-900 mb-4">Typical operational parties in a bulk haulage job</h3>
+              <ul className="space-y-3 text-neutral-600 text-sm leading-relaxed">
                 {[
                   "Dispatcher — creates job, sets rate, assigns owned driver or delegates to sub",
                   "Own driver — runs the loads, captures docket or signature at site",
@@ -299,8 +299,8 @@ export default function BulkHaulagePage() {
                   </li>
                 ))}
               </ul>
-              <h3 className="font-bold text-[#0F172A] mt-8 mb-4">Charging models</h3>
-              <ul className="space-y-3 text-[#475569] text-sm leading-relaxed">
+              <h3 className="font-bold text-neutral-900 mt-8 mb-4">Charging models</h3>
+              <ul className="space-y-3 text-neutral-600 text-sm leading-relaxed">
                 {[
                   "Per tonne — most common for aggregate and fill; billing tracks actual tonnes delivered",
                   "Per load — common where weighbridge tickets are not available; fixed rate per truck movement",
@@ -319,17 +319,17 @@ export default function BulkHaulagePage() {
       </section>
 
       {/* WHERE SYSTEMS BREAK */}
-      <section className="py-20 bg-[#F8FAFC]">
+      <section className="py-20 bg-neutral-50/50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Where Systems Break</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             The six points where WhatsApp, paper and Excel stop working
           </h2>
           <div className="mt-10 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {breakCards.map((card) => (
-              <div key={card.title} className="bg-white rounded-2xl p-6 border border-[#E2E8F0]">
-                <h3 className="font-bold text-[#0F172A]">{card.title}</h3>
-                <p className="mt-3 text-sm text-[#475569] leading-relaxed">{card.p}</p>
+              <div key={card.title} className="bg-white rounded-2xl p-6 border border-neutral-200">
+                <h3 className="font-bold text-neutral-900">{card.title}</h3>
+                <p className="mt-3 text-sm text-neutral-600 leading-relaxed">{card.p}</p>
               </div>
             ))}
           </div>
@@ -340,29 +340,29 @@ export default function BulkHaulagePage() {
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">How HaulageOps Works for Bulk Haulage</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             The dispatch-to-invoice workflow, built for high-volume short-cycle operations
           </h2>
           <div className="mt-10 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {lifecycle.map((step) => (
-              <div key={step.num} className="bg-[#0F172A] rounded-2xl p-6">
+              <div key={step.num} className="bg-neutral-900 rounded-2xl p-6">
                 <span className="text-[#E8652B] font-bold text-2xl">{step.num}</span>
                 <h3 className="mt-3 font-bold text-white">{step.title}</h3>
-                <p className="mt-3 text-sm text-[#94A3B8] leading-relaxed">{step.p}</p>
+                <p className="mt-3 text-sm text-neutral-400 leading-relaxed">{step.p}</p>
               </div>
             ))}
           </div>
 
           {/* Dispatch board mockup */}
-          <div className="mt-12 rounded-2xl bg-[#0D1525] border border-[#1E293B] overflow-hidden">
-            <div className="flex items-center gap-2 px-5 py-3 bg-[#1E293B]">
+          <div className="mt-12 rounded-2xl bg-neutral-900 border-y border-neutral-800 border border-neutral-800 overflow-hidden">
+            <div className="flex items-center gap-2 px-5 py-3 bg-neutral-800">
               <span className="h-2.5 w-2.5 rounded-full bg-[#E8652B]" />
               <span className="h-2.5 w-2.5 rounded-full bg-[#94A3B8]" />
               <span className="h-2.5 w-2.5 rounded-full bg-[#475569]" />
-              <span className="ml-3 text-xs font-semibold text-[#CBD5E1]">HaulageOps Dispatch Board — Bulk Haulage View</span>
+              <span className="ml-3 text-xs font-semibold text-neutral-300">HaulageOps Dispatch Board — Bulk Haulage View</span>
             </div>
             <div className="p-6">
-              <p className="text-sm text-[#94A3B8] leading-relaxed">
+              <p className="text-sm text-neutral-400 leading-relaxed">
                 Screenshot: Admin Panel dispatch board showing multiple active bulk haulage jobs. Left panel shows job list with material type (roadbase, fill, aggregate), client name, tonne rate, and status (dispatched, en route, delivered). Right panel shows map with driver GPS positions. Own trucks shown in blue; subcontractor trucks in orange. One job expanded showing driver name, truck rego, load count for the day, and docket thumbnail attached.
               </p>
             </div>
@@ -371,22 +371,22 @@ export default function BulkHaulagePage() {
       </section>
 
       {/* RELEVANT MODULES */}
-      <section className="py-20 bg-[#F8FAFC]">
+      <section className="py-20 bg-neutral-50/50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Relevant Modules</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             Platform features that apply directly to bulk haulage operations
           </h2>
           <div className="mt-10 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {modules.map((card) => (
-              <div key={card.title} className="bg-white rounded-2xl p-6 border border-[#E2E8F0]">
-                <h3 className="font-bold text-[#0F172A] mb-2">
+              <div key={card.title} className="bg-white rounded-2xl p-6 border border-neutral-200">
+                <h3 className="font-bold text-neutral-900 mb-2">
                   <Link href={card.href} className="hover:text-[#E8652B] transition-colors">{card.title}</Link>
                 </h3>
-                <p className="text-sm text-[#475569] leading-relaxed">{card.p}</p>
+                <p className="text-sm text-neutral-600 leading-relaxed">{card.p}</p>
                 <ul className="mt-5 space-y-3">
                   {card.bullets.map((item) => (
-                    <li key={item} className="flex items-start gap-2 text-sm text-[#334155]">
+                    <li key={item} className="flex items-start gap-2 text-sm text-neutral-700">
                       <CheckCircle className="h-4 w-4 text-[#E8652B] shrink-0 mt-0.5" />
                       <span>{item}</span>
                     </li>
@@ -405,17 +405,17 @@ export default function BulkHaulagePage() {
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Frequently Asked Questions</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A]">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900">
             Bulk haulage questions about HaulageOps
           </h2>
           <div className="mt-8 space-y-3">
             {faqs.map((faq) => (
-              <details key={faq.q} className="group border border-[#E2E8F0] bg-white rounded-xl overflow-hidden">
-                <summary className="flex items-center justify-between gap-4 px-6 py-4 cursor-pointer font-semibold text-[#0F172A] text-sm list-none hover:bg-[#F8FAFC]">
+              <details key={faq.q} className="group border border-neutral-200 bg-white rounded-xl overflow-hidden">
+                <summary className="flex items-center justify-between gap-4 px-6 py-4 cursor-pointer font-semibold text-neutral-900 text-sm list-none hover:bg-neutral-50/50">
                   {faq.q}
-                  <ChevronRight className="h-4 w-4 text-[#94A3B8] shrink-0 group-open:rotate-90 transition-transform" />
+                  <ChevronRight className="h-4 w-4 text-neutral-400 shrink-0 group-open:rotate-90 transition-transform" />
                 </summary>
-                <div className="px-6 pb-5 text-sm text-[#475569] leading-relaxed border-t border-[#F1F5F9]">
+                <div className="px-6 pb-5 text-sm text-neutral-600 leading-relaxed border-t border-neutral-100">
                   <p className="pt-4">{faq.a}</p>
                 </div>
               </details>
@@ -425,19 +425,19 @@ export default function BulkHaulagePage() {
       </section>
 
       {/* RELATED PAGES */}
-      <section className="py-20 bg-[#F8FAFC]">
+      <section className="py-20 bg-neutral-50/50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Related Pages</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             More on managing bulk haulage with HaulageOps
           </h2>
           <div className="mt-10 grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {relatedCards.map((card) => (
-              <div key={card.title} className="bg-white rounded-2xl p-6 border border-[#E2E8F0]">
-                <h3 className="font-bold text-[#0F172A] mb-2">
+              <div key={card.title} className="bg-white rounded-2xl p-6 border border-neutral-200">
+                <h3 className="font-bold text-neutral-900 mb-2">
                   <Link href={card.href} className="hover:text-[#E8652B] transition-colors">{card.title}</Link>
                 </h3>
-                <p className="text-sm text-[#475569] leading-relaxed">{card.p}</p>
+                <p className="text-sm text-neutral-600 leading-relaxed">{card.p}</p>
                 <Link href={card.href} className="mt-3 inline-flex items-center gap-1 text-sm text-[#E8652B] hover:underline font-medium">
                   Learn more <ArrowRight className="h-3.5 w-3.5" />
                 </Link>
@@ -448,11 +448,11 @@ export default function BulkHaulagePage() {
       </section>
 
       {/* CTA BAND */}
-      <section className="py-16 bg-[#0F172A]">
+      <section className="py-16 bg-neutral-900">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
           <div>
             <h2 className="text-2xl sm:text-3xl font-bold text-white">See how HaulageOps runs a bulk haulage operation</h2>
-            <p className="mt-2 text-[#94A3B8] text-sm leading-relaxed max-w-xl">
+            <p className="mt-2 text-neutral-400 text-sm leading-relaxed max-w-xl">
               20-minute walkthrough of the dispatch board, per-tonne billing, driver app, subcontractor portal and Xero integration — in the workflow bulk haulage actually uses.
             </p>
           </div>

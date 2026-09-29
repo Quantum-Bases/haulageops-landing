@@ -209,28 +209,28 @@ export default function ConstructionLogisticsPage() {
   return (
     <MainLayout showCta={false}>
       {/* Breadcrumb */}
-      <div className="pt-24 pb-0 bg-[#FFF9F5]">
+      <div className="pt-24 pb-0 bg-neutral-50/70">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <nav className="flex items-center gap-2 text-xs text-[#64748B]">
+          <nav className="flex items-center gap-2 text-xs text-neutral-500">
             <Link href="/" className="hover:text-[#E8652B]">Home</Link>
             <ChevronRight className="h-3 w-3" />
             <Link href="/industries" className="hover:text-[#E8652B]">Industries</Link>
             <ChevronRight className="h-3 w-3" />
-            <span className="text-[#0F172A] font-medium">Construction Logistics</span>
+            <span className="text-neutral-900 font-medium">Construction Logistics</span>
           </nav>
         </div>
       </div>
 
       {/* HERO */}
-      <section className="pt-10 pb-20 bg-gradient-to-b from-[#FFF9F5] via-[#FFF5EE]/40 to-white">
+      <section className="pt-10 pb-20 bg-gradient-to-b from-neutral-50/80 via-white to-white border-b border-neutral-200">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-[#E8652B] bg-[#FFF0E6] mb-4 animate-in fade-in slide-in-from-bottom-4 animation-duration-700 fill-mode-both">
+          <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-[#E8652B] bg-orange-50 border border-orange-200 mb-4 animate-in fade-in slide-in-from-bottom-4 animation-duration-700 fill-mode-both">
             Construction Logistics
           </span>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#0F172A] max-w-4xl leading-[1.1] animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-100 fill-mode-both">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-neutral-900 max-w-4xl leading-[1.1] animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-100 fill-mode-both">
             Construction logistics is too complex for a generic transport system.
           </h1>
-          <p className="mt-6 text-lg sm:text-xl text-[#475569] max-w-3xl leading-relaxed animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-150 fill-mode-both">
+          <p className="mt-6 text-lg sm:text-xl text-neutral-600 max-w-3xl leading-relaxed animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-150 fill-mode-both">
             Multiple concurrent projects, multiple clients with different rate structures, active construction sites with access restrictions, subcontractor overflow, and every site super expecting a call when the truck is five minutes away — construction logistics needs a system built for that reality, not a horizontal TMS with a construction filter applied.
           </p>
           <div className="mt-8 flex flex-wrap gap-3 animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-200 fill-mode-both">
@@ -240,14 +240,14 @@ export default function ConstructionLogisticsPage() {
               </Button>
             </Link>
             <Link href="/solutions/owned-and-subcontracted-fleets">
-              <Button size="lg" variant="outline" className="border-[#E2E8F0] text-[#334155] hover:bg-[#F8FAFC]">
+              <Button size="lg" variant="outline" className="border-neutral-200 text-neutral-700 hover:bg-neutral-50/50">
                 Owned &amp; Sub Fleets
               </Button>
             </Link>
           </div>
           <div className="mt-10 flex flex-wrap gap-2 animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-300 fill-mode-both">
             {["Multi-client dispatch", "Per-client rate cards", "Client portal per site contact", "Subcontractor overflow"].map((pill) => (
-              <span key={pill} className="inline-block px-3 py-1 rounded-full text-xs font-semibold text-[#334155] bg-[#F1F5F9] border border-[#E2E8F0]">
+              <span key={pill} className="inline-block px-3 py-1 rounded-full text-xs font-semibold text-neutral-700 bg-neutral-100 border border-neutral-200">
                 {pill}
               </span>
             ))}
@@ -256,13 +256,13 @@ export default function ConstructionLogisticsPage() {
       </section>
 
       {/* PROOF STRIP */}
-      <div className="bg-[#0F172A] py-6">
+      <div className="bg-neutral-900 py-6">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 lg:grid-cols-6 gap-6 text-center">
             {proofStrip.map((item) => (
               <div key={item.strong} className="flex flex-col items-center justify-center gap-1">
                 <strong className="text-white text-2xl font-bold">{item.strong}</strong>
-                <span className="text-[#94A3B8] text-xs uppercase tracking-wide">{item.label}</span>
+                <span className="text-neutral-400 text-xs uppercase tracking-wide">{item.label}</span>
               </div>
             ))}
           </div>
@@ -273,24 +273,24 @@ export default function ConstructionLogisticsPage() {
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">What Construction Logistics Actually Involves</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             Multiple clients, multiple sites, multiple rate structures — running simultaneously
           </h2>
           <div className="mt-8 grid lg:grid-cols-2 gap-10 items-start">
             <div>
-              <p className="text-[#475569] leading-relaxed">
+              <p className="text-neutral-600 leading-relaxed">
                 Construction logistics is not civil construction from the operator&apos;s perspective. Where civil construction operators typically work under one or two principal contractors at a time, a construction logistics operator is running deliveries for five or ten construction clients concurrently — different builders, different projects, different sites, different material types, and different rate agreements with each.
               </p>
-              <p className="mt-4 text-[#475569] leading-relaxed">
+              <p className="mt-4 text-neutral-600 leading-relaxed">
                 Active construction sites add a layer of operational complexity that general TMS tools are not built for. Sites have access restrictions — time windows, vehicle height limits, one-way access roads, marshalling requirements. A delivery that arrives outside the access window holds up the programme and creates friction with the site super. That friction becomes a client relationship problem. The site super expects the driver to arrive correctly briefed on site access, not to call the office from the gate.
               </p>
-              <p className="mt-4 text-[#475569] leading-relaxed">
+              <p className="mt-4 text-neutral-600 leading-relaxed">
                 Material types in construction logistics are also diverse within a single day&apos;s dispatch. One truck might deliver aggregate to a road base layer in the morning and collect concrete washout from a different site in the afternoon. Another might deliver drainage pipe bedding material at 7am and run fill to a slab preparation later. Managing the rate implications of different material types, different clients, and different billing models across a day of varied dispatch requires a system that holds all of it — not separate spreadsheets per client.
               </p>
             </div>
             <div>
-              <h3 className="font-bold text-[#0F172A] mb-4">Construction logistics operational characteristics</h3>
-              <ul className="space-y-3 text-[#475569] text-sm leading-relaxed">
+              <h3 className="font-bold text-neutral-900 mb-4">Construction logistics operational characteristics</h3>
+              <ul className="space-y-3 text-neutral-600 text-sm leading-relaxed">
                 {[
                   "Multiple concurrent projects for different builder clients",
                   "Active construction sites with access windows and restrictions",
@@ -306,8 +306,8 @@ export default function ConstructionLogisticsPage() {
                   </li>
                 ))}
               </ul>
-              <h3 className="font-bold text-[#0F172A] mt-8 mb-4">The billing challenge</h3>
-              <p className="text-[#475569] text-sm leading-relaxed">
+              <h3 className="font-bold text-neutral-900 mt-8 mb-4">The billing challenge</h3>
+              <p className="text-neutral-600 text-sm leading-relaxed">
                 When you have six active clients, each with a different rate card, and each day&apos;s dispatch mixes client jobs across your fleet, the invoicing process at week&apos;s end is where errors accumulate. A rate applied to the wrong client, a load count off by one, a delivery billed at last month&apos;s rate — each is small individually and expensive collectively when clients catch them and lose confidence in your billing accuracy.
               </p>
             </div>
@@ -316,17 +316,17 @@ export default function ConstructionLogisticsPage() {
       </section>
 
       {/* WHERE CONSTRUCTION LOGISTICS OPERATIONS BREAK DOWN */}
-      <section className="py-20 bg-[#F8FAFC]">
+      <section className="py-20 bg-neutral-50/50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Where Construction Logistics Operations Break Down</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             The specific failure points that make generic TMS tools inadequate for construction logistics
           </h2>
           <div className="mt-10 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {breakCards.map((card) => (
-              <div key={card.title} className="bg-white rounded-2xl p-6 border border-[#E2E8F0]">
-                <h3 className="font-bold text-[#0F172A]">{card.title}</h3>
-                <p className="mt-3 text-sm text-[#475569] leading-relaxed">{card.p}</p>
+              <div key={card.title} className="bg-white rounded-2xl p-6 border border-neutral-200">
+                <h3 className="font-bold text-neutral-900">{card.title}</h3>
+                <p className="mt-3 text-sm text-neutral-600 leading-relaxed">{card.p}</p>
               </div>
             ))}
           </div>
@@ -337,29 +337,29 @@ export default function ConstructionLogisticsPage() {
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">HaulageOps for Construction Logistics</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             Multi-client dispatch, per-client rates, client self-service, and Xero — in one operation
           </h2>
           <div className="mt-10 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {lifecycle.map((step) => (
-              <div key={step.num} className="bg-[#0F172A] rounded-2xl p-6">
+              <div key={step.num} className="bg-neutral-900 rounded-2xl p-6">
                 <span className="text-[#E8652B] font-bold text-2xl">{step.num}</span>
                 <h3 className="mt-3 font-bold text-white">{step.title}</h3>
-                <p className="mt-3 text-sm text-[#94A3B8] leading-relaxed">{step.p}</p>
+                <p className="mt-3 text-sm text-neutral-400 leading-relaxed">{step.p}</p>
               </div>
             ))}
           </div>
 
           {/* Multi-client dispatch board mockup */}
-          <div className="mt-12 rounded-2xl bg-[#0D1525] border border-[#1E293B] overflow-hidden">
-            <div className="flex items-center gap-2 px-5 py-3 bg-[#1E293B]">
+          <div className="mt-12 rounded-2xl bg-neutral-900 border-y border-neutral-800 border border-neutral-800 overflow-hidden">
+            <div className="flex items-center gap-2 px-5 py-3 bg-neutral-800">
               <span className="h-2.5 w-2.5 rounded-full bg-[#E8652B]" />
               <span className="h-2.5 w-2.5 rounded-full bg-[#94A3B8]" />
               <span className="h-2.5 w-2.5 rounded-full bg-[#475569]" />
-              <span className="ml-3 text-xs font-semibold text-[#CBD5E1]">HaulageOps — Multi-Client Construction Logistics Dispatch Board</span>
+              <span className="ml-3 text-xs font-semibold text-neutral-300">HaulageOps — Multi-Client Construction Logistics Dispatch Board</span>
             </div>
             <div className="p-6">
-              <p className="text-sm text-[#94A3B8] leading-relaxed">
+              <p className="text-sm text-neutral-400 leading-relaxed">
                 Screenshot: Admin Panel dispatch board in multi-client view. Left column: job list showing 8 active jobs across 4 clients (client names colour-coded). Each job shows: client name, site address, material type, rate type (per tonne / per load), assigned driver or sub, current status (en route / at site / delivered). Filter bar at top: &quot;All clients&quot; dropdown currently showing all. Right side: map with 6 truck positions marked — 4 own trucks (blue pins), 2 sub trucks (orange pins). One selected job highlighted: driver name, ETA displayed as &quot;12 minutes&quot;, last POD photo thumbnail visible.
               </p>
             </div>
@@ -368,22 +368,22 @@ export default function ConstructionLogisticsPage() {
       </section>
 
       {/* RELEVANT PLATFORM FEATURES */}
-      <section className="py-20 bg-[#F8FAFC]">
+      <section className="py-20 bg-neutral-50/50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Relevant Platform Features</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             The features construction logistics operators use most in HaulageOps
           </h2>
           <div className="mt-10 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {modules.map((card) => (
-              <div key={card.title} className="bg-white rounded-2xl p-6 border border-[#E2E8F0]">
-                <h3 className="font-bold text-[#0F172A] mb-2">
+              <div key={card.title} className="bg-white rounded-2xl p-6 border border-neutral-200">
+                <h3 className="font-bold text-neutral-900 mb-2">
                   <Link href={card.href} className="hover:text-[#E8652B] transition-colors">{card.title}</Link>
                 </h3>
-                <p className="text-sm text-[#475569] leading-relaxed">{card.p}</p>
+                <p className="text-sm text-neutral-600 leading-relaxed">{card.p}</p>
                 <ul className="mt-5 space-y-3">
                   {card.bullets.map((item) => (
-                    <li key={item} className="flex items-start gap-2 text-sm text-[#334155]">
+                    <li key={item} className="flex items-start gap-2 text-sm text-neutral-700">
                       <CheckCircle className="h-4 w-4 text-[#E8652B] shrink-0 mt-0.5" />
                       <span>{item}</span>
                     </li>
@@ -402,17 +402,17 @@ export default function ConstructionLogisticsPage() {
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Frequently Asked Questions</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A]">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900">
             Construction logistics questions about HaulageOps
           </h2>
           <div className="mt-8 space-y-3">
             {faqs.map((faq) => (
-              <details key={faq.q} className="group border border-[#E2E8F0] bg-white rounded-xl overflow-hidden">
-                <summary className="flex items-center justify-between gap-4 px-6 py-4 cursor-pointer font-semibold text-[#0F172A] text-sm list-none hover:bg-[#F8FAFC]">
+              <details key={faq.q} className="group border border-neutral-200 bg-white rounded-xl overflow-hidden">
+                <summary className="flex items-center justify-between gap-4 px-6 py-4 cursor-pointer font-semibold text-neutral-900 text-sm list-none hover:bg-neutral-50/50">
                   {faq.q}
-                  <ChevronRight className="h-4 w-4 text-[#94A3B8] shrink-0 group-open:rotate-90 transition-transform" />
+                  <ChevronRight className="h-4 w-4 text-neutral-400 shrink-0 group-open:rotate-90 transition-transform" />
                 </summary>
-                <div className="px-6 pb-5 text-sm text-[#475569] leading-relaxed border-t border-[#F1F5F9]">
+                <div className="px-6 pb-5 text-sm text-neutral-600 leading-relaxed border-t border-neutral-100">
                   <p className="pt-4">{faq.a}</p>
                 </div>
               </details>
@@ -422,19 +422,19 @@ export default function ConstructionLogisticsPage() {
       </section>
 
       {/* RELATED PAGES */}
-      <section className="py-20 bg-[#F8FAFC]">
+      <section className="py-20 bg-neutral-50/50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Related Pages</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             Related industries and features for construction logistics operators
           </h2>
           <div className="mt-10 grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {relatedCards.map((card) => (
-              <div key={card.title} className="bg-white rounded-2xl p-6 border border-[#E2E8F0]">
-                <h3 className="font-bold text-[#0F172A] mb-2">
+              <div key={card.title} className="bg-white rounded-2xl p-6 border border-neutral-200">
+                <h3 className="font-bold text-neutral-900 mb-2">
                   <Link href={card.href} className="hover:text-[#E8652B] transition-colors">{card.title}</Link>
                 </h3>
-                <p className="text-sm text-[#475569] leading-relaxed">{card.p}</p>
+                <p className="text-sm text-neutral-600 leading-relaxed">{card.p}</p>
                 <Link href={card.href} className="mt-3 inline-flex items-center gap-1 text-sm text-[#E8652B] hover:underline font-medium">
                   View page <ArrowRight className="h-3.5 w-3.5" />
                 </Link>
@@ -445,11 +445,11 @@ export default function ConstructionLogisticsPage() {
       </section>
 
       {/* CTA BAND */}
-      <section className="py-16 bg-[#0F172A]">
+      <section className="py-16 bg-neutral-900">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
           <div>
             <h2 className="text-2xl sm:text-3xl font-bold text-white">See how HaulageOps handles multi-client construction logistics</h2>
-            <p className="mt-2 text-[#94A3B8] text-sm leading-relaxed max-w-xl">
+            <p className="mt-2 text-neutral-400 text-sm leading-relaxed max-w-xl">
               20-minute demo: multi-client dispatch board, per-client rate cards, site super portal access, subcontractor delegation, digital POD, and Xero invoicing per client — shown as one connected operation.
             </p>
           </div>

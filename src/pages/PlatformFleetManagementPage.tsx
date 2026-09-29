@@ -85,25 +85,25 @@ export function PlatformFleetManagementPage() {
   return (
     <MainLayout showCta={false}>
       {/* Breadcrumb */}
-      <div className="pt-24 pb-0 bg-[#FFF9F5]">
+      <div className="pt-24 pb-0 bg-neutral-50/70">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <nav className="flex items-center gap-2 text-xs text-[#64748B]">
+          <nav className="flex items-center gap-2 text-xs text-neutral-500">
             <Link href="/" className="hover:text-[#E8652B]">Home</Link>
             <ChevronRight className="h-3 w-3" />
             <Link href="/platform" className="hover:text-[#E8652B]">Platform</Link>
             <ChevronRight className="h-3 w-3" />
-            <span className="text-[#0F172A] font-medium">Fleet Management</span>
+            <span className="text-neutral-900 font-medium">Fleet Management</span>
           </nav>
         </div>
       </div>
 
       {/* HERO */}
-      <section className="pt-10 pb-20 bg-gradient-to-b from-[#FFF9F5] via-[#FFF5EE]/40 to-white">
+      <section className="pt-10 pb-20 bg-gradient-to-b from-neutral-50/80 via-white to-white border-b border-neutral-200">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <motion.span
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
-            className="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-[#E8652B] bg-[#FFF0E6] mb-4"
+            className="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-[#E8652B] bg-orange-50 border border-orange-200 mb-4"
           >
             Mobile & Fleet
           </motion.span>
@@ -111,7 +111,7 @@ export function PlatformFleetManagementPage() {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.05 }}
-            className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#0F172A] max-w-4xl leading-[1.1]"
+            className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-neutral-900 max-w-4xl leading-[1.1]"
           >
             Your fleet records, connected to your dispatch workflow.
           </motion.h1>
@@ -119,7 +119,7 @@ export function PlatformFleetManagementPage() {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="mt-6 text-lg sm:text-xl text-[#475569] max-w-3xl leading-relaxed"
+            className="mt-6 text-lg sm:text-xl text-neutral-600 max-w-3xl leading-relaxed"
           >
             Vehicle profiles, availability tracking and document expiry alerts — all stored in HaulageOps and connected to the jobs you assign each day. No disconnected spreadsheet for rego renewals. No surprise that a vehicle's inspection lapsed last month.
           </motion.p>
@@ -135,7 +135,7 @@ export function PlatformFleetManagementPage() {
               </Button>
             </Link>
             <Link href="/platform/driver-management">
-              <Button size="lg" variant="outline" className="border-[#E2E8F0] text-[#334155] hover:bg-[#F8FAFC]">
+              <Button size="lg" variant="outline" className="border-neutral-200 text-neutral-700 hover:bg-neutral-50/50">
                 Driver Management
               </Button>
             </Link>
@@ -148,8 +148,8 @@ export function PlatformFleetManagementPage() {
               "Assign vehicles to jobs",
               "Fleet view in dispatch board",
             ].map((pill) => (
-              <span key={pill} className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#F1F5F9] text-xs font-medium text-[#334155]">
-                <CheckCircle className="h-3.5 w-3.5 text-[#16A34A] shrink-0" />
+              <span key={pill} className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-neutral-100 text-xs font-medium text-neutral-700">
+                <CheckCircle className="h-3.5 w-3.5 text-[#E8652B] shrink-0" />
                 {pill}
               </span>
             ))}
@@ -158,7 +158,7 @@ export function PlatformFleetManagementPage() {
       </section>
 
       {/* PROOF STRIP */}
-      <div className="bg-[#0F172A] py-5">
+      <div className="bg-neutral-900 py-5">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 text-center">
             {[
@@ -170,7 +170,7 @@ export function PlatformFleetManagementPage() {
             ].map((item) => (
               <div key={item.strong} className="flex flex-col gap-0.5">
                 <span className="text-white font-bold text-sm">{item.strong}</span>
-                <span className="text-[#94A3B8] text-xs">{item.sub}</span>
+                <span className="text-neutral-400 text-xs">{item.sub}</span>
               </div>
             ))}
           </div>
@@ -181,15 +181,15 @@ export function PlatformFleetManagementPage() {
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Vehicle Records</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             Every vehicle in your fleet has a profile. Every profile is connected to operations.
           </h2>
-          <p className="mt-4 text-[#475569] max-w-3xl leading-relaxed">
+          <p className="mt-4 text-neutral-600 max-w-3xl leading-relaxed">
             Fleet management in HaulageOps starts with a vehicle record for each unit in your owned fleet. That record is not a standalone data entry — it connects directly to dispatch. When a dispatcher assigns a vehicle to a job, they select from the fleet records. The vehicle's availability, document status and capacity are visible at the point of assignment.
           </p>
           <div className="mt-10 grid md:grid-cols-2 gap-8">
-            <div className="bg-[#F8FAFC] rounded-2xl p-8 border border-[#E2E8F0]">
-              <h3 className="text-xl font-bold text-[#0F172A] mb-5">What each vehicle record stores</h3>
+            <div className="bg-neutral-50/50 rounded-2xl p-8 border border-neutral-200">
+              <h3 className="text-xl font-bold text-neutral-900 mb-5">What each vehicle record stores</h3>
               <ul className="space-y-3">
                 {[
                   ["Make and model", "vehicle manufacturer and model name"],
@@ -200,15 +200,15 @@ export function PlatformFleetManagementPage() {
                   ["Assigned driver", "primary driver linked to the vehicle (if applicable)"],
                   ["Notes", "internal notes about the vehicle's current condition or restrictions"],
                 ].map(([label, detail]) => (
-                  <li key={label} className="flex items-start gap-2 text-sm text-[#334155]">
+                  <li key={label} className="flex items-start gap-2 text-sm text-neutral-700">
                     <CheckCircle className="h-4 w-4 text-[#E8652B] shrink-0 mt-0.5" />
                     <span><strong>{label}</strong> — {detail}</span>
                   </li>
                 ))}
               </ul>
             </div>
-            <div className="bg-[#F8FAFC] rounded-2xl p-8 border border-[#E2E8F0]">
-              <h3 className="text-xl font-bold text-[#0F172A] mb-5">Document expiry tracked per vehicle</h3>
+            <div className="bg-neutral-50/50 rounded-2xl p-8 border border-neutral-200">
+              <h3 className="text-xl font-bold text-neutral-900 mb-5">Document expiry tracked per vehicle</h3>
               <ul className="space-y-3">
                 {[
                   ["Registration", "rego expiry date with alert before it lapses"],
@@ -218,7 +218,7 @@ export function PlatformFleetManagementPage() {
                   ["Other compliance documents", "upload and track any vehicle-specific document"],
                   ["Expiry alerts", "flagged in the admin panel before they become problems"],
                 ].map(([label, detail]) => (
-                  <li key={label} className="flex items-start gap-2 text-sm text-[#334155]">
+                  <li key={label} className="flex items-start gap-2 text-sm text-neutral-700">
                     <CheckCircle className="h-4 w-4 text-[#E8652B] shrink-0 mt-0.5" />
                     <span><strong>{label}</strong> — {detail}</span>
                   </li>
@@ -230,13 +230,13 @@ export function PlatformFleetManagementPage() {
       </section>
 
       {/* PLATFORM VIEW VISUAL SPEC */}
-      <section className="py-20 bg-[#F8FAFC]">
+      <section className="py-20 bg-neutral-50/50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Platform View</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             Fleet view — available vehicles, expiring documents, current assignments.
           </h2>
-          <div className="mt-8 rounded-2xl border border-[#E2E8F0] bg-[#0D1525] p-8 text-[#94A3B8] text-sm font-mono leading-relaxed">
+          <div className="mt-8 rounded-2xl border border-neutral-200 bg-neutral-900 border-y border-neutral-800 p-8 text-neutral-400 text-sm font-mono leading-relaxed">
             <div className="text-[#E8652B] font-bold mb-2 text-xs uppercase tracking-widest">HaulageOps — Fleet Management Panel</div>
             <p>Fleet management table in Admin Panel. Columns: Vehicle (rego + make/model), Type, Capacity, Status (Available/In Use/Off Road — colour-coded), Assigned Driver, Rego Expiry (green if current, amber if within 30 days, red if lapsed), Inspection Due, Current Job link. Filter bar: All Types / Available Only / Documents Expiring Soon. One row highlighted in amber — registration expires in 18 days. One row with red flag — inspection overdue. Clicking a vehicle row opens the vehicle detail panel with full document history.</p>
           </div>
@@ -247,17 +247,17 @@ export function PlatformFleetManagementPage() {
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Dispatch Connection</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             Fleet availability feeds directly into the dispatch workflow.
           </h2>
-          <p className="mt-4 text-[#475569] max-w-3xl leading-relaxed">
+          <p className="mt-4 text-neutral-600 max-w-3xl leading-relaxed">
             The point of maintaining fleet records in HaulageOps — rather than in a separate system — is the connection to daily dispatch. When a dispatcher creates a job and selects a vehicle to assign, they see the fleet list filtered to available vehicles of the appropriate type. A vehicle marked as under maintenance or off-road does not appear as assignable. A vehicle with an expired document is flagged before the assignment is saved.
           </p>
           <div className="mt-10 grid md:grid-cols-3 gap-6">
             {vehicleCards.map((card) => (
-              <div key={card.title} className="bg-[#F8FAFC] rounded-2xl p-6 border border-[#E2E8F0]">
-                <h3 className="font-bold text-[#0F172A] mb-2">{card.title}</h3>
-                <p className="text-sm text-[#475569] leading-relaxed">{card.desc}</p>
+              <div key={card.title} className="bg-neutral-50/50 rounded-2xl p-6 border border-neutral-200">
+                <h3 className="font-bold text-neutral-900 mb-2">{card.title}</h3>
+                <p className="text-sm text-neutral-600 leading-relaxed">{card.desc}</p>
               </div>
             ))}
           </div>
@@ -265,22 +265,22 @@ export function PlatformFleetManagementPage() {
       </section>
 
       {/* DOCUMENT EXPIRY MANAGEMENT */}
-      <section className="py-20 bg-[#F8FAFC]">
+      <section className="py-20 bg-neutral-50/50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Document Expiry</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             No more discovering expired registrations the morning of a job.
           </h2>
-          <p className="mt-4 text-[#475569] max-w-3xl leading-relaxed">
+          <p className="mt-4 text-neutral-600 max-w-3xl leading-relaxed">
             The most common fleet administration failure mode is simple: a registration or inspection slips past its expiry date because nobody was watching a spreadsheet closely enough. HaulageOps tracks document expiry dates for every vehicle and surfaces alerts before the expiry arrives — not after.
           </p>
           <div className="mt-10 grid md:grid-cols-2 gap-8">
             <div>
-              <h3 className="text-xl font-bold text-[#0F172A]">How expiry alerts work</h3>
-              <p className="mt-3 text-sm text-[#475569] leading-relaxed">
+              <h3 className="text-xl font-bold text-neutral-900">How expiry alerts work</h3>
+              <p className="mt-3 text-sm text-neutral-600 leading-relaxed">
                 When you enter a document expiry date on a vehicle record — registration, inspection, CTP, permit — HaulageOps monitors that date and flags the vehicle in the admin panel as the expiry approaches. The alert threshold (for example, 30 days before expiry) can be set to give your admin team sufficient lead time to arrange renewal before operations are affected.
               </p>
-              <p className="mt-3 text-sm text-[#475569] leading-relaxed">
+              <p className="mt-3 text-sm text-neutral-600 leading-relaxed">
                 A vehicle with an expiring or lapsed document is visually flagged in the fleet view. Dispatchers assigning jobs see the flag on any vehicle in that state. The system does not automatically prevent assignment — it surfaces the information so the human making the decision has it — but the flag is prominent enough that it will not be overlooked.
               </p>
               <ul className="mt-4 space-y-2">
@@ -292,19 +292,19 @@ export function PlatformFleetManagementPage() {
                   "Documents stored in HaulageOps (Azure Blob Storage) alongside expiry dates",
                   "No separate spreadsheet for rego renewals required",
                 ].map((item) => (
-                  <li key={item} className="flex items-start gap-2 text-sm text-[#334155]">
-                    <CheckCircle className="h-4 w-4 text-[#16A34A] shrink-0 mt-0.5" />
+                  <li key={item} className="flex items-start gap-2 text-sm text-neutral-700">
+                    <CheckCircle className="h-4 w-4 text-[#E8652B] shrink-0 mt-0.5" />
                     {item}
                   </li>
                 ))}
               </ul>
             </div>
             <div>
-              <h3 className="text-xl font-bold text-[#0F172A]">Why this matters for operations</h3>
-              <p className="mt-3 text-sm text-[#475569] leading-relaxed">
+              <h3 className="text-xl font-bold text-neutral-900">Why this matters for operations</h3>
+              <p className="mt-3 text-sm text-neutral-600 leading-relaxed">
                 Running a vehicle with a lapsed registration or an overdue inspection creates liability for the operating company. Beyond the direct penalty for the breach, it creates exposure in the event of an incident — insurers and regulators will look at the compliance record of the vehicle involved. Knowing that a vehicle's documents are current is a basic compliance obligation, not an advanced requirement.
               </p>
-              <p className="mt-3 text-sm text-[#475569] leading-relaxed">
+              <p className="mt-3 text-sm text-neutral-600 leading-relaxed">
                 The practical challenge for operators managing 15–80 vehicles is that tracking expiry dates across the fleet in a spreadsheet requires someone to actively review the spreadsheet regularly. Most operators find this either slips through gaps in busy periods, or requires a dedicated admin task that consumes disproportionate time. HaulageOps removes the need for active monitoring — the system flags what needs attention without anyone having to check a spreadsheet.
               </p>
               <ul className="mt-4 space-y-2">
@@ -315,8 +315,8 @@ export function PlatformFleetManagementPage() {
                   "Provides an audit-ready record of document renewal history",
                   "Works alongside driver document management for complete fleet compliance visibility",
                 ].map((item) => (
-                  <li key={item} className="flex items-start gap-2 text-sm text-[#334155]">
-                    <CheckCircle className="h-4 w-4 text-[#16A34A] shrink-0 mt-0.5" />
+                  <li key={item} className="flex items-start gap-2 text-sm text-neutral-700">
+                    <CheckCircle className="h-4 w-4 text-[#E8652B] shrink-0 mt-0.5" />
                     {item}
                   </li>
                 ))}
@@ -330,17 +330,17 @@ export function PlatformFleetManagementPage() {
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Mixed Fleets</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             Tippers, semis, rigids, dogs — your mixed fleet, one place.
           </h2>
-          <p className="mt-4 text-[#475569] max-w-3xl leading-relaxed">
+          <p className="mt-4 text-neutral-600 max-w-3xl leading-relaxed">
             Bulk haulage operators rarely run a single vehicle type. A typical fleet might include rigid tippers for urban site work, semi-tippers or dog combinations for higher-volume quarry runs, and specialised vehicles for specific material types. HaulageOps fleet management handles mixed vehicle types within a single fleet view.
           </p>
           <div className="mt-10 grid md:grid-cols-3 gap-6">
             {mixedFleetCards.map((mc) => (
-              <div key={mc.title} className="bg-[#F8FAFC] rounded-2xl p-6 border border-[#E2E8F0]">
-                <h3 className="font-bold text-[#0F172A] mb-2">{mc.title}</h3>
-                <p className="text-sm text-[#475569] leading-relaxed">{mc.desc}</p>
+              <div key={mc.title} className="bg-neutral-50/50 rounded-2xl p-6 border border-neutral-200">
+                <h3 className="font-bold text-neutral-900 mb-2">{mc.title}</h3>
+                <p className="text-sm text-neutral-600 leading-relaxed">{mc.desc}</p>
               </div>
             ))}
           </div>
@@ -348,25 +348,25 @@ export function PlatformFleetManagementPage() {
       </section>
 
       {/* CONNECTED PLATFORM */}
-      <section className="py-20 bg-[#F8FAFC]">
+      <section className="py-20 bg-neutral-50/50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Connected Platform</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             Fleet records connect to drivers, dispatch and compliance.
           </h2>
           <div className="mt-10 grid md:grid-cols-3 gap-6">
             {connectedModules.map((mod) => (
-              <div key={mod.title} className="bg-white rounded-2xl p-6 border border-[#E2E8F0] shadow-sm">
-                <h3 className="font-bold text-[#0F172A] mb-2">
+              <div key={mod.title} className="bg-white rounded-2xl p-6 border border-neutral-200 shadow-sm">
+                <h3 className="font-bold text-neutral-900 mb-2">
                   <Link href={mod.href} className="hover:text-[#E8652B] transition-colors">
                     {mod.title}
                   </Link>
                 </h3>
-                <p className="text-sm text-[#475569] leading-relaxed">{mod.desc}</p>
+                <p className="text-sm text-neutral-600 leading-relaxed">{mod.desc}</p>
               </div>
             ))}
           </div>
-          <p className="mt-6 text-sm text-[#475569]">
+          <p className="mt-6 text-sm text-neutral-600">
             Also see:{" "}
             <Link href="/platform/document-management" className="text-[#E8652B] hover:underline font-medium">Document Management</Link>
             {" | "}
@@ -381,17 +381,17 @@ export function PlatformFleetManagementPage() {
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Common Questions</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A]">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900">
             Fleet Management — frequently asked questions
           </h2>
           <div className="mt-8 space-y-3">
             {faqs.map((faq) => (
-              <details key={faq.q} className="group border border-[#E2E8F0] bg-white rounded-xl overflow-hidden">
-                <summary className="flex items-center justify-between gap-4 px-6 py-4 cursor-pointer font-semibold text-[#0F172A] text-sm list-none hover:bg-[#F8FAFC]">
+              <details key={faq.q} className="group border border-neutral-200 bg-white rounded-xl overflow-hidden">
+                <summary className="flex items-center justify-between gap-4 px-6 py-4 cursor-pointer font-semibold text-neutral-900 text-sm list-none hover:bg-neutral-50/50">
                   {faq.q}
-                  <ChevronRight className="h-4 w-4 text-[#94A3B8] shrink-0 group-open:rotate-90 transition-transform" />
+                  <ChevronRight className="h-4 w-4 text-neutral-400 shrink-0 group-open:rotate-90 transition-transform" />
                 </summary>
-                <div className="px-6 pb-5 text-sm text-[#475569] leading-relaxed border-t border-[#F1F5F9]">
+                <div className="px-6 pb-5 text-sm text-neutral-600 leading-relaxed border-t border-neutral-100">
                   <p className="pt-4">{faq.a}</p>
                 </div>
               </details>
@@ -401,11 +401,11 @@ export function PlatformFleetManagementPage() {
       </section>
 
       {/* CTA BAND */}
-      <section className="py-16 bg-[#0F172A]">
+      <section className="py-16 bg-neutral-900">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
           <div>
             <h2 className="text-2xl sm:text-3xl font-bold text-white">Replace your rego-renewal spreadsheet with a connected fleet record.</h2>
-            <p className="mt-2 text-[#94A3B8] text-sm leading-relaxed max-w-xl">
+            <p className="mt-2 text-neutral-400 text-sm leading-relaxed max-w-xl">
               In a 20-minute demo we'll show you fleet records, document expiry alerts and how fleet availability connects to the dispatch board in real time.
             </p>
           </div>

@@ -116,28 +116,28 @@ export default function IntegrationsPage() {
   return (
     <MainLayout showCta={false}>
       {/* Breadcrumb */}
-      <div className="pt-24 pb-0 bg-[#FFF9F5]">
+      <div className="pt-24 pb-0 bg-neutral-50/70">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <nav className="flex items-center gap-2 text-xs text-[#64748B]">
+          <nav className="flex items-center gap-2 text-xs text-neutral-500">
             <Link href="/" className="hover:text-[#E8652B]">Home</Link>
             <ChevronRight className="h-3 w-3" />
             <Link href="/platform" className="hover:text-[#E8652B]">Platform</Link>
             <ChevronRight className="h-3 w-3" />
-            <span className="text-[#0F172A] font-medium">Integrations</span>
+            <span className="text-neutral-900 font-medium">Integrations</span>
           </nav>
         </div>
       </div>
 
       {/* HERO */}
-      <section className="pt-10 pb-20 bg-gradient-to-b from-[#FFF9F5] via-[#FFF5EE]/40 to-white">
+      <section className="pt-10 pb-20 bg-gradient-to-b from-neutral-50/80 via-white to-white border-b border-neutral-200">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-[#E8652B] bg-[#FFF0E6] mb-4 animate-in fade-in slide-in-from-bottom-4 animation-duration-700 fill-mode-both">
+          <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-[#E8652B] bg-orange-50 border border-orange-200 mb-4 animate-in fade-in slide-in-from-bottom-4 animation-duration-700 fill-mode-both">
             Platform — Integrations
           </span>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#0F172A] max-w-4xl leading-[1.1] animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-100 fill-mode-both">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-neutral-900 max-w-4xl leading-[1.1] animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-100 fill-mode-both">
             Connect HaulageOps to the tools your operation already runs on.
           </h1>
-          <p className="mt-6 text-lg sm:text-xl text-[#475569] max-w-3xl leading-relaxed animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-150 fill-mode-both">
+          <p className="mt-6 text-lg sm:text-xl text-neutral-600 max-w-3xl leading-relaxed animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-150 fill-mode-both">
             HaulageOps integrates with the platforms haulage businesses depend on — starting with Xero. Invoices, payments and client records sync automatically between systems, so the same data is never keyed in twice.
           </p>
           <div className="mt-8 flex flex-wrap gap-3 animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-200 fill-mode-both">
@@ -147,7 +147,7 @@ export default function IntegrationsPage() {
               </Button>
             </Link>
             <Link href="/demo">
-              <Button size="lg" variant="outline" className="border-[#E2E8F0] text-[#334155] hover:bg-[#F8FAFC]">
+              <Button size="lg" variant="outline" className="border-neutral-200 text-neutral-700 hover:bg-neutral-50/50">
                 Book a Demo
               </Button>
             </Link>
@@ -155,8 +155,8 @@ export default function IntegrationsPage() {
           {/* Kicker pills */}
           <div className="mt-8 flex flex-wrap gap-2 animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-300 fill-mode-both">
             {heroKickers.map((pill) => (
-              <span key={pill} className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#F1F5F9] text-xs font-medium text-[#334155]">
-                <CheckCircle className="h-3.5 w-3.5 text-[#16A34A] shrink-0" />
+              <span key={pill} className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-neutral-100 text-xs font-medium text-neutral-700">
+                <CheckCircle className="h-3.5 w-3.5 text-[#E8652B] shrink-0" />
                 {pill}
               </span>
             ))}
@@ -165,7 +165,7 @@ export default function IntegrationsPage() {
       </section>
 
       {/* PROOF STRIP */}
-      <div className="bg-[#0F172A] py-5">
+      <div className="bg-neutral-900 py-5">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-center">
             {proofStrip.map((item) => (
@@ -182,32 +182,32 @@ export default function IntegrationsPage() {
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Available integrations</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             One live integration today — with more on the roadmap.
           </h2>
           <div className="mt-10 grid gap-6">
             {availableIntegrations.map((integration) => (
-              <div key={integration.title} className="bg-[#F8FAFC] rounded-2xl p-8 border border-[#E2E8F0] grid lg:grid-cols-2 gap-8 items-start">
+              <div key={integration.title} className="bg-neutral-50/50 rounded-2xl p-8 border border-neutral-200 grid lg:grid-cols-2 gap-8 items-start">
                 <div>
                   <div className="flex items-center gap-2.5">
                     <div className="h-10 w-10 rounded-lg bg-[#E8652B]/10 flex items-center justify-center">
                       <Plug className="h-5 w-5 text-[#E8652B]" />
                     </div>
-                    <h3 className="text-xl font-bold text-[#0F172A]">{integration.title}</h3>
+                    <h3 className="text-xl font-bold text-neutral-900">{integration.title}</h3>
                   </div>
-                  <span className="mt-3 inline-block px-2.5 py-1 rounded-full bg-[#16A34A]/10 text-[#16A34A] text-[11px] font-semibold">
+                  <span className="mt-3 inline-block px-2.5 py-1 rounded-full bg-[#16A34A]/10 text-[#E8652B] text-[11px] font-semibold">
                     {integration.status}
                   </span>
-                  <p className="mt-4 text-sm text-[#475569] leading-relaxed">{integration.desc}</p>
+                  <p className="mt-4 text-sm text-neutral-600 leading-relaxed">{integration.desc}</p>
                   <Link href={integration.href} className="mt-5 inline-flex items-center gap-1 text-sm text-[#E8652B] hover:underline font-medium">
                     {integration.linkLabel} <ArrowRight className="h-3.5 w-3.5" />
                   </Link>
                 </div>
-                <div className="bg-white rounded-xl border border-[#E2E8F0] p-6">
-                  <h4 className="font-bold text-[#0F172A] text-sm mb-3">What it covers</h4>
+                <div className="bg-white rounded-xl border border-neutral-200 p-6">
+                  <h4 className="font-bold text-neutral-900 text-sm mb-3">What it covers</h4>
                   <ul className="space-y-3">
                     {integration.points.map((point) => (
-                      <li key={point} className="flex items-start gap-2 text-sm text-[#334155]">
+                      <li key={point} className="flex items-start gap-2 text-sm text-neutral-700">
                         <CheckCircle className="h-4 w-4 text-[#E8652B] shrink-0 mt-0.5" />
                         <span>{point}</span>
                       </li>
@@ -221,18 +221,18 @@ export default function IntegrationsPage() {
       </section>
 
       {/* HOW IT WORKS */}
-      <section className="py-20 bg-[#F8FAFC]">
+      <section className="py-20 bg-neutral-50/50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">How integrations work</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             Connected in minutes, running automatically.
           </h2>
           <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {howItWorks.map((step) => (
-              <div key={step.num} className="bg-white rounded-2xl p-6 border border-[#E2E8F0] shadow-sm">
+              <div key={step.num} className="bg-white rounded-2xl p-6 border border-neutral-200 shadow-sm">
                 <span className="text-3xl font-black text-[#E8652B]/20 leading-none">{step.num}</span>
-                <h3 className="mt-2 font-bold text-[#0F172A] text-base">{step.title}</h3>
-                <p className="mt-2 text-sm text-[#475569] leading-relaxed">{step.desc}</p>
+                <h3 className="mt-2 font-bold text-neutral-900 text-base">{step.title}</h3>
+                <p className="mt-2 text-sm text-neutral-600 leading-relaxed">{step.desc}</p>
               </div>
             ))}
           </div>
@@ -245,15 +245,15 @@ export default function IntegrationsPage() {
           <div className="grid lg:grid-cols-2 gap-10 items-center">
             <div>
               <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Roadmap</span>
-              <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-xl">
+              <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-xl">
                 What&apos;s being evaluated next.
               </h2>
-              <p className="mt-6 text-[#475569] leading-relaxed">
+              <p className="mt-6 text-neutral-600 leading-relaxed">
                 Integration priorities are set by what Australian haulage operators actually run on. If a specific platform is critical to your operation, it shapes what we build next. Current areas of evaluation include:
               </p>
               <ul className="mt-6 space-y-3">
                 {roadmapItems.map((item) => (
-                  <li key={item} className="flex items-start gap-2 text-sm text-[#334155]">
+                  <li key={item} className="flex items-start gap-2 text-sm text-neutral-700">
                     <CheckCircle className="h-4 w-4 text-[#E8652B] shrink-0 mt-0.5" />
                     <span>{item}</span>
                   </li>
@@ -261,35 +261,35 @@ export default function IntegrationsPage() {
               </ul>
             </div>
             {/* Secure connection visual */}
-            <div className="rounded-2xl border border-[#E2E8F0] bg-[#0D1525] overflow-hidden">
-              <div className="px-5 py-3 bg-[#1E293B] text-[#E8652B] text-xs font-bold uppercase tracking-widest">
+            <div className="rounded-2xl border border-neutral-200 bg-neutral-900 border-y border-neutral-800 overflow-hidden">
+              <div className="px-5 py-3 bg-neutral-800 text-[#E8652B] text-xs font-bold uppercase tracking-widest">
                 Secure connection — how it connects
               </div>
-              <div className="p-6 text-[#94A3B8] text-sm font-mono leading-relaxed space-y-3">
+              <div className="p-6 text-neutral-400 text-sm font-mono leading-relaxed space-y-3">
                 <div className="flex items-center gap-3">
                   <div className="h-12 w-12 rounded-lg bg-[#E8652B]/15 flex items-center justify-center">
                     <RefreshCw className="h-5 w-5 text-[#E8652B]" />
                   </div>
                   <div>
                     <p className="text-white text-xs font-semibold">HaulageOps</p>
-                    <p className="text-[10px] text-[#64748B]">Billing module — invoice & payment records</p>
+                    <p className="text-[10px] text-neutral-500">Billing module — invoice & payment records</p>
                   </div>
                 </div>
-                <div className="flex items-center gap-2 text-[10px] text-[#64748B]">
+                <div className="flex items-center gap-2 text-[10px] text-neutral-500">
                   <span className="flex-1 border-t border-dashed border-[#334155]" />
                   <span className="whitespace-nowrap">OAuth · encrypted</span>
                   <span className="flex-1 border-t border-dashed border-[#334155]" />
                 </div>
                 <div className="flex items-center gap-3">
                   <div className="h-12 w-12 rounded-lg bg-[#334155]/50 flex items-center justify-center">
-                    <ShieldCheck className="h-5 w-5 text-[#94A3B8]" />
+                    <ShieldCheck className="h-5 w-5 text-neutral-400" />
                   </div>
                   <div>
                     <p className="text-white text-xs font-semibold">Xero</p>
-                    <p className="text-[10px] text-[#64748B]">Invoices · payments · client records</p>
+                    <p className="text-[10px] text-neutral-500">Invoices · payments · client records</p>
                   </div>
                 </div>
-                <p className="text-[10px] text-[#475569] pt-1">
+                <p className="text-[10px] text-neutral-600 pt-1">
                   Invoices push one way, payments return via webhook. Credentials are never shared or stored in plain text.
                 </p>
               </div>
@@ -299,21 +299,21 @@ export default function IntegrationsPage() {
       </section>
 
       {/* RELATED PLATFORM FEATURES */}
-      <section className="py-20 bg-[#F8FAFC]">
+      <section className="py-20 bg-neutral-50/50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Related platform features</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             Integrations connect the commercial side of the platform.
           </h2>
           <div className="mt-10 grid md:grid-cols-3 gap-6">
             {relatedCards.map((card) => (
-              <div key={card.title} className="bg-white rounded-2xl p-6 border border-[#E2E8F0]">
-                <h3 className="font-bold text-[#0F172A] mb-2">
+              <div key={card.title} className="bg-white rounded-2xl p-6 border border-neutral-200">
+                <h3 className="font-bold text-neutral-900 mb-2">
                   <Link href={card.href} className="hover:text-[#E8652B] transition-colors">
                     {card.title}
                   </Link>
                 </h3>
-                <p className="text-sm text-[#475569] leading-relaxed">{card.desc}</p>
+                <p className="text-sm text-neutral-600 leading-relaxed">{card.desc}</p>
                 <Link href={card.href} className="mt-3 inline-flex items-center gap-1 text-sm text-[#E8652B] hover:underline font-medium">
                   {card.linkLabel} <ArrowRight className="h-3.5 w-3.5" />
                 </Link>
@@ -327,17 +327,17 @@ export default function IntegrationsPage() {
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Frequently asked questions</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A]">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900">
             Integrations — common questions.
           </h2>
           <div className="mt-8 space-y-3">
             {faqs.map((faq) => (
-              <details key={faq.q} className="group border border-[#E2E8F0] bg-white rounded-xl overflow-hidden">
-                <summary className="flex items-center justify-between gap-4 px-6 py-4 cursor-pointer font-semibold text-[#0F172A] text-sm list-none hover:bg-[#F8FAFC]">
+              <details key={faq.q} className="group border border-neutral-200 bg-white rounded-xl overflow-hidden">
+                <summary className="flex items-center justify-between gap-4 px-6 py-4 cursor-pointer font-semibold text-neutral-900 text-sm list-none hover:bg-neutral-50/50">
                   {faq.q}
-                  <ChevronRight className="h-4 w-4 text-[#94A3B8] shrink-0 group-open:rotate-90 transition-transform" />
+                  <ChevronRight className="h-4 w-4 text-neutral-400 shrink-0 group-open:rotate-90 transition-transform" />
                 </summary>
-                <div className="px-6 pb-5 text-sm text-[#475569] leading-relaxed border-t border-[#F1F5F9]">
+                <div className="px-6 pb-5 text-sm text-neutral-600 leading-relaxed border-t border-neutral-100">
                   <p className="pt-4">{faq.a}</p>
                 </div>
               </details>
@@ -347,11 +347,11 @@ export default function IntegrationsPage() {
       </section>
 
       {/* CTA BAND */}
-      <section className="py-16 bg-[#0F172A]">
+      <section className="py-16 bg-neutral-900">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
           <div>
             <h2 className="text-2xl sm:text-3xl font-bold text-white">Stop re-keying invoices into your accounting system.</h2>
-            <p className="mt-2 text-[#94A3B8] text-sm leading-relaxed max-w-xl">
+            <p className="mt-2 text-neutral-400 text-sm leading-relaxed max-w-xl">
               See how the Xero integration moves invoices and payments between systems automatically — in a 20-minute demo.
             </p>
           </div>

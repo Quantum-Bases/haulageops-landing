@@ -97,6 +97,21 @@ export default function RootLayout({
                   ],
                 },
                 {
+                  "@type": "Organization",
+                  "name": "HaulageOps Pty Ltd",
+                  "url": "https://haulageops.com",
+                  "logo": "https://haulageops.com/HaulageOps_Wordmark_Black.png",
+                  "telephone": "+61 426 887 862",
+                  "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "2 Harris street",
+                    "addressLocality": "Guildford",
+                    "addressRegion": "NSW",
+                    "postalCode": "2161",
+                    "addressCountry": "AU"
+                  }
+                },
+                {
                   "@type": "FAQPage",
                   "mainEntity": [
                     {

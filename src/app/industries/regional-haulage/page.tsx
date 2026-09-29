@@ -215,28 +215,28 @@ export default function RegionalHaulagePage() {
   return (
     <MainLayout showCta={false}>
       {/* Breadcrumb */}
-      <div className="pt-24 pb-0 bg-[#FFF9F5]">
+      <div className="pt-24 pb-0 bg-neutral-50/70">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <nav className="flex items-center gap-2 text-xs text-[#64748B]">
+          <nav className="flex items-center gap-2 text-xs text-neutral-500">
             <Link href="/" className="hover:text-[#E8652B]">Home</Link>
             <ChevronRight className="h-3 w-3" />
             <Link href="/industries" className="hover:text-[#E8652B]">Industries</Link>
             <ChevronRight className="h-3 w-3" />
-            <span className="text-[#0F172A] font-medium">Regional Haulage</span>
+            <span className="text-neutral-900 font-medium">Regional Haulage</span>
           </nav>
         </div>
       </div>
 
       {/* HERO */}
-      <section className="pt-10 pb-20 bg-gradient-to-b from-[#FFF9F5] via-[#FFF5EE]/40 to-white">
+      <section className="pt-10 pb-20 bg-gradient-to-b from-neutral-50/80 via-white to-white border-b border-neutral-200">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-[#E8652B] bg-[#FFF0E6] mb-4 animate-in fade-in slide-in-from-bottom-4 animation-duration-700 fill-mode-both">
+          <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-[#E8652B] bg-orange-50 border border-orange-200 mb-4 animate-in fade-in slide-in-from-bottom-4 animation-duration-700 fill-mode-both">
             Regional Haulage Operations
           </span>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#0F172A] max-w-4xl leading-[1.1] animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-100 fill-mode-both">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-neutral-900 max-w-4xl leading-[1.1] animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-100 fill-mode-both">
             Regional haulage operations spanning distance need better than a spreadsheet and a phone.
           </h1>
-          <p className="mt-6 text-lg sm:text-xl text-[#475569] max-w-3xl leading-relaxed animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-150 fill-mode-both">
+          <p className="mt-6 text-lg sm:text-xl text-neutral-600 max-w-3xl leading-relaxed animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-150 fill-mode-both">
             Regional and long-haul bulk freight operations face a distinct coordination challenge: fewer jobs per truck per day, but higher complexity per job — remote client sites, subcontractor networks that span geographic regions, connectivity gaps in the field, and client contacts who need delivery visibility without the ability to drive to site to check.
           </p>
           <div className="mt-8 flex flex-wrap gap-3 animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-200 fill-mode-both">
@@ -246,14 +246,14 @@ export default function RegionalHaulagePage() {
               </Button>
             </Link>
             <Link href="/platform/driver-app">
-              <Button size="lg" variant="outline" className="border-[#E2E8F0] text-[#334155] hover:bg-[#F8FAFC]">
+              <Button size="lg" variant="outline" className="border-neutral-200 text-neutral-700 hover:bg-neutral-50/50">
                 Driver App
               </Button>
             </Link>
           </div>
           <div className="mt-10 flex flex-wrap gap-2 animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-300 fill-mode-both">
             {["Offline-capable driver app — syncs when connected", "Subcontractor portal for regional capacity", "Client portal for remote site visibility", "Digital POD across long-distance routes"].map((pill) => (
-              <span key={pill} className="inline-block px-3 py-1 rounded-full text-xs font-semibold text-[#334155] bg-[#F1F5F9] border border-[#E2E8F0]">
+              <span key={pill} className="inline-block px-3 py-1 rounded-full text-xs font-semibold text-neutral-700 bg-neutral-100 border border-neutral-200">
                 {pill}
               </span>
             ))}
@@ -262,13 +262,13 @@ export default function RegionalHaulagePage() {
       </section>
 
       {/* PROOF STRIP */}
-      <div className="bg-[#0F172A] py-6">
+      <div className="bg-neutral-900 py-6">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 lg:grid-cols-6 gap-6 text-center">
             {proofStrip.map((item) => (
               <div key={item.strong} className="flex flex-col items-center justify-center gap-1">
                 <strong className="text-white text-lg font-bold leading-tight">{item.strong}</strong>
-                <span className="text-[#94A3B8] text-xs uppercase tracking-wide">{item.label}</span>
+                <span className="text-neutral-400 text-xs uppercase tracking-wide">{item.label}</span>
               </div>
             ))}
           </div>
@@ -279,20 +279,20 @@ export default function RegionalHaulagePage() {
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Regional Haulage Characteristics</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             What makes regional haulage operationally distinct from metro operations.
           </h2>
-          <p className="mt-4 text-[#475569] leading-relaxed max-w-3xl">
+          <p className="mt-4 text-neutral-600 leading-relaxed max-w-3xl">
             Regional bulk freight operations share the same core platform requirements as metro bulk haulage — dispatch coordination, subcontractor networks, digital dockets and billing — but the distance factor changes the specific pressure points. HaulageOps addresses those directly rather than assuming metro-style connectivity and same-day close-out cycles.
           </p>
           <div className="mt-10 grid md:grid-cols-2 gap-6">
             {characteristics.map((card) => (
-              <div key={card.title} className="bg-white rounded-2xl p-6 border border-[#E2E8F0]">
-                <h3 className="font-bold text-[#0F172A]">{card.title}</h3>
-                <p className="mt-3 text-sm text-[#475569] leading-relaxed">{card.p}</p>
+              <div key={card.title} className="bg-white rounded-2xl p-6 border border-neutral-200">
+                <h3 className="font-bold text-neutral-900">{card.title}</h3>
+                <p className="mt-3 text-sm text-neutral-600 leading-relaxed">{card.p}</p>
                 <ul className="mt-5 space-y-3">
                   {card.bullets.map((item) => (
-                    <li key={item} className="flex items-start gap-2 text-sm text-[#334155]">
+                    <li key={item} className="flex items-start gap-2 text-sm text-neutral-700">
                       <CheckCircle className="h-4 w-4 text-[#E8652B] shrink-0 mt-0.5" />
                       <span>{item}</span>
                     </li>
@@ -305,18 +305,18 @@ export default function RegionalHaulagePage() {
       </section>
 
       {/* COMMON CHALLENGES */}
-      <section className="py-20 bg-[#F8FAFC]">
+      <section className="py-20 bg-neutral-50/50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Common Challenges</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             Where regional haulage operations break down without the right system.
           </h2>
           <div className="mt-10 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {challenges.map((card) => (
-              <div key={card.title} className="bg-white rounded-2xl p-6 border border-[#E2E8F0]">
-                <h3 className="font-bold text-[#0F172A]">{card.title}</h3>
+              <div key={card.title} className="bg-white rounded-2xl p-6 border border-neutral-200">
+                <h3 className="font-bold text-neutral-900">{card.title}</h3>
                 {card.paras.map((p) => (
-                  <p key={p} className="mt-3 text-sm text-[#475569] leading-relaxed">{p}</p>
+                  <p key={p} className="mt-3 text-sm text-neutral-600 leading-relaxed">{p}</p>
                 ))}
               </div>
             ))}
@@ -328,15 +328,15 @@ export default function RegionalHaulagePage() {
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">HaulageOps for Regional Haulage</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             The platform features that address the specific challenges of distance.
           </h2>
           <div className="mt-10 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {lifecycle.map((step) => (
-              <div key={step.num} className="bg-[#0F172A] rounded-2xl p-6">
+              <div key={step.num} className="bg-neutral-900 rounded-2xl p-6">
                 <span className="text-[#E8652B] font-bold text-2xl">{step.num}</span>
                 <h3 className="mt-3 font-bold text-white">{step.title}</h3>
-                <p className="mt-3 text-sm text-[#94A3B8] leading-relaxed">{step.p}</p>
+                <p className="mt-3 text-sm text-neutral-400 leading-relaxed">{step.p}</p>
               </div>
             ))}
           </div>
@@ -344,22 +344,22 @@ export default function RegionalHaulagePage() {
       </section>
 
       {/* PLATFORM CAPABILITIES */}
-      <section className="py-20 bg-[#F8FAFC]">
+      <section className="py-20 bg-neutral-50/50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Platform Capabilities</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             The HaulageOps features built for operations across distance.
           </h2>
           <div className="mt-10 grid md:grid-cols-2 gap-6">
             {capabilities.map((card) => (
-              <div key={card.title} className="bg-white rounded-2xl p-6 border border-[#E2E8F0]">
-                <h3 className="font-bold text-[#0F172A] mb-2">
+              <div key={card.title} className="bg-white rounded-2xl p-6 border border-neutral-200">
+                <h3 className="font-bold text-neutral-900 mb-2">
                   <Link href={card.href} className="hover:text-[#E8652B] transition-colors">{card.title}</Link>
                 </h3>
-                <p className="text-sm text-[#475569] leading-relaxed">{card.p}</p>
+                <p className="text-sm text-neutral-600 leading-relaxed">{card.p}</p>
                 <ul className="mt-5 space-y-3">
                   {card.bullets.map((item) => (
-                    <li key={item} className="flex items-start gap-2 text-sm text-[#334155]">
+                    <li key={item} className="flex items-start gap-2 text-sm text-neutral-700">
                       <CheckCircle className="h-4 w-4 text-[#E8652B] shrink-0 mt-0.5" />
                       <span>{item}</span>
                     </li>
@@ -378,18 +378,18 @@ export default function RegionalHaulagePage() {
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Screen Example</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             Regional haulage dispatch board in HaulageOps.
           </h2>
-          <div className="mt-8 rounded-2xl bg-[#0D1525] border border-[#1E293B] overflow-hidden">
-            <div className="flex items-center gap-2 px-5 py-3 bg-[#1E293B]">
+          <div className="mt-8 rounded-2xl bg-neutral-900 border-y border-neutral-800 border border-neutral-800 overflow-hidden">
+            <div className="flex items-center gap-2 px-5 py-3 bg-neutral-800">
               <span className="h-2.5 w-2.5 rounded-full bg-[#E8652B]" />
               <span className="h-2.5 w-2.5 rounded-full bg-[#94A3B8]" />
               <span className="h-2.5 w-2.5 rounded-full bg-[#475569]" />
-              <span className="ml-3 text-xs font-semibold text-[#CBD5E1]">HaulageOps — Dispatch Board (Regional Haulage)</span>
+              <span className="ml-3 text-xs font-semibold text-neutral-300">HaulageOps — Dispatch Board (Regional Haulage)</span>
             </div>
             <div className="p-6">
-              <p className="text-sm text-[#94A3B8] leading-relaxed">
+              <p className="text-sm text-neutral-400 leading-relaxed">
                 Dispatch board showing a regional haulage operation mid-route: 4 owned drivers on long-distance jobs, each showing last known GPS position on a regional map with distance from destination. Driver 1 status: "En route — last update 47 min ago (connectivity gap indicated)". Driver 2 status: "On site — POD pending". Driver 3 status: "Loaded — departed origin". Sub contractor panel showing 2 regional subs: one accepted and en route, one pending acceptance. Job list on left with delivery windows, load type, client name and region tag. Filter: by region, by driver, by delivery status.
               </p>
             </div>
@@ -398,20 +398,20 @@ export default function RegionalHaulagePage() {
       </section>
 
       {/* FAQ */}
-      <section className="py-20 bg-[#F8FAFC]">
+      <section className="py-20 bg-neutral-50/50">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">FAQ</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A]">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900">
             Common questions from regional haulage operators.
           </h2>
           <div className="mt-8 space-y-3">
             {faqs.map((faq) => (
-              <details key={faq.q} className="group border border-[#E2E8F0] bg-white rounded-xl overflow-hidden">
-                <summary className="flex items-center justify-between gap-4 px-6 py-4 cursor-pointer font-semibold text-[#0F172A] text-sm list-none hover:bg-[#F8FAFC]">
+              <details key={faq.q} className="group border border-neutral-200 bg-white rounded-xl overflow-hidden">
+                <summary className="flex items-center justify-between gap-4 px-6 py-4 cursor-pointer font-semibold text-neutral-900 text-sm list-none hover:bg-neutral-50/50">
                   {faq.q}
-                  <ChevronRight className="h-4 w-4 text-[#94A3B8] shrink-0 group-open:rotate-90 transition-transform" />
+                  <ChevronRight className="h-4 w-4 text-neutral-400 shrink-0 group-open:rotate-90 transition-transform" />
                 </summary>
-                <div className="px-6 pb-5 text-sm text-[#475569] leading-relaxed border-t border-[#F1F5F9]">
+                <div className="px-6 pb-5 text-sm text-neutral-600 leading-relaxed border-t border-neutral-100">
                   <p className="pt-4">{faq.a}</p>
                 </div>
               </details>
@@ -421,11 +421,11 @@ export default function RegionalHaulagePage() {
       </section>
 
       {/* CTA BAND */}
-      <section className="py-16 bg-[#0F172A]">
+      <section className="py-16 bg-neutral-900">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
           <div>
             <h2 className="text-2xl sm:text-3xl font-bold text-white">See how HaulageOps works for regional haulage operations.</h2>
-            <p className="mt-2 text-[#94A3B8] text-sm leading-relaxed max-w-xl">
+            <p className="mt-2 text-neutral-400 text-sm leading-relaxed max-w-xl">
               A 20-minute demo covers the offline driver app, subcontractor portal, client site visibility and billing — we will show how it works for operations spanning distance, not just metro same-day runs.
             </p>
           </div>
@@ -443,16 +443,16 @@ export default function RegionalHaulagePage() {
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Related Pages</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             Related industries and platform features.
           </h2>
           <div className="mt-10 grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {relatedCards.map((card) => (
-              <div key={card.title} className="bg-white rounded-2xl p-6 border border-[#E2E8F0]">
-                <h3 className="font-bold text-[#0F172A] mb-2">
+              <div key={card.title} className="bg-white rounded-2xl p-6 border border-neutral-200">
+                <h3 className="font-bold text-neutral-900 mb-2">
                   <Link href={card.href} className="hover:text-[#E8652B] transition-colors">{card.title}</Link>
                 </h3>
-                <p className="text-sm text-[#475569] leading-relaxed">{card.p}</p>
+                <p className="text-sm text-neutral-600 leading-relaxed">{card.p}</p>
                 <Link href={card.href} className="mt-3 inline-flex items-center gap-1 text-sm text-[#E8652B] hover:underline font-medium">
                   View page <ArrowRight className="h-3.5 w-3.5" />
                 </Link>

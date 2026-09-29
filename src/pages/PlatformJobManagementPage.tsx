@@ -107,25 +107,25 @@ export function PlatformJobManagementPage() {
   return (
     <MainLayout showCta={false}>
       {/* Breadcrumb */}
-      <div className="pt-24 pb-0 bg-[#FFF9F5]">
+      <div className="pt-24 pb-0 bg-neutral-50/70">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <nav className="flex items-center gap-2 text-xs text-[#64748B]">
+          <nav className="flex items-center gap-2 text-xs text-neutral-500">
             <Link href="/" className="hover:text-[#E8652B]">Home</Link>
             <ChevronRight className="h-3 w-3" />
             <Link href="/platform" className="hover:text-[#E8652B]">Platform</Link>
             <ChevronRight className="h-3 w-3" />
-            <span className="text-[#0F172A] font-medium">Job Management</span>
+            <span className="text-neutral-900 font-medium">Job Management</span>
           </nav>
         </div>
       </div>
 
       {/* HERO */}
-      <section className="pt-10 pb-20 bg-gradient-to-b from-[#FFF9F5] via-[#FFF5EE]/40 to-white">
+      <section className="pt-10 pb-20 bg-gradient-to-b from-neutral-50/80 via-white to-white border-b border-neutral-200">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <motion.span
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
-            className="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-[#E8652B] bg-[#FFF0E6] mb-4"
+            className="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-[#E8652B] bg-orange-50 border border-orange-200 mb-4"
           >
             Core Operations
           </motion.span>
@@ -133,7 +133,7 @@ export function PlatformJobManagementPage() {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.05 }}
-            className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#0F172A] max-w-4xl leading-[1.1]"
+            className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-neutral-900 max-w-4xl leading-[1.1]"
           >
             Every haulage job created once. Managed end to end.
           </motion.h1>
@@ -141,7 +141,7 @@ export function PlatformJobManagementPage() {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="mt-6 text-lg sm:text-xl text-[#475569] max-w-3xl leading-relaxed"
+            className="mt-6 text-lg sm:text-xl text-neutral-600 max-w-3xl leading-relaxed"
           >
             The job record is the unit of work that every other part of HaulageOps connects to. Origin, destination, material, quantity, schedule, rate, assigned party and instructions — set at creation and carried through to the invoice without re-keying.
           </motion.p>
@@ -157,7 +157,7 @@ export function PlatformJobManagementPage() {
               </Button>
             </Link>
             <Link href="/platform">
-              <Button size="lg" variant="outline" className="border-[#E2E8F0] text-[#334155] hover:bg-[#F8FAFC]">
+              <Button size="lg" variant="outline" className="border-neutral-200 text-neutral-700 hover:bg-neutral-50/50">
                 Platform Overview
               </Button>
             </Link>
@@ -165,8 +165,8 @@ export function PlatformJobManagementPage() {
           {/* Kicker pills */}
           <div className="mt-8 flex flex-wrap gap-2">
             {["Rate confirmed at creation", "Full audit timeline on every job", "POD attached at completion", "Dispatcher and driver see the same job"].map((pill) => (
-              <span key={pill} className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#F1F5F9] text-xs font-medium text-[#334155]">
-                <CheckCircle className="h-3.5 w-3.5 text-[#16A34A] shrink-0" />
+              <span key={pill} className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-neutral-100 text-xs font-medium text-neutral-700">
+                <CheckCircle className="h-3.5 w-3.5 text-[#E8652B] shrink-0" />
                 {pill}
               </span>
             ))}
@@ -175,7 +175,7 @@ export function PlatformJobManagementPage() {
       </section>
 
       {/* PROOF STRIP */}
-      <div className="bg-[#0F172A] py-5">
+      <div className="bg-neutral-900 py-5">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 text-center">
             {[
@@ -187,7 +187,7 @@ export function PlatformJobManagementPage() {
             ].map((item) => (
               <div key={item.strong} className="flex flex-col gap-0.5">
                 <span className="text-white font-bold text-sm">{item.strong}</span>
-                <span className="text-[#94A3B8] text-xs">{item.sub}</span>
+                <span className="text-neutral-400 text-xs">{item.sub}</span>
               </div>
             ))}
           </div>
@@ -198,16 +198,16 @@ export function PlatformJobManagementPage() {
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">The Job Record</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             Every field your operation needs. Nothing you don't.
           </h2>
-          <p className="mt-4 text-[#475569] max-w-3xl leading-relaxed">
+          <p className="mt-4 text-neutral-600 max-w-3xl leading-relaxed">
             When a job is created in HaulageOps, you fill in the fields that matter for bulk haulage: where it starts, where it ends, what material is being moved, how much, when, and at what rate. That information travels with the job record through its entire lifecycle — it does not need to be re-entered at dispatch, re-confirmed at invoicing, or hunted down from a separate spreadsheet when a client queries a charge.
           </p>
           <div className="mt-10 grid md:grid-cols-2 gap-8">
             {/* Core fields */}
-            <div className="bg-[#F8FAFC] rounded-2xl p-8 border border-[#E2E8F0]">
-              <h3 className="text-xl font-bold text-[#0F172A] mb-5">Core job fields</h3>
+            <div className="bg-neutral-50/50 rounded-2xl p-8 border border-neutral-200">
+              <h3 className="text-xl font-bold text-neutral-900 mb-5">Core job fields</h3>
               <ul className="space-y-3">
                 {[
                   ["Origin", "pickup location with Google Maps address autocomplete"],
@@ -221,7 +221,7 @@ export function PlatformJobManagementPage() {
                   ["Instructions", "site-specific notes for the driver"],
                   ["Job reference", "your internal or client purchase order reference"],
                 ].map(([label, detail]) => (
-                  <li key={label} className="flex items-start gap-2 text-sm text-[#334155]">
+                  <li key={label} className="flex items-start gap-2 text-sm text-neutral-700">
                     <CheckCircle className="h-4 w-4 text-[#E8652B] shrink-0 mt-0.5" />
                     <span><strong>{label}</strong> — {detail}</span>
                   </li>
@@ -229,8 +229,8 @@ export function PlatformJobManagementPage() {
               </ul>
             </div>
             {/* What attaches */}
-            <div className="bg-[#F8FAFC] rounded-2xl p-8 border border-[#E2E8F0]">
-              <h3 className="text-xl font-bold text-[#0F172A] mb-5">What attaches to the record over its life</h3>
+            <div className="bg-neutral-50/50 rounded-2xl p-8 border border-neutral-200">
+              <h3 className="text-xl font-bold text-neutral-900 mb-5">What attaches to the record over its life</h3>
               <ul className="space-y-3">
                 {[
                   ["Status history", "every status change timestamped and attributed"],
@@ -242,7 +242,7 @@ export function PlatformJobManagementPage() {
                   ["Subcontractor pay record", "separate cost rate stored alongside client charge rate"],
                   ["Documents", "any supporting files attached by dispatch or management"],
                 ].map(([label, detail]) => (
-                  <li key={label} className="flex items-start gap-2 text-sm text-[#334155]">
+                  <li key={label} className="flex items-start gap-2 text-sm text-neutral-700">
                     <CheckCircle className="h-4 w-4 text-[#E8652B] shrink-0 mt-0.5" />
                     <span><strong>{label}</strong> — {detail}</span>
                   </li>
@@ -254,16 +254,16 @@ export function PlatformJobManagementPage() {
       </section>
 
       {/* DISPATCHER & DRIVER VIEW */}
-      <section className="py-20 bg-[#F8FAFC]">
+      <section className="py-20 bg-neutral-50/50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Platform View</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             The dispatcher's view and the driver's view — the same job.
           </h2>
-          <p className="mt-4 text-[#475569] max-w-3xl leading-relaxed">
+          <p className="mt-4 text-neutral-600 max-w-3xl leading-relaxed">
             Dispatchers see the full job record including rate, assignment history and all attached documents. Drivers see the same job through the mobile app: origin, destination, material, instructions and POD requirement. No information is re-entered at either end — what dispatch creates, the driver receives.
           </p>
-          <div className="mt-8 rounded-2xl border border-[#E2E8F0] bg-[#0D1525] p-8 text-[#94A3B8] text-sm font-mono leading-relaxed">
+          <div className="mt-8 rounded-2xl border border-neutral-200 bg-neutral-900 border-y border-neutral-800 p-8 text-neutral-400 text-sm font-mono leading-relaxed">
             <div className="text-[#E8652B] font-bold mb-2 text-xs uppercase tracking-widest">HaulageOps — Job Record Detail</div>
             <p>Full job detail view in the Admin & Dispatch Panel showing: job header (origin → destination, material, quantity, rate), assignment section (driver name, vehicle, subcontractor if applicable), status timeline (Created 09:12 → Assigned 09:15 → En Route 07:44 → Delivered 11:02), POD attachments section (3 photos, 1 signed docket), and linked invoice reference. Sidebar shows client name and job reference number.</p>
           </div>
@@ -274,18 +274,18 @@ export function PlatformJobManagementPage() {
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Job Lifecycle</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A]">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900">
             Create → Price → Assign → Track → POD → Invoice
           </h2>
-          <p className="mt-4 text-[#475569] max-w-3xl leading-relaxed">
+          <p className="mt-4 text-neutral-600 max-w-3xl leading-relaxed">
             A haulage job in HaulageOps moves through a defined lifecycle. Each step is recorded. No step requires data from outside the system — the information set at creation follows the job all the way to billing.
           </p>
           <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {lifecycleSteps.map((step) => (
-              <div key={step.num} className="bg-[#F8FAFC] rounded-2xl p-6 border border-[#E2E8F0]">
+              <div key={step.num} className="bg-neutral-50/50 rounded-2xl p-6 border border-neutral-200">
                 <span className="text-3xl font-black text-[#E8652B]/20 leading-none">{step.num}</span>
-                <h3 className="mt-2 text-lg font-bold text-[#0F172A]">{step.title}</h3>
-                <p className="mt-2 text-sm text-[#475569] leading-relaxed">{step.desc}</p>
+                <h3 className="mt-2 text-lg font-bold text-neutral-900">{step.title}</h3>
+                <p className="mt-2 text-sm text-neutral-600 leading-relaxed">{step.desc}</p>
               </div>
             ))}
           </div>
@@ -293,19 +293,19 @@ export function PlatformJobManagementPage() {
       </section>
 
       {/* TEMPLATES & BULK CREATION */}
-      <section className="py-20 bg-[#F8FAFC]">
+      <section className="py-20 bg-neutral-50/50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Recurring Work</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             Job templates and bulk creation for work that repeats.
           </h2>
           <div className="mt-10 grid md:grid-cols-2 gap-8">
             <div>
-              <h3 className="text-xl font-bold text-[#0F172A]">Job templates for recurring runs</h3>
-              <p className="mt-3 text-sm text-[#475569] leading-relaxed">
+              <h3 className="text-xl font-bold text-neutral-900">Job templates for recurring runs</h3>
+              <p className="mt-3 text-sm text-neutral-600 leading-relaxed">
                 If you have a site supply run that goes from the same quarry to the same construction site every day, you do not rebuild that job from scratch each morning. Save the job as a template — origin, destination, material type, rate and instructions are stored. When the work recurs, load the template, confirm the date and assign the driver. Done in under a minute.
               </p>
-              <p className="mt-3 text-sm text-[#475569] leading-relaxed">
+              <p className="mt-3 text-sm text-neutral-600 leading-relaxed">
                 Templates are particularly useful for operators managing long-running site contracts where the same movement repeats across days or weeks. They reduce data-entry errors on repetitive work and ensure the rate applied is consistent with the agreed contract rate.
               </p>
               <ul className="mt-4 space-y-2">
@@ -316,19 +316,19 @@ export function PlatformJobManagementPage() {
                   "Templates can be updated when contract rates change",
                   "Useful for daily site supply, quarry to plant, regular materials runs",
                 ].map((item) => (
-                  <li key={item} className="flex items-start gap-2 text-sm text-[#334155]">
-                    <CheckCircle className="h-4 w-4 text-[#16A34A] shrink-0 mt-0.5" />
+                  <li key={item} className="flex items-start gap-2 text-sm text-neutral-700">
+                    <CheckCircle className="h-4 w-4 text-[#E8652B] shrink-0 mt-0.5" />
                     {item}
                   </li>
                 ))}
               </ul>
             </div>
             <div>
-              <h3 className="text-xl font-bold text-[#0F172A]">Bulk job creation</h3>
-              <p className="mt-3 text-sm text-[#475569] leading-relaxed">
+              <h3 className="text-xl font-bold text-neutral-900">Bulk job creation</h3>
+              <p className="mt-3 text-sm text-neutral-600 leading-relaxed">
                 When a large site contract requires creating many jobs at once — multiple trucks running the same route on the same day, or a week of work assigned to different drivers — bulk job creation allows a dispatcher to generate multiple job records from a single action rather than clicking through the creation form repeatedly.
               </p>
-              <p className="mt-3 text-sm text-[#475569] leading-relaxed">
+              <p className="mt-3 text-sm text-neutral-600 leading-relaxed">
                 Bulk creation maintains the same field completeness as single job creation. Each job generated carries its own rate, assignment and schedule. They appear individually on the dispatch board and can be managed independently once created.
               </p>
               <ul className="mt-4 space-y-2">
@@ -339,8 +339,8 @@ export function PlatformJobManagementPage() {
                   "Useful for large site mobilisations and week-ahead planning",
                   "All generated jobs appear in the job history with full audit trail",
                 ].map((item) => (
-                  <li key={item} className="flex items-start gap-2 text-sm text-[#334155]">
-                    <CheckCircle className="h-4 w-4 text-[#16A34A] shrink-0 mt-0.5" />
+                  <li key={item} className="flex items-start gap-2 text-sm text-neutral-700">
+                    <CheckCircle className="h-4 w-4 text-[#E8652B] shrink-0 mt-0.5" />
                     {item}
                   </li>
                 ))}
@@ -354,21 +354,21 @@ export function PlatformJobManagementPage() {
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Audit & History</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             Complete job history with a full timeline on every record.
           </h2>
-          <p className="mt-4 text-[#475569] max-w-3xl leading-relaxed">
+          <p className="mt-4 text-neutral-600 max-w-3xl leading-relaxed">
             Every job that passes through HaulageOps — created, completed, cancelled or edited — is retained in the job history. Dispatch can search and filter job history by date range, client, driver, subcontractor, material or status. Management reporting draws from the same history for financial and operational analysis.
           </p>
           <div className="mt-10 grid md:grid-cols-3 gap-6">
             {historyCards.map((card) => (
-              <div key={card.title} className="bg-[#F8FAFC] rounded-2xl p-6 border border-[#E2E8F0]">
-                <h3 className="font-bold text-[#0F172A] mb-2">{card.title}</h3>
-                <p className="text-sm text-[#475569] leading-relaxed">{card.desc}</p>
+              <div key={card.title} className="bg-neutral-50/50 rounded-2xl p-6 border border-neutral-200">
+                <h3 className="font-bold text-neutral-900 mb-2">{card.title}</h3>
+                <p className="text-sm text-neutral-600 leading-relaxed">{card.desc}</p>
               </div>
             ))}
           </div>
-          <div className="mt-8 rounded-2xl border border-[#E2E8F0] bg-[#0D1525] p-8 text-[#94A3B8] text-sm font-mono leading-relaxed">
+          <div className="mt-8 rounded-2xl border border-neutral-200 bg-neutral-900 border-y border-neutral-800 p-8 text-neutral-400 text-sm font-mono leading-relaxed">
             <div className="text-[#E8652B] font-bold mb-2 text-xs uppercase tracking-widest">HaulageOps — Job History View</div>
             <p>Job history table in Admin Panel. Columns: Job ID, Client, Origin, Destination, Material, Quantity, Rate, Driver/Sub, Status (colour-coded: Completed green, Cancelled grey, In Progress blue), Date. Filter bar above: date range picker, client dropdown, status filter, driver filter. Clicking any row opens the full job record detail view. Pagination at bottom shows 50 jobs per page.</p>
           </div>
@@ -376,28 +376,28 @@ export function PlatformJobManagementPage() {
       </section>
 
       {/* CONNECTED PLATFORM */}
-      <section className="py-20 bg-[#F8FAFC]">
+      <section className="py-20 bg-neutral-50/50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Connected Platform</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             The job connects to everything else in HaulageOps.
           </h2>
-          <p className="mt-4 text-[#475569] max-w-3xl leading-relaxed">
+          <p className="mt-4 text-neutral-600 max-w-3xl leading-relaxed">
             Job management is the foundation. The other modules in HaulageOps work because the job record is the shared source of truth they all read from and write to.
           </p>
           <div className="mt-10 grid md:grid-cols-3 gap-6">
             {connectedModules.map((mod) => (
-              <div key={mod.title} className="bg-white rounded-2xl p-6 border border-[#E2E8F0] shadow-sm">
-                <h3 className="font-bold text-[#0F172A] mb-2">
+              <div key={mod.title} className="bg-white rounded-2xl p-6 border border-neutral-200 shadow-sm">
+                <h3 className="font-bold text-neutral-900 mb-2">
                   <Link href={mod.href} className="hover:text-[#E8652B] transition-colors">
                     {mod.title}
                   </Link>
                 </h3>
-                <p className="text-sm text-[#475569] leading-relaxed">{mod.desc}</p>
+                <p className="text-sm text-neutral-600 leading-relaxed">{mod.desc}</p>
               </div>
             ))}
           </div>
-          <p className="mt-6 text-sm text-[#475569]">
+          <p className="mt-6 text-sm text-neutral-600">
             Also see:{" "}
             <Link href="/solutions/haulage-dispatch" className="text-[#E8652B] hover:underline font-medium">Haulage Dispatch solution</Link>
             {" | "}
@@ -412,17 +412,17 @@ export function PlatformJobManagementPage() {
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Common Questions</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A]">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900">
             Job Management — frequently asked questions
           </h2>
           <div className="mt-8 space-y-3">
             {faqs.map((faq) => (
-              <details key={faq.q} className="group border border-[#E2E8F0] rounded-xl overflow-hidden">
-                <summary className="flex items-center justify-between gap-4 px-6 py-4 cursor-pointer font-semibold text-[#0F172A] text-sm list-none hover:bg-[#F8FAFC]">
+              <details key={faq.q} className="group border border-neutral-200 rounded-xl overflow-hidden">
+                <summary className="flex items-center justify-between gap-4 px-6 py-4 cursor-pointer font-semibold text-neutral-900 text-sm list-none hover:bg-neutral-50/50">
                   {faq.q}
-                  <ChevronRight className="h-4 w-4 text-[#94A3B8] shrink-0 group-open:rotate-90 transition-transform" />
+                  <ChevronRight className="h-4 w-4 text-neutral-400 shrink-0 group-open:rotate-90 transition-transform" />
                 </summary>
-                <div className="px-6 pb-5 text-sm text-[#475569] leading-relaxed border-t border-[#F1F5F9]">
+                <div className="px-6 pb-5 text-sm text-neutral-600 leading-relaxed border-t border-neutral-100">
                   <p className="pt-4">{faq.a}</p>
                 </div>
               </details>
@@ -432,11 +432,11 @@ export function PlatformJobManagementPage() {
       </section>
 
       {/* CTA BAND */}
-      <section className="py-16 bg-[#0F172A]">
+      <section className="py-16 bg-neutral-900">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
           <div>
             <h2 className="text-2xl sm:text-3xl font-bold text-white">See job management working in a live demo.</h2>
-            <p className="mt-2 text-[#94A3B8] text-sm leading-relaxed max-w-xl">
+            <p className="mt-2 text-neutral-400 text-sm leading-relaxed max-w-xl">
               We'll walk through creating a job, dispatching it, tracking it to completion and generating the invoice — your actual workflow, not a slide deck.
             </p>
           </div>

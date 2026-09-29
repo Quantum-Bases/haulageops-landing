@@ -149,28 +149,28 @@ export default function ReducingInvoiceDelaysPage() {
   return (
     <MainLayout showCta={false}>
       {/* Breadcrumb */}
-      <div className="pt-24 pb-0 bg-[#FFF9F5]">
+      <div className="pt-24 pb-0 bg-neutral-50/70">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <nav className="flex items-center gap-2 text-xs text-[#64748B]">
+          <nav className="flex items-center gap-2 text-xs text-neutral-500">
             <Link href="/" className="hover:text-[#E8652B]">Home</Link>
             <ChevronRight className="h-3 w-3" />
             <Link href="/solutions" className="hover:text-[#E8652B]">Solutions</Link>
             <ChevronRight className="h-3 w-3" />
-            <span className="text-[#0F172A] font-medium">Reduce Invoice Delays</span>
+            <span className="text-neutral-900 font-medium">Reduce Invoice Delays</span>
           </nav>
         </div>
       </div>
 
       {/* HERO */}
-      <section className="pt-10 pb-20 bg-gradient-to-b from-[#FFF9F5] via-[#FFF5EE]/40 to-white">
+      <section className="pt-10 pb-20 bg-gradient-to-b from-neutral-50/80 via-white to-white border-b border-neutral-200">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-[#E8652B] bg-[#FFF0E6] mb-4 animate-in fade-in slide-in-from-bottom-4 animation-duration-700 fill-mode-both">
+          <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-[#E8652B] bg-orange-50 border border-orange-200 mb-4 animate-in fade-in slide-in-from-bottom-4 animation-duration-700 fill-mode-both">
             Commercial
           </span>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#0F172A] max-w-4xl leading-[1.1] animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-100 fill-mode-both">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-neutral-900 max-w-4xl leading-[1.1] animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-100 fill-mode-both">
             Late invoices almost always start with a missing docket. Here&apos;s the fix.
           </h1>
-          <p className="mt-6 text-lg sm:text-xl text-[#475569] max-w-3xl leading-relaxed animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-150 fill-mode-both">
+          <p className="mt-6 text-lg sm:text-xl text-neutral-600 max-w-3xl leading-relaxed animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-150 fill-mode-both">
             Three causes account for almost all invoice delays in bulk haulage: missing dockets, re-entry time and rate confusion. HaulageOps addresses each one at its source — not by speeding up the manual process, but by removing the manual step entirely.
           </p>
           <div className="mt-8 flex flex-wrap gap-3 animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-200 fill-mode-both">
@@ -180,7 +180,7 @@ export default function ReducingInvoiceDelaysPage() {
               </Button>
             </Link>
             <Link href="/solutions/job-to-invoice">
-              <Button size="lg" variant="outline" className="border-[#E2E8F0] text-[#334155] hover:bg-[#F8FAFC]">
+              <Button size="lg" variant="outline" className="border-neutral-200 text-neutral-700 hover:bg-neutral-50/50">
                 Job to Invoice Solution
               </Button>
             </Link>
@@ -189,7 +189,7 @@ export default function ReducingInvoiceDelaysPage() {
       </section>
 
       {/* PROOF STRIP */}
-      <div className="bg-[#0F172A] py-5">
+      <div className="bg-neutral-900 py-5">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-center">
             {proofStrip.map((item) => (
@@ -205,22 +205,22 @@ export default function ReducingInvoiceDelaysPage() {
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">The Three Causes of Invoice Delay</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             Identify which one is slowing your billing. Usually it&apos;s all three.
           </h2>
-          <p className="mt-4 text-[#475569] leading-relaxed max-w-3xl">
+          <p className="mt-4 text-neutral-600 leading-relaxed max-w-3xl">
             Late invoices have a direct cash flow cost. The longer the gap between job completion and invoice payment, the longer the business is waiting for money it has already earned. Understanding which causes apply is the first step — and in most haulage operations, all three are present to some degree.
           </p>
           <div className="mt-10 grid md:grid-cols-2 gap-6">
             {causes.map((card) => (
-              <div key={card.title} className="bg-[#F8FAFC] rounded-2xl p-6 border border-[#E2E8F0]">
-                <h3 className="font-bold text-[#0F172A]">{card.title}</h3>
+              <div key={card.title} className="bg-neutral-50/50 rounded-2xl p-6 border border-neutral-200">
+                <h3 className="font-bold text-neutral-900">{card.title}</h3>
                 {card.paras.map((p) => (
-                  <p key={p} className="mt-3 text-sm text-[#475569] leading-relaxed">{p}</p>
+                  <p key={p} className="mt-3 text-sm text-neutral-600 leading-relaxed">{p}</p>
                 ))}
                 <ul className="mt-5 space-y-3">
                   {card.bullets.map((item) => (
-                    <li key={item} className="flex items-start gap-2 text-sm text-[#334155]">
+                    <li key={item} className="flex items-start gap-2 text-sm text-neutral-700">
                       <CheckCircle className="h-4 w-4 text-[#E8652B] shrink-0 mt-0.5" />
                       <span>{item}</span>
                     </li>
@@ -233,18 +233,18 @@ export default function ReducingInvoiceDelaysPage() {
       </section>
 
       {/* BEFORE AND AFTER */}
-      <section className="py-20 bg-[#F8FAFC]">
+      <section className="py-20 bg-neutral-50/50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Before and After</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             The manual process versus the connected process.
           </h2>
           <div className="mt-10 grid lg:grid-cols-2 gap-10 items-start">
-            <div className="bg-white rounded-2xl p-6 sm:p-8 border border-[#E2E8F0]">
-              <h3 className="font-bold text-[#0F172A] mb-5">Manual process (current state)</h3>
+            <div className="bg-white rounded-2xl p-6 sm:p-8 border border-neutral-200">
+              <h3 className="font-bold text-neutral-900 mb-5">Manual process (current state)</h3>
               <ol className="space-y-3">
                 {manualSteps.map((step, i) => (
-                  <li key={step} className="flex items-start gap-3 text-sm text-[#334155]">
+                  <li key={step} className="flex items-start gap-3 text-sm text-neutral-700">
                     <span className="flex items-center justify-center h-6 w-6 rounded-full bg-[#FEE2E2] text-[#DC2626] text-[11px] font-bold shrink-0">
                       {i + 1}
                     </span>
@@ -253,19 +253,19 @@ export default function ReducingInvoiceDelaysPage() {
                 ))}
               </ol>
             </div>
-            <div className="bg-white rounded-2xl p-6 sm:p-8 border border-[#E2E8F0]">
-              <h3 className="font-bold text-[#0F172A] mb-5">Connected process (HaulageOps)</h3>
+            <div className="bg-white rounded-2xl p-6 sm:p-8 border border-neutral-200">
+              <h3 className="font-bold text-neutral-900 mb-5">Connected process (HaulageOps)</h3>
               <ol className="space-y-3">
                 {connectedSteps.map((step, i) => (
-                  <li key={step} className="flex items-start gap-3 text-sm text-[#334155]">
-                    <span className="flex items-center justify-center h-6 w-6 rounded-full bg-[#DCFCE7] text-[#16A34A] text-[11px] font-bold shrink-0">
+                  <li key={step} className="flex items-start gap-3 text-sm text-neutral-700">
+                    <span className="flex items-center justify-center h-6 w-6 rounded-full bg-[#DCFCE7] text-[#E8652B] text-[11px] font-bold shrink-0">
                       {i + 1}
                     </span>
                     <span>{step}</span>
                   </li>
                 ))}
               </ol>
-              <p className="mt-6 text-sm text-[#475569] leading-relaxed border-t border-[#F1F5F9] pt-5">
+              <p className="mt-6 text-sm text-neutral-600 leading-relaxed border-t border-neutral-100 pt-5">
                 Three steps removed. Zero transcription. Rate already correct. POD already attached.
               </p>
             </div>
@@ -277,25 +277,25 @@ export default function ReducingInvoiceDelaysPage() {
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Related Solutions and Features</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             Connected to the complete billing workflow
           </h2>
           <div className="mt-10 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {relatedCards.map((card) => (
-              <div key={card.title} className="bg-[#F8FAFC] rounded-2xl p-6 border border-[#E2E8F0]">
-                <h3 className="font-bold text-[#0F172A] mb-2">
+              <div key={card.title} className="bg-neutral-50/50 rounded-2xl p-6 border border-neutral-200">
+                <h3 className="font-bold text-neutral-900 mb-2">
                   <Link href={card.href} className="hover:text-[#E8652B] transition-colors">
                     {card.title}
                   </Link>
                 </h3>
-                <p className="text-sm text-[#475569] leading-relaxed">{card.desc}</p>
+                <p className="text-sm text-neutral-600 leading-relaxed">{card.desc}</p>
                 <Link href={card.href} className="mt-3 inline-flex items-center gap-1 text-sm text-[#E8652B] hover:underline font-medium">
                   View page <ArrowRight className="h-3.5 w-3.5" />
                 </Link>
               </div>
             ))}
           </div>
-          <p className="mt-8 text-sm text-[#475569]">
+          <p className="mt-8 text-sm text-neutral-600">
             Also relevant:{" "}
             <Link href="/platform/rate-management" className="text-[#E8652B] hover:underline font-medium">Rate Management</Link>
             {" · "}
@@ -305,20 +305,20 @@ export default function ReducingInvoiceDelaysPage() {
       </section>
 
       {/* FAQ */}
-      <section className="py-20 bg-[#F8FAFC]">
+      <section className="py-20 bg-neutral-50/50">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Frequently Asked Questions</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A]">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900">
             Reducing invoice delays — common questions.
           </h2>
           <div className="mt-8 space-y-3">
             {faqs.map((faq) => (
-              <details key={faq.q} className="group border border-[#E2E8F0] bg-white rounded-xl overflow-hidden">
-                <summary className="flex items-center justify-between gap-4 px-6 py-4 cursor-pointer font-semibold text-[#0F172A] text-sm list-none hover:bg-[#F8FAFC]">
+              <details key={faq.q} className="group border border-neutral-200 bg-white rounded-xl overflow-hidden">
+                <summary className="flex items-center justify-between gap-4 px-6 py-4 cursor-pointer font-semibold text-neutral-900 text-sm list-none hover:bg-neutral-50/50">
                   {faq.q}
-                  <ChevronRight className="h-4 w-4 text-[#94A3B8] shrink-0 group-open:rotate-90 transition-transform" />
+                  <ChevronRight className="h-4 w-4 text-neutral-400 shrink-0 group-open:rotate-90 transition-transform" />
                 </summary>
-                <div className="px-6 pb-5 text-sm text-[#475569] leading-relaxed border-t border-[#F1F5F9]">
+                <div className="px-6 pb-5 text-sm text-neutral-600 leading-relaxed border-t border-neutral-100">
                   <p className="pt-4">{faq.a}</p>
                 </div>
               </details>
@@ -328,11 +328,11 @@ export default function ReducingInvoiceDelaysPage() {
       </section>
 
       {/* CTA BAND */}
-      <section className="py-16 bg-[#0F172A]">
+      <section className="py-16 bg-neutral-900">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
           <div>
             <h2 className="text-2xl sm:text-3xl font-bold text-white">Invoice the day the job closes — not the week after.</h2>
-            <p className="mt-2 text-[#94A3B8] text-sm leading-relaxed max-w-xl">
+            <p className="mt-2 text-neutral-400 text-sm leading-relaxed max-w-xl">
               A demo covers digital POD, rate application and the job-to-invoice workflow end to end — 20 minutes.
             </p>
           </div>
@@ -343,7 +343,7 @@ export default function ReducingInvoiceDelaysPage() {
               </Button>
             </Link>
             <Link href="/solutions/job-to-invoice">
-              <Button size="lg" variant="outline" className="border-[#334155] text-white hover:bg-[#1E293B]">
+              <Button size="lg" variant="outline" className="border-[#334155] text-white hover:bg-neutral-800">
                 Job to Invoice
               </Button>
             </Link>

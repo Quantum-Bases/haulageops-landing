@@ -27,7 +27,7 @@ export function CtaSection({
   if (variant === "teaser") {
     const teaserConfig = config === mainFinalCta ? partnerTeaserCta : config;
     return (
-      <section className="py-16 sm:py-20 bg-muted/40">
+      <section className="py-16 sm:py-20 bg-neutral-50 border-t border-neutral-200">
         <div className="mx-auto max-w-7xl xl:max-w-[80rem] 2xl:max-w-[105rem] px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -36,17 +36,17 @@ export function CtaSection({
             transition={{ duration: 0.5 }}
             className="max-w-3xl mx-auto text-center"
           >
-            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-foreground">
+            <h2 className="text-2xl sm:text-3xl font-black tracking-tight text-neutral-900">
               {teaserConfig.headline}
             </h2>
-            <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
+            <p className="mt-4 text-base sm:text-lg text-neutral-600 leading-relaxed font-normal">
               {teaserConfig.subheadline}
             </p>
             <Button
               variant="outline"
               size="lg"
               onClick={handleClick}
-              className="mt-8 border-[#E5E7EB] text-[#374151] hover:bg-[#F9FAFB]"
+              className="mt-8 border-neutral-300 text-neutral-900 hover:bg-neutral-100 font-bold"
             >
               {teaserConfig.buttonText}
               <ArrowRight className="ml-2 h-4 w-4" />
@@ -58,25 +58,25 @@ export function CtaSection({
   }
 
   return (
-    <section className="py-20 sm:py-28 hero-gradient text-white">
+    <section className="py-20 sm:py-28 bg-white border-t border-neutral-200">
       <div className="mx-auto max-w-7xl xl:max-w-[80rem] 2xl:max-w-[105rem] px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.5 }}
-          className="max-w-3xl mx-auto text-center"
+          className="rounded-2xl border border-neutral-300 bg-gradient-to-b from-neutral-50 via-white to-neutral-50 p-8 sm:p-16 text-center text-neutral-900 shadow-sm relative overflow-hidden"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-white">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-tight text-neutral-900 max-w-3xl mx-auto">
             {config.headline}
           </h2>
-          <p className="mt-6 text-lg text-white/70 leading-relaxed">
+          <p className="mt-5 text-base sm:text-lg text-neutral-600 leading-relaxed max-w-2xl mx-auto font-normal">
             {config.subheadline}
           </p>
           <Button
             size="lg"
             onClick={handleClick}
-            className="mt-10 bg-[#E8652B] hover:bg-[#D05520] text-white font-semibold text-base px-8 py-6 h-auto"
+            className="mt-8 bg-[#E8652B] hover:bg-[#D05520] text-white font-bold text-base px-8 py-6 h-auto shadow-sm"
           >
             {config.buttonText}
             <ArrowRight className="ml-2 h-4 w-4" />

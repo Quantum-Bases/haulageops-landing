@@ -123,28 +123,28 @@ export default function RateAndContractManagementPage() {
   return (
     <MainLayout showCta={false}>
       {/* Breadcrumb */}
-      <div className="pt-24 pb-0 bg-[#FFF9F5]">
+      <div className="pt-24 pb-0 bg-neutral-50/70">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <nav className="flex items-center gap-2 text-xs text-[#64748B]">
+          <nav className="flex items-center gap-2 text-xs text-neutral-500">
             <Link href="/" className="hover:text-[#E8652B]">Home</Link>
             <ChevronRight className="h-3 w-3" />
             <Link href="/solutions" className="hover:text-[#E8652B]">Solutions</Link>
             <ChevronRight className="h-3 w-3" />
-            <span className="text-[#0F172A] font-medium">Rate &amp; Contract Management</span>
+            <span className="text-neutral-900 font-medium">Rate &amp; Contract Management</span>
           </nav>
         </div>
       </div>
 
       {/* HERO */}
-      <section className="pt-10 pb-20 bg-gradient-to-b from-[#FFF9F5] via-[#FFF5EE]/40 to-white">
+      <section className="pt-10 pb-20 bg-gradient-to-b from-neutral-50/80 via-white to-white border-b border-neutral-200">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-[#E8652B] bg-[#FFF0E6] mb-4 animate-in fade-in slide-in-from-bottom-4 animation-duration-700 fill-mode-both">
+          <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-[#E8652B] bg-orange-50 border border-orange-200 mb-4 animate-in fade-in slide-in-from-bottom-4 animation-duration-700 fill-mode-both">
             Commercial
           </span>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#0F172A] max-w-4xl leading-[1.1] animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-100 fill-mode-both">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-neutral-900 max-w-4xl leading-[1.1] animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-100 fill-mode-both">
             Every rate agreed, stored and applied automatically when jobs are created.
           </h1>
-          <p className="mt-6 text-lg sm:text-xl text-[#475569] max-w-3xl leading-relaxed animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-150 fill-mode-both">
+          <p className="mt-6 text-lg sm:text-xl text-neutral-600 max-w-3xl leading-relaxed animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-150 fill-mode-both">
             Client rate cards, subcontractor pay rates, effective dating for future changes, and contract lifecycle from creation through expiry — all connected so the right rate reaches the right invoice without anyone looking it up manually.
           </p>
           <div className="mt-8 flex flex-wrap gap-3 animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-200 fill-mode-both">
@@ -154,7 +154,7 @@ export default function RateAndContractManagementPage() {
               </Button>
             </Link>
             <Link href="/platform/rate-management">
-              <Button size="lg" variant="outline" className="border-[#E2E8F0] text-[#334155] hover:bg-[#F8FAFC]">
+              <Button size="lg" variant="outline" className="border-neutral-200 text-neutral-700 hover:bg-neutral-50/50">
                 Rate Management Platform
               </Button>
             </Link>
@@ -163,7 +163,7 @@ export default function RateAndContractManagementPage() {
       </section>
 
       {/* PROOF STRIP */}
-      <div className="bg-[#0F172A] py-5">
+      <div className="bg-neutral-900 py-5">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-center">
             {proofStrip.map((item) => (
@@ -179,29 +179,29 @@ export default function RateAndContractManagementPage() {
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">The Rate Problem in Haulage</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             One job. Two rates. Multiple agreements. One invoice that has to be right.
           </h2>
           <div className="mt-8 grid lg:grid-cols-2 gap-10 items-start">
             <div>
-              <p className="text-[#475569] leading-relaxed">
+              <p className="text-neutral-600 leading-relaxed">
                 Every job in a bulk haulage operation has at least two rate dimensions that matter: the rate you charge the client and — if a subcontractor makes the delivery — the rate you pay the subcontractor. These need to stay separate, stay correct over time, and both need to end up on the right documents without anyone calculating manually each time.
               </p>
-              <p className="mt-4 text-[#475569] leading-relaxed">
+              <p className="mt-4 text-neutral-600 leading-relaxed">
                 The problem most operators face isn&apos;t that they don&apos;t know their rates. They&apos;ve negotiated them, they know what was agreed. The problem is that the rates live in spreadsheets or documents that are separate from the jobs they apply to. When a job is created, someone has to look up the rate. When an invoice goes out, someone has to check it&apos;s the right rate. When a rate changes, someone has to update multiple documents and hope nothing gets missed.
               </p>
-              <p className="mt-4 text-[#475569] leading-relaxed">
+              <p className="mt-4 text-neutral-600 leading-relaxed">
                 Rate disputes are almost always caused by this gap: the rate that was applied to the invoice is different from what the client understood was agreed, either because the wrong version of a spreadsheet was referenced, a rate change wasn&apos;t propagated, or a special rate negotiated for one client was mixed up with the standard rate.
               </p>
             </div>
             <div>
-              <p className="text-[#475569] leading-relaxed">
+              <p className="text-neutral-600 leading-relaxed">
                 Contracts create a second layer of complexity. Contract terms govern which rates apply for a given client over a given period. When a contract is approaching expiry, the rates under it may no longer be valid — but if there&apos;s no system tracking that expiry, jobs keep getting created and invoiced at rates that may no longer be agreed.
               </p>
-              <p className="mt-4 text-[#475569] leading-relaxed">
+              <p className="mt-4 text-neutral-600 leading-relaxed">
                 When the same operator manages multiple clients, each with different rate structures, different job types and different contract periods, the combination of a job management spreadsheet and a rates spreadsheet and a contracts folder creates a system where errors are not occasional — they&apos;re built in.
               </p>
-              <p className="mt-4 text-[#475569] leading-relaxed">
+              <p className="mt-4 text-neutral-600 leading-relaxed">
                 The solution is to store rates and contracts in the same system as the jobs they apply to, and have the rate applied automatically at job creation rather than looked up at invoice time.
               </p>
             </div>
@@ -210,20 +210,20 @@ export default function RateAndContractManagementPage() {
       </section>
 
       {/* RATE MANAGEMENT IN HAULAGEOPS */}
-      <section className="py-20 bg-[#F8FAFC]">
+      <section className="py-20 bg-neutral-50/50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Rate Management in HaulageOps</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             Rates stored once. Applied automatically. Separate for client and subcontractor.
           </h2>
           <div className="mt-10 grid md:grid-cols-2 gap-6">
             {rateCards.map((card) => (
-              <div key={card.title} className="bg-white rounded-2xl p-6 border border-[#E2E8F0]">
-                <h3 className="font-bold text-[#0F172A]">{card.title}</h3>
-                <p className="mt-3 text-sm text-[#475569] leading-relaxed">{card.desc}</p>
+              <div key={card.title} className="bg-white rounded-2xl p-6 border border-neutral-200">
+                <h3 className="font-bold text-neutral-900">{card.title}</h3>
+                <p className="mt-3 text-sm text-neutral-600 leading-relaxed">{card.desc}</p>
                 <ul className="mt-5 space-y-3">
                   {card.bullets.map((item) => (
-                    <li key={item} className="flex items-start gap-2 text-sm text-[#334155]">
+                    <li key={item} className="flex items-start gap-2 text-sm text-neutral-700">
                       <CheckCircle className="h-4 w-4 text-[#E8652B] shrink-0 mt-0.5" />
                       <span>{item}</span>
                     </li>
@@ -239,40 +239,40 @@ export default function RateAndContractManagementPage() {
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Contract Lifecycle</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             From contract creation to expiry alert — all managed in the platform.
           </h2>
-          <p className="mt-4 text-[#475569] leading-relaxed max-w-3xl">
+          <p className="mt-4 text-neutral-600 leading-relaxed max-w-3xl">
             Contracts in haulage govern which rates apply, for which client, over which period. When a contract expires, the rates it defines may no longer be valid. HaulageOps manages the contract lifecycle so expiry doesn&apos;t arrive unnoticed.
           </p>
           <div className="mt-10 grid md:grid-cols-3 gap-6">
             {contractSteps.map((step) => (
-              <div key={step.num} className="bg-[#F8FAFC] rounded-2xl p-6 border border-[#E2E8F0] shadow-sm">
+              <div key={step.num} className="bg-neutral-50/50 rounded-2xl p-6 border border-neutral-200 shadow-sm">
                 <span className="text-3xl font-black text-[#E8652B]/20 leading-none">{step.num}</span>
-                <h3 className="mt-2 font-bold text-[#0F172A] text-base">{step.title}</h3>
-                <p className="mt-2 text-sm text-[#475569] leading-relaxed">{step.desc}</p>
+                <h3 className="mt-2 font-bold text-neutral-900 text-base">{step.title}</h3>
+                <p className="mt-2 text-sm text-neutral-600 leading-relaxed">{step.desc}</p>
               </div>
             ))}
           </div>
           <div className="mt-10">
             {/* Contract management view visual */}
-            <div className="rounded-2xl border border-[#E2E8F0] bg-[#0D1525] overflow-hidden">
-              <div className="px-5 py-3 bg-[#1E293B] text-[#E8652B] text-xs font-bold uppercase tracking-widest">
+            <div className="rounded-2xl border border-neutral-200 bg-neutral-900 border-y border-neutral-800 overflow-hidden">
+              <div className="px-5 py-3 bg-neutral-800 text-[#E8652B] text-xs font-bold uppercase tracking-widest">
                 Contract Management View
               </div>
               <div className="p-4 sm:p-5 space-y-3">
                 {contracts.map((c) => (
-                  <div key={c.client} className="bg-[#1E293B] border border-[#334155] rounded-lg p-3">
+                  <div key={c.client} className="bg-neutral-800 border border-[#334155] rounded-lg p-3">
                     <div className="flex flex-wrap items-center justify-between gap-2">
                       <div>
                         <p className="text-white text-[11px] font-semibold">{c.client} — {c.name}</p>
-                        <p className="text-[#94A3B8] text-[10px] mt-0.5 flex items-center gap-1">
+                        <p className="text-neutral-400 text-[10px] mt-0.5 flex items-center gap-1">
                           <CalendarClock className="h-3 w-3" /> {c.dates}
                         </p>
                       </div>
                       <span className={`px-1.5 py-0.5 rounded text-[9px] font-semibold ${c.statusCls}`}>{c.status}</span>
                     </div>
-                    <div className="mt-2 flex flex-wrap items-center gap-2 text-[9px] text-[#94A3B8]">
+                    <div className="mt-2 flex flex-wrap items-center gap-2 text-[9px] text-neutral-400">
                       <span className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-[#334155]/40">
                         <FileText className="h-2.5 w-2.5" /> {c.rateCards}
                       </span>
@@ -282,7 +282,7 @@ export default function RateAndContractManagementPage() {
                     </div>
                   </div>
                 ))}
-                <p className="text-[10px] text-[#475569]">
+                <p className="text-[10px] text-neutral-600">
                   Contract list with status badges, linked rate cards and document attachments — expiry never arrives unnoticed.
                 </p>
               </div>
@@ -292,26 +292,26 @@ export default function RateAndContractManagementPage() {
       </section>
 
       {/* CONNECTED TO BILLING */}
-      <section className="py-20 bg-[#F8FAFC]">
+      <section className="py-20 bg-neutral-50/50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Connected to Billing</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             Rate at job creation equals rate at invoice. No reconciliation step.
           </h2>
           <div className="mt-8 grid lg:grid-cols-2 gap-10 items-start">
             <div>
-              <p className="text-[#475569] leading-relaxed">
+              <p className="text-neutral-600 leading-relaxed">
                 Because the rate is stored in the system at job creation and flows through to the completed job record, the invoice is built from that data — not entered fresh. There is no step where someone looks up the rate and types it into an invoice. The rate that was agreed is the rate that appears on the invoice.
               </p>
-              <p className="mt-4 text-[#475569] leading-relaxed">
+              <p className="mt-4 text-neutral-600 leading-relaxed">
                 When a client queries a rate on an invoice, the response is immediate: the rate was applied from the rate card in effect on that date, visible in the job record. There is no &quot;let me check the spreadsheet&quot; step. The agreed rate, the job, and the invoice are all connected in the same system.
               </p>
             </div>
             <div>
-              <p className="text-[#475569] leading-relaxed">
+              <p className="text-neutral-600 leading-relaxed">
                 For operators managing multiple clients with different rate structures, this removes what is otherwise a persistent source of invoicing errors. Different clients have different rates. Different job types within one client have different rates. When those rate cards are in the system and applied automatically, the variation is handled correctly without anyone having to check which rate applies each time.
               </p>
-              <p className="mt-4 text-[#475569] leading-relaxed">
+              <p className="mt-4 text-neutral-600 leading-relaxed">
                 See the <Link href="/solutions/job-to-invoice" className="text-[#E8652B] hover:underline font-medium">Job to Invoice solution</Link> and <Link href="/solutions/reducing-invoice-delays" className="text-[#E8652B] hover:underline font-medium">Reducing Invoice Delays</Link> for how rate management connects to the broader billing workflow.
               </p>
             </div>
@@ -323,17 +323,17 @@ export default function RateAndContractManagementPage() {
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Frequently Asked Questions</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A]">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900">
             Rate and contract management — common questions.
           </h2>
           <div className="mt-8 space-y-3">
             {faqs.map((faq) => (
-              <details key={faq.q} className="group border border-[#E2E8F0] bg-white rounded-xl overflow-hidden">
-                <summary className="flex items-center justify-between gap-4 px-6 py-4 cursor-pointer font-semibold text-[#0F172A] text-sm list-none hover:bg-[#F8FAFC]">
+              <details key={faq.q} className="group border border-neutral-200 bg-white rounded-xl overflow-hidden">
+                <summary className="flex items-center justify-between gap-4 px-6 py-4 cursor-pointer font-semibold text-neutral-900 text-sm list-none hover:bg-neutral-50/50">
                   {faq.q}
-                  <ChevronRight className="h-4 w-4 text-[#94A3B8] shrink-0 group-open:rotate-90 transition-transform" />
+                  <ChevronRight className="h-4 w-4 text-neutral-400 shrink-0 group-open:rotate-90 transition-transform" />
                 </summary>
-                <div className="px-6 pb-5 text-sm text-[#475569] leading-relaxed border-t border-[#F1F5F9]">
+                <div className="px-6 pb-5 text-sm text-neutral-600 leading-relaxed border-t border-neutral-100">
                   <p className="pt-4">{faq.a}</p>
                 </div>
               </details>
@@ -343,11 +343,11 @@ export default function RateAndContractManagementPage() {
       </section>
 
       {/* CTA BAND */}
-      <section className="py-16 bg-[#0F172A]">
+      <section className="py-16 bg-neutral-900">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
           <div>
             <h2 className="text-2xl sm:text-3xl font-bold text-white">Rates agreed once. Applied correctly every time.</h2>
-            <p className="mt-2 text-[#94A3B8] text-sm leading-relaxed max-w-xl">
+            <p className="mt-2 text-neutral-400 text-sm leading-relaxed max-w-xl">
               A demo covers client rate cards, subcontractor pay rates, effective dating and how the contract lifecycle works in practice — 20 minutes.
             </p>
           </div>
@@ -358,7 +358,7 @@ export default function RateAndContractManagementPage() {
               </Button>
             </Link>
             <Link href="/platform/rate-management">
-              <Button size="lg" variant="outline" className="border-[#334155] text-white hover:bg-[#1E293B]">
+              <Button size="lg" variant="outline" className="border-[#334155] text-white hover:bg-neutral-800">
                 Rate Management
               </Button>
             </Link>

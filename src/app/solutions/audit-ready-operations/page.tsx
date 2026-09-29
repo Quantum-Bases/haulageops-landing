@@ -188,28 +188,28 @@ export default function AuditReadyOperationsPage() {
   return (
     <MainLayout showCta={false}>
       {/* Breadcrumb */}
-      <div className="pt-24 pb-0 bg-[#FFF9F5]">
+      <div className="pt-24 pb-0 bg-neutral-50/70">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <nav className="flex items-center gap-2 text-xs text-[#64748B]">
+          <nav className="flex items-center gap-2 text-xs text-neutral-500">
             <Link href="/" className="hover:text-[#E8652B]">Home</Link>
             <ChevronRight className="h-3 w-3" />
             <Link href="/solutions" className="hover:text-[#E8652B]">Solutions</Link>
             <ChevronRight className="h-3 w-3" />
-            <span className="text-[#0F172A] font-medium">Audit-Ready Operations</span>
+            <span className="text-neutral-900 font-medium">Audit-Ready Operations</span>
           </nav>
         </div>
       </div>
 
       {/* HERO */}
-      <section className="pt-10 pb-20 bg-gradient-to-b from-[#FFF9F5] via-[#FFF5EE]/40 to-white">
+      <section className="pt-10 pb-20 bg-gradient-to-b from-neutral-50/80 via-white to-white border-b border-neutral-200">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-[#E8652B] bg-[#FFF0E6] mb-4 animate-in fade-in slide-in-from-bottom-4 animation-duration-700 fill-mode-both">
+          <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-[#E8652B] bg-orange-50 border border-orange-200 mb-4 animate-in fade-in slide-in-from-bottom-4 animation-duration-700 fill-mode-both">
             Compliance
           </span>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#0F172A] max-w-4xl leading-[1.1] animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-100 fill-mode-both">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-neutral-900 max-w-4xl leading-[1.1] animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-100 fill-mode-both">
             When the auditor asks, the records are already there.
           </h1>
-          <p className="mt-6 text-lg sm:text-xl text-[#475569] max-w-3xl leading-relaxed animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-150 fill-mode-both">
+          <p className="mt-6 text-lg sm:text-xl text-neutral-600 max-w-3xl leading-relaxed animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-150 fill-mode-both">
             Every job action, document submission and access event in HaulageOps is recorded with a user and a timestamp. Audit-readiness is not something you prepare for — it is a continuous output of running the operation through a structured system.
           </p>
           <div className="mt-8 flex flex-wrap gap-3 animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-200 fill-mode-both">
@@ -219,7 +219,7 @@ export default function AuditReadyOperationsPage() {
               </Button>
             </Link>
             <Link href="/platform/audit-trail">
-              <Button size="lg" variant="outline" className="border-[#E2E8F0] text-[#334155] hover:bg-[#F8FAFC]">
+              <Button size="lg" variant="outline" className="border-neutral-200 text-neutral-700 hover:bg-neutral-50/50">
                 Audit Trail Feature
               </Button>
             </Link>
@@ -228,7 +228,7 @@ export default function AuditReadyOperationsPage() {
       </section>
 
       {/* PROOF STRIP */}
-      <div className="bg-[#0F172A] py-5">
+      <div className="bg-neutral-900 py-5">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-center">
             {proofStrip.map((item) => (
@@ -244,29 +244,29 @@ export default function AuditReadyOperationsPage() {
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">What Auditors Ask For</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             The questions that arrive during an audit — and where the answers come from.
           </h2>
           <div className="mt-8 grid lg:grid-cols-2 gap-10 items-start">
             <div>
-              <p className="text-[#475569] leading-relaxed">
+              <p className="text-neutral-600 leading-relaxed">
                 Audits of haulage operations — whether internal, client-driven, regulatory or insurance-related — tend to ask a consistent set of questions. Who drove which vehicle, on which date, carrying what load. Was the driver&apos;s licence current? Were their medical and induction records in order? Was proof of delivery captured? What rate was agreed with the client? Was the contract signed? Who made changes to the job record and when?
               </p>
-              <p className="mt-4 text-[#475569] leading-relaxed">
+              <p className="mt-4 text-neutral-600 leading-relaxed">
                 On manual processes and across personal WhatsApp threads and spreadsheets, answering these questions requires reconstructing events from scattered sources. The driver&apos;s licence might be in a physical folder. The signed docket might be somewhere in the cab or a filing cabinet. The rate that was applied might be in a spreadsheet version that&apos;s no longer the current one. The job change might have been made verbally and never documented.
               </p>
-              <p className="mt-4 text-[#475569] leading-relaxed">
+              <p className="mt-4 text-neutral-600 leading-relaxed">
                 The reconstruction process is time-consuming, incomplete, and sometimes impossible — not because the operator ran a poor operation, but because the tools used didn&apos;t generate structured records as a by-product of normal operation.
               </p>
             </div>
             <div>
-              <p className="text-[#475569] leading-relaxed">
+              <p className="text-neutral-600 leading-relaxed">
                 HaulageOps generates those records as a natural consequence of running jobs through the platform. The audit trail doesn&apos;t need to be created retroactively — it exists because the operation was run in a system that records what happens at each step.
               </p>
-              <p className="mt-4 text-[#475569] leading-relaxed">
+              <p className="mt-4 text-neutral-600 leading-relaxed">
                 This page covers what is recorded, how it can be accessed, and what it means for audit-readiness across different types of review. It also states clearly what HaulageOps does and does not claim: the platform supports audit-readiness — it does not guarantee compliance outcomes, which depend on how the operation is actually run, not only on whether records exist.
               </p>
-              <p className="mt-4 text-[#475569] leading-relaxed">
+              <p className="mt-4 text-neutral-600 leading-relaxed">
                 For operators in Australia, the <Link href="/au/chain-of-responsibility" className="text-[#E8652B] hover:underline font-medium">Chain of Responsibility page</Link> covers how HaulageOps supports CoR due diligence requirements specifically.
               </p>
             </div>
@@ -275,22 +275,22 @@ export default function AuditReadyOperationsPage() {
       </section>
 
       {/* WHAT IS RECORDED AND WHERE */}
-      <section className="py-20 bg-[#F8FAFC]">
+      <section className="py-20 bg-neutral-50/50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">What Is Recorded and Where</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             Six categories of records that support audit-readiness.
           </h2>
           <div className="mt-10 grid md:grid-cols-2 gap-6">
             {auditCategories.map((card) => (
-              <div key={card.title} className="bg-white rounded-2xl p-6 border border-[#E2E8F0]">
-                <h3 className="font-bold text-[#0F172A]">{card.title}</h3>
+              <div key={card.title} className="bg-white rounded-2xl p-6 border border-neutral-200">
+                <h3 className="font-bold text-neutral-900">{card.title}</h3>
                 {card.paras.map((p) => (
-                  <p key={p} className="mt-3 text-sm text-[#475569] leading-relaxed">{p}</p>
+                  <p key={p} className="mt-3 text-sm text-neutral-600 leading-relaxed">{p}</p>
                 ))}
                 <ul className="mt-5 space-y-3">
                   {card.bullets.map((item) => (
-                    <li key={item} className="flex items-start gap-2 text-sm text-[#334155]">
+                    <li key={item} className="flex items-start gap-2 text-sm text-neutral-700">
                       <CheckCircle className="h-4 w-4 text-[#E8652B] shrink-0 mt-0.5" />
                       <span>
                         {item}
@@ -311,28 +311,28 @@ export default function AuditReadyOperationsPage() {
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Accessing Records for an Audit</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             Management can pull records without calling the team.
           </h2>
           <div className="mt-8 grid lg:grid-cols-2 gap-10 items-start">
             <div>
-              <p className="text-[#475569] leading-relaxed">
+              <p className="text-neutral-600 leading-relaxed">
                 One of the practical costs of audit-readiness on manual processes is who has to be involved to retrieve records. Finding out what licence a driver held on a given date, or who changed a job record and when, or whether POD was captured for a specific delivery — each of these questions requires someone with access to the relevant folder, spreadsheet or message thread.
               </p>
-              <p className="mt-4 text-[#475569] leading-relaxed">
+              <p className="mt-4 text-neutral-600 leading-relaxed">
                 When records are in HaulageOps, management users with appropriate access can query them directly. The audit trail is queryable by date range, user, job and event type. Driver records are in the driver management section. Vehicle records are in the fleet management section. POD records are attached to job records. No one needs to be called to locate a file.
               </p>
             </div>
             <div>
-              <p className="text-[#475569] leading-relaxed">
+              <p className="text-neutral-600 leading-relaxed">
                 This changes the audit response posture for the operator. Rather than scrambling to reconstruct records when a request arrives, the response is to pull the relevant data from the platform — often in minutes rather than days.
               </p>
-              <p className="mt-4 text-[#475569] leading-relaxed">
+              <p className="mt-4 text-neutral-600 leading-relaxed">
                 Records can be exported for provision to auditors, clients or insurers without requiring system access to be granted to the reviewing party. Role-based access control means the people who need to see specific records can access them; external parties receive exports rather than system access.
               </p>
               <div className="mt-5 p-5 rounded-2xl border-l-4 border-[#F39A2D] bg-[#F8F9FA]">
-                <p className="text-sm text-[#334155] leading-relaxed">
-                  <strong className="text-[#0F172A]">Important note on compliance:</strong> HaulageOps supports audit-readiness by creating and maintaining structured records of operational activity. It does not guarantee compliance outcomes. Whether an operation meets specific regulatory, contractual or safety obligations depends on how the operation is actually run — not only on whether records exist. Records that show a compliance breach are still records of a breach.
+                <p className="text-sm text-neutral-700 leading-relaxed">
+                  <strong className="text-neutral-900">Important note on compliance:</strong> HaulageOps supports audit-readiness by creating and maintaining structured records of operational activity. It does not guarantee compliance outcomes. Whether an operation meets specific regulatory, contractual or safety obligations depends on how the operation is actually run — not only on whether records exist. Records that show a compliance breach are still records of a breach.
                 </p>
               </div>
             </div>
@@ -341,16 +341,16 @@ export default function AuditReadyOperationsPage() {
       </section>
 
       {/* CONTRAST: RECONSTRUCTING FROM MANUAL PROCESSES */}
-      <section className="py-20 bg-[#F8FAFC]">
+      <section className="py-20 bg-neutral-50/50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Contrast: Reconstructing from Manual Processes</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             What audit readiness looks like when records are in the wrong places.
           </h2>
           <div className="mt-10 overflow-x-auto">
             <table className="w-full text-sm border-collapse">
               <thead>
-                <tr className="bg-[#0F172A] text-white">
+                <tr className="bg-neutral-900 text-white">
                   <th className="text-left px-5 py-3 font-semibold rounded-tl-xl">Auditor question</th>
                   <th className="text-left px-5 py-3 font-semibold">Manual process answer</th>
                   <th className="text-left px-5 py-3 font-semibold rounded-tr-xl text-[#E8652B]">HaulageOps answer</th>
@@ -358,10 +358,10 @@ export default function AuditReadyOperationsPage() {
               </thead>
               <tbody>
                 {comparisonRows.map((row, i) => (
-                  <tr key={row.question} className={i % 2 === 0 ? "bg-white" : "bg-[#F8FAFC]"}>
-                    <td className="px-5 py-3 text-[#0F172A] font-medium border-b border-[#E2E8F0]">{row.question}</td>
-                    <td className="px-5 py-3 text-[#64748B] border-b border-[#E2E8F0]">{row.manual}</td>
-                    <td className="px-5 py-3 text-[#16A34A] font-semibold border-b border-[#E2E8F0]">{row.haulage}</td>
+                  <tr key={row.question} className={i % 2 === 0 ? "bg-white" : "bg-neutral-50/50"}>
+                    <td className="px-5 py-3 text-neutral-900 font-medium border-b border-neutral-200">{row.question}</td>
+                    <td className="px-5 py-3 text-neutral-500 border-b border-neutral-200">{row.manual}</td>
+                    <td className="px-5 py-3 text-[#E8652B] font-semibold border-b border-neutral-200">{row.haulage}</td>
                   </tr>
                 ))}
               </tbody>
@@ -374,25 +374,25 @@ export default function AuditReadyOperationsPage() {
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Related Features and Pages</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             The platform capabilities behind audit-readiness
           </h2>
           <div className="mt-10 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {relatedCards.map((card) => (
-              <div key={card.title} className="bg-[#F8FAFC] rounded-2xl p-6 border border-[#E2E8F0]">
-                <h3 className="font-bold text-[#0F172A] mb-2">
+              <div key={card.title} className="bg-neutral-50/50 rounded-2xl p-6 border border-neutral-200">
+                <h3 className="font-bold text-neutral-900 mb-2">
                   <Link href={card.href} className="hover:text-[#E8652B] transition-colors">
                     {card.title}
                   </Link>
                 </h3>
-                <p className="text-sm text-[#475569] leading-relaxed">{card.desc}</p>
+                <p className="text-sm text-neutral-600 leading-relaxed">{card.desc}</p>
                 <Link href={card.href} className="mt-3 inline-flex items-center gap-1 text-sm text-[#E8652B] hover:underline font-medium">
                   View page <ArrowRight className="h-3.5 w-3.5" />
                 </Link>
               </div>
             ))}
           </div>
-          <p className="mt-8 text-sm text-[#475569]">
+          <p className="mt-8 text-sm text-neutral-600">
             Also relevant:{" "}
             <Link href="/au/chain-of-responsibility" className="text-[#E8652B] hover:underline font-medium">Chain of Responsibility (AU)</Link>
             {" · "}
@@ -404,20 +404,20 @@ export default function AuditReadyOperationsPage() {
       </section>
 
       {/* FAQ */}
-      <section className="py-20 bg-[#F8FAFC]">
+      <section className="py-20 bg-neutral-50/50">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Frequently Asked Questions</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A]">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900">
             Audit-ready operations — common questions.
           </h2>
           <div className="mt-8 space-y-3">
             {faqs.map((faq) => (
-              <details key={faq.q} className="group border border-[#E2E8F0] bg-white rounded-xl overflow-hidden">
-                <summary className="flex items-center justify-between gap-4 px-6 py-4 cursor-pointer font-semibold text-[#0F172A] text-sm list-none hover:bg-[#F8FAFC]">
+              <details key={faq.q} className="group border border-neutral-200 bg-white rounded-xl overflow-hidden">
+                <summary className="flex items-center justify-between gap-4 px-6 py-4 cursor-pointer font-semibold text-neutral-900 text-sm list-none hover:bg-neutral-50/50">
                   {faq.q}
-                  <ChevronRight className="h-4 w-4 text-[#94A3B8] shrink-0 group-open:rotate-90 transition-transform" />
+                  <ChevronRight className="h-4 w-4 text-neutral-400 shrink-0 group-open:rotate-90 transition-transform" />
                 </summary>
-                <div className="px-6 pb-5 text-sm text-[#475569] leading-relaxed border-t border-[#F1F5F9]">
+                <div className="px-6 pb-5 text-sm text-neutral-600 leading-relaxed border-t border-neutral-100">
                   <p className="pt-4">{faq.a}</p>
                 </div>
               </details>
@@ -427,11 +427,11 @@ export default function AuditReadyOperationsPage() {
       </section>
 
       {/* CTA BAND */}
-      <section className="py-16 bg-[#0F172A]">
+      <section className="py-16 bg-neutral-900">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
           <div>
             <h2 className="text-2xl sm:text-3xl font-bold text-white">Records that exist before the auditor asks for them.</h2>
-            <p className="mt-2 text-[#94A3B8] text-sm leading-relaxed max-w-xl">
+            <p className="mt-2 text-neutral-400 text-sm leading-relaxed max-w-xl">
               A 20-minute demo covers the audit trail, driver records, document management and how compliance visibility works across the platform.
             </p>
           </div>
@@ -442,7 +442,7 @@ export default function AuditReadyOperationsPage() {
               </Button>
             </Link>
             <Link href="/platform/compliance">
-              <Button size="lg" variant="outline" className="border-[#334155] text-white hover:bg-[#1E293B]">
+              <Button size="lg" variant="outline" className="border-[#334155] text-white hover:bg-neutral-800">
                 Compliance &amp; Audit
               </Button>
             </Link>

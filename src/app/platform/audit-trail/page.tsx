@@ -158,28 +158,28 @@ export default function AuditTrailPage() {
   return (
     <MainLayout showCta={false}>
       {/* Breadcrumb */}
-      <div className="pt-24 pb-0 bg-[#FFF9F5]">
+      <div className="pt-24 pb-0 bg-neutral-50/70">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <nav className="flex items-center gap-2 text-xs text-[#64748B]">
+          <nav className="flex items-center gap-2 text-xs text-neutral-500">
             <Link href="/" className="hover:text-[#E8652B]">Home</Link>
             <ChevronRight className="h-3 w-3" />
             <Link href="/platform" className="hover:text-[#E8652B]">Platform</Link>
             <ChevronRight className="h-3 w-3" />
-            <span className="text-[#0F172A] font-medium">Audit Trail</span>
+            <span className="text-neutral-900 font-medium">Audit Trail</span>
           </nav>
         </div>
       </div>
 
       {/* HERO */}
-      <section className="pt-10 pb-20 bg-gradient-to-b from-[#FFF9F5] via-[#FFF5EE]/40 to-white">
+      <section className="pt-10 pb-20 bg-gradient-to-b from-neutral-50/80 via-white to-white border-b border-neutral-200">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-[#E8652B] bg-[#FFF0E6] mb-4 animate-in fade-in slide-in-from-bottom-4 animation-duration-700 fill-mode-both">
+          <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-[#E8652B] bg-orange-50 border border-orange-200 mb-4 animate-in fade-in slide-in-from-bottom-4 animation-duration-700 fill-mode-both">
             Platform — Audit Trail
           </span>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#0F172A] max-w-4xl leading-[1.1] animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-100 fill-mode-both">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-neutral-900 max-w-4xl leading-[1.1] animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-100 fill-mode-both">
             Every action. Every user. Every timestamp. The audit trail runs continuously.
           </h1>
-          <p className="mt-6 text-lg sm:text-xl text-[#475569] max-w-3xl leading-relaxed animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-150 fill-mode-both">
+          <p className="mt-6 text-lg sm:text-xl text-neutral-600 max-w-3xl leading-relaxed animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-150 fill-mode-both">
             Every action taken in HaulageOps is logged automatically — who did it, what they did, and exactly when. Jobs, documents, invoices, access events and role changes. Management can query the history without asking the team.
           </p>
           <div className="mt-8 flex flex-wrap gap-3 animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-200 fill-mode-both">
@@ -189,7 +189,7 @@ export default function AuditTrailPage() {
               </Button>
             </Link>
             <Link href="/platform/compliance">
-              <Button size="lg" variant="outline" className="border-[#E2E8F0] text-[#334155] hover:bg-[#F8FAFC]">
+              <Button size="lg" variant="outline" className="border-neutral-200 text-neutral-700 hover:bg-neutral-50/50">
                 Compliance Overview
               </Button>
             </Link>
@@ -197,8 +197,8 @@ export default function AuditTrailPage() {
           {/* Kicker pills */}
           <div className="mt-8 flex flex-wrap gap-2 animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-300 fill-mode-both">
             {heroKickers.map((pill) => (
-              <span key={pill} className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#F1F5F9] text-xs font-medium text-[#334155]">
-                <CheckCircle className="h-3.5 w-3.5 text-[#16A34A] shrink-0" />
+              <span key={pill} className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-neutral-100 text-xs font-medium text-neutral-700">
+                <CheckCircle className="h-3.5 w-3.5 text-[#E8652B] shrink-0" />
                 {pill}
               </span>
             ))}
@@ -207,7 +207,7 @@ export default function AuditTrailPage() {
       </section>
 
       {/* PROOF STRIP */}
-      <div className="bg-[#0F172A] py-5">
+      <div className="bg-neutral-900 py-5">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-center">
             {proofStrip.map((item) => (
@@ -224,20 +224,20 @@ export default function AuditTrailPage() {
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">What gets logged</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             The audit trail covers every consequential action across all five portals.
           </h2>
-          <p className="mt-6 text-[#475569] max-w-3xl leading-relaxed">
+          <p className="mt-6 text-neutral-600 max-w-3xl leading-relaxed">
             The audit log is not a manually-maintained record — it runs automatically in the background whenever a user takes a consequential action in HaulageOps. There is no opt-in, no gap in coverage, and no way for a user to take an action that bypasses the log.
           </p>
           <div className="mt-10 grid md:grid-cols-2 gap-6">
             {logCategories.map((cat) => (
-              <div key={cat.title} className="bg-[#F8FAFC] rounded-2xl p-8 border border-[#E2E8F0]">
-                <h3 className="text-xl font-bold text-[#0F172A] mb-4">{cat.title}</h3>
-                <p className="text-sm text-[#475569] leading-relaxed">{cat.desc}</p>
+              <div key={cat.title} className="bg-neutral-50/50 rounded-2xl p-8 border border-neutral-200">
+                <h3 className="text-xl font-bold text-neutral-900 mb-4">{cat.title}</h3>
+                <p className="text-sm text-neutral-600 leading-relaxed">{cat.desc}</p>
                 <ul className="mt-5 space-y-3">
                   {cat.points.map((point) => (
-                    <li key={point} className="flex items-start gap-2 text-sm text-[#334155]">
+                    <li key={point} className="flex items-start gap-2 text-sm text-neutral-700">
                       <CheckCircle className="h-4 w-4 text-[#E8652B] shrink-0 mt-0.5" />
                       <span>{point}</span>
                     </li>
@@ -250,57 +250,57 @@ export default function AuditTrailPage() {
       </section>
 
       {/* STRUCTURE OF EACH LOG ENTRY */}
-      <section className="py-20 bg-[#F8FAFC]">
+      <section className="py-20 bg-neutral-50/50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-10 items-center">
             <div>
               <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Structure of each log entry</span>
-              <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-xl">
+              <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-xl">
                 Who, what, and when — on every single record.
               </h2>
-              <p className="mt-6 text-[#475569] leading-relaxed">
+              <p className="mt-6 text-neutral-600 leading-relaxed">
                 Every entry in the HaulageOps audit log contains three pieces of information: the user identity of the person who took the action, a description of what the action was, and the precise timestamp at which it occurred. Together, these three fields make the log usable for investigation, dispute resolution, and audit preparation.
               </p>
               <ul className="mt-6 space-y-3">
                 {whoWhatWhen.map((item) => (
-                  <li key={item.label} className="flex items-start gap-2 text-sm text-[#334155]">
+                  <li key={item.label} className="flex items-start gap-2 text-sm text-neutral-700">
                     <CheckCircle className="h-4 w-4 text-[#E8652B] shrink-0 mt-0.5" />
                     <span><strong>{item.label}</strong> {item.desc}</span>
                   </li>
                 ))}
               </ul>
-              <p className="mt-6 text-[#475569] leading-relaxed">
+              <p className="mt-6 text-neutral-600 leading-relaxed">
                 Management can query this history directly from the HaulageOps reporting interface without needing to ask the operations team. &ldquo;Who changed the rate on job 4821 and when?&rdquo; is a query, not an investigation.
               </p>
             </div>
             {/* Job history visual spec */}
-            <div className="rounded-2xl border border-[#E2E8F0] bg-[#0D1525] overflow-hidden">
-              <div className="px-5 py-3 bg-[#1E293B] text-[#E8652B] text-xs font-bold uppercase tracking-widest">
+            <div className="rounded-2xl border border-neutral-200 bg-neutral-900 border-y border-neutral-800 overflow-hidden">
+              <div className="px-5 py-3 bg-neutral-800 text-[#E8652B] text-xs font-bold uppercase tracking-widest">
                 Audit log — job history view
               </div>
               <div className="p-4 sm:p-5">
                 <div className="flex items-center justify-between mb-3">
-                  <span className="px-2.5 py-1 rounded bg-[#1E293B] border border-[#334155] text-[#94A3B8] text-[10px]">Job #4821</span>
+                  <span className="px-2.5 py-1 rounded bg-neutral-800 border border-[#334155] text-neutral-400 text-[10px]">Job #4821</span>
                   <span className="px-2.5 py-1 rounded bg-[#E8652B] text-white text-[10px] font-semibold">Export to CSV</span>
                 </div>
-                <div className="space-y-1.5 text-[#94A3B8] font-mono text-[11px]">
-                  <div className="grid grid-cols-12 gap-2 px-2 text-[10px] uppercase tracking-wider text-[#64748B] border-b border-[#334155] pb-1.5">
+                <div className="space-y-1.5 text-neutral-400 font-mono text-[11px]">
+                  <div className="grid grid-cols-12 gap-2 px-2 text-[10px] uppercase tracking-wider text-neutral-500 border-b border-[#334155] pb-1.5">
                     <span className="col-span-3">Timestamp</span>
                     <span className="col-span-4">User</span>
                     <span className="col-span-5">Action</span>
                   </div>
                   {jobHistoryRows.map((row) => (
-                    <div key={row.time + row.action} className="grid grid-cols-12 gap-2 px-2 py-1.5 rounded bg-[#1E293B] border border-[#334155] items-center">
+                    <div key={row.time + row.action} className="grid grid-cols-12 gap-2 px-2 py-1.5 rounded bg-neutral-800 border border-[#334155] items-center">
                       <span className="col-span-3 text-white">{row.time}</span>
                       <span className="col-span-4">{row.user}</span>
                       <span className="col-span-5 text-[#E8652B] font-semibold">
                         {row.action}
-                        {row.detail && <span className="text-[#94A3B8] font-normal"> — {row.detail}</span>}
+                        {row.detail && <span className="text-neutral-400 font-normal"> — {row.detail}</span>}
                       </span>
                     </div>
                   ))}
                 </div>
-                <p className="mt-4 text-[10px] text-[#475569]">
+                <p className="mt-4 text-[10px] text-neutral-600">
                   Each row shows exact timestamp, user, and action detail.
                 </p>
               </div>
@@ -313,23 +313,23 @@ export default function AuditTrailPage() {
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Chain of responsibility</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             Demonstrable due diligence — not a verbal claim.
           </h2>
-          <p className="mt-6 text-[#475569] max-w-3xl leading-relaxed">
+          <p className="mt-6 text-neutral-600 max-w-3xl leading-relaxed">
             Under Chain of Responsibility obligations applicable in the Australian market, operators must be able to demonstrate active management of safety-relevant activities — not simply state that processes exist. An audit trail that runs automatically, covers all consequential actions, and can be queried and exported is a direct piece of that evidence.
           </p>
           <div className="mt-10 grid md:grid-cols-3 gap-6">
             {corCards.map((card) => (
-              <div key={card.title} className="bg-[#F8FAFC] rounded-2xl p-6 border border-[#E2E8F0]">
-                <h3 className="font-bold text-[#0F172A] mb-2">{card.title}</h3>
-                <p className="text-sm text-[#475569] leading-relaxed">{card.desc}</p>
+              <div key={card.title} className="bg-neutral-50/50 rounded-2xl p-6 border border-neutral-200">
+                <h3 className="font-bold text-neutral-900 mb-2">{card.title}</h3>
+                <p className="text-sm text-neutral-600 leading-relaxed">{card.desc}</p>
               </div>
             ))}
           </div>
           <div className="mt-8 text-center">
             <Link href="/au/chain-of-responsibility">
-              <Button variant="outline" className="border-[#E2E8F0] text-[#334155] hover:bg-[#F8FAFC]">
+              <Button variant="outline" className="border-neutral-200 text-neutral-700 hover:bg-neutral-50/50">
                 Chain of Responsibility <ArrowRight className="h-4 w-4" />
               </Button>
             </Link>
@@ -338,36 +338,36 @@ export default function AuditTrailPage() {
       </section>
 
       {/* MULTI-TENANT ISOLATION */}
-      <section className="py-20 bg-[#F8FAFC]">
+      <section className="py-20 bg-neutral-50/50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-10 items-center">
             {/* Export and query visual spec */}
-            <div className="rounded-2xl border border-[#E2E8F0] bg-[#0D1525] overflow-hidden order-1 lg:order-none">
-              <div className="px-5 py-3 bg-[#1E293B] text-[#E8652B] text-xs font-bold uppercase tracking-widest">
+            <div className="rounded-2xl border border-neutral-200 bg-neutral-900 border-y border-neutral-800 overflow-hidden order-1 lg:order-none">
+              <div className="px-5 py-3 bg-neutral-800 text-[#E8652B] text-xs font-bold uppercase tracking-widest">
                 Audit log — export and query view
               </div>
               <div className="p-4 sm:p-5">
                 <div className="flex flex-wrap gap-2 text-[10px] mb-4">
-                  <span className="px-2.5 py-1 rounded bg-[#1E293B] border border-[#334155] text-[#94A3B8]">From — date</span>
-                  <span className="px-2.5 py-1 rounded bg-[#1E293B] border border-[#334155] text-[#94A3B8]">To — date</span>
-                  <span className="px-2.5 py-1 rounded bg-[#1E293B] border border-[#334155] text-[#94A3B8]">Jobs / Invoices / Documents / Access</span>
-                  <span className="px-2.5 py-1 rounded bg-[#1E293B] border border-[#334155] text-[#94A3B8]">User</span>
+                  <span className="px-2.5 py-1 rounded bg-neutral-800 border border-[#334155] text-neutral-400">From — date</span>
+                  <span className="px-2.5 py-1 rounded bg-neutral-800 border border-[#334155] text-neutral-400">To — date</span>
+                  <span className="px-2.5 py-1 rounded bg-neutral-800 border border-[#334155] text-neutral-400">Jobs / Invoices / Documents / Access</span>
+                  <span className="px-2.5 py-1 rounded bg-neutral-800 border border-[#334155] text-neutral-400">User</span>
                 </div>
-                <div className="space-y-1.5 text-[#94A3B8] font-mono text-[11px]">
-                  <div className="grid grid-cols-12 gap-2 px-2 text-[10px] uppercase tracking-wider text-[#64748B] border-b border-[#334155] pb-1.5">
+                <div className="space-y-1.5 text-neutral-400 font-mono text-[11px]">
+                  <div className="grid grid-cols-12 gap-2 px-2 text-[10px] uppercase tracking-wider text-neutral-500 border-b border-[#334155] pb-1.5">
                     <span className="col-span-3">Timestamp</span>
                     <span className="col-span-4">User</span>
                     <span className="col-span-5">Action</span>
                   </div>
                   {[...jobHistoryRows.slice(0, 3)].map((row) => (
-                    <div key={row.time + row.action} className="grid grid-cols-12 gap-2 px-2 py-1.5 rounded bg-[#1E293B] border border-[#334155] items-center">
+                    <div key={row.time + row.action} className="grid grid-cols-12 gap-2 px-2 py-1.5 rounded bg-neutral-800 border border-[#334155] items-center">
                       <span className="col-span-3 text-white">{row.time}</span>
                       <span className="col-span-4">{row.user}</span>
                       <span className="col-span-5 text-[#E8652B] font-semibold">{row.action}</span>
                     </div>
                   ))}
                 </div>
-                <div className="mt-4 flex items-center justify-between text-[10px] text-[#94A3B8]">
+                <div className="mt-4 flex items-center justify-between text-[10px] text-neutral-400">
                   <span>847 records matching the current filter</span>
                   <span className="px-2.5 py-1 rounded bg-[#E8652B] text-white font-semibold">Export to CSV</span>
                 </div>
@@ -375,18 +375,18 @@ export default function AuditTrailPage() {
             </div>
             <div>
               <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Multi-tenant isolation</span>
-              <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-xl">
+              <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-xl">
                 Your audit records are yours. No cross-tenant visibility.
               </h2>
-              <p className="mt-6 text-[#475569] leading-relaxed">
+              <p className="mt-6 text-neutral-600 leading-relaxed">
                 HaulageOps is a multi-tenant SaaS platform — meaning multiple operating companies run on the same infrastructure. Audit records are strictly isolated by tenant. An operator can only see their own audit history. There is no mechanism for one tenant&apos;s data to appear in another&apos;s audit log.
               </p>
-              <p className="mt-4 text-[#475569] leading-relaxed">
+              <p className="mt-4 text-neutral-600 leading-relaxed">
                 This isolation applies equally to the export function. When you export audit records, you export your own records only. This is enforced at the database query level, not just the interface layer.
               </p>
               <ul className="mt-6 space-y-3">
                 {isolationPoints.map((item) => (
-                  <li key={item} className="flex items-start gap-2 text-sm text-[#334155]">
+                  <li key={item} className="flex items-start gap-2 text-sm text-neutral-700">
                     <CheckCircle className="h-4 w-4 text-[#E8652B] shrink-0 mt-0.5" />
                     <span>{item}</span>
                   </li>
@@ -401,18 +401,18 @@ export default function AuditTrailPage() {
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Related platform features</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             The audit trail connects compliance across the platform.
           </h2>
           <div className="mt-10 grid md:grid-cols-3 gap-6">
             {relatedCards.map((card) => (
-              <div key={card.title} className="bg-[#F8FAFC] rounded-2xl p-6 border border-[#E2E8F0]">
-                <h3 className="font-bold text-[#0F172A] mb-2">
+              <div key={card.title} className="bg-neutral-50/50 rounded-2xl p-6 border border-neutral-200">
+                <h3 className="font-bold text-neutral-900 mb-2">
                   <Link href={card.href} className="hover:text-[#E8652B] transition-colors">
                     {card.title}
                   </Link>
                 </h3>
-                <p className="text-sm text-[#475569] leading-relaxed">{card.desc}</p>
+                <p className="text-sm text-neutral-600 leading-relaxed">{card.desc}</p>
                 <Link href={card.href} className="mt-3 inline-flex items-center gap-1 text-sm text-[#E8652B] hover:underline font-medium">
                   {card.linkLabel} <ArrowRight className="h-3.5 w-3.5" />
                 </Link>
@@ -421,7 +421,7 @@ export default function AuditTrailPage() {
           </div>
           <div className="mt-8 text-center">
             <Link href="/au/chain-of-responsibility">
-              <Button variant="outline" className="border-[#E2E8F0] text-[#334155] hover:bg-[#F8FAFC]">
+              <Button variant="outline" className="border-neutral-200 text-neutral-700 hover:bg-neutral-50/50">
                 Chain of Responsibility (AU) <ArrowRight className="h-4 w-4" />
               </Button>
             </Link>
@@ -430,20 +430,20 @@ export default function AuditTrailPage() {
       </section>
 
       {/* FAQ */}
-      <section className="py-20 bg-[#F8FAFC]">
+      <section className="py-20 bg-neutral-50/50">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Frequently asked questions</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A]">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900">
             Audit trail — common questions.
           </h2>
           <div className="mt-8 space-y-3">
             {faqs.map((faq) => (
-              <details key={faq.q} className="group border border-[#E2E8F0] bg-white rounded-xl overflow-hidden">
-                <summary className="flex items-center justify-between gap-4 px-6 py-4 cursor-pointer font-semibold text-[#0F172A] text-sm list-none hover:bg-[#F8FAFC]">
+              <details key={faq.q} className="group border border-neutral-200 bg-white rounded-xl overflow-hidden">
+                <summary className="flex items-center justify-between gap-4 px-6 py-4 cursor-pointer font-semibold text-neutral-900 text-sm list-none hover:bg-neutral-50/50">
                   {faq.q}
-                  <ChevronRight className="h-4 w-4 text-[#94A3B8] shrink-0 group-open:rotate-90 transition-transform" />
+                  <ChevronRight className="h-4 w-4 text-neutral-400 shrink-0 group-open:rotate-90 transition-transform" />
                 </summary>
-                <div className="px-6 pb-5 text-sm text-[#475569] leading-relaxed border-t border-[#F1F5F9]">
+                <div className="px-6 pb-5 text-sm text-neutral-600 leading-relaxed border-t border-neutral-100">
                   <p className="pt-4">{faq.a}</p>
                 </div>
               </details>
@@ -453,11 +453,11 @@ export default function AuditTrailPage() {
       </section>
 
       {/* CTA BAND */}
-      <section className="py-16 bg-[#0F172A]">
+      <section className="py-16 bg-neutral-900">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
           <div>
             <h2 className="text-2xl sm:text-3xl font-bold text-white">Replace verbal instructions with a documented audit record.</h2>
-            <p className="mt-2 text-[#94A3B8] text-sm leading-relaxed max-w-xl">
+            <p className="mt-2 text-neutral-400 text-sm leading-relaxed max-w-xl">
               See how HaulageOps logs every job, document, invoice, and access event automatically — with user identity and timestamp on every entry.
             </p>
           </div>

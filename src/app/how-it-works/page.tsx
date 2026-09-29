@@ -131,28 +131,28 @@ export default function HowItWorksPage() {
   return (
     <MainLayout showCta={false}>
       {/* ── 1. Hero & Video Section (Deck Slide 1 + Video) ── */}
-      <section className="pt-28 pb-16 md:pt-36 md:pb-20 bg-[#FEFBF9] border-b border-[#E6DED8]">
+      <section className="pt-28 pb-16 md:pt-36 md:pb-20 bg-white border-b border-neutral-200">
         <div className="mx-auto max-w-7xl xl:max-w-[80rem] 2xl:max-w-[105rem] px-4 sm:px-6 lg:px-8">
           {/* Top pills */}
           <div className="flex flex-wrap items-center gap-2.5 mb-6">
-            <span className="inline-flex items-center px-3.5 py-1.5 rounded-full text-xs font-semibold bg-[#F7F2EE] text-[#202020] border border-[#E6DED8]">
+            <span className="inline-flex items-center px-3.5 py-1.5 rounded-full text-xs font-semibold bg-neutral-100 text-neutral-800 border border-neutral-200">
               Built in Australia
             </span>
-            <span className="inline-flex items-center px-3.5 py-1.5 rounded-full text-xs font-semibold bg-[#FAEDE7] text-[#A8552E] border border-[#D86D3C]/30">
+            <span className="inline-flex items-center px-3.5 py-1.5 rounded-full text-xs font-semibold bg-orange-50 text-[#E8652B] border border-orange-200">
               Four personas, one record
             </span>
-            <span className="inline-flex items-center px-3.5 py-1.5 rounded-full text-xs font-semibold bg-[#F7F2EE] text-[#202020] border border-[#E6DED8]">
+            <span className="inline-flex items-center px-3.5 py-1.5 rounded-full text-xs font-semibold bg-neutral-100 text-neutral-800 border border-neutral-200">
               Live in two weeks
             </span>
           </div>
 
           {/* Heading & Subtitle - Left Aligned strictly per Brand Guide */}
           <div className="max-w-4xl text-left">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#202020] leading-[1.12]">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-neutral-900 leading-[1.12]">
               The operating system <br />
-              for <span className="text-[#D86D3C]">bulk haulage.</span>
+              for <span className="text-[#E8652B]">bulk haulage.</span>
             </h1>
-            <p className="mt-5 text-lg sm:text-xl text-[#202020] max-w-3xl font-normal leading-relaxed">
+            <p className="mt-5 text-lg sm:text-xl text-neutral-700 max-w-3xl font-normal leading-relaxed">
               One platform for the haulage admin, the subcontractor, the client and the driver, from job creation to proof of delivery to invoice.
             </p>
 
@@ -162,16 +162,16 @@ export default function HowItWorksPage() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Button size="lg" className="bg-[#D86D3C] hover:bg-[#A8552E] text-white font-semibold px-7 h-12 shadow-xs">
+                <Button size="lg" className="bg-[#E8652B] hover:bg-[#D05520] text-white font-bold px-7 h-12 shadow-xs cursor-pointer">
                   Book a 20-minute demo
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </a>
               <button
                 onClick={togglePlay}
-                className="inline-flex items-center justify-center gap-2 px-6 h-12 rounded-lg font-medium text-sm text-[#202020] bg-[#F7F2EE] hover:bg-[#E6DED8]/60 border border-[#E6DED8] transition-colors"
+                className="inline-flex items-center justify-center gap-2 px-6 h-12 rounded-lg font-semibold text-sm text-neutral-900 bg-white hover:bg-neutral-50 border border-neutral-300 transition-colors shadow-2xs cursor-pointer"
               >
-                <Play className="h-4 w-4 fill-[#202020]" />
+                <Play className="h-4 w-4 fill-neutral-900" />
                 <span>{isPlaying ? "Pause 90s Walkthrough" : "Watch 90s Walkthrough"}</span>
               </button>
             </div>
@@ -179,20 +179,20 @@ export default function HowItWorksPage() {
 
           {/* ── Featured Video Player Embed ── */}
           <div className="mt-12 max-w-5xl">
-            <div className="rounded-2xl overflow-hidden bg-[#FEFBF9] border border-[#E6DED8] shadow-md">
-              {/* Mockup Header - Navy chrome allowed per brand guide */}
-              <div className="px-4 py-3 bg-[#20293A] border-b border-[#20293A] flex items-center justify-between text-white">
+            <div className="rounded-2xl overflow-hidden bg-neutral-900 border border-neutral-300 shadow-2xl">
+              {/* Mockup Header - Charcoal chrome */}
+              <div className="px-4 py-3 bg-neutral-900 border-b border-neutral-800 flex items-center justify-between text-white">
                 <div className="flex items-center gap-2">
-                  <div className="w-2.5 h-2.5 rounded-full bg-white/20" />
-                  <div className="w-2.5 h-2.5 rounded-full bg-white/20" />
-                  <div className="w-2.5 h-2.5 rounded-full bg-white/20" />
-                  <span className="ml-3 text-xs text-white/70 font-mono hidden sm:inline">
+                  <div className="w-2.5 h-2.5 rounded-full bg-neutral-700" />
+                  <div className="w-2.5 h-2.5 rounded-full bg-neutral-700" />
+                  <div className="w-2.5 h-2.5 rounded-full bg-neutral-700" />
+                  <span className="ml-3 text-xs text-neutral-400 font-mono hidden sm:inline">
                     app.haulageops.com/dispatch
                   </span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <span className="flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-semibold bg-[#2E6B4F]/40 text-emerald-200 border border-[#2E6B4F]">
-                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                  <span className="flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-semibold bg-neutral-800 text-neutral-200 border border-neutral-700">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#E8652B] animate-pulse" />
                     90s Product Walkthrough
                   </span>
                 </div>
@@ -214,7 +214,7 @@ export default function HowItWorksPage() {
                 {!isPlaying && (
                   <button
                     onClick={togglePlay}
-                    className="absolute inset-0 m-auto w-20 h-20 rounded-full bg-[#D86D3C] hover:bg-[#A8552E] text-white flex items-center justify-center shadow-xl transition-transform hover:scale-105 z-20"
+                    className="absolute inset-0 m-auto w-20 h-20 rounded-full bg-[#E8652B] hover:bg-[#D05520] text-white flex items-center justify-center shadow-xl transition-transform hover:scale-105 z-20 cursor-pointer"
                     aria-label="Play video"
                   >
                     <Play className="h-8 w-8 fill-white ml-1" />
@@ -236,7 +236,7 @@ export default function HowItWorksPage() {
                       className="p-2 rounded-lg text-white hover:bg-white/20 transition-colors"
                       title={isMuted ? "Unmute" : "Mute"}
                     >
-                      {isMuted ? <VolumeX className="h-5 w-5 text-[#FFA07A]" /> : <Volume2 className="h-5 w-5" />}
+                      {isMuted ? <VolumeX className="h-5 w-5 text-[#E8652B]" /> : <Volume2 className="h-5 w-5" />}
                     </button>
                     <span className="text-xs text-white/80 font-mono">
                       01:30 · Full platform overview
@@ -255,7 +255,7 @@ export default function HowItWorksPage() {
                 </div>
               </div>
             </div>
-            <p className="mt-3 text-left text-xs text-[#6B6560]">
+            <p className="mt-3 text-left text-xs text-neutral-500 font-medium">
               90-second overview: live dispatch, driver app docket capture, subcontractor queue, and automated Xero billing.
             </p>
           </div>
@@ -263,76 +263,76 @@ export default function HowItWorksPage() {
       </section>
 
       {/* ── 2. The Problem: The Old Way (Deck Slide 2) ── */}
-      <section className="py-20 sm:py-24 bg-[#FEFBF9] border-b border-[#E6DED8]">
+      <section className="py-20 sm:py-24 bg-neutral-50/50 border-b border-neutral-200">
         <div className="mx-auto max-w-7xl xl:max-w-[80rem] 2xl:max-w-[105rem] px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl text-left">
-            <span className="text-[11px] font-bold tracking-widest text-[#A8552E] uppercase block mb-1">
+            <span className="text-[11px] font-bold tracking-widest text-[#E8652B] uppercase block mb-1">
               01 · THE OLD WAY
             </span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#202020] tracking-tight">
+            <h2 className="text-3xl sm:text-4xl font-black text-neutral-900 tracking-tight">
               A scattered industry.
             </h2>
-            <p className="mt-4 text-base sm:text-lg text-[#6B6560] leading-relaxed">
+            <p className="mt-4 text-base sm:text-lg text-neutral-600 leading-relaxed">
               The operation is real and profitable. It is also spread across six places that don't talk to each other: dispatch in WhatsApp, dockets in a glovebox, rates in a spreadsheet, the client on hold.
             </p>
           </div>
 
           <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {/* Card 1 */}
-            <div className="bg-[#F7F2EE] rounded-xl p-6 border border-[#E6DED8] flex flex-col justify-between">
+            <div className="bg-white rounded-xl p-6 border border-neutral-200 shadow-xs flex flex-col justify-between">
               <div>
-                <h3 className="text-lg font-bold text-[#202020]">Coordination chaos</h3>
-                <p className="mt-3 text-sm text-[#6B6560] leading-relaxed">
+                <h3 className="text-lg font-bold text-neutral-900">Coordination chaos</h3>
+                <p className="mt-3 text-sm text-neutral-600 leading-relaxed">
                   Dispatch across owned and subcontracted trucks by phone, with no shared job record.
                 </p>
               </div>
-              <div className="mt-6 pt-4 border-t border-[#E6DED8]">
-                <span className="inline-block px-3 py-1 rounded-md text-xs font-bold bg-[#FAEDE7] text-[#A8552E]">
+              <div className="mt-6 pt-4 border-t border-neutral-100">
+                <span className="inline-block px-3 py-1 rounded-md text-xs font-bold bg-orange-50 text-[#E8652B] border border-orange-200">
                   15–20 hrs/week admin
                 </span>
               </div>
             </div>
 
             {/* Card 2 */}
-            <div className="bg-[#F7F2EE] rounded-xl p-6 border border-[#E6DED8] flex flex-col justify-between">
+            <div className="bg-white rounded-xl p-6 border border-neutral-200 shadow-xs flex flex-col justify-between">
               <div>
-                <h3 className="text-lg font-bold text-[#202020]">Client status calls</h3>
-                <p className="mt-3 text-sm text-[#6B6560] leading-relaxed">
+                <h3 className="text-lg font-bold text-neutral-900">Client status calls</h3>
+                <p className="mt-3 text-sm text-neutral-600 leading-relaxed">
                   The operator is the only source of truth, so clients ring and email for updates.
                 </p>
               </div>
-              <div className="mt-6 pt-4 border-t border-[#E6DED8]">
-                <span className="inline-block px-3 py-1 rounded-md text-xs font-bold bg-[#FAEDE7] text-[#A8552E]">
+              <div className="mt-6 pt-4 border-t border-neutral-100">
+                <span className="inline-block px-3 py-1 rounded-md text-xs font-bold bg-orange-50 text-[#E8652B] border border-orange-200">
                   Client churn risk
                 </span>
               </div>
             </div>
 
             {/* Card 3 */}
-            <div className="bg-[#F7F2EE] rounded-xl p-6 border border-[#E6DED8] flex flex-col justify-between">
+            <div className="bg-white rounded-xl p-6 border border-neutral-200 shadow-xs flex flex-col justify-between">
               <div>
-                <h3 className="text-lg font-bold text-[#202020]">Docket-to-invoice lag</h3>
-                <p className="mt-3 text-sm text-[#6B6560] leading-relaxed">
+                <h3 className="text-lg font-bold text-neutral-900">Docket-to-invoice lag</h3>
+                <p className="mt-3 text-sm text-neutral-600 leading-relaxed">
                   Paper PODs re-keyed weekly, days behind the delivery that earned the money.
                 </p>
               </div>
-              <div className="mt-6 pt-4 border-t border-[#E6DED8]">
-                <span className="inline-block px-3 py-1 rounded-md text-xs font-bold bg-[#FAEDE7] text-[#A8552E]">
+              <div className="mt-6 pt-4 border-t border-neutral-100">
+                <span className="inline-block px-3 py-1 rounded-md text-xs font-bold bg-orange-50 text-[#E8652B] border border-orange-200">
                   Cash-cycle delay
                 </span>
               </div>
             </div>
 
             {/* Card 4 */}
-            <div className="bg-[#F7F2EE] rounded-xl p-6 border border-[#E6DED8] flex flex-col justify-between">
+            <div className="bg-white rounded-xl p-6 border border-neutral-200 shadow-xs flex flex-col justify-between">
               <div>
-                <h3 className="text-lg font-bold text-[#202020]">Audit prep by hand</h3>
-                <p className="mt-3 text-sm text-[#6B6560] leading-relaxed">
+                <h3 className="text-lg font-bold text-neutral-900">Audit prep by hand</h3>
+                <p className="mt-3 text-sm text-neutral-600 leading-relaxed">
                   Compliance packs assembled manually from paper, phones and inboxes.
                 </p>
               </div>
-              <div className="mt-6 pt-4 border-t border-[#E6DED8]">
-                <span className="inline-block px-3 py-1 rounded-md text-xs font-bold bg-[#FAEDE7] text-[#A8552E]">
+              <div className="mt-6 pt-4 border-t border-neutral-100">
+                <span className="inline-block px-3 py-1 rounded-md text-xs font-bold bg-orange-50 text-[#E8652B] border border-orange-200">
                   HVNL / CoR exposure
                 </span>
               </div>
@@ -342,47 +342,47 @@ export default function HowItWorksPage() {
       </section>
 
       {/* ── 3. The 3 Questions Test (Deck Slide 3) ── */}
-      <section className="py-20 sm:py-24 bg-[#FEFBF9] border-b border-[#E6DED8]">
+      <section className="py-20 sm:py-24 bg-white border-b border-neutral-200">
         <div className="mx-auto max-w-7xl xl:max-w-[80rem] 2xl:max-w-[105rem] px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl text-left">
-            <span className="text-[11px] font-bold tracking-widest text-[#A8552E] uppercase block mb-1">
+            <span className="text-[11px] font-bold tracking-widest text-[#E8652B] uppercase block mb-1">
               02 · THE TEST
             </span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#202020] tracking-tight">
+            <h2 className="text-3xl sm:text-4xl font-black text-neutral-900 tracking-tight">
               Comparing platforms? Ask three questions.
             </h2>
-            <p className="mt-4 text-base sm:text-lg text-[#6B6560] leading-relaxed">
+            <p className="mt-4 text-base sm:text-lg text-neutral-600 leading-relaxed">
               If the answer to any of these is no, you are looking at a tracking tool, not an operating system.
             </p>
           </div>
 
           <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="rounded-2xl p-8 bg-[#F7F2EE] border border-[#E6DED8] text-left">
-              <span className="text-3xl font-extrabold text-[#D86D3C]">01</span>
-              <h3 className="mt-4 text-xl font-bold text-[#202020] leading-snug">
+            <div className="rounded-2xl p-8 bg-neutral-50/70 border border-neutral-200 shadow-xs text-left">
+              <span className="text-3xl font-black text-[#E8652B]">01</span>
+              <h3 className="mt-4 text-xl font-bold text-neutral-900 leading-snug">
                 Does my subcontractor get their own login?
               </h3>
-              <p className="mt-4 text-sm text-[#6B6560] leading-relaxed">
+              <p className="mt-4 text-sm text-neutral-600 leading-relaxed">
                 Not a shared link. Not a phone call. A real, authenticated portal.
               </p>
             </div>
 
-            <div className="rounded-2xl p-8 bg-[#F7F2EE] border border-[#E6DED8] text-left">
-              <span className="text-3xl font-extrabold text-[#D86D3C]">02</span>
-              <h3 className="mt-4 text-xl font-bold text-[#202020] leading-snug">
+            <div className="rounded-2xl p-8 bg-neutral-50/70 border border-neutral-200 shadow-xs text-left">
+              <span className="text-3xl font-black text-[#E8652B]">02</span>
+              <h3 className="mt-4 text-xl font-bold text-neutral-900 leading-snug">
                 Does my client get more than a tracking link?
               </h3>
-              <p className="mt-4 text-sm text-[#6B6560] leading-relaxed">
+              <p className="mt-4 text-sm text-neutral-600 leading-relaxed">
                 Live job status, dockets, POD, invoices, their own rate card.
               </p>
             </div>
 
-            <div className="rounded-2xl p-8 bg-[#F7F2EE] border border-[#E6DED8] text-left">
-              <span className="text-3xl font-extrabold text-[#D86D3C]">03</span>
-              <h3 className="mt-4 text-xl font-bold text-[#202020] leading-snug">
+            <div className="rounded-2xl p-8 bg-neutral-50/70 border border-neutral-200 shadow-xs text-left">
+              <span className="text-3xl font-black text-[#E8652B]">03</span>
+              <h3 className="mt-4 text-xl font-bold text-neutral-900 leading-snug">
                 Can I prove which rate applied last March?
               </h3>
-              <p className="mt-4 text-sm text-[#6B6560] leading-relaxed">
+              <p className="mt-4 text-sm text-neutral-600 leading-relaxed">
                 Effective-dated rate cards and an audit trail that survives a dispute.
               </p>
             </div>
@@ -391,119 +391,119 @@ export default function HowItWorksPage() {
       </section>
 
       {/* ── 4. The 4 Personas (Deck Slide 4) ── */}
-      <section className="py-20 sm:py-24 bg-[#FEFBF9] border-b border-[#E6DED8]">
+      <section className="py-20 sm:py-24 bg-neutral-50/50 border-b border-neutral-200">
         <div className="mx-auto max-w-7xl xl:max-w-[80rem] 2xl:max-w-[105rem] px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl text-left">
-            <span className="text-[11px] font-bold tracking-widest text-[#A8552E] uppercase block mb-1">
+            <span className="text-[11px] font-bold tracking-widest text-[#E8652B] uppercase block mb-1">
               03 · THE SOLUTION
             </span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#202020] tracking-tight">
+            <h2 className="text-3xl sm:text-4xl font-black text-neutral-900 tracking-tight">
               One platform. Every party on the job.
             </h2>
-            <p className="mt-4 text-base sm:text-lg text-[#6B6560] leading-relaxed">
+            <p className="mt-4 text-base sm:text-lg text-neutral-600 leading-relaxed">
               Four personas work in their own portal on the same live job record. They see what they need, and nothing they shouldn't.
             </p>
           </div>
 
           <div className="mt-12 space-y-4">
             {/* Persona 1: Admin & Dispatch */}
-            <div className="bg-[#F7F2EE] border border-[#E6DED8] rounded-xl p-6 sm:p-7 flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+            <div className="bg-white border border-neutral-200 rounded-xl p-6 sm:p-7 shadow-xs flex flex-col lg:flex-row lg:items-center justify-between gap-6">
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-xl bg-[#FAEDE7] text-[#A8552E] flex items-center justify-center shrink-0">
-                  <Monitor className="h-6 w-6 text-[#D86D3C]" />
+                <div className="w-12 h-12 rounded-xl bg-orange-50 border border-orange-200 text-[#E8652B] flex items-center justify-center shrink-0">
+                  <Monitor className="h-6 w-6 text-[#E8652B]" />
                 </div>
                 <div className="text-left">
-                  <h3 className="text-lg font-bold text-[#202020]">Admin & Dispatch</h3>
-                  <p className="mt-1 text-sm text-[#6B6560] max-w-2xl leading-relaxed">
+                  <h3 className="text-lg font-bold text-neutral-900">Admin & Dispatch</h3>
+                  <p className="mt-1 text-sm text-neutral-600 max-w-2xl leading-relaxed font-normal">
                     Full fleet, driver, job and financial control. Create and delegate jobs, manage rate cards, run invoicing and RCTIs.
                   </p>
                 </div>
               </div>
               <div className="shrink-0">
-                <span className="inline-block px-3 py-1.5 rounded-lg text-xs font-bold bg-[#FEFBF9] text-[#202020] border border-[#E6DED8]">
+                <span className="inline-block px-3 py-1.5 rounded-lg text-xs font-bold bg-neutral-100 text-neutral-800 border border-neutral-200">
                   Replaces the master spreadsheet
                 </span>
               </div>
             </div>
 
             {/* Persona 2: Subcontractor Portal */}
-            <div className="bg-[#F7F2EE] border border-[#E6DED8] rounded-xl p-6 sm:p-7 flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+            <div className="bg-white border border-neutral-200 rounded-xl p-6 sm:p-7 shadow-xs flex flex-col lg:flex-row lg:items-center justify-between gap-6">
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-xl bg-[#FAEDE7] text-[#A8552E] flex items-center justify-center shrink-0">
-                  <Users className="h-6 w-6 text-[#D86D3C]" />
+                <div className="w-12 h-12 rounded-xl bg-orange-50 border border-orange-200 text-[#E8652B] flex items-center justify-center shrink-0">
+                  <Users className="h-6 w-6 text-[#E8652B]" />
                 </div>
                 <div className="text-left">
-                  <h3 className="text-lg font-bold text-[#202020]">Subcontractor Portal</h3>
-                  <p className="mt-1 text-sm text-[#6B6560] max-w-2xl leading-relaxed">
+                  <h3 className="text-lg font-bold text-neutral-900">Subcontractor Portal</h3>
+                  <p className="mt-1 text-sm text-neutral-600 max-w-2xl leading-relaxed font-normal">
                     Own login, dedicated job queue, accept or decline, Mapbox maps, document upload, job history. Free for every subbie.
                   </p>
                 </div>
               </div>
               <div className="shrink-0">
-                <span className="inline-block px-3 py-1.5 rounded-lg text-xs font-bold bg-[#FEFBF9] text-[#202020] border border-[#E6DED8]">
+                <span className="inline-block px-3 py-1.5 rounded-lg text-xs font-bold bg-neutral-100 text-neutral-800 border border-neutral-200">
                   Replaces the phone call
                 </span>
               </div>
             </div>
 
             {/* Persona 3: Client Portal */}
-            <div className="bg-[#F7F2EE] border border-[#E6DED8] rounded-xl p-6 sm:p-7 flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+            <div className="bg-white border border-neutral-200 rounded-xl p-6 sm:p-7 shadow-xs flex flex-col lg:flex-row lg:items-center justify-between gap-6">
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-xl bg-[#FAEDE7] text-[#A8552E] flex items-center justify-center shrink-0">
-                  <Building2 className="h-6 w-6 text-[#D86D3C]" />
+                <div className="w-12 h-12 rounded-xl bg-orange-50 border border-orange-200 text-[#E8652B] flex items-center justify-center shrink-0">
+                  <Building2 className="h-6 w-6 text-[#E8652B]" />
                 </div>
                 <div className="text-left">
-                  <h3 className="text-lg font-bold text-[#202020]">Client Portal</h3>
-                  <p className="mt-1 text-sm text-[#6B6560] max-w-2xl leading-relaxed">
+                  <h3 className="text-lg font-bold text-neutral-900">Client Portal</h3>
+                  <p className="mt-1 text-sm text-neutral-600 max-w-2xl leading-relaxed font-normal">
                     Live job tracking, dockets and POD, invoice history, their own rate card, client-specific reporting.
                   </p>
                 </div>
               </div>
               <div className="shrink-0">
-                <span className="inline-block px-3 py-1.5 rounded-lg text-xs font-bold bg-[#FEFBF9] text-[#202020] border border-[#E6DED8]">
+                <span className="inline-block px-3 py-1.5 rounded-lg text-xs font-bold bg-neutral-100 text-neutral-800 border border-neutral-200">
                   Replaces the status call
                 </span>
               </div>
             </div>
 
             {/* Persona 4: Driver Mobile App */}
-            <div className="bg-[#F7F2EE] border border-[#E6DED8] rounded-xl p-6 sm:p-7 flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+            <div className="bg-white border border-neutral-200 rounded-xl p-6 sm:p-7 shadow-xs flex flex-col lg:flex-row lg:items-center justify-between gap-6">
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-xl bg-[#FAEDE7] text-[#A8552E] flex items-center justify-center shrink-0">
-                  <Smartphone className="h-6 w-6 text-[#D86D3C]" />
+                <div className="w-12 h-12 rounded-xl bg-orange-50 border border-orange-200 text-[#E8652B] flex items-center justify-center shrink-0">
+                  <Smartphone className="h-6 w-6 text-[#E8652B]" />
                 </div>
                 <div className="text-left">
-                  <h3 className="text-lg font-bold text-[#202020]">Driver Mobile App</h3>
-                  <p className="mt-1 text-sm text-[#6B6560] max-w-2xl leading-relaxed">
+                  <h3 className="text-lg font-bold text-neutral-900">Driver Mobile App</h3>
+                  <p className="mt-1 text-sm text-neutral-600 max-w-2xl leading-relaxed font-normal">
                     iOS and Android, offline-capable. Pre-start checklist, load collected, load delivered, docket scan, signature.
                   </p>
                 </div>
               </div>
               <div className="shrink-0">
-                <span className="inline-block px-3 py-1.5 rounded-lg text-xs font-bold bg-[#FEFBF9] text-[#202020] border border-[#E6DED8]">
+                <span className="inline-block px-3 py-1.5 rounded-lg text-xs font-bold bg-neutral-100 text-neutral-800 border border-neutral-200">
                   Replaces the paper docket
                 </span>
               </div>
             </div>
           </div>
 
-          <div className="mt-8 text-left text-sm text-[#6B6560]">
+          <div className="mt-8 text-left text-sm text-neutral-500 font-medium">
             Plus Management & Reporting: dashboards, financial reporting, compliance dashboards and full audit trails.
           </div>
         </div>
       </section>
 
       {/* ── 5. Job Lifecycle Pipeline (Deck Slide 5) ── */}
-      <section className="py-20 sm:py-24 bg-[#FEFBF9] border-b border-[#E6DED8]">
+      <section className="py-20 sm:py-24 bg-white border-b border-neutral-200">
         <div className="mx-auto max-w-7xl xl:max-w-[80rem] 2xl:max-w-[105rem] px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl text-left">
-            <span className="text-[11px] font-bold tracking-widest text-[#A8552E] uppercase block mb-1">
+            <span className="text-[11px] font-bold tracking-widest text-[#E8652B] uppercase block mb-1">
               JOB LIFECYCLE
             </span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#202020] tracking-tight">
+            <h2 className="text-3xl sm:text-4xl font-black text-neutral-900 tracking-tight">
               The job is created once. Everything attaches to it.
             </h2>
-            <p className="mt-4 text-base sm:text-lg text-[#6B6560] leading-relaxed">
+            <p className="mt-4 text-base sm:text-lg text-neutral-600 leading-relaxed">
               Delegation, tracking, evidence, billing and audit all hang off a single live record.
             </p>
           </div>
@@ -544,19 +544,19 @@ export default function HowItWorksPage() {
             ].map((item, idx) => (
               <div
                 key={item.step}
-                className="relative bg-[#F7F2EE] border border-[#E6DED8] rounded-xl p-5 flex flex-col justify-between"
+                className="relative bg-neutral-50/70 border border-neutral-200 shadow-xs rounded-xl p-5 flex flex-col justify-between"
               >
                 <div>
-                  <div className="w-8 h-8 rounded-full bg-[#FAEDE7] text-[#D86D3C] flex items-center justify-center font-bold text-sm mb-3">
+                  <div className="w-8 h-8 rounded-full bg-orange-50 border border-orange-200 text-[#E8652B] flex items-center justify-center font-bold text-sm mb-3">
                     {item.step}
                   </div>
-                  <h4 className="text-base font-bold text-[#202020]">{item.title}</h4>
-                  <p className="mt-2 text-xs text-[#6B6560] leading-relaxed">
+                  <h4 className="text-base font-bold text-neutral-900">{item.title}</h4>
+                  <p className="mt-2 text-xs text-neutral-600 leading-relaxed font-normal">
                     {item.desc}
                   </p>
                 </div>
                 {idx < 5 && (
-                  <div className="hidden lg:block absolute -right-3 top-1/2 -translate-y-1/2 z-10 text-[#6B6560]">
+                  <div className="hidden lg:block absolute -right-3 top-1/2 -translate-y-1/2 z-10 text-neutral-400">
                     <ChevronRight className="h-5 w-5" />
                   </div>
                 )}
@@ -567,30 +567,30 @@ export default function HowItWorksPage() {
       </section>
 
       {/* ── 6. The 5 Architectural Differences (Deck Slides 6-10) ── */}
-      <section className="py-20 sm:py-24 bg-[#FEFBF9] border-b border-[#E6DED8]">
+      <section className="py-20 sm:py-24 bg-neutral-50/50 border-b border-neutral-200">
         <div className="mx-auto max-w-7xl xl:max-w-[80rem] 2xl:max-w-[105rem] px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl text-left">
-            <span className="text-[11px] font-bold tracking-widest text-[#A8552E] uppercase block mb-1">
+            <span className="text-[11px] font-bold tracking-widest text-[#E8652B] uppercase block mb-1">
               04 · THE DIFFERENCES
             </span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#202020] tracking-tight">
+            <h2 className="text-3xl sm:text-4xl font-black text-neutral-900 tracking-tight">
               Five architectural differences.
             </h2>
-            <p className="mt-4 text-base sm:text-lg text-[#6B6560] leading-relaxed">
+            <p className="mt-4 text-base sm:text-lg text-neutral-600 leading-relaxed">
               Why generic dispatch software and courier TMS fail in heavy bulk operations.
             </p>
           </div>
 
           {/* Tab Selector */}
-          <div className="mt-10 flex flex-wrap gap-2 border-b border-[#E6DED8] pb-4">
+          <div className="mt-10 flex flex-wrap gap-2 border-b border-neutral-200 pb-4">
             {differences.map((diff, index) => (
               <button
                 key={diff.num}
                 onClick={() => setActiveDiff(index)}
-                className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all ${
+                className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all cursor-pointer ${
                   activeDiff === index
-                    ? "bg-[#202020] text-white"
-                    : "bg-[#F7F2EE] text-[#6B6560] hover:text-[#202020] border border-[#E6DED8]"
+                    ? "bg-neutral-900 text-white shadow-xs"
+                    : "bg-white text-neutral-600 hover:text-neutral-900 border border-neutral-300 shadow-2xs"
                 }`}
               >
                 {diff.num}. {diff.title.split(".")[0]}
@@ -605,13 +605,13 @@ export default function HowItWorksPage() {
               return (
                 <div
                   key={diff.num}
-                  className="bg-[#F7F2EE] rounded-2xl border border-[#E6DED8] p-8 sm:p-10"
+                  className="bg-white rounded-2xl border border-neutral-200 shadow-xs p-8 sm:p-10"
                 >
                   <div className="flex items-center gap-3">
-                    <span className="w-8 h-8 rounded-full bg-[#FAEDE7] text-[#D86D3C] flex items-center justify-center font-bold text-sm">
+                    <span className="w-8 h-8 rounded-full bg-orange-50 border border-orange-200 text-[#E8652B] flex items-center justify-center font-bold text-sm">
                       {diff.num}
                     </span>
-                    <h3 className="text-2xl font-bold text-[#202020]">
+                    <h3 className="text-2xl font-bold text-neutral-900">
                       {diff.title}
                     </h3>
                   </div>
@@ -619,35 +619,35 @@ export default function HowItWorksPage() {
                   <div className="mt-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start text-left">
                     {/* Left Column: What we heard + What HaulageOps does */}
                     <div className="lg:col-span-7 space-y-6">
-                      <div className="bg-[#FEFBF9] border border-[#E6DED8] rounded-xl p-5">
-                        <span className="text-[11px] font-bold tracking-wider text-[#A8552E] uppercase block mb-1">
+                      <div className="bg-neutral-50/70 border border-neutral-200 rounded-xl p-5">
+                        <span className="text-[11px] font-bold tracking-wider text-[#E8652B] uppercase block mb-1">
                           WHAT WE HEARD
                         </span>
-                        <p className="text-base text-[#202020] italic font-medium">
+                        <p className="text-base text-neutral-900 italic font-medium">
                           {diff.quote}
                         </p>
                       </div>
 
                       <div>
-                        <span className="text-[11px] font-bold tracking-wider text-[#A8552E] uppercase block mb-2">
+                        <span className="text-[11px] font-bold tracking-wider text-[#E8652B] uppercase block mb-2">
                           WHAT HAULAGEOPS DOES
                         </span>
-                        <p className="text-base text-[#202020] leading-relaxed">
+                        <p className="text-base text-neutral-700 leading-relaxed font-normal">
                           {diff.whatWeDo}
                         </p>
                       </div>
                     </div>
 
                     {/* Right Column: In the product checklist */}
-                    <div className="lg:col-span-5 bg-[#FEFBF9] border border-[#E6DED8] rounded-xl p-6">
-                      <span className="text-[11px] font-bold tracking-wider text-[#A8552E] uppercase block mb-4">
+                    <div className="lg:col-span-5 bg-neutral-50/70 border border-neutral-200 rounded-xl p-6">
+                      <span className="text-[11px] font-bold tracking-wider text-neutral-900 uppercase block mb-4">
                         IN THE PRODUCT
                       </span>
                       <ul className="space-y-3">
                         {diff.inProduct.map((feature) => (
                           <li key={feature} className="flex items-start gap-3">
-                            <span className="w-1.5 h-1.5 rounded-full bg-[#D86D3C] mt-2 shrink-0" />
-                            <span className="text-sm font-medium text-[#202020]">
+                            <span className="w-1.5 h-1.5 rounded-full bg-[#E8652B] mt-2 shrink-0" />
+                            <span className="text-sm font-semibold text-neutral-800">
                               {feature}
                             </span>
                           </li>
@@ -657,9 +657,9 @@ export default function HowItWorksPage() {
                   </div>
 
                   {/* Bottom Takeaway Bar per Brand Reference (Orange tint fill) */}
-                  <div className="mt-8 p-4 rounded-xl bg-[#FAEDE7] border border-[#D86D3C]/30 flex items-center gap-3">
-                    <Sparkles className="h-5 w-5 text-[#D86D3C] shrink-0" />
-                    <span className="text-sm font-bold text-[#A8552E]">
+                  <div className="mt-8 p-4 rounded-xl bg-orange-50/80 border border-orange-200 flex items-center gap-3">
+                    <Sparkles className="h-5 w-5 text-[#E8652B] shrink-0" />
+                    <span className="text-sm font-bold text-neutral-900">
                       {diff.takeaway}
                     </span>
                   </div>
@@ -671,27 +671,27 @@ export default function HowItWorksPage() {
       </section>
 
       {/* ── 7. Before vs After Comparison (Deck Slide 11) ── */}
-      <section className="py-20 sm:py-24 bg-[#FEFBF9] border-b border-[#E6DED8]">
+      <section className="py-20 sm:py-24 bg-white border-b border-neutral-200">
         <div className="mx-auto max-w-7xl xl:max-w-[80rem] 2xl:max-w-[105rem] px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl text-left">
-            <span className="text-[11px] font-bold tracking-widest text-[#A8552E] uppercase block mb-1">
+            <span className="text-[11px] font-bold tracking-widest text-[#E8652B] uppercase block mb-1">
               05 · WHAT CHANGES
             </span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#202020] tracking-tight">
+            <h2 className="text-3xl sm:text-4xl font-black text-neutral-900 tracking-tight">
               One workflow, not four manual steps a night.
             </h2>
-            <p className="mt-4 text-base sm:text-lg text-[#6B6560] leading-relaxed">
+            <p className="mt-4 text-base sm:text-lg text-neutral-600 leading-relaxed">
               Subbies see allocation and address only. Client billing rates stay hidden.
             </p>
           </div>
 
           <div className="mt-12 overflow-x-auto">
-            <div className="min-w-[700px] border border-[#E6DED8] rounded-xl overflow-hidden">
-              {/* Navy Chrome Table Header Bar per Brand Guide */}
-              <div className="grid grid-cols-12 bg-[#20293A] px-6 py-4 font-bold text-xs uppercase tracking-wider text-white">
+            <div className="min-w-[700px] border border-neutral-300 rounded-xl overflow-hidden shadow-xs">
+              {/* Table Header Bar */}
+              <div className="grid grid-cols-12 bg-neutral-900 px-6 py-4 font-bold text-xs uppercase tracking-wider text-white">
                 <div className="col-span-3">Workflow Area</div>
-                <div className="col-span-4 text-white/70">Today</div>
-                <div className="col-span-5 text-[#FFA07A]">With HaulageOps</div>
+                <div className="col-span-4 text-neutral-300">Today</div>
+                <div className="col-span-5 text-[#E8652B]">With HaulageOps</div>
               </div>
 
               {[
@@ -724,17 +724,17 @@ export default function HowItWorksPage() {
                 <div
                   key={row.area}
                   className={`grid grid-cols-12 px-6 py-4 text-sm items-center ${
-                    idx % 2 === 0 ? "bg-[#FEFBF9]" : "bg-[#F7F2EE]"
-                  } border-b border-[#E6DED8] last:border-b-0`}
+                    idx % 2 === 0 ? "bg-white" : "bg-neutral-50/60"
+                  } border-b border-neutral-200 last:border-b-0`}
                 >
-                  <div className="col-span-3 font-semibold text-[#202020]">
+                  <div className="col-span-3 font-semibold text-neutral-900">
                     {row.area}
                   </div>
-                  <div className="col-span-4 text-[#6B6560] pr-4">
+                  <div className="col-span-4 text-neutral-600 pr-4">
                     {row.today}
                   </div>
-                  <div className="col-span-5 font-semibold text-[#202020] flex items-center gap-2">
-                    <span className="text-[#D86D3C]">›</span>
+                  <div className="col-span-5 font-bold text-neutral-900 flex items-center gap-2">
+                    <span className="text-[#E8652B] font-black">›</span>
                     <span>{row.withHo}</span>
                   </div>
                 </div>
@@ -745,24 +745,25 @@ export default function HowItWorksPage() {
       </section>
 
       {/* ── 8. Fit & Integrations (Deck Slide 12) ── */}
-      <section className="py-20 sm:py-24 bg-[#FEFBF9] border-b border-[#E6DED8]">
+      <section className="py-20 sm:py-24 bg-white border-b border-neutral-200">
         <div className="mx-auto max-w-7xl xl:max-w-[80rem] 2xl:max-w-[105rem] px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl text-left">
-            <span className="text-[11px] font-bold tracking-widest text-[#A8552E] uppercase block mb-1">
+            <span className="text-[11px] font-bold tracking-widest text-[#E8652B] uppercase block mb-1">
               06 · FIT
             </span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#202020] tracking-tight">
+            <h2 className="text-3xl sm:text-4xl font-black text-neutral-900 tracking-tight">
               Built for the work, and honest about the edges.
             </h2>
-            <p className="mt-4 text-base sm:text-lg text-[#6B6560] leading-relaxed">
+            <p className="mt-4 text-base sm:text-lg text-neutral-600 leading-relaxed">
               Bulk haulage and construction logistics operators running roughly 15 to 80 vehicles, mixed owned and subcontracted fleet.
             </p>
           </div>
 
           <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
-            {/* Where we fit - Green #2E6B4F strictly per Brand Guide */}
-            <div className="bg-[#F7F2EE] rounded-2xl border border-[#E6DED8] p-8">
-              <h3 className="text-sm font-bold text-[#2E6B4F] tracking-wider uppercase mb-6">
+            {/* Where we fit */}
+            <div className="bg-neutral-50/70 rounded-2xl border border-neutral-200 shadow-xs p-8">
+              <h3 className="text-sm font-bold text-neutral-900 tracking-wider uppercase mb-6 flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-[#E8652B]" />
                 WHERE WE FIT
               </h3>
               <ul className="space-y-3.5">
@@ -773,17 +774,18 @@ export default function HowItWorksPage() {
                   "Civil infrastructure",
                   "Mixed owned + subcontracted fleets",
                 ].map((item) => (
-                  <li key={item} className="flex items-center gap-3 text-sm font-medium text-[#202020]">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#2E6B4F] shrink-0" />
+                  <li key={item} className="flex items-center gap-3 text-sm font-semibold text-neutral-800">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#E8652B] shrink-0" />
                     <span>{item}</span>
                   </li>
                 ))}
               </ul>
             </div>
 
-            {/* Where we don't - Slate #4A5568 strictly per Brand Guide */}
-            <div className="bg-[#F7F2EE] rounded-2xl border border-[#E6DED8] p-8">
-              <h3 className="text-sm font-bold text-[#4A5568] tracking-wider uppercase mb-6">
+            {/* Where we don't */}
+            <div className="bg-neutral-50/70 rounded-2xl border border-neutral-200 shadow-xs p-8">
+              <h3 className="text-sm font-bold text-neutral-500 tracking-wider uppercase mb-6 flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-neutral-400" />
                 WHERE WE DON'T
               </h3>
               <ul className="space-y-3.5">
@@ -794,8 +796,8 @@ export default function HowItWorksPage() {
                   "Hardware telematics or ELD",
                   "Long-haul linehaul networks",
                 ].map((item) => (
-                  <li key={item} className="flex items-center gap-3 text-sm font-medium text-[#6B6560]">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#4A5568] shrink-0" />
+                  <li key={item} className="flex items-center gap-3 text-sm font-medium text-neutral-500">
+                    <span className="w-1.5 h-1.5 rounded-full bg-neutral-400 shrink-0" />
                     <span>{item}</span>
                   </li>
                 ))}
@@ -804,32 +806,32 @@ export default function HowItWorksPage() {
           </div>
 
           {/* Integration Banner */}
-          <div className="mt-12 bg-[#F7F2EE] rounded-xl border border-[#E6DED8] p-6 text-left">
-            <p className="text-sm font-bold text-[#A8552E] mb-4">
+          <div className="mt-12 bg-neutral-50/70 rounded-xl border border-neutral-200 shadow-xs p-6 text-left">
+            <p className="text-sm font-bold text-neutral-900 mb-4">
               Keep your GPS. We are the operations layer above it.
             </p>
-            <div className="flex flex-wrap items-center gap-4 sm:gap-6 text-sm font-semibold text-[#202020]">
-              <span className="px-3.5 py-1.5 rounded-lg bg-[#FEFBF9] border border-[#E6DED8]">Xero</span>
-              <span className="px-3.5 py-1.5 rounded-lg bg-[#FEFBF9] border border-[#E6DED8]">Google Maps</span>
-              <span className="px-3.5 py-1.5 rounded-lg bg-[#FEFBF9] border border-[#E6DED8]">Mapbox</span>
-              <span className="px-3.5 py-1.5 rounded-lg bg-[#FEFBF9] border border-[#E6DED8]">Firebase FCM</span>
-              <span className="px-3.5 py-1.5 rounded-lg bg-[#FEFBF9] border border-[#E6DED8]">Azure Storage</span>
+            <div className="flex flex-wrap items-center gap-3 sm:gap-4 text-sm font-bold text-neutral-900">
+              {["Xero", "Google Maps", "Mapbox", "Firebase FCM", "Azure Storage"].map((integ) => (
+                <span key={integ} className="px-3.5 py-1.5 rounded-lg bg-white border border-neutral-300 shadow-2xs">
+                  {integ}
+                </span>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
       {/* ── 9. Implementation: Live in Two Weeks (Deck Slide 13) ── */}
-      <section className="py-20 sm:py-24 bg-[#FEFBF9] border-b border-[#E6DED8]">
+      <section className="py-20 sm:py-24 bg-neutral-50/50 border-b border-neutral-200">
         <div className="mx-auto max-w-7xl xl:max-w-[80rem] 2xl:max-w-[105rem] px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl text-left">
-            <span className="text-[11px] font-bold tracking-widest text-[#A8552E] uppercase block mb-1">
+            <span className="text-[11px] font-bold tracking-widest text-[#E8652B] uppercase block mb-1">
               07 · IMPLEMENTATION
             </span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#202020] tracking-tight">
+            <h2 className="text-3xl sm:text-4xl font-black text-neutral-900 tracking-tight">
               Live in two weeks.
             </h2>
-            <p className="mt-4 text-base sm:text-lg text-[#6B6560] leading-relaxed">
+            <p className="mt-4 text-base sm:text-lg text-neutral-600 leading-relaxed">
               Two weeks from contract signature to the full solution running on your operation, not a demo environment with your logo on it.
             </p>
           </div>
@@ -864,16 +866,16 @@ export default function HowItWorksPage() {
             ].map((phase) => (
               <div
                 key={phase.days}
-                className="bg-[#F7F2EE] border border-[#E6DED8] rounded-xl p-6 flex flex-col justify-between"
+                className="bg-white border border-neutral-200 shadow-xs rounded-xl p-6 flex flex-col justify-between"
               >
                 <div>
-                  <span className="inline-block px-2.5 py-1 rounded-md text-xs font-bold bg-[#FAEDE7] text-[#A8552E] mb-3">
+                  <span className="inline-block px-2.5 py-1 rounded-md text-xs font-bold bg-orange-50 text-[#E8652B] border border-orange-200 mb-3">
                     {phase.days}
                   </span>
-                  <h4 className="text-base font-bold text-[#202020]">
+                  <h4 className="text-base font-bold text-neutral-900">
                     {phase.title}
                   </h4>
-                  <p className="mt-2 text-xs text-[#6B6560] leading-relaxed">
+                  <p className="mt-2 text-xs text-neutral-600 leading-relaxed font-normal">
                     {phase.desc}
                   </p>
                 </div>
@@ -881,59 +883,60 @@ export default function HowItWorksPage() {
             ))}
           </div>
 
-          <div className="mt-10 p-5 rounded-xl bg-[#FAEDE7] border border-[#D86D3C]/30 text-left max-w-4xl">
-            <p className="text-sm font-bold text-[#A8552E]">
-              Day 15: live in production, with support active from day one. Then we customise, because we don't believe one solution fits all.
+          <div className="mt-10 p-5 rounded-xl bg-white border border-neutral-200 shadow-xs text-left max-w-4xl">
+            <p className="text-sm font-semibold text-neutral-800">
+              <span className="font-extrabold text-neutral-900">Day 15: </span>
+              live in production, with support active from day one. Then we customise, because we don't believe one solution fits all.
             </p>
           </div>
         </div>
       </section>
 
       {/* ── 10. Commercial Model (Deck Slide 14) ── */}
-      <section className="py-20 sm:py-24 bg-[#FEFBF9] border-b border-[#E6DED8]">
+      <section className="py-20 sm:py-24 bg-white border-b border-neutral-200">
         <div className="mx-auto max-w-7xl xl:max-w-[80rem] 2xl:max-w-[105rem] px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl text-left">
-            <span className="text-[11px] font-bold tracking-widest text-[#A8552E] uppercase block mb-1">
+            <span className="text-[11px] font-bold tracking-widest text-[#E8652B] uppercase block mb-1">
               08 · COMMERCIAL MODEL
             </span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#202020] tracking-tight">
+            <h2 className="text-3xl sm:text-4xl font-black text-neutral-900 tracking-tight">
               Priced on the work, not the seat.
             </h2>
-            <p className="mt-4 text-base sm:text-lg text-[#6B6560] leading-relaxed">
+            <p className="mt-4 text-base sm:text-lg text-neutral-600 leading-relaxed">
               Most platforms charge per seat, so every subbie and client you invite becomes a line on your bill, and the platform punishes you for the visibility you bought it for.
             </p>
           </div>
 
           <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
             {/* Setup */}
-            <div className="bg-[#F7F2EE] rounded-2xl border border-[#E6DED8] p-8">
-              <span className="text-xs font-bold text-[#A8552E] uppercase tracking-wider">
+            <div className="bg-neutral-50/70 rounded-2xl border border-neutral-200 shadow-xs p-8">
+              <span className="text-xs font-bold text-[#E8652B] uppercase tracking-wider">
                 One-time at signing
               </span>
-              <h3 className="mt-2 text-2xl font-bold text-[#202020]">Setup</h3>
-              <p className="mt-4 text-sm text-[#6B6560] leading-relaxed">
+              <h3 className="mt-2 text-2xl font-bold text-neutral-900">Setup</h3>
+              <p className="mt-4 text-sm text-neutral-600 leading-relaxed font-normal">
                 White labelling, dedicated infrastructure, your sub-domains, demos and team training.
               </p>
             </div>
 
             {/* Platform & Support */}
-            <div className="bg-[#F7F2EE] rounded-2xl border border-[#E6DED8] p-8">
-              <span className="text-xs font-bold text-[#A8552E] uppercase tracking-wider">
+            <div className="bg-neutral-50/70 rounded-2xl border border-neutral-200 shadow-xs p-8">
+              <span className="text-xs font-bold text-[#E8652B] uppercase tracking-wider">
                 Monthly
               </span>
-              <h3 className="mt-2 text-2xl font-bold text-[#202020]">Platform & support</h3>
-              <p className="mt-4 text-sm text-[#6B6560] leading-relaxed">
+              <h3 className="mt-2 text-2xl font-bold text-neutral-900">Platform & support</h3>
+              <p className="mt-4 text-sm text-neutral-600 leading-relaxed font-normal">
                 Access for your team, drivers, subbies and clients. Hosting, updates and support included.
               </p>
             </div>
 
             {/* Per docket */}
-            <div className="bg-[#F7F2EE] rounded-2xl border border-[#E6DED8] p-8">
-              <span className="text-xs font-bold text-[#A8552E] uppercase tracking-wider">
+            <div className="bg-neutral-50/70 rounded-2xl border border-neutral-200 shadow-xs p-8">
+              <span className="text-xs font-bold text-[#E8652B] uppercase tracking-wider">
                 Monthly on actual volume
               </span>
-              <h3 className="mt-2 text-2xl font-bold text-[#202020]">Per docket</h3>
-              <p className="mt-4 text-sm text-[#6B6560] leading-relaxed">
+              <h3 className="mt-2 text-2xl font-bold text-neutral-900">Per docket</h3>
+              <p className="mt-4 text-sm text-neutral-600 leading-relaxed font-normal">
                 Banded rate that falls as volume rises. You pay for the work that ran.
               </p>
             </div>
@@ -941,56 +944,58 @@ export default function HowItWorksPage() {
 
           {/* 4 Fair-pricing badges */}
           <div className="mt-8 flex flex-wrap items-center gap-3">
-            <span className="px-4 py-2 rounded-full text-xs font-bold bg-[#F7F2EE] text-[#202020] border border-[#E6DED8]">
+            <span className="px-4 py-2 rounded-full text-xs font-bold bg-white text-neutral-800 border border-neutral-300 shadow-2xs">
               No per-user fee
             </span>
-            <span className="px-4 py-2 rounded-full text-xs font-bold bg-[#F7F2EE] text-[#202020] border border-[#E6DED8]">
+            <span className="px-4 py-2 rounded-full text-xs font-bold bg-white text-neutral-800 border border-neutral-300 shadow-2xs">
               No per-vehicle fee
             </span>
-            <span className="px-4 py-2 rounded-full text-xs font-bold bg-[#FAEDE7] text-[#A8552E] border border-[#D86D3C]/30">
+            <span className="px-4 py-2 rounded-full text-xs font-bold bg-orange-50 text-[#E8652B] border border-orange-200">
               Subbies pay nothing
             </span>
-            <span className="px-4 py-2 rounded-full text-xs font-bold bg-[#FAEDE7] text-[#A8552E] border border-[#D86D3C]/30">
+            <span className="px-4 py-2 rounded-full text-xs font-bold bg-orange-50 text-[#E8652B] border border-orange-200">
               Clients pay nothing
             </span>
           </div>
 
-          <p className="mt-6 text-left text-xs text-[#6B6560]">
+          <p className="mt-6 text-left text-xs text-neutral-500 font-medium">
             Full figures, volume bands and worked examples are set out in the HaulageOps Commercial Proposal.
           </p>
         </div>
       </section>
 
-      {/* ── 11. Final CTA: Slide 15 (Light Warm Paper per Brand Guide) ── */}
-      <section className="py-24 sm:py-28 bg-[#FAEDE7] border-t border-[#E6DED8]">
-        <div className="mx-auto max-w-7xl xl:max-w-[80rem] 2xl:max-w-[105rem] px-4 sm:px-6 lg:px-8 text-left">
-          <div className="max-w-3xl">
-            <span className="text-[11px] font-bold tracking-widest text-[#A8552E] uppercase block mb-2">
-              NO OBLIGATION
-            </span>
-            <h2 className="text-3xl sm:text-5xl font-extrabold text-[#202020] tracking-tight">
-              See your operation on HaulageOps.
-            </h2>
-            <p className="mt-6 text-lg sm:text-xl text-[#6B6560] leading-relaxed">
-              20 minutes on your workflows: dispatch, delegation, client view, invoice. No obligation.
-            </p>
+      {/* ── 11. Final CTA: Slide 15 ── */}
+      <section className="py-20 sm:py-28 bg-white border-t border-neutral-200">
+        <div className="mx-auto max-w-7xl xl:max-w-[80rem] 2xl:max-w-[105rem] px-4 sm:px-6 lg:px-8">
+          <div className="rounded-2xl border border-neutral-300 bg-gradient-to-b from-neutral-50 via-white to-neutral-50 p-8 sm:p-14 text-left text-neutral-900 shadow-sm relative overflow-hidden">
+            <div className="max-w-3xl">
+              <span className="text-[11px] font-bold tracking-widest text-[#E8652B] uppercase block mb-2">
+                NO OBLIGATION
+              </span>
+              <h2 className="text-3xl sm:text-5xl font-black text-neutral-900 tracking-tight">
+                See your operation on HaulageOps.
+              </h2>
+              <p className="mt-6 text-lg sm:text-xl text-neutral-600 leading-relaxed font-normal">
+                20 minutes on your workflows: dispatch, delegation, client view, invoice. No obligation.
+              </p>
 
-            <div className="mt-10 flex flex-wrap items-center gap-4">
-              <a
-                href="https://calendly.com/admin-haulageops/30min"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Button size="lg" className="bg-[#D86D3C] hover:bg-[#A8552E] text-white font-semibold px-8 py-6 h-auto text-base shadow-sm">
-                  Book a 20-minute demo
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-              </a>
+              <div className="mt-8 flex flex-wrap items-center gap-4">
+                <a
+                  href="https://calendly.com/admin-haulageops/30min"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button size="lg" className="bg-[#E8652B] hover:bg-[#D05520] text-white font-bold px-8 py-6 h-auto text-base shadow-sm cursor-pointer">
+                    Book a 20-minute demo
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </a>
+              </div>
+
+              <p className="mt-8 text-xs text-neutral-500 tracking-wide font-medium">
+                The TMS for bulk haulage operators who run subcontractors and demanding clients.
+              </p>
             </div>
-
-            <p className="mt-8 text-xs text-[#6B6560] tracking-wide font-medium">
-              The TMS for bulk haulage operators who run subcontractors and demanding clients.
-            </p>
           </div>
         </div>
       </section>

@@ -49,12 +49,12 @@ const priorityIndustries = [
 export function IndustriesPage() {
   return (
     <MainLayout>
-      <section className="pt-32 pb-20 bg-gradient-to-b from-[#FFF5EE]/60 via-[#FFF9F5]/30 to-white text-[#0F172A]">
+      <section className="pt-32 pb-20 bg-gradient-to-b from-neutral-50/80 via-white to-white text-neutral-900 border-b border-neutral-200">
         <div className="mx-auto max-w-7xl xl:max-w-[80rem] 2xl:max-w-[105rem] px-4 sm:px-6 lg:px-8 text-center">
           <motion.span
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            className="inline-block px-3.5 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider text-[#E8652B] bg-[#FFF0E6] mb-4"
+            className="inline-block px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider text-[#E8652B] bg-orange-50 border border-orange-200 mb-4"
           >
             Tailored Industry Solutions
           </motion.span>
@@ -62,7 +62,7 @@ export function IndustriesPage() {
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.05 }}
-            className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#0F172A] max-w-4xl mx-auto"
+            className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-neutral-900 max-w-4xl mx-auto"
           >
             Purpose-built for heavy materials & construction transport.
           </motion.h1>
@@ -70,7 +70,7 @@ export function IndustriesPage() {
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="mt-6 text-lg sm:text-xl text-[#475569] max-w-2xl mx-auto leading-relaxed"
+            className="mt-6 text-lg sm:text-xl text-neutral-600 max-w-2xl mx-auto leading-relaxed"
           >
             From bulk hauliers and quarry fleets to civil logistics, discover how HaulageOps powers your specific operational workflows.
           </motion.p>
@@ -81,20 +81,20 @@ export function IndustriesPage() {
         <div className="mx-auto max-w-7xl xl:max-w-[80rem] 2xl:max-w-[105rem] px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {priorityIndustries.map((ind) => (
-              <div key={ind.name} className="bg-white border border-[#E2E8F0] rounded-2xl p-8 shadow-sm flex flex-col justify-between">
+              <div key={ind.name} className="bg-white border border-neutral-200 rounded-2xl p-8 shadow-xs flex flex-col justify-between">
                 <div>
-                  <h3 className="text-2xl font-bold text-[#0F172A]">{ind.name}</h3>
-                  <p className="text-sm text-[#64748B] mt-2 leading-relaxed">{ind.desc}</p>
+                  <h3 className="text-2xl font-bold text-neutral-900">{ind.name}</h3>
+                  <p className="text-sm text-neutral-600 mt-2 leading-relaxed font-normal">{ind.desc}</p>
                   <ul className="mt-6 space-y-2">
                     {ind.highlights.map((h) => (
-                      <li key={h} className="flex items-center gap-2 text-xs text-[#334155]">
-                        <CheckCircle className="h-4 w-4 text-[#16A34A] shrink-0" />
+                      <li key={h} className="flex items-center gap-2 text-xs text-neutral-700">
+                        <CheckCircle className="h-4 w-4 text-[#E8652B] shrink-0" />
                         <span>{h}</span>
                       </li>
                     ))}
                   </ul>
                 </div>
-                <Link href={ind.href} className="mt-8 inline-flex items-center gap-1 text-sm font-semibold text-[#E8652B] hover:text-[#D05520]">
+                <Link href={ind.href} className="mt-8 inline-flex items-center gap-1 text-sm font-bold text-[#E8652B] hover:text-[#D05520]">
                   Explore {ind.name} Workflow →
                 </Link>
               </div>

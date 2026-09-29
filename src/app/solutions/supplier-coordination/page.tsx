@@ -127,28 +127,28 @@ export default function SupplierCoordinationPage() {
   return (
     <MainLayout showCta={false}>
       {/* Breadcrumb */}
-      <div className="pt-24 pb-0 bg-[#FFF9F5]">
+      <div className="pt-24 pb-0 bg-neutral-50/70">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <nav className="flex items-center gap-2 text-xs text-[#64748B]">
+          <nav className="flex items-center gap-2 text-xs text-neutral-500">
             <Link href="/" className="hover:text-[#E8652B]">Home</Link>
             <ChevronRight className="h-3 w-3" />
             <Link href="/solutions" className="hover:text-[#E8652B]">Solutions</Link>
             <ChevronRight className="h-3 w-3" />
-            <span className="text-[#0F172A] font-medium">Supplier Coordination</span>
+            <span className="text-neutral-900 font-medium">Supplier Coordination</span>
           </nav>
         </div>
       </div>
 
       {/* HERO */}
-      <section className="pt-10 pb-20 bg-gradient-to-b from-[#FFF9F5] via-[#FFF5EE]/40 to-white">
+      <section className="pt-10 pb-20 bg-gradient-to-b from-neutral-50/80 via-white to-white border-b border-neutral-200">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-[#E8652B] bg-[#FFF0E6] mb-4 animate-in fade-in slide-in-from-bottom-4 animation-duration-700 fill-mode-both">
+          <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-[#E8652B] bg-orange-50 border border-orange-200 mb-4 animate-in fade-in slide-in-from-bottom-4 animation-duration-700 fill-mode-both">
             Coordinate Operations
           </span>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#0F172A] max-w-4xl leading-[1.1] animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-100 fill-mode-both">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-neutral-900 max-w-4xl leading-[1.1] animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-100 fill-mode-both">
             Supplier information where your team can actually find it.
           </h1>
-          <p className="mt-6 text-lg sm:text-xl text-[#475569] max-w-3xl leading-relaxed animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-150 fill-mode-both">
+          <p className="mt-6 text-lg sm:text-xl text-neutral-600 max-w-3xl leading-relaxed animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-150 fill-mode-both">
             Fuel suppliers, parts vendors, materials suppliers and equipment providers — their records belong in the operations system, not in one person&apos;s inbox, phone contacts or a spreadsheet nobody else can find.
           </p>
           <div className="mt-8 flex flex-wrap gap-3 animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-200 fill-mode-both">
@@ -158,7 +158,7 @@ export default function SupplierCoordinationPage() {
               </Button>
             </Link>
             <Link href="/platform/supplier-management">
-              <Button size="lg" variant="outline" className="border-[#E2E8F0] text-[#334155] hover:bg-[#F8FAFC]">
+              <Button size="lg" variant="outline" className="border-neutral-200 text-neutral-700 hover:bg-neutral-50/50">
                 Supplier Management
               </Button>
             </Link>
@@ -166,8 +166,8 @@ export default function SupplierCoordinationPage() {
           {/* Kicker pills */}
           <div className="mt-8 flex flex-wrap gap-2 animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-300 fill-mode-both">
             {heroKickers.map((pill) => (
-              <span key={pill} className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#F1F5F9] text-xs font-medium text-[#334155]">
-                <CheckCircle className="h-3.5 w-3.5 text-[#16A34A] shrink-0" />
+              <span key={pill} className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-neutral-100 text-xs font-medium text-neutral-700">
+                <CheckCircle className="h-3.5 w-3.5 text-[#E8652B] shrink-0" />
                 {pill}
               </span>
             ))}
@@ -176,7 +176,7 @@ export default function SupplierCoordinationPage() {
       </section>
 
       {/* PROOF STRIP */}
-      <div className="bg-[#0F172A] py-5">
+      <div className="bg-neutral-900 py-5">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-center">
             {heroKickers.map((item) => (
@@ -193,32 +193,32 @@ export default function SupplierCoordinationPage() {
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Important distinction</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             Suppliers are not subcontractors. This solution is about suppliers.
           </h2>
           <div className="mt-8 grid lg:grid-cols-2 gap-10 items-start">
             <div>
-              <p className="text-[#475569] leading-relaxed">
+              <p className="text-neutral-600 leading-relaxed">
                 Before going further, it helps to be clear on what &ldquo;supplier&rdquo; means in the context of HaulageOps, because there are two types of external parties in a bulk haulage operation that are sometimes confused.
               </p>
-              <p className="mt-4 text-[#475569] leading-relaxed">
-                <strong className="text-[#0F172A]">Subcontractors</strong> are transport partners — external operators who carry loads on your behalf. They are managed through the{" "}
+              <p className="mt-4 text-neutral-600 leading-relaxed">
+                <strong className="text-neutral-900">Subcontractors</strong> are transport partners — external operators who carry loads on your behalf. They are managed through the{" "}
                 <Link href="/platform/subcontractor-portal" className="text-[#E8652B] hover:underline font-medium">subcontractor portal</Link>
                 , which gives them a dedicated login to accept jobs, view routes and submit proof of delivery. If you&apos;re looking for subcontractor coordination, see the{" "}
                 <Link href="/solutions/subcontractor-coordination" className="text-[#E8652B] hover:underline font-medium">Subcontractor Coordination solution page</Link>.
               </p>
-              <p className="mt-4 text-[#475569] leading-relaxed">
-                <strong className="text-[#0F172A]">Suppliers</strong> are vendors of goods and services your operation depends on: fuel suppliers, parts and maintenance vendors, materials suppliers, and equipment providers. They don&apos;t carry your loads. They supply what your operation needs to run.
+              <p className="mt-4 text-neutral-600 leading-relaxed">
+                <strong className="text-neutral-900">Suppliers</strong> are vendors of goods and services your operation depends on: fuel suppliers, parts and maintenance vendors, materials suppliers, and equipment providers. They don&apos;t carry your loads. They supply what your operation needs to run.
               </p>
             </div>
             <div>
-              <p className="text-[#475569] leading-relaxed">
+              <p className="text-neutral-600 leading-relaxed">
                 Supplier management in HaulageOps is admin-side only. Suppliers are a data entity — a structured record — in the admin panel. There is no supplier login, no supplier-facing portal, and no workflow where a supplier interacts directly with the system.
               </p>
-              <p className="mt-4 text-[#475569] leading-relaxed">
+              <p className="mt-4 text-neutral-600 leading-relaxed">
                 What the system does is give your team a governed, centralised place to store supplier information so it&apos;s accessible when needed — not locked in someone&apos;s personal contacts, buried in an email thread, or maintained in a spreadsheet that only one person updates.
               </p>
-              <p className="mt-4 text-[#475569] leading-relaxed">
+              <p className="mt-4 text-neutral-600 leading-relaxed">
                 For many haulage operators, supplier information lives in a combination of personal mobile contacts, a spreadsheet maintained by one person, and email threads. When that person is unavailable, or when a new team member needs to find a fuel supplier&apos;s account number, the information simply isn&apos;t accessible through any system.
               </p>
             </div>
@@ -227,30 +227,30 @@ export default function SupplierCoordinationPage() {
       </section>
 
       {/* THE PROBLEM WITH SCATTERED SUPPLIER INFORMATION */}
-      <section className="py-20 bg-[#F8FAFC]">
+      <section className="py-20 bg-neutral-50/50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">The problem with scattered supplier information</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             When supplier information depends on one person, the business depends on one person.
           </h2>
-          <p className="mt-6 text-[#475569] max-w-3xl leading-relaxed">
+          <p className="mt-6 text-neutral-600 max-w-3xl leading-relaxed">
             The practical consequences of supplier records being in personal contacts, individual spreadsheets and email threads show up in predictable ways — and they become more significant as the operation grows.
           </p>
           <div className="mt-10 grid md:grid-cols-2 gap-6">
             {supplierCards.map((card) => {
               const Icon = card.icon;
               return (
-                <div key={card.title} className="bg-white rounded-2xl p-7 border border-[#E2E8F0]">
+                <div key={card.title} className="bg-white rounded-2xl p-7 border border-neutral-200">
                   <div className="flex items-center gap-3">
-                    <span className="inline-flex items-center justify-center h-10 w-10 rounded-lg bg-[#FFF0E6]">
+                    <span className="inline-flex items-center justify-center h-10 w-10 rounded-lg bg-orange-50 border border-orange-200 text-[#E8652B]">
                       <Icon className="h-5 w-5 text-[#E8652B]" />
                     </span>
-                    <h3 className="font-bold text-[#0F172A] text-lg">{card.title}</h3>
+                    <h3 className="font-bold text-neutral-900 text-lg">{card.title}</h3>
                   </div>
-                  <p className="mt-4 text-sm text-[#475569] leading-relaxed">{card.desc}</p>
+                  <p className="mt-4 text-sm text-neutral-600 leading-relaxed">{card.desc}</p>
                   <ul className="mt-5 space-y-3">
                     {card.points.map((item) => (
-                      <li key={item} className="flex items-start gap-2 text-sm text-[#334155]">
+                      <li key={item} className="flex items-start gap-2 text-sm text-neutral-700">
                         <CheckCircle className="h-4 w-4 text-[#E8652B] shrink-0 mt-0.5" />
                         <span>{item}</span>
                       </li>
@@ -267,59 +267,59 @@ export default function SupplierCoordinationPage() {
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">How supplier management works in HaulageOps</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             Structured records. Governed access. No supplier login required.
           </h2>
           <div className="mt-8 grid lg:grid-cols-2 gap-10 items-start">
             <div>
-              <p className="text-[#475569] leading-relaxed">
+              <p className="text-neutral-600 leading-relaxed">
                 Supplier records in HaulageOps are created and maintained in the admin panel. Each record contains the information relevant to that supplier type: contacts, pricing terms, account references, and documents. Documents are stored in Azure Blob Storage and attached directly to the supplier record.
               </p>
-              <p className="mt-4 text-[#475569] leading-relaxed">
+              <p className="mt-4 text-neutral-600 leading-relaxed">
                 Access to supplier records is governed by role-based access control. Not every team member needs to see every supplier record — admin users can configure which roles have access to supplier information. This means supplier data is accessible to those who need it, not locked in a spreadsheet that only one person maintains, but also not visible to every user in the system.
               </p>
-              <p className="mt-4 text-[#475569] leading-relaxed">
+              <p className="mt-4 text-neutral-600 leading-relaxed">
                 The practical result is that when a team member needs to contact a fuel supplier, find a parts vendor account number, or check the terms with a materials supplier, they look in the same system they use for everything else — the admin panel. Not a spreadsheet. Not someone&apos;s personal contacts. Not an email from six months ago.
               </p>
             </div>
             <div>
               {/* Supplier records visual spec */}
-              <div className="rounded-2xl border border-[#E2E8F0] bg-[#0D1525] overflow-hidden">
-                <div className="px-5 py-3 bg-[#1E293B] text-[#E8652B] text-xs font-bold uppercase tracking-widest">
+              <div className="rounded-2xl border border-neutral-200 bg-neutral-900 border-y border-neutral-800 overflow-hidden">
+                <div className="px-5 py-3 bg-neutral-800 text-[#E8652B] text-xs font-bold uppercase tracking-widest">
                   Admin Panel — Supplier Records
                 </div>
                 <div className="p-4 sm:p-5 space-y-3">
                   <div className="flex flex-wrap gap-1 text-[10px]">
                     {["All", "Fuel", "Parts", "Materials", "Equipment"].map((filter, i) => (
-                      <span key={filter} className={`px-2.5 py-1 rounded ${i === 0 ? "bg-[#E8652B] text-white font-semibold" : "bg-[#1E293B] border border-[#334155] text-[#94A3B8]"}`}>
+                      <span key={filter} className={`px-2.5 py-1 rounded ${i === 0 ? "bg-[#E8652B] text-white font-semibold" : "bg-neutral-800 border border-[#334155] text-neutral-400"}`}>
                         {filter}
                       </span>
                     ))}
                   </div>
                   {supplierRecords.map((record) => (
-                    <div key={record.name} className="bg-[#1E293B] border border-[#334155] rounded-lg p-3">
+                    <div key={record.name} className="bg-neutral-800 border border-[#334155] rounded-lg p-3">
                       <div className="flex items-center justify-between gap-3">
                         <div className="flex items-center gap-2 min-w-0">
-                          <FileText className="h-3.5 w-3.5 text-[#64748B] shrink-0" />
+                          <FileText className="h-3.5 w-3.5 text-neutral-500 shrink-0" />
                           <span className="text-white text-[11px] font-semibold truncate">{record.name}</span>
                         </div>
                         <span className={`px-1.5 py-0.5 rounded text-[9px] font-semibold whitespace-nowrap ${record.categoryCls}`}>{record.category}</span>
                       </div>
-                      <div className="flex items-center justify-between gap-2 mt-1.5 text-[10px] text-[#94A3B8]">
+                      <div className="flex items-center justify-between gap-2 mt-1.5 text-[10px] text-neutral-400">
                         <span>Contact: {record.contact}</span>
                         <span>{record.docs}</span>
                       </div>
                     </div>
                   ))}
-                  <p className="text-[10px] text-[#475569]">
+                  <p className="text-[10px] text-neutral-600">
                     <Lock className="h-3 w-3 inline text-[#4ADE80]" /> Role-based access control governs who can view and edit supplier records.
                   </p>
                 </div>
               </div>
               {/* Note callout */}
               <div className="mt-4 p-5 rounded-r-lg border-l-4 border-[#F39A2D] bg-[#F8F9FA]">
-                <strong className="block text-sm text-[#0F172A]">Note on supplier access:</strong>
-                <p className="mt-1 text-sm text-[#475569] leading-relaxed">
+                <strong className="block text-sm text-neutral-900">Note on supplier access:</strong>
+                <p className="mt-1 text-sm text-neutral-600 leading-relaxed">
                   Suppliers do not receive a login or any access to HaulageOps. There is no supplier-facing portal. Supplier management is entirely admin-side — your team maintains supplier records; suppliers are not involved in the system. If you are looking for a portal that external transport partners can log into, that is the{" "}
                   <Link href="/platform/subcontractor-portal" className="text-[#E8652B] hover:underline font-medium">subcontractor portal</Link>.
                 </p>
@@ -330,25 +330,25 @@ export default function SupplierCoordinationPage() {
       </section>
 
       {/* RELATED PAGES */}
-      <section className="py-20 bg-[#F8FAFC]">
+      <section className="py-20 bg-neutral-50/50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Related pages</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             Connected platform features
           </h2>
           <div className="mt-10 grid md:grid-cols-3 gap-6">
             {relatedCards.map((card) => (
-              <div key={card.title} className="bg-white rounded-2xl p-6 border border-[#E2E8F0]">
-                <h3 className="font-bold text-[#0F172A] mb-2">
+              <div key={card.title} className="bg-white rounded-2xl p-6 border border-neutral-200">
+                <h3 className="font-bold text-neutral-900 mb-2">
                   <Link href={card.href} className="hover:text-[#E8652B] transition-colors">
                     {card.title}
                   </Link>
                 </h3>
-                <p className="text-sm text-[#475569] leading-relaxed">{card.desc}</p>
+                <p className="text-sm text-neutral-600 leading-relaxed">{card.desc}</p>
               </div>
             ))}
           </div>
-          <p className="mt-6 text-sm text-[#475569]">
+          <p className="mt-6 text-sm text-neutral-600">
             Also relevant:{" "}
             <Link href="/platform/contract-management" className="text-[#E8652B] hover:underline font-medium">
               Contract Management
@@ -365,17 +365,17 @@ export default function SupplierCoordinationPage() {
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Frequently Asked Questions</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A]">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900">
             Supplier coordination — common questions.
           </h2>
           <div className="mt-8 space-y-3">
             {faqs.map((faq) => (
-              <details key={faq.q} className="group border border-[#E2E8F0] bg-white rounded-xl overflow-hidden">
-                <summary className="flex items-center justify-between gap-4 px-6 py-4 cursor-pointer font-semibold text-[#0F172A] text-sm list-none hover:bg-[#F8FAFC]">
+              <details key={faq.q} className="group border border-neutral-200 bg-white rounded-xl overflow-hidden">
+                <summary className="flex items-center justify-between gap-4 px-6 py-4 cursor-pointer font-semibold text-neutral-900 text-sm list-none hover:bg-neutral-50/50">
                   {faq.q}
-                  <ChevronRight className="h-4 w-4 text-[#94A3B8] shrink-0 group-open:rotate-90 transition-transform" />
+                  <ChevronRight className="h-4 w-4 text-neutral-400 shrink-0 group-open:rotate-90 transition-transform" />
                 </summary>
-                <div className="px-6 pb-5 text-sm text-[#475569] leading-relaxed border-t border-[#F1F5F9]">
+                <div className="px-6 pb-5 text-sm text-neutral-600 leading-relaxed border-t border-neutral-100">
                   <p className="pt-4">{faq.a}</p>
                 </div>
               </details>
@@ -385,11 +385,11 @@ export default function SupplierCoordinationPage() {
       </section>
 
       {/* CTA BAND */}
-      <section className="py-16 bg-[#0F172A]">
+      <section className="py-16 bg-neutral-900">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
           <div>
             <h2 className="text-2xl sm:text-3xl font-bold text-white">Supplier records belong in your operations system.</h2>
-            <p className="mt-2 text-[#94A3B8] text-sm leading-relaxed max-w-xl">
+            <p className="mt-2 text-neutral-400 text-sm leading-relaxed max-w-xl">
               A demo covers how supplier management, subcontractor coordination and document management work together in one connected platform.
             </p>
           </div>
@@ -400,7 +400,7 @@ export default function SupplierCoordinationPage() {
               </Button>
             </Link>
             <Link href="/solutions">
-              <Button size="lg" variant="outline" className="border-[#334155] text-white hover:bg-[#1E293B] w-full sm:w-auto">
+              <Button size="lg" variant="outline" className="border-[#334155] text-white hover:bg-neutral-800 w-full sm:w-auto">
                 All Solutions
               </Button>
             </Link>

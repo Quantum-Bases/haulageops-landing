@@ -208,28 +208,28 @@ export default function CompliancePage() {
   return (
     <MainLayout showCta={false}>
       {/* Breadcrumb */}
-      <div className="pt-24 pb-0 bg-[#FFF9F5]">
+      <div className="pt-24 pb-0 bg-neutral-50/70">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <nav className="flex items-center gap-2 text-xs text-[#64748B]">
+          <nav className="flex items-center gap-2 text-xs text-neutral-500">
             <Link href="/" className="hover:text-[#E8652B]">Home</Link>
             <ChevronRight className="h-3 w-3" />
             <Link href="/platform" className="hover:text-[#E8652B]">Platform</Link>
             <ChevronRight className="h-3 w-3" />
-            <span className="text-[#0F172A] font-medium">Compliance &amp; Audit</span>
+            <span className="text-neutral-900 font-medium">Compliance &amp; Audit</span>
           </nav>
         </div>
       </div>
 
       {/* HERO */}
-      <section className="pt-10 pb-20 bg-gradient-to-b from-[#FFF9F5] via-[#FFF5EE]/40 to-white">
+      <section className="pt-10 pb-20 bg-gradient-to-b from-neutral-50/80 via-white to-white border-b border-neutral-200">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-[#E8652B] bg-[#FFF0E6] mb-4 animate-in fade-in slide-in-from-bottom-4 animation-duration-700 fill-mode-both">
+          <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-[#E8652B] bg-orange-50 border border-orange-200 mb-4 animate-in fade-in slide-in-from-bottom-4 animation-duration-700 fill-mode-both">
             Compliance &amp; Audit
           </span>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#0F172A] max-w-4xl leading-[1.1] animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-100 fill-mode-both">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-neutral-900 max-w-4xl leading-[1.1] animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-100 fill-mode-both">
             Compliance built into how you run every job, not how you prepare for an audit.
           </h1>
-          <p className="mt-6 text-lg sm:text-xl text-[#475569] max-w-3xl leading-relaxed animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-150 fill-mode-both">
+          <p className="mt-6 text-lg sm:text-xl text-neutral-600 max-w-3xl leading-relaxed animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-150 fill-mode-both">
             Comprehensive audit trail on every action. Document management in Azure Blob Storage. Driver and vehicle document expiry alerts. Break and rest recording in the driver app. Contract lifecycle with auto-expiry. RBAC controls who can see and edit compliance records.
           </p>
           <div className="mt-8 flex flex-wrap gap-3 animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-200 fill-mode-both">
@@ -239,7 +239,7 @@ export default function CompliancePage() {
               </Button>
             </Link>
             <Link href="/solutions/audit-ready-operations">
-              <Button size="lg" variant="outline" className="border-[#E2E8F0] text-[#334155] hover:bg-[#F8FAFC]">
+              <Button size="lg" variant="outline" className="border-neutral-200 text-neutral-700 hover:bg-neutral-50/50">
                 Audit-Ready Operations
               </Button>
             </Link>
@@ -247,8 +247,8 @@ export default function CompliancePage() {
           {/* Kicker pills */}
           <div className="mt-8 flex flex-wrap gap-2 animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-300 fill-mode-both">
             {heroKickers.map((pill) => (
-              <span key={pill} className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#F1F5F9] text-xs font-medium text-[#334155]">
-                <CheckCircle className="h-3.5 w-3.5 text-[#16A34A] shrink-0" />
+              <span key={pill} className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-neutral-100 text-xs font-medium text-neutral-700">
+                <CheckCircle className="h-3.5 w-3.5 text-[#E8652B] shrink-0" />
                 {pill}
               </span>
             ))}
@@ -257,7 +257,7 @@ export default function CompliancePage() {
       </section>
 
       {/* PROOF STRIP */}
-      <div className="bg-[#0F172A] py-5">
+      <div className="bg-neutral-900 py-5">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-center">
             {proofStrip.map((item) => (
@@ -266,7 +266,7 @@ export default function CompliancePage() {
                   <CheckCircle className="h-3.5 w-3.5 text-[#E8652B] shrink-0" />
                   <span className="text-white font-bold text-sm">{item.label}</span>
                 </div>
-                <span className="text-[#94A3B8] text-xs">{item.detail}</span>
+                <span className="text-neutral-400 text-xs">{item.detail}</span>
               </div>
             ))}
           </div>
@@ -277,20 +277,20 @@ export default function CompliancePage() {
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">What compliance means in haulage</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             Compliance in haulage is not a filing exercise. It is a daily operational requirement.
           </h2>
-          <p className="mt-6 text-[#475569] max-w-3xl leading-relaxed">
+          <p className="mt-6 text-neutral-600 max-w-3xl leading-relaxed">
             Haulage operators face compliance obligations across multiple areas simultaneously: driver licences and medical certificates must be current, vehicle registrations and inspection records must be maintained, fatigue and rest obligations must be recorded, contracts and insurance must not lapse, and every operational decision must be traceable. Preparing for an audit by pulling this information together from filing cabinets, email threads and spreadsheets is a sign that compliance is not embedded in operations — it is bolted on afterwards.
           </p>
-          <p className="mt-4 text-[#475569] max-w-3xl leading-relaxed">
+          <p className="mt-4 text-neutral-600 max-w-3xl leading-relaxed">
             HaulageOps builds compliance into the daily operational workflow. The audit trail is generated automatically by the platform — dispatchers do not create it, managers do not maintain it. Document expiry alerts are generated from the records stored in the system. Break records are created by drivers as part of their normal job workflow. There is nothing extra to do to be compliant — compliance is a byproduct of running your operations through the platform.
           </p>
           <div className="mt-10 grid md:grid-cols-3 gap-6">
             {complianceCards.map((card) => (
-              <div key={card.title} className="bg-[#F8FAFC] rounded-2xl p-6 border border-[#E2E8F0]">
-                <h3 className="font-bold text-[#0F172A] mb-2">{card.title}</h3>
-                <p className="text-sm text-[#475569] leading-relaxed">{card.desc}</p>
+              <div key={card.title} className="bg-neutral-50/50 rounded-2xl p-6 border border-neutral-200">
+                <h3 className="font-bold text-neutral-900 mb-2">{card.title}</h3>
+                <p className="text-sm text-neutral-600 leading-relaxed">{card.desc}</p>
               </div>
             ))}
           </div>
@@ -298,21 +298,21 @@ export default function CompliancePage() {
       </section>
 
       {/* THE AUDIT TRAIL */}
-      <section className="py-20 bg-[#F8FAFC]">
+      <section className="py-20 bg-neutral-50/50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">The audit trail</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             Every action. Every user. Every timestamp. Immutable and immediately accessible.
           </h2>
-          <p className="mt-6 text-[#475569] max-w-3xl leading-relaxed">
+          <p className="mt-6 text-neutral-600 max-w-3xl leading-relaxed">
             The HaulageOps audit trail is comprehensive — not selective. It does not require anyone to remember to log an action. Every operation performed through the platform generates a log entry automatically. Management and directors can pull audit logs directly from the system without asking anyone to compile a report.
           </p>
           <div className="mt-10 grid lg:grid-cols-2 gap-10 items-start">
             <div>
-              <h3 className="font-bold text-[#0F172A] text-lg">What the audit trail records</h3>
+              <h3 className="font-bold text-neutral-900 text-lg">What the audit trail records</h3>
               <ul className="mt-5 space-y-3">
                 {auditTrailItems.map((item) => (
-                  <li key={item} className="flex items-start gap-2 text-sm text-[#334155]">
+                  <li key={item} className="flex items-start gap-2 text-sm text-neutral-700">
                     <CheckCircle className="h-4 w-4 text-[#E8652B] shrink-0 mt-0.5" />
                     <span>{item}</span>
                   </li>
@@ -320,27 +320,27 @@ export default function CompliancePage() {
               </ul>
             </div>
             {/* Audit log view visual spec */}
-            <div className="rounded-2xl border border-[#E2E8F0] bg-[#0D1525] overflow-hidden">
-              <div className="px-5 py-3 bg-[#1E293B] text-[#E8652B] text-xs font-bold uppercase tracking-widest">
+            <div className="rounded-2xl border border-neutral-200 bg-neutral-900 border-y border-neutral-800 overflow-hidden">
+              <div className="px-5 py-3 bg-neutral-800 text-[#E8652B] text-xs font-bold uppercase tracking-widest">
                 HaulageOps — Audit Log View
               </div>
               <div className="p-4 sm:p-5">
                 <div className="flex flex-wrap items-center gap-2 text-[10px] mb-4">
-                  <span className="px-2.5 py-1 rounded bg-[#1E293B] border border-[#334155] text-[#94A3B8]">JOB-2026-04471</span>
-                  <span className="px-2.5 py-1 rounded bg-[#1E293B] border border-[#334155] text-[#94A3B8]">All users</span>
-                  <span className="px-2.5 py-1 rounded bg-[#1E293B] border border-[#334155] text-[#94A3B8]">All actions</span>
-                  <span className="px-2.5 py-1 rounded bg-[#1E293B] border border-[#334155] text-[#94A3B8]">Any date</span>
+                  <span className="px-2.5 py-1 rounded bg-neutral-800 border border-[#334155] text-neutral-400">JOB-2026-04471</span>
+                  <span className="px-2.5 py-1 rounded bg-neutral-800 border border-[#334155] text-neutral-400">All users</span>
+                  <span className="px-2.5 py-1 rounded bg-neutral-800 border border-[#334155] text-neutral-400">All actions</span>
+                  <span className="px-2.5 py-1 rounded bg-neutral-800 border border-[#334155] text-neutral-400">Any date</span>
                   <span className="ml-auto px-2.5 py-1 rounded bg-[#E8652B] text-white font-semibold">Export to CSV</span>
                 </div>
-                <div className="space-y-1.5 text-[#94A3B8] font-mono text-[11px]">
-                  <div className="grid grid-cols-12 gap-2 px-2 text-[10px] uppercase tracking-wider text-[#64748B] border-b border-[#334155] pb-1.5">
+                <div className="space-y-1.5 text-neutral-400 font-mono text-[11px]">
+                  <div className="grid grid-cols-12 gap-2 px-2 text-[10px] uppercase tracking-wider text-neutral-500 border-b border-[#334155] pb-1.5">
                     <span className="col-span-3">Timestamp</span>
                     <span className="col-span-3">User</span>
                     <span className="col-span-3">Action</span>
                     <span className="col-span-3">Detail</span>
                   </div>
                   {auditLogRows.map((row) => (
-                    <div key={row.time} className="grid grid-cols-12 gap-2 px-2 py-1.5 rounded bg-[#1E293B] border border-[#334155] items-center">
+                    <div key={row.time} className="grid grid-cols-12 gap-2 px-2 py-1.5 rounded bg-neutral-800 border border-[#334155] items-center">
                       <span className="col-span-3 text-white">{row.time}</span>
                       <span className="col-span-3">{row.user}</span>
                       <span className="col-span-3 text-[#E8652B] font-semibold">{row.action}</span>
@@ -348,7 +348,7 @@ export default function CompliancePage() {
                     </div>
                   ))}
                 </div>
-                <p className="mt-4 text-[10px] text-[#475569]">
+                <p className="mt-4 text-[10px] text-neutral-600">
                   Chronological from most recent to oldest. Filter by user, action type or date range.
                 </p>
               </div>
@@ -361,25 +361,25 @@ export default function CompliancePage() {
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Document management</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             Driver records, vehicle documents, contracts and dockets — stored in Azure, linked to the entity, accessible to authorised users.
           </h2>
-          <p className="mt-6 text-[#475569] max-w-3xl leading-relaxed">
+          <p className="mt-6 text-neutral-600 max-w-3xl leading-relaxed">
             HaulageOps uses Azure Blob Storage for all document storage. Documents are uploaded through the platform and linked to the relevant driver, vehicle, client, contract or job record. Authorised users can retrieve any document directly from the system — no email chains, no shared drives, no filing cabinets.
           </p>
           <div className="mt-10 grid md:grid-cols-2 gap-6">
             {documentCards.map((card) => (
-              <div key={card.title} className="bg-[#F8FAFC] rounded-2xl p-8 border border-[#E2E8F0]">
-                <h3 className="text-xl font-bold text-[#0F172A] mb-4">{card.title}</h3>
+              <div key={card.title} className="bg-neutral-50/50 rounded-2xl p-8 border border-neutral-200">
+                <h3 className="text-xl font-bold text-neutral-900 mb-4">{card.title}</h3>
                 <ul className="space-y-3">
                   {card.points.map((point) => (
-                    <li key={point} className="flex items-start gap-2 text-sm text-[#334155]">
+                    <li key={point} className="flex items-start gap-2 text-sm text-neutral-700">
                       <CheckCircle className="h-4 w-4 text-[#E8652B] shrink-0 mt-0.5" />
                       <span>{point}</span>
                     </li>
                   ))}
                 </ul>
-                <p className="mt-5 text-sm text-[#475569] leading-relaxed">{card.desc}</p>
+                <p className="mt-5 text-sm text-neutral-600 leading-relaxed">{card.desc}</p>
                 <Link href={card.link.href} className="mt-5 inline-flex items-center gap-1 text-sm text-[#E8652B] hover:underline font-medium">
                   {card.link.label} <ArrowRight className="h-3.5 w-3.5" />
                 </Link>
@@ -390,24 +390,24 @@ export default function CompliancePage() {
       </section>
 
       {/* BREAK AND REST RECORDING */}
-      <section className="py-20 bg-[#F8FAFC]">
+      <section className="py-20 bg-neutral-50/50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Break and rest recording</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             Drivers record breaks in the app. Records are timestamped and stored automatically.
           </h2>
-          <p className="mt-6 text-[#475569] max-w-3xl leading-relaxed">
+          <p className="mt-6 text-neutral-600 max-w-3xl leading-relaxed">
             The HaulageOps driver app includes break and rest period recording. Drivers start and stop break periods directly from the app during their shift. Each break is recorded with driver identity, start timestamp, end timestamp and duration. Break records are associated with the driver&apos;s work history and are accessible to management without requiring the driver to submit a separate timesheet or logbook entry.
           </p>
           <div className="mt-10 grid md:grid-cols-3 gap-6">
             {breakRestCards.map((card) => (
-              <div key={card.title} className="bg-white rounded-2xl p-6 border border-[#E2E8F0]">
-                <h3 className="font-bold text-[#0F172A] mb-2">{card.title}</h3>
-                <p className="text-sm text-[#475569] leading-relaxed">{card.desc}</p>
+              <div key={card.title} className="bg-white rounded-2xl p-6 border border-neutral-200">
+                <h3 className="font-bold text-neutral-900 mb-2">{card.title}</h3>
+                <p className="text-sm text-neutral-600 leading-relaxed">{card.desc}</p>
               </div>
             ))}
           </div>
-          <p className="mt-8 text-sm text-[#475569]">
+          <p className="mt-8 text-sm text-neutral-600">
             See: <Link href="/platform/break-and-rest-management" className="text-[#E8652B] hover:underline font-medium">Break &amp; Rest Management</Link> for the full detail of how fatigue-relevant records work in HaulageOps.
           </p>
         </div>
@@ -417,25 +417,25 @@ export default function CompliancePage() {
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Access control for compliance records</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             RBAC controls who can view, edit and export compliance information.
           </h2>
-          <p className="mt-6 text-[#475569] max-w-3xl leading-relaxed">
+          <p className="mt-6 text-neutral-600 max-w-3xl leading-relaxed">
             Not every user in HaulageOps should have access to every compliance record. A dispatcher needs to know whether a driver&apos;s licence is current — they do not need to view audit logs or contract approval history. A director needs full access to the audit trail without being able to edit operational records. RBAC in HaulageOps enforces these boundaries at the access control level.
           </p>
           <div className="mt-10 grid md:grid-cols-2 gap-8">
             {rbacCards.map((card) => (
-              <div key={card.title} className="bg-[#F8FAFC] rounded-2xl p-8 border border-[#E2E8F0]">
-                <h3 className="text-xl font-bold text-[#0F172A] mb-4">{card.title}</h3>
+              <div key={card.title} className="bg-neutral-50/50 rounded-2xl p-8 border border-neutral-200">
+                <h3 className="text-xl font-bold text-neutral-900 mb-4">{card.title}</h3>
                 <ul className="space-y-3">
                   {card.points.map((point) => (
-                    <li key={point} className="flex items-start gap-2 text-sm text-[#334155]">
+                    <li key={point} className="flex items-start gap-2 text-sm text-neutral-700">
                       <CheckCircle className="h-4 w-4 text-[#E8652B] shrink-0 mt-0.5" />
                       <span>{point}</span>
                     </li>
                   ))}
                 </ul>
-                <p className="mt-5 text-sm text-[#475569] leading-relaxed">{card.desc}</p>
+                <p className="mt-5 text-sm text-neutral-600 leading-relaxed">{card.desc}</p>
               </div>
             ))}
           </div>
@@ -443,30 +443,30 @@ export default function CompliancePage() {
       </section>
 
       {/* RELATED PLATFORM FEATURES */}
-      <section className="py-20 bg-[#F8FAFC]">
+      <section className="py-20 bg-neutral-50/50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Related platform features</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             Compliance connects to these platform areas.
           </h2>
           <div className="mt-10 grid md:grid-cols-3 gap-6">
             {relatedCards.map((card) => (
-              <div key={card.title} className="bg-white rounded-2xl p-6 border border-[#E2E8F0]">
-                <h3 className="font-bold text-[#0F172A] mb-2">
+              <div key={card.title} className="bg-white rounded-2xl p-6 border border-neutral-200">
+                <h3 className="font-bold text-neutral-900 mb-2">
                   <Link href={card.href} className="hover:text-[#E8652B] transition-colors">
                     {card.title}
                   </Link>
                 </h3>
-                <p className="text-sm text-[#475569] leading-relaxed">{card.desc}</p>
+                <p className="text-sm text-neutral-600 leading-relaxed">{card.desc}</p>
                 <Link href={card.href} className="mt-3 inline-flex items-center gap-1 text-sm text-[#E8652B] hover:underline font-medium">
                   {card.linkLabel} <ArrowRight className="h-3.5 w-3.5" />
                 </Link>
               </div>
             ))}
           </div>
-          <div className="mt-8 p-6 bg-white border border-[#E2E8F0] rounded-2xl flex items-start gap-3">
+          <div className="mt-8 p-6 bg-white border border-neutral-200 rounded-2xl flex items-start gap-3">
             <FileText className="h-5 w-5 text-[#E8652B] shrink-0 mt-0.5" />
-            <p className="text-sm text-[#475569] leading-relaxed">
+            <p className="text-sm text-neutral-600 leading-relaxed">
               For operators in Australia: <Link href="/au/chain-of-responsibility" className="text-[#E8652B] hover:underline font-medium">Chain of Responsibility</Link> — how HaulageOps audit trail, break records and document management relate to CoR obligations under the Heavy Vehicle National Law.
             </p>
           </div>
@@ -477,17 +477,17 @@ export default function CompliancePage() {
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Frequently asked questions</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A]">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900">
             Frequently asked about compliance and audit in HaulageOps.
           </h2>
           <div className="mt-8 space-y-3">
             {faqs.map((faq) => (
-              <details key={faq.q} className="group border border-[#E2E8F0] bg-white rounded-xl overflow-hidden">
-                <summary className="flex items-center justify-between gap-4 px-6 py-4 cursor-pointer font-semibold text-[#0F172A] text-sm list-none hover:bg-[#F8FAFC]">
+              <details key={faq.q} className="group border border-neutral-200 bg-white rounded-xl overflow-hidden">
+                <summary className="flex items-center justify-between gap-4 px-6 py-4 cursor-pointer font-semibold text-neutral-900 text-sm list-none hover:bg-neutral-50/50">
                   {faq.q}
-                  <ChevronRight className="h-4 w-4 text-[#94A3B8] shrink-0 group-open:rotate-90 transition-transform" />
+                  <ChevronRight className="h-4 w-4 text-neutral-400 shrink-0 group-open:rotate-90 transition-transform" />
                 </summary>
-                <div className="px-6 pb-5 text-sm text-[#475569] leading-relaxed border-t border-[#F1F5F9]">
+                <div className="px-6 pb-5 text-sm text-neutral-600 leading-relaxed border-t border-neutral-100">
                   <p className="pt-4">{faq.a}</p>
                 </div>
               </details>
@@ -497,11 +497,11 @@ export default function CompliancePage() {
       </section>
 
       {/* CTA BAND */}
-      <section className="py-16 bg-[#0F172A]">
+      <section className="py-16 bg-neutral-900">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
           <div>
             <h2 className="text-2xl sm:text-3xl font-bold text-white">See the audit trail and compliance features in a live demo.</h2>
-            <p className="mt-2 text-[#94A3B8] text-sm leading-relaxed max-w-xl">
+            <p className="mt-2 text-neutral-400 text-sm leading-relaxed max-w-xl">
               Book a 20-minute session to see how the audit trail, document management, expiry alerts and break recording work together as part of daily operations — not as a separate compliance layer.
             </p>
           </div>

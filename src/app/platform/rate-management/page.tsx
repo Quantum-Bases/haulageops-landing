@@ -177,28 +177,28 @@ export default function RateManagementPage() {
   return (
     <MainLayout showCta={false}>
       {/* Breadcrumb */}
-      <div className="pt-24 pb-0 bg-[#FFF9F5]">
+      <div className="pt-24 pb-0 bg-neutral-50/70">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <nav className="flex items-center gap-2 text-xs text-[#64748B]">
+          <nav className="flex items-center gap-2 text-xs text-neutral-500">
             <Link href="/" className="hover:text-[#E8652B]">Home</Link>
             <ChevronRight className="h-3 w-3" />
             <Link href="/platform" className="hover:text-[#E8652B]">Platform</Link>
             <ChevronRight className="h-3 w-3" />
-            <span className="text-[#0F172A] font-medium">Rate Management</span>
+            <span className="text-neutral-900 font-medium">Rate Management</span>
           </nav>
         </div>
       </div>
 
       {/* HERO */}
-      <section className="pt-10 pb-20 bg-gradient-to-b from-[#FFF9F5] via-[#FFF5EE]/40 to-white">
+      <section className="pt-10 pb-20 bg-gradient-to-b from-neutral-50/80 via-white to-white border-b border-neutral-200">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-[#E8652B] bg-[#FFF0E6] mb-4 animate-in fade-in slide-in-from-bottom-4 animation-duration-700 fill-mode-both">
+          <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-[#E8652B] bg-orange-50 border border-orange-200 mb-4 animate-in fade-in slide-in-from-bottom-4 animation-duration-700 fill-mode-both">
             Rate Management
           </span>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#0F172A] max-w-4xl leading-[1.1] animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-100 fill-mode-both">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-neutral-900 max-w-4xl leading-[1.1] animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-100 fill-mode-both">
             Apply the right rate to every job without rebuilding a spreadsheet.
           </h1>
-          <p className="mt-6 text-lg sm:text-xl text-[#475569] max-w-3xl leading-relaxed animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-150 fill-mode-both">
+          <p className="mt-6 text-lg sm:text-xl text-neutral-600 max-w-3xl leading-relaxed animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-150 fill-mode-both">
             Four rate structures. Client-specific rate cards. Effective dating for future rate changes. Separate client charge and subcontractor pay rates on the same job. Rates attach automatically at job creation — no manual lookup required.
           </p>
           <div className="mt-8 flex flex-wrap gap-3 animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-200 fill-mode-both">
@@ -208,7 +208,7 @@ export default function RateManagementPage() {
               </Button>
             </Link>
             <Link href="/solutions/rate-and-contract-management">
-              <Button size="lg" variant="outline" className="border-[#E2E8F0] text-[#334155] hover:bg-[#F8FAFC]">
+              <Button size="lg" variant="outline" className="border-neutral-200 text-neutral-700 hover:bg-neutral-50/50">
                 Rate &amp; Contract Management
               </Button>
             </Link>
@@ -216,8 +216,8 @@ export default function RateManagementPage() {
           {/* Kicker pills */}
           <div className="mt-8 flex flex-wrap gap-2 animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-300 fill-mode-both">
             {heroKickers.map((pill) => (
-              <span key={pill} className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#F1F5F9] text-xs font-medium text-[#334155]">
-                <CheckCircle className="h-3.5 w-3.5 text-[#16A34A] shrink-0" />
+              <span key={pill} className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-neutral-100 text-xs font-medium text-neutral-700">
+                <CheckCircle className="h-3.5 w-3.5 text-[#E8652B] shrink-0" />
                 {pill}
               </span>
             ))}
@@ -226,13 +226,13 @@ export default function RateManagementPage() {
       </section>
 
       {/* PROOF STRIP */}
-      <div className="bg-[#0F172A] py-5">
+      <div className="bg-neutral-900 py-5">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 text-center">
             {proofStrip.map((item) => (
               <div key={item.strong} className="flex flex-col gap-0.5">
                 <span className="text-white font-bold text-sm">{item.strong}</span>
-                <span className="text-[#94A3B8] text-xs">{item.sub}</span>
+                <span className="text-neutral-400 text-xs">{item.sub}</span>
               </div>
             ))}
           </div>
@@ -243,42 +243,42 @@ export default function RateManagementPage() {
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Why Haulage Rates Are Different</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             Bulk haulage rates do not fit parcel pricing models. This one is built for bulk.
           </h2>
-          <p className="mt-6 text-[#475569] max-w-3xl leading-relaxed">
+          <p className="mt-6 text-neutral-600 max-w-3xl leading-relaxed">
             Parcel TMS platforms charge per consignment or per stop. Bulk haulage pricing is based on weight moved, loads completed, hours worked or fixed job rates — and the same job type might carry a different rate for Client A versus Client B. A construction aggregate client on a long-term contract gets a different per-tonne rate to a one-off civils project. When you also use subcontractors, you need to track what you charge the client and what you pay the sub — on the same job record.
           </p>
-          <p className="mt-4 text-[#475569] max-w-3xl leading-relaxed">
+          <p className="mt-4 text-neutral-600 max-w-3xl leading-relaxed">
             HaulageOps rate management is built for this. It handles four rate structures, supports individual client rate cards, allows rate changes to take effect on future dates without breaking historical records, and stores the client charge rate and subcontractor pay rate separately on every job.
           </p>
           <div className="mt-10 grid md:grid-cols-2 gap-8">
-            <div className="bg-[#F8FAFC] rounded-2xl p-8 border border-[#E2E8F0]">
-              <h3 className="text-xl font-bold text-[#0F172A] mb-5">The four rate structures</h3>
+            <div className="bg-neutral-50/50 rounded-2xl p-8 border border-neutral-200">
+              <h3 className="text-xl font-bold text-neutral-900 mb-5">The four rate structures</h3>
               <ul className="space-y-3">
                 {rateStructures.map((r) => (
-                  <li key={r.title} className="flex items-start gap-2 text-sm text-[#334155]">
+                  <li key={r.title} className="flex items-start gap-2 text-sm text-neutral-700">
                     <CheckCircle className="h-4 w-4 text-[#E8652B] shrink-0 mt-0.5" />
                     <span><strong>{r.title}:</strong> {r.desc}</span>
                   </li>
                 ))}
               </ul>
-              <p className="mt-5 text-sm text-[#475569] leading-relaxed">
+              <p className="mt-5 text-sm text-neutral-600 leading-relaxed">
                 A single client may use different rate types across different job types — per-tonne for aggregate delivery, hourly for site preparation support, fixed-fee for a one-off long-haul move. All are managed within the same rate card for that client.
               </p>
             </div>
             {/* Rate card visual spec */}
-            <div className="rounded-2xl border border-[#E2E8F0] bg-[#0D1525] overflow-hidden flex flex-col">
-              <div className="px-5 py-3 bg-[#1E293B] text-[#E8652B] text-xs font-bold uppercase tracking-widest flex items-center justify-between">
+            <div className="rounded-2xl border border-neutral-200 bg-neutral-900 border-y border-neutral-800 overflow-hidden flex flex-col">
+              <div className="px-5 py-3 bg-neutral-800 text-[#E8652B] text-xs font-bold uppercase tracking-widest flex items-center justify-between">
                 <span>HaulageOps — Client Rate Card</span>
                 <span className="bg-[#E8652B] text-white px-2 py-0.5 rounded font-semibold">+ Add Rate</span>
               </div>
-              <div className="flex-1 p-6 text-[#94A3B8] text-sm font-mono leading-relaxed">
+              <div className="flex-1 p-6 text-neutral-400 text-sm font-mono leading-relaxed">
                 <p>Client: <span className="text-white font-semibold">&quot;Balfour Beatty Civil Engineering&quot;</span></p>
                 <div className="mt-4 overflow-x-auto">
                   <table className="w-full text-xs border-collapse">
                     <thead>
-                      <tr className="bg-[#1E293B] text-[#64748B] uppercase tracking-wider text-[10px]">
+                      <tr className="bg-neutral-800 text-neutral-500 uppercase tracking-wider text-[10px]">
                         <th className="text-left px-3 py-2 font-semibold">Rate Type</th>
                         <th className="text-left px-3 py-2 font-semibold">Description</th>
                         <th className="text-left px-3 py-2 font-semibold">Unit</th>
@@ -294,7 +294,7 @@ export default function RateManagementPage() {
                         { type: "Hourly", desc: "Plant Support", unit: "hour", client: "$145.00", sub: "$110.00", eff: "01 Jan 2026", status: "Active", statusCls: "text-[#4ADE80] bg-[#16A34A]/20" },
                         { type: "Per-Load", desc: "Standard 10-tonne Run", unit: "load", client: "$210.00", sub: "$165.00", eff: "01 Mar 2026", status: "Scheduled", statusCls: "text-[#FBBF24] bg-[#FBBF24]/10" },
                       ].map((row) => (
-                        <tr key={row.type} className={`border-t border-[#1E293B] ${row.status === "Scheduled" ? "bg-[#FBBF24]/5" : ""}`}>
+                        <tr key={row.type} className={`border-t border-neutral-800 ${row.status === "Scheduled" ? "bg-[#FBBF24]/5" : ""}`}>
                           <td className="px-3 py-2.5 text-white font-medium">{row.type}</td>
                           <td className="px-3 py-2.5">{row.desc}</td>
                           <td className="px-3 py-2.5">{row.unit}</td>
@@ -309,7 +309,7 @@ export default function RateManagementPage() {
                     </tbody>
                   </table>
                 </div>
-                <p className="mt-4 text-[#475569] text-xs">
+                <p className="mt-4 text-neutral-600 text-xs">
                   Scheduled row shown in a different colour to indicate it is not yet active.
                 </p>
               </div>
@@ -319,20 +319,20 @@ export default function RateManagementPage() {
       </section>
 
       {/* CLIENT RATE CARDS */}
-      <section className="py-20 bg-[#F8FAFC]">
+      <section className="py-20 bg-neutral-50/50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Client Rate Cards</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             Different clients, different rates. Managed per client — not per job.
           </h2>
-          <p className="mt-6 text-[#475569] max-w-3xl leading-relaxed">
+          <p className="mt-6 text-neutral-600 max-w-3xl leading-relaxed">
             Maintaining different rates for different clients on a spreadsheet requires either a separate tab per client or a lookup formula that breaks whenever the structure changes. HaulageOps stores rate cards at the client level. When a job is created for a client, the applicable rates are available from the client's rate card and applied automatically — no manual lookup, no chance of applying the wrong rate.
           </p>
           <div className="mt-10 grid md:grid-cols-3 gap-6">
             {clientRateCards.map((card) => (
-              <div key={card.title} className="bg-white rounded-2xl p-6 border border-[#E2E8F0]">
-                <h3 className="font-bold text-[#0F172A] mb-2">{card.title}</h3>
-                <p className="text-sm text-[#475569] leading-relaxed">{card.desc}</p>
+              <div key={card.title} className="bg-white rounded-2xl p-6 border border-neutral-200">
+                <h3 className="font-bold text-neutral-900 mb-2">{card.title}</h3>
+                <p className="text-sm text-neutral-600 leading-relaxed">{card.desc}</p>
               </div>
             ))}
           </div>
@@ -343,38 +343,38 @@ export default function RateManagementPage() {
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Effective Dating</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             Rate changes in future without breaking historical records.
           </h2>
-          <p className="mt-6 text-[#475569] max-w-3xl leading-relaxed">
+          <p className="mt-6 text-neutral-600 max-w-3xl leading-relaxed">
             When you negotiate a new rate with a client that takes effect from the first of next month, you do not want to edit the current rate and accidentally apply the new price to jobs already completed at the old rate. Effective dating in HaulageOps lets you set a future start date on a new rate. Until that date, the existing rate applies. From that date, the new rate activates automatically.
           </p>
           <div className="mt-10 grid md:grid-cols-2 gap-8">
-            <div className="bg-[#F8FAFC] rounded-2xl p-8 border border-[#E2E8F0]">
-              <h3 className="text-xl font-bold text-[#0F172A] mb-5">How effective dating works</h3>
+            <div className="bg-neutral-50/50 rounded-2xl p-8 border border-neutral-200">
+              <h3 className="text-xl font-bold text-neutral-900 mb-5">How effective dating works</h3>
               <ul className="space-y-3">
                 {effectiveDatingPoints.map((item) => (
-                  <li key={item} className="flex items-start gap-2 text-sm text-[#334155]">
+                  <li key={item} className="flex items-start gap-2 text-sm text-neutral-700">
                     <CalendarClock className="h-4 w-4 text-[#E8652B] shrink-0 mt-0.5" />
                     <span>{item}</span>
                   </li>
                 ))}
               </ul>
-              <p className="mt-5 text-sm text-[#475569] leading-relaxed">
+              <p className="mt-5 text-sm text-neutral-600 leading-relaxed">
                 This is important for financial integrity. An invoice for a job completed in January must reflect the rate active in January — even if you are raising that invoice in March and a new rate has since been set.
               </p>
             </div>
-            <div className="bg-[#F8FAFC] rounded-2xl p-8 border border-[#E2E8F0]">
-              <h3 className="text-xl font-bold text-[#0F172A] mb-5">Practical use cases</h3>
+            <div className="bg-neutral-50/50 rounded-2xl p-8 border border-neutral-200">
+              <h3 className="text-xl font-bold text-neutral-900 mb-5">Practical use cases</h3>
               <ul className="space-y-3">
                 {effectiveDatingUses.map((item) => (
-                  <li key={item} className="flex items-start gap-2 text-sm text-[#334155]">
+                  <li key={item} className="flex items-start gap-2 text-sm text-neutral-700">
                     <CheckCircle className="h-4 w-4 text-[#E8652B] shrink-0 mt-0.5" />
                     <span>{item}</span>
                   </li>
                 ))}
               </ul>
-              <p className="mt-5 text-sm text-[#475569] leading-relaxed">
+              <p className="mt-5 text-sm text-neutral-600 leading-relaxed">
                 See how contracts connect to rates:{" "}
                 <Link href="/platform/contract-management" className="text-[#E8652B] hover:underline font-medium">
                   Contract Management
@@ -387,20 +387,20 @@ export default function RateManagementPage() {
       </section>
 
       {/* DUAL RATE MANAGEMENT */}
-      <section className="py-20 bg-[#F8FAFC]">
+      <section className="py-20 bg-neutral-50/50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Dual Rate Management</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             Client charge rate and subcontractor pay rate — separated on every delegated job.
           </h2>
-          <p className="mt-6 text-[#475569] max-w-3xl leading-relaxed">
+          <p className="mt-6 text-neutral-600 max-w-3xl leading-relaxed">
             When you delegate a job to a subcontractor, two commercial transactions are happening simultaneously: you are charging your client, and you are paying your subcontractor. The difference between these two figures is your margin on that job. HaulageOps stores both rates on the same job record, keeps them completely separate, and ensures neither party sees the other&apos;s rate.
           </p>
           <div className="mt-10 grid md:grid-cols-3 gap-6">
             {dualRateCards.map((card) => (
-              <div key={card.title} className="bg-white rounded-2xl p-6 border border-[#E2E8F0]">
-                <h3 className="font-bold text-[#0F172A] mb-2">{card.title}</h3>
-                <p className="text-sm text-[#475569] leading-relaxed">{card.desc}</p>
+              <div key={card.title} className="bg-white rounded-2xl p-6 border border-neutral-200">
+                <h3 className="font-bold text-neutral-900 mb-2">{card.title}</h3>
+                <p className="text-sm text-neutral-600 leading-relaxed">{card.desc}</p>
               </div>
             ))}
           </div>
@@ -411,13 +411,13 @@ export default function RateManagementPage() {
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Excel Rate Sheets vs HaulageOps</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             What rate management on a spreadsheet actually costs you.
           </h2>
           <div className="mt-10 overflow-x-auto">
             <table className="w-full text-sm border-collapse">
               <thead>
-                <tr className="bg-[#0F172A] text-white">
+                <tr className="bg-neutral-900 text-white">
                   <th className="text-left px-5 py-3 font-semibold rounded-tl-xl">Rate management scenario</th>
                   <th className="text-left px-5 py-3 font-semibold">Excel rate sheet</th>
                   <th className="text-left px-5 py-3 font-semibold rounded-tr-xl text-[#E8652B]">HaulageOps</th>
@@ -425,10 +425,10 @@ export default function RateManagementPage() {
               </thead>
               <tbody>
                 {comparisonRows.map((row, i) => (
-                  <tr key={row.scenario} className={i % 2 === 0 ? "bg-white" : "bg-[#F8FAFC]"}>
-                    <td className="px-5 py-3 text-[#0F172A] font-medium border-b border-[#E2E8F0]">{row.scenario}</td>
-                    <td className="px-5 py-3 text-[#64748B] border-b border-[#E2E8F0]">{row.excel}</td>
-                    <td className="px-5 py-3 text-[#16A34A] font-semibold border-b border-[#E2E8F0]">{row.haulageops}</td>
+                  <tr key={row.scenario} className={i % 2 === 0 ? "bg-white" : "bg-neutral-50/50"}>
+                    <td className="px-5 py-3 text-neutral-900 font-medium border-b border-neutral-200">{row.scenario}</td>
+                    <td className="px-5 py-3 text-neutral-500 border-b border-neutral-200">{row.excel}</td>
+                    <td className="px-5 py-3 text-[#E8652B] font-semibold border-b border-neutral-200">{row.haulageops}</td>
                   </tr>
                 ))}
               </tbody>
@@ -438,25 +438,25 @@ export default function RateManagementPage() {
       </section>
 
       {/* RELATED PLATFORM FEATURES */}
-      <section className="py-20 bg-[#F8FAFC]">
+      <section className="py-20 bg-neutral-50/50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Related Platform Features</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A] max-w-3xl">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             Rate management connects to these platform areas.
           </h2>
           <div className="mt-10 grid md:grid-cols-3 gap-6">
             {connectedModules.map((mod) => (
-              <div key={mod.title} className="bg-white rounded-2xl p-6 border border-[#E2E8F0]">
-                <h3 className="font-bold text-[#0F172A] mb-2">
+              <div key={mod.title} className="bg-white rounded-2xl p-6 border border-neutral-200">
+                <h3 className="font-bold text-neutral-900 mb-2">
                   <Link href={mod.href} className="hover:text-[#E8652B] transition-colors">
                     {mod.title}
                   </Link>
                 </h3>
-                <p className="text-sm text-[#475569] leading-relaxed">{mod.desc}</p>
+                <p className="text-sm text-neutral-600 leading-relaxed">{mod.desc}</p>
               </div>
             ))}
           </div>
-          <p className="mt-6 text-sm text-[#475569]">
+          <p className="mt-6 text-sm text-neutral-600">
             Also see:{" "}
             <Link href="/solutions/rate-and-contract-management" className="text-[#E8652B] hover:underline font-medium">
               Rate &amp; Contract Management
@@ -470,17 +470,17 @@ export default function RateManagementPage() {
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Common Questions</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#0F172A]">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900">
             Frequently asked about HaulageOps rate management.
           </h2>
           <div className="mt-8 space-y-3">
             {faqs.map((faq) => (
-              <details key={faq.q} className="group border border-[#E2E8F0] bg-white rounded-xl overflow-hidden">
-                <summary className="flex items-center justify-between gap-4 px-6 py-4 cursor-pointer font-semibold text-[#0F172A] text-sm list-none hover:bg-[#F8FAFC]">
+              <details key={faq.q} className="group border border-neutral-200 bg-white rounded-xl overflow-hidden">
+                <summary className="flex items-center justify-between gap-4 px-6 py-4 cursor-pointer font-semibold text-neutral-900 text-sm list-none hover:bg-neutral-50/50">
                   {faq.q}
-                  <ChevronRight className="h-4 w-4 text-[#94A3B8] shrink-0 group-open:rotate-90 transition-transform" />
+                  <ChevronRight className="h-4 w-4 text-neutral-400 shrink-0 group-open:rotate-90 transition-transform" />
                 </summary>
-                <div className="px-6 pb-5 text-sm text-[#475569] leading-relaxed border-t border-[#F1F5F9]">
+                <div className="px-6 pb-5 text-sm text-neutral-600 leading-relaxed border-t border-neutral-100">
                   <p className="pt-4">{faq.a}</p>
                 </div>
               </details>
@@ -490,11 +490,11 @@ export default function RateManagementPage() {
       </section>
 
       {/* CTA BAND */}
-      <section className="py-16 bg-[#0F172A]">
+      <section className="py-16 bg-neutral-900">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
           <div>
             <h2 className="text-2xl sm:text-3xl font-bold text-white">See rate management in a live demo.</h2>
-            <p className="mt-2 text-[#94A3B8] text-sm leading-relaxed max-w-xl">
+            <p className="mt-2 text-neutral-400 text-sm leading-relaxed max-w-xl">
               Book a 20-minute session and see how client rate cards, effective dating, dual rates and Xero connection work together — with your rate structure as the example.
             </p>
           </div>
