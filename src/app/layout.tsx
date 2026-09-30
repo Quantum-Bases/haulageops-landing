@@ -3,6 +3,7 @@ import Script from "next/script";
 import { Geist, Geist_Mono, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
+import { WhatsAppButton } from "@/components/shared/WhatsAppButton";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -211,6 +212,7 @@ export default function RootLayout({
       >
         {children}
         <Toaster />
+        <WhatsAppButton />
 
         {/* Third-Party Analytics - loaded lazyOnload to never block LCP or TBT */}
         <Script

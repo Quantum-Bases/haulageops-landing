@@ -2,6 +2,7 @@ import Link from "next/link";
 import { MainLayout } from "@/components/layout/MainLayout";
 import { Button } from "@/components/ui/button";
 import { ChevronRight, Check, ArrowRight, Calendar } from "lucide-react";
+import { QuickQuoteForm } from "@/components/shared/QuickQuoteForm";
 
 export const metadata = {
   title: "HaulageOps Pricing - Custom Haulage Operations Platform",
@@ -260,6 +261,11 @@ export default function PricingPage() {
                 </Button>
               </a>
             </div>
+          </div>
+
+          {/* Low-Friction Instant Quote Option */}
+          <div className="mt-10 text-left">
+            <QuickQuoteForm source="pricing_page" />
           </div>
         </div>
       </section>

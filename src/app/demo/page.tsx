@@ -2,6 +2,7 @@ import Link from "next/link";
 import { MainLayout } from "@/components/layout/MainLayout";
 import { Button } from "@/components/ui/button";
 import { ChevronRight, Check, ArrowRight } from "lucide-react";
+import { DemoBookingForm } from "@/components/demo/DemoBookingForm";
 
 export const metadata = {
   title: "Book a HaulageOps Demo | 20-Minute Workflow Walkthrough",
@@ -288,46 +289,10 @@ export default function DemoPage() {
                     <span className="flex-shrink mx-4 text-xs font-semibold text-gray-400 uppercase">Or fill in details</span>
                     <div className="flex-grow border-t border-gray-200"></div>
                   </div>
-                  <form action="https://calendly.com/admin-haulageops/30min" target="_blank" method="get">
-                    <div className="mb-4">
-                      <label htmlFor="name" className="block text-sm font-semibold text-neutral-900 mb-1.5">Full name *</label>
-                      <input id="name" type="text" name="name" required placeholder="Your name" className="w-full px-3.5 py-2.5 border border-neutral-300 rounded-lg text-sm text-neutral-900 focus:outline-none focus:ring-2 focus:ring-[#E8652B]/40" />
-                    </div>
-                    <div className="mb-4">
-                      <label htmlFor="company" className="block text-sm font-semibold text-neutral-900 mb-1.5">Company name *</label>
-                      <input id="company" type="text" name="company" required placeholder="Your company" className="w-full px-3.5 py-2.5 border border-neutral-300 rounded-lg text-sm text-neutral-900 focus:outline-none focus:ring-2 focus:ring-[#E8652B]/40" />
-                    </div>
-                    <div className="mb-4">
-                      <label htmlFor="email" className="block text-sm font-semibold text-neutral-900 mb-1.5">Work email *</label>
-                      <input id="email" type="email" name="email" required placeholder="you@company.com" className="w-full px-3.5 py-2.5 border border-neutral-300 rounded-lg text-sm text-neutral-900 focus:outline-none focus:ring-2 focus:ring-[#E8652B]/40" />
-                    </div>
-                    <div className="mb-4">
-                      <label htmlFor="phone" className="block text-sm font-semibold text-neutral-900 mb-1.5">Phone number</label>
-                      <input id="phone" type="tel" name="phone" placeholder="+61 or +44 etc." className="w-full px-3.5 py-2.5 border border-neutral-300 rounded-lg text-sm text-neutral-900 focus:outline-none focus:ring-2 focus:ring-[#E8652B]/40" />
-                    </div>
-                    <div className="mb-4">
-                      <label htmlFor="fleet_size" className="block text-sm font-semibold text-neutral-900 mb-1.5">Approximate fleet size *</label>
-                      <select id="fleet_size" name="fleet_size" required defaultValue="" className="w-full px-3.5 py-2.5 border border-neutral-300 rounded-lg text-sm text-neutral-900 bg-white focus:outline-none focus:ring-2 focus:ring-[#E8652B]/40">
-                        <option value="" disabled>Select fleet size</option>
-                        {fleetSizeOptions.map((option) => (
-                          <option key={option} value={option}>{option}</option>
-                        ))}
-                      </select>
-                    </div>
-                    <div className="mb-6">
-                      <label htmlFor="current_system" className="block text-sm font-semibold text-neutral-900 mb-1.5">Current system</label>
-                      <select id="current_system" name="current_system" defaultValue="" className="w-full px-3.5 py-2.5 border border-neutral-300 rounded-lg text-sm text-neutral-900 bg-white focus:outline-none focus:ring-2 focus:ring-[#E8652B]/40">
-                        <option value="" disabled>What are you using now?</option>
-                        {currentSystemOptions.map((option) => (
-                          <option key={option} value={option}>{option}</option>
-                        ))}
-                      </select>
-                    </div>
-                    <Button type="submit" size="lg" className="w-full bg-neutral-900 hover:bg-neutral-800 text-white font-semibold">
-                      Continue to Calendly
-                    </Button>
-                    <p className="mt-3 text-xs text-neutral-500 text-center">No commitment required.</p>
-                  </form>
+                  <DemoBookingForm
+                    fleetSizeOptions={fleetSizeOptions}
+                    currentSystemOptions={currentSystemOptions}
+                  />
                 </div>
               </div>
             </div>
