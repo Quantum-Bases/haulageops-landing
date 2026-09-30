@@ -8,18 +8,21 @@ const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
   display: "swap",
+  preload: false,
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
   display: "swap",
+  preload: false,
 });
 
 const plusJakarta = Plus_Jakarta_Sans({
   variable: "--font-plus-jakarta",
   subsets: ["latin"],
   display: "swap",
+  preload: true,
 });
 
 export const metadata: Metadata = {
@@ -185,7 +188,15 @@ export default function RootLayout({
             }),
           }}
         />
-        {/* Preload Hero LCP Images for instant visual paint */}
+        {/* Preload Above-the-fold Hero Background & Mockup for Instant LCP */}
+        <link
+          rel="preload"
+          as="image"
+          href="/images/hero-bg-mobile.webp"
+          type="image/webp"
+          fetchPriority="high"
+          media="(max-width: 768px)"
+        />
         <link
           rel="preload"
           as="image"
@@ -193,14 +204,6 @@ export default function RootLayout({
           type="image/webp"
           fetchPriority="high"
           media="(min-width: 769px)"
-        />
-        <link
-          rel="preload"
-          as="image"
-          href="/dash1-mobile.webp"
-          type="image/webp"
-          fetchPriority="high"
-          media="(max-width: 768px)"
         />
       </head>
       <body

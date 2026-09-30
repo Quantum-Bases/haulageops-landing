@@ -236,15 +236,19 @@ export function Hero() {
     <section className="relative bg-white overflow-hidden flex flex-col pt-8 md:pt-12">
       {/* Ambient Heavy Bulk Haulage Background Image with Clean White Overlay */}
       <div className="absolute top-0 inset-x-0 h-[560px] sm:h-[640px] pointer-events-none overflow-hidden select-none z-0">
-        <img
-          src="/images/pain-dispatch-chaos.webp"
-          alt=""
-          loading="eager"
-          decoding="async"
-          width={1000}
-          height={665}
-          className="w-full h-full object-cover object-[center_30%]"
-        />
+        <picture>
+          <source srcSet="/images/hero-bg-mobile.webp" media="(max-width: 768px)" type="image/webp" />
+          <source srcSet="/images/hero-bg-desktop.webp" type="image/webp" />
+          <img
+            src="/images/hero-bg-desktop.webp"
+            alt=""
+            fetchPriority="high"
+            decoding="async"
+            width={1000}
+            height={665}
+            className="w-full h-full object-cover object-[center_30%]"
+          />
+        </picture>
 
         {/* Clean White Overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-white/75 via-white/88 to-white backdrop-blur-[0.5px]" />
