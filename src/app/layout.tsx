@@ -7,17 +7,19 @@ import { Toaster } from "@/components/ui/toaster";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+  display: "swap",
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+  display: "swap",
 });
 
 const plusJakarta = Plus_Jakarta_Sans({
   variable: "--font-plus-jakarta",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -183,13 +185,38 @@ export default function RootLayout({
             }),
           }}
         />
-        {/* Google tag (gtag.js) */}
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-RBWZV5M51E"
+        {/* Preload Hero LCP Images for instant visual paint */}
+        <link
+          rel="preload"
+          as="image"
+          href="/dash1-hero.webp"
+          type="image/webp"
+          fetchPriority="high"
+          media="(min-width: 769px)"
         />
-        <script
+        <link
+          rel="preload"
+          as="image"
+          href="/dash1-mobile.webp"
+          type="image/webp"
+          fetchPriority="high"
+          media="(max-width: 768px)"
+        />
+      </head>
+      <body
+        className={`${plusJakarta.variable} ${geistSans.variable} ${geistMono.variable} font-sans antialiased bg-background text-foreground`}
+      >
+        {children}
+        <Toaster />
+
+        {/* Third-Party Analytics - loaded afterInteractive to never block LCP or INP */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-RBWZV5M51E"
+          strategy="afterInteractive"
+        />
+        <Script
           id="google-tag-init"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];
@@ -199,9 +226,9 @@ export default function RootLayout({
             `,
           }}
         />
-        {/* Microsoft Clarity */}
-        <script
+        <Script
           id="clarity-init"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
               (function(c,l,a,r,i,t,y){
@@ -212,13 +239,7 @@ export default function RootLayout({
             `,
           }}
         />
-      </head>
-      <body
-        className={`${plusJakarta.variable} ${geistSans.variable} ${geistMono.variable} font-sans antialiased bg-background text-foreground`}
-      >
-        {children}
-        <Toaster />
-        <Script src="/tracker.js" strategy="afterInteractive" />
+        <Script src="/tracker.js" strategy="lazyOnload" />
       </body>
     </html>
   );

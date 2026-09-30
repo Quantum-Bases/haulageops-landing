@@ -203,8 +203,9 @@ export default function HowItWorksPage() {
                 <video
                   ref={videoRef}
                   src="/HaulageOpsDemo_compressed.mp4"
+                  poster="/video-poster.webp"
                   playsInline
-                  preload="metadata"
+                  preload="none"
                   className="w-full h-full object-contain"
                   onPlay={() => setIsPlaying(true)}
                   onPause={() => setIsPlaying(false)}

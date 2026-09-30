@@ -9,7 +9,7 @@ const pains = [
     number: "01",
     title: "Coordination Chaos",
     category: "Dispatch Dilemma",
-    image: "/images/pain-dispatch-chaos.jpg",
+    image: "/images/pain-dispatch-chaos.webp",
     imageAlt: "Heavy dump truck on haul road",
     problemText: "Fleet allocated via WhatsApp groups and whiteboard notes. When subbies miss a run or double-book a tipper, no one knows until the loader is idling on site.",
     oldWay: {
@@ -29,7 +29,7 @@ const pains = [
     number: "02",
     title: "Endless Client Status Calls",
     category: "Customer Transparency",
-    image: "/images/pain-client-calls.jpg",
+    image: "/images/pain-client-calls.webp",
     imageAlt: "Construction site supervisor on mobile phone",
     problemText: "Project managers and site foremen constantly calling allocators asking 'Where's my truck? When will the asphalt arrive?' Your team becomes a human phone exchange.",
     oldWay: {
@@ -49,7 +49,7 @@ const pains = [
     number: "03",
     title: "Docket-to-Invoice Lag",
     category: "Cashflow & Billing",
-    image: "/images/pain-docket-lag.jpg",
+    image: "/images/pain-docket-lag.webp",
     imageAlt: "Paper delivery dockets on clipboard",
     problemText: "Crumpled carbon-copy paper dockets sitting on truck dashboards for days, lost weighbridge tickets, and weekend manual re-keying into Xero or MYOB.",
     oldWay: {
@@ -69,7 +69,7 @@ const pains = [
     number: "04",
     title: "Manual Audit Scramble",
     category: "NHVR & CoR Compliance",
-    image: "/images/pain-audit-prep.jpg",
+    image: "/images/pain-audit-prep.webp",
     imageAlt: "Heavy commercial vehicle combination on highway",
     problemText: "Scrambling through ring-binders, spreadsheets, and driver text messages whenever a safety auditor or head contractor asks for Chain of Responsibility evidence.",
     oldWay: {
