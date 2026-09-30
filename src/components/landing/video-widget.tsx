@@ -250,8 +250,8 @@ export function VideoWidget() {
           to   { opacity: 1; transform: scale(1)    translateY(0); }
         }
         @keyframes vw-ring {
-          0%,100% { box-shadow: 0 0 0 0 rgba(255,255,255,0.22); }
-          60%      { box-shadow: 0 0 0 10px rgba(255,255,255,0); }
+          0%   { transform: scale(1); opacity: 0.6; }
+          100% { transform: scale(1.08, 1.25); opacity: 0; }
         }
         @keyframes vw-shimmer {
           0%   { transform: translateX(-120%) skewX(-18deg); }
@@ -273,9 +273,17 @@ export function VideoWidget() {
           overflow: hidden;
           box-shadow: 0 8px 32px rgba(0,0,0,0.55), 0 1px 0 rgba(255,255,255,0.06) inset;
           transition: transform 0.2s cubic-bezier(.34,1.56,.64,1), box-shadow 0.2s ease;
-          animation: vw-ring 2.8s ease-in-out infinite;
           white-space: nowrap;
           user-select: none;
+        }
+        .vw-pill::before {
+          content: '';
+          position: absolute;
+          inset: 0;
+          border-radius: 100px;
+          border: 1.5px solid rgba(255,255,255,0.35);
+          animation: vw-ring 2.8s cubic-bezier(0,0,0.2,1) infinite;
+          pointer-events: none;
         }
         .vw-pill:hover {
           transform: translateY(-2px) scale(1.03);

@@ -212,14 +212,14 @@ export default function RootLayout({
         {children}
         <Toaster />
 
-        {/* Third-Party Analytics - loaded afterInteractive to never block LCP or INP */}
+        {/* Third-Party Analytics - loaded lazyOnload to never block LCP or TBT */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-RBWZV5M51E"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
         <Script
           id="google-tag-init"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];
@@ -231,7 +231,7 @@ export default function RootLayout({
         />
         <Script
           id="clarity-init"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
           dangerouslySetInnerHTML={{
             __html: `
               (function(c,l,a,r,i,t,y){

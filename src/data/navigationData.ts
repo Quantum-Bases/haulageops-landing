@@ -275,9 +275,9 @@ export const footerLinkGroups: FooterLinkGroup[] = [
 
 export const brandInfo = {
   name: "HaulageOps",
-  logoUrl: "/HaulageOps_Wordmark_Black.png",
-  wordmarkUrl: "/HaulageOps_Wordmark_Black.png",
-  iconUrl: "/HaulageOps_Icon_Black.png",
+  logoUrl: "/HaulageOps_Wordmark_Black.webp",
+  wordmarkUrl: "/HaulageOps_Wordmark_Black.webp",
+  iconUrl: "/HaulageOps_Icon_Black.webp",
   iconOrangeUrl: "/HaulageOps_Icon_Orange.png",
   description: "Australia & New Zealand's dedicated Transport Management System for bulk haulage, tippers, earthworks, and quarries.",
   regionNotice: "Built for Heavy Vehicle National Law (HVNL) & Chain of Responsibility (CoR) compliance.",

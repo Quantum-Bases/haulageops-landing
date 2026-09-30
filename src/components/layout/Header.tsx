@@ -67,6 +67,10 @@ export function Header({ onDemoClick, onLoginClick }: HeaderProps) {
             <img
               src={brandInfo.logoUrl}
               alt={`${brandInfo.name} Logo`}
+              width={260}
+              height={52}
+              fetchPriority="high"
+              decoding="async"
               style={{ width: "130px" }}
               className="h-auto object-contain"
             />

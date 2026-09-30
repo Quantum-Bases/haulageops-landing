@@ -19,9 +19,13 @@ export function Footer({ groups = footerLinkGroups }: FooterProps) {
           <div className="lg:col-span-1">
             <Link href="/" className="inline-flex items-center gap-2.5 mb-4 group">
               <img
-                src={brandInfo.iconUrl || "/HaulageOps_Icon_Black.png"}
+                src={brandInfo.iconUrl || "/HaulageOps_Icon_Black.webp"}
                 alt={`${brandInfo.name} Icon`}
-                className="h-6 w-auto object-contain"
+                width={24}
+                height={24}
+                loading="lazy"
+                decoding="async"
+                className="h-6 w-6 object-contain"
               />
               <span className="font-black text-lg tracking-tight text-neutral-900 group-hover:text-[#E8652B] transition-colors">
                 {brandInfo.name}

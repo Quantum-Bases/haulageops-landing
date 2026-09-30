@@ -180,8 +180,11 @@ export function PainSection() {
                   <img
                     src={pain.image}
                     alt={pain.imageAlt}
-                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                    width={600}
+                    height={320}
+                    decoding="async"
                     loading="lazy"
+                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                   />
                   {/* Gradient vignette */}
                   <div className="absolute inset-0 bg-gradient-to-t from-neutral-900/75 via-neutral-900/20 to-black/20" />
