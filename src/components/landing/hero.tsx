@@ -21,7 +21,7 @@ function DashboardMockup() {
           HaulageOps Dispatch Hub • Live Heavy Fleet Tracking
         </div>
         <div className="hidden sm:flex items-center gap-3 text-[11px] text-neutral-400 font-mono">
-          <span>NSW • VIC • QLD • NZ</span>
+          <span>LIVE GPS SYNC • MULTI-DEPOT • QUARRIES</span>
         </div>
       </div>
 
@@ -56,7 +56,7 @@ function DashboardMockup() {
             </div>
             <div>
               <div className="text-xs font-bold text-neutral-900">Job #HO-JB-2026-099</div>
-              <div className="text-[11px] text-neutral-600 font-medium">Sydney Metro • GSW Asbestos</div>
+              <div className="text-[11px] text-neutral-600 font-medium">Metro Depot • Clean Fill & Aggregates</div>
             </div>
           </div>
           <div className="p-3 bg-white space-y-2 text-xs">
@@ -193,11 +193,11 @@ function Card({
 export function Hero() {
   const titleComponent = (
     <div className="flex flex-col items-center pt-8 pb-10 sm:pt-12 sm:pb-14 max-w-4xl mx-auto text-center relative z-10">
-      {/* Australian Industry Badge */}
+      {/* Industry Category Badge */}
       <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full mb-6 bg-white border border-neutral-300 shadow-xs">
         <span className="w-2 h-2 rounded-full bg-[#E8652B]" />
         <span className="text-xs font-bold text-neutral-900 uppercase tracking-wider">
-          🇦🇺 Australia & New Zealand Bulk Haulage TMS
+          Dedicated Bulk Haulage & Heavy Fleet TMS
         </span>
       </div>
 

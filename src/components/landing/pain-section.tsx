@@ -136,7 +136,7 @@ export function PainSection() {
           <div className="inline-flex items-center justify-center gap-2 px-3.5 py-1.5 rounded-full mb-4 bg-white border border-neutral-300 shadow-xs">
             <span className="w-2 h-2 rounded-full bg-[#E8652B]" />
             <p className="text-xs font-bold uppercase tracking-wider text-neutral-900">
-              The Reality in Australian Bulk Haulage
+              The Reality in Heavy Bulk Haulage
             </p>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-neutral-900 leading-tight">

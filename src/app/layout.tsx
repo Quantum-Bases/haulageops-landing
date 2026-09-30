@@ -28,7 +28,7 @@ const plusJakarta = Plus_Jakarta_Sans({
 export const metadata: Metadata = {
   title: "Bulk Haulage Delivery Management Software for Tippers, Earthworks & Civil | HaulageOps",
   description:
-    "Cloud-native bulk haulage delivery management software for Australian and New Zealand tipper, earthworks, and civil operators. Live dispatch, subcontractor portal, digital POD, and automated invoicing.",
+    "Cloud-native bulk haulage delivery management software for tipper, quarry, earthworks, and heavy civil fleets. Live dispatch, subcontractor portal, digital POD, and automated invoicing.",
   icons: {
     icon: "/favicon.ico",
     shortcut: "/icon.png",
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Bulk Haulage Delivery Management Software for Tippers, Earthworks & Civil | HaulageOps",
     description:
-      "Run dispatch, subcontractors, dockets and invoicing from one place. Purpose-built bulk haulage delivery management software for Australian and New Zealand operators.",
+      "Run dispatch, subcontractors, dockets and invoicing from one place. Purpose-built bulk haulage delivery management software for tipper, quarry, and heavy civil fleets.",
     type: "website",
   },
 };
