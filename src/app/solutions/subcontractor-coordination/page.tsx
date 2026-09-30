@@ -14,6 +14,7 @@ import {
   ShieldCheck,
   FileCheck,
 } from "lucide-react";
+import { SubcontractorCoordinationMockup } from "@/components/shared/solution-mockups";
 
 export const metadata = {
   title: "Haulage Subcontractor Coordination | HaulageOps",
@@ -467,47 +468,8 @@ export default function SubcontractorCoordinationPage() {
               </ul>
             </div>
             {/* Dual rate view visual spec */}
-            <div className="rounded-2xl border border-neutral-200 bg-neutral-900 border-y border-neutral-800 overflow-hidden">
-              <div className="px-5 py-3 bg-neutral-800 text-[#E8652B] text-xs font-bold uppercase tracking-widest">
-                Job Record — Dual Rate View (Admin Only)
-              </div>
-              <div className="p-4 sm:p-5 space-y-3">
-                <div className="bg-neutral-800 border border-[#334155] rounded-lg p-3">
-                  <div className="flex items-center justify-between gap-3">
-                    <span className="text-white text-[11px] font-semibold">JOB-1843 — Balfour Beatty</span>
-                    <span className="px-1.5 py-0.5 rounded bg-[#3B82F6]/15 text-[#60A5FA] text-[9px] font-semibold">Subcontracted</span>
-                  </div>
-                  <div className="mt-3 space-y-2">
-                    <div className="flex items-center justify-between gap-3 text-[10px]">
-                      <span className="text-neutral-400">Client Charge Rate</span>
-                      <span className="text-[#FBBF24] font-semibold">$24 / tonne</span>
-                    </div>
-                    <div className="flex items-center justify-between gap-3 text-[10px]">
-                      <span className="text-neutral-400">Subcontractor Pay Rate</span>
-                      <span className="text-neutral-400 font-semibold">$18 / tonne</span>
-                    </div>
-                    <div className="flex items-center justify-between gap-3 text-[10px] border-t border-[#334155] pt-2">
-                      <span className="text-neutral-400">Margin</span>
-                      <span className="text-[#4ADE80] font-semibold">$6 / tonne</span>
-                    </div>
-                  </div>
-                </div>
-                <div className="grid grid-cols-2 gap-3">
-                  <div className="bg-neutral-800 border border-[#334155] rounded-lg p-3">
-                    <p className="text-neutral-400 text-[9px] uppercase tracking-wider mb-1.5">Sub portal view</p>
-                    <p className="text-[10px] text-white">Pay Rate: $18 / tonne</p>
-                    <p className="text-[9px] text-neutral-500 mt-1">Client charge rate not visible.</p>
-                  </div>
-                  <div className="bg-neutral-800 border border-[#334155] rounded-lg p-3">
-                    <p className="text-neutral-400 text-[9px] uppercase tracking-wider mb-1.5">Client portal view</p>
-                    <p className="text-[10px] text-white">Invoice: $2,640</p>
-                    <p className="text-[9px] text-neutral-500 mt-1">No rate breakdown visible.</p>
-                  </div>
-                </div>
-                <p className="text-[10px] text-neutral-600">
-                  <FileCheck className="h-3 w-3 inline text-[#4ADE80]" /> Margin sits at the job level — no manual reconciliation at month end.
-                </p>
-              </div>
+            <div className="w-full">
+              <SubcontractorCoordinationMockup />
             </div>
           </div>
         </div>

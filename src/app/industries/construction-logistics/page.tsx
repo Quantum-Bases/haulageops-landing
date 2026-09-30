@@ -6,6 +6,7 @@ import {
   ChevronRight,
   ArrowRight,
 } from "lucide-react";
+import { ConstructionLogisticsMockup } from "@/components/shared/industry-mockups";
 
 export const metadata = {
   title: "Construction Logistics Management Software | HaulageOps",
@@ -351,19 +352,7 @@ export default function ConstructionLogisticsPage() {
           </div>
 
           {/* Multi-client dispatch board mockup */}
-          <div className="mt-12 rounded-2xl bg-neutral-900 border-y border-neutral-800 border border-neutral-800 overflow-hidden">
-            <div className="flex items-center gap-2 px-5 py-3 bg-neutral-800">
-              <span className="h-2.5 w-2.5 rounded-full bg-[#E8652B]" />
-              <span className="h-2.5 w-2.5 rounded-full bg-[#94A3B8]" />
-              <span className="h-2.5 w-2.5 rounded-full bg-[#475569]" />
-              <span className="ml-3 text-xs font-semibold text-neutral-300">HaulageOps — Multi-Client Construction Logistics Dispatch Board</span>
-            </div>
-            <div className="p-6">
-              <p className="text-sm text-neutral-400 leading-relaxed">
-                Screenshot: Admin Panel dispatch board in multi-client view. Left column: job list showing 8 active jobs across 4 clients (client names colour-coded). Each job shows: client name, site address, material type, rate type (per tonne / per load), assigned driver or sub, current status (en route / at site / delivered). Filter bar at top: &quot;All clients&quot; dropdown currently showing all. Right side: map with 6 truck positions marked — 4 own trucks (blue pins), 2 sub trucks (orange pins). One selected job highlighted: driver name, ETA displayed as &quot;12 minutes&quot;, last POD photo thumbnail visible.
-              </p>
-            </div>
-          </div>
+          <ConstructionLogisticsMockup />
         </div>
       </section>
 

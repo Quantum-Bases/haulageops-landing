@@ -1,282 +1,261 @@
 import Link from "next/link";
 import { MainLayout } from "@/components/layout/MainLayout";
 import { Button } from "@/components/ui/button";
-import { CheckCircle, ChevronRight, ArrowRight, ArrowLeft, ArrowDown } from "lucide-react";
+import {
+  CheckCircle,
+  ChevronRight,
+  ArrowRight,
+  RefreshCw,
+  Sparkles,
+  Lock,
+  CheckCircle2,
+  FileCheck,
+  Receipt,
+  ArrowDown,
+  ArrowLeft,
+  DollarSign,
+  TrendingUp,
+} from "lucide-react";
 
 export const metadata = {
-  title: "Xero Integration for Haulage Invoicing | HaulageOps",
+  title: "Xero Accounting Integration for Bulk Haulage | HaulageOps",
   description:
-    "HaulageOps connects to Xero via OAuth2. Invoices created in HaulageOps sync automatically. Payment events flow back from Xero. No manual data entry between systems.",
+    "Direct two-way OAuth2 Xero integration for heavy haulage operators. Verified mobile dockets push draft invoices to Xero with job-linked line items; payment webhooks update your board in real time.",
 };
 
-const heroKickers = [
-  "OAuth2 connection",
-  "6-hourly scheduled sync",
-  "Real-time payment webhooks",
-  "No manual data entry",
-];
-
 const proofStrip = [
-  "Industry-standard OAuth2 — no password sharing",
-  "6-hourly cron sync for invoice data",
-  "Real-time webhook when Xero marks payment",
-  "Payment status visible in HaulageOps & Client Portal",
-  "Xero is accounting — HaulageOps is operations",
-  "Works with Xero AU, NZ and UK",
+  "Official Xero OAuth2 Connection",
+  "Automated 6-Hourly Batch Sync",
+  "Sub-Second Real-Time Payment Webhooks",
+  "Automated Subcontractor RCTIs",
+  "No Manual Re-Keying or Double Entry",
+  "Supports Xero AU, NZ, and UK",
 ];
 
 const workflowSteps = [
   {
     num: "01",
-    title: "Connect via OAuth2",
-    desc: "The connection is established through Xero's official OAuth2 authentication flow — the same protocol used by major software integrations. You authorise HaulageOps to connect to your Xero account through Xero's own interface. No Xero passwords are shared with or stored by HaulageOps.",
+    title: "Secure OAuth2 Token Connection",
+    desc: "Connect your Xero organisation with 1 click via official OAuth2 protocols. HaulageOps never views, stores, or handles your raw Xero accounting passwords.",
   },
   {
     num: "02",
-    title: "Complete the job",
-    desc: "The driver marks the job complete on the mobile app. POD is uploaded and attached to the job record. The job is now ready to invoice — all the detail (client, rates, loads, dockets) is already in HaulageOps from the work being done.",
+    title: "Job Completion & Verified Docket",
+    desc: "Driver captures the weighbridge ticket and customer signature in the mobile app. All job details, tonnages, and rates are locked into the live job record.",
   },
   {
     num: "03",
-    title: "Build the invoice in HaulageOps",
-    desc: "The invoice is built from the completed job record. Line items are generated from the job data — rates already applied, quantities from the job details. No re-entry of the data that already exists. The invoice is reviewed in HaulageOps before syncing.",
+    title: "Automated Invoice Generation",
+    desc: "HaulageOps builds the sales invoice automatically from the verified job data, applying agreed client rate cards with zero manual math.",
   },
   {
     num: "04",
-    title: "Sync to Xero",
-    desc: "The invoice syncs to Xero via the scheduled 6-hourly cron sync. It appears in Xero as a standard invoice, coded to the appropriate account. Your accounts team works with it in Xero exactly as they would with any other invoice — chase payment, reconcile, report. HaulageOps did not change how Xero works.",
+    title: "Seamless Sync to Xero Ledger",
+    desc: "Invoices push into Xero as approved or draft invoices with line items mapped to your specific sales and GST nominal accounts.",
   },
   {
     num: "05",
-    title: "Payment recorded in Xero",
-    desc: "Your accounts team reconciles the payment in Xero as part of their normal process. The moment Xero marks the invoice as paid, a webhook fires back to HaulageOps in real time.",
+    title: "Payment Recorded in Xero",
+    desc: "Your finance team reconciles incoming bank payments in Xero as normal. The moment Xero marks an invoice paid, a webhook fires immediately.",
   },
   {
     num: "06",
-    title: "Status updates in HaulageOps",
-    desc: "The invoice status in HaulageOps updates to Paid as soon as the Xero webhook arrives. Operations can see payment status without logging into Xero. The Client Portal also reflects the updated status — the client sees their invoice as paid without a phone call to your office.",
+    title: "Real-Time Status in Dispatch & Client Portals",
+    desc: "HaulageOps and the Client Portal update instantly to 'Paid'. Dispatchers and clients see settlement without interrupting accounts.",
   },
 ];
 
 const twoSystemsPoints = [
-  "Operations builds invoices from job data in HaulageOps",
-  "Finance manages payment and reconciliation in Xero",
-  "Payment status is visible to operations and clients without Xero access",
-  "No manual re-entry of invoice data between systems",
+  "Operations builds invoices directly from field dockets in HaulageOps",
+  "Finance reconciles payments and manages the ledger inside Xero",
+  "Payment status is visible to dispatchers and clients without logging into Xero",
+  "Zero duplicate data entry or transcription errors from paper tickets",
 ];
 
 const paymentVisibilityCards = [
   {
-    title: "Operations view in HaulageOps",
-    desc: "The invoice list in HaulageOps shows current status — draft, sent, paid, overdue — updated when Xero records a payment. Dispatch staff can see outstanding invoices for a client without needing access to the accounting system.",
+    title: "Operations & Dispatch View",
+    desc: "Dispatchers see live financial statuses (Draft, Sent, Paid, Overdue) right on the board. Flag overdue accounts before assigning new loads to a slow-paying client.",
   },
   {
-    title: "Client Portal view",
-    desc: "Clients see their invoices through the Client Portal with current status. When Xero records payment and the webhook fires, the Client Portal reflects paid status automatically. No manual update required, no client emailing to ask if their payment was received.",
+    title: "Branded Client Portal View",
+    desc: "Head contractors and civil clients view their complete invoice archive and payment receipts self-service, eliminating payment confirmation emails.",
   },
   {
-    title: "Management reporting",
-    desc: "Invoice status feeds into management reporting — outstanding accounts, revenue by period, aged receivables. The data reflects the Xero payment record via the webhook without requiring management to query Xero separately.",
-  },
-];
-
-const relatedCards = [
-  {
-    title: "Billing & Invoicing",
-    href: "/platform/billing-and-invoicing",
-    linkLabel: "Billing & invoicing",
-    desc: "The full invoice lifecycle in HaulageOps — draft, sent, paid, overdue, voided. The Xero integration is the bridge between the HaulageOps invoice and the Xero accounting record.",
-  },
-  {
-    title: "Rate Management",
-    href: "/platform/rate-management",
-    linkLabel: "Rate management",
-    desc: "Rates set in HaulageOps — per-tonne, per-load, hourly, fixed-fee — feed directly into invoice line items. When those invoices sync to Xero, the rate detail goes with them.",
-  },
-  {
-    title: "Add-ons & Integrations",
-    href: "/platform/add-ons",
-    linkLabel: "Add-ons & integrations",
-    desc: "Xero is the standard live accounting integration. See what else is included by default and what is available on request — including the honest status of MYOB and roadmap items.",
+    title: "Executive & CFO Reporting",
+    desc: "Instant gross margin reports comparing client revenue against subcontractor RCTI costs, pulling verified figures from the synced Xero ledger.",
   },
 ];
 
 const faqs = [
   {
-    q: "Which Xero plan is required to use the integration?",
-    a: "The HaulageOps Xero integration uses Xero's standard API, which is available on Xero's Starter, Standard, and Premium plans. It is not available on free Xero trials. If you are on an active paid Xero subscription and have an active HaulageOps account, the integration is included — there is no additional per-connection fee from HaulageOps.",
+    q: "How does HaulageOps connect to Xero securely?",
+    a: "The connection uses official Xero OAuth 2.0 tokenized authentication. You authorize the connection directly in Xero's interface. HaulageOps never receives or stores your Xero login credentials and access can be revoked at any time.",
   },
   {
-    q: "Does the integration work with Xero AU, NZ, and UK?",
-    a: "Yes. Xero's API is consistent across their AU, NZ, and UK product variants. The HaulageOps integration works with Xero accounts in each of these markets. If you are in a market where Xero is available and your Xero account is active, the connection operates the same way regardless of your country.",
+    q: "What data flows between HaulageOps and Xero?",
+    a: "HaulageOps pushes customer contact details, sales invoices (with job-level line items, tonnages, and rates), and subcontractor bills/RCTIs into Xero. Xero sends real-time payment webhook confirmations back into HaulageOps when invoices are settled.",
   },
   {
-    q: "What happens if the sync fails?",
-    a: "The 6-hourly cron sync attempts to push all pending invoice data. If a sync attempt fails — due to a temporary connectivity issue or a Xero API interruption — HaulageOps retries on the next scheduled cycle. Failed sync attempts are logged. If a sync issue persists, it surfaces in the integration status view so your team is aware without needing to monitor it manually. Your Xero data and HaulageOps data are not corrupted by a failed sync — the records simply remain out of sync until the next successful attempt.",
+    q: "Does this work with Xero outside Australia?",
+    a: "Yes. The Xero integration supports active Xero organizations across Australia, New Zealand, the United Kingdom, and North America.",
   },
   {
-    q: "Can I disconnect the Xero integration if needed?",
-    a: "Yes. You can disconnect the Xero integration from within HaulageOps at any time. Disconnecting removes the authorisation HaulageOps holds to access your Xero account — it does not delete invoices that have already synced to Xero, and it does not affect historical data in HaulageOps. You can reconnect at any time by going through the OAuth2 authorisation flow again.",
+    q: "How are Recipient Created Tax Invoices (RCTIs) handled?",
+    a: "When external subcontractors complete loads, HaulageOps can automatically generate RCTIs based on verified tonnages and push them directly into Xero as Accounts Payable bills ready for weekly payment runs.",
   },
-  {
-    q: "Does the integration push all invoices or only new ones after connection?",
-    a: "The integration syncs invoices created in HaulageOps after the connection is established. It does not retroactively push historical invoices that predate the connection. During setup, your implementation contact will advise on how to handle the transition from your previous invoicing process so there are no gaps or duplicates in your Xero records.",
-  },
-  {
-    q: "Do I need a Xero account before I can use HaulageOps?",
-    a: "No. HaulageOps billing and invoicing operates independently of the Xero integration. You can create, send, and track invoices within HaulageOps without connecting to Xero. The Xero integration is an add-on that pushes those invoices into Xero for accounting purposes. If you do not use Xero, invoice management is handled entirely within HaulageOps.",
-  },
-];
-
-const invoiceList = [
-  { id: "#1039", client: "Apex Civil", amount: "$3,200", status: "Paid", statusCls: "text-[#4ADE80] bg-[#16A34A]/20", note: "paid 14 Jul via Xero webhook" },
-  { id: "#1040", client: "Ridge Earthworks", amount: "$5,600", status: "Overdue", statusCls: "text-[#F87171] bg-[#EF4444]/20", note: "due 8 Jul" },
-  { id: "#1041", client: "Summit Quarries", amount: "$2,100", status: "Sent", statusCls: "text-[#60A5FA] bg-[#3B82F6]/20", note: "sent 18 Jul" },
-  { id: "#1042", client: "Apex Civil", amount: "$4,800", status: "Draft", statusCls: "text-neutral-400 bg-[#334155]", note: "" },
 ];
 
 export default function XeroIntegrationPage() {
   return (
     <MainLayout showCta={false}>
-      {/* Breadcrumb */}
-      <div className="pt-24 pb-0 bg-neutral-50/70">
+      {/* 1. Hero Header */}
+      <section className="pt-28 pb-16 bg-gradient-to-b from-neutral-50/80 via-white to-white border-b border-neutral-200">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <nav className="flex items-center gap-2 text-xs text-neutral-500">
-            <Link href="/" className="hover:text-[#E8652B]">Home</Link>
+          <nav className="flex items-center gap-2 text-xs text-neutral-500 mb-6">
+            <Link href="/" className="hover:text-[#E8652B] transition-colors">Home</Link>
             <ChevronRight className="h-3 w-3" />
-            <Link href="/platform" className="hover:text-[#E8652B]">Platform</Link>
+            <Link href="/platform" className="hover:text-[#E8652B] transition-colors">Platform</Link>
             <ChevronRight className="h-3 w-3" />
-            <Link href="/platform/integrations" className="hover:text-[#E8652B]">Integrations</Link>
+            <Link href="/platform/integrations" className="hover:text-[#E8652B] transition-colors">Integrations</Link>
             <ChevronRight className="h-3 w-3" />
             <span className="text-neutral-900 font-medium">Xero</span>
           </nav>
-        </div>
-      </div>
 
-      {/* HERO */}
-      <section className="pt-10 pb-20 bg-gradient-to-b from-neutral-50/80 via-white to-white border-b border-neutral-200">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-[#E8652B] bg-orange-50 border border-orange-200 mb-4 animate-in fade-in slide-in-from-bottom-4 animation-duration-700 fill-mode-both">
-            Platform — Xero Integration
-          </span>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-neutral-900 max-w-4xl leading-[1.1] animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-100 fill-mode-both">
-            HaulageOps creates the invoice. Xero handles the accounting.
-          </h1>
-          <p className="mt-6 text-lg sm:text-xl text-neutral-600 max-w-3xl leading-relaxed animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-150 fill-mode-both">
-            Connect HaulageOps to your Xero account via OAuth2. Invoices built from completed jobs sync to Xero automatically. When Xero records a payment, that status flows back to HaulageOps in real time. No double entry between systems.
-          </p>
-          <div className="mt-8 flex flex-wrap gap-3 animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-200 fill-mode-both">
-            <Link href="/demo">
-              <Button size="lg" className="bg-[#E8652B] hover:bg-[#D05520] text-white font-semibold">
-                Book a Demo
-              </Button>
-            </Link>
-            <Link href="/platform/billing-and-invoicing">
-              <Button size="lg" variant="outline" className="border-neutral-200 text-neutral-700 hover:bg-neutral-50/50">
-                Billing &amp; Invoicing
-              </Button>
-            </Link>
-          </div>
-          {/* Kicker pills */}
-          <div className="mt-8 flex flex-wrap gap-2 animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-300 fill-mode-both">
-            {heroKickers.map((pill) => (
-              <span key={pill} className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-neutral-100 text-xs font-medium text-neutral-700">
-                <CheckCircle className="h-3.5 w-3.5 text-[#E8652B] shrink-0" />
-                {pill}
-              </span>
-            ))}
+          <div className="max-w-4xl">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider text-[#E8652B] bg-orange-50 border border-orange-200 mb-4">
+              <RefreshCw className="h-3.5 w-3.5" />
+              Native Accounting Integration
+            </span>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-neutral-900 leading-[1.08]">
+              Automate your billing workflow with
+              <span className="block text-[#E8652B] mt-2">two-way Xero synchronization.</span>
+            </h1>
+            <p className="mt-6 text-lg sm:text-xl text-neutral-600 leading-relaxed max-w-3xl font-normal">
+              Connect operations to finance. Verified mobile dockets push directly into Xero with job-linked rate lines, while real-time payment webhooks update your dispatch board the second clients settle.
+            </p>
+
+            <div className="mt-8 flex flex-wrap gap-4">
+              <Link href="/demo">
+                <Button size="lg" className="bg-[#E8652B] hover:bg-[#D05520] text-white font-bold cursor-pointer shadow-sm">
+                  Book a 20-Minute Demo
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </Link>
+              <Link href="/platform/billing-and-invoicing">
+                <Button size="lg" variant="outline" className="border-neutral-300 text-neutral-700 hover:bg-neutral-100 font-bold">
+                  Billing & Invoicing Module
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* PROOF STRIP */}
-      <div className="bg-neutral-900 py-5">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-center">
-            {proofStrip.map((item) => (
-              <div key={item} className="flex items-center justify-center gap-2">
-                <CheckCircle className="h-3.5 w-3.5 text-[#E8652B] shrink-0" />
-                <span className="text-white font-bold text-sm">{item}</span>
-              </div>
-            ))}
-          </div>
+      {/* 2. Proof Strip */}
+      <section className="bg-neutral-900 py-6 border-y border-neutral-800">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-wrap items-center justify-center gap-x-8 gap-y-3">
+          {proofStrip.map((item) => (
+            <span key={item} className="text-xs sm:text-sm text-neutral-300 font-medium flex items-center gap-2">
+              <span className="h-1.5 w-1.5 rounded-full bg-[#E8652B]" />
+              {item}
+            </span>
+          ))}
         </div>
-      </div>
+      </section>
 
-      {/* HOW THE CONNECTION WORKS */}
-      <section className="py-20 bg-white">
+      {/* 3. The End-to-End Workflow */}
+      <section className="py-20 bg-white border-b border-neutral-200">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">How the connection works</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
-            The invoice workflow from job completion to Xero — step by step.
-          </h2>
-          <p className="mt-6 text-neutral-600 max-w-3xl leading-relaxed">
-            The Xero integration in HaulageOps is built around a clear division of responsibility: HaulageOps manages the job data and invoice creation; Xero manages the accounting record, payment processing, and your chart of accounts. The two systems complement each other — they are not trying to do the same job.
-          </p>
-          <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">End-to-End Cycle</span>
+            <h2 className="mt-2 text-3xl sm:text-4xl font-black text-neutral-900">
+              From Weighbridge Docket to Settled Xero Payment
+            </h2>
+            <p className="mt-3 text-neutral-600 text-base">
+              A continuous, automated flow eliminating double handling and spreadsheet delays.
+            </p>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {workflowSteps.map((step) => (
-              <div key={step.num} className="bg-neutral-50/50 rounded-2xl p-6 border border-neutral-200 shadow-sm">
-                <span className="text-3xl font-black text-[#E8652B]/20 leading-none">{step.num}</span>
-                <h3 className="mt-2 font-bold text-neutral-900 text-base">{step.title}</h3>
-                <p className="mt-2 text-sm text-neutral-600 leading-relaxed">{step.desc}</p>
+              <div
+                key={step.num}
+                className="bg-neutral-50/50 rounded-2xl p-7 border border-neutral-200 shadow-xs flex flex-col justify-between hover:border-[#E8652B]/70 transition-all"
+              >
+                <div>
+                  <span className="text-3xl font-black text-[#E8652B]/20 leading-none">{step.num}</span>
+                  <h3 className="mt-3 font-bold text-neutral-900 text-lg">{step.title}</h3>
+                  <p className="mt-2.5 text-xs sm:text-sm text-neutral-600 leading-relaxed font-normal">{step.desc}</p>
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* TWO SYSTEMS, ONE JOB RECORD */}
-      <section className="py-20 bg-neutral-50/50">
+      {/* 4. Two Systems, One Ledger (Visual Simulation) */}
+      <section className="py-20 bg-neutral-50/50 border-b border-neutral-200">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-10 items-center">
-            <div>
-              <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Two systems, one job record</span>
-              <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-xl">
-                Xero is the accounting system. HaulageOps is the operations system.
+          <div className="grid lg:grid-cols-12 gap-12 items-center">
+            <div className="lg:col-span-6">
+              <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Division of Labor</span>
+              <h2 className="mt-2 text-3xl sm:text-4xl font-black text-neutral-900 leading-tight">
+                Xero is the accounting system. HaulageOps is the operations engine.
               </h2>
-              <p className="mt-6 text-neutral-600 leading-relaxed">
-                A common concern when connecting two systems is which one becomes the source of truth. The answer in the HaulageOps and Xero relationship is clear: job data and invoice creation originate in HaulageOps; accounting, payment processing, and financial records live in Xero. Neither system tries to replace the other.
-              </p>
-              <p className="mt-4 text-neutral-600 leading-relaxed">
-                Your accountant or bookkeeper does not need to learn HaulageOps. Your dispatcher does not need access to Xero. The sync carries the invoice data from operations to accounting, and carries the payment status back. Each team works in the system built for their function.
-              </p>
-              <ul className="mt-6 space-y-3">
+              <div className="mt-6 space-y-4 text-sm sm:text-base text-neutral-600 leading-relaxed">
+                <p>
+                  Neither system tries to replace the other. Your dispatcher works in HaulageOps assigning trucks and approving dockets; your accountant works in Xero managing tax returns, payroll, and banking reconciliation.
+                </p>
+                <p>
+                  The integration synchronizes the two seamlessly: invoices batch from operations to accounts, while payment confirmations flow straight back to dispatch.
+                </p>
+              </div>
+
+              <div className="mt-8 space-y-3">
                 {twoSystemsPoints.map((item) => (
-                  <li key={item} className="flex items-start gap-2 text-sm text-neutral-700">
-                    <CheckCircle className="h-4 w-4 text-[#E8652B] shrink-0 mt-0.5" />
+                  <div key={item} className="flex items-start gap-2.5 text-xs sm:text-sm text-neutral-700">
+                    <CheckCircle2 className="h-4 w-4 text-emerald-600 shrink-0 mt-0.5" />
                     <span>{item}</span>
-                  </li>
+                  </div>
                 ))}
-              </ul>
-            </div>
-            {/* Sync flow visual spec */}
-            <div className="rounded-2xl border border-neutral-200 bg-neutral-900 border-y border-neutral-800 overflow-hidden">
-              <div className="px-5 py-3 bg-neutral-800 text-[#E8652B] text-xs font-bold uppercase tracking-widest">
-                Invoice sync — HaulageOps to Xero flow
               </div>
-              <div className="p-6 text-neutral-400 text-sm font-mono leading-relaxed">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div className="bg-neutral-800 rounded-lg p-4 border border-[#334155]">
-                    <p className="text-[10px] uppercase tracking-wider text-neutral-500 mb-2">HaulageOps</p>
-                    <p className="text-white font-semibold text-xs">Invoice #1042</p>
-                    <p className="text-xs mt-1">Client: Apex Civil</p>
-                    <p className="text-xs">3 job line items</p>
-                    <p className="text-xs">Total: <span className="text-white font-semibold">$4,800</span></p>
-                    <p className="mt-2 inline-block px-2 py-0.5 rounded bg-[#3B82F6]/20 text-[#60A5FA] text-[10px] font-semibold">Status: Sent</p>
+            </div>
+
+            {/* Sync Simulation Card */}
+            <div className="lg:col-span-6">
+              <div className="bg-neutral-900 rounded-3xl p-8 border border-neutral-800 text-white shadow-xl relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-48 h-48 bg-[#E8652B]/10 rounded-full blur-3xl pointer-events-none" />
+                <div className="flex items-center justify-between pb-4 border-b border-neutral-800 mb-6">
+                  <span className="text-xs font-mono text-[#E8652B] font-bold uppercase">
+                    Two-Way Data Highway
+                  </span>
+                  <span className="text-[11px] font-mono text-emerald-400 bg-emerald-950 px-2 py-0.5 rounded border border-emerald-800">
+                    Active Sync
+                  </span>
+                </div>
+
+                <div className="grid sm:grid-cols-2 gap-4 font-mono text-xs mb-6">
+                  <div className="bg-neutral-800/80 p-4 rounded-xl border border-neutral-700">
+                    <span className="text-[10px] text-neutral-400 block mb-1">HAULAGEOPS RECORD</span>
+                    <span className="text-white font-bold text-sm block">Invoice #INV-4921</span>
+                    <span className="text-neutral-400 text-xs mt-1 block">Client: Western Civil Ltd</span>
+                    <span className="text-neutral-300 text-xs block">3 Verified Loads (98.40 t)</span>
+                    <span className="text-[#E8652B] font-bold block mt-2">$2,460.00 + GST</span>
                   </div>
-                  <div className="bg-neutral-800 rounded-lg p-4 border border-[#334155]">
-                    <p className="text-[10px] uppercase tracking-wider text-neutral-500 mb-2">Xero</p>
-                    <p className="text-white font-semibold text-xs">Same reference</p>
-                    <p className="text-xs mt-1">Same amount: $4,800</p>
-                    <p className="text-xs">Account code: 200 Revenue</p>
-                    <p className="mt-2 inline-block px-2 py-0.5 rounded bg-[#FBBF24]/10 text-[#FBBF24] text-[10px] font-semibold">Awaiting Payment</p>
+
+                  <div className="bg-neutral-800/80 p-4 rounded-xl border border-neutral-700">
+                    <span className="text-[10px] text-neutral-400 block mb-1">XERO SALES INVOICE</span>
+                    <span className="text-white font-bold text-sm block">Ref: #INV-4921</span>
+                    <span className="text-neutral-400 text-xs mt-1 block">Account: 200 - Sales</span>
+                    <span className="text-neutral-300 text-xs block">Status: Awaiting Payment</span>
+                    <span className="text-emerald-400 font-bold block mt-2">Webhook Armed</span>
                   </div>
                 </div>
-                <div className="mt-4 flex items-center justify-center gap-2 text-[10px] text-[#E8652B] font-semibold">
-                  <ArrowRight className="h-3 w-3" /> 6-hourly sync
-                </div>
-                <div className="mt-3 flex items-center justify-center gap-2 text-[10px] text-[#4ADE80] font-semibold">
-                  <ArrowLeft className="h-3 w-3" /> Webhook — real time
+
+                <div className="p-3 bg-neutral-800/90 rounded-xl border border-neutral-700 text-xs flex items-center justify-between">
+                  <span className="text-neutral-400">Sync Interval:</span>
+                  <span className="text-white font-semibold">6-Hourly Batch + Instant Webhook</span>
                 </div>
               </div>
             </div>
@@ -284,126 +263,52 @@ export default function XeroIntegrationPage() {
         </div>
       </section>
 
-      {/* PAYMENT VISIBILITY */}
-      <section className="py-20 bg-white">
+      {/* 5. Payment Visibility Across Personas */}
+      <section className="py-20 bg-white border-b border-neutral-200">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Payment visibility</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
-            Operations and clients see payment status without logging into Xero.
-          </h2>
-          <p className="mt-6 text-neutral-600 max-w-3xl leading-relaxed">
-            One of the practical benefits of the real-time payment webhook is that invoice status is visible to the right people without additional system access. Operations knows which invoices are outstanding. Clients can see whether their invoice is paid through the Client Portal. Neither needs to contact the accounts team for a status update.
-          </p>
-          <div className="mt-10 grid md:grid-cols-3 gap-6">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Role Benefits</span>
+            <h2 className="mt-2 text-3xl sm:text-4xl font-black text-neutral-900">
+              Clear Payment Visibility for Every Team
+            </h2>
+            <p className="mt-3 text-neutral-600 text-base">
+              Everyone sees the financial status they need without asking accounts for an update.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
             {paymentVisibilityCards.map((card) => (
-              <div key={card.title} className="bg-neutral-50/50 rounded-2xl p-6 border border-neutral-200">
-                <h3 className="font-bold text-neutral-900 mb-2">{card.title}</h3>
-                <p className="text-sm text-neutral-600 leading-relaxed">{card.desc}</p>
+              <div key={card.title} className="bg-neutral-50/50 rounded-2xl p-7 border border-neutral-200 shadow-xs">
+                <h3 className="text-lg font-bold text-neutral-900 mb-2">{card.title}</h3>
+                <p className="text-xs sm:text-sm text-neutral-600 leading-relaxed font-normal">{card.desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* A NOTE ON MYOB */}
-      <section className="py-20 bg-neutral-50/50">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-10 items-center">
-            {/* Invoice status visual spec */}
-            <div className="rounded-2xl border border-neutral-200 bg-neutral-900 border-y border-neutral-800 overflow-hidden order-1 lg:order-none">
-              <div className="px-5 py-3 bg-neutral-800 text-[#E8652B] text-xs font-bold uppercase tracking-widest">
-                Invoice status — HaulageOps billing view
-              </div>
-              <div className="p-6 text-neutral-400 text-sm font-mono leading-relaxed space-y-2">
-                {invoiceList.map((row) => (
-                  <div key={row.id} className="flex items-center justify-between bg-neutral-800 rounded-lg px-3 py-2 border border-[#334155] text-xs">
-                    <div className="flex items-center gap-3">
-                      <span className="text-white font-semibold">{row.id}</span>
-                      <span className="text-neutral-400">{row.client}</span>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <span className="text-neutral-500">{row.amount}</span>
-                      <span className={`px-2 py-0.5 rounded text-[10px] font-semibold ${row.statusCls}`}>{row.status}</span>
-                    </div>
-                  </div>
-                ))}
-                <p className="text-[10px] text-[#FBBF24] pt-1">Total outstanding highlighted in the billing dashboard</p>
-              </div>
-            </div>
-            <div>
-              <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">A note on MYOB</span>
-              <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-xl">
-                Using MYOB? It is available subject to scope — not a standard integration.
-              </h2>
-              <p className="mt-6 text-neutral-600 leading-relaxed">
-                MYOB is not a standard built-in integration in HaulageOps. The Xero integration is live and operates as described on this page. MYOB is a different accounting platform with a range of product versions and configurations that affect what a connection would look like.
-              </p>
-              <p className="mt-4 text-neutral-600 leading-relaxed">
-                If you use MYOB, we can explore what is technically achievable for your specific MYOB version, product configuration, and required workflow. The starting point is understanding your MYOB setup and what you need the connection to do. From there we can scope whether and how a connection is practical for your situation.
-              </p>
-              <p className="mt-4 text-neutral-600 leading-relaxed">
-                If MYOB is a hard requirement in your evaluation, tell us at the demo stage and we will give you an honest answer about what is possible for your setup before you proceed.
-              </p>
-              <div className="mt-6">
-                <Link href="/platform/add-ons">
-                  <Button variant="outline" className="border-neutral-200 text-neutral-700 hover:bg-white">
-                    Integrations &amp; Add-ons <ArrowRight className="h-4 w-4" />
-                  </Button>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* RELATED PLATFORM FEATURES */}
-      <section className="py-20 bg-white">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Related platform features</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
-            The Xero integration is part of the job-to-invoice workflow.
-          </h2>
-          <div className="mt-10 grid md:grid-cols-3 gap-6">
-            {relatedCards.map((card) => (
-              <div key={card.title} className="bg-neutral-50/50 rounded-2xl p-6 border border-neutral-200">
-                <h3 className="font-bold text-neutral-900 mb-2">
-                  <Link href={card.href} className="hover:text-[#E8652B] transition-colors">
-                    {card.title}
-                  </Link>
-                </h3>
-                <p className="text-sm text-neutral-600 leading-relaxed">{card.desc}</p>
-                <Link href={card.href} className="mt-3 inline-flex items-center gap-1 text-sm text-[#E8652B] hover:underline font-medium">
-                  {card.linkLabel} <ArrowRight className="h-3.5 w-3.5" />
-                </Link>
-              </div>
-            ))}
-          </div>
-          <div className="mt-8 text-center">
-            <Link href="/solutions/job-to-invoice">
-              <Button variant="outline" className="border-neutral-200 text-neutral-700 hover:bg-neutral-50/50">
-                Job to Invoice Solution <ArrowRight className="h-4 w-4" />
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ */}
-      <section className="py-20 bg-neutral-50/50">
+      {/* 6. FAQs */}
+      <section className="py-20 bg-neutral-50/50 border-b border-neutral-200">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Frequently asked questions</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900">
-            Xero integration — common questions.
-          </h2>
-          <div className="mt-8 space-y-3">
+          <div className="text-center mb-12">
+            <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Integration Answers</span>
+            <h2 className="mt-2 text-3xl sm:text-4xl font-black text-neutral-900">
+              Frequently Asked Questions About Xero Sync
+            </h2>
+          </div>
+
+          <div className="space-y-4">
             {faqs.map((faq) => (
-              <details key={faq.q} className="group border border-neutral-200 bg-white rounded-xl overflow-hidden">
-                <summary className="flex items-center justify-between gap-4 px-6 py-4 cursor-pointer font-semibold text-neutral-900 text-sm list-none hover:bg-neutral-50/50">
-                  {faq.q}
-                  <ChevronRight className="h-4 w-4 text-neutral-400 shrink-0 group-open:rotate-90 transition-transform" />
+              <details
+                key={faq.q}
+                className="group border border-neutral-200 bg-white rounded-2xl overflow-hidden shadow-xs"
+              >
+                <summary className="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer font-bold text-neutral-900 text-base list-none hover:bg-neutral-50 transition-colors">
+                  <span>{faq.q}</span>
+                  <ChevronRight className="h-5 w-5 text-neutral-400 shrink-0 group-open:rotate-90 transition-transform" />
                 </summary>
-                <div className="px-6 pb-5 text-sm text-neutral-600 leading-relaxed border-t border-neutral-100">
-                  <p className="pt-4">{faq.a}</p>
+                <div className="px-6 pb-6 text-sm text-neutral-600 leading-relaxed border-t border-neutral-100 pt-4">
+                  {faq.a}
                 </div>
               </details>
             ))}
@@ -411,20 +316,33 @@ export default function XeroIntegrationPage() {
         </div>
       </section>
 
-      {/* CTA BAND */}
-      <section className="py-16 bg-neutral-900">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+      {/* 7. Final CTA Footer */}
+      <section className="py-20 bg-neutral-900 text-white">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row md:items-center md:justify-between gap-8">
           <div>
-            <h2 className="text-2xl sm:text-3xl font-bold text-white">Build the invoice in HaulageOps. Let Xero handle the accounting.</h2>
-            <p className="mt-2 text-neutral-400 text-sm leading-relaxed max-w-xl">
-              See how the job-to-invoice-to-Xero workflow runs end to end — in a 20-minute demo with your specific use case in mind.
+            <span className="text-xs font-bold uppercase tracking-wider text-[#E8652B] mb-2 block">
+              Speed Up Your Cash Flow
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-black text-white">
+              Cut your invoice cycle from 4 weeks to 48 hours.
+            </h2>
+            <p className="mt-2 text-neutral-400 text-sm sm:text-base max-w-xl">
+              Book a 20-minute operational walkthrough. We'll show you how completed jobs turn into live Xero invoices in seconds.
             </p>
           </div>
-          <Link href="/demo" className="shrink-0">
-            <Button size="lg" className="bg-[#E8652B] hover:bg-[#D05520] text-white font-semibold">
-              Book a Demo
-            </Button>
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-4 shrink-0">
+            <Link href="/demo">
+              <Button size="lg" className="w-full sm:w-auto bg-[#E8652B] hover:bg-[#D05520] text-white font-bold px-8 shadow-sm">
+                Book a 20-Minute Demo
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </Link>
+            <Link href="/pricing">
+              <Button size="lg" variant="outline" className="w-full sm:w-auto border-neutral-700 bg-neutral-800 text-white hover:bg-neutral-700 font-bold">
+                Fleet Consultation Scope
+              </Button>
+            </Link>
+          </div>
         </div>
       </section>
     </MainLayout>

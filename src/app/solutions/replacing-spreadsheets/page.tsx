@@ -15,19 +15,19 @@ export const metadata = {
 };
 
 const heroKickers = [
-  "$1,500 standard setup",
-  "2–4 week onboarding",
+  "Tailored onboarding",
+  "2–4 week deployment",
   "Data migration included",
-  "Honest about fit",
+  "Zero per-seat subbie fees",
 ];
 
 const proofStrip = [
-  { strong: "$1,500", sub: "Standard setup fee" },
+  { strong: "Tailored", sub: "Structured onboarding" },
   { strong: "2–4 weeks", sub: "Typical onboarding timeline" },
   { strong: "Included", sub: "Data migration assistance" },
   { strong: "Admin + driver", sub: "Training for both roles" },
   { strong: "Xero connected", sub: "On day one of go-live" },
-  { strong: "Ongoing support", sub: "Included in subscription" },
+  { strong: "Ongoing support", sub: "Dedicated support team" },
 ];
 
 const warningSigns = [
@@ -83,8 +83,8 @@ const concreteProblems = [
 const lifecycleSteps = [
   {
     num: "01",
-    title: "Setup — $1,500 standard",
-    desc: "The standard setup fee covers system configuration for your operation: your clients, your rate cards, your drivers, your vehicles, your subcontractors, and your Xero connection. Enterprise setups with more complex rate structures, multiple depots, or custom configuration requirements are scoped separately — typically around $6,500. Setup is a one-time cost; your subscription is the ongoing SaaS fee.",
+    title: "Tailored Setup & Scoping",
+    desc: "Setup covers comprehensive configuration for your operation: client records, rate matrices, driver profiles, vehicle assets, subcontractor accounts, and your Xero connection. Setup and implementation scope are tailored to your fleet size, depot count, and operational workflow agreed upon directly on your onboarding call.",
   },
   {
     num: "02",
@@ -157,8 +157,8 @@ const faqs = [
     a: "Yes. Some operators run a parallel period for the first week or two — all jobs entered in both HaulageOps and the spreadsheet — to build confidence in the new system before fully cutting over. This adds some admin work during the parallel period but reduces the anxiety of a hard cutover. We would suggest keeping the parallel period short — the learning curve with HaulageOps is not steep, and the longer you run in parallel the longer you are doing double the admin work.",
   },
   {
-    q: "What does the standard $1,500 setup actually include?",
-    a: "The standard setup fee ($1,500) covers system configuration for your operation: client setup, rate card configuration, driver records, vehicle register, subcontractor records, and Xero connection setup. It includes data migration assistance for the structured reference data and training for your admin, dispatch, and driver teams. The enterprise setup (approximately $6,500) covers more complex configurations — multiple depots, complex rate structures, custom reporting, or integrations beyond the standard Xero connection.",
+    q: "What does the onboarding and setup process include?",
+    a: "Setup covers end-to-end system configuration for your operation: client setup, rate card configuration, driver records, vehicle register, subcontractor records, and Xero connection setup. It includes structured data migration assistance and dedicated training for your dispatch, admin, and driver teams. Scoping is finalized directly on your consultation call with zero hidden costs.",
   },
   {
     q: "Our admin person built all the spreadsheets — will they resist the change?",
@@ -189,7 +189,7 @@ const relatedCards = [
   },
   {
     title: "Pricing",
-    desc: "Standard setup ($1,500) and enterprise setup options, subscription model, and what is included in each tier. Book a demo for an exact quote based on your operation.",
+    desc: "Fleet-based subscription model, custom onboarding options, and what is included in each tier. Book a demo for an exact quote based on your operation.",
     href: "/pricing",
     linkLabel: "Pricing",
   },

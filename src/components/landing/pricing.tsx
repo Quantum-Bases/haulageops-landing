@@ -23,10 +23,10 @@ const plans = [
     highlight: true,
   },
   {
-    name: "Setup",
-    price: "$1,500",
+    name: "Onboarding & Setup",
+    price: "Tailored",
     description:
-      "One-time. Covers migrating your data, building your rate cards, onboarding your subbies, connecting Xero, and training your team. You go live with a working system, not an empty login.",
+      "Scoped to your fleet. Covers migrating your data, building your rate cards, onboarding your subbies, connecting Xero, and training your team. You go live with a working system, not an empty login.",
     features: [
       "Data migration from spreadsheets",
       "Rate card build",
@@ -34,14 +34,14 @@ const plans = [
       "Xero connection",
       "Team training",
     ],
-    cta: "Included with signup",
+    cta: "Book consultation",
     highlight: false,
   },
   {
     name: "Enterprise",
-    price: "From ~$6,500",
+    price: "Custom",
     description:
-      "Scoped to your operation. Multi-depot, complex migration, custom integrations.",
+      "Scoped to your operation. Multi-depot, high volume cartage, complex migration, and custom integrations.",
     features: [
       "Everything in Standard",
       "Multi-depot support",

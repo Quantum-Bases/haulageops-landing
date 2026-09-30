@@ -2,6 +2,7 @@ import Link from "next/link";
 import { MainLayout } from "@/components/layout/MainLayout";
 import { Button } from "@/components/ui/button";
 import { CheckCircle, ChevronRight, ArrowRight, Download, Truck } from "lucide-react";
+import { ClientPortalMockup } from "@/components/shared/platform-mockups";
 
 export const metadata = {
   title: "Client Portal for Haulage Operators | HaulageOps",
@@ -281,60 +282,8 @@ export default function ClientPortalPage() {
               </ul>
             </div>
             {/* Client portal dashboard visual spec */}
-            <div className="rounded-2xl border border-neutral-200 bg-neutral-900 border-y border-neutral-800 overflow-hidden">
-              <div className="px-5 py-3 bg-neutral-800 text-[#E8652B] text-xs font-bold uppercase tracking-widest">
-                HaulageOps — Client Portal Dashboard
-              </div>
-              <div className="p-4 sm:p-5 space-y-4">
-                <div className="flex items-center justify-between">
-                  <p className="text-white font-semibold text-sm">Midland Civils Ltd</p>
-                  <div className="flex gap-1 text-[10px]">
-                    {["Jobs", "Deliveries", "Invoices", "Rate Cards", "Reports"].map((tab, i) => (
-                      <span key={tab} className={`px-2 py-1 rounded ${i === 0 ? "bg-[#E8652B] text-white font-semibold" : "bg-neutral-800 border border-[#334155] text-neutral-400"}`}>
-                        {tab}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-                <div className="bg-neutral-800 border border-[#334155] rounded-lg p-3">
-                  <p className="text-neutral-400 text-[10px] uppercase tracking-wider mb-2">Active jobs — today</p>
-                  <div className="space-y-1.5">
-                    {clientJobs.map((job) => (
-                      <div key={job.status} className="flex items-center justify-between gap-3">
-                        <div className="flex items-center gap-2">
-                          <Truck className="h-3.5 w-3.5 text-neutral-500" />
-                          <span className="text-white text-[11px]">{job.meta}</span>
-                        </div>
-                        <span className={`px-2 py-0.5 rounded text-[10px] font-semibold whitespace-nowrap ${job.cls}`}>{job.status}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-                <div className="bg-neutral-800 border border-[#334155] rounded-lg p-3">
-                  <p className="text-neutral-400 text-[10px] uppercase tracking-wider mb-2">Recent invoices</p>
-                  <div className="space-y-1.5">
-                    {clientInvoices.map((inv) => (
-                      <div key={inv.num} className="flex items-center justify-between gap-3">
-                        <div className="flex items-center gap-2">
-                          <span className="text-white text-[11px]">{inv.num}</span>
-                          <span className="text-neutral-500 text-[10px]">{inv.amount}</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                          <span className={`px-2 py-0.5 rounded text-[10px] font-semibold ${inv.cls}`}>{inv.status}</span>
-                          <Download className="h-3 w-3 text-neutral-500" />
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-                <div className="flex flex-wrap gap-2 text-[10px]">
-                  <span className="px-2.5 py-1 rounded bg-[#E8652B] text-white font-semibold">View Rate Card</span>
-                  <span className="px-2.5 py-1 rounded bg-neutral-800 border border-[#334155] text-neutral-400">Download POD for last delivery</span>
-                </div>
-                <p className="text-[10px] text-neutral-600">
-                  Clients see only their company&apos;s data.
-                </p>
-              </div>
+            <div className="shadow-2xl rounded-2xl overflow-hidden border border-neutral-800">
+              <ClientPortalMockup />
             </div>
           </div>
         </div>

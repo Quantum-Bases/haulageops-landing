@@ -5,6 +5,7 @@ import Link from "next/link";
 import { MainLayout } from "@/components/layout/MainLayout";
 import { Button } from "@/components/ui/button";
 import { CheckCircle, ChevronRight } from "lucide-react";
+import { JobManagementDetailMockup, JobHistoryMockup } from "@/components/shared/platform-mockups";
 
 const lifecycleSteps = [
   {
@@ -263,9 +264,8 @@ export function PlatformJobManagementPage() {
           <p className="mt-4 text-neutral-600 max-w-3xl leading-relaxed">
             Dispatchers see the full job record including rate, assignment history and all attached documents. Drivers see the same job through the mobile app: origin, destination, material, instructions and POD requirement. No information is re-entered at either end — what dispatch creates, the driver receives.
           </p>
-          <div className="mt-8 rounded-2xl border border-neutral-200 bg-neutral-900 border-y border-neutral-800 p-8 text-neutral-400 text-sm font-mono leading-relaxed">
-            <div className="text-[#E8652B] font-bold mb-2 text-xs uppercase tracking-widest">HaulageOps — Job Record Detail</div>
-            <p>Full job detail view in the Admin & Dispatch Panel showing: job header (origin → destination, material, quantity, rate), assignment section (driver name, vehicle, subcontractor if applicable), status timeline (Created 09:12 → Assigned 09:15 → En Route 07:44 → Delivered 11:02), POD attachments section (3 photos, 1 signed docket), and linked invoice reference. Sidebar shows client name and job reference number.</p>
+          <div className="mt-8 shadow-2xl rounded-2xl overflow-hidden border border-neutral-800">
+            <JobManagementDetailMockup />
           </div>
         </div>
       </section>
@@ -368,9 +368,8 @@ export function PlatformJobManagementPage() {
               </div>
             ))}
           </div>
-          <div className="mt-8 rounded-2xl border border-neutral-200 bg-neutral-900 border-y border-neutral-800 p-8 text-neutral-400 text-sm font-mono leading-relaxed">
-            <div className="text-[#E8652B] font-bold mb-2 text-xs uppercase tracking-widest">HaulageOps — Job History View</div>
-            <p>Job history table in Admin Panel. Columns: Job ID, Client, Origin, Destination, Material, Quantity, Rate, Driver/Sub, Status (colour-coded: Completed green, Cancelled grey, In Progress blue), Date. Filter bar above: date range picker, client dropdown, status filter, driver filter. Clicking any row opens the full job record detail view. Pagination at bottom shows 50 jobs per page.</p>
+          <div className="mt-8 shadow-2xl rounded-2xl overflow-hidden border border-neutral-800">
+            <JobHistoryMockup />
           </div>
         </div>
       </section>

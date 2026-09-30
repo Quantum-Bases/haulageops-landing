@@ -2,6 +2,7 @@ import Link from "next/link";
 import { MainLayout } from "@/components/layout/MainLayout";
 import { Button } from "@/components/ui/button";
 import { CheckCircle, ChevronRight, ArrowRight } from "lucide-react";
+import { AuditLogTrailMockup, AuditComplianceMockup } from "@/components/shared/platform-mockups";
 
 export const metadata = {
   title: "Haulage Audit Trail and Action Logging | HaulageOps",
@@ -273,37 +274,9 @@ export default function AuditTrailPage() {
                 Management can query this history directly from the HaulageOps reporting interface without needing to ask the operations team. &ldquo;Who changed the rate on job 4821 and when?&rdquo; is a query, not an investigation.
               </p>
             </div>
-            {/* Job history visual spec */}
-            <div className="rounded-2xl border border-neutral-200 bg-neutral-900 border-y border-neutral-800 overflow-hidden">
-              <div className="px-5 py-3 bg-neutral-800 text-[#E8652B] text-xs font-bold uppercase tracking-widest">
-                Audit log — job history view
-              </div>
-              <div className="p-4 sm:p-5">
-                <div className="flex items-center justify-between mb-3">
-                  <span className="px-2.5 py-1 rounded bg-neutral-800 border border-[#334155] text-neutral-400 text-[10px]">Job #4821</span>
-                  <span className="px-2.5 py-1 rounded bg-[#E8652B] text-white text-[10px] font-semibold">Export to CSV</span>
-                </div>
-                <div className="space-y-1.5 text-neutral-400 font-mono text-[11px]">
-                  <div className="grid grid-cols-12 gap-2 px-2 text-[10px] uppercase tracking-wider text-neutral-500 border-b border-[#334155] pb-1.5">
-                    <span className="col-span-3">Timestamp</span>
-                    <span className="col-span-4">User</span>
-                    <span className="col-span-5">Action</span>
-                  </div>
-                  {jobHistoryRows.map((row) => (
-                    <div key={row.time + row.action} className="grid grid-cols-12 gap-2 px-2 py-1.5 rounded bg-neutral-800 border border-[#334155] items-center">
-                      <span className="col-span-3 text-white">{row.time}</span>
-                      <span className="col-span-4">{row.user}</span>
-                      <span className="col-span-5 text-[#E8652B] font-semibold">
-                        {row.action}
-                        {row.detail && <span className="text-neutral-400 font-normal"> — {row.detail}</span>}
-                      </span>
-                    </div>
-                  ))}
-                </div>
-                <p className="mt-4 text-[10px] text-neutral-600">
-                  Each row shows exact timestamp, user, and action detail.
-                </p>
-              </div>
+            {/* Job history visual mockup */}
+            <div className="shadow-2xl rounded-2xl overflow-hidden border border-neutral-800">
+              <AuditLogTrailMockup />
             </div>
           </div>
         </div>
@@ -341,37 +314,9 @@ export default function AuditTrailPage() {
       <section className="py-20 bg-neutral-50/50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-10 items-center">
-            {/* Export and query visual spec */}
-            <div className="rounded-2xl border border-neutral-200 bg-neutral-900 border-y border-neutral-800 overflow-hidden order-1 lg:order-none">
-              <div className="px-5 py-3 bg-neutral-800 text-[#E8652B] text-xs font-bold uppercase tracking-widest">
-                Audit log — export and query view
-              </div>
-              <div className="p-4 sm:p-5">
-                <div className="flex flex-wrap gap-2 text-[10px] mb-4">
-                  <span className="px-2.5 py-1 rounded bg-neutral-800 border border-[#334155] text-neutral-400">From — date</span>
-                  <span className="px-2.5 py-1 rounded bg-neutral-800 border border-[#334155] text-neutral-400">To — date</span>
-                  <span className="px-2.5 py-1 rounded bg-neutral-800 border border-[#334155] text-neutral-400">Jobs / Invoices / Documents / Access</span>
-                  <span className="px-2.5 py-1 rounded bg-neutral-800 border border-[#334155] text-neutral-400">User</span>
-                </div>
-                <div className="space-y-1.5 text-neutral-400 font-mono text-[11px]">
-                  <div className="grid grid-cols-12 gap-2 px-2 text-[10px] uppercase tracking-wider text-neutral-500 border-b border-[#334155] pb-1.5">
-                    <span className="col-span-3">Timestamp</span>
-                    <span className="col-span-4">User</span>
-                    <span className="col-span-5">Action</span>
-                  </div>
-                  {[...jobHistoryRows.slice(0, 3)].map((row) => (
-                    <div key={row.time + row.action} className="grid grid-cols-12 gap-2 px-2 py-1.5 rounded bg-neutral-800 border border-[#334155] items-center">
-                      <span className="col-span-3 text-white">{row.time}</span>
-                      <span className="col-span-4">{row.user}</span>
-                      <span className="col-span-5 text-[#E8652B] font-semibold">{row.action}</span>
-                    </div>
-                  ))}
-                </div>
-                <div className="mt-4 flex items-center justify-between text-[10px] text-neutral-400">
-                  <span>847 records matching the current filter</span>
-                  <span className="px-2.5 py-1 rounded bg-[#E8652B] text-white font-semibold">Export to CSV</span>
-                </div>
-              </div>
+            {/* Export and query visual mockup */}
+            <div className="shadow-2xl rounded-2xl overflow-hidden border border-neutral-800 order-1 lg:order-none">
+              <AuditComplianceMockup />
             </div>
             <div>
               <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Multi-tenant isolation</span>

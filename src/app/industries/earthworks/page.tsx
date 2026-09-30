@@ -6,6 +6,7 @@ import {
   ChevronRight,
   ArrowRight,
 } from "lucide-react";
+import { EarthworksMockup } from "@/components/shared/industry-mockups";
 
 export const metadata = {
   title: "Earthworks Logistics Software | HaulageOps",
@@ -336,19 +337,7 @@ export default function EarthworksPage() {
           </div>
 
           {/* Project dispatch mockup */}
-          <div className="mt-12 rounded-2xl bg-neutral-900 border-y border-neutral-800 border border-neutral-800 overflow-hidden">
-            <div className="flex items-center gap-2 px-5 py-3 bg-neutral-800">
-              <span className="h-2.5 w-2.5 rounded-full bg-[#E8652B]" />
-              <span className="h-2.5 w-2.5 rounded-full bg-[#94A3B8]" />
-              <span className="h-2.5 w-2.5 rounded-full bg-[#475569]" />
-              <span className="ml-3 text-xs font-semibold text-neutral-300">HaulageOps — Earthworks Project Dispatch View</span>
-            </div>
-            <div className="p-6">
-              <p className="text-sm text-neutral-400 leading-relaxed">
-                Screenshot: Admin Panel showing an earthworks project. Left side shows project summary: client (head contractor name), site address, spoil tonne rate, fill per-load rate, today&apos;s load count (14 loads / 280 tonnes) vs project target (1,200 tonnes). Right side shows active dispatch — 3 own tippers (blue, showing status: 2 en route, 1 tipping) and 5 sub tippers from 2 sub companies (orange, showing accept/decline status). One sub tipper expanded showing last docket timestamp and GPS position.
-              </p>
-            </div>
-          </div>
+          <EarthworksMockup />
         </div>
       </section>
 

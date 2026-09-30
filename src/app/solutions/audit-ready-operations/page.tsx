@@ -6,6 +6,7 @@ import {
   ChevronRight,
   ArrowRight,
 } from "lucide-react";
+import { AuditReadyOperationsMockup } from "@/components/shared/solution-mockups";
 
 export const metadata = {
   title: "Audit-Ready Operations for Bulk Haulage | HaulageOps",
@@ -330,13 +331,14 @@ export default function AuditReadyOperationsPage() {
               <p className="mt-4 text-neutral-600 leading-relaxed">
                 Records can be exported for provision to auditors, clients or insurers without requiring system access to be granted to the reviewing party. Role-based access control means the people who need to see specific records can access them; external parties receive exports rather than system access.
               </p>
-              <div className="mt-5 p-5 rounded-2xl border-l-4 border-[#F39A2D] bg-[#F8F9FA]">
+              <div className="mt-5 p-5 rounded-2xl border-l-4 border-[#E8652B] bg-orange-50/50">
                 <p className="text-sm text-neutral-700 leading-relaxed">
                   <strong className="text-neutral-900">Important note on compliance:</strong> HaulageOps supports audit-readiness by creating and maintaining structured records of operational activity. It does not guarantee compliance outcomes. Whether an operation meets specific regulatory, contractual or safety obligations depends on how the operation is actually run — not only on whether records exist. Records that show a compliance breach are still records of a breach.
                 </p>
               </div>
             </div>
           </div>
+          <AuditReadyOperationsMockup />
         </div>
       </section>
 

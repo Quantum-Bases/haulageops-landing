@@ -196,7 +196,7 @@ export default function HaulageSoftwareBuyersGuidePage() {
                 ))}
               </ul>
               <p className="mt-6 text-sm text-[#556671] leading-relaxed">
-                HaulageOps pricing: from $1,500 standard setup, monthly per-truck licensing. No hardware required.{" "}
+                HaulageOps pricing: tailored onboarding setup, monthly per-truck licensing. No hardware required.{" "}
                 <Link href="/pricing" className="text-[#0F5FAE] hover:underline font-medium">See full pricing →</Link>
               </p>
             </div>

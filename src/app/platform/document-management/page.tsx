@@ -2,6 +2,7 @@ import Link from "next/link";
 import { MainLayout } from "@/components/layout/MainLayout";
 import { Button } from "@/components/ui/button";
 import { CheckCircle, ChevronRight, ArrowRight, FileText, Camera, Signature } from "lucide-react";
+import { DriverDocumentVaultMockup, JobDocketPodInspectorMockup } from "@/components/shared/platform-mockups";
 
 export const metadata = {
   title: "Haulage Document Management | HaulageOps",
@@ -300,41 +301,9 @@ export default function DocumentManagementPage() {
                 ))}
               </ul>
             </div>
-            {/* Driver record — document store visual spec */}
-            <div className="rounded-2xl border border-neutral-200 bg-neutral-900 border-y border-neutral-800 overflow-hidden">
-              <div className="px-5 py-3 bg-neutral-800 text-[#E8652B] text-xs font-bold uppercase tracking-widest">
-                Driver record — document store
-              </div>
-              <div className="p-4 sm:p-5">
-                <div className="flex items-center justify-between mb-4">
-                  <div>
-                    <p className="text-white font-semibold text-sm">Mike Thompson</p>
-                    <p className="text-neutral-500 text-[10px]">Driver profile — documents</p>
-                  </div>
-                  <span className="px-2.5 py-1 rounded bg-[#E8652B] text-white text-[10px] font-semibold">+ Upload</span>
-                </div>
-                <div className="space-y-1.5 text-neutral-400 font-mono text-[11px]">
-                  <div className="grid grid-cols-12 gap-2 px-2 text-[10px] uppercase tracking-wider text-neutral-500 border-b border-[#334155] pb-1.5">
-                    <span className="col-span-6">Document</span>
-                    <span className="col-span-3">Expiry</span>
-                    <span className="col-span-3 text-right">Status</span>
-                  </div>
-                  {driverDocRows.map((row) => (
-                    <div key={row.type} className="grid grid-cols-12 gap-2 px-2 py-1.5 rounded bg-neutral-800 border border-[#334155] items-center">
-                      <span className="col-span-6 flex items-center gap-1.5 text-white">
-                        <FileText className="h-3 w-3 text-[#E8652B]" /> {row.type}
-                      </span>
-                      <span className="col-span-3">{row.meta}</span>
-                      <span className="col-span-3 flex justify-end">
-                        <span className={`px-2 py-0.5 rounded text-[10px] font-semibold ${row.statusCls}`}>{row.status}</span>
-                      </span>
-                    </div>
-                  ))}
-                </div>
-                <p className="mt-4 text-[10px] text-neutral-600">
-                  Each row shows file type, expiry, and a View button.
-                </p>
-              </div>
+            {/* Driver record — document store visual mockup */}
+            <div className="shadow-2xl rounded-2xl overflow-hidden border border-neutral-800">
+              <DriverDocumentVaultMockup />
             </div>
           </div>
         </div>
@@ -371,37 +340,9 @@ export default function DocumentManagementPage() {
       <section className="py-20 bg-neutral-50/50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-10 items-center">
-            {/* Job record — POD and docket view visual spec */}
-            <div className="rounded-2xl border border-neutral-200 bg-neutral-900 border-y border-neutral-800 overflow-hidden order-1 lg:order-none">
-              <div className="px-5 py-3 bg-neutral-800 text-[#E8652B] text-xs font-bold uppercase tracking-widest">
-                Job record — POD and docket view
-              </div>
-              <div className="p-4 sm:p-5">
-                <div className="flex items-center justify-between mb-4">
-                  <div>
-                    <p className="text-white font-semibold text-sm">JOB-2026-04471</p>
-                    <p className="text-neutral-500 text-[10px]">Documents tab — 3 items attached</p>
-                  </div>
-                  <span className="px-2.5 py-1 rounded bg-[#E8652B] text-white text-[10px] font-semibold">Invoice</span>
-                </div>
-                <div className="space-y-1.5 text-neutral-400 font-mono text-[11px]">
-                  {podRows.map((row) => {
-                    const Icon = row.icon === "Camera" ? Camera : Signature;
-                    return (
-                      <div key={row.name} className="flex items-center justify-between px-3 py-2 rounded bg-neutral-800 border border-[#334155]">
-                        <div className="flex items-center gap-2.5">
-                          <Icon className="h-3.5 w-3.5 text-[#E8652B]" />
-                          <div>
-                            <p className="text-white text-xs font-semibold">{row.name}</p>
-                            <p className="text-neutral-500 text-[10px]">{row.meta} — {row.note}</p>
-                          </div>
-                        </div>
-                        <span className="px-2 py-0.5 rounded bg-[#334155] text-[10px] text-neutral-400">View</span>
-                      </div>
-                    );
-                  })}
-                </div>
-              </div>
+            {/* Job record — POD and docket view visual mockup */}
+            <div className="shadow-2xl rounded-2xl overflow-hidden border border-neutral-800 order-1 lg:order-none">
+              <JobDocketPodInspectorMockup />
             </div>
             <div>
               <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Access by role</span>

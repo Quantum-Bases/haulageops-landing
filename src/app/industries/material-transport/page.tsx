@@ -6,6 +6,7 @@ import {
   ChevronRight,
   ArrowRight,
 } from "lucide-react";
+import { MaterialTransportMockup } from "@/components/shared/industry-mockups";
 
 export const metadata = {
   title: "Material Transport Management Software | HaulageOps",
@@ -381,19 +382,7 @@ export default function MaterialTransportPage() {
           <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             Material transport rate management in HaulageOps.
           </h2>
-          <div className="mt-8 rounded-2xl bg-neutral-900 border-y border-neutral-800 border border-neutral-800 overflow-hidden">
-            <div className="flex items-center gap-2 px-5 py-3 bg-neutral-800">
-              <span className="h-2.5 w-2.5 rounded-full bg-[#E8652B]" />
-              <span className="h-2.5 w-2.5 rounded-full bg-[#94A3B8]" />
-              <span className="h-2.5 w-2.5 rounded-full bg-[#475569]" />
-              <span className="ml-3 text-xs font-semibold text-neutral-300">HaulageOps — Rate Management (Material Transport Client)</span>
-            </div>
-            <div className="p-6">
-              <p className="text-sm text-neutral-400 leading-relaxed">
-                Rate card screen for a landscaping supplies client showing material-type pricing table: crushed aggregate (per tonne), decorative pebbles (per load), topsoil (per tonne), sand (per tonne), recycled fill (per tonne). Each row shows current rate, effective from date, and an edit action. Below the table: subcontractor pay rate column showing separate rates for sub drivers on each material type. At bottom: rate history log showing previous rates with effective and expiry dates. Add new rate button and effective date picker visible at top right.
-              </p>
-            </div>
-          </div>
+          <MaterialTransportMockup />
         </div>
       </section>
 

@@ -9,7 +9,7 @@ export const metadata = {
     "Detailed comparison of running a haulage operation on spreadsheets vs HaulageOps — where spreadsheets work fine, and exactly where they break under operational weight.",
 };
 
-const heroPills = ["$1,500 standard setup", "Data migration included", "2-4 week go-live"];
+const heroPills = ["Structured fleet onboarding", "Data migration included", "2-4 week go-live"];
 
 const strengths = [
   "3–5 owned trucks, no subcontractors",
@@ -69,7 +69,7 @@ const comparisonRows = [
   {
     capability: "Cost",
     spreadsheet: "Free (Google Sheets) or Microsoft 365 subscription",
-    haulageops: "$1,500 setup + SaaS subscription",
+    haulageops: "Custom fleet tier + SaaS subscription",
   },
   {
     capability: "Live dispatch board",
@@ -151,7 +151,7 @@ const lifecycleCards = [
   {
     week: "Week 1",
     title: "Setup and data migration",
-    p: "The $1,500 standard setup fee covers platform configuration and data migration assistance. Your client records, rate cards, vehicle records and key job history can be imported. We work with whatever format your spreadsheet data is in.",
+    p: "Our structured setup covers platform configuration and data migration assistance. Your client records, rate cards, vehicle records and key job history can be imported. We work with whatever format your spreadsheet data is in.",
   },
   {
     week: "Week 2",
@@ -168,10 +168,10 @@ const lifecycleCards = [
 const faqs = [
   {
     q: "Can I import my spreadsheet data into HaulageOps?",
-    a: "Yes. Standard implementation includes data migration assistance. We can import client records, rate cards, vehicle records, driver records and job history from spreadsheet exports (Excel or CSV). The migration scope depends on your data structure and how much history you want to bring across. All of this is included in the $1,500 standard setup fee.",
+    a: "Yes. Standard implementation includes data migration assistance. We can import client records, rate cards, vehicle records, driver records and job history from spreadsheet exports (Excel or CSV). The migration scope depends on your data structure and how much history you want to bring across. All of this is included in our structured setup program.",
   },
   {
-    q: "How long before I see a return on the $1,500 setup cost?",
+    q: "How long before I see a return on the onboarding investment?",
     a: "It depends on where your current cost is highest. The most common returns come from: elimination of invoice re-entry into Xero (often 2–4 hours per week for a busy operation); reduction in admin time spent chasing subcontractors and handling client status calls; and faster invoice cycles when dockets are already attached at job completion rather than arriving days late. For an operation running 50+ jobs per week, the ROI is typically measured in weeks. Use the ROI calculator to model it for your numbers.",
   },
   {
@@ -394,10 +394,47 @@ export default function HaulageOpsVsSpreadsheetsPage() {
               <span className="h-2.5 w-2.5 rounded-full bg-[#475569]" />
               <span className="ml-3 text-xs font-semibold text-neutral-300">Implementation timeline — spreadsheet to live on HaulageOps</span>
             </div>
-            <div className="p-6">
-              <p className="text-sm text-neutral-400 leading-relaxed">
-                Screenshot or diagram showing a 3-week implementation timeline: Week 1 (setup, data migration, Xero connection), Week 2 (dispatch training, rate card configuration, subcontractor portal invites), Week 3 (driver app rollout, first live jobs in system, parallel running). Shows the transition from spreadsheet-as-primary to HaulageOps-as-primary.
-              </p>
+            <div className="p-6 sm:p-8">
+              <div className="grid md:grid-cols-3 gap-4 text-xs text-left">
+                <div className="p-4 rounded-xl bg-neutral-950 border border-neutral-800 space-y-2">
+                  <div className="flex items-center justify-between">
+                    <span className="text-[10px] uppercase font-bold text-[#E8652B]">Week 1</span>
+                    <span className="px-2 py-0.5 rounded bg-neutral-800 text-neutral-400 text-[10px]">Setup & Data</span>
+                  </div>
+                  <h4 className="font-bold text-white text-sm">Data Migration & Systems</h4>
+                  <ul className="space-y-1.5 text-neutral-400 text-[11px] pt-1">
+                    <li>• Client lists & rate cards imported from Excel</li>
+                    <li>• Vehicle register & owned driver accounts built</li>
+                    <li>• Xero 2-way accounting sync connected</li>
+                  </ul>
+                </div>
+
+                <div className="p-4 rounded-xl bg-neutral-950 border border-neutral-800 space-y-2">
+                  <div className="flex items-center justify-between">
+                    <span className="text-[10px] uppercase font-bold text-amber-400">Week 2</span>
+                    <span className="px-2 py-0.5 rounded bg-neutral-800 text-neutral-400 text-[10px]">Team Training</span>
+                  </div>
+                  <h4 className="font-bold text-white text-sm">Portals & Dispatch Training</h4>
+                  <ul className="space-y-1.5 text-neutral-400 text-[11px] pt-1">
+                    <li>• Dispatcher board workflow & recurring job setup</li>
+                    <li>• Free subcontractor portal invites dispatched</li>
+                    <li>• Rate matrix test runs & margin verification</li>
+                  </ul>
+                </div>
+
+                <div className="p-4 rounded-xl bg-neutral-950 border border-emerald-500/30 space-y-2">
+                  <div className="flex items-center justify-between">
+                    <span className="text-[10px] uppercase font-bold text-emerald-400">Week 3</span>
+                    <span className="px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 text-[10px]">Go-Live</span>
+                  </div>
+                  <h4 className="font-bold text-white text-sm">Mobile Rollout & First Invoices</h4>
+                  <ul className="space-y-1.5 text-neutral-300 text-[11px] pt-1">
+                    <li>• Driver mobile app installed on cabs (iOS/Android)</li>
+                    <li>• First live jobs dispatched & digital PODs captured</li>
+                    <li>• Spreadsheets archived; HaulageOps primary</li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </div>

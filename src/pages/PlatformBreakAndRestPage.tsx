@@ -5,6 +5,7 @@ import Link from "next/link";
 import { MainLayout } from "@/components/layout/MainLayout";
 import { Button } from "@/components/ui/button";
 import { CheckCircle, ChevronRight, AlertTriangle } from "lucide-react";
+import { BreakAndRestMockup } from "@/components/shared/platform-mockups";
 
 const connectedModules = [
   {
@@ -224,9 +225,8 @@ export function PlatformBreakAndRestPage() {
           <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             Break records — driver view in the app, management view in the panel.
           </h2>
-          <div className="mt-8 rounded-2xl border border-neutral-200 bg-neutral-900 border-y border-neutral-800 p-8 text-neutral-400 text-sm font-mono leading-relaxed">
-            <div className="text-[#E8652B] font-bold mb-2 text-xs uppercase tracking-widest">HaulageOps — Break Records (Management View)</div>
-            <p>Break records table in the management panel. Columns: Driver Name, Date, Job Reference, Break Start, Break End, Duration, Break Type. Filter bar: date range, driver name, minimum duration. Example rows show: Driver A — 02/08/2026 — Job #4421 — 10:32 — 10:52 — 20 min — Short Rest; Driver A — 02/08/2026 — Job #4421 — 12:45 — 13:15 — 30 min — Meal Break. Export to CSV button in top right. Total break time summary shown at bottom of filtered view.</p>
+          <div className="mt-8 shadow-2xl rounded-2xl overflow-hidden border border-neutral-800">
+            <BreakAndRestMockup />
           </div>
         </div>
       </section>

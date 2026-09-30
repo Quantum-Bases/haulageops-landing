@@ -9,6 +9,7 @@ import {
   AlertTriangle,
   X,
 } from "lucide-react";
+import { JobToInvoiceMockup } from "@/components/shared/solution-mockups";
 
 export const metadata = {
   title: "Job to Invoice — Haulage Billing Workflow | HaulageOps",
@@ -359,6 +360,7 @@ export default function JobToInvoicePage() {
               </div>
             ))}
           </div>
+          <JobToInvoiceMockup />
         </div>
       </section>
 

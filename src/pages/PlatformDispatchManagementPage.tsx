@@ -5,6 +5,7 @@ import Link from "next/link";
 import { MainLayout } from "@/components/layout/MainLayout";
 import { Button } from "@/components/ui/button";
 import { CheckCircle, ChevronRight } from "lucide-react";
+import { DispatchManagementMockup } from "@/components/shared/platform-mockups";
 
 const assignmentSteps = [
   {
@@ -243,9 +244,8 @@ export function PlatformDispatchManagementPage() {
                 ))}
               </ul>
             </div>
-            <div className="rounded-2xl border border-neutral-200 bg-neutral-900 border-y border-neutral-800 p-8 text-neutral-400 text-sm font-mono leading-relaxed">
-              <div className="text-[#E8652B] font-bold mb-2 text-xs uppercase tracking-widest">HaulageOps — Dispatch Board</div>
-              <p>Real-time dispatch board showing a day view with 12 jobs across owned drivers and subcontractors. Each row shows job ID, client name, material, pickup and delivery sites, assigned driver or sub name, current status pill (colour-coded: grey=created, blue=dispatched, orange=in progress, green=completed), and a map pin icon linking to live GPS. Status updates animate as drivers move through the job. Overdue jobs have a red time indicator. A filter bar at the top allows filtering by driver, fleet or status.</p>
+            <div className="w-full">
+              <DispatchManagementMockup />
             </div>
           </div>
         </div>

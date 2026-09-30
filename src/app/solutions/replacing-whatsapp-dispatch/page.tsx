@@ -6,6 +6,7 @@ import {
   ChevronRight,
   ArrowRight,
 } from "lucide-react";
+import { ReplacingWhatsappMockup } from "@/components/shared/solution-mockups";
 
 export const metadata = {
   title: "Replace WhatsApp Dispatch in Bulk Haulage | HaulageOps",
@@ -218,6 +219,7 @@ export default function ReplacingWhatsAppDispatchPage() {
               </div>
             ))}
           </div>
+          <ReplacingWhatsappMockup />
         </div>
       </section>
 

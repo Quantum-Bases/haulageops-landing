@@ -1,494 +1,671 @@
+"use client";
+
 import Link from "next/link";
+import React, { useState } from "react";
 import { MainLayout } from "@/components/layout/MainLayout";
 import { Button } from "@/components/ui/button";
-import { ChevronRight, Check, ArrowRight, Calendar } from "lucide-react";
+import {
+  ChevronRight,
+  Check,
+  ArrowRight,
+  Calendar,
+  ShieldCheck,
+  Users,
+  Truck,
+  Building2,
+  FileSpreadsheet,
+  Zap,
+  HelpCircle,
+  Clock,
+  Sparkles,
+  PhoneCall,
+} from "lucide-react";
 import { QuickQuoteForm } from "@/components/shared/QuickQuoteForm";
 
-export const metadata = {
-  title: "HaulageOps Pricing - Custom Haulage Operations Platform",
-  description:
-    "HaulageOps pricing is customized based on your fleet size and operational requirements. Book a demo to get a tailored quote for your business.",
-};
-
 const proofItems = [
-  { value: "Custom Quote", label: "Tailored to your fleet" },
-  { value: "2–4 weeks", label: "Typical go-live" },
-  { value: "Free", label: "Subcontractor portal access" },
-  { value: "Free", label: "Client portal access" },
-  { value: "All portals", label: "Included in subscription" },
-  { value: "No per-user fees", label: "Unlimited internal users" },
+  { value: "Custom Quote", label: "Tailored to Your Fleet" },
+  { value: "2–4 Weeks", label: "Average Go-Live Time" },
+  { value: "Free Access", label: "For Every Subcontractor" },
+  { value: "Free Access", label: "For Every Client Portal" },
+  { value: "Unlimited", label: "Internal Users & Dispatchers" },
+  { value: "CoR Ready", label: "Built for AU & NZ Regulations" },
 ];
 
-/* 
-const plans = [
+const tiers = [
   {
-    name: "Starter",
-    tag: null,
-    topBorder: "border-t-[#CBD5E1]",
-    title: "Small fleets getting off spreadsheets",
-    fit: "15–25 vehicles. One primary dispatcher. Getting the core workflow in order.",
-    setupFee: "$1,500",
-    setupDesc: "Standard configuration, rate setup, Xero connection, training.",
-    subscription: "Contact for quote",
+    id: "starter",
+    name: "Starter Fleet",
+    badge: "Spreadsheet Replacement",
+    bestFor: "Operators (10–25 trucks) moving away from manual paper dockets and WhatsApp dispatch.",
+    setupPrice: "Included in Scope",
+    setupLabel: "Complete configuration, rate setup & training",
+    monthlyPrice: "Custom Tailored",
+    monthlyPeriod: "quoted based on your active fleet size",
+    popular: false,
+    ctaText: "Request Fleet Quote",
+    ctaLink: "#quote-form",
     features: [
-      "Job management and dispatch board",
-      "Driver mobile app (iOS + Android)",
-      "Subcontractor portal - free for subs",
-      "Client portal - free for clients",
-      "Digital POD and docket capture",
-      "Xero integration",
-      "Google Maps address and routing",
-      "Management reporting",
+      "Real-time drag-and-drop dispatch board",
+      "Native Driver App (iOS & Android)",
+      "Digital Proof of Delivery (dockets + signatures)",
+      "Automated Xero OAuth2 two-way invoice sync",
+      "Google Maps address autocomplete & route estimation",
+      "Per-tonne, per-load, and hourly rate cards",
+      "Unlimited internal dispatch & admin accounts",
+      "Email & knowledge base support",
     ],
-    cta: "Get a quote",
   },
   {
-    name: "Professional",
-    tag: "Most common",
-    topBorder: "border-t-[#E8652B]",
-    title: "Growing fleets with subcontractor networks",
-    fit: "25–60 vehicles. Mix of owned and subcontracted. Multiple dispatchers and clients.",
-    setupFee: "$1,500",
-    setupDesc: "Includes extended rate card configuration and subcontractor onboarding.",
-    subscription: "Contact for quote",
+    id: "growth",
+    name: "Growth & Subbies",
+    badge: "Most Popular",
+    bestFor: "Growing fleets (25–60 trucks) running owned tippers plus active subcontractor networks.",
+    setupPrice: "Tailored Setup",
+    setupLabel: "Includes rate matrix & subbie onboarding",
+    monthlyPrice: "Volume Tiered",
+    monthlyPeriod: "max cost-efficiency for owned + subbie mix",
+    popular: true,
+    ctaText: "Book 20-Min Demo & Quote",
+    ctaLink: "https://calendly.com/admin-haulageops/30min",
     features: [
-      "Everything in Starter",
-      "Multi-rate and effective-dated rate cards",
-      "Subcontractor pay rates (separate from client charge)",
-      "Contract management - full lifecycle",
-      "Driver availability scheduling",
-      "Break and rest period recording",
-      "Fleet document expiry alerts",
-      "Full audit trail and compliance reporting",
+      "Everything in Starter Fleet",
+      "Dedicated Subcontractor Portal (100% free for subbies)",
+      "Client Visibility Portal (live tracking for your clients)",
+      "Chain of Responsibility (CoR) compliance logs",
+      "Australian fatigue & rest break tracking",
+      "Subcontractor pay vs client charge rate splitting",
+      "Document expiry alerts (licenses, rego, insurances)",
+      "Dedicated WhatsApp & phone priority support",
     ],
-    cta: "Get a quote",
   },
   {
-    name: "Enterprise",
-    tag: null,
-    topBorder: "border-t-[#1E3A5F]",
-    title: "Large operations and complex configurations",
-    fit: "60–80+ vehicles. Multiple depots, large sub networks, complex rate structures.",
-    setupFee: "From $6,500",
-    setupDesc: "Extended configuration scope, data migration, dedicated implementation support.",
-    subscription: "Contact for quote",
+    id: "enterprise",
+    name: "Enterprise & Multi-Depot",
+    badge: "Civil & Quarry Scale",
+    bestFor: "Large operators (60+ trucks), multi-depot civil fleets, and tier-1 infrastructure suppliers.",
+    setupPrice: "Custom Scope",
+    setupLabel: "Custom data migration & architecture",
+    monthlyPrice: "Enterprise Contract",
+    monthlyPeriod: "tailored SLAs & volume commitments",
+    popular: false,
+    ctaText: "Discuss Enterprise Scope",
+    ctaLink: "https://calendly.com/admin-haulageops/30min",
     features: [
-      "Everything in Professional",
-      "Historical data migration",
-      "Custom onboarding timeline",
-      "Dedicated implementation manager",
-      "Priority support response",
-      "Multi-depot configuration",
-      "Extended training sessions",
-      "White-label options on request",
-    ],
-    cta: "Discuss enterprise scope",
-  },
-];
-*/
-
-const portalPoints = [
-  "Add subcontractors to the portal at no extra per-seat cost",
-  "Give clients their own portal logins for instant visibility",
-  "Add internal dispatchers and admin users with no per-user fees",
-  "One subscription covers your entire operational network",
-];
-
-const setupCards = [
-  {
-    title: "Platform configuration",
-    p: "We configure the platform to match your operation - not a generic demo environment. This includes your fleet structure, driver records, user accounts with correct role-based permissions, and your client list.",
-    points: [
-      "User accounts and RBAC roles configured",
-      "Fleet and vehicle records loaded",
-      "Driver records with licence and document fields",
-      "Client accounts and portal access set up",
-      "Subcontractor accounts configured",
-    ],
-  },
-  {
-    title: "Rate card setup",
-    p: "Rate cards in HaulageOps support per-tonne, per-load, hourly and fixed-fee structures, with separate client charge rates and subcontractor pay rates. We help load your existing rate cards.",
-    points: [
-      "Client charge rates loaded per rate type",
-      "Subcontractor pay rates configured separately",
-      "Effective dates applied for scheduled changes",
-      "Client-specific rate card access via portal",
-    ],
-  },
-  {
-    title: "Xero connection",
-    p: "The Xero integration uses OAuth2 - no password sharing, no manual exports. Once connected, invoices created in HaulageOps sync to Xero smoothly.",
-    href: "/platform/integrations/xero",
-    linkText: "Xero integration",
-    points: [
-      "OAuth2 connection established during setup",
-      "Invoice sync tested and confirmed",
-      "Payment webhook configured",
-      "Automatic sync active from day one",
-    ],
-  },
-  {
-    title: "Training",
-    p: "We run training sessions for each role type in your operation - admin, dispatch, and driver app. Training is structured around real tasks in your configured environment.",
-    points: [
-      "Admin and billing training session",
-      "Dispatch board and job assignment training",
-      "Driver app onboarding (iOS and Android)",
-      "Subcontractor portal walkthrough for your subs",
-      "Client portal walkthrough for your clients",
+      "Everything in Growth & Subbies",
+      "Multi-depot & multi-entity operational routing",
+      "Historical data migration from legacy TMS/spreadsheets",
+      "Dedicated Implementation Manager on your schedule",
+      "Custom telematics, GPS, and weighbridge API hooks",
+      "White-label branding & custom domain options",
+      "99.9% uptime Service Level Agreement (SLA)",
+      "Executive quarterly operational reviews",
     ],
   },
 ];
 
-const subscriptionCards = [
+const comparisonCategories = [
   {
-    title: "All five portals",
-    p: "Admin & Dispatch Panel, Driver Mobile App, Subcontractor Portal, Client Portal, and Management Reporting are all active. No portal is gated behind a higher tier.",
-    href: "/platform",
-    linkText: "See the platform overview",
+    category: "Dispatch & Core Operations",
+    items: [
+      { name: "Live Dispatch Board (Socket.io)", starter: true, growth: true, enterprise: true },
+      { name: "Driver Mobile App (iOS & Android)", starter: true, growth: true, enterprise: true },
+      { name: "Digital POD & Photo Docket Storage", starter: true, growth: true, enterprise: true },
+      { name: "Google Maps Routing & Travel Time", starter: true, growth: true, enterprise: true },
+      { name: "Multi-Depot Allocation", starter: false, growth: "Optional", enterprise: true },
+    ],
   },
   {
-    title: "All integrations",
-    p: "Xero sync, Google Maps address autocomplete and routing, Mapbox interactive maps in the subcontractor portal, and push notifications are included.",
-    href: "/platform/integrations/xero",
-    linkText: "Xero integration details",
+    category: "Subcontractor & Client Portals",
+    items: [
+      { name: "Unlimited Internal User Accounts (No per-seat fees)", starter: true, growth: true, enterprise: true },
+      { name: "Dedicated Subcontractor Portal (Job dispatch & map)", starter: true, growth: true, enterprise: true },
+      { name: "Subbie Portal Access Cost (Per subcontractor)", starter: "Free (Included)", growth: "Free (Included)", enterprise: "Free (Included)" },
+      { name: "Client Tracking & Docket Portal", starter: true, growth: true, enterprise: true },
+      { name: "Client Portal Access Cost (Per client)", starter: "Free (Included)", growth: "Free (Included)", enterprise: "Free (Included)" },
+    ],
   },
   {
-    title: "Ongoing support",
-    p: "Support is included in your subscription - not a paid add-on. The support team knows the platform and the workflows.",
-    href: "/support",
-    linkText: "Support details",
+    category: "Billing, Rates & Compliance",
+    items: [
+      { name: "Xero Two-Way Financial Sync", starter: true, growth: true, enterprise: true },
+      { name: "Effective-Dated & Multi-Tier Rate Cards", starter: "Standard", growth: "Advanced", enterprise: "Custom" },
+      { name: "Separate Subbie Pay vs Client Charge Rates", starter: false, growth: true, enterprise: true },
+      { name: "Chain of Responsibility (CoR) Audit Trail", starter: "Basic", growth: true, enterprise: true },
+      { name: "Vehicle & Driver Expiry Radar (Rego/Inductions)", starter: false, growth: true, enterprise: true },
+    ],
+  },
+  {
+    category: "Implementation & Support",
+    items: [
+      { name: "Data Migration from Excel/CSV", starter: "Self-serve template", growth: "Guided setup", enterprise: "Full white-glove" },
+      { name: "Role-Based Team Training Sessions", starter: "1 Session", growth: "3 Sessions", enterprise: "Unlimited" },
+      { name: "Dedicated Implementation Lead", starter: false, growth: true, enterprise: true },
+      { name: "Support Channels", starter: "Email & Help Centre", growth: "Phone, WhatsApp & Email", enterprise: "Dedicated Slack/Teams + SLA" },
+    ],
   },
 ];
 
 const faqs = [
   {
-    q: "How is pricing calculated?",
-    a: "We haven't fixed rigid one-size-fits-all pricing tiers because every operation is different. Pricing is custom-tailored based on your fleet size, subcontractor ratio, rate structures, and specific workflow needs. Book a 30-minute call with us to get a personalized quote.",
+    q: "Why don't you charge per internal dispatcher or admin user?",
+    a: "We believe per-seat pricing penalizes operational efficiency. Heavy haulage companies often have dispatchers, weighbridge clerks, bookkeepers, and managers all touching jobs. You can add as many internal team members as you need with granular role-based permissions at zero extra cost.",
   },
   {
-    q: "Is there a per-user fee?",
-    a: "No. HaulageOps does not charge per internal user. Your admin team, dispatchers, and management can all have accounts at no additional cost. External users - subcontractors accessing the portal and clients accessing the client portal - do not pay and are not counted in any per-seat fee.",
+    q: "Do our subcontractors have to pay to use HaulageOps?",
+    a: "Never. Your external subcontractors get their own secure, free portal login. They can accept loads, delegate to their drivers, submit digital dockets, and view their statements without paying a single dollar. This makes onboarding subcontractors effortless.",
   },
   {
-    q: "Is there a per-vehicle fee?",
-    a: "No. There is no per-vehicle or per-truck charge. HaulageOps pricing is not usage-based in that way.",
+    q: "What is included in the onboarding and setup phase?",
+    a: "We don't hand you an empty account and wish you luck. Our implementation team imports your fleet and driver records, sets up your client charge rates and subbie pay rates, connects your Xero organization via OAuth2, and trains your dispatchers and drivers. Most operators are fully operational within 2–4 weeks.",
   },
   {
-    q: "Can I add subcontractors to the portal at no extra cost?",
-    a: "Yes. The subcontractor portal is included in your platform access and there is no per-subcontractor charge.",
+    q: "Can we connect HaulageOps with our existing accounting system?",
+    a: "Yes. HaulageOps features native, bidirectional integration with Xero via OAuth2. Invoices generated from verified dockets sync automatically, and invoice payment statuses reflect back in HaulageOps. We also support custom exports and API integrations for enterprise ERPs.",
   },
   {
-    q: "Do my subcontractors need to pay for anything?",
-    a: "No. Subcontractors access the HaulageOps subcontractor portal through a dedicated login provided by you. They do not need a HaulageOps account of their own, and there is no charge for subcontractor portal access.",
+    q: "What happens if our fleet size increases or decreases seasonally?",
+    a: "HaulageOps is designed for bulk haulage realities. Subcontractor vehicles you pull in for large projects cost nothing extra on your platform tier. You only pay for your active core fleet, giving you complete flexibility during seasonal peaks and quiet periods.",
   },
 ];
 
 export default function PricingPage() {
+  const [activeFaq, setActiveFaq] = useState<number | null>(null);
+
+  const toggleFaq = (index: number) => {
+    setActiveFaq(activeFaq === index ? null : index);
+  };
+
   return (
     <MainLayout showCta={false}>
-      <section className="pt-28 pb-16 bg-gradient-to-b from-neutral-50/80 via-white to-white text-neutral-900 border-b border-neutral-200">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center sm:text-left">
-          <nav className="flex items-center gap-2 text-xs text-neutral-500 mb-6 justify-center sm:justify-start">
-            <Link href="/" className="hover:text-[#E8652B]">Home</Link>
+      {/* ── Hero Section ── */}
+      <section className="pt-28 pb-16 bg-gradient-to-b from-neutral-50 via-white to-white text-neutral-900 border-b border-neutral-200">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <nav className="flex items-center gap-2 text-xs text-neutral-500 mb-6">
+            <Link href="/" className="hover:text-[#E8652B] transition-colors">
+              Home
+            </Link>
             <ChevronRight className="h-3 w-3" />
             <span className="text-neutral-900 font-bold">Pricing</span>
           </nav>
-          <span className="inline-block px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider text-[#E8652B] bg-orange-50 border border-orange-200 mb-4">
-            Custom Pricing
-          </span>
-          <h1 className="text-4xl sm:text-5xl font-black tracking-tight text-neutral-900 max-w-4xl leading-[1.1]">
-            Tailored pricing built for how your haulage business actually operates.
-          </h1>
-          <p className="mt-6 text-lg text-neutral-600 max-w-3xl leading-relaxed">
-            Every bulk haulage operation has unique fleet dynamics, subcontractor ratios, and rate card structures. We provide custom, transparent proposals designed specifically around your operational scale.
-          </p>
-          <div className="mt-8 flex flex-wrap gap-3.5 justify-center sm:justify-start">
-            <a
-              href="https://calendly.com/admin-haulageops/30min"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Button size="lg" className="bg-[#E8652B] hover:bg-[#D05520] text-white font-bold flex items-center gap-2 shadow-xs cursor-pointer">
-                <Calendar className="h-4 w-4" /> Book a 30-Minute Walkthrough
-              </Button>
-            </a>
-            <Link href="/implementation">
-              <Button size="lg" variant="outline" className="text-neutral-900 border-neutral-300 hover:bg-neutral-100 font-bold cursor-pointer">
-                See what's included in setup
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </section>
 
-      <section className="bg-neutral-900 border-y border-neutral-800 py-6">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-wrap items-center justify-center gap-x-10 gap-y-4">
-          {proofItems.map((item) => (
-            <div key={item.label} className="text-center">
-              <p className="text-sm font-bold text-white">{item.value}</p>
-              <p className="text-xs text-neutral-400 mt-0.5">{item.label}</p>
+          <div className="max-w-3xl">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider text-[#E8652B] bg-orange-50 border border-orange-200/80 mb-5">
+              <Sparkles className="w-3.5 h-3.5" />
+              <span>Transparent Bulk Haulage Pricing</span>
             </div>
-          ))}
-        </div>
-      </section>
 
-      {/* Prominent Custom Pricing & Book Now Section */}
-      <section className="py-16 bg-white border-b border-neutral-200">
-        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
-          <div className="bg-neutral-50/70 border border-neutral-200 rounded-3xl p-8 sm:p-12 shadow-xs">
-            <span className="inline-block px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider text-[#E8652B] bg-orange-50 border border-orange-200 mb-4">
-              Tailored Proposals
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-black text-neutral-900">
-              Enterprise Pricing Built Around Your Operation
-            </h2>
-            <p className="mt-4 text-base sm:text-lg text-neutral-600 leading-relaxed max-w-2xl mx-auto">
-              Because fleet sizes, subcontractor networks, and integration requirements vary across bulk logistics operators, we provide tailored proposals to ensure you get exact pricing for your specific setup.
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-neutral-900 leading-[1.08]">
+              Straight forward pricing built for how heavy fleets{" "}
+              <span className="text-[#E8652B]">actually operate</span>.
+            </h1>
+
+            <p className="mt-6 text-lg sm:text-xl text-neutral-600 leading-relaxed font-normal">
+              One operational subscription for your owned fleet. Zero per-user penalties for dispatchers.
+              <strong> Free authenticated portals</strong> for every subcontractor and client you invite.
             </p>
-            <p className="mt-3 text-base text-neutral-900 font-bold">
-              Schedule a 30-minute operational walkthrough with our team to review your workflow and receive a customized quote within 24 hours.
-            </p>
-            <div className="mt-8 flex justify-center">
+
+            <div className="mt-8 flex flex-wrap items-center gap-4">
               <a
                 href="https://calendly.com/admin-haulageops/30min"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Button size="lg" className="bg-[#E8652B] hover:bg-[#D05520] text-white font-bold px-8 py-6 text-base shadow-xs flex items-center gap-2 cursor-pointer">
-                  <Calendar className="h-5 w-5" /> Book a Demo & Get Quote
+                <Button
+                  size="lg"
+                  className="bg-[#E8652B] hover:bg-[#D05520] text-white font-bold px-7 py-6 text-base rounded-xl shadow-md transition-all cursor-pointer flex items-center gap-2.5"
+                >
+                  <Calendar className="w-5 h-5" />
+                  <span>Book 20-Min Operational Walkthrough</span>
+                </Button>
+              </a>
+
+              <a href="#quote-form">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-neutral-300 hover:bg-neutral-100 text-neutral-900 font-bold px-6 py-6 text-base rounded-xl transition-all cursor-pointer"
+                >
+                  <span>Request Fleet Consultation</span>
+                  <ArrowRight className="w-4 h-4 ml-1.5" />
                 </Button>
               </a>
             </div>
           </div>
+        </div>
+      </section>
 
-          {/* Low-Friction Instant Quote Option */}
-          <div className="mt-10 text-left">
-            <QuickQuoteForm source="pricing_page" />
+      {/* ── Key Metrics Ribbon ── */}
+      <section className="bg-neutral-900 border-y border-neutral-800 py-6">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 text-center">
+            {proofItems.map((item) => (
+              <div key={item.label} className="px-2">
+                <p className="text-base sm:text-lg font-black text-white">{item.value}</p>
+                <p className="text-xs text-neutral-400 mt-1 font-medium">{item.label}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/*
-      <section className="py-16 bg-white border-t border-neutral-200">
+      {/* ── Pricing Tiers Grid ── */}
+      <section className="py-20 bg-neutral-50/60 border-b border-neutral-200">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Plans</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">Three tiers. Exact pricing confirmed after a 20-minute demo.</h2>
-          <p className="mt-4 text-neutral-600 leading-relaxed max-w-2xl">
-            Every business runs differently - fleet size, subcontractor network, rate complexity, and integration needs all shape the final quote.
-          </p>
-          <div className="mt-10 overflow-x-auto -mx-4 px-4">
-            <table className="w-full min-w-[920px] border-collapse text-left">
+          <div className="text-center max-w-2xl mx-auto mb-16">
+            <span className="text-xs font-bold uppercase tracking-wider text-[#E8652B] bg-orange-50 px-3 py-1 rounded-full border border-orange-200">
+              Fleet Plans
+            </span>
+            <h2 className="mt-3 text-3xl sm:text-4xl font-black text-neutral-900 tracking-tight">
+              Select the right tier for your operational scale
+            </h2>
+            <p className="mt-3 text-base text-neutral-600">
+              Every plan includes the core live dispatch engine and driver mobile apps. Pick the scope that fits your workflow.
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-3 gap-8 items-stretch">
+            {tiers.map((tier) => (
+              <div
+                key={tier.id}
+                className={`relative rounded-3xl flex flex-col transition-all duration-300 ${tier.popular
+                    ? "bg-white border-2 border-[#E8652B] shadow-xl shadow-orange-500/10 lg:-translate-y-2"
+                    : "bg-white border border-neutral-200 shadow-sm hover:border-neutral-300"
+                  }`}
+              >
+                {tier.popular && (
+                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#E8652B] text-white text-xs font-black px-4 py-1.5 rounded-full uppercase tracking-wider shadow-sm flex items-center gap-1.5">
+                    <Sparkles className="w-3.5 h-3.5" />
+                    <span>{tier.badge}</span>
+                  </div>
+                )}
+
+                <div className="p-8 pb-6 border-b border-neutral-100">
+                  {!tier.popular && (
+                    <span className="inline-block text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-md bg-neutral-100 text-neutral-600 mb-3">
+                      {tier.badge}
+                    </span>
+                  )}
+
+                  <h3 className="text-2xl font-black text-neutral-900">{tier.name}</h3>
+                  <p className="mt-2 text-xs sm:text-sm text-neutral-600 min-h-[44px] leading-relaxed">
+                    {tier.bestFor}
+                  </p>
+
+                  <div className="mt-6 pt-6 border-t border-neutral-100">
+                    <div className="flex items-baseline gap-2">
+                      <span className="text-3xl sm:text-4xl font-black text-neutral-900 tracking-tight">
+                        {tier.monthlyPrice}
+                      </span>
+                    </div>
+                    <p className="text-xs text-neutral-500 font-medium mt-1">{tier.monthlyPeriod}</p>
+                  </div>
+
+                  <div className="mt-4 p-3 rounded-xl bg-neutral-50 border border-neutral-100 flex items-center justify-between">
+                    <div>
+                      <p className="text-xs font-bold text-neutral-900">Setup & Migration</p>
+                      <p className="text-[11px] text-neutral-500">{tier.setupLabel}</p>
+                    </div>
+                    <span className="text-sm font-black text-[#E8652B]">{tier.setupPrice}</span>
+                  </div>
+                </div>
+
+                <div className="p-8 flex-1 flex flex-col justify-between">
+                  <div>
+                    <p className="text-xs font-bold uppercase tracking-wider text-neutral-400 mb-4">
+                      What's Included
+                    </p>
+                    <ul className="space-y-3.5">
+                      {tier.features.map((feature) => (
+                        <li key={feature} className="flex items-start gap-3 text-sm text-neutral-700">
+                          <div className="mt-0.5 w-4 h-4 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0 border border-emerald-200">
+                            <Check className="w-3 h-3" />
+                          </div>
+                          <span className="leading-snug">{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div className="mt-8 pt-6 border-t border-neutral-100">
+                    <a
+                      href={tier.ctaLink}
+                      target={tier.ctaLink.startsWith("http") ? "_blank" : undefined}
+                      rel={tier.ctaLink.startsWith("http") ? "noopener noreferrer" : undefined}
+                      className="block"
+                    >
+                      <Button
+                        size="lg"
+                        className={`w-full font-bold py-6 text-sm rounded-xl transition-all cursor-pointer ${tier.popular
+                            ? "bg-[#E8652B] hover:bg-[#D05520] text-white shadow-md shadow-orange-500/20"
+                            : "bg-neutral-900 hover:bg-neutral-800 text-white"
+                          }`}
+                      >
+                        {tier.ctaText}
+                        <ArrowRight className="w-4 h-4 ml-2" />
+                      </Button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Low-Friction Instant Fleet Quote Section ── */}
+      <section id="quote-form" className="py-20 bg-white border-b border-neutral-200 scroll-mt-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-[1.1fr_1fr] gap-12 items-center">
+            <div>
+              <span className="text-xs font-bold uppercase tracking-wider text-[#E8652B] bg-orange-50 px-3 py-1 rounded-full border border-orange-200">
+                Fleet Evaluation
+              </span>
+              <h2 className="mt-4 text-3xl sm:text-4xl font-black text-neutral-900 leading-tight">
+                Get an exact proposal tailored to your operational scale
+              </h2>
+              <p className="mt-4 text-base text-neutral-600 leading-relaxed">
+                Share your vehicle count and operational scope below. Our specialists evaluate your fleet structure,
+                subcontractor mix, and rate cards to deliver an accurate, transparent proposal during your 20-minute walkthrough.
+              </p>
+
+              <div className="mt-8 space-y-4">
+                <div className="flex items-start gap-3.5 p-4 rounded-2xl bg-neutral-50 border border-neutral-200">
+                  <div className="p-2 rounded-xl bg-white border border-neutral-200 text-[#E8652B] shrink-0">
+                    <Truck className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-neutral-900 text-sm">Flexible Core Fleet Sizing</h4>
+                    <p className="text-xs text-neutral-600 mt-0.5 leading-relaxed">
+                      Scale up during infrastructure surges and scale down during wet seasons without long-term per-vehicle penalties.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3.5 p-4 rounded-2xl bg-neutral-50 border border-neutral-200">
+                  <div className="p-2 rounded-xl bg-white border border-neutral-200 text-[#E8652B] shrink-0">
+                    <Users className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-neutral-900 text-sm">Unlimited Free Subbie Seats</h4>
+                    <p className="text-xs text-neutral-600 mt-0.5 leading-relaxed">
+                      Every subcontractor you bring on board gets full job dispatch, digital dockets, and route views without any extra fees.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3.5 p-4 rounded-2xl bg-neutral-50 border border-neutral-200">
+                  <div className="p-2 rounded-xl bg-white border border-neutral-200 text-[#E8652B] shrink-0">
+                    <ShieldCheck className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-neutral-900 text-sm">Complete Australian CoR Ready</h4>
+                    <p className="text-xs text-neutral-600 mt-0.5 leading-relaxed">
+                      Fatigue logs, break enforcement timers, and immutable audit logs included in your standard license.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Form Card */}
+            <div>
+              <QuickQuoteForm
+                source="pricing_page_calculator"
+                className="border-2 border-neutral-200 shadow-xl"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Feature Comparison Matrix Table ── */}
+      <section className="py-20 bg-neutral-50/60 border-b border-neutral-200">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-2xl mx-auto mb-14">
+            <span className="text-xs font-bold uppercase tracking-wider text-[#E8652B] bg-orange-50 px-3 py-1 rounded-full border border-orange-200">
+              Detailed Breakdown
+            </span>
+            <h2 className="mt-3 text-3xl sm:text-4xl font-black text-neutral-900 tracking-tight">
+              Compare plan capabilities side-by-side
+            </h2>
+            <p className="mt-3 text-sm text-neutral-600">
+              Every feature engineered specifically for heavy materials, civil tippers, and bulk logistics.
+            </p>
+          </div>
+
+          <div className="overflow-x-auto rounded-3xl border border-neutral-200 bg-white shadow-sm">
+            <table className="w-full text-left border-collapse min-w-[760px]">
               <thead>
-                <tr>
-                  <th className="w-44 pb-6 pr-6 align-bottom">
-                    <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Plan</span>
+                <tr className="border-b border-neutral-200 bg-neutral-100/70">
+                  <th className="py-5 px-6 font-black text-sm text-neutral-900 w-2/5">Platform Features</th>
+                  <th className="py-5 px-6 font-bold text-sm text-neutral-900 w-1/5 text-center">Starter Fleet</th>
+                  <th className="py-5 px-6 font-black text-sm text-[#E8652B] w-1/5 text-center bg-orange-50/40">
+                    Growth & Subbies
                   </th>
-                  {plans.map((plan) => (
-                    <th key={plan.name} className="px-3 pb-6 align-top">
-                      <div className={`bg-white border-t-4 ${plan.topBorder} border-x border-b border-neutral-200 rounded-t-2xl p-6`}>
-                        <div className="flex items-center justify-between gap-3">
-                          <span className="text-xl font-bold text-neutral-900">{plan.name}</span>
-                          {plan.tag && (
-                            <span className="inline-block bg-[#E8652B] text-white text-[10px] font-bold px-2.5 py-1 rounded-full tracking-widest whitespace-nowrap uppercase">
-                              {plan.tag}
-                            </span>
-                          )}
-                        </div>
-                      </div>
-                    </th>
-                  ))}
+                  <th className="py-5 px-6 font-bold text-sm text-neutral-900 w-1/5 text-center">Enterprise</th>
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td className="py-4 pr-6 text-xs font-semibold text-neutral-500 uppercase tracking-wider">Best for</td>
-                  {plans.map((plan) => (
-                    <td key={plan.name} className="px-3 py-4 align-top text-sm font-semibold text-neutral-900">{plan.title}</td>
-                  ))}
-                </tr>
-                <tr>
-                  <td className="py-4 pr-6 text-xs font-semibold text-neutral-500 uppercase tracking-wider">Typical profile</td>
-                  {plans.map((plan) => (
-                    <td key={plan.name} className="px-3 py-4 align-top text-sm text-neutral-600 leading-relaxed">{plan.fit}</td>
-                  ))}
-                </tr>
-                <tr>
-                  <td className="py-4 pr-6 text-xs font-semibold text-neutral-500 uppercase tracking-wider">Setup fee</td>
-                  {plans.map((plan) => (
-                    <td key={plan.name} className="px-3 py-4 align-top">
-                      <p className="text-2xl font-bold text-neutral-900">{plan.setupFee}</p>
-                      <p className="mt-1 text-xs text-neutral-500 leading-relaxed">{plan.setupDesc}</p>
-                    </td>
-                  ))}
-                </tr>
-                <tr>
-                  <td className="py-4 pr-6 text-xs font-semibold text-neutral-500 uppercase tracking-wider">Monthly subscription</td>
-                  {plans.map((plan) => (
-                    <td key={plan.name} className="px-3 py-4 align-top text-lg font-bold text-neutral-900">{plan.subscription}</td>
-                  ))}
-                </tr>
-                <tr>
-                  <td className="py-4 pr-6 text-xs font-semibold text-neutral-500 uppercase tracking-wider">What's included</td>
-                  {plans.map((plan) => (
-                    <td key={plan.name} className="px-3 py-4 align-top">
-                      <ul className="space-y-2.5">
-                        {plan.features.map((feature) => (
-                          <li key={feature} className="flex items-start gap-2 text-sm text-neutral-700">
-                            <Check className="h-4 w-4 text-[#E8652B] shrink-0 mt-0.5" />
-                            <span>{feature}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </td>
-                  ))}
-                </tr>
-                <tr>
-                  <td className="py-4 pr-6" />
-                  {plans.map((plan) => (
-                    <td key={plan.name} className="px-3 pt-5 pb-2 align-top">
-                      <a
-                        href="https://calendly.com/admin-haulageops/30min"
-                        target="_blank"
-                        rel="noopener noreferrer"
+                {comparisonCategories.map((group) => (
+                  <React.Fragment key={group.category}>
+                    <tr className="bg-neutral-50/80 border-y border-neutral-200">
+                      <td colSpan={4} className="py-3 px-6 text-xs font-bold uppercase tracking-wider text-neutral-700">
+                        {group.category}
+                      </td>
+                    </tr>
+                    {group.items.map((row, idx) => (
+                      <tr
+                        key={row.name}
+                        className={`border-b border-neutral-100 hover:bg-neutral-50/50 transition-colors ${idx % 2 === 0 ? "bg-white" : "bg-neutral-50/20"
+                          }`}
                       >
-                        <Button className="w-full bg-[#E8652B] hover:bg-[#D05520] text-white font-semibold">
-                          {plan.cta}
-                        </Button>
-                      </a>
-                    </td>
-                  ))}
-                </tr>
+                        <td className="py-4 px-6 text-sm font-semibold text-neutral-800">{row.name}</td>
+                        <td className="py-4 px-6 text-sm text-neutral-700 text-center">
+                          {typeof row.starter === "boolean" ? (
+                            row.starter ? (
+                              <Check className="w-4 h-4 text-emerald-600 mx-auto" />
+                            ) : (
+                              <span className="text-neutral-300 font-bold">—</span>
+                            )
+                          ) : (
+                            <span className="text-xs font-bold text-neutral-700">{row.starter}</span>
+                          )}
+                        </td>
+                        <td className="py-4 px-6 text-sm text-neutral-900 text-center font-bold bg-orange-50/20">
+                          {typeof row.growth === "boolean" ? (
+                            row.growth ? (
+                              <Check className="w-4 h-4 text-[#E8652B] mx-auto font-black" />
+                            ) : (
+                              <span className="text-neutral-300 font-bold">—</span>
+                            )
+                          ) : (
+                            <span className="text-xs font-black text-[#E8652B]">{row.growth}</span>
+                          )}
+                        </td>
+                        <td className="py-4 px-6 text-sm text-neutral-700 text-center">
+                          {typeof row.enterprise === "boolean" ? (
+                            row.enterprise ? (
+                              <Check className="w-4 h-4 text-emerald-600 mx-auto" />
+                            ) : (
+                              <span className="text-neutral-300 font-bold">—</span>
+                            )
+                          ) : (
+                            <span className="text-xs font-bold text-neutral-700">{row.enterprise}</span>
+                          )}
+                        </td>
+                      </tr>
+                    ))}
+                  </React.Fragment>
+                ))}
               </tbody>
             </table>
           </div>
         </div>
       </section>
-      */}
 
-      <section className="py-16 bg-neutral-50/50 border-b border-neutral-200">
+      {/* ── Subcontractor & Client Portal Model ── */}
+      <section className="py-20 bg-white border-b border-neutral-200">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <span className="text-xs font-bold uppercase tracking-wider text-[#E8652B]">The portal pricing model</span>
-              <h2 className="mt-2 text-3xl sm:text-4xl font-black text-neutral-900 max-w-3xl leading-tight">Your subcontractors and clients don't pay. You do.</h2>
-              <p className="mt-4 text-sm text-neutral-600 leading-relaxed">
-                Most TMS platforms charge per-seat or per-user - which means every subcontractor and client you give access to becomes a line on your bill. HaulageOps works differently.
+              <span className="text-xs font-bold uppercase tracking-wider text-[#E8652B] bg-orange-50 px-3 py-1 rounded-full border border-orange-200">
+                The Network Economy
+              </span>
+              <h2 className="mt-4 text-3xl sm:text-4xl font-black text-neutral-900 leading-tight">
+                Your external subcontractors and clients pay nothing. You control the platform.
+              </h2>
+              <p className="mt-4 text-sm sm:text-base text-neutral-600 leading-relaxed">
+                Legacy software vendors charge per login seat, forcing you to pay recurring monthly fees for every single subcontractor
+                you want to dispatch to. That model fails in bulk haulage where subcontractor fleets fluctuate constantly.
               </p>
-              <p className="mt-4 text-sm text-neutral-600 leading-relaxed">
-                The <Link href="/platform/subcontractor-portal" className="text-[#E8652B] hover:underline font-bold">subcontractor portal</Link> is a dedicated, authenticated login environment where your external subcontractors accept and decline job assignments, view Mapbox maps, track their job history, and communicate job status - all in real time. They don't pay for that access.
+              <p className="mt-4 text-sm sm:text-base text-neutral-600 leading-relaxed">
+                With HaulageOps, external portals are built into your platform license. Invite 5 or 50 subcontractors — they
+                log in securely via web and mobile at <strong>zero cost</strong> to them and no additional user fees for you.
               </p>
-              <p className="mt-4 text-sm text-neutral-600 leading-relaxed">
-                The <Link href="/platform/client-portal" className="text-[#E8652B] hover:underline font-bold">client portal</Link> gives your clients live job status, access to their dockets and proof of delivery, invoice history, their rate cards, and client-specific reports.
-              </p>
-            </div>
-            <div>
-              <div className="rounded-2xl border border-neutral-200 bg-white p-6 shadow-xs">
-                <div className="flex items-center gap-2 mb-3">
-                  <span className="w-2 h-2 rounded-full bg-[#E8652B]" />
-                  <p className="font-bold text-neutral-900 text-sm">What this means in practice</p>
-                </div>
-                <ul className="space-y-3">
-                  {portalPoints.map((item) => (
-                    <li key={item} className="flex items-start gap-2.5 text-sm text-neutral-700">
-                      <Check className="h-4 w-4 text-[#E8652B] shrink-0 mt-0.5" />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      <section className="py-16 bg-white border-b border-neutral-200">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <span className="text-xs font-bold uppercase tracking-wider text-[#E8652B]">What's included</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-black text-neutral-900 max-w-3xl leading-tight">Setup covers everything you need to go live.</h2>
-          <div className="mt-10 grid md:grid-cols-2 gap-6">
-            {setupCards.map((card) => (
-              <div key={card.title} className="bg-white rounded-2xl p-6 border border-neutral-200 shadow-xs hover:border-[#E8652B] transition-all">
-                <h3 className="text-lg font-bold text-neutral-900">{card.title}</h3>
-                <p className="mt-3 text-sm text-neutral-600 leading-relaxed">
-                  {card.p}{" "}
-                  {card.href && (
-                    <Link href={card.href} className="text-[#E8652B] hover:underline font-bold">{card.linkText}</Link>
-                  )}
-                </p>
-                <ul className="mt-4 space-y-2.5">
-                  {card.points.map((item) => (
-                    <li key={item} className="flex items-start gap-2 text-sm text-neutral-700">
-                      <Check className="h-4 w-4 text-[#E8652B] shrink-0 mt-0.5" />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 bg-neutral-50/50 border-b border-neutral-200">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <span className="text-xs font-bold uppercase tracking-wider text-[#E8652B]">Subscription includes</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-black text-neutral-900 max-w-3xl leading-tight">Everything in the subscription. No feature add-ons.</h2>
-          <div className="mt-10 grid md:grid-cols-3 gap-6">
-            {subscriptionCards.map((card) => (
-              <div key={card.title} className="bg-white rounded-2xl p-6 border border-neutral-200 shadow-xs hover:border-[#E8652B] transition-all">
-                <h3 className="text-lg font-bold text-neutral-900">{card.title}</h3>
-                <p className="mt-3 text-sm text-neutral-600 leading-relaxed">{card.p}</p>
-                <Link href={card.href} className="mt-4 inline-flex items-center gap-1 text-sm text-[#E8652B] hover:text-[#D05520] font-bold">
-                  <ArrowRight className="h-3.5 w-3.5" /> {card.linkText}
+              <div className="mt-6 flex flex-wrap gap-4">
+                <Link href="/platform/subcontractor-portal">
+                  <Button variant="outline" className="border-neutral-300 font-bold text-xs cursor-pointer">
+                    Explore Subcontractor Portal →
+                  </Button>
+                </Link>
+                <Link href="/platform/client-portal">
+                  <Button variant="outline" className="border-neutral-300 font-bold text-xs cursor-pointer">
+                    Explore Client Portal →
+                  </Button>
                 </Link>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
+            </div>
 
-      <section className="py-16 bg-white border-b border-neutral-200">
-        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center sm:text-left mb-8">
-            <span className="text-xs font-bold uppercase tracking-wider text-[#E8652B]">Frequently asked questions</span>
-            <h2 className="mt-2 text-3xl sm:text-4xl font-black text-neutral-900 leading-tight">Pricing questions answered directly.</h2>
-          </div>
-          <div className="space-y-3">
-            {faqs.map((faq) => (
-              <details key={faq.q} className="group border border-neutral-200 bg-white rounded-xl overflow-hidden shadow-2xs">
-                <summary className="flex items-center justify-between gap-4 px-6 py-4 cursor-pointer font-bold text-neutral-900 text-sm list-none hover:bg-neutral-50 transition-colors">
-                  {faq.q}
-                  <ChevronRight className="h-4 w-4 text-neutral-400 shrink-0 group-open:rotate-90 transition-transform" />
-                </summary>
-                <div className="px-6 pb-5 text-sm text-neutral-600 leading-relaxed border-t border-neutral-100">
-                  <p className="pt-4">{faq.a}</p>
+            <div className="space-y-4">
+              <div className="p-6 rounded-2xl border border-neutral-200 bg-neutral-50/70">
+                <div className="flex items-center gap-3 mb-2">
+                  <span className="p-2 rounded-xl bg-orange-100 text-[#E8652B]">
+                    <Users className="w-5 h-5" />
+                  </span>
+                  <h4 className="font-bold text-neutral-900 text-base">Subcontractor Portal Inclusions</h4>
                 </div>
-              </details>
-            ))}
+                <p className="text-xs text-neutral-600 leading-relaxed mb-3">
+                  Subbies log in to view assigned work orders, allocate to their internal drivers, see real-time Mapbox
+                  routes, and upload delivery dockets directly into your system.
+                </p>
+                <span className="text-xs font-black text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-md border border-emerald-200 inline-block">
+                  ✓ Always Free for Subcontractors
+                </span>
+              </div>
+
+              <div className="p-6 rounded-2xl border border-neutral-200 bg-neutral-50/70">
+                <div className="flex items-center gap-3 mb-2">
+                  <span className="p-2 rounded-xl bg-blue-100 text-blue-600">
+                    <Building2 className="w-5 h-5" />
+                  </span>
+                  <h4 className="font-bold text-neutral-900 text-base">Client Self-Serve Portal Inclusions</h4>
+                </div>
+                <p className="text-xs text-neutral-600 leading-relaxed mb-3">
+                  Civil contractors and quarry customers log in to track deliveries, view signed POD dockets in real-time,
+                  and download billing summaries without calling dispatch.
+                </p>
+                <span className="text-xs font-black text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-md border border-emerald-200 inline-block">
+                  ✓ Always Free for Clients
+                </span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="py-16 bg-neutral-900">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-          <div>
-            <h2 className="text-2xl sm:text-3xl font-black text-white">Ready to discuss pricing for your fleet?</h2>
-            <p className="mt-2 text-neutral-400 text-sm leading-relaxed max-w-xl">
-              Schedule a 30-minute call to review your operational requirements and get a customized quote.
+      {/* ── FAQ Accordion ── */}
+      <section className="py-20 bg-neutral-50/60 border-b border-neutral-200">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <span className="text-xs font-bold uppercase tracking-wider text-[#E8652B] bg-orange-50 px-3 py-1 rounded-full border border-orange-200">
+              Got Questions?
+            </span>
+            <h2 className="mt-3 text-3xl sm:text-4xl font-black text-neutral-900 tracking-tight">
+              Frequently asked commercial questions
+            </h2>
+            <p className="mt-3 text-sm text-neutral-600">
+              Clear, transparent answers about pricing, contracts, and onboarding.
             </p>
           </div>
-          <div className="flex flex-col items-start gap-3 shrink-0">
-            <a
-              href="https://calendly.com/admin-haulageops/30min"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Button size="lg" className="bg-[#E8652B] hover:bg-[#D05520] text-white font-bold cursor-pointer shadow-xs">
-                Book Now - Schedule Call
-              </Button>
-            </a>
+
+          <div className="space-y-3.5">
+            {faqs.map((faq, index) => {
+              const isOpen = activeFaq === index;
+              return (
+                <div
+                  key={faq.q}
+                  className="rounded-2xl border border-neutral-200 bg-white overflow-hidden shadow-xs transition-all"
+                >
+                  <button
+                    onClick={() => toggleFaq(index)}
+                    className="w-full flex items-center justify-between gap-4 p-5 sm:p-6 text-left font-bold text-neutral-900 text-sm sm:text-base cursor-pointer hover:bg-neutral-50/60 transition-colors"
+                  >
+                    <span>{faq.q}</span>
+                    <ChevronRight
+                      className={`w-4 h-4 text-neutral-400 shrink-0 transition-transform duration-200 ${isOpen ? "rotate-90 text-[#E8652B]" : ""
+                        }`}
+                    />
+                  </button>
+                  {isOpen && (
+                    <div className="px-5 sm:px-6 pb-6 pt-1 text-sm text-neutral-600 leading-relaxed border-t border-neutral-100">
+                      <p>{faq.a}</p>
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Final Conversion CTA ── */}
+      <section className="py-20 bg-neutral-900 text-white relative overflow-hidden">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
+            <div className="max-w-2xl">
+              <span className="text-xs font-bold uppercase tracking-wider text-[#E8652B] bg-orange-950/80 px-3 py-1 rounded-full border border-orange-800">
+                Ready for Live Operations?
+              </span>
+              <h2 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-black text-white leading-tight">
+                Upgrade your haulage operations with zero guesswork.
+              </h2>
+              <p className="mt-4 text-neutral-400 text-sm sm:text-base leading-relaxed">
+                Book a 20-minute tailored walkthrough. We will review your fleet, rate cards, and dispatch workflows
+                and provide a custom, audit-ready operational proposal within 24 hours.
+              </p>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-3.5 shrink-0">
+              <a
+                href="https://calendly.com/admin-haulageops/30min"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button
+                  size="lg"
+                  className="bg-[#E8652B] hover:bg-[#D05520] text-white font-bold px-8 py-6 text-base rounded-xl shadow-lg cursor-pointer flex items-center gap-2"
+                >
+                  <Calendar className="w-5 h-5" />
+                  <span>Schedule 20-Min Call</span>
+                </Button>
+              </a>
+
+              <a
+                href="https://wa.me/61426887862?text=Hi%20HaulageOps%2C%20I%20have%20questions%20regarding%20pricing%20and%20fleet%20onboarding."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-neutral-700 bg-neutral-800/80 hover:bg-neutral-800 text-white font-bold px-6 py-6 text-base rounded-xl cursor-pointer flex items-center gap-2"
+                >
+                  <PhoneCall className="w-4 h-4 text-[#25D366]" />
+                  <span>Chat on WhatsApp</span>
+                </Button>
+              </a>
+            </div>
           </div>
         </div>
       </section>

@@ -5,6 +5,7 @@ import Link from "next/link";
 import { MainLayout } from "@/components/layout/MainLayout";
 import { Button } from "@/components/ui/button";
 import { CheckCircle, ChevronRight } from "lucide-react";
+import { SubcontractorPortalMockup } from "@/components/shared/platform-mockups";
 
 const lifecycleSteps = [
   {
@@ -279,36 +280,9 @@ export function PlatformSubcontractorPortalPage() {
               </ul>
             </div>
 
-            {/* Visual spec mockup */}
-            <div className="rounded-2xl border border-neutral-200 bg-neutral-900 border-y border-neutral-800 overflow-hidden flex flex-col">
-              <div className="px-5 py-3 bg-neutral-800 text-[#E8652B] text-xs font-bold uppercase tracking-widest">
-                HaulageOps — Subcontractor Portal View
-              </div>
-              <div className="flex-1 p-6 text-neutral-400 text-sm font-mono leading-relaxed">
-                <p>Portal logged in as <span className="text-white font-semibold">&quot;Redlands Haulage Pty Ltd&quot;</span></p>
-                <div className="mt-4 space-y-3">
-                  {[
-                    { id: "#7841", material: "Crushed Rock", pickup: "Boral Quarry, Ormeau", delivery: "Pacific Motorway – Lot 4", time: "06:00 Tomorrow" },
-                    { id: "#7842", material: "Sand", pickup: "Hanson Quarry, Stapylton", delivery: "Pacific Motorway – Lot 6", time: "07:30 Tomorrow" },
-                    { id: "#7843", material: "Gravel", pickup: "Boral Quarry, Ormeau", delivery: "Pacific Motorway – Lot 5", time: "09:00 Tomorrow" },
-                  ].map((job) => (
-                    <div key={job.id} className="bg-neutral-800 rounded-lg p-3 border border-[#334155]">
-                      <div className="flex items-center justify-between mb-1">
-                        <span className="text-[#E8652B] font-semibold text-xs">{job.id}</span>
-                        <span className="text-neutral-500 text-xs">{job.time}</span>
-                      </div>
-                      <p className="text-white text-xs font-medium">{job.material}</p>
-                      <p className="text-neutral-500 text-xs">↑ {job.pickup}</p>
-                      <p className="text-neutral-500 text-xs">↓ {job.delivery}</p>
-                      <div className="flex gap-2 mt-2">
-                        <span className="px-2 py-0.5 rounded bg-[#16A34A]/20 text-[#4ADE80] text-xs font-semibold">Accept</span>
-                        <span className="px-2 py-0.5 rounded bg-[#334155] text-neutral-400 text-xs font-semibold">Decline</span>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-                <p className="mt-4 text-neutral-600 text-xs">↳ Mapbox route map below — no internal rates visible</p>
-              </div>
+            {/* High-fidelity Mockup */}
+            <div className="shadow-2xl rounded-2xl overflow-hidden border border-neutral-800">
+              <SubcontractorPortalMockup />
             </div>
           </div>
         </div>

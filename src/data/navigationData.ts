@@ -236,6 +236,7 @@ export const footerLinkGroups: FooterLinkGroup[] = [
   {
     title: "Platform",
     links: [
+      { label: "How It Works", href: "/how-it-works" },
       { label: "Admin / Dispatch", href: "/platform/dispatch-management" },
       { label: "Subcontractor Portal", href: "/platform/subcontractor-portal" },
       { label: "Client Portal", href: "/platform/client-portal" },

@@ -6,6 +6,7 @@ import {
   ChevronRight,
   ArrowRight,
 } from "lucide-react";
+import { CivilConstructionMockup } from "@/components/shared/industry-mockups";
 
 export const metadata = {
   title: "Civil Construction Logistics Software | HaulageOps",
@@ -338,19 +339,7 @@ export default function CivilConstructionPage() {
           </div>
 
           {/* Compliance dashboard mockup */}
-          <div className="mt-12 rounded-2xl bg-neutral-900 border-y border-neutral-800 border border-neutral-800 overflow-hidden">
-            <div className="flex items-center gap-2 px-5 py-3 bg-neutral-800">
-              <span className="h-2.5 w-2.5 rounded-full bg-[#E8652B]" />
-              <span className="h-2.5 w-2.5 rounded-full bg-[#94A3B8]" />
-              <span className="h-2.5 w-2.5 rounded-full bg-[#475569]" />
-              <span className="ml-3 text-xs font-semibold text-neutral-300">HaulageOps — Civil Construction Compliance Dashboard</span>
-            </div>
-            <div className="p-6">
-              <p className="text-sm text-neutral-400 leading-relaxed">
-                Screenshot: Management Reporting view filtered to a civil construction project. Top row: four compliance status tiles — Drivers (12 active, 1 licence expiring in 14 days), Vehicles (8 active, 0 overdue inspections), Subcontractors (3 companies, 1 insurance document expiring in 21 days), Site Inductions (all current). Below: project job summary — total loads this week: 47, total tonnes: 1,150, own fleet loads: 31, sub loads: 16. Bottom: audit log excerpt showing last 5 actions with timestamp, user and action description.
-              </p>
-            </div>
-          </div>
+          <CivilConstructionMockup />
         </div>
       </section>
 

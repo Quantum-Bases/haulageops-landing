@@ -530,7 +530,7 @@ export default function BulkHaulageOperationsGuidePage() {
                 ))}
               </ul>
               <p className="mt-5 text-sm text-neutral-600 leading-relaxed">
-                Standard setup is $1,500 and typically takes 2–4 weeks. Subcontractor and client portals are included — the portals are free for portal users. Only the operating company pays the subscription.
+                Onboarding is tailored to your fleet and typically takes 2–4 weeks. Subcontractor and client portals are included — the portals are free for portal users. Only the operating company pays the subscription.
               </p>
             </div>
             <div>

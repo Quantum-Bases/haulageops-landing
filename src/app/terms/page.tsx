@@ -41,9 +41,8 @@ export default function TermsPage() {
             Access to HaulageOps requires a current subscription. Subscriptions are billed monthly or annually as agreed at sign-up. Your subscription covers the number of users and portals specified in your agreement. Additional users or features outside your plan may incur additional fees.
           </p>
           <ul className="list-disc pl-5 text-[15px] text-[#3D505C] leading-relaxed space-y-1.5">
-            <li>Standard implementation fee: from $1,500 (one-time)</li>
-            <li>Enterprise implementation: approximately $6,500 (one-time, scoped per engagement)</li>
-            <li>Monthly licensing: per-truck rate as quoted at sign-up</li>
+            <li>Implementation and onboarding fee: as quoted and agreed in your service schedule</li>
+            <li>Platform licensing: structured tier or volume licensing as agreed at sign-up</li>
           </ul>
 
           <h2 className="text-xl font-bold text-neutral-900 pt-4">3. Your Responsibilities</h2>

@@ -35,7 +35,7 @@ export function QuickQuoteForm({ source = "pricing_page", className = "" }: Quic
           fleetSize,
           company,
           source,
-          notes: "Requested instant pricing matrix & feature breakdown PDF",
+          notes: "Requested tailored fleet evaluation & pricing consultation",
         }),
       });
 
@@ -60,10 +60,10 @@ export function QuickQuoteForm({ source = "pricing_page", className = "" }: Quic
           </div>
           <div>
             <h3 className="text-xl font-black text-neutral-900">
-              Pricing & Feature Guide Dispatched!
+              Fleet Consultation Request Received!
             </h3>
             <p className="mt-2 text-sm text-neutral-600 max-w-md mx-auto">
-              We've emailed the <strong>2026 HaulageOps Fleet Pricing Matrix & Implementation Breakdown</strong> to{" "}
+              Thank you. Our operations team will review your fleet profile and prepare a tailored proposal for your walkthrough call. We've sent a confirmation to{" "}
               <span className="font-semibold text-neutral-900">{email}</span>.
             </p>
           </div>
@@ -85,14 +85,14 @@ export function QuickQuoteForm({ source = "pricing_page", className = "" }: Quic
               <FileText className="w-4 h-4" />
             </span>
             <span className="text-xs font-bold uppercase tracking-wider text-[#E8652B]">
-              Instant Fleet Pricing & Overview
+              Fleet Pricing Consultation
             </span>
           </div>
           <h3 className="text-xl sm:text-2xl font-black text-neutral-900 tracking-tight">
-            Prefer a direct quote without a 30-min call?
+            Request a Tailored Fleet Evaluation
           </h3>
           <p className="mt-1.5 text-xs sm:text-sm text-neutral-600 leading-relaxed mb-6">
-            Enter your fleet details to immediately receive our 2026 Pricing Matrix, setup inclusions, and ROI calculator breakdown.
+            Share your fleet size and contact details so our team can prepare a customized operational proposal for your walkthrough call.
           </p>
 
           <form onSubmit={handleSubmit} className="space-y-4">
@@ -157,7 +157,7 @@ export function QuickQuoteForm({ source = "pricing_page", className = "" }: Quic
                   </>
                 ) : (
                   <>
-                    Get Instant Pricing & Matrix (PDF)
+                    Request Fleet Consultation
                     <ArrowRight className="w-4 h-4" />
                   </>
                 )}

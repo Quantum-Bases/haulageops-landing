@@ -1,91 +1,103 @@
+"use client";
+
 import Link from "next/link";
+import React, { useState } from "react";
 import { MainLayout } from "@/components/layout/MainLayout";
 import { Button } from "@/components/ui/button";
-import { ChevronRight, Check, ArrowRight } from "lucide-react";
+import {
+  ChevronRight,
+  Check,
+  ArrowRight,
+  Calendar,
+  Clock,
+  Video,
+  ShieldCheck,
+  Monitor,
+  Smartphone,
+  Building2,
+  FileCheck,
+  FileText,
+  Users,
+  MessageSquare,
+  Sparkles,
+} from "lucide-react";
 import { DemoBookingForm } from "@/components/demo/DemoBookingForm";
 
-export const metadata = {
-  title: "Book a HaulageOps Demo | 20-Minute Workflow Walkthrough",
-  description:
-    "Book a 20-minute demonstration of HaulageOps covering your real dispatch workflow, subcontractor coordination, digital POD, client portal and Xero invoicing.",
-};
-
 const kickerPills = [
-  "20 minutes",
-  "No sales pressure",
-  "Recorded if helpful",
-  "Proposal within 24 hours",
+  "20-Minute Workflow",
+  "No Slide Decks",
+  "Recorded for Your Team",
+  "Proposal Within 24h",
+  "Zero Sales Pressure",
 ];
 
 const lifecycleSteps = [
   {
     num: "01",
-    title: "Job creation",
-    before: "Create a job with client, origin, destination, material, quantity and job type. Rate auto-populates from the client's rate card. Recurring job and template options shown.",
+    title: "Job Creation & Rate Engine",
+    desc: "Create a job with client, pickup quarry, tip site, material, and target tonnage. Rate cards auto-populate from agreed client agreements (per-tonne, hourly, or fixed load).",
+    icon: FileText,
   },
   {
     num: "02",
-    title: "Rate and assignment",
-    before: "Assign to an owned driver or push to the ",
-    href: "/platform/subcontractor-portal",
-    linkText: "subcontractor portal",
-    after: " for a sub to accept. Separate client charge and subcontractor pay rates visible in one record.",
+    title: "Owned & Subcontractor Allocation",
+    desc: "Assign to an owned tipper driver or delegate directly to a subcontractor via their free portal. Keep visibility of subbie allocations without sharing client billing rates.",
+    icon: Users,
   },
   {
     num: "03",
-    title: "Live tracking",
-    before: "Real-time dispatch board. Driver updates status from the mobile app. Socket.io keeps the board live without a page refresh — loading, in transit, on site.",
+    title: "Live Socket.io Dispatch",
+    desc: "Real-time dispatch board updates as drivers change states (Loading, In Transit, On Site) without page refreshes. Distance & ETA calculated via Google Maps API.",
+    icon: Monitor,
   },
   {
     num: "04",
-    title: "POD capture",
-    before: "Driver captures photo, uploads docket, collects customer signature — all from the ",
-    href: "/platform/driver-app",
-    linkText: "driver app",
-    after: ". Works offline; synchronises when connectivity returns.",
+    title: "Driver Mobile App & Offline POD",
+    desc: "Drivers complete pre-starts, capture docket photos, record weighbridge weights, and collect receiver signatures. Works completely offline on remote civil sites.",
+    icon: Smartphone,
   },
   {
     num: "05",
-    title: "Client portal view",
-    before: "Switch to the ",
-    href: "/platform/client-portal",
-    linkText: "client portal",
-    after: ". Client sees job status live, accesses the docket and POD photograph, and views their invoice when raised — without calling your office.",
+    title: "Client Self-Serve Portal",
+    desc: "Clients log in to their authenticated portal to track job deliveries live, view signed POD dockets, and download summaries without calling dispatch.",
+    icon: Building2,
   },
   {
     num: "06",
-    title: "Invoice and Xero sync",
-    before: "Raise the invoice — the docket is already attached. Sync to Xero via OAuth2. When the client pays in Xero, payment status updates back in HaulageOps automatically.",
+    title: "Automated Xero Invoicing",
+    desc: "Raise invoices with verified dockets attached. 6-hourly OAuth2 sync pushes transactions to Xero. When clients pay in Xero, HaulageOps updates automatically.",
+    icon: FileCheck,
   },
 ];
 
 const attendPoints = [
-  "Ops Manager or Director",
-  "Head Dispatcher or fleet coordinator",
-  "Finance or billing contact (for the Xero segment)",
+  {
+    role: "Operations Manager or Director",
+    desc: "Evaluates fleet utilization, subcontractor delegation, and operational visibility.",
+  },
+  {
+    role: "Head Dispatcher or Fleet Allocator",
+    desc: "Tests daily job scheduling, live status boards, and driver app communication.",
+  },
+  {
+    role: "Finance or Billing Coordinator",
+    desc: "Inspects rate cards, docket verification, subcontractor RCTIs, and Xero sync.",
+  },
 ];
 
 const prepCards = [
   {
-    title: "A typical job type",
-    p: "Think of the job type you run most often — bulk earthworks, aggregate haulage, construction material movement, skip hire, or whatever your core work is. We'll use that as the job we create in the demo so the rates, materials and workflow match your reality.",
+    title: "A Typical Job Type",
+    desc: "Think of your most common run — bulk earthworks, quarry aggregate supply, road base, or spoil cartage. We'll build that exact job live so the demo matches your commercial reality.",
   },
   {
-    title: "Your fleet size and mix",
-    p: "Approximate numbers: how many owned vehicles, how many subcontractors you work with regularly, how many clients. This helps us set expectations on which plan tier makes sense and how the subcontractor portal would work for your network.",
+    title: "Approximate Fleet Mix",
+    desc: "Your rough numbers: owned trucks, regular subcontractor fleet, and active clients. This helps us configure the right rate tiers and show how the subbie portal will function.",
   },
   {
-    title: "Your current pain points",
-    p: "What's breaking in your current system — spreadsheets, WhatsApp coordination, docket chasing, invoice delays, no client visibility. Knowing this lets us cover the specific parts of HaulageOps that address your problem directly.",
+    title: "Current Operational Friction",
+    desc: "What hurts right now: paper dockets lost in gloveboxes, WhatsApp dispatch chaos, late invoicing, or constant client status calls. We'll zero in on solving those first.",
   },
-];
-
-const afterDemoPoints = [
-  "Written proposal within 24 hours",
-  "Implementation timeline: 2–4 weeks standard",
-  "Rate card configuration included in setup",
-  "Xero connection established during onboarding",
-  "Go-live with your data, your rates, your workflow",
 ];
 
 const fleetSizeOptions = [
@@ -93,250 +105,465 @@ const fleetSizeOptions = [
   "15–25 vehicles",
   "26–50 vehicles",
   "51–80 vehicles",
-  "80+ vehicles",
+  "80+ vehicles (Multi-depot)",
 ];
 
 const currentSystemOptions = [
-  "Spreadsheets",
-  "WhatsApp / phone coordination",
-  "Another TMS",
-  "Other",
+  "Spreadsheets & WhatsApp",
+  "Paper Dockets & Manual Invoicing",
+  "Allotrac",
+  "MyTrucking",
+  "Other Transport Management System",
 ];
 
 const faqs = [
   {
-    q: "Is this a sales call?",
-    a: "No. The demo is a workflow walkthrough — we run through a real job on the platform, not a pitch deck. Our goal is to show you how HaulageOps handles the specific operational problems that are most relevant to your business. If HaulageOps isn't the right fit, we'll say so. We'd rather you know upfront than spend weeks in an implementation that doesn't land.",
+    q: "Is this a sales pitch or a practical demonstration?",
+    a: "It is an operational walkthrough. We run through a live job from creation to Xero invoicing on the actual software — no PowerPoint slides. If HaulageOps isn't the right fit for your specific fleet setup, we will tell you directly on the call.",
   },
   {
-    q: "Can I get a recording of the demo?",
-    a: "Yes. Tell us at the start of the call and we'll record it. We'll send you the link after so you can review specific segments or share with team members who couldn't attend. Most people find it useful to have the Xero integration segment available to share with their finance team.",
+    q: "Can you record the walkthrough for my business partners?",
+    a: "Yes. Simply let us know at the start of the session and we will record the full video walkthrough. We will send you the private link immediately after so you can share it with directors, dispatchers, or your bookkeeping team.",
   },
   {
-    q: "Do I need to prepare anything?",
-    a: "Nothing formal. It helps to come with a typical job type in mind so we can make the demo relevant, a rough sense of your fleet size and sub network, and any specific problems you're trying to solve — invoice delays, docket chasing, subcontractor coordination, client visibility. That's enough for a useful 20 minutes.",
+    q: "Do I need to prepare or install any software beforehand?",
+    a: "Nothing at all. The demo runs directly in your web browser (Google Meet, Zoom, or Teams). You only need 20 minutes and a rough idea of your fleet size and primary haulage materials.",
   },
   {
-    q: "How soon can we start after the demo?",
-    a: (
-      <>
-        Standard implementation takes 2–4 weeks from confirmed start. We send a proposal within 24 hours of the demo. Once the setup fee is confirmed, the typical timeline is: Week 1 configuration and data load, Week 2 testing, Week 3 live with support, Week 4 stable operations. See the{" "}
-        <Link href="/implementation" className="text-[#E8652B] hover:underline font-medium">implementation page</Link>{" "}
-        for full detail.
-      </>
-    ),
+    q: "How soon can our fleet go live after the walkthrough?",
+    a: "Most operators go live within 2 to 4 weeks. Following the demo, we provide a written operational proposal within 24 hours. Once confirmed, our team handles data migration, rate card setup, driver onboarding, and Xero integration.",
   },
   {
-    q: "What if HaulageOps doesn't fit my operation?",
-    a: "We'll say so during the demo. HaulageOps is built for bulk haulage, earthworks, civil construction, quarry and aggregate, and tipper fleet operators managing 15–80 vehicles with a mix of owned and subcontracted capacity. It is not for parcel delivery, 3PL warehousing, or freight forwarding. If your operation falls outside that scope, we'll tell you clearly rather than try to force a fit.",
-  },
-  {
-    q: "Can I bring my whole team to the demo?",
-    a: "Yes, and we'd encourage it. The demo is most useful when the ops manager, lead dispatcher, and finance or billing contact are all in the session together. Decisions about operational software work better when the people who will actually use it can ask questions in real time.",
+    q: "What types of operations is HaulageOps built for?",
+    a: "HaulageOps is purpose-built for bulk haulage, earthworks, civil construction, quarries, aggregates, muckaway, and tipper fleets managing owned trucks and subcontractor networks. It is not designed for parcel courier delivery or 3PL pallet warehousing.",
   },
 ];
 
 export default function DemoPage() {
+  const [activeFaq, setActiveFaq] = useState<number | null>(null);
+
+  const toggleFaq = (index: number) => {
+    setActiveFaq(activeFaq === index ? null : index);
+  };
+
   return (
     <MainLayout showCta={false}>
-      <section className="pt-24 pb-16 bg-gradient-to-b from-neutral-50/80 via-white to-white border-b border-neutral-200">
+      {/* ── Split Hero + Booking Card (Above the Fold) ── */}
+      <section className="pt-28 pb-16 bg-gradient-to-b from-neutral-50 via-white to-white text-neutral-900 border-b border-neutral-200">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <nav className="flex items-center gap-2 text-xs text-neutral-500 mb-6">
-            <Link href="/" className="hover:text-[#E8652B]">Home</Link>
+            <Link href="/" className="hover:text-[#E8652B] transition-colors">
+              Home
+            </Link>
             <ChevronRight className="h-3 w-3" />
-            <span className="text-neutral-900 font-medium">Book a Demo</span>
+            <span className="text-neutral-900 font-bold">Book a Demo</span>
           </nav>
-          <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-[#E8652B] bg-orange-50 border border-orange-200 mb-4">
-            20-Minute Demo
-          </span>
-          <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-neutral-900 max-w-4xl leading-[1.1]">
-            See your real operating workflow on HaulageOps.
-          </h1>
-          <p className="mt-6 text-lg text-neutral-600 max-w-3xl leading-relaxed">
-            Not a generic walkthrough. We run through a job the way your operation actually works — from creation through to driver assignment, POD, client portal view, invoice, and Xero sync.
-          </p>
-          <div className="mt-8 flex flex-wrap gap-3">
-            {kickerPills.map((pill) => (
-              <span key={pill} className="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-[#E8652B] bg-orange-50 border border-orange-200">
-                {pill}
-              </span>
-            ))}
+
+          <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-12 items-start">
+            {/* Left Column: Value Proposition & What to Expect */}
+            <div>
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider text-[#E8652B] bg-orange-50 border border-orange-200/80 mb-5">
+                <Sparkles className="w-3.5 h-3.5" />
+                <span>20-Minute Operational Walkthrough</span>
+              </div>
+
+              <h1 className="text-4xl sm:text-5xl font-black tracking-tight text-neutral-900 leading-[1.1]">
+                See your real haulage workflow live on{" "}
+                <span className="text-[#E8652B]">HaulageOps</span>.
+              </h1>
+
+              <p className="mt-5 text-base sm:text-lg text-neutral-600 leading-relaxed font-normal">
+                No generic pitch decks. We walk through a single job the way your business actually operates — from
+                dispatch board allocation through to driver mobile POD, free subcontractor portal view, and Xero-synced invoicing.
+              </p>
+
+              {/* Core Inclusions List */}
+              <div className="mt-8 space-y-3.5">
+                {[
+                  "Live drag-and-drop dispatch board with real-time driver tracking",
+                  "Driver mobile app with offline photo docket & receiver signature capture",
+                  "Dedicated Subcontractor Portal — 100% free for your external subbies",
+                  "Client Self-Serve Portal for live tracking & instant POD access",
+                  "Two-way Xero OAuth2 sync connecting verified dockets directly to invoices",
+                  "Australian Chain of Responsibility (CoR) fatigue & compliance audit logs",
+                ].map((item) => (
+                  <div key={item} className="flex items-start gap-3">
+                    <div className="mt-0.5 w-5 h-5 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0 border border-emerald-200">
+                      <Check className="w-3.5 h-3.5" />
+                    </div>
+                    <span className="text-sm font-semibold text-neutral-800 leading-snug">{item}</span>
+                  </div>
+                ))}
+              </div>
+
+              {/* Assurance Pills */}
+              <div className="mt-8 pt-8 border-t border-neutral-200 flex flex-wrap gap-2.5">
+                {kickerPills.map((pill) => (
+                  <span
+                    key={pill}
+                    className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-neutral-100 text-neutral-700 border border-neutral-200"
+                  >
+                    <Check className="w-3 h-3 text-[#E8652B]" />
+                    <span>{pill}</span>
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* Right Column: Direct Calendly & Booking Form Card */}
+            <div>
+              <div className="bg-white rounded-3xl p-6 sm:p-8 border-2 border-neutral-200 shadow-xl shadow-neutral-200/50">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-center gap-2">
+                    <span className="w-2.5 h-2.5 rounded-full bg-[#E8652B]" />
+                    <h3 className="text-xl font-black text-neutral-900">Schedule Your Session</h3>
+                  </div>
+                  <span className="text-xs font-bold text-neutral-500 bg-neutral-100 px-2.5 py-1 rounded-md">
+                    20 Mins
+                  </span>
+                </div>
+
+                <p className="text-xs sm:text-sm text-neutral-600 mb-6 leading-relaxed">
+                  Choose a direct meeting time on Calendly, or share your details below so we can prepare your fleet scope.
+                </p>
+
+                {/* Direct 1-Click Calendly Button */}
+                <a
+                  href="https://calendly.com/admin-haulageops/30min"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block mb-5"
+                >
+                  <Button
+                    size="lg"
+                    className="w-full bg-[#E8652B] hover:bg-[#D05520] text-white font-bold py-6 text-base rounded-xl shadow-md shadow-orange-500/20 cursor-pointer flex items-center justify-center gap-2"
+                  >
+                    <Calendar className="w-5 h-5" />
+                    <span>Pick Instant Time via Calendly →</span>
+                  </Button>
+                </a>
+
+                {/* Subtle Divider */}
+                <div className="relative flex py-2 items-center mb-5">
+                  <div className="flex-grow border-t border-neutral-200"></div>
+                  <span className="flex-shrink mx-3 text-[11px] font-bold text-neutral-400 uppercase tracking-wider">
+                    Or Share Details First
+                  </span>
+                  <div className="flex-grow border-t border-neutral-200"></div>
+                </div>
+
+                {/* Lead Ingestion Form (writes to Google Sheets /api/leads) */}
+                <DemoBookingForm
+                  fleetSizeOptions={fleetSizeOptions}
+                  currentSystemOptions={currentSystemOptions}
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="py-16 bg-white">
+      {/* ── Interactive Workflow Visual (Replacing Raw Text Placeholder) ── */}
+      <section className="py-20 bg-neutral-900 text-white border-y border-neutral-800">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12">
+          <div className="text-center max-w-3xl mx-auto mb-14">
+            <span className="text-xs font-bold uppercase tracking-wider text-[#E8652B] bg-orange-950/80 px-3 py-1 rounded-full border border-orange-800">
+              Live Architecture
+            </span>
+            <h2 className="mt-3 text-3xl sm:text-4xl font-black text-white tracking-tight">
+              One connected ecosystem. Zero fragmented silos.
+            </h2>
+            <p className="mt-3 text-sm sm:text-base text-neutral-400">
+              During the walkthrough, you will watch one live load travel smoothly across all three operational interfaces.
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-3 gap-6">
+            {/* View 1: Dispatch Board */}
+            <div className="bg-neutral-800/80 rounded-2xl p-6 border border-neutral-700/80 shadow-md">
+              <div className="flex items-center justify-between pb-4 border-b border-neutral-700">
+                <div className="flex items-center gap-2">
+                  <Monitor className="w-4 h-4 text-[#E8652B]" />
+                  <span className="text-xs font-bold text-white uppercase tracking-wider">01. Dispatch Board</span>
+                </div>
+                <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
+                  Live Socket.io
+                </span>
+              </div>
+              <div className="mt-5 space-y-3 font-mono text-xs">
+                <div className="p-3 rounded-xl bg-neutral-900 border border-neutral-700/60">
+                  <div className="flex justify-between text-neutral-400 mb-1">
+                    <span>JOB-9012</span>
+                    <span className="text-emerald-400 font-bold">On Route (12m ETA)</span>
+                  </div>
+                  <p className="text-white font-bold text-sm">Boral Quarry &rarr; Runway Site B</p>
+                  <p className="text-neutral-400 text-[11px] mt-1">Truck #08 · Driver: John Mitchell · 32.4t Agg</p>
+                </div>
+                <p className="text-neutral-400 text-xs font-sans mt-3 leading-relaxed">
+                  Dispatcher drags job to Truck #08. Instant audio alert sounds on driver phone. No phone calls needed.
+                </p>
+              </div>
+            </div>
+
+            {/* View 2: Driver Mobile App */}
+            <div className="bg-neutral-800/80 rounded-2xl p-6 border border-neutral-700/80 shadow-md">
+              <div className="flex items-center justify-between pb-4 border-b border-neutral-700">
+                <div className="flex items-center gap-2">
+                  <Smartphone className="w-4 h-4 text-[#E8652B]" />
+                  <span className="text-xs font-bold text-white uppercase tracking-wider">02. Driver Mobile App</span>
+                </div>
+                <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-blue-500/20 text-blue-400 border border-blue-500/30">
+                  Offline Sync
+                </span>
+              </div>
+              <div className="mt-5 space-y-3 font-mono text-xs">
+                <div className="p-3 rounded-xl bg-neutral-900 border border-neutral-700/60">
+                  <div className="flex justify-between text-neutral-400 mb-1">
+                    <span>POD CAPTURE</span>
+                    <span className="text-blue-400 font-bold">Docket #DK-88271</span>
+                  </div>
+                  <p className="text-white font-bold text-sm">Docket Photo Attached</p>
+                  <p className="text-neutral-400 text-[11px] mt-1">Customer E-Signature Captured: G. Davies</p>
+                </div>
+                <p className="text-neutral-400 text-xs font-sans mt-3 leading-relaxed">
+                  Driver photographs physical docket at weighbridge. Tonnage and signature attach to cloud instantly.
+                </p>
+              </div>
+            </div>
+
+            {/* View 3: Client Portal & Xero */}
+            <div className="bg-neutral-800/80 rounded-2xl p-6 border border-neutral-700/80 shadow-md">
+              <div className="flex items-center justify-between pb-4 border-b border-neutral-700">
+                <div className="flex items-center gap-2">
+                  <Building2 className="w-4 h-4 text-[#E8652B]" />
+                  <span className="text-xs font-bold text-white uppercase tracking-wider">03. Client Portal & Xero</span>
+                </div>
+                <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-purple-500/20 text-purple-400 border border-purple-500/30">
+                  OAuth2 Synced
+                </span>
+              </div>
+              <div className="mt-5 space-y-3 font-mono text-xs">
+                <div className="p-3 rounded-xl bg-neutral-900 border border-neutral-700/60">
+                  <div className="flex justify-between text-neutral-400 mb-1">
+                    <span>INVOICE #INV-1092</span>
+                    <span className="text-purple-400 font-bold">Matched to POD</span>
+                  </div>
+                  <p className="text-white font-bold text-sm">Synced to Xero Accounting</p>
+                  <p className="text-neutral-400 text-[11px] mt-1">Client views verified load docket online without calling</p>
+                </div>
+                <p className="text-neutral-400 text-xs font-sans mt-3 leading-relaxed">
+                  Invoice is generated automatically with docket image attached. Client views proof online; Xero records payment.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── 6-Step End-to-End Walkthrough Sequence ── */}
+      <section className="py-20 bg-white border-b border-neutral-200">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <span className="text-xs font-bold uppercase tracking-wider text-[#E8652B] bg-orange-50 px-3 py-1 rounded-full border border-orange-200">
+              Walkthrough Scope
+            </span>
+            <h2 className="mt-3 text-3xl sm:text-4xl font-black text-neutral-900 tracking-tight">
+              One end-to-end job. Every operational step covered.
+            </h2>
+            <p className="mt-3 text-base text-neutral-600">
+              We follow the exact journey your dispatchers, drivers, and accountants experience every day.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {lifecycleSteps.map((step) => {
+              const Icon = step.icon;
+              return (
+                <div
+                  key={step.num}
+                  className="bg-white rounded-2xl p-6 sm:p-7 border border-neutral-200 shadow-xs hover:border-[#E8652B] hover:shadow-md transition-all group"
+                >
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="text-xs font-black tracking-widest text-[#E8652B] bg-orange-50 px-2.5 py-1 rounded-md border border-orange-200/80">
+                      STEP {step.num}
+                    </span>
+                    <div className="w-9 h-9 rounded-xl bg-neutral-100 group-hover:bg-orange-500 group-hover:text-white text-neutral-600 flex items-center justify-center transition-colors">
+                      <Icon className="w-4 h-4" />
+                    </div>
+                  </div>
+                  <h3 className="text-lg font-bold text-neutral-900 group-hover:text-[#E8652B] transition-colors">
+                    {step.title}
+                  </h3>
+                  <p className="mt-2.5 text-xs sm:text-sm text-neutral-600 leading-relaxed font-normal">
+                    {step.desc}
+                  </p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Who Should Attend & Preparation Guide ── */}
+      <section className="py-20 bg-neutral-50/60 border-b border-neutral-200">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
+            {/* Attendees Column */}
             <div>
-              <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">What the demo covers</span>
-              <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">One end-to-end job. Every step of the workflow.</h2>
-              <p className="mt-4 text-sm text-neutral-600 leading-relaxed">
-                The demo follows a single job from creation through to Xero-synced invoice — the same path your dispatchers, drivers, subcontractors and clients travel every day. We move through each stage so you can see how the pieces connect, then slow down on the parts most relevant to your operation.
+              <span className="text-xs font-bold uppercase tracking-wider text-[#E8652B] bg-orange-50 px-3 py-1 rounded-full border border-orange-200">
+                Team Alignment
+              </span>
+              <h2 className="mt-3 text-3xl font-black text-neutral-900 tracking-tight">
+                Who should attend the 20-minute session
+              </h2>
+              <p className="mt-3 text-sm text-neutral-600 leading-relaxed">
+                The demonstration is most effective when the people running the real operation can evaluate the platform together.
               </p>
-              <div className="mt-8 grid sm:grid-cols-2 gap-6">
-                {lifecycleSteps.map((step) => (
-                  <div key={step.num} className="bg-white rounded-2xl p-6 border border-neutral-200">
-                    <span className="text-xs font-bold tracking-widest text-[#E8652B]">{step.num}</span>
-                    <h3 className="mt-2 font-bold text-neutral-900">{step.title}</h3>
-                    <p className="mt-2 text-sm text-neutral-600 leading-relaxed">
-                      {step.before}
-                      {step.href && (
-                        <Link href={step.href} className="text-[#E8652B] hover:underline font-medium">{step.linkText}</Link>
-                      )}
-                      {step.after}
-                    </p>
+
+              <div className="mt-8 space-y-4">
+                {attendPoints.map((attendee) => (
+                  <div
+                    key={attendee.role}
+                    className="p-5 rounded-2xl bg-white border border-neutral-200 shadow-xs flex items-start gap-4"
+                  >
+                    <div className="p-2.5 rounded-xl bg-orange-50 text-[#E8652B] shrink-0 border border-orange-200/80">
+                      <Users className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-neutral-900 text-sm">{attendee.role}</h4>
+                      <p className="text-xs text-neutral-600 mt-1 leading-relaxed">{attendee.desc}</p>
+                    </div>
                   </div>
                 ))}
               </div>
             </div>
-            <div>
-              <div className="rounded-2xl bg-neutral-900 border-y border-neutral-800 border border-neutral-800 overflow-hidden">
-                <div className="flex items-center gap-2 px-5 py-3 bg-neutral-800">
-                  <span className="h-2.5 w-2.5 rounded-full bg-[#E8652B]" />
-                  <span className="h-2.5 w-2.5 rounded-full bg-[#94A3B8]" />
-                  <span className="h-2.5 w-2.5 rounded-full bg-[#475569]" />
-                  <span className="ml-3 text-xs font-semibold text-neutral-300">Demo walkthrough — job lifecycle view</span>
-                </div>
-                <div className="p-6">
-                  <p className="text-sm text-neutral-400 leading-relaxed">
-                    Screenshot sequence: left panel shows dispatch board with one active job highlighted in orange; centre shows driver app POD capture screen with photo field, docket upload, and signature pad; right panel shows client portal invoice view with Paid status badge synced from Xero. Arrows connecting the three views left to right, labelled: Dispatch — Driver — Client.
-                  </p>
-                </div>
-              </div>
-              <div className="rounded-2xl border border-orange-200 bg-[#FFF8F0] p-6 mt-6">
-                <h3 className="font-bold text-neutral-900">Who should attend the demo</h3>
-                <p className="mt-2 text-sm text-neutral-600 leading-relaxed">
-                  The demo works best when the people who actually run the operation are in the room — not just the person evaluating software.
-                </p>
-                <ul className="mt-4 space-y-2.5">
-                  {attendPoints.map((item) => (
-                    <li key={item} className="flex items-start gap-2 text-sm text-neutral-600">
-                      <Check className="h-4 w-4 text-[#D97706] shrink-0 mt-0.5" />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-                <p className="mt-4 text-sm text-neutral-900">30 minutes of your team's time is enough to know whether this fits your operation.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      <section className="py-16 bg-neutral-50/50">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Before the demo</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900">What to have ready — and what we'll ask.</h2>
-          <p className="mt-4 text-neutral-600 leading-relaxed max-w-2xl">
-            You don't need a detailed brief. But having a few specifics in mind means we can make the demo relevant to your situation rather than generic.
-          </p>
-          <div className="mt-10 grid md:grid-cols-3 gap-6">
-            {prepCards.map((card) => (
-              <div key={card.title} className="bg-white rounded-2xl p-6 border border-neutral-200">
-                <h3 className="text-lg font-bold text-neutral-900">{card.title}</h3>
-                <p className="mt-3 text-sm text-neutral-600 leading-relaxed">{card.p}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+            {/* Preparation Column */}
+            <div>
+              <span className="text-xs font-bold uppercase tracking-wider text-[#E8652B] bg-orange-50 px-3 py-1 rounded-full border border-orange-200">
+                Session Preparation
+              </span>
+              <h2 className="mt-3 text-3xl font-black text-neutral-900 tracking-tight">
+                What to have in mind before the call
+              </h2>
+              <p className="mt-3 text-sm text-neutral-600 leading-relaxed">
+                No formal brief required. Having these 3 details handy helps us tailor the session to your reality.
+              </p>
 
-      <section className="py-16 bg-white">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12">
-            <div>
-              <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Request your demo</span>
-              <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">20 minutes on a video call. Recorded if that's useful.</h2>
-              <p className="mt-4 text-sm text-neutral-600 leading-relaxed">
-                Fill in the form and we'll confirm a time within one business day. The demo runs on video call — Zoom, Teams, Google Meet, whatever works for your team. We can record it if you want to share it internally or revisit specific segments.
-              </p>
-              <p className="mt-4 text-sm text-neutral-600 leading-relaxed">
-                After the demo we'll send a written proposal within 24 hours — covering the plan recommendation, setup fee, monthly subscription, and a 2–4 week implementation timeline. No pressure to decide immediately.
-              </p>
-              <div className="rounded-2xl border border-neutral-200 bg-white p-6 mt-6">
-                <p className="font-bold text-neutral-900">What happens after the demo</p>
-                <ul className="mt-3 space-y-2.5">
-                  {afterDemoPoints.map((item) => (
-                    <li key={item} className="flex items-start gap-2 text-sm text-neutral-900">
-                      <Check className="h-4 w-4 text-[#E8652B] shrink-0 mt-0.5" />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <p className="mt-6 text-sm text-neutral-500">
-                See the <Link href="/implementation" className="text-[#E8652B] hover:underline font-medium">implementation page</Link> for the full onboarding timeline, or review <Link href="/pricing" className="text-[#E8652B] hover:underline font-medium">pricing</Link> before the call.
-              </p>
-            </div>
-            <div>
-              <div className="bg-white rounded-2xl p-8 border border-neutral-200">
-                <h3 className="text-xl font-bold text-neutral-900 mb-2">Book your 30-minute demo</h3>
-                <p className="text-sm text-neutral-600 mb-6">Select a convenient time directly on Calendly or request a custom slot.</p>
-                <div className="space-y-4">
-                  <a
-                    href="https://calendly.com/admin-haulageops/30min"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block"
+              <div className="mt-8 space-y-4">
+                {prepCards.map((prep) => (
+                  <div
+                    key={prep.title}
+                    className="p-5 rounded-2xl bg-white border border-neutral-200 shadow-xs flex items-start gap-4"
                   >
-                    <Button size="lg" className="w-full bg-[#E8652B] hover:bg-[#D05520] text-white font-semibold py-6 shadow-md text-base">
-                      Book Now via Calendly →
-                    </Button>
-                  </a>
-                  <div className="relative flex py-2 items-center">
-                    <div className="flex-grow border-t border-gray-200"></div>
-                    <span className="flex-shrink mx-4 text-xs font-semibold text-gray-400 uppercase">Or fill in details</span>
-                    <div className="flex-grow border-t border-gray-200"></div>
+                    <div className="p-2.5 rounded-xl bg-neutral-100 text-neutral-800 shrink-0 border border-neutral-200">
+                      <Check className="w-5 h-5 text-[#E8652B]" />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-neutral-900 text-sm">{prep.title}</h4>
+                      <p className="text-xs text-neutral-600 mt-1 leading-relaxed">{prep.desc}</p>
+                    </div>
                   </div>
-                  <DemoBookingForm
-                    fleetSizeOptions={fleetSizeOptions}
-                    currentSystemOptions={currentSystemOptions}
-                  />
-                </div>
+                ))}
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="py-16 bg-neutral-50/50">
+      {/* ── FAQ Accordion ── */}
+      <section className="py-20 bg-white border-b border-neutral-200">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Frequently asked questions</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900">Demo questions answered.</h2>
-          <div className="mt-8 space-y-3">
-            {faqs.map((faq) => (
-              <details key={faq.q} className="group border border-neutral-200 bg-white rounded-xl overflow-hidden">
-                <summary className="flex items-center justify-between gap-4 px-6 py-4 cursor-pointer font-semibold text-neutral-900 text-sm list-none hover:bg-neutral-50/50">
-                  {faq.q}
-                  <ChevronRight className="h-4 w-4 text-neutral-400 shrink-0 group-open:rotate-90 transition-transform" />
-                </summary>
-                <div className="px-6 pb-5 text-sm text-neutral-600 leading-relaxed border-t border-neutral-100">
-                  <p className="pt-4">{faq.a}</p>
-                </div>
-              </details>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 bg-neutral-900">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-          <div>
-            <h2 className="text-2xl sm:text-3xl font-bold text-white">Ready to see HaulageOps on your workflow?</h2>
-            <p className="mt-2 text-neutral-400 text-sm leading-relaxed max-w-xl">
-              Fill in the form above or explore the platform first. Either way, we'll work around your schedule.
+          <div className="text-center mb-12">
+            <span className="text-xs font-bold uppercase tracking-wider text-[#E8652B] bg-orange-50 px-3 py-1 rounded-full border border-orange-200">
+              Demo Details
+            </span>
+            <h2 className="mt-3 text-3xl sm:text-4xl font-black text-neutral-900 tracking-tight">
+              Frequently asked questions about the walkthrough
+            </h2>
+            <p className="mt-3 text-sm text-neutral-600">
+              Transparent, straightforward answers so you know exactly what to expect.
             </p>
           </div>
-          <div className="flex flex-col items-start gap-3 shrink-0">
-            <Link href="/platform">
-              <Button size="lg" className="bg-[#E8652B] hover:bg-[#D05520] text-white font-semibold">
-                Explore the platform
-              </Button>
-            </Link>
-            <Link href="/pricing" className="text-neutral-400 hover:text-white underline text-sm font-semibold">
-              See pricing →
-            </Link>
+
+          <div className="space-y-3.5">
+            {faqs.map((faq, index) => {
+              const isOpen = activeFaq === index;
+              return (
+                <div
+                  key={faq.q}
+                  className="rounded-2xl border border-neutral-200 bg-white overflow-hidden shadow-xs transition-all"
+                >
+                  <button
+                    onClick={() => toggleFaq(index)}
+                    className="w-full flex items-center justify-between gap-4 p-5 sm:p-6 text-left font-bold text-neutral-900 text-sm sm:text-base cursor-pointer hover:bg-neutral-50/60 transition-colors"
+                  >
+                    <span>{faq.q}</span>
+                    <ChevronRight
+                      className={`w-4 h-4 text-neutral-400 shrink-0 transition-transform duration-200 ${
+                        isOpen ? "rotate-90 text-[#E8652B]" : ""
+                      }`}
+                    />
+                  </button>
+                  {isOpen && (
+                    <div className="px-5 sm:px-6 pb-6 pt-1 text-sm text-neutral-600 leading-relaxed border-t border-neutral-100">
+                      <p>{faq.a}</p>
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Final Conversion CTA ── */}
+      <section className="py-20 bg-neutral-900 text-white relative overflow-hidden">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
+            <div className="max-w-2xl">
+              <span className="text-xs font-bold uppercase tracking-wider text-[#E8652B] bg-orange-950/80 px-3 py-1 rounded-full border border-orange-800">
+                Ready for Live Operations?
+              </span>
+              <h2 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-black text-white leading-tight">
+                See HaulageOps configured for your fleet.
+              </h2>
+              <p className="mt-4 text-neutral-400 text-sm sm:text-base leading-relaxed">
+                Book a 20-minute tailored walkthrough. We will review your fleet, rate cards, and dispatch workflows
+                and provide a custom, audit-ready operational proposal within 24 hours.
+              </p>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-3.5 shrink-0">
+              <a
+                href="https://calendly.com/admin-haulageops/30min"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button
+                  size="lg"
+                  className="bg-[#E8652B] hover:bg-[#D05520] text-white font-bold px-8 py-6 text-base rounded-xl shadow-lg cursor-pointer flex items-center gap-2"
+                >
+                  <Calendar className="w-5 h-5" />
+                  <span>Pick Instant Calendly Slot</span>
+                </Button>
+              </a>
+
+              <a
+                href="https://wa.me/61426887862?text=Hi%20HaulageOps%2C%20I%20would%20like%20to%20schedule%20a%20platform%20walkthrough."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-neutral-700 bg-neutral-800/80 hover:bg-neutral-800 text-white font-bold px-6 py-6 text-base rounded-xl cursor-pointer flex items-center gap-2"
+                >
+                  <MessageSquare className="w-4 h-4 text-[#25D366]" />
+                  <span>Ask via WhatsApp</span>
+                </Button>
+              </a>
+            </div>
           </div>
         </div>
       </section>

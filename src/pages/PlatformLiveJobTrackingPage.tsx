@@ -5,6 +5,7 @@ import Link from "next/link";
 import { MainLayout } from "@/components/layout/MainLayout";
 import { Button } from "@/components/ui/button";
 import { CheckCircle, ChevronRight } from "lucide-react";
+import { LiveJobTrackingMockup } from "@/components/shared/platform-mockups";
 
 const beforeAfterComparison = [
   { situation: "Client asks where their delivery is", phone: "Call the driver, call you back, relay to client", haulageOps: "Client checks their portal — no call needed" },
@@ -214,9 +215,8 @@ export function PlatformLiveJobTrackingPage() {
           <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             The dispatch board — updating live as jobs progress.
           </h2>
-          <div className="mt-8 rounded-2xl border border-neutral-200 bg-neutral-900 border-y border-neutral-800 p-8 text-neutral-400 text-sm font-mono leading-relaxed">
-            <div className="text-[#E8652B] font-bold mb-2 text-xs uppercase tracking-widest">HaulageOps — Live Dispatch Board with GPS Map</div>
-            <p>Split-view dispatch board. Left panel: job list with status columns (Assigned, En Route, On Site, Delivered). Each job card shows driver name, origin → destination, material and a coloured status badge. Right panel: map view showing driver location pins with truck icons, labelled with driver initials and job reference. One pin is mid-route (blue), one is at site (orange), two are delivered (green). Last status update timestamp shown on each card. Subcontractor job shown with different icon style.</p>
+          <div className="mt-8 shadow-2xl rounded-2xl overflow-hidden border border-neutral-800">
+            <LiveJobTrackingMockup />
           </div>
         </div>
       </section>

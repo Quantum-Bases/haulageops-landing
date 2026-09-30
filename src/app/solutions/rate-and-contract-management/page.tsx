@@ -9,6 +9,7 @@ import {
   FileText,
   AlertTriangle,
 } from "lucide-react";
+import { RateAndContractManagementMockup } from "@/components/shared/solution-mockups";
 
 export const metadata = {
   title: "Haulage Rate and Contract Management | HaulageOps",
@@ -256,37 +257,7 @@ export default function RateAndContractManagementPage() {
           </div>
           <div className="mt-10">
             {/* Contract management view visual */}
-            <div className="rounded-2xl border border-neutral-200 bg-neutral-900 border-y border-neutral-800 overflow-hidden">
-              <div className="px-5 py-3 bg-neutral-800 text-[#E8652B] text-xs font-bold uppercase tracking-widest">
-                Contract Management View
-              </div>
-              <div className="p-4 sm:p-5 space-y-3">
-                {contracts.map((c) => (
-                  <div key={c.client} className="bg-neutral-800 border border-[#334155] rounded-lg p-3">
-                    <div className="flex flex-wrap items-center justify-between gap-2">
-                      <div>
-                        <p className="text-white text-[11px] font-semibold">{c.client} — {c.name}</p>
-                        <p className="text-neutral-400 text-[10px] mt-0.5 flex items-center gap-1">
-                          <CalendarClock className="h-3 w-3" /> {c.dates}
-                        </p>
-                      </div>
-                      <span className={`px-1.5 py-0.5 rounded text-[9px] font-semibold ${c.statusCls}`}>{c.status}</span>
-                    </div>
-                    <div className="mt-2 flex flex-wrap items-center gap-2 text-[9px] text-neutral-400">
-                      <span className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-[#334155]/40">
-                        <FileText className="h-2.5 w-2.5" /> {c.rateCards}
-                      </span>
-                      <span className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-[#334155]/40">
-                        <AlertTriangle className="h-2.5 w-2.5" /> {c.doc}
-                      </span>
-                    </div>
-                  </div>
-                ))}
-                <p className="text-[10px] text-neutral-600">
-                  Contract list with status badges, linked rate cards and document attachments — expiry never arrives unnoticed.
-                </p>
-              </div>
-            </div>
+            <RateAndContractManagementMockup />
           </div>
         </div>
       </section>

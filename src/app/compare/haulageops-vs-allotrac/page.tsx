@@ -47,7 +47,7 @@ const comparisonRows = [
   },
   {
     feature: "Setup cost & time",
-    ho: { type: "text", text: "From $1,500 setup · 2–4 week go-live" },
+    ho: { type: "text", text: "Tailored fleet setup · 2–4 week go-live" },
     alt: { type: "text", text: "Contact Allotrac for pricing; implementation varies" },
   },
   {

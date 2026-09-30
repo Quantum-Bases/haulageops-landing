@@ -6,6 +6,7 @@ import {
   ChevronRight,
   ArrowRight,
 } from "lucide-react";
+import { ReducingInvoiceDelaysMockup } from "@/components/shared/solution-mockups";
 
 export const metadata = {
   title: "Reduce Invoice Delays in Bulk Haulage | HaulageOps",
@@ -270,6 +271,7 @@ export default function ReducingInvoiceDelaysPage() {
               </p>
             </div>
           </div>
+          <ReducingInvoiceDelaysMockup />
         </div>
       </section>
 

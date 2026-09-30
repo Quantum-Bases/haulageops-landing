@@ -2,6 +2,7 @@ import Link from "next/link";
 import { MainLayout } from "@/components/layout/MainLayout";
 import { Button } from "@/components/ui/button";
 import { CheckCircle, ChevronRight, ArrowRight, FileText } from "lucide-react";
+import { ContractVersionHistoryMockup, SubcontractorAgreementMockup } from "@/components/shared/platform-mockups";
 
 export const metadata = {
   title: "Contract Management for Haulage Operators | HaulageOps",
@@ -263,29 +264,9 @@ export default function ContractManagementPage() {
                 ))}
               </ul>
             </div>
-            {/* Version history visual spec */}
-            <div className="rounded-2xl border border-neutral-200 bg-neutral-900 border-y border-neutral-800 overflow-hidden">
-              <div className="px-5 py-3 bg-neutral-800 text-[#E8652B] text-xs font-bold uppercase tracking-widest">
-                Contract record — version history panel
-              </div>
-              <div className="p-6 text-neutral-400 text-sm font-mono leading-relaxed space-y-3">
-                {[
-                  { v: "v1 Original", meta: "Approved 12 Jan by John M", status: "Approved", statusCls: "text-[#4ADE80] bg-[#16A34A]/20" },
-                  { v: "v2 Rate Amendment", meta: "Approved 3 Apr by Sarah K", status: "Approved", statusCls: "text-[#4ADE80] bg-[#16A34A]/20" },
-                  { v: "v3 Current", meta: "Pending review", status: "Draft", statusCls: "text-neutral-400 bg-[#334155]" },
-                ].map((row) => (
-                  <div key={row.v} className="flex items-center justify-between bg-neutral-800 rounded-lg px-3 py-2 border border-[#334155] text-xs">
-                    <div>
-                      <p className="text-white font-semibold">{row.v}</p>
-                      <p className="text-neutral-500 text-[10px]">{row.meta}</p>
-                    </div>
-                    <span className={`px-2 py-0.5 rounded text-[10px] font-semibold ${row.statusCls}`}>{row.status}</span>
-                  </div>
-                ))}
-                <p className="text-[10px] text-neutral-600 pt-1">
-                  Side-by-side diff showing changed rate fields between v1 and v2.
-                </p>
-              </div>
+            {/* Version history visual mockup */}
+            <div className="shadow-2xl rounded-2xl overflow-hidden border border-neutral-800">
+              <ContractVersionHistoryMockup />
             </div>
           </div>
         </div>
@@ -344,26 +325,9 @@ export default function ContractManagementPage() {
       <section className="py-20 bg-neutral-50/50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-10 items-center">
-            {/* Subcontractor contract record visual spec */}
-            <div className="rounded-2xl border border-neutral-200 bg-neutral-900 border-y border-neutral-800 overflow-hidden order-1 lg:order-none">
-              <div className="px-5 py-3 bg-neutral-800 text-[#E8652B] text-xs font-bold uppercase tracking-widest">
-                Subcontractor contract record — expiry and status view
-              </div>
-              <div className="p-6 text-neutral-400 text-sm font-mono leading-relaxed space-y-3">
-                <div className="flex items-center justify-between">
-                  <span className="text-white font-semibold text-xs">Redlands Haulage Pty Ltd</span>
-                  <span className="px-2 py-0.5 rounded bg-[#16A34A]/20 text-[#4ADE80] text-[10px] font-semibold">Active</span>
-                </div>
-                <div className="space-y-2 text-xs">
-                  <p>Expiry: <span className="text-[#FBBF24] font-semibold">30 Sep 2026 — 45 days</span></p>
-                  <p>Linked pay rate card: <span className="text-white">Per-tonne aggregate</span></p>
-                  <p>Version: <span className="text-white">v2 current</span></p>
-                  <p>Approved by: Sarah K, 3 Apr 2026</p>
-                  <p className="flex items-center gap-1.5">
-                    <FileText className="h-3 w-3 text-[#4ADE80]" /> Signed agreement PDF — Azure storage
-                  </p>
-                </div>
-              </div>
+            {/* Subcontractor contract record visual mockup */}
+            <div className="shadow-2xl rounded-2xl overflow-hidden border border-neutral-800 order-1 lg:order-none">
+              <SubcontractorAgreementMockup />
             </div>
             <div>
               <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Responsible management</span>

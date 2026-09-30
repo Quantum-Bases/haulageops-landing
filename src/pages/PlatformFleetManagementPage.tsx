@@ -5,6 +5,7 @@ import Link from "next/link";
 import { MainLayout } from "@/components/layout/MainLayout";
 import { Button } from "@/components/ui/button";
 import { CheckCircle, ChevronRight } from "lucide-react";
+import { FleetManagementMockup } from "@/components/shared/platform-mockups";
 
 const vehicleCards = [
   {
@@ -236,9 +237,8 @@ export function PlatformFleetManagementPage() {
           <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             Fleet view — available vehicles, expiring documents, current assignments.
           </h2>
-          <div className="mt-8 rounded-2xl border border-neutral-200 bg-neutral-900 border-y border-neutral-800 p-8 text-neutral-400 text-sm font-mono leading-relaxed">
-            <div className="text-[#E8652B] font-bold mb-2 text-xs uppercase tracking-widest">HaulageOps — Fleet Management Panel</div>
-            <p>Fleet management table in Admin Panel. Columns: Vehicle (rego + make/model), Type, Capacity, Status (Available/In Use/Off Road — colour-coded), Assigned Driver, Rego Expiry (green if current, amber if within 30 days, red if lapsed), Inspection Due, Current Job link. Filter bar: All Types / Available Only / Documents Expiring Soon. One row highlighted in amber — registration expires in 18 days. One row with red flag — inspection overdue. Clicking a vehicle row opens the vehicle detail panel with full document history.</p>
+          <div className="mt-8 shadow-2xl rounded-2xl overflow-hidden border border-neutral-800">
+            <FleetManagementMockup />
           </div>
         </div>
       </section>

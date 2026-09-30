@@ -1,365 +1,362 @@
 import Link from "next/link";
 import { MainLayout } from "@/components/layout/MainLayout";
 import { Button } from "@/components/ui/button";
-import { CheckCircle, ChevronRight, ArrowRight, Plug, RefreshCw, ShieldCheck } from "lucide-react";
+import {
+  CheckCircle,
+  ChevronRight,
+  ArrowRight,
+  Plug,
+  RefreshCw,
+  ShieldCheck,
+  Sparkles,
+  MapPin,
+  Bell,
+  Database,
+  Radio,
+  FileCheck,
+  CheckCircle2,
+} from "lucide-react";
 
 export const metadata = {
-  title: "Integrations | HaulageOps",
+  title: "Integrations & Technical Ecosystem | HaulageOps",
   description:
-    "Connect HaulageOps to the tools your operation already runs on — starting with Xero. Invoices, payments and job data sync automatically without re-keying.",
+    "Connect HaulageOps to your core accounting, mapping, push notification, and cloud infrastructure — featuring native Xero sync, Google Maps, Mapbox, and Azure storage.",
 };
 
-const heroKickers = [
-  "Xero live today",
-  "Automatic two-way sync",
-  "No re-keying",
-  "Secure API connections",
-];
-
 const proofStrip = [
-  "Xero integration available now",
-  "Invoices push from HaulageOps",
-  "Payments sync back via webhook",
-  "Job-linked line items",
-  "Secure API credentials",
-  "More integrations on the roadmap",
+  "Xero OAuth2 2-Way Accounting Sync",
+  "Google Maps Address Autocomplete & Routing",
+  "Mapbox Interactive Subcontractor Maps",
+  "Microsoft Azure Cloud Blob Vault",
+  "Firebase Cloud Messaging (FCM) Driver Push",
+  "Socket.io Real-Time Live Dispatch Webhooks",
 ];
 
-const availableIntegrations = [
+const liveIntegrations = [
   {
-    title: "Xero Integration",
-    status: "Available now",
-    desc: "The HaulageOps Xero integration connects billing directly to your accounting system. Completed jobs generate invoices in HaulageOps and push to Xero with job-linked line items — every line traces back to the job, material and rate that produced it.",
+    icon: RefreshCw,
+    title: "Xero Accounting Integration",
+    badge: "Native Accounting",
+    desc: "Direct two-way OAuth2 connection. Verified field dockets generate draft sales invoices with job-linked line items. Real-time webhooks sync payment confirmations directly back to the dispatch and client portals.",
     points: [
-      "Invoices push to Xero automatically once approved",
-      "Payment events flow back into HaulageOps via webhook",
-      "Client records and rate data kept in sync",
-      "No manual re-entry between systems",
+      "Invoices push with exact tonnage and rate card lines",
+      "Real-time payment webhooks update status to 'Paid'",
+      "Automated Recipient Created Tax Invoices (RCTIs) for subbies",
+      "Zero manual ledger re-keying between operations and finance",
     ],
     href: "/platform/integrations/xero",
-    linkLabel: "Explore the Xero integration",
+    linkLabel: "Explore Xero Integration Specs",
+  },
+  {
+    icon: MapPin,
+    title: "Google Maps Platform",
+    badge: "Location & Geocoding",
+    desc: "Address autocomplete and geocoding during job creation. Ensures accurate site coordinates, optimal heavy vehicle routing, and distance calculations for rate card evaluations.",
+    points: [
+      "Predictive autocomplete for quarry pits and civil sites",
+      "Precision geocoding for automated driver arrival detection",
+      "Accurate mileage calculations for per-km or travel rate rules",
+      "Fewer wrong-site deliveries and driver turnarounds",
+    ],
+  },
+  {
+    icon: Radio,
+    title: "Mapbox Interactive Maps",
+    badge: "Subcontractor Mobility",
+    desc: "Embedded mapping within the free Subcontractor Portal. External subbies and owner-drivers view job locations, route overviews, and site instructions from any web browser.",
+    points: [
+      "Zero app installation required for external subcontractors",
+      "Interactive turn-by-turn route previews and satellite views",
+      "Pickup and tipping location markers with custom site notes",
+      "Eliminates repetitive calls asking dispatch for addresses",
+    ],
+  },
+  {
+    icon: Database,
+    title: "Microsoft Azure Cloud Vault",
+    badge: "Secure Document Store",
+    desc: "Enterprise cloud blob storage for all signed proof-of-delivery photos, weighbridge scale tickets, driver licences, and insurance policies with geo-redundancy.",
+    points: [
+      "Encrypted file storage at rest with AES-256",
+      "Tamper-evident links for client portal self-service downloads",
+      "Fast global CDN delivery for heavy image uploads",
+      "Automated disaster recovery and multi-region replication",
+    ],
+  },
+  {
+    icon: Bell,
+    title: "Firebase Cloud Messaging (FCM)",
+    badge: "Field Push Daemon",
+    desc: "Reliable push notifications for the native iOS and Android driver mobile apps. Critical dispatch changes and new load assignments wake the app immediately.",
+    points: [
+      "Instant driver alerts when new jobs are dispatched",
+      "Immediate notifications on site cancellations or urgent changes",
+      "Works in background mode without keeping the app open",
+      "Zero reliance on easily ignored SMS messages",
+    ],
+  },
+  {
+    icon: Plug,
+    title: "Socket.io Real-Time Engine",
+    badge: "Live Telemetry",
+    desc: "Bidirectional WebSocket connection powering the Master Dispatch Board and Client Portal. Status changes from drivers appear on the board in sub-second time.",
+    points: [
+      "Sub-second state synchronisation across all dispatcher screens",
+      "Live driver status shifts (En Route → On Site → Tipping → Done)",
+      "Zero manual browser refresh needed to see current job progress",
+      "Low-bandwidth data packets engineered for mobile connections",
+    ],
   },
 ];
 
 const roadmapItems = [
-  "Accounting platforms beyond Xero — evaluated against demand from Australian haulage operators",
-  "Fuel and telematics data feeds — fuel card transactions matched to vehicle records",
-  "Toll and road user charge reconciliation",
-  "Payroll exports for driver and staff payments",
-  "Scheduling and ERP connections for larger construction and mining clients",
-  "API access for custom integrations built by your own team",
+  {
+    title: "Hardware Telematics / Fleet GPS Connectors",
+    status: "In Active Development",
+    badgeClass: "bg-blue-50 text-blue-700 border-blue-200",
+    desc: "API adapters to ingest position data from hardware telematics units (e.g. Navman, Samsara, Geotab) directly into the HaulageOps dispatch board.",
+  },
+  {
+    title: "Weighbridge Scale Direct Ingestion",
+    status: "Roadmap 2026",
+    badgeClass: "bg-neutral-100 text-neutral-700 border-neutral-200",
+    desc: "Direct digital connectivity with weighbridge indicator hardware to capture gross, tare, and net weights automatically at scale crossing.",
+  },
+  {
+    title: "Electronic Work Diary (EWD) Fatigue Sync",
+    status: "Roadmap 2026",
+    badgeClass: "bg-neutral-100 text-neutral-700 border-neutral-200",
+    desc: "Integration with NHVR-approved Electronic Work Diary systems to sync driver work and rest logs directly with dispatch schedules.",
+  },
+  {
+    title: "MYOB & Custom Enterprise ERP Connectors",
+    status: "Available via Scope",
+    badgeClass: "bg-amber-50 text-amber-700 border-amber-200",
+    desc: "Custom accounting bridges for larger operators running on-premise or cloud MYOB, SAP, or Microsoft Dynamics environments.",
+  },
 ];
 
 const howItWorks = [
   {
     num: "01",
-    title: "Connect securely",
-    desc: "You connect your Xero account through an authorised OAuth connection — the same secure standard used by banking and accounting apps. HaulageOps never sees or stores your Xero password.",
+    title: "Authorize OAuth2 Access",
+    desc: "Connect your Xero account through official token-based authentication. HaulageOps never views or stores your raw accounting passwords.",
   },
   {
     num: "02",
-    title: "Configure the mapping",
-    desc: "During setup you map your accounts — revenue account, GST treatment, client records — so invoices land in Xero the way your accountant expects them to.",
+    title: "Map Your Rate & Account Codes",
+    desc: "During onboarding, our team maps your client directories, GST rules, and nominal revenue codes so draft invoices land in Xero clean.",
   },
   {
     num: "03",
-    title: "Run operations as normal",
-    desc: "Jobs, rates and invoices continue to run entirely inside HaulageOps. When an invoice is approved, it pushes to Xero automatically. When a client pays, the webhook updates the invoice status back in HaulageOps.",
-  },
-];
-
-const relatedCards = [
-  {
-    title: "Billing & Invoicing",
-    href: "/platform/billing-and-invoicing",
-    linkLabel: "Billing & invoicing",
-    desc: "Invoices are built from completed jobs and rate cards inside HaulageOps — then pushed to Xero as part of the same billing workflow. See how the invoice lifecycle works end to end.",
-  },
-  {
-    title: "Rate Management",
-    href: "/platform/rate-management",
-    linkLabel: "Rate management",
-    desc: "The rate applied to a job becomes the line on the invoice that flows to Xero. Rate management ensures the amount charged matches the agreed rate card.",
-  },
-  {
-    title: "Client Portal",
-    href: "/platform/client-portal",
-    linkLabel: "Client portal",
-    desc: "Clients see invoice status and download PDFs from the Client Portal — while the same invoice status updates in Xero. Both sides stay in sync from the same source record.",
-  },
-];
-
-const faqs = [
-  {
-    q: "Which integrations are available today?",
-    a: "Xero is the first live integration, covering the job-to-invoice accounting flow — invoices push from HaulageOps to Xero, and payment events flow back via webhook. Additional accounting platforms and operational integrations are evaluated against demand from Australian haulage operators and added to the roadmap.",
-  },
-  {
-    q: "Is the Xero integration included in the subscription?",
-    a: "The Xero integration is part of the HaulageOps platform. Configuration — account mapping, client sync and invoice settings — is covered during implementation. Book a demo to walk through the setup for your business.",
-  },
-  {
-    q: "Do invoices sync to Xero automatically?",
-    a: "Yes. When an invoice is approved in HaulageOps, it is pushed to Xero automatically. Payment events from Xero are received by HaulageOps via webhook and update the invoice status — so the two systems stay aligned without manual re-entry.",
-  },
-  {
-    q: "Can we integrate HaulageOps with other tools we use?",
-    a: "Roadmap priorities are set from customer demand. If your operation depends on a specific accounting platform, telematics provider or ERP, raise it during your demo conversation — it feeds directly into what we build next.",
-  },
-  {
-    q: "Is my accounting data kept secure during integration?",
-    a: "Connections use authorised OAuth connections. HaulageOps never receives or stores your accounting platform password, and data transfers over encrypted connections. Access is scoped to the integration function — invoice and payment records — not to the entire accounting file.",
+    title: "Dispatch, Verify & Sync",
+    desc: "Dispatch jobs as normal. Drivers capture digital dockets in the cab. Invoices batch into Xero, and payment webhooks update your board in real time.",
   },
 ];
 
 export default function IntegrationsPage() {
   return (
     <MainLayout showCta={false}>
-      {/* Breadcrumb */}
-      <div className="pt-24 pb-0 bg-neutral-50/70">
+      {/* 1. Hero Header */}
+      <section className="pt-28 pb-16 bg-gradient-to-b from-neutral-50/80 via-white to-white border-b border-neutral-200">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <nav className="flex items-center gap-2 text-xs text-neutral-500">
-            <Link href="/" className="hover:text-[#E8652B]">Home</Link>
+          <nav className="flex items-center gap-2 text-xs text-neutral-500 mb-6">
+            <Link href="/" className="hover:text-[#E8652B] transition-colors">Home</Link>
             <ChevronRight className="h-3 w-3" />
-            <Link href="/platform" className="hover:text-[#E8652B]">Platform</Link>
+            <Link href="/platform" className="hover:text-[#E8652B] transition-colors">Platform</Link>
             <ChevronRight className="h-3 w-3" />
             <span className="text-neutral-900 font-medium">Integrations</span>
           </nav>
-        </div>
-      </div>
 
-      {/* HERO */}
-      <section className="pt-10 pb-20 bg-gradient-to-b from-neutral-50/80 via-white to-white border-b border-neutral-200">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-[#E8652B] bg-orange-50 border border-orange-200 mb-4 animate-in fade-in slide-in-from-bottom-4 animation-duration-700 fill-mode-both">
-            Platform — Integrations
-          </span>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-neutral-900 max-w-4xl leading-[1.1] animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-100 fill-mode-both">
-            Connect HaulageOps to the tools your operation already runs on.
-          </h1>
-          <p className="mt-6 text-lg sm:text-xl text-neutral-600 max-w-3xl leading-relaxed animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-150 fill-mode-both">
-            HaulageOps integrates with the platforms haulage businesses depend on — starting with Xero. Invoices, payments and client records sync automatically between systems, so the same data is never keyed in twice.
-          </p>
-          <div className="mt-8 flex flex-wrap gap-3 animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-200 fill-mode-both">
-            <Link href="/platform/integrations/xero">
-              <Button size="lg" className="bg-[#E8652B] hover:bg-[#D05520] text-white font-semibold">
-                Xero Integration
-              </Button>
-            </Link>
-            <Link href="/demo">
-              <Button size="lg" variant="outline" className="border-neutral-200 text-neutral-700 hover:bg-neutral-50/50">
-                Book a Demo
-              </Button>
-            </Link>
-          </div>
-          {/* Kicker pills */}
-          <div className="mt-8 flex flex-wrap gap-2 animate-in fade-in slide-in-from-bottom-4 animation-duration-700 delay-300 fill-mode-both">
-            {heroKickers.map((pill) => (
-              <span key={pill} className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-neutral-100 text-xs font-medium text-neutral-700">
-                <CheckCircle className="h-3.5 w-3.5 text-[#E8652B] shrink-0" />
-                {pill}
-              </span>
-            ))}
-          </div>
-        </div>
-      </section>
+          <div className="max-w-4xl">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider text-[#E8652B] bg-orange-50 border border-orange-200 mb-4">
+              <Plug className="h-3.5 w-3.5" />
+              Connected Ecosystem
+            </span>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-neutral-900 leading-[1.08]">
+              Connect HaulageOps to the tools
+              <span className="block text-[#E8652B] mt-2">your transport business relies on.</span>
+            </h1>
+            <p className="mt-6 text-lg sm:text-xl text-neutral-600 leading-relaxed max-w-3xl font-normal">
+              From two-way Xero accounting synchronization and Google Maps geocoding to Mapbox subcontractor routes and Azure cloud storage, HaulageOps integrates with world-class infrastructure without data re-keying.
+            </p>
 
-      {/* PROOF STRIP */}
-      <div className="bg-neutral-900 py-5">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-center">
-            {proofStrip.map((item) => (
-              <div key={item} className="flex items-center justify-center gap-2">
-                <CheckCircle className="h-3.5 w-3.5 text-[#E8652B] shrink-0" />
-                <span className="text-white font-bold text-sm">{item}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* AVAILABLE INTEGRATIONS */}
-      <section className="py-20 bg-white">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Available integrations</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
-            One live integration today — with more on the roadmap.
-          </h2>
-          <div className="mt-10 grid gap-6">
-            {availableIntegrations.map((integration) => (
-              <div key={integration.title} className="bg-neutral-50/50 rounded-2xl p-8 border border-neutral-200 grid lg:grid-cols-2 gap-8 items-start">
-                <div>
-                  <div className="flex items-center gap-2.5">
-                    <div className="h-10 w-10 rounded-lg bg-[#E8652B]/10 flex items-center justify-center">
-                      <Plug className="h-5 w-5 text-[#E8652B]" />
-                    </div>
-                    <h3 className="text-xl font-bold text-neutral-900">{integration.title}</h3>
-                  </div>
-                  <span className="mt-3 inline-block px-2.5 py-1 rounded-full bg-[#16A34A]/10 text-[#E8652B] text-[11px] font-semibold">
-                    {integration.status}
-                  </span>
-                  <p className="mt-4 text-sm text-neutral-600 leading-relaxed">{integration.desc}</p>
-                  <Link href={integration.href} className="mt-5 inline-flex items-center gap-1 text-sm text-[#E8652B] hover:underline font-medium">
-                    {integration.linkLabel} <ArrowRight className="h-3.5 w-3.5" />
-                  </Link>
-                </div>
-                <div className="bg-white rounded-xl border border-neutral-200 p-6">
-                  <h4 className="font-bold text-neutral-900 text-sm mb-3">What it covers</h4>
-                  <ul className="space-y-3">
-                    {integration.points.map((point) => (
-                      <li key={point} className="flex items-start gap-2 text-sm text-neutral-700">
-                        <CheckCircle className="h-4 w-4 text-[#E8652B] shrink-0 mt-0.5" />
-                        <span>{point}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* HOW IT WORKS */}
-      <section className="py-20 bg-neutral-50/50">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">How integrations work</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
-            Connected in minutes, running automatically.
-          </h2>
-          <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {howItWorks.map((step) => (
-              <div key={step.num} className="bg-white rounded-2xl p-6 border border-neutral-200 shadow-sm">
-                <span className="text-3xl font-black text-[#E8652B]/20 leading-none">{step.num}</span>
-                <h3 className="mt-2 font-bold text-neutral-900 text-base">{step.title}</h3>
-                <p className="mt-2 text-sm text-neutral-600 leading-relaxed">{step.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* INTEGRATION ROADMAP */}
-      <section className="py-20 bg-white">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-10 items-center">
-            <div>
-              <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Roadmap</span>
-              <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-xl">
-                What&apos;s being evaluated next.
-              </h2>
-              <p className="mt-6 text-neutral-600 leading-relaxed">
-                Integration priorities are set by what Australian haulage operators actually run on. If a specific platform is critical to your operation, it shapes what we build next. Current areas of evaluation include:
-              </p>
-              <ul className="mt-6 space-y-3">
-                {roadmapItems.map((item) => (
-                  <li key={item} className="flex items-start gap-2 text-sm text-neutral-700">
-                    <CheckCircle className="h-4 w-4 text-[#E8652B] shrink-0 mt-0.5" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            {/* Secure connection visual */}
-            <div className="rounded-2xl border border-neutral-200 bg-neutral-900 border-y border-neutral-800 overflow-hidden">
-              <div className="px-5 py-3 bg-neutral-800 text-[#E8652B] text-xs font-bold uppercase tracking-widest">
-                Secure connection — how it connects
-              </div>
-              <div className="p-6 text-neutral-400 text-sm font-mono leading-relaxed space-y-3">
-                <div className="flex items-center gap-3">
-                  <div className="h-12 w-12 rounded-lg bg-[#E8652B]/15 flex items-center justify-center">
-                    <RefreshCw className="h-5 w-5 text-[#E8652B]" />
-                  </div>
-                  <div>
-                    <p className="text-white text-xs font-semibold">HaulageOps</p>
-                    <p className="text-[10px] text-neutral-500">Billing module — invoice & payment records</p>
-                  </div>
-                </div>
-                <div className="flex items-center gap-2 text-[10px] text-neutral-500">
-                  <span className="flex-1 border-t border-dashed border-[#334155]" />
-                  <span className="whitespace-nowrap">OAuth · encrypted</span>
-                  <span className="flex-1 border-t border-dashed border-[#334155]" />
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="h-12 w-12 rounded-lg bg-[#334155]/50 flex items-center justify-center">
-                    <ShieldCheck className="h-5 w-5 text-neutral-400" />
-                  </div>
-                  <div>
-                    <p className="text-white text-xs font-semibold">Xero</p>
-                    <p className="text-[10px] text-neutral-500">Invoices · payments · client records</p>
-                  </div>
-                </div>
-                <p className="text-[10px] text-neutral-600 pt-1">
-                  Invoices push one way, payments return via webhook. Credentials are never shared or stored in plain text.
-                </p>
-              </div>
+            <div className="mt-8 flex flex-wrap gap-4">
+              <Link href="/platform/integrations/xero">
+                <Button size="lg" className="bg-[#E8652B] hover:bg-[#D05520] text-white font-bold cursor-pointer shadow-sm">
+                  Explore Xero Integration
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </Link>
+              <Link href="/demo">
+                <Button size="lg" variant="outline" className="border-neutral-300 text-neutral-700 hover:bg-neutral-100 font-bold">
+                  Book a Demo Walkthrough
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* RELATED PLATFORM FEATURES */}
-      <section className="py-20 bg-neutral-50/50">
+      {/* 2. Proof Strip */}
+      <section className="bg-neutral-900 py-6 border-y border-neutral-800">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-wrap items-center justify-center gap-x-8 gap-y-3">
+          {proofStrip.map((item) => (
+            <span key={item} className="text-xs sm:text-sm text-neutral-300 font-medium flex items-center gap-2">
+              <span className="h-1.5 w-1.5 rounded-full bg-[#E8652B]" />
+              {item}
+            </span>
+          ))}
+        </div>
+      </section>
+
+      {/* 3. Live Integrations Grid */}
+      <section className="py-20 bg-white border-b border-neutral-200">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Related platform features</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
-            Integrations connect the commercial side of the platform.
-          </h2>
-          <div className="mt-10 grid md:grid-cols-3 gap-6">
-            {relatedCards.map((card) => (
-              <div key={card.title} className="bg-white rounded-2xl p-6 border border-neutral-200">
-                <h3 className="font-bold text-neutral-900 mb-2">
-                  <Link href={card.href} className="hover:text-[#E8652B] transition-colors">
-                    {card.title}
-                  </Link>
-                </h3>
-                <p className="text-sm text-neutral-600 leading-relaxed">{card.desc}</p>
-                <Link href={card.href} className="mt-3 inline-flex items-center gap-1 text-sm text-[#E8652B] hover:underline font-medium">
-                  {card.linkLabel} <ArrowRight className="h-3.5 w-3.5" />
-                </Link>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ */}
-      <section className="py-20 bg-white">
-        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Frequently asked questions</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900">
-            Integrations — common questions.
-          </h2>
-          <div className="mt-8 space-y-3">
-            {faqs.map((faq) => (
-              <details key={faq.q} className="group border border-neutral-200 bg-white rounded-xl overflow-hidden">
-                <summary className="flex items-center justify-between gap-4 px-6 py-4 cursor-pointer font-semibold text-neutral-900 text-sm list-none hover:bg-neutral-50/50">
-                  {faq.q}
-                  <ChevronRight className="h-4 w-4 text-neutral-400 shrink-0 group-open:rotate-90 transition-transform" />
-                </summary>
-                <div className="px-6 pb-5 text-sm text-neutral-600 leading-relaxed border-t border-neutral-100">
-                  <p className="pt-4">{faq.a}</p>
-                </div>
-              </details>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA BAND */}
-      <section className="py-16 bg-neutral-900">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-          <div>
-            <h2 className="text-2xl sm:text-3xl font-bold text-white">Stop re-keying invoices into your accounting system.</h2>
-            <p className="mt-2 text-neutral-400 text-sm leading-relaxed max-w-xl">
-              See how the Xero integration moves invoices and payments between systems automatically — in a 20-minute demo.
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Production Ready</span>
+            <h2 className="mt-2 text-3xl sm:text-4xl font-black text-neutral-900">
+              Live Core Integrations
+            </h2>
+            <p className="mt-3 text-neutral-600 text-base">
+              These connections are active, production-tested, and included as standard in your HaulageOps subscription.
             </p>
           </div>
-          <Link href="/demo" className="shrink-0">
-            <Button size="lg" className="bg-[#E8652B] hover:bg-[#D05520] text-white font-semibold">
-              Book a Demo
-            </Button>
-          </Link>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {liveIntegrations.map((item) => {
+              const IconComp = item.icon;
+              return (
+                <div
+                  key={item.title}
+                  className="bg-neutral-50/50 rounded-2xl p-7 border border-neutral-200 shadow-xs flex flex-col justify-between hover:border-[#E8652B]/70 transition-all"
+                >
+                  <div>
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="w-12 h-12 rounded-xl bg-orange-50 border border-orange-200 text-[#E8652B] flex items-center justify-center">
+                        <IconComp className="h-6 w-6" />
+                      </div>
+                      <span className="text-[11px] font-bold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-200">
+                        {item.badge}
+                      </span>
+                    </div>
+
+                    <h3 className="text-xl font-bold text-neutral-900">{item.title}</h3>
+                    <p className="mt-2.5 text-xs sm:text-sm text-neutral-600 leading-relaxed font-normal">{item.desc}</p>
+
+                    <div className="mt-6 pt-5 border-t border-neutral-200/80">
+                      <ul className="space-y-2">
+                        {item.points.map((pt) => (
+                          <li key={pt} className="flex items-start gap-2 text-xs text-neutral-700">
+                            <CheckCircle2 className="h-3.5 w-3.5 text-emerald-600 shrink-0 mt-0.5" />
+                            <span>{pt}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+
+                  {item.href && (
+                    <div className="mt-6 pt-4 border-t border-neutral-200">
+                      <Link
+                        href={item.href}
+                        className="inline-flex items-center gap-1.5 text-xs font-bold text-[#E8652B] hover:text-[#D05520]"
+                      >
+                        <span>{item.linkLabel}</span>
+                        <ArrowRight className="h-3.5 w-3.5" />
+                      </Link>
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* 4. How the Flow Works */}
+      <section className="py-20 bg-neutral-50/50 border-b border-neutral-200">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Implementation Steps</span>
+            <h2 className="mt-2 text-3xl sm:text-4xl font-black text-neutral-900">
+              Connected in Minutes. Running Silently.
+            </h2>
+            <p className="mt-3 text-neutral-600 text-base">
+              How HaulageOps syncs with your operational and financial stack.
+            </p>
+          </div>
+
+          <div className="grid sm:grid-cols-3 gap-8">
+            {howItWorks.map((step) => (
+              <div key={step.num} className="bg-white rounded-2xl p-7 border border-neutral-200 shadow-xs">
+                <span className="text-3xl font-black text-[#E8652B]/20 leading-none">{step.num}</span>
+                <h3 className="mt-2 font-bold text-neutral-900 text-lg">{step.title}</h3>
+                <p className="mt-2.5 text-xs sm:text-sm text-neutral-600 leading-relaxed font-normal">{step.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 5. Roadmap Integrations */}
+      <section className="py-20 bg-white border-b border-neutral-200">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mb-12">
+            <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Honest Roadmap</span>
+            <h2 className="mt-2 text-3xl sm:text-4xl font-black text-neutral-900">
+              Future Connectors in Evaluation
+            </h2>
+            <p className="mt-3 text-neutral-600 text-base">
+              We never claim integrations we haven&apos;t built yet. Here is our direct development pipeline:
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            {roadmapItems.map((r) => (
+              <div key={r.title} className="bg-neutral-50/50 rounded-2xl p-6 border border-neutral-200 shadow-xs flex flex-col justify-between">
+                <div>
+                  <div className="flex items-center justify-between mb-3">
+                    <h3 className="font-bold text-neutral-900 text-base">{r.title}</h3>
+                    <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full border ${r.badgeClass}`}>
+                      {r.status}
+                    </span>
+                  </div>
+                  <p className="text-xs sm:text-sm text-neutral-600 leading-relaxed font-normal">{r.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 6. CTA Footer */}
+      <section className="py-20 bg-neutral-900 text-white">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row md:items-center md:justify-between gap-8">
+          <div>
+            <span className="text-xs font-bold uppercase tracking-wider text-[#E8652B] mb-2 block">
+              Integrations Tailored to You
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-black text-white">
+              Need a specific connector for your fleet?
+            </h2>
+            <p className="mt-2 text-neutral-400 text-sm sm:text-base max-w-xl">
+              Talk to our engineering team. We'll review your software stack and evaluate your technical requirements during your 20-minute demo.
+            </p>
+          </div>
+          <div className="flex flex-col sm:flex-row gap-4 shrink-0">
+            <Link href="/demo">
+              <Button size="lg" className="w-full sm:w-auto bg-[#E8652B] hover:bg-[#D05520] text-white font-bold px-8 shadow-sm">
+                Book a Demo Walkthrough
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </Link>
+            <Link href="/contact">
+              <Button size="lg" variant="outline" className="w-full sm:w-auto border-neutral-700 bg-neutral-800 text-white hover:bg-neutral-700 font-bold">
+                Contact Technical Team
+              </Button>
+            </Link>
+          </div>
         </div>
       </section>
     </MainLayout>

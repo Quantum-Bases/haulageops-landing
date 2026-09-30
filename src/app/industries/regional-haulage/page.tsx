@@ -6,6 +6,7 @@ import {
   ChevronRight,
   ArrowRight,
 } from "lucide-react";
+import { RegionalHaulageMockup } from "@/components/shared/industry-mockups";
 
 export const metadata = {
   title: "Regional Haulage Operations Software | HaulageOps",
@@ -381,19 +382,7 @@ export default function RegionalHaulagePage() {
           <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             Regional haulage dispatch board in HaulageOps.
           </h2>
-          <div className="mt-8 rounded-2xl bg-neutral-900 border-y border-neutral-800 border border-neutral-800 overflow-hidden">
-            <div className="flex items-center gap-2 px-5 py-3 bg-neutral-800">
-              <span className="h-2.5 w-2.5 rounded-full bg-[#E8652B]" />
-              <span className="h-2.5 w-2.5 rounded-full bg-[#94A3B8]" />
-              <span className="h-2.5 w-2.5 rounded-full bg-[#475569]" />
-              <span className="ml-3 text-xs font-semibold text-neutral-300">HaulageOps — Dispatch Board (Regional Haulage)</span>
-            </div>
-            <div className="p-6">
-              <p className="text-sm text-neutral-400 leading-relaxed">
-                Dispatch board showing a regional haulage operation mid-route: 4 owned drivers on long-distance jobs, each showing last known GPS position on a regional map with distance from destination. Driver 1 status: "En route — last update 47 min ago (connectivity gap indicated)". Driver 2 status: "On site — POD pending". Driver 3 status: "Loaded — departed origin". Sub contractor panel showing 2 regional subs: one accepted and en route, one pending acceptance. Job list on left with delivery windows, load type, client name and region tag. Filter: by region, by driver, by delivery status.
-              </p>
-            </div>
-          </div>
+          <RegionalHaulageMockup />
         </div>
       </section>
 

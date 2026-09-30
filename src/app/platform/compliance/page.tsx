@@ -2,6 +2,7 @@ import Link from "next/link";
 import { MainLayout } from "@/components/layout/MainLayout";
 import { Button } from "@/components/ui/button";
 import { CheckCircle, ChevronRight, ArrowRight, FileText } from "lucide-react";
+import { AuditComplianceMockup } from "@/components/shared/platform-mockups";
 
 export const metadata = {
   title: "Haulage Compliance Management | HaulageOps",
@@ -319,39 +320,9 @@ export default function CompliancePage() {
                 ))}
               </ul>
             </div>
-            {/* Audit log view visual spec */}
-            <div className="rounded-2xl border border-neutral-200 bg-neutral-900 border-y border-neutral-800 overflow-hidden">
-              <div className="px-5 py-3 bg-neutral-800 text-[#E8652B] text-xs font-bold uppercase tracking-widest">
-                HaulageOps — Audit Log View
-              </div>
-              <div className="p-4 sm:p-5">
-                <div className="flex flex-wrap items-center gap-2 text-[10px] mb-4">
-                  <span className="px-2.5 py-1 rounded bg-neutral-800 border border-[#334155] text-neutral-400">JOB-2026-04471</span>
-                  <span className="px-2.5 py-1 rounded bg-neutral-800 border border-[#334155] text-neutral-400">All users</span>
-                  <span className="px-2.5 py-1 rounded bg-neutral-800 border border-[#334155] text-neutral-400">All actions</span>
-                  <span className="px-2.5 py-1 rounded bg-neutral-800 border border-[#334155] text-neutral-400">Any date</span>
-                  <span className="ml-auto px-2.5 py-1 rounded bg-[#E8652B] text-white font-semibold">Export to CSV</span>
-                </div>
-                <div className="space-y-1.5 text-neutral-400 font-mono text-[11px]">
-                  <div className="grid grid-cols-12 gap-2 px-2 text-[10px] uppercase tracking-wider text-neutral-500 border-b border-[#334155] pb-1.5">
-                    <span className="col-span-3">Timestamp</span>
-                    <span className="col-span-3">User</span>
-                    <span className="col-span-3">Action</span>
-                    <span className="col-span-3">Detail</span>
-                  </div>
-                  {auditLogRows.map((row) => (
-                    <div key={row.time} className="grid grid-cols-12 gap-2 px-2 py-1.5 rounded bg-neutral-800 border border-[#334155] items-center">
-                      <span className="col-span-3 text-white">{row.time}</span>
-                      <span className="col-span-3">{row.user}</span>
-                      <span className="col-span-3 text-[#E8652B] font-semibold">{row.action}</span>
-                      <span className="col-span-3 truncate">{row.detail}</span>
-                    </div>
-                  ))}
-                </div>
-                <p className="mt-4 text-[10px] text-neutral-600">
-                  Chronological from most recent to oldest. Filter by user, action type or date range.
-                </p>
-              </div>
+            {/* Audit log view visual mockup */}
+            <div className="shadow-2xl rounded-2xl overflow-hidden border border-neutral-800">
+              <AuditComplianceMockup />
             </div>
           </div>
         </div>

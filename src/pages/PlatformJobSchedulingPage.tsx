@@ -5,6 +5,7 @@ import Link from "next/link";
 import { MainLayout } from "@/components/layout/MainLayout";
 import { Button } from "@/components/ui/button";
 import { CheckCircle, ChevronRight } from "lucide-react";
+import { JobSchedulingTemplateMockup } from "@/components/shared/platform-mockups";
 
 const templateCards = [
   {
@@ -241,9 +242,8 @@ export function PlatformJobSchedulingPage() {
           <p className="mt-4 text-neutral-600 max-w-3xl leading-relaxed">
             Any job created in HaulageOps can be saved as a template. The template stores the origin, destination, material type, quantity unit, rate type, rate value and any standing instructions for the run. When the same work needs to happen again — tomorrow, next week, or next month — the dispatcher loads the template, confirms the date and makes the assignment. The form is already filled.
           </p>
-          <div className="mt-8 rounded-2xl border border-neutral-200 bg-neutral-900 border-y border-neutral-800 p-8 text-neutral-400 text-sm font-mono leading-relaxed">
-            <div className="text-[#E8652B] font-bold mb-2 text-xs uppercase tracking-widest">HaulageOps — Job Creation from Template</div>
-            <p>Job creation form with "Load from template" dropdown expanded. Template list shows: "Quarry A to Site 14 — Aggregate — Per Tonne", "Tip run — Spoil — Muckaway North", "Daily gravel supply — Client XYZ". Selected template has pre-filled fields: Origin (Quarry Address), Destination (Construction Site), Material (Crushed Aggregate), Rate Type (Per Tonne), Rate ($28.50/t). Only Date and Driver fields remain blank for the dispatcher to complete. Save as New Template button visible at the bottom.</p>
+          <div className="mt-8 shadow-2xl rounded-2xl overflow-hidden border border-neutral-800">
+            <JobSchedulingTemplateMockup />
           </div>
           <div className="mt-10 grid md:grid-cols-3 gap-6">
             {templateCards.map((card) => (

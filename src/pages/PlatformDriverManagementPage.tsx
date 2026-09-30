@@ -5,6 +5,7 @@ import Link from "next/link";
 import { MainLayout } from "@/components/layout/MainLayout";
 import { Button } from "@/components/ui/button";
 import { CheckCircle, ChevronRight } from "lucide-react";
+import { DriverManagementMockup } from "@/components/shared/platform-mockups";
 
 const rbacTable = [
   { role: "Driver (app)", visibility: "Their own profile only", management: "Cannot access or edit records", availability: "Set their own availability from app" },
@@ -214,9 +215,8 @@ export function PlatformDriverManagementPage() {
           <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             Driver panel — records, documents and expiry status at a glance.
           </h2>
-          <div className="mt-8 rounded-2xl border border-neutral-200 bg-neutral-900 border-y border-neutral-800 p-8 text-neutral-400 text-sm font-mono leading-relaxed">
-            <div className="text-[#E8652B] font-bold mb-2 text-xs uppercase tracking-widest">HaulageOps — Driver Management Panel</div>
-            <p>Driver management table. Columns: Driver Name, Licence Class, Licence Expiry (green/amber/red status indicator), Medical Expiry, Induction Status, Availability (Available/On Leave/Unavailable), Assigned Vehicle, Last Job. Filter bar: All Drivers / Expiry Alerts / Available Today. One driver highlighted in amber — medical certificate expires in 22 days. Clicking a driver row opens a detail panel with full document list, job history tab, and availability calendar.</p>
+          <div className="mt-8 shadow-2xl rounded-2xl overflow-hidden border border-neutral-800">
+            <DriverManagementMockup />
           </div>
         </div>
       </section>

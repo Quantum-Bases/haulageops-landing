@@ -2,6 +2,7 @@ import Link from "next/link";
 import { MainLayout } from "@/components/layout/MainLayout";
 import { Button } from "@/components/ui/button";
 import { CheckCircle, ChevronRight, ShieldCheck } from "lucide-react";
+import { SubcontractorManagementMockup } from "@/components/shared/platform-mockups";
 
 export const metadata = {
   title: "Subcontractor Management for Haulage | HaulageOps",
@@ -267,51 +268,8 @@ export default function SubcontractorManagementPage() {
           <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             Subcontractor panel — records, documents and job history in one place.
           </h2>
-          <div className="mt-10 rounded-2xl border border-neutral-200 bg-neutral-900 border-y border-neutral-800 overflow-hidden">
-            <div className="px-5 py-3 bg-neutral-800 text-[#E8652B] text-xs font-bold uppercase tracking-widest">
-              HaulageOps — Subcontractor Management Panel
-            </div>
-            <div className="p-6 sm:p-8 text-neutral-400 text-sm font-mono leading-relaxed">
-              <p>
-                Screenshot: Subcontractor management table. Columns: Company Name, Primary Contact, Vehicle Types, Status (Active/Preferred/Inactive — colour-coded), Insurance Expiry (green/amber/red), Jobs This Month, Total Jobs. Filter bar: Status / Insurance Status / Vehicle Type.
-              </p>
-              <div className="mt-4 overflow-x-auto">
-                <table className="w-full text-xs border-collapse">
-                  <thead>
-                    <tr className="bg-neutral-800 text-neutral-500 uppercase tracking-wider text-[10px]">
-                      <th className="text-left px-3 py-2 font-semibold">Company</th>
-                      <th className="text-left px-3 py-2 font-semibold">Contact</th>
-                      <th className="text-left px-3 py-2 font-semibold">Vehicles</th>
-                      <th className="text-left px-3 py-2 font-semibold">Status</th>
-                      <th className="text-left px-3 py-2 font-semibold">Insurance</th>
-                      <th className="text-left px-3 py-2 font-semibold">Jobs This Month</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {[
-                      { company: "Redlands Haulage", contact: "G. Smith", vehicles: "Tipper x4", status: "Active", statusCls: "text-[#4ADE80] bg-[#16A34A]/20", insurance: "12 Nov 2026", insuranceCls: "text-[#4ADE80]", jobs: "34" },
-                      { company: "Brisbane Bulk Cartage", contact: "M. O'Brien", vehicles: "Tipper x6, Road Train", status: "Preferred", statusCls: "text-[#E8652B] bg-[#E8652B]/20", insurance: "02 Mar 2027", insuranceCls: "text-[#4ADE80]", jobs: "58" },
-                      { company: "Logan Tipping Services", contact: "J. Nguyen", vehicles: "Tipper x2", status: "Active", statusCls: "text-[#4ADE80] bg-[#16A34A]/20", insurance: "Expires in 25 days", insuranceCls: "text-[#FBBF24] bg-[#FBBF24]/10 px-1.5 py-0.5 rounded font-semibold", jobs: "19" },
-                      { company: "Sunshine Coast Haulage", contact: "P. Wilson", vehicles: "Dog & Trailer", status: "Inactive", statusCls: "text-neutral-400 bg-[#334155]", insurance: "30 Jun 2026", insuranceCls: "text-[#4ADE80]", jobs: "0" },
-                    ].map((row) => (
-                      <tr key={row.company} className="border-t border-neutral-800">
-                        <td className="px-3 py-2.5 text-white font-medium">{row.company}</td>
-                        <td className="px-3 py-2.5">{row.contact}</td>
-                        <td className="px-3 py-2.5">{row.vehicles}</td>
-                        <td className="px-3 py-2.5">
-                          <span className={`px-2 py-0.5 rounded text-[10px] font-semibold ${row.statusCls}`}>{row.status}</span>
-                        </td>
-                        <td className={`px-3 py-2.5 ${row.insuranceCls}`}>{row.insurance}</td>
-                        <td className="px-3 py-2.5">{row.jobs}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-              <p className="mt-4 text-neutral-600 text-xs">
-                One row highlighted amber — public liability expires in 25 days. Clicking a subcontractor opens a detail panel with tabs: Profile, Documents, Rate Agreements, Job History, Notes. Job History tab shows last 10 delegated jobs with status and completion date.
-              </p>
-            </div>
+          <div className="mt-10 shadow-2xl rounded-2xl overflow-hidden border border-neutral-800">
+            <SubcontractorManagementMockup />
           </div>
         </div>
       </section>

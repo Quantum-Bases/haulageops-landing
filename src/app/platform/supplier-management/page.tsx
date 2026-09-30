@@ -2,6 +2,7 @@ import Link from "next/link";
 import { MainLayout } from "@/components/layout/MainLayout";
 import { Button } from "@/components/ui/button";
 import { CheckCircle, ChevronRight, FolderOpen } from "lucide-react";
+import { SupplierManagementMockup } from "@/components/shared/platform-mockups";
 
 export const metadata = {
   title: "Supplier Management in Haulage Operations | HaulageOps",
@@ -269,51 +270,8 @@ export default function SupplierManagementPage() {
           <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             Supplier panel — organised by type, accessible to your admin team.
           </h2>
-          <div className="mt-10 rounded-2xl border border-neutral-200 bg-neutral-900 border-y border-neutral-800 overflow-hidden">
-            <div className="px-5 py-3 bg-neutral-800 text-[#E8652B] text-xs font-bold uppercase tracking-widest">
-              HaulageOps — Supplier Management Panel (Admin)
-            </div>
-            <div className="p-6 sm:p-8 text-neutral-400 text-sm font-mono leading-relaxed">
-              <div className="mt-4 overflow-x-auto">
-                <table className="w-full text-xs border-collapse">
-                  <thead>
-                    <tr className="bg-neutral-800 text-neutral-500 uppercase tracking-wider text-[10px]">
-                      <th className="text-left px-3 py-2 font-semibold">Supplier Name</th>
-                      <th className="text-left px-3 py-2 font-semibold">Type</th>
-                      <th className="text-left px-3 py-2 font-semibold">Contact</th>
-                      <th className="text-left px-3 py-2 font-semibold">Account No.</th>
-                      <th className="text-left px-3 py-2 font-semibold">Payment Terms</th>
-                      <th className="text-left px-3 py-2 font-semibold">Status</th>
-                      <th className="text-left px-3 py-2 font-semibold">Documents</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {[
-                      { name: "National Fuel Co", type: "Fuel", typeCls: "text-[#E8652B] bg-[#E8652B]/20", contact: "S. Ahmed", account: "NF-2210", terms: "30-day net", status: "Active", statusCls: "text-[#4ADE80] bg-[#16A34A]/20", docs: "2" },
-                      { name: "Metro Parts & Tyres", type: "Parts", typeCls: "text-[#4ADE80] bg-[#16A34A]/20", contact: "R. Costa", account: "MP-8841", terms: "14-day net", status: "Active", statusCls: "text-[#4ADE80] bg-[#16A34A]/20", docs: "1" },
-                      { name: "Quarry Supplies Ltd", type: "Materials", typeCls: "text-[#FBBF24] bg-[#FBBF24]/10", contact: "D. Marsh", account: "QS-3302", terms: "30-day net", status: "Preferred", statusCls: "text-[#E8652B] bg-[#E8652B]/20", docs: "3" },
-                    ].map((row) => (
-                      <tr key={row.name} className="border-t border-neutral-800">
-                        <td className="px-3 py-2.5 text-white font-medium">{row.name}</td>
-                        <td className="px-3 py-2.5">
-                          <span className={`px-2 py-0.5 rounded text-[10px] font-semibold ${row.typeCls}`}>{row.type}</span>
-                        </td>
-                        <td className="px-3 py-2.5">{row.contact}</td>
-                        <td className="px-3 py-2.5">{row.account}</td>
-                        <td className="px-3 py-2.5">{row.terms}</td>
-                        <td className="px-3 py-2.5">
-                          <span className={`px-2 py-0.5 rounded text-[10px] font-semibold ${row.statusCls}`}>{row.status}</span>
-                        </td>
-                        <td className="px-3 py-2.5">{row.docs}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-              <p className="mt-4 text-neutral-600 text-xs">
-                Filter bar: All Types / Fuel / Parts / Materials / Equipment / Active Only. Clicking a row opens the supplier detail panel with contacts tab, documents tab, and notes field.
-              </p>
-            </div>
+          <div className="mt-10 shadow-2xl rounded-2xl overflow-hidden border border-neutral-800">
+            <SupplierManagementMockup />
           </div>
         </div>
       </section>

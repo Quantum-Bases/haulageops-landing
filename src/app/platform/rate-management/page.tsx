@@ -2,6 +2,7 @@ import Link from "next/link";
 import { MainLayout } from "@/components/layout/MainLayout";
 import { Button } from "@/components/ui/button";
 import { CheckCircle, ChevronRight, CalendarClock } from "lucide-react";
+import { RateCardMockup } from "@/components/shared/platform-mockups";
 
 export const metadata = {
   title: "Haulage Rate Management Software | HaulageOps",
@@ -267,52 +268,9 @@ export default function RateManagementPage() {
                 A single client may use different rate types across different job types — per-tonne for aggregate delivery, hourly for site preparation support, fixed-fee for a one-off long-haul move. All are managed within the same rate card for that client.
               </p>
             </div>
-            {/* Rate card visual spec */}
-            <div className="rounded-2xl border border-neutral-200 bg-neutral-900 border-y border-neutral-800 overflow-hidden flex flex-col">
-              <div className="px-5 py-3 bg-neutral-800 text-[#E8652B] text-xs font-bold uppercase tracking-widest flex items-center justify-between">
-                <span>HaulageOps — Client Rate Card</span>
-                <span className="bg-[#E8652B] text-white px-2 py-0.5 rounded font-semibold">+ Add Rate</span>
-              </div>
-              <div className="flex-1 p-6 text-neutral-400 text-sm font-mono leading-relaxed">
-                <p>Client: <span className="text-white font-semibold">&quot;Balfour Beatty Civil Engineering&quot;</span></p>
-                <div className="mt-4 overflow-x-auto">
-                  <table className="w-full text-xs border-collapse">
-                    <thead>
-                      <tr className="bg-neutral-800 text-neutral-500 uppercase tracking-wider text-[10px]">
-                        <th className="text-left px-3 py-2 font-semibold">Rate Type</th>
-                        <th className="text-left px-3 py-2 font-semibold">Description</th>
-                        <th className="text-left px-3 py-2 font-semibold">Unit</th>
-                        <th className="text-left px-3 py-2 font-semibold">Client</th>
-                        <th className="text-left px-3 py-2 font-semibold">Sub Pay</th>
-                        <th className="text-left px-3 py-2 font-semibold">Effective</th>
-                        <th className="text-left px-3 py-2 font-semibold">Status</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {[
-                        { type: "Per-Tonne", desc: "Type 1 Crushed Aggregate", unit: "tonne", client: "$18.50", sub: "$14.00", eff: "01 Jan 2026", status: "Active", statusCls: "text-[#4ADE80] bg-[#16A34A]/20" },
-                        { type: "Hourly", desc: "Plant Support", unit: "hour", client: "$145.00", sub: "$110.00", eff: "01 Jan 2026", status: "Active", statusCls: "text-[#4ADE80] bg-[#16A34A]/20" },
-                        { type: "Per-Load", desc: "Standard 10-tonne Run", unit: "load", client: "$210.00", sub: "$165.00", eff: "01 Mar 2026", status: "Scheduled", statusCls: "text-[#FBBF24] bg-[#FBBF24]/10" },
-                      ].map((row) => (
-                        <tr key={row.type} className={`border-t border-neutral-800 ${row.status === "Scheduled" ? "bg-[#FBBF24]/5" : ""}`}>
-                          <td className="px-3 py-2.5 text-white font-medium">{row.type}</td>
-                          <td className="px-3 py-2.5">{row.desc}</td>
-                          <td className="px-3 py-2.5">{row.unit}</td>
-                          <td className="px-3 py-2.5">{row.client}</td>
-                          <td className="px-3 py-2.5">{row.sub}</td>
-                          <td className="px-3 py-2.5">{row.eff}</td>
-                          <td className="px-3 py-2.5">
-                            <span className={`px-2 py-0.5 rounded text-[10px] font-semibold ${row.statusCls}`}>{row.status}</span>
-                          </td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
-                <p className="mt-4 text-neutral-600 text-xs">
-                  Scheduled row shown in a different colour to indicate it is not yet active.
-                </p>
-              </div>
+            {/* Rate card visual mockup */}
+            <div className="shadow-2xl rounded-2xl overflow-hidden border border-neutral-800">
+              <RateCardMockup />
             </div>
           </div>
         </div>

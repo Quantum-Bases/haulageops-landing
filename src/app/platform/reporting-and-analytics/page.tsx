@@ -2,6 +2,7 @@ import Link from "next/link";
 import { MainLayout } from "@/components/layout/MainLayout";
 import { Button } from "@/components/ui/button";
 import { CheckCircle, ChevronRight, ArrowRight } from "lucide-react";
+import { ExecutiveReportingMockup, InvoiceGeneratedMockup } from "@/components/shared/platform-mockups";
 
 export const metadata = {
   title: "Haulage Operations Reporting and Analytics | HaulageOps",
@@ -291,43 +292,9 @@ export default function ReportingAnalyticsPage() {
                 The data feeding the dashboard is the same live data that operations works with — not a separate system that needs to be updated manually or synced on a schedule.
               </p>
             </div>
-            {/* Management reporting dashboard visual spec */}
-            <div className="rounded-2xl border border-neutral-200 bg-neutral-900 border-y border-neutral-800 overflow-hidden">
-              <div className="px-5 py-3 bg-neutral-800 text-[#E8652B] text-xs font-bold uppercase tracking-widest">
-                Management reporting dashboard
-              </div>
-              <div className="p-4 sm:p-5 space-y-4">
-                <div className="grid grid-cols-2 gap-2.5">
-                  {dashboardStats.map((stat) => (
-                    <div key={stat.label} className="bg-neutral-800 border border-[#334155] rounded-lg px-3 py-2.5">
-                      <p className="text-neutral-500 text-[10px] uppercase tracking-wider">{stat.label}</p>
-                      <p className="text-white text-sm font-bold mt-0.5">{stat.value}</p>
-                    </div>
-                  ))}
-                </div>
-                <div className="bg-neutral-800 border border-[#334155] rounded-lg p-3">
-                  <p className="text-neutral-400 text-[10px] mb-2.5">Jobs by client — this month</p>
-                  <div className="space-y-1.5">
-                    {barData.map((bar) => (
-                      <div key={bar.label} className="flex items-center gap-2">
-                        <span className="w-24 text-[10px] text-neutral-500 truncate">{bar.label}</span>
-                        <div className="flex-1 h-2.5 bg-[#334155] rounded-full overflow-hidden">
-                          <div className="h-full bg-[#E8652B] rounded-full" style={{ width: `${bar.value}%` }} />
-                        </div>
-                        <span className="w-6 text-[10px] text-neutral-400 text-right">{bar.value}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-                <div className="bg-neutral-800 border border-[#334155] rounded-lg p-3">
-                  <p className="text-neutral-400 text-[10px] mb-2">Invoice aging — overdue by client</p>
-                  <p className="text-[#FBBF24] text-sm font-bold">$43,200 total outstanding</p>
-                </div>
-                <div className="bg-neutral-800 border border-[#FBBF24]/40 rounded-lg p-3">
-                  <p className="text-neutral-400 text-[10px] mb-1.5">Compliance status</p>
-                  <p className="text-[#FBBF24] text-xs font-semibold">3 items expiring soon</p>
-                </div>
-              </div>
+            {/* Management reporting dashboard visual mockup */}
+            <div className="shadow-2xl rounded-2xl overflow-hidden border border-neutral-800">
+              <ExecutiveReportingMockup />
             </div>
           </div>
         </div>
@@ -365,45 +332,9 @@ export default function ReportingAnalyticsPage() {
       <section className="py-20 bg-neutral-50/50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-10 items-center">
-            {/* Financial reporting visual spec */}
-            <div className="rounded-2xl border border-neutral-200 bg-neutral-900 border-y border-neutral-800 overflow-hidden order-1 lg:order-none">
-              <div className="px-5 py-3 bg-neutral-800 text-[#E8652B] text-xs font-bold uppercase tracking-widest">
-                Financial reporting — invoice status view
-              </div>
-              <div className="p-4 sm:p-5">
-                <div className="flex flex-wrap items-center gap-2 text-[10px] mb-4">
-                  <span className="px-2.5 py-1 rounded bg-neutral-800 border border-[#334155] text-neutral-400">All clients</span>
-                  <span className="px-2.5 py-1 rounded bg-neutral-800 border border-[#334155] text-neutral-400">Date range</span>
-                  <span className="px-2.5 py-1 rounded bg-neutral-800 border border-[#334155] text-neutral-400">All / Sent / Paid / Overdue</span>
-                  <span className="ml-auto px-2.5 py-1 rounded bg-[#E8652B] text-white font-semibold">Export to CSV</span>
-                </div>
-                <div className="space-y-1.5 text-neutral-400 font-mono text-[11px]">
-                  <div className="grid grid-cols-12 gap-2 px-2 text-[10px] uppercase tracking-wider text-neutral-500 border-b border-[#334155] pb-1.5">
-                    <span className="col-span-3">Invoice</span>
-                    <span className="col-span-3">Client</span>
-                    <span className="col-span-2 text-right">Amount</span>
-                    <span className="col-span-2 text-right">Sent</span>
-                    <span className="col-span-2 text-right">Status</span>
-                  </div>
-                  {invoiceRows.map((row) => (
-                    <div key={row.num} className="grid grid-cols-12 gap-2 px-2 py-1.5 rounded bg-neutral-800 border border-[#334155] items-center">
-                      <span className="col-span-3 text-white">{row.num}</span>
-                      <span className="col-span-3 truncate">{row.client}</span>
-                      <span className="col-span-2 text-right text-white">{row.amount}</span>
-                      <span className="col-span-2 text-right">{row.sent}</span>
-                      <span className="col-span-2 flex justify-end">
-                        <span className={`px-1.5 py-0.5 rounded text-[10px] font-semibold ${row.status === "Overdue" ? "text-[#FBBF24] bg-[#D97706]/20" : row.status === "Paid" ? "text-[#4ADE80] bg-[#16A34A]/20" : "text-neutral-400 bg-[#334155]"}`}>
-                          {row.status}
-                        </span>
-                      </span>
-                    </div>
-                  ))}
-                </div>
-                <div className="mt-4 flex items-center justify-between text-[10px]">
-                  <span className="text-neutral-400">Totals row at bottom</span>
-                  <span className="text-[#FBBF24] font-semibold">Total outstanding $43,200</span>
-                </div>
-              </div>
+            {/* Financial reporting visual mockup */}
+            <div className="shadow-2xl rounded-2xl overflow-hidden border border-neutral-800 order-1 lg:order-none">
+              <InvoiceGeneratedMockup />
             </div>
             <div>
               <span className="text-xs font-bold uppercase tracking-widest text-[#E8652B]">Export and update frequency</span>

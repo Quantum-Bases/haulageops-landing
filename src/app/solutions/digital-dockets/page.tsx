@@ -13,6 +13,7 @@ import {
   CloudUpload,
   Download,
 } from "lucide-react";
+import { DigitalDocketsMockup } from "@/components/shared/solution-mockups";
 
 export const metadata = {
   title: "Digital Dockets for Bulk Haulage | HaulageOps",
@@ -344,28 +345,8 @@ export default function DigitalDocketsPage() {
               </div>
             </div>
             {/* Driver app capture visual spec */}
-            <div className="rounded-2xl border border-neutral-200 bg-neutral-900 border-y border-neutral-800 overflow-hidden">
-              <div className="px-5 py-3 bg-neutral-800 text-[#E8652B] text-xs font-bold uppercase tracking-widest">
-                Driver App — Digital Docket Capture
-              </div>
-              <div className="p-4 sm:p-5 space-y-3">
-                {appScreens.map((screen, i) => {
-                  const Icon = screen.icon;
-                  return (
-                    <div key={screen.title} className="bg-neutral-800 border border-[#334155] rounded-lg p-3">
-                      <div className="flex items-center gap-2">
-                        <span className="text-[9px] text-neutral-500 font-mono">Screen {i + 1}</span>
-                        <Icon className="h-3.5 w-3.5 text-[#E8652B]" />
-                        <span className="text-white text-[11px] font-semibold">{screen.title}</span>
-                      </div>
-                      <p className="text-neutral-400 text-[10px] mt-1 leading-relaxed">{screen.body}</p>
-                    </div>
-                  );
-                })}
-                <p className="text-[10px] text-neutral-600">
-                  Offline mode indicator visible when signal is unavailable — captures queue and upload automatically.
-                </p>
-              </div>
+            <div className="w-full">
+              <DigitalDocketsMockup />
             </div>
           </div>
         </div>

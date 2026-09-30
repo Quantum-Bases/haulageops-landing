@@ -52,7 +52,7 @@ const comparisonRows = [
   },
   {
     feature: "Setup cost & go-live time",
-    ho: { type: "text", text: "From $1,500 setup · 2–4 week go-live" },
+    ho: { type: "text", text: "Tailored fleet setup · 2–4 week go-live" },
     alt: { type: "text", text: "Contact MyTrucking for current pricing" },
   },
   {

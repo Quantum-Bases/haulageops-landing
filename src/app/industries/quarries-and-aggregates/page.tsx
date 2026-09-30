@@ -6,6 +6,7 @@ import {
   ChevronRight,
   ArrowRight,
 } from "lucide-react";
+import { QuarryAggregatesMockup } from "@/components/shared/industry-mockups";
 
 export const metadata = {
   title: "Quarry and Aggregates Transport Management | HaulageOps",
@@ -337,19 +338,7 @@ export default function QuarriesAndAggregatesPage() {
           </div>
 
           {/* Driver app offline mockup */}
-          <div className="mt-12 rounded-2xl bg-neutral-900 border-y border-neutral-800 border border-neutral-800 overflow-hidden">
-            <div className="flex items-center gap-2 px-5 py-3 bg-neutral-800">
-              <span className="h-2.5 w-2.5 rounded-full bg-[#E8652B]" />
-              <span className="h-2.5 w-2.5 rounded-full bg-[#94A3B8]" />
-              <span className="h-2.5 w-2.5 rounded-full bg-[#475569]" />
-              <span className="ml-3 text-xs font-semibold text-neutral-300">HaulageOps Driver App — Quarry Load Capture (Offline Mode)</span>
-            </div>
-            <div className="p-6">
-              <p className="text-sm text-neutral-400 leading-relaxed">
-                Screenshot: Driver mobile app showing offline mode indicator (grey signal icon, &quot;Working offline — will sync when connected&quot; banner). Active job shown: client name, quarry loading point, delivery site. Load count for the day: 7 of estimated 10 loads. Bottom: &quot;Record Load&quot; button — tapped to log each load event. Below that: &quot;Photograph Docket&quot; and &quot;Capture Signature&quot; actions. Last recorded load shown: 11:42 AM, 23.4 tonnes, photographed docket thumbnail visible, pending sync indicator.
-              </p>
-            </div>
-          </div>
+          <QuarryAggregatesMockup />
         </div>
       </section>
 

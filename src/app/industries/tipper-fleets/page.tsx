@@ -6,6 +6,7 @@ import {
   ChevronRight,
   ArrowRight,
 } from "lucide-react";
+import { TipperFleetMockup } from "@/components/shared/industry-mockups";
 
 export const metadata = {
   title: "Tipper Fleet Management Software | HaulageOps",
@@ -388,19 +389,7 @@ export default function TipperFleetsPage() {
           <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             Tipper fleet dispatch board in HaulageOps.
           </h2>
-          <div className="mt-8 rounded-2xl bg-neutral-900 border-y border-neutral-800 border border-neutral-800 overflow-hidden">
-            <div className="flex items-center gap-2 px-5 py-3 bg-neutral-800">
-              <span className="h-2.5 w-2.5 rounded-full bg-[#E8652B]" />
-              <span className="h-2.5 w-2.5 rounded-full bg-[#94A3B8]" />
-              <span className="h-2.5 w-2.5 rounded-full bg-[#475569]" />
-              <span className="ml-3 text-xs font-semibold text-neutral-300">HaulageOps — Dispatch Board (Tipper Fleet View)</span>
-            </div>
-            <div className="p-6">
-              <p className="text-sm text-neutral-400 leading-relaxed">
-                Dispatch board showing a tipper fleet operation mid-morning: 8 owned tipper jobs across 3 drivers, colour-coded by status (in progress, loading, tipping, complete). Sub tipper panel on the right showing 4 subcontractor tippers — 2 active with live GPS position, 1 accepted/not yet on site, 1 pending acceptance. Job list column on left with client name, material type, tonnage and estimated completion. Quick-assign button to create a new job from template. Filter options: by driver, by client, by job status, by date.
-              </p>
-            </div>
-          </div>
+          <TipperFleetMockup />
         </div>
       </section>
 

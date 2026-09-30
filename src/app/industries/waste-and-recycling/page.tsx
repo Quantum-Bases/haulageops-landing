@@ -6,6 +6,7 @@ import {
   ChevronRight,
   ArrowRight,
 } from "lucide-react";
+import { WasteRecyclingMockup } from "@/components/shared/industry-mockups";
 
 export const metadata = {
   title: "Waste and Recycling Logistics Software | HaulageOps",
@@ -393,19 +394,7 @@ export default function WasteAndRecyclingPage() {
           <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-neutral-900 max-w-3xl">
             Waste transport dispatch in HaulageOps.
           </h2>
-          <div className="mt-8 rounded-2xl bg-neutral-900 border-y border-neutral-800 border border-neutral-800 overflow-hidden">
-            <div className="flex items-center gap-2 px-5 py-3 bg-neutral-800">
-              <span className="h-2.5 w-2.5 rounded-full bg-[#E8652B]" />
-              <span className="h-2.5 w-2.5 rounded-full bg-[#94A3B8]" />
-              <span className="h-2.5 w-2.5 rounded-full bg-[#475569]" />
-              <span className="ml-3 text-xs font-semibold text-neutral-300">HaulageOps — Dispatch Board (Waste & Recycling Collections)</span>
-            </div>
-            <div className="p-6">
-              <p className="text-sm text-neutral-400 leading-relaxed">
-                Dispatch board showing a morning collection run: 5 owned collection vehicles on scheduled routes (colour-coded by status — en route, on site, complete), 2 subcontractor haulers on overflow collections shown in sub panel with portal status. Job list on left showing collection type tags: general waste, recycling, C&D, green waste. Document indicator icon showing jobs with transfer note attached vs pending. Collection count at top: "Today: 34 scheduled / 18 complete / 16 in progress". Filter by material stream, by driver, by client service contract.
-              </p>
-            </div>
-          </div>
+          <WasteRecyclingMockup />
         </div>
       </section>
 

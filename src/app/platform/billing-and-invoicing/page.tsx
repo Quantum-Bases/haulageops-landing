@@ -2,6 +2,7 @@ import Link from "next/link";
 import { MainLayout } from "@/components/layout/MainLayout";
 import { Button } from "@/components/ui/button";
 import { CheckCircle, ChevronRight, Camera, FileText, Check } from "lucide-react";
+import { InvoiceGeneratedMockup } from "@/components/shared/platform-mockups";
 
 export const metadata = {
   title: "Haulage Invoicing Software | HaulageOps",
@@ -260,43 +261,9 @@ export default function BillingAndInvoicingPage() {
                 Finance reviews the record, confirms the details, and the invoice is generated. No data entry. No rate lookup. No docket hunting.
               </p>
             </div>
-            {/* Invoice visual spec */}
-            <div className="rounded-2xl border border-neutral-200 bg-neutral-900 border-y border-neutral-800 overflow-hidden flex flex-col">
-              <div className="px-5 py-3 bg-neutral-800 text-[#E8652B] text-xs font-bold uppercase tracking-widest">
-                HaulageOps — Invoice Generated from Job
-              </div>
-              <div className="flex-1 p-6 text-neutral-400 text-sm font-mono leading-relaxed">
-                <div className="flex items-center justify-between mb-4">
-                  <span className="text-white font-semibold">INV-2026-0847</span>
-                  <span className="px-2 py-0.5 rounded bg-[#3B82F6]/20 text-[#60A5FA] text-[10px] font-semibold">Sent</span>
-                </div>
-                <div className="space-y-2 text-xs">
-                  <p>Client: <span className="text-white font-medium">&quot;Laing O'Rourke Civil&quot;</span></p>
-                  <p>Job date: 28 Jul 2026</p>
-                  <p>Material: Type 1 Crushed Limestone</p>
-                  <p>Pickup: Breedon Quarry</p>
-                  <p>Delivery: M25 Junction 10 Project</p>
-                  <p>Rate: <span className="text-white">$18.50</span> per tonne</p>
-                  <p>Quantity: 22.4 tonnes</p>
-                  <p className="text-[#FBBF24] font-semibold">Total: $414.40</p>
-                </div>
-                <div className="mt-4 flex items-center gap-2">
-                  <span className="flex items-center gap-1.5 px-2 py-0.5 rounded bg-neutral-800 border border-[#334155] text-[10px] text-neutral-400">
-                    <Camera className="h-3 w-3 text-[#4ADE80]" /> POD Photo
-                  </span>
-                  <span className="flex items-center gap-1.5 px-2 py-0.5 rounded bg-neutral-800 border border-[#334155] text-[10px] text-neutral-400">
-                    <FileText className="h-3 w-3 text-[#4ADE80]" /> Scale Docket – 28 Jul
-                  </span>
-                </div>
-                <p className="mt-4 flex items-center gap-1.5 text-[10px] text-[#4ADE80] font-semibold">
-                  <Check className="h-3 w-3" /> Synced to Xero
-                </p>
-                <div className="mt-4 flex flex-wrap gap-2 text-[10px]">
-                  <span className="px-2 py-1 rounded bg-[#E8652B] text-white font-semibold">Send to Client</span>
-                  <span className="px-2 py-1 rounded bg-[#334155] text-neutral-400 font-semibold">Mark Paid</span>
-                  <span className="px-2 py-1 rounded bg-[#334155] text-neutral-400 font-semibold">Void</span>
-                </div>
-              </div>
+            {/* Invoice visual mockup */}
+            <div className="shadow-2xl rounded-2xl overflow-hidden border border-neutral-800">
+              <InvoiceGeneratedMockup />
             </div>
           </div>
         </div>
